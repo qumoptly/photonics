@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-0teDMkkiAp8rtx7dzBty4w=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - coherence length, temporal coherence</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/coherence_length.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-06-25">
+<meta name="description" content="The coherence length is a measure of temporal coherence, expressed as the propagation distance over which the coherence significantly decays.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="coherence length, temporal coherence">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Coherence Length">
+<meta property="og:description" content="The coherence length is a measure of temporal coherence, expressed as the propagation distance over which the coherence significantly decays.">
+<meta property="og:url" content="https://www.rp-photonics.com/coherence_length.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/coherence_length.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="The coherence length is a measure of temporal coherence, expressed as the propagation distance over which the coherence significantly decays.">
+<meta name="twitter:title" content="Coherence Length">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/coherence_length.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="0teDMkkiAp8rtx7dzBty4w==">
+page="coherence_length.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="0teDMkkiAp8rtx7dzBty4w==">shownsponsors="eagleyard Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_c.html">letter C</a> &gt; <a href="coherence_length.html">coherence length</a></p>
+<h1>Coherence Length</h1>
+<header style="margin-right:0;">
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a measure of temporal coherence, expressed as the propagation distance over which the coherence significantly decays</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Kohärenzlänge</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#nonlinear_optics" title="other articles on nonlinear optics">nonlinear optics</a></p>
+<p>Formula symbol: <span class="eqn_il"><i>L</i><sub>coh</sub></span></p>
+<p>Units: m</p>
+<p><a href="encyclopedia_cite.html?article=coherence%20length">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>The coherence length can be used for quantifying the degree of temporal (not spatial!) <a href="coherence.html" title="a fixed phase relationship between the electric field values at different locations or at different times">coherence</a> as the propagation length (and thus propagation time) over which coherence degrades significantly.
+It is defined as the <a href="coherence_time.html" title="a measure of temporal coherence, expressed as the time over which the field correlation decays">coherence time</a> times the vacuum <a href="velocity_of_light.html" title="the velocity with which light propagates in a medium">velocity of light</a>.</p>
+<p>For <a href="light.html" title="electromagnetic radiation in the visible spectral range, or sometimes in an extended spectral region">light</a> with a Lorentzian optical <a href="spotlight_2007_10_11.html">spectrum</a>, the coherence length can be calculated as</p>
+<div class="eqn"><img src="eqn/coherence_length.gif" width="134" height="44" alt="coherence length"></div>
+<p>where <span class="eqn_il"><span class="greek">&Delta;</span><span class="greek">&nu;</span></span> is the (full width at half-maximum) <a href="linewidth.html" title="width of the spectrum of a light beam or an absorption feature">linewidth</a> (optical <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>).
+This coherence length is the propagation length after which the magnitude of the coherence function has dropped to the value of <span class="eqn_il">1&thinsp;/&thinsp;<i>e</i></span>.</p>
+<p>In the literature, one often finds the above equation without the factor <span class="eqn_il"><span class="greek">&pi;</span></span> in the denominator &ndash; often just for estimating the order of magnitude of the coherence length, without referring to a precise definition of optical bandwidth (e.g., as full width at half-maximum) and coherence length.</p>
+<p>Note that such relations are not valid in cases where the coherence function has a more complicated shape, as is the case for, e.g., a <a href="frequency_combs.html" title="optical spectra consisting of equidistant lines">frequency comb</a>.</p>
+<form id="calculate_coherence" class="calculatorform">
+<h2>Calculating the Coherence Length</h2>
+<table>
+<tr>
+<td>Center wavelength:</td><td></td><td></td>
+<td><input name="lambda" value="" class="cf_calculate_coherence"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Bandwidth (frequency):</td><td></td><td></td>
+<td><input name="dv" value="" class="cf_calculate_coherence"></td>
+<td><span class="calcbutton" id="calc_dv">calc</span></td><td></td>
+</tr>
+<tr>
+<td>Bandwidth (wavelength):</td><td></td><td></td>
+<td><input name="dl" value="" class="cf_calculate_coherence"></td>
+<td><span class="calcbutton" id="calc_dl">calc</span></td><td></td>
+</tr>
+<tr>
+<td>Coherence length:</td><td></td><td></td>
+<td><input name="l_coh" value="" class="cf_calculate_coherence"></td>
+<td><span class="calcbutton" id="calc_l_coh">calc</span></td><td></td>
+</tr>
+</table>
+<p class="comment">Enter input values with units, where appropriate. After you have modified some values, click a "calc" button to recalculate the field left of it.</p>
+<noscript>
+<p style="color:red">Attention: The buttons do not work, as Javascript is turned off in your browser!</p>
+</noscript>
+</form>
+<script type="text/javascript" src="calcform.js"></script>
+<script type="text/javascript" nonce="0teDMkkiAp8rtx7dzBty4w==">
+funits = new Array();
+funits["lambda"] = "m";
+funits["dv"] = "Hz";
+function calc_dv() {
+  $("input[name=dv]").val("???");
+  GetFieldValues("dv","calculate_coherence");
+  dv = (2.9979e8/(lambda*lambda))*dl;
+  $("input[name=dv]").val(format_u(dv, "Hz"));
+ }
+funits["dl"] = "m";
+function calc_dl() {
+  $("input[name=dl]").val("???");
+  GetFieldValues("dl","calculate_coherence");
+  dl = (lambda*lambda/2.9979e8)*dv;
+  $("input[name=dl]").val(format_u(dl, "m"));
+ }
+funits["l_coh"] = "m";
+function calc_l_coh() {
+  $("input[name=l_coh]").val("???");
+  GetFieldValues("l_coh","calculate_coherence");
+  l_coh = 2.9979e8/(pi*dv);
+  $("input[name=l_coh]").val(format_u(l_coh, "m"));
+ }
+$("input[name=lambda]").val("1064 nm");
+$("input[name=dv]").val("20 MHz");
+calc_dl();
+calc_l_coh();
+$(document).ready(function() {
+  $("span#calc_dv").click(function() { calc_dv() })
+  $("span#calc_dl").click(function() { calc_dl() })
+  $("span#calc_l_coh").click(function() { calc_l_coh() })
+});
+</script>
+<figure class="right" style="width:180px;">
+<img src="img/coherence_length.png" alt="interferometer setup">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Setup of an interferometer, where the coherence length of light is important.
+</figcaption>
+</figure>
+<p>The reason for often using the term <em>coherence length</em> instead of <em>coherence time</em> is that the optical time delays involved in some experiment are often determined by optical path lengths.
+For example, the <a href="interferometers.html" title="optical devices utilizing the phenomenon of interference">interferometer</a> in Figure&nbsp;1 shows pronounced interference fringes only if the coherence length of the <a href="laser_light.html" title="light generated with a laser device">laser light</a> is at least as long as the path-length difference of the two arms.
+Also, in a setup for making <a href="holography.html" title="methods for recording and reconstructing three-dimensional images">holographic</a> recordings, coherence between two beams with a somewhat different optical path length is required, so that the coherence length of the light source should be longer than the maximum occurring path-length difference.
+In addition to <a href="holography.html" title="methods for recording and reconstructing three-dimensional images">holography</a>, a number of other applications may require a certain coherence length; see the article on <a href="coherence.html" title="a fixed phase relationship between the electric field values at different locations or at different times">coherence</a>.</p>
+<p>Some <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">lasers</a>, particularly <a href="single_frequency_operation.html" title="an operation mode of a laser where only a single resonator mode acquires a significant power">single-frequency</a> <a href="solid_state_lasers.html" title="lasers based on solid-state gain media (usually ion-doped crystals or glasses)">solid-state lasers</a>, can have very long coherence lengths, e.g. 9.5&nbsp;km for a Lorentzian spectrum with a linewidth of 10&nbsp;kHz.
+For monolithic <a href="semiconductor_lasers.html" title="lasers based on semiconductor gain media">semiconductor lasers</a>, even when operating in a single-frequency mode, the coherence length is typically shorter by several orders of magnitude.
+The coherence length is limited by <a href="phase_noise.html" title="noise of the optical phase of a beam or of an electric signal">phase noise</a> which can result from, e.g., <a href="spontaneous_emission.html" title="a quantum effect, causing the spontaneous decay of excited states of atoms or ions">spontaneous emission</a> in the <a href="gain_media.html" title="media for laser amplification">gain medium</a>.
+The quantum noise influence is weak (allowing for a long coherence length) when the circulating power in the laser is high, the resonator losses per round trip are low, and the round-trip time is long.</p>
+<h2 class="togglediv">Coherence Length in Nonlinear Optics</h2>
+<div>
+<p>An unfortunate use of the term <em>coherence length</em> is common in <a href="nonlinear_optics.html" title="the part of optics dealing with optical nonlinearities and their applications">nonlinear optics</a>: for example, in <a href="frequency_doubling.html" title="the phenomenon that an input wave in a nonlinear material can generate a wave with twice the optical frequency">second-harmonic generation</a>, the coherence length is often understood as the length over which fundamental and harmonic wave get out of phase (more precisely, the phase difference accumulated over this length is <span class="eqn_il"><span class="greek">&pi;</span></span>).
+This is inconsistent with the general notion of coherence, because a predictable phase relationship (strong phase correlation) is definitely maintained over more than this length, although there is a <em>systematic</em> evolution of the relative phase.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div class="comment">
+<p class="comment_details">2020-03-16</p>
+<p>How can one calculate or quantify coherence length from laser phase noise values?</p>
+<p style="font-weight:bold">Answer from the <a href="paschotta.html" style="font-weight:bold">author</a>:</p>
+<p>Laser phase noise may be quantified in different forms &ndash; for example, with an autocorrelation function or a <a href="power_spectral_density.html" title="optical power or noise power per unit frequency interval">power spectral density</a>.
+One requires some quite involved equations for calculating the coherence length from that; this is a technically quite complicated field.
+Sorry, I don't have a good reference available at the moment &ndash; maybe someone else can help?</p>
+</div>
+<div class="comment">
+<p class="comment_details">2020-04-03</p>
+<p>If the free running, absolute linewidth of a solid state laser is say 200&nbsp;kHz over short timescales (such as 100&nbsp;&mu;s) but then the frequency of the laser drifts associated with changes in temperature, and that results in a larger effective linewidth of several megahertz over longer timescales, how does this effect the coherence length?</p>
+<p style="font-weight:bold">Answer from the <a href="paschotta.html" style="font-weight:bold">author</a>:</p>
+<p>If such drifts are not very fast, they will not affect the coherence length.
+That will remain limited by the short-term phase fluctuations.</p>
+</div>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="coherence_length.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="coherence.html" title="a fixed phase relationship between the electric field values at different locations or at different times">coherence</a>, <a href="coherence_time.html" title="a measure of temporal coherence, expressed as the time over which the field correlation decays">coherence time</a>, <a href="linewidth.html" title="width of the spectrum of a light beam or an absorption feature">linewidth</a>, <a href="laser_speckle.html" title="light patterns resulting from the reflection of coherent light at rough surfaces">laser speckle</a>, <a href="spotlight_2006_09_22.html">The Photonics Spotlight 2006-09-22</a><br>and other articles in the categories <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#nonlinear_optics" title="other articles on nonlinear optics">nonlinear optics</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/coherence_length.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fcoherence_length.html&text=RP+Photonics+Encyclopedia+-+coherence+length%2C+temporal+coherence" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fcoherence_length.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fcoherence_length.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/coherence_length.html"&gt;<br>Article on Coherence Length&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/coherence_length.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/coherence_length.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/coherence_length.html<br>article on 'Coherence Length' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Videos on RP Photonics Marketing Solutions</h2>
+<p>The first video explains why the RP Photonics website is extremely popular among photonics professionals:</p>
+<p><a href="./website_video.html?banner=marketing_videos"><img src="./img/rp_photonics_website.png" alt="video" style="width:100%; height:auto;"></a></p>
+<p>The second video explains how you can utilize the RP Photonics website for your marketing strategy:</p>
+<p><a href="./marketing_video.html?banner=marketing_videos"><img src="./img/rp_photonics_marketing.png" alt="video" style="width:100%; height:auto;"></a></p>
+</div>
+</aside>
+<script type="text/javascript" nonce="0teDMkkiAp8rtx7dzBty4w==">shownbanner = "marketing videos";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Sponsors of the Encyclopedia</h2>
+<p>We are grateful to the <a href="./encyclopedia_sponsoring.html?banner=sponsoring">sponsors</a> of our encyclopedia:</p>
+<div style="margin-top:10px; text-align:center;"><a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/nkt_photonics.html"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a></div>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="0teDMkkiAp8rtx7dzBty4w==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/coherence_length.html"
+    },
+    "headline": "Coherence Length",
+    "image": "https://www.rp-photonics.com/previews/coherence_length.png",
+    "datePublished": "2005-01-12",
+    "dateModified": "2020-06-25",
+    "description": "The coherence length is a measure of temporal coherence, expressed as the propagation distance over which the coherence significantly decays.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter C",
+      "item": "https://www.rp-photonics.com/encyclopedia_c.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "coherence length",
+      "item": "https://www.rp-photonics.com/coherence_length.html"
+    }]}
+}
+</script>
+</body>
+</html>

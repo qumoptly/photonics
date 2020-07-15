@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-X/N2E4gXywtZ9z1XSsq0kg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - pulse propagation modeling, ultrashort pulses, fibers, lasers</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/pulse_propagation_modeling.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Pulse propagation modeling means the use of physical models describing the propagation of ultrashort pulses e.g. in lasers or optical fibers. Various linear and nonlinear effects can be taken into account.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="pulse propagation modeling, ultrashort pulses, fibers, lasers">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pulse Propagation Modeling">
+<meta property="og:description" content="Pulse propagation modeling means the use of physical models describing the propagation of ultrashort pulses e.g. in lasers or optical fibers. Various linear and nonlinear effects can be taken into account.">
+<meta property="og:url" content="https://www.rp-photonics.com/pulse_propagation_modeling.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/pulse_propagation_modeling.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Pulse propagation modeling means the use of physical models describing the propagation of ultrashort pulses e.g. in lasers or optical fibers. Various linear and nonlinear effects can be taken into account.">
+<meta name="twitter:title" content="Pulse Propagation Modeling">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/pulse_propagation_modeling.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="X/N2E4gXywtZ9z1XSsq0kg==">
+page="pulse_propagation_modeling.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo sponsor"></a> <a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="X/N2E4gXywtZ9z1XSsq0kg==">shownsponsors="eagleyard Photonics,El.En.,RPMC Lasers"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_p.html">letter P</a> &gt; <a href="pulse_propagation_modeling.html">pulse propagation modeling</a></p>
+<h1>Pulse Propagation Modeling</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_pulse_propagation_modeling_software.html?s=vbox">5 suppliers for pulse propagation modeling software</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.rp-photonics.com/propulse.html" data-supplier="RP Photonics" data-location="product-enc" data-keyword="pulse propagation modeling software" rel="nofollow" class="bg externallink"><img src="./bg/logos/rp_photonics.png" alt="RP Photonics" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_pulse_propagation_modeling_software.html?s=vbox">List of suppliers for<br>pulse propagation modeling software</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="boxadvertisement">
+<h2>Simulation of Pulse Propagation</h2>
+<p>The software <a href="fiberpower.html"><b>RP Fiber Power</b></a> is an excellent tool for simulating pulse propagation in setups containing optical fibers, dispersive elements (e.g. prism or grating pairs), modulators and saturable absorbers, etc.
+<a href="propulse.html"><b>RP ProPulse</b></a> is designed for pulse propagation in bulk-optical setups, also including nonlinear crystals (e.g. sync-pumped OPOs).</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: working with physical models describing the propagation of ultrashort pulses e.g. in lasers or optical fibers</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Modellierung der Pulsausbreitung</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a>, <a href="categories.html#methods" title="other articles on methods">methods</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<p><a href="encyclopedia_cite.html?article=pulse%20propagation%20modeling">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>When propagating in transparent optical media, the properties of <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a> can undergo complicated changes.
+Typical physical effects influencing pulses are:</p>
+<ul>
+<li><a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium"><em>Chromatic dispersion</em></a> can lead to dispersive pulse broadening, but also to <a href="pulse_compression.html" title="linear or nonlinear techniques for reducing the durations of optical pulses">pulse compression</a>, generation of a <a href="chirp.html" title="time dependence of the instantaneous frequency of an optical pulse">chirp</a>, etc.</li>
+<li>Various <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field"><em>nonlinearities</em></a> can become relevant at high <a href="peak_power.html" title="maximum optical power of a pulse">peak powers</a>.
+For example, the <a href="kerr_effect.html" title="a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization">Kerr effect</a> can cause <a href="self_phase_modulation.html" title="nonlinear phase modulation of a beam, caused by its own intensity via the Kerr effect">self-phase modulation</a>, and <a href="raman_scattering.html" title="a nonlinear scattering process involving optical phonons">Raman scattering</a> may e.g. induce <a href="raman_gain.html" title="optical gain arising from stimulated Raman scattering">Raman gain</a> within the <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">pulse spectrum</a> (<em>Raman self-frequency shift</em>).</li>
+<li>Optical <a href="gain.html" title="a measure of the strength of optical amplification"><em>gain</em></a> and <em>losses</em> can modify the <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a> and the spectral shape.</li>
+<li>The spatial properties can change due to linear effects such as <a href="diffraction.html" title="wave phenomena which occur when light waves hit some structure with variable transmission or phase changes"><em>diffraction</em></a> and <a href="waveguides.html" title="spatially inhomogeneous transparent structures for guiding light"><em>waveguiding</em></a>, but also due to nonlinear effects such as <a href="self_focusing.html" title="focusing of a beam in a transparent medium, caused by the beam itself through a nonlinear process in the medium"><em>self-focusing</em></a>.
+In highly nonlinear interactions, <em>filamentation</em> may occur.</li>
+</ul>
+<p>Of course, different effects can act simultaneously, and often interact in surprising ways.
+For example, chromatic dispersion and Kerr nonlinearity can lead to <a href="solitons.html" title="pulses with a certain balance of nonlinear and dispersive effects">soliton</a> effects.</p>
+<h2 class="togglediv">Relevance of Pulse Propagation Effects</h2>
+<div>
+<p>Pulse propagation effects as mentioned above are relevant in various kinds of situations.
+Some examples are:</p>
+<ul>
+<li>Details of the propagation of ultrashort pulses in a <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked laser</a> determine the steady-state pulse properties such as <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a>, <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a> and <a href="chirp.html" title="time dependence of the instantaneous frequency of an optical pulse">chirp</a>, or the stability of <a href="pulse_generation.html" title="the generation of light pulses (flashes)">pulse generation</a>, <a href="double_pulses.html" title="two closely spaced optical pulses">multiple pulsing</a>, etc.</li>
+<li>The propagation in <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a> is relevant e.g. for pulse <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">amplification</a>, <a href="pulse_compression.html" title="linear or nonlinear techniques for reducing the durations of optical pulses">pulse compression</a> and <a href="supercontinuum_generation.html" title="a nonlinear process for strong spectral broadening of light">supercontinuum generation</a>, and in <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a>.</li>
+<li><a href="nonlinear_frequency_conversion.html" title="the conversion of input light to light of other frequencies, using optical nonlinearities">Nonlinear frequency conversion</a> of ultrashort pulses can lead to complicated changes of pulse shapes.
+In addition to the nonlinear interaction, there can be influences from effects such as <a href="temporal_walk_off.html" title="the loss of temporal overlap of pulses, caused by group velocity mismatch">temporal</a> <a href="spatial_walk_off.html" title="the phenomenon that the intensity distribution of a beam in an anisotropic crystal drifts away from the direction of the wave vector">spatial walk-off</a> and dispersive broadening.</li>
+</ul>
+</div>
+<h2 class="togglediv">Techniques for Modeling of Pulse Propagation</h2>
+<div>
+<p>Depending on the situation, different kinds of physical modeling techniques are required.
+Some of the most important ones are shortly described in the following:</p>
+<ul>
+<li>The <a href="haus_master_equation.html" title="an analytical equation describing the evolution of ultrashort pulses in a laser resonator"><em>Haus Master equation</em></a> is an analytical tool mainly for calculating the steady-state pulse properties obtained in mode-locked lasers.
+It can be seen as a generalization of the <em>nonlinear Schrödinger equation</em>.</li>
+<li><em>Soliton perturbation theory</em> describes the propagation of <a href="solitons.html" title="pulses with a certain balance of nonlinear and dispersive effects">soliton</a> pulses which can be subject to gain or loss, spectral filtering, etc.
+A number of dynamic equations describe the evolution of the basic parameters of solitons under the influence of various effects.
+Also, the so-called <em>continuum</em> is included, i.e. a temporally broad background radiation with which a soliton can interact.
+Soliton perturbation theory can be used, e.g., to describe the generation of <a href="kelly_sidebands.html" title="sidebands in the spectrum of certain mode-locked lasers, related to a periodic disturbance of soliton pulses in the laser resonator">Kelly sidebands</a>.</li>
+<li>Models based on second-order moments of the complex electric field of a pulse [5] can also greatly reduce the number of dynamic variables.
+However, they are applicable only as long as the pulse shapes remain relatively simple.
+A difficulty is that it is not always obvious where the parameter region with a reasonable accuracy ends.
+The advantage of a significantly faster computation (compared with a full numerical simulation) becomes less important as the power of computers is increasing.</li>
+<li>Numerical techniques are available for simulating pulse propagation in more general cases. A straightforward approach applicable e.g. to mode-locked lasers describes a short <a href="pulses.html" title="flashes of light">pulse</a> with an array of complex amplitudes in the time or frequency domain.
+Linear effects such as dispersion are easily treated in the frequency domain, whereas nonlinear interactions are often (but not always) more conveniently handled in the time domain.
+As required, switching between both domains can be done with a fast Fourier transform algorithm (<em>FFT techniques</em>).</li>
+<li>A special case is the <em>symmetrized split-step Fourier method</em>, used particularly for pulse propagation in fibers [9].
+The (weak) dispersive and nonlinear effects corresponding to short fiber pieces are alternately applied.
+The numerical errors associated with the finite longitudinal step size can be minimized with a special symmetrization technique, which allows for higher accuracies without excessively increased computation times.
+Automatic step size control can be very important for computational efficiency.</li>
+<li>Still more refined techniques take into account the transverse spatial variation as well.
+They can be used, e.g., to investigate <a href="kerr_lens_mode_locking.html" title="a technique for mode locking a laser, exploiting nonlinear self-focusing">Kerr lens mode locking</a> or filamentation phenomena.</li>
+<li>For propagation in multimode <a href="waveguides.html" title="spatially inhomogeneous transparent structures for guiding light">waveguides</a>, it is often advantageous to describe the optical field as a superposition of propagation <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a>, which can be coupled e.g. via nonlinearities.</li>
+</ul>
+<p>By applying statistical techniques, pulse propagation models can also be used to investigate <a href="laser_noise.html" title="fluctuations of various parameters of laser light, such as the optical power and phase">noise phenomena</a> [7].</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_pulse_propagation_modeling_software.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 5 suppliers for pulse propagation modeling software. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.rp-photonics.com/" data-supplier="RP Photonics" data-location="product-enc" data-keyword="pulse propagation modeling software" rel="nofollow" class="bg externallink" title="Visit the website of RP Photonics"><img src="./bg/logos/rp_photonics.png" alt="RP Photonics" class="supplierlogo"></a><a href="https://www.rp-photonics.com/propulse.html" data-supplier="RP Photonics" data-location="product-enc" data-keyword="pulse propagation modeling software" rel="nofollow" class="bg externallink" title="Visit the website of RP Photonics"><img src="./bg/products/rp_photonics/pulse_propagation_modeling.png" alt="pulse propagation modeling software" class="product"></a><h3><a href="./bg/profiles/rp_photonics.html" title="See the profile of RP Photonics">RP Photonics</a></h3><p>Our <a href="https://www.rp-photonics.com/propulse.html" data-supplier="RP Photonics" data-location="product-enc" data-keyword="pulse propagation modeling software" rel="nofollow" class="externallink bg">RP ProPulse</a> and <a href="https://www.rp-photonics.com/fiberpower.html" data-supplier="RP Photonics" data-location="product-enc" data-keyword="pulse propagation modeling software" rel="nofollow" class="externallink bg">RP Fiber Power software</a> is suitable for modeling mode-locked solid-state lasers and fiber lasers, ultrafast amplifier systems etc.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="pulse_propagation_modeling.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">P. V. Mamyshev and S. V. Chernikov, &ldquo;Ultrashort-pulse propagation in optical fibers&rdquo;, Opt. Lett. 15 (19), 1076 (1990), <a href="https://doi.org/10.1364/OL.15.001076">doi:10.1364/OL.15.001076</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">G. P. Agrawal, &ldquo;Optical pulse propagation in doped fiber amplifiers&rdquo;, Phys. Rev. A 44 (11), 7493 (1991), <a href="https://doi.org/10.1103/PhysRevA.44.7493">doi:10.1103/PhysRevA.44.7493</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">H. A. Haus <i>et al.</i>, &ldquo;Structures for additive pulse mode locking&rdquo;, J. Opt. Soc. Am. B 8 (10), 2068 (1991), <a href="https://doi.org/10.1364/JOSAB.8.002068">doi:10.1364/JOSAB.8.002068</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">P. L. François, &ldquo;Nonlinear propagation of ultrashort pulses in optical fibers: total field formulation in the frequency domain&rdquo;, J. Opt. Soc. Am. B 8 (2), 276 (1991), <a href="https://doi.org/10.1364/JOSAB.8.000276">doi:10.1364/JOSAB.8.000276</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">M. Potasek <i>et al.</i>, &ldquo;Analytic and numerical study of pulse broadening in nonlinear dispersive fibers&rdquo;, J. Opt. Soc. Am. B 3 (2), 205 (1992), <a href="https://doi.org/10.1364/JOSAB.3.000205">doi:10.1364/JOSAB.3.000205</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">D. Marcuse, &ldquo;RMS width of pulses in nonlinear dispersive fibers&rdquo;, IEEE J. Lightwave Technol. 10 (1), 17 (1992), <a href="https://doi.org/10.1109/50.108730">doi:10.1109/50.108730</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">R. Paschotta, &ldquo;Noise of mode-locked lasers. Part I: numerical model&rdquo;, <a href="http://link.springer.com/article/10.1007%2Fs00340-004-1547-x">Appl. Phys. B 79, 153 (2004)</a>; R. Paschotta, &ldquo;Noise of mode-locked lasers. Part II: timing jitter and other fluctuations&rdquo;, Appl. Phys. B 79, 163 (2004), <a href="https://doi.org/10.1007/s00340-004-1548-9">doi:10.1007/s00340-004-1548-9</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">B. Burgoyne <i>et al.</i>, &ldquo;Nonlinear pulse propagation in optical fibers using second order moments&rdquo;, Opt. Express 15 (16), 10075 (2007), <a href="https://doi.org/10.1364/OE.15.010075">doi:10.1364/OE.15.010075</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">G. P. Agrawal, <i>Nonlinear Fiber Optics</i>, 4th edn., Academic Press, New York (2007)</td></tr>
+<tr><td class="refno">[10]</td><td class="refs">R. Paschotta, tutorial on &quot;<a href="passive_fiber_optics.html">Passive Fiber Optics</a>&quot;</td></tr>
+<tr><td class="refno">[11]</td><td class="refs">R. Paschotta, tutorial on &quot;<a href="passive_fiber_optics.html">Passive Fiber Optics</a>&quot;, <a href="passive_fiber_optics12.html">Part 12: Ultrashort Pulses and Signals in Fibers</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">R. Paschotta, tutorial on &quot;Modeling of Fiber Amplifiers and Lasers&quot;, <a href="tutorial_modeling7.html">part 7</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="dispersion.html" title="the dependence of the phase velocity in a medium on the optical frequency or the propagation mode">dispersion</a>, <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a>, <a href="nonlinear_pulse_distortion.html" title="distortion of the spatial, temporal or spectral characteristics of an optical pulse, resulting from optical nonlinearities">nonlinear pulse distortion</a>, <a href="pulse_compression.html" title="linear or nonlinear techniques for reducing the durations of optical pulses">pulse compression</a>, <a href="double_pulses.html" title="two closely spaced optical pulses">double pulses</a>, <a href="parabolic_pulses.html" title="pulses with a parabolic intensity profile">parabolic pulses</a>, <a href="supercontinuum_generation.html" title="a nonlinear process for strong spectral broadening of light">supercontinuum generation</a>, <a href="haus_master_equation.html" title="an analytical equation describing the evolution of ultrashort pulses in a laser resonator">Haus Master equation</a><br>and other articles in the categories <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a>, <a href="categories.html#methods" title="other articles on methods">methods</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<hr style="margin-top:16px; margin-bottom:12px;">
+<a href="paschotta.html"><img src="img/paschotta3_small.jpg" alt="Dr. R. Paschotta" style="float:left; margin:0px 16px 20px 18px;" width="80" height="97"></a>
+<div style="margin-bottom:12px;">
+<p style="font-size:90%; line-height:20px; padding-right:20px;">This encyclopedia is authored by <a href="paschotta.html" class="redlink">Dr. Rüdiger Paschotta</a>, the founder and executive of <a href="index.html" class="redlink">RP Photonics Consulting GmbH</a>.
+How about a <a href="training.html" class="redlink">tailored training course</a> from this distinguished expert at your location?
+<a href="contact.html" class="redlink">Contact</a> RP Photonics to find out how his <a href="./services.html" class="redlink">technical consulting services</a> (e.g. product designs, problem solving, independent evaluations, training) and <a href="software.html" class="redlink">software</a> could become very valuable for your business!</p>
+</div>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/pulse_propagation_modeling.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fpulse_propagation_modeling.html&text=RP+Photonics+Encyclopedia+-+pulse+propagation+modeling%2C+ultrashort+pulses%2C+fibers%2C+lasers" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fpulse_propagation_modeling.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fpulse_propagation_modeling.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/pulse_propagation_modeling.html"&gt;<br>Article on Pulse Propagation Modeling&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/pulse_propagation_modeling.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/pulse_propagation_modeling.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/pulse_propagation_modeling.html<br>article on 'Pulse Propagation Modeling' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="https://www.lumibird.com/en" data-supplier="Lumibird" data-location="banner" rel="nofollow" class="bg externallink"><img src="./bg/banners/lumibird.png" alt="Lumibird"></a>
+</div>
+</aside>
+<script type="text/javascript" nonce="X/N2E4gXywtZ9z1XSsq0kg==">shownbanner = "Lumibird";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Free Tutorial: Modeling of Fiber Amplifiers and Lasers</h2>
+<p>We have published a new <a href="./tutorial_modeling.html?banner=modeling_tutorial">tutorial</a> which discusses the modeling of fiber amplifiers and lasers.
+It addresses many questions:</p>
+<ul>
+<li>What is a <a href="./tutorial_modeling1.html?banner=modeling_tutorial">model</a>?</li>
+<li>Should one use <a href="./tutorial_modeling3.html?banner=modeling_tutorial">power propagation or field propagation</a>?</li>
+<li>How to simulate the behavior of <a href="./tutorial_modeling4.html?banner=modeling_tutorial">laser-active ions</a>?</li>
+<li>How to calculate <a href="./tutorial_modeling5.html?banner=modeling_tutorial">steady-state solutions</a>?</li>
+<li>How to simulate <a href="./tutorial_modeling6.html?banner=modeling_tutorial">dynamical behavior</a> and <a href="./tutorial_modeling7.html?banner=modeling_tutorial">ultrashort pulse propagation</a>?</li>
+<li>What aspects are important for the <a href="./tutorial_modeling8.html?banner=modeling_tutorial">decision</a> whether to develop own modeling software or use commercial software?</li>
+</ul>
+<p><a href="./tutorial_modeling.html?banner=modeling_tutorial">Read the tutorial!</a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="X/N2E4gXywtZ9z1XSsq0kg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/pulse_propagation_modeling.html"
+    },
+    "headline": "Pulse Propagation Modeling",
+    "image": "https://www.rp-photonics.com/previews/pulse_propagation_modeling.png",
+    "datePublished": "2006-02-23",
+    "dateModified": "2020-03-14",
+    "description": "Pulse propagation modeling means the use of physical models describing the propagation of ultrashort pulses e.g. in lasers or optical fibers. Various linear and nonlinear effects can be taken into account.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter P",
+      "item": "https://www.rp-photonics.com/encyclopedia_p.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "pulse propagation modeling",
+      "item": "https://www.rp-photonics.com/pulse_propagation_modeling.html"
+    }]}
+}
+</script>
+</body>
+</html>

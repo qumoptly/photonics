@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-mtctmDRWKl8J41do41/VWg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Tutorial &ldquo;Modeling of Fiber Amplifiers and Lasers&rdquo;, Part 1: Introduction - What does modeling mean? - Benefits from a model - trial and error</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/tutorial_modeling1.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-04-05">
+<meta name="description" content="Tutorial on modeling of fiber amplifiers and lasers. The first part is an introduction, explaining what a model is, how it is related to and how it can be applied to benefits the development of fiber amplifiers and lasers.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="tutorial, modeling, fiber amplifiers, fiber lasers, mental construction, simplification, mathematical model">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="mtctmDRWKl8J41do41/VWg==">
+page="tutorial_modeling1.html?banner=modeling_tutorial"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/quiz.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="mtctmDRWKl8J41do41/VWg==">shownsponsors="eagleyard Photonics,RPMC Lasers"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials" class="selected"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_tutorials.html">Tutorials</a> &gt; <a href="tutorial_modeling.html">Modeling</a> &gt; <a href="tutorial_modeling1.html">Part 1</a></p>
+<h1>Modeling of Fiber Amplifiers and Lasers</h1>
+<p>This is part 1 of a <a href="tutorial_modeling.html">tutorial on modeling of fiber amplifiers and lasers</a> from <a href="paschotta.html">Dr. Paschotta</a>. The tutorial has the following parts:</p>
+<div class="article_parts"><span style='float:left; margin:0 25px 5px 10px; font-size:60px; color:#888; font-weight:bold; line-height:100%;'>1</span>
+<p>1:&nbsp;<span style="text-decoration:underline;">Introduction</span>, 2:&nbsp;<a href="tutorial_modeling2.html">Optical channels</a>, 3:&nbsp;<a href="tutorial_modeling3.html">Power propagation or field propagation</a>, 4:&nbsp;<a href="tutorial_modeling4.html">The laser-active ions</a>, 5:&nbsp;<a href="tutorial_modeling5.html">Continuous-wave operation of amplifiers and lasers</a>, 6:&nbsp;<a href="tutorial_modeling6.html">Amplifying and generating short pulses</a>, 7:&nbsp;<a href="tutorial_modeling7.html">Ultrashort pulses</a>, 8:&nbsp;<a href="tutorial_modeling8.html">Using home-made software or a commercial product?</a>
+</p>
+</div>
+<h2 class="togglediv">Part 1: Introduction</h2>
+<div>
+<p>No, we won't straightaway jump into technical details!
+Believe me, there are some aspects which are very worthwhile to be thought about beforehand.</p>
+<p>By the way, these thoughts are not specific to active fiber devices, but can be applied quite generally to modeling in science and technology.</p>
+<h3 class="togglediv">What Does Modeling Mean?</h3>
+<div>
+<p>Generally, a model is a <b>mental construction</b> which is supposed to resemble some part of reality &ndash; for example, the power conversion from pump light to signal light in a <a href="fiber_amplifiers.html" title="fiber amplifiers: ">fiber amplifier</a> or the propagation of <a href="ultrashort_pulses.html" title="ultrashort pulses: ">ultrashort pulses</a> in an optical <a href="fibers.html" title="fibers: ">fiber</a>.
+Keep in mind that <b>modeling always starts with thinking</b>; only at a later point, aspects like computing things with software come into play.</p>
+<aside class="callout blue">In order to be useful, a model <em>must</em> be much simpler than reality.</aside>
+<p>A model is always <b>substantially simpler</b> than the reality which it is supposed to resemble.
+Reality is extremely complicated, and our minds are not capable of dealing with absolutely complicated things.
+Fortunately, many aspects of reality can be understood by dealing with very much simplified conceptions.
+For example, in order to gain a very helpful understanding of what is going on in a fiber amplifier, you do not have to deal with the detailed microscopic structure of the fiber core, the interaction of all the <a href="photons.html" title="photons: ">photons</a> with all the atoms in the fiber, etc.
+Instead, you can work with very simplified models which describe the interaction of light and matter with just a few relatively simple differential equations.</p>
+<aside class="callout blue">If you are not yet very experienced yourself, you will probably want to get competent advice concerning what type of model to implement.</aside>
+<p>Of course, a model may not be suitable for its purpose if it is too much simplified.
+It may then not be able to resemble certain relevant aspects of reality.
+Some of the essential decisions to be made in the beginning of a modeling project concern the <b>choice of a suitable type of model</b>, being sufficiently realistic but at the same time not overly complicated.
+That part of the job can be challenging; it often requires a substantial experience.
+You may want to <b>get competent help</b> at this point &ndash; for example, in the form of helpful <a href="software_support.html">technical support</a> delivered together with a software user license.</p>
+<p>Even when working with a good modeling software, of course you need to <b>understand the involved physics</b> to some extent.
+However, you will often find that the structures which you have to deal with are not that complex.
+In comparison, dealing with all the complexities of life in a laboratory can be quite challenging.</p>
+<aside class="callout blue">The involved mathematics may be difficult, but you can leave that to the software developer.</aside>
+<p>For getting quantitative answers, which we usually need in the context of amplifier and laser design, we need quantitative models containing a substantial amount of <b>mathematics</b>.
+It turns out that solving certain relatively innocent looking differential equations can be quite difficult, requiring sophisticated algorithms.
+However, if you use a well made software tool, you will not have to deal with such details.
+Instead, you only need to somehow provide the software with the relevant inputs and configure it to calculate the required outputs and properly display them.
+It is only the software developer who has all the trouble with the involved mathematics.</p>
+<aside class="callout blue">It is impossible to develop a laser or amplifier without any model!</aside>
+<p>By the way, it is utterly impossible to work on things like the development of fiber lasers and amplifiers without any model, i.e., without some kind of mental representation of such devices.
+At least, you need some set of ideas in your mind concerning what these devices do and how you might improve them.
+Such kind of mental models may not be sufficient, however.
+One of the reasons is that they cannot give you reliable quantitative results.</p>
+</div>
+<h3 class="togglediv">How Can You Benefit from a Model?</h3>
+<div>
+<p>Whether you are working in industry or is a scientific researcher, you will need to produce results: for example,</p>
+<ul>
+<li>getting a certain fiber amplifier to work well, or</li>
+<li class="ta_left">developing an improved understanding of certain devices are processes.</li>
+</ul>
+<p>This is where <b>a model can support your work</b> very much.
+However, you should always keep in mind that <b>the model should be used as a tool to produce results</b> rather than the purpose of your work.</p>
+<aside class="callout red">In the beginning, clearly formulate your questions and goals! That may take some discipline, but it is very worthwhile.</aside>
+<p>It is highly recommended that before you invest any substantial time or money into modeling, you <b>clearly formulate all the questions</b> which you would like to address <b>and the goals</b> which you want to reach.
+For example, your list may look like this:</p>
+<ul>
+<li>If I would get hold of a certain fiber, would it be a realistic to expect that I can use it to achieve a certain performance level (e.g., signal output power at a certain wavelength)?</li>
+<li>If yes, under which circumstances is this possible?
+For example, what will be the required pump power and pump wavelength, optimum fiber length, etc.?</li>
+</ul>
+<p>In another case, your questions may be quite different:</p>
+<ul>
+<li>Is it possible that a certain known effect taking place in fibers is the reason for not reaching a certain performance level?</li>
+<li>Under which circumstances can that effect be detrimental, and how can I mitigate or eliminate it?</li>
+</ul>
+<p>If you know precisely what you are seeking for, this will help you greatly to decide what type of model is required and estimate how difficult it will be to reach your goal.
+Also, you will be less prone to waste your time with tedious work which could be predicted not to bring you closer to your goals.</p>
+<p>In some cases, you may realize that certain goals can <em>not</em> be achieved with a model.
+For example, answers may depend on certain data which you cannot get hold of.
+In other cases, you may be looking out for unexpected effects, which you cannot find in a model which does not contain certain details.</p>
+<p>Certainly, modeling is not the solution for everything.
+However, it is extremely valuable in many situations.
+Some examples:</p>
+<aside class="callout blue">Avoiding attempts which cannot work anyway can already be very valuable!</aside>
+<ul>
+<li>Doing some calculations with a model, you may find that a certain <b>technical approach has no chance to work</b>, so that you can avoid ordering expensive equipment, doing tedious laboratory experiments and getting very frustrated in the end.</li>
+<li>Before implementing certain changes to an experimental setup, you can find out more quickly with a model <b>what changes of performance have to be expected</b>.
+Of course, you can then also better plan how exactly to change your setup.</li>
+</ul>
+<aside class="callout blue">With or without modeling, you may get unexpected results. You will then have to analyze their cause &ndash; which is often much simpler with a model.</aside>
+<ul>
+<li>If your setup does not work as well as you originally expected, a model helps you to <b>identify the cause</b> &ndash; e.g., whether or not that can result from certain effects.
+Sometimes, you may be able to reveal that the parameters of certain parts cannot be as stated by a supplier.
+You may then identify faulty parts or get a more accurate set of parameters which allows you to better predict certain performance figures.</li>
+</ul>
+<p>In the end, you can <b>do more efficient work, saving both time and money</b>.
+In that context, you should properly consider the value of lost time (and not just spent parts) &ndash; possibly not just in terms of salaries paid during that time, but also in terms of lost opportunities.
+In industry, minimized <a href="./marketing_glossary.html#time_to_market">time to market</a> may be the key to exploiting market potentials before your competitors occupy that area.
+Likewise, the credits for scientific discoveries can seriously depend on understanding things quickly.</p>
+<aside class="callout red">If using a model is more efficient, then you cannot afford not to do it!</aside>
+<p>After these thoughts, you will probably find it clear that the <b>resources to be spent on modeling</b> (time and money) <b>need to be compared with the anticipated benefits</b>.
+Whether you invest some money into getting a powerful simulation software and some time to get acquainted with it, should <em>not</em> depend on whether you are short of money.
+After all, in that case you can least afford to waste resources by working inefficiently!</p>
+</div>
+<h3 class="togglediv">Can Trial &amp; Error be an Alternative?</h3>
+<div>
+<p>People often think: let us simply try out in the laboratory whether certain ideas work or not.
+Unfortunately, that is not so simple:</p>
+<ul>
+<li>To begin with, you need certain equipment; getting hold of it requires some time and money.</li>
+<li>If an experimental setup does not work as expected, it can be very <b>difficult to find out why</b>.
+After all, your setup won't tell you!
+You will have to interpret what happens <em>based on what you can check and measure</em>.
+Unfortunately, it is often <b>hardly practical to measure certain things of interest</b>, such as optical powers and spectra everywhere within your active fiber.
+In contrast, a computer model is totally &ldquo;transparent&rdquo; &ndash; any calculated quantities can be inspected!</li>
+<li>Certain interpretations of experimental results can only be done based on a certain quantitative understanding of your system &ndash; that is, on certain models!
+You may feel that certain vague ideas in your mind may be sufficient to understand the situation, but such attempts can easily fail; you may be totally misled, for example, by not realizing how important certain effects really are in certain situations.</li>
+</ul>
+<aside class="callout red">Be careful not to waste resources by fishing in the dark!</aside>
+<p>Well, there are cases where an experimental test is most appropriate.
+However, they are usually plenty of others where it is close to fishing in the dark, and only a quantitative model gives you a chance to really understand your system.
+And of course, <b>understanding is the key for controlling things and reaching your goals</b>.</p>
+</div>
+<h3 class="togglediv">What is the Best Model?</h3>
+<div>
+<p>Some people seem to believe that the best model is the one which most comprehensive and accurately describes reality.
+However, one should recall that a model should always be a tool to produce certain needed results.
+Now, what are reasonable criteria for judging the usefulness of a model?
+Here are some suggestions:</p>
+<aside class="callout blue">The best model is not necessarily the most comprehensive and accurate one, since several other aspects are also relevant for its usefulness.</aside>
+<ul>
+<li>Of course, the model should produce reasonably accurate results.
+It does not help, however, to strive for an extraordinary numerical accuracy when the limiting factor is anyway the accuracy of available input data, for example.</li>
+<li>Efficient work is facilitated by a model which is as simple as possible.
+It should not require more inputs than really necessary &ndash; particularly not input data which are very difficult to get hold of.</li>
+<li>You will also appreciate if a computer model does its calculations quickly.</li>
+</ul>
+<p>How important the different aspects are depends on the concrete situation, of course.
+Looking at your concrete requirements, you need to decide what kind of physics effects need to be included and which simplifying assumptions can be used.
+That requires some experience, of course; for deciding such issues you may profit from competent <a href="software_support.html">technical support</a>.</p>
+<p>See also our blog article &quot;<a href="software_news_2014_07_17.html">What Makes a Good Physics Model?</a>&quot;.</p>
+<p>Go to <a href="tutorial_modeling2.html">Part 2: Optical channels</a> or back to the <a href="tutorial_modeling.html">start page</a>.</p>
+</div>
+</div>
+<hr>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="tutorial_modeling1.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Ftutorial_modeling1.html&text=RP+Photonics+Encyclopedia+-+Tutorial+%26ldquo%3BModeling+of+Fiber+Amplifiers+and+Lasers%26rdquo%3B%2C+Part+1%3A+Introduction+-+What+does+modeling+mean%3F+-+Benefits+from+a+model+-+trial+and+error" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Ftutorial_modeling1.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Ftutorial_modeling1.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></main></div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="https://www.goyalab.com/" data-supplier="GoyaLab" data-location="banner" rel="nofollow" class="bg externallink"><img src="./bg/banners/goyalab.jpg" alt="GoyaLab"></a>
+</div>
+</aside>
+<script type="text/javascript" nonce="mtctmDRWKl8J41do41/VWg==">shownbanner = "GoyaLab";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Free Tutorial: Modeling of Fiber Amplifiers and Lasers</h2>
+<p>We have published a new <a href="./tutorial_modeling.html?banner=modeling_tutorial">tutorial</a> which discusses the modeling of fiber amplifiers and lasers.
+It addresses many questions:</p>
+<ul>
+<li>What is a <a href="./tutorial_modeling1.html?banner=modeling_tutorial">model</a>?</li>
+<li>Should one use <a href="./tutorial_modeling3.html?banner=modeling_tutorial">power propagation or field propagation</a>?</li>
+<li>How to simulate the behavior of <a href="./tutorial_modeling4.html?banner=modeling_tutorial">laser-active ions</a>?</li>
+<li>How to calculate <a href="./tutorial_modeling5.html?banner=modeling_tutorial">steady-state solutions</a>?</li>
+<li>How to simulate <a href="./tutorial_modeling6.html?banner=modeling_tutorial">dynamical behavior</a> and <a href="./tutorial_modeling7.html?banner=modeling_tutorial">ultrashort pulse propagation</a>?</li>
+<li>What aspects are important for the <a href="./tutorial_modeling8.html?banner=modeling_tutorial">decision</a> whether to develop own modeling software or use commercial software?</li>
+</ul>
+<p><a href="./tutorial_modeling.html?banner=modeling_tutorial">Read the tutorial!</a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="mtctmDRWKl8J41do41/VWg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tutorials",
+      "item": "https://www.rp-photonics.com/encyclopedia_tutorials.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Modeling",
+      "item": "https://www.rp-photonics.com/tutorial_modeling.html"
+    },{
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Part 1",
+      "item": "https://www.rp-photonics.com/tutorial_modeling1.html"
+    }]}
+}
+</script>
+</body>
+</html>

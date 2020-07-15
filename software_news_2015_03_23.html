@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-+K+5qgzb45QX9oF1GcPYgA=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>Software from RP Photonics - Power Propagation vs. Beam Propagation</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/software_news_2015_03_23.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2015-03-23">
+<meta name="description" content="Different methods for propagating laser beams in physical models are discussed. Depending on the situation and what is of interest, very different kinds of models can be appropriate.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="photonics, modeling, software, optics, lasers, simulations, analysis, optimization, news, newsletter">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Software from RP Photonics - Power Propagation vs. Beam Propagation">
+<meta property="og:description" content="Different methods for propagating laser beams in physical models are discussed. Depending on the situation and what is of interest, very different kinds of models can be appropriate.">
+<meta property="og:url" content="https://www.rp-photonics.com/software_news_2015_03_23.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/software_news_2015_03_23.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Different methods for propagating laser beams in physical models are discussed. Depending on the situation and what is of interest, very different kinds of models can be appropriate.">
+<meta name="twitter:title" content="Software from RP Photonics - Power Propagation vs. Beam Propagation">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/software_news_2015_03_23.png">
+<script type="text/javascript" src="./jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" nonce="+K+5qgzb45QX9oF1GcPYgA==">
+page="software_news_2015_03_23.html"; cat="S"; shownbanner=""; ref="http://www.rp-photonics.com/software_news.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td class="selected"><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software_start" href="software.html">Introduction</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="software_news" href="software_news.html" class="sel">Software News</a>
+<p>Products:</p>
+<a id="Overview" href="software_overview.html">Overview</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<p>Various aspects:</p>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<p>Take action:</p>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main" style="margin-top:20px;">
+<main>
+<p class="breadcrumbs"><a href="software.html">RP Photonics Software News</a> &gt; <a href="software_news_2015_03_23.html">2015-03-23</a></p>
+<h1 class="posting">Power Propagation vs. Beam Propagation</h1>
+<div class="posting_details">
+<p>Posted on 2015-03-23 in the <a href="software_news.html">RP Photonics Software News (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="software_news_2015_03_23.html" class="url">https://www.rp-photonics.com/software_news_2015_03_23.html</a></p>
+<p>Author: <a href="https://www.rp-photonics.com/paschotta.html" rel="author">Dr. Rüdiger Paschotta</a>, <a href="https://www.rp-photonics.com/">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: Different methods for propagating laser beams in physical models are discussed. Depending on the situation and what is of interest, very different kinds of models can be appropriate.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p>Within models for lasers or nonlinear devices, it is very often required to simulate the propagation of a <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a> through some device.
+There are very different ways to do that:</p>
+<ul>
+<li>In the simplest case, one only considers the change of optical power during the passage.
+The transverse beam profile is assumed to stay constant &ndash; e.g., that of a <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beam</a> with a certain <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a>.
+We call that <b>power propagation</b>.</li>
+<li>In other cases, one represents a cross-section of the beam with a two-dimensional array of complex amplitudes and numerically propagates that whole array through the device; that is called <b>beam propagation</b>.
+Here, effects like diffraction and <a href="gain_guiding.html" title="guiding of light based on spatially inhomogeneous optical gain">gain guiding</a> can be taken into account.</li>
+<li>In still other cases, the detailed temporal and spectral evolution is also of interest.
+If the transverse beam profile can be assumed to stay constant, one simply has a linear array of complex amplitudes, spanning some range of time with a certain temporal resolution.
+Otherwise, one has to combine this with beam propagation and then has to propagate a three-dimensional array of complex amplitudes; if you want to study the complete evolution in propagation direction, the results will fill a four-dimensional array (with indices <em>x</em>, <em>y</em>, <em>z</em>, <em>t</em>).</li>
+</ul>
+<p>Physical modeling should always be based on a model which is just as sophisticated as required, but not more than that; otherwise, one is likely to waste time &ndash; not only computation time, but also time needed for providing input data and analyzing the results.
+(I have discussed this last summer in the posting &quot;<a href="software_news_2014_07_17.html">What Makes a Good Physics Model</a>&quot;.)</p>
+<p>In the following, I prefer to discuss a number of example cases.</p>
+<h2 class="togglediv">Fiber Lasers</h2>
+<div>
+<p>In many <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber lasers</a>, the used fiber is <a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode</a> at the laser wavelength.
+This implies that the beam profile will closely resembles that of the guided mode of the fiber &ndash; with only small corrections due to thermal effects or gain guiding, for example.
+It is then usually appropriate to use simple power propagation, neglecting the transverse dimension.
+The transverse beam profiles and doping profile can still be taken into account; the modeling software than has to calculate certain overlap factors, which describe the strengths of the coupling of optical waves with the laser-active dopant.</p>
+<p>In <a href="double_clad_fibers.html" title="optical fibers with different waveguide structures for pump and signal light">double-clad fibers</a>, the situation concerning the pump beam is more complicated.
+The pump cladding is highly multimode, and the distribution of power over these modes can change substantially during propagation.
+Consequently, the beam profile can also change &ndash; typically, it develops a certain reduction in intensity in and around the doped <a href="fiber_core.html" title="the region in an optical fiber which guides light">fiber core</a>.
+Such effects can be treated with numerical beam propagation.
+Unfortunately, this is naturally much more time-consuming, and even defining the input beam profile is not trivial; normally, that beam profile is not even really known.
+(In our <a href="fiberpower.html">RP Fiber Power</a> software, it is possible to construct a realistic input beam profile as a superposition of guided modes with random power and phase values; I have once demonstrated this in an <a href="fiberpower_dcf.html">example case</a>.)
+Note that the results may be influenced by factors like bending and stress, microscopic irregularities of the fiber core and the outer interface of the pump cladding, etc.; therefore, one can hardly hope to obtain precise results, but at least one can estimate how strong such effects are.
+It is also possible to investigate e.g. to which extent mode mixing in the pump cladding can be enhanced with certain measures.</p>
+<p>In many simulations, however, one will prefer to enjoy the advantages of a strongly simplified model, involving simple power propagation, possibly taking the reduced pump absorption due to the mentioned change of intensity profile into account simply by artificially increasing the pump cladding diameter, for example.</p>
+</div>
+<h2 class="togglediv">Q-switched Bulk Lasers</h2>
+<div>
+<p>In <a href="q_switching.html" title="a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q-switched</a> <a href="bulk_lasers.html" title="lasers based on bulk crystals as gain media">bulk laser</a>, <a href="gain_guiding.html" title="guiding of light based on spatially inhomogeneous optical gain">gain guiding</a> effects can in principle be quite strong, because the laser <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> is normally substantially higher than in a <a href="continuous_wave_operation.html" title="operation mode of a laser with continuous light emission">continuous-wave</a> laser.
+One may therefore think that it is essential to use a comprehensive beam propagation model and not rely on simple power propagation.
+I have done this in some example cases and found that the effects of gain guiding are normally much weaker than one may expect.
+I have discussed that phenomenon in a <a href="fiberpower_qs_yag_bp.html">case study with the RP Fiber Power software</a>.</p>
+<p>This example shows that the decision for a certain kind of model can substantially profit from comprehensive experience in the field; even a quite solid textbook knowledge may not be sufficient.</p>
+</div>
+<h2 class="togglediv">Mode-locked Lasers</h2>
+<div>
+<p>In the <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked laser</a>, one or several <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a> circulate in the <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a>.
+Here, one needs to model the temporal and spectral resolution, where the pulse is represented by an array of complex amplitudes in the time or frequency domain.
+Fortunately, in the vast majority of cases there is no need at all to care about the transverse dimension as well, essentially because a mode-locked bulk laser or fiber laser always operates on a single transverse mode &ndash; otherwise, stable mode locking would not be possible.
+If the circulating pulse exhibits only a week <a href="chirp.html" title="time dependence of the instantaneous frequency of an optical pulse">chirp</a>, as it is the case in <a href="soliton_mode_locking.html" title="a mechanism for laser mode locking based on soliton pulses">soliton mode-locked</a> lasers, an array containing only 2<sup>8</sup> = 256 amplitudes in the time or frequency domain may be fully sufficient, whereas for some <a href="mode_locked_fiber_lasers.html" title="ultrafast fiber lasers which are actively or passively mode-locked for generating ultrashort pulses">mode-locked fiber lasers</a> one may have strongly chirped pulses, requiring larger traces with 2<sup>10</sup> or even 2<sup>12</sup> amplitudes, for example.</p>
+<p>A special case is that of a <a href="kerr_lens_mode_locking.html" title="a technique for mode locking a laser, exploiting nonlinear self-focusing">Kerr lens mode-locked laser</a>.
+Here, Kerr lensing reduces the transverse beam size only at high intensity levels, consequently increasing the laser gain or decreasing power losses at an aperture.
+These power-dependent gain all losses provide the essential mode-locking mechanism.
+In principle, one can investigate such things with a comprehensive multidimensional model, which calculates the complete spatio-temporal evolution of the pulses.
+This is very complicated, however.
+In practice, one may prefer to use a simple one-dimensional model into which an artificial <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorber</a> is included.
+It depends, of course, what exactly one is interested in.</p>
+</div>
+<h2 class="togglediv">Nonlinear Devices</h2>
+<div>
+<p>In a <a href="frequency_doubling.html" title="the phenomenon that an input wave in a nonlinear material can generate a wave with twice the optical frequency">frequency doubler</a>, pump light is converted to second-harmonic light &ndash; more strongly on the beam axis, if this is the location of highest optical intensities.
+Therefore, one must expect spatial beam profiles to change during propagation.
+Indeed, a very complicated evolution is observed in certain cases.
+However, in many cases with a Gaussian input beam, a moderate power conversion efficiency and negligible <a href="spatial_walk_off.html" title="the phenomenon that the intensity distribution of a beam in an anisotropic crystal drifts away from the direction of the wave vector">spatial walk-off</a>, changes of beam profiles can be safely neglected.
+In such cases, strongly simplified models can be used, saving a lot of time.</p>
+<p>In the more complicated cases, you might think that you just try out in the lab what happens.
+However, can you really find it out that way?
+You will only get the output beam profiles, averaged over time.
+That will usually by far not be sufficient to understand what is going on inside your crystal.
+So if you really need to know that, e.g. in order to optimize performance, a full 3D model will probably be what you need.</p>
+</div>
+<h2 class="togglediv">Reliable Advice is Essential</h2>
+<div>
+<p>Although some of the explained aspects are relatively simple, others involve quite non-trivial details.
+Therefore, it is not sufficient just to have a powerful <a href="software.html">simulation software</a> for such modeling.
+You also absolutely want to get competent <a href="software_support.html">technical support</a> in order to make sure that you implement the most appropriate type of model, getting useful and reliable results but not wasting time due to unnecessary complications.
+I warmly recommend to keep this aspect in mind when deciding for a certain simulation software.</p>
+</div>
+<hr>
+<p style="font-size:85%; margin-bottom:10px;">This article is a posting of the <a href="software_news.html">RP Photonics Software News</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page, because its location is permanent.</p>
+<p style="font-size:85%; margin-bottom:15px;">Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="https://www.rp-photonics.com/software_news.rss">RSS feed</a>.</p>
+
+<table style="border-spacing:0"><tr>
+<td style="width:60%; vertical-align:middle;">
+<img src="previews/software_news_2015_03_23.png" alt="preview" class="article_preview"></td>
+<td style="vertical-align:middle;">
+<div id="socialbox_article">
+<p style="font-size:90%">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fsoftware_news_2015_03_23.html&text=Software+from+RP+Photonics+-+Power+Propagation+vs.+Beam+Propagation" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fsoftware_news_2015_03_23.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fsoftware_news_2015_03_23.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td>
+</tr></table>
+
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide</span>
+</footer>
+</main></div>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="+K+5qgzb45QX9oF1GcPYgA==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/software_news_2015_03_23.html"
+    },
+    "headline": "Power Propagation vs. Beam Propagation",
+    "image": "https://www.rp-photonics.com/previews/software_news_2015_03_23.png",
+    "datePublished": "2015-03-23",
+    "description": "Different methods for propagating laser beams in physical models are discussed. Depending on the situation and what is of interest, very different kinds of models can be appropriate.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "RP Photonics Software News",
+      "item": "https://www.rp-photonics.com/software.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "2015-03-23",
+      "item": "https://www.rp-photonics.com/software_news_2015_03_23.html"
+    }]}
+}
+</script>
+</body>
+</html>

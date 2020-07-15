@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-U84yGbwqrXafeQIMd08I9Q=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - confocal scanning microscopes, operation principle, pinhole, fluorescence microscopy</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/confocal_scanning_microscopes.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Confocal scanning microscopes can have substantially higher longitudinal resolution than conventional optical microscopes. Two-dimensional of three-dimensional images are obtained by scanning some area or volume of the sample. Usually, a laser is used as the light source.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="confocal scanning microscopes, operation principle, pinhole, fluorescence microscopy">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Confocal Scanning Microscopes">
+<meta property="og:description" content="Confocal scanning microscopes can have substantially higher longitudinal resolution than conventional optical microscopes. Two-dimensional of three-dimensional images are obtained by scanning some area or volume of the sample. Usually, a laser is used as the light source.">
+<meta property="og:url" content="https://www.rp-photonics.com/confocal_scanning_microscopes.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/confocal_scanning_microscopes.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Confocal scanning microscopes can have substantially higher longitudinal resolution than conventional optical microscopes. Two-dimensional of three-dimensional images are obtained by scanning some area or volume of the sample. Usually, a laser is used as the light source.">
+<meta name="twitter:title" content="Confocal Scanning Microscopes">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/confocal_scanning_microscopes.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="U84yGbwqrXafeQIMd08I9Q==">
+page="confocal_scanning_microscopes.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo sponsor"></a> <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="U84yGbwqrXafeQIMd08I9Q==">shownsponsors="DataRay,eagleyard Photonics,EKSMA OPTICS"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_confocal_scanning_microscopes.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_c.html">letter C</a> &gt; <a href="confocal_scanning_microscopes.html">confocal scanning microscopes</a></p>
+<h1>Confocal Scanning Microscopes</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_confocal_scanning_microscopes.html?s=vbox">8 suppliers for confocal scanning microscopes</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_confocal_scanning_microscopes.html?s=vbox">List of suppliers for<br>confocal scanning microscopes</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p>Acronym: CLSM = confocal laser scanning microscope</p>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: optical microscopes with enhanced depth resolution based on the confocal measurement principle</p>
+<p>More general term: scanning <a href="microscopes.html" title="instruments for seeing very small objects">microscopes</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">konfokale Mikroskope</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a></p>
+<p><a href="encyclopedia_cite.html?article=confocal%20scanning%20microscopes">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Confocal microscopes are scanning microscopes, the primary feature of which is a substantially improved longitudinal (axial) resolution by suppressing image contributions from light outside a rather thin plane.
+This allows one to acquire three-dimensional images e.g. of transparent biological and medical samples &ndash; effectively applying a kind of &ldquo;optical sectioning&rdquo; instead of physical sectioning of samples.
+With such microscopes, one can even observe tiny details within living cells, for example.
+Therefore, such instruments have become important for biological and medical research and various other areas of research and industrial inspection.</p>
+<p>The principle of confocal microscopy is also applied in some <a href="optical_profilometers.html" title="optical non-contact instruments for precisely measuring surface profiles">optical profilometers</a>.</p>
+<h2 class="togglediv">Operation Principle of Confocal Microscopy</h2>
+<div>
+<p>In a conventional optical <a href="microscopes.html" title="instruments for seeing very small objects">microscope</a>, a quite high lateral image resolution (well below 1&nbsp;&mu;m) can be achieved by using a <a href="microscope_objectives.html" title="the optical component of a microscope which is next to the observed object">microscope objective</a> with short <a href="focal_length.html" title="a measure of how strongly an optical system focuses or defocuses light">focal length</a> and a high <a href="numerical_aperture.html" title="sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a>.
+A remaining problem, however, is that light from different longitudinal positions in a transparent sample can contribute to an image, leading to a limited longitudinal resolution.
+Some limited amount of suppression is obtained by the fact that contributions from light outside the object plane (selected with the focus adjustment) are out of focus, i.e., strongly blurred.</p>
+<p>Substantially enhanced longitudinal (axial) resolution can be obtained by utilizing the principle of <em>confocal microscopy</em>, which was invented and patented by Marvin Lee Minsky in the 1950s [2], i.e., before the invention of the <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a>.
+(The confocal principle was actually recognized even earlier [1], but apparently the term has been introduced only much later, in 1977 [5], in the context of a thorough theoretical analysis of the operation principle of confocal microscopy.)</p>
+<figure class="right" style="width:208px;">
+<img src="img/confocal_microscope.png" alt="confocal microscope">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Setup of a confocal laser microscope.
+</figcaption>
+</figure>
+<p>A <em>confocal scanning microscope</em> (see Figure&nbsp;1) in a modern form essentially works as follows:</p>
+<ul>
+<li>A <a href="diffraction_limited_beams.html" title="beams with a minimum possible beam divergence for a given waist radius">diffraction-limited</a> <a href="collimated_beams.html" title="laser beams with weak divergence">collimated</a> <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a> is tightly focused onto the sample, using a <a href="microscope_objectives.html" title="the optical component of a microscope which is next to the observed object">microscope objective</a> (<em>point illumination</em> instead of illumination of the whole object).</li>
+<li>The light coming back from the focus point (e.g. through <a href="scattering.html" title="processes where light is sent in other directions, usually but not always in random directions">scattering</a> in the sample, or <a href="fluorescence.html" title="luminescence arising from irradiation with light">fluorescence</a> light) is imaged to a small <a href="pinholes.html" title="circular holes, typically with diameters well below one millimeter">pinhole</a> and transmitted to a <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a>.</li>
+<li>The recorded intensity conveys information on just a single object point.
+A complete two-dimensional or three-dimensional image is obtained by systematically translating either the beam focus (with some kind of <a href="laser_scanners.html" title="devices for scanning the direction of a laser beam">laser scanner</a>, e.g. with oscillating mirrors) or alternatively the sample, scanning a certain area or volume in the sample (<em>flying spot microscopy</em>).</li>
+</ul>
+<p>Light coming from other longitudinal or transverse positions in the sample is largely suppressed:</p>
+<ul>
+<li>At other lateral positions, there is hardly any incident laser light, except somewhat before and after the beam focus due to the substantial <a href="beam_divergence.html" title="a measure for how fast a laser beam expands far from its focus">beam divergence</a>.
+Also, such light could not get through the pinhole, since it would be focused to points away from the hole.</li>
+<li>Light from positions in the sample above or below the beam focus can also not well get through the pinhole, because its focus position is not in the plane of the pinhole (the selected optically <a href="conjugate_planes.html" title="pairs of planes where an optical system images one into the other and vice versa">conjugate plane</a>).
+In addition, the laser intensity quickly gets smaller due to the substantial <a href="beam_divergence.html" title="a measure for how fast a laser beam expands far from its focus">beam divergence</a>.</li>
+</ul>
+<p>It is essential to ensure that the pinhole is adjusted such that one collects light exactly from the laser beam focus.</p>
+<p>The obtained optical power registered by the <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a> is usually rather small.
+Therefore, sensitive detectors such as <a href="photomultipliers.html" title="photodetection devices based on the photoelectric effect and charge multiplication by secondary emission of electrons">photomultiplier tubes</a> or <a href="avalanche_photodiodes.html" title="photodiodes with internal signal amplification through an avalanche process">avalanche photodiodes</a> are normally used in order to limit the required exposure time.</p>
+<p>The principle of confocal microscopy can be modified in various ways:</p>
+<ul>
+<li>For operation in transmission, laser illumination may be done through a second microscope objective on the other side of the sample.</li>
+<li>One may use an angular separation of the beam paths for illumination and detection, enhancing the imaging of weekly <a href="scattering.html" title="processes where light is sent in other directions, usually but not always in random directions">scattering</a> objects, e.g. nanoparticles.
+This idea of &ldquo;angular gating&rdquo; lead to the <em>selected plane illumination microscope</em> (SPIM), also called <em>orthogonal-plane fluorescence optical sectioning</em> (OPFOS).</li>
+<li>The pinhole can be replaced with the end of a <a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode fiber</a>, acting as an <a href="optical_apertures.html" title="structures which limit the propagation of light">optical aperture</a> both for illumination and detection [10,&thinsp;11].
+This principle lead to a particularly flexible microscope.</li>
+<li>One may employ <a href="frequency_doubling.html" title="the phenomenon that an input wave in a nonlinear material can generate a wave with twice the optical frequency">second harmonic generation</a> [7] or <a href="frequency_tripling.html" title="the phenomenon that an input laser beam generates a beam with three times the optical frequency">third harmonic generation</a> [13] in certain samples (<em>SHG or THG microscopy</em>).
+In that case, detection must occur in the direction of the laser beam.</li>
+<li>The lateral resolution of confocal microscopes is usually similar to that of conventional optical microscopes &ndash; limited by <a href="diffraction.html" title="wave phenomena which occur when light waves hit some structure with variable transmission or phase changes">diffraction</a> to the order of half the optical <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>.
+However, sub-diffraction resolution (<em>super-resolution</em> leading to <em>nanoscopy</em>) can be realized in some <a href="fluorescence_microscopy.html" title="a technique for acquiring microscopic images using fluorescence which is excited in the sample">fluorescence microscopes</a> based on the principle of <em>stimulated emission depletion microscopy (STED microscopy)</em>; see the article on <a href="fluorescence_microscopy.html" title="a technique for acquiring microscopic images using fluorescence which is excited in the sample">fluorescence microscopy</a> for more details.</li>
+</ul>
+</div>
+<h2 class="togglediv">Scanning with a Nipkow Disc</h2>
+<div>
+<p>In the 1960s, a new scanning technique for confocal microscopes (<em>tandem scanning microscopy</em>) was invented by Mojmir Petran and Milan Hadravsky.
+They used a <em>Nipkow disc</em>, which is a disc having a spiral pattern of thousands of pinholes.
+During operation, that disc is rotated, so that many moving points are simultaneously illuminated in the sample, which helps to substantially decrease the overall exposure time.
+The collected light also goes through the disc (or alternatively through a second, synchronously rotating disc) and gets to an electronic <a href="image_sensors.html" title="optoelectronic sensors which can be used for imaging">image sensor</a>, which can simultaneously measure intensities corresponding to multiple pinholes.</p>
+<p>The first commercially available confocal scanning microscope was based on the principle of the Nipkow disc.</p>
+<p>The method has been developed further, replacing the spinning disc with an electronically controlled spatial light modulator (<em>programmable array microscopes</em>, PAM).</p>
+</div>
+<h2 class="togglediv">Light Sources for Confocal Microscopes</h2>
+<div>
+<p>Modern confocal microscopes are usually using some kind of <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a>, since its high spatial <a href="coherence.html" title="a fixed phase relationship between the electric field values at different locations or at different times">coherence</a> is ideal for tightly focusing to a small spot in the sample.
+In principle, however, one can also use a non-coherent light source, where the radiation first needs to be focused to an additional <a href="pinholes.html" title="circular holes, typically with diameters well below one millimeter">pinhole</a> and then collimated; that was done in early confocal microscopes.
+That way, however, one loses most of the <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a>.
+The first scanning laser microscope (with a <a href="helium_neon_lasers.html" title="gas lasers based on a helium&ndash;neon mixture">helium&ndash;neon laser</a>) was demonstrated in 1969 at Yale University [3].</p>
+<p>Many confocal microscopes use a continuous-wave laser, but some <a href="fluorescence_microscopy.html" title="a technique for acquiring microscopic images using fluorescence which is excited in the sample">fluorescence microscopes</a> require a <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked laser</a> (<a href="ultrafast_lasers.html" title="lasers emitting ultrashort pulses">ultrafast laser</a>), emitting <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a> for <a href="two_photon_absorption.html" title="a nonlinear absorption process where two photons are simultaneously absorbed">two-photon excitation</a> or multi-photon excitation of <a href="fluorescence.html" title="luminescence arising from irradiation with light">fluorescence</a>.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_confocal_scanning_microscopes.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 8 suppliers for confocal scanning microscopes.</p>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="confocal_scanning_microscopes.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">H. Goldmann, &ldquo;Spaltlampenphotographie und -photometrie&rdquo;, Ophthalmologica 98 (5/6), 257 (1940)</td></tr>
+<tr><td class="refno">[2]</td><td class="refs">Marvin Minsky, &ldquo;Microscopy Apparatus&rdquo;, US Patent 3.013.467, granted in 1961</td></tr>
+<tr><td class="refno">[3]</td><td class="refs">P. Davidovits and M. D. Egger, &ldquo;Scanning laser microscope&rdquo;, Nature 223 (5208), 831 (1969), <a href="https://doi.org/10.1038/223831a0">doi:10.1038/223831a0</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">P. Davidovits and M. D. Egger, &ldquo;Scanning laser microscope for biological investigations&rdquo;, Appl. Opt. 10 (7), 1615 (1971), <a href="https://doi.org/10.1364/AO.10.001615">doi:10.1364/AO.10.001615</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">C. J. R. Sheppard and A. Choudhury, &ldquo;Image formation in the scanning microscope&rdquo;, Optica Acta 24 (10), 1051 (1977), <a href="https://doi.org/10.1080/713819421">doi:10.1080/713819421</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">C. J. R. Sheppard and T. Wilson, &ldquo;Depth of field in the scanning microscope&rdquo;, Opt. Lett. 3 (3), 115 (1978), <a href="https://doi.org/10.1364/OL.3.000115">doi:10.1364/OL.3.000115</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">J. N. Gannaway and C. J. R. Sheppard, &ldquo;Second harmonic imaging in the scanning optical microscope&rdquo;, Optical and Quantum Electon. 10 (5), 435 (1978), <a href="https://doi.org/10.1007/BF00620308">doi:10.1007/BF00620308</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">I. J. Cox and C. J. R. Sheppard, &ldquo;Scanning optical microscope incorporating a digital framestore and microcomputer &rdquo;, Appl. Opt. 22 (10), 1474 (1983), <a href="https://doi.org/10.1364/AO.22.001474">doi:10.1364/AO.22.001474</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">W. Denk <i>et al.</i>, &ldquo;Two-photon laser scanning fluorescence microscopy&rdquo;, Science 248, 73 (1990), <a href="https://doi.org/10.1126/science.2321027">doi:10.1126/science.2321027</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">T. Dabbs and M. Glass, &ldquo;Single-mode fibers used as confocal microscope pinholes&rdquo;, Appl. Opt. 31 (6), 705 (1992), <a href="https://doi.org/10.1364/AO.31.000705">doi:10.1364/AO.31.000705</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">P. M. Delaney, M. R. Harris and R. G. King, &ldquo;Fiber-optic laser scanning confocal microscope suitable for fluorescence imaging&rdquo;, Appl. Opt. 33 (4), 573 (1994), <a href="https://doi.org/10.1364/AO.33.000573">doi:10.1364/AO.33.000573</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">R. H. Webb, &ldquo;Confocal optical microscopy&rdquo;, Rep. Prog. Phys. 59 (3), 427 (1996), <a href="https://doi.org/10.1088/0034-4885/59/3/003">doi:10.1088/0034-4885/59/3/003</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">J. Squier <i>et al.</i>, &ldquo;Third harmonic generation microscopy&rdquo;, Opt. Express 3 (9), 315 (1998), <a href="https://doi.org/10.1364/OE.3.000315">doi:10.1364/OE.3.000315</a></td></tr>
+<tr><td class="refno">[14]</td><td class="refs">M. A. A. Neill, T. Wilson and R. A. Juskaitis, &ldquo;A light efficient optically sectioning microscope&rdquo;, <a href="https://onlinelibrary.wiley.com/doi/abs/10.1046/j.1365-2818.1998.00317.x">J. Microscopy 189 (2), 114 (1998)</a>.</td></tr>
+<tr><td class="refno">[15]</td><td class="refs">W. B. Amos and J. G. White, &ldquo;How the confocal laser scanning microscope entered biological research&rdquo;, Biology of the Cell. 95 (6), 335 (2003), <a href="https://doi.org/10.1016/S0248-4900(03)00078-9">doi:10.1016/S0248-4900(03)00078-9</a></td></tr>
+<tr><td class="refno">[16]</td><td class="refs">J. A. Conchello and J. W. Lichtman, &ldquo;Optical sectioning microscopy&rdquo;, Nature Methods 2, 920 (2005), <a href="https://doi.org/10.1038/nmeth815">doi:10.1038/nmeth815</a></td></tr>
+<tr><td class="refno">[17]</td><td class="refs">Nature Photon. 3 (7), special issue on super-resolution imaging (2009)</td></tr>
+<tr><td class="refno">[18]</td><td class="refs">K. W. Dunn <i>et al.</i>, &ldquo;Fundamental concepts in confocal microscopy&rdquo;, <a href="http://www.microscopyu.com/articles/confocal/index.html" class="url">http://www.microscopyu.com/articles/confocal/index.html</a></td></tr>
+<tr><td class="refno">[19]</td><td class="refs">C. J. R. Sheppard, &ldquo;Confocal Microscopy. The Development of a Modern Microscopy&rdquo;, <a href="https://www.imaging-git.com/science/light-microscopy/confocal-microscopy">Imaging &amp; Microscopy (online, 2009)</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="laser_microscopy.html" title="a technique for generating microscopic images by scanning objects with a laser">laser microscopy</a>, <a href="fluorescence_microscopy.html" title="a technique for acquiring microscopic images using fluorescence which is excited in the sample">fluorescence microscopy</a>, <a href="optical_profilometers.html" title="optical non-contact instruments for precisely measuring surface profiles">optical profilometers</a><br>and other articles in the categories <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/confocal_scanning_microscopes.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fconfocal_scanning_microscopes.html&text=RP+Photonics+Encyclopedia+-+confocal+scanning+microscopes%2C+operation+principle%2C+pinhole%2C+fluorescence+microscopy" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fconfocal_scanning_microscopes.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fconfocal_scanning_microscopes.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/confocal_scanning_microscopes.html"&gt;<br>Article on Confocal Scanning Microscopes&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/confocal_scanning_microscopes.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/confocal_scanning_microscopes.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/confocal_scanning_microscopes.html<br>article on 'Confocal Scanning Microscopes' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Staff Training</h2>
+<p>Up-to-date technical know-how is the key to success in photonics.
+RP Photonics offers high quality <a href="./training.html?banner=staff_training">training courses</a> at your location:</p>
+<ul>
+<li>Courses on basic, intermediate or advanced topics &ndash; tailored to your needs and already existing knowledge.</li>
+<li>Boost the competence of your whole team within a few days!</li>
+<li>Get your questions answered straight away.</li>
+<li>Stimulate new ideas and motivate the whole team.</li>
+</ul>
+<p style="text-align:center;"><img src="./img/paschotta5.jpg" alt=" "></p>
+<p><a href="./paschotta.html?banner=staff_training">Dr. Paschotta</a> from RP Photonics</p>
+<ul>
+<li>is a top expert in laser technology, fiber optics and nonlinear optics, also highly respected and trustworthy partner,</li>
+<li>can explain complicated things in helpful ways, and</li>
+<li>addresses your needs.</li>
+</ul>
+<p>Could there be a better investment for a high-tech company?</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="U84yGbwqrXafeQIMd08I9Q==">shownbanner = "staff training";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Sponsors of the Encyclopedia</h2>
+<p>We are grateful to the <a href="./encyclopedia_sponsoring.html?banner=sponsoring">sponsors</a> of our encyclopedia:</p>
+<div style="margin-top:10px; text-align:center;"><a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/nkt_photonics.html"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo"></a></div>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="U84yGbwqrXafeQIMd08I9Q==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/confocal_scanning_microscopes.html"
+    },
+    "headline": "Confocal Scanning Microscopes",
+    "image": "https://www.rp-photonics.com/previews/confocal_scanning_microscopes.png",
+    "datePublished": "2019-04-17",
+    "dateModified": "2020-03-14",
+    "description": "Confocal scanning microscopes can have substantially higher longitudinal resolution than conventional optical microscopes. Two-dimensional of three-dimensional images are obtained by scanning some area or volume of the sample. Usually, a laser is used as the light source.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter C",
+      "item": "https://www.rp-photonics.com/encyclopedia_c.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "confocal scanning microscopes",
+      "item": "https://www.rp-photonics.com/confocal_scanning_microscopes.html"
+    }]}
+}
+</script>
+</body>
+</html>

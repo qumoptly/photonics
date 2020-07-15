@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-l7G7/Rl5YL7pVC4T6A4Siw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>The software RP Fiber Power: launching light into a multimode fiber, simulated with fiber mode model</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/fiberpower_launch.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-05-22">
+<meta name="description" content="Launching light into a multimode fiber is simulated with the software RP Fiber Power. The launch conditions influence the distribution of optical powers over the modes.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="RP Fiber Power, simulation, design, software, model, launching light into a multimode fiber">
+<script type="text/javascript" src="./jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" nonce="l7G7/Rl5YL7pVC4T6A4Siw==">
+page="fiberpower_launch.html"; cat="S"; shownbanner=""; ref="http://www.rp-photonics.com/optics.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td class="selected"><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="fiberpower_launch_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software_start" href="software.html">Introduction</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<p>Products:</p>
+<a id="Overview" href="software_overview.html">Overview</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html" class="sel">RP Fiber Power</a>
+<a href="fiberpower_features.html" class="sub">Features</a>
+<a href="fiberpower_speed.html" class="sub">Speed</a>
+<a href="fiberpower_model.html" class="sub">Model</a>
+<a href="fiberpower_data.html" class="sub">Data</a>
+<a href="fiberpower_interface.html" class="sub">Interface</a>
+<a href="fiberpower_case_studies.html" class="sub sel">Demos</a>
+<a href="fiberpower_versions.html" class="sub">Versions</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<p>Various aspects:</p>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<p>Take action:</p>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main"><main>
+<div class="softwarelogo">
+<p class="fig" style="margin-top:12px"><img src="img/fiberpower_logo.png" width="75" height="75" alt="RP Fiber Power logo"></p>
+</div>
+<p class="breadcrumbs"><a href="software.html">Software</a> &gt; <a href="fiberpower.html">RP Fiber Power</a> &gt; <a href="fiberpower_case_studies.html">Demos</a> &gt; <a href="fiberpower_launch.html">Launch</a></p>
+<h1>RP Fiber Power &ndash; Simulation and Design Software <br> for Fiber Optics, Amplifiers and Fiber Lasers</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower.html">Overview</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_features.html">Features</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_speed.html">Speed</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_model.html">Model</a></td>
+</tr><tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_data.html">Data</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_interface.html">Interface</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="fiberpower_case_studies.html">Demos</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_versions.html">Versions</a></td>
+</tr>
+</table>
+<h2>Example Case: Launching Light into a Multimode Fiber</h2>
+<h3>Description of the Model</h3>
+<p>We simulate the following case:</p>
+<ul>
+<li>We have a <a href="multimode_fibers.html" title="fibers supporting more than one guided mode per polarization direction">multimode fiber</a>, the same as for the <a href="fiberpower_gesi.html">previous example case</a>, i.e., with a graded refractive index profile.</li>
+<li>We focus a monochromatic <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beam</a> with a beam radius of 4&nbsp;&mu;m onto the input end.
+The beam position and tilt angle can be varied.</li>
+<li>With a couple of lines of <a href="software_script_language.html">script code</a>, we calculate the resulting amplitudes of all guided modes.</li>
+<li>We assume that the not guided part of the input power (which gets into the cladding) will be lost on the way to the fiber's output end.</li>
+</ul>
+<h3>Results</h3>
+<p>First, we consider an input beam with a variable offset from the center of the fiber core, but with no tilt.
+For any magnitude of set beam offset, we can calculate the amount of power which gets into each guided mode of the fiber.
+The results are shown Figure&nbsp;1.</p>
+<figure>
+<img src="img/fiberpower_launch_mm1.png" alt="mode content as a function of beam offset">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Powers in the guided fiber modes, relative to the total input beam power, as functions of the position of the input beam. Different colors are used for different <span class="eqn_il"><i>m</i></span> values of the modes, whereas different kinds of markers correspond to different <span class="eqn_il"><i>l</i></span> values. The plus signs show the total power in the guided modes.
+</figcaption>
+</figure>
+<p>For a zero offset, nearly all power gets into the fundamental mode (see the rectangles), as the Gaussian input matches that mode quite well.
+For increasing offset, however, more and more power gets into higher-order modes &ndash; in particular, into the LP<sub>11</sub> mode (upside triangles).
+If the offset gets too large, the total power in the guided modes (see the plus signs) is reduced, since part of the power gets into cladding modes, which are lost after some moderate distance of propagation.</p>
+<p>Figure&nbsp;2 shows the same for a variable tilt angle (with no beam offset).</p>
+<figure>
+<img src="img/fiberpower_launch_mm2.png" alt="mode content as a function of tilt angle">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Powers in the guided fiber modes, relative to the total input beam power, as functions of the beam tilt.
+</figcaption>
+</figure>
+<p>Next we calculate what happens to the output beam profile if the input beam position is scanned on a line which approximately goes through the center of the fiber core.
+We do not have to apply numerical beam propagation for that: we can simply take all the complex mode amplitudes, apply to those the phase factors for propagation through 50&nbsp;cm of the fiber (using the propagation constants as calculated with the mode solver), and calculate the resulting intensity profiles at the fiber end.</p>
+<p>Figure&nbsp;3 shows with animated graphics how the intensity profile at the fiber's output end varies during a scan of the input beam position.
+The input beam moves along the horizontal gray line, and the curve at the bottom of the diagram shows the intensity profile of the input beam.
+The gray circle indicates the radius beyond which the refractive index stays constant.</p>
+<figure>
+<img src="img/fiberpower_launch_mm.gif" alt="intensity profiles at the end of a multimode fiber">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Intensity profile at the end of a multimode fiber.
+</figcaption>
+</figure>
+<p>Note that the output beam has strange shapes and never becomes like a simple Gaussian, because we always get some superposition of modes, which get out of phase during propagation.</p>
+<p>The launch efficiency stays pretty high even for a substantial deviation of the beam position from the center of the fiber core.</p>
+<p>The output beam patterns will not be exactly the same as obtained in an experiment, since the slightest disturbance of the fiber (e.g., manufacturing imperfections or any bending) will modify the relative phase changes between the modes.
+(The same holds for tiny errors in the fiber length or the wavelength.)
+In addition, there may be mode-dependent polarization changes.
+However, the figure shows the typical behavior of such a fiber.</p>
+<p>For a light source with a larger optical <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>, the intensity patterns may be washed out since the patterns for different frequency components will be different.
+It would not be difficult to extend the <b>RP Fiber Power</b> script for modeling such situations.</p>
+<p>For comparison, Figure&nbsp;4 shows the same for a <a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode fiber</a>.
+Here, the shape of the output profile does not change.
+For a mismatch of the launching position, we only get a lower power coupled into the single guided mode.</p>
+<figure>
+<img src="img/fiberpower_launch_sm.gif" alt="intensity profiles at the end of a single-mode fiber">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Intensity profiles at the end of a single-mode fiber.
+</figcaption>
+</figure>
+<p>The coupling efficiency does not exceed 84.6&#37;, since the minimum position offset from the core is 1.5&nbsp;&mu;m.
+Even if that is removed, the coupling efficiency stays at 99.4&#37;, since the input Gaussian beam does not perfectly fit the shape of the fiber's LP<sub>01</sub> mode.</p>
+<p>(<a href="fiberpower_case_studies.html">back to the list of example cases</a>)</p>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</main></div>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="l7G7/Rl5YL7pVC4T6A4Siw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Software",
+      "item": "https://www.rp-photonics.com/software.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "RP Fiber Power",
+      "item": "https://www.rp-photonics.com/fiberpower.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Demos",
+      "item": "https://www.rp-photonics.com/fiberpower_case_studies.html"
+    },{
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Launch",
+      "item": "https://www.rp-photonics.com/fiberpower_launch.html"
+    }]}
+}
+</script>
+</body>
+</html>

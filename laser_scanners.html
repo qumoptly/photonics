@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-GIOCKdc1Qr+vmPcskzNINA=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - laser scanners, operation principles, applications, displays, barcode readers, 3D imaging, LIDAR, printing, laser microscopy</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/laser_scanners.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Laser scanners are devices or systems for scanning the direction of a laser beam. They can be used for laser displays, laser microscopes, 3D printers, barcode scanners and 3D imaging, for example.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="laser scanners, operation principles, applications, displays, barcode readers, LIDAR, laser microscopy">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Laser Scanners">
+<meta property="og:description" content="Laser scanners are devices or systems for scanning the direction of a laser beam. They can be used for laser displays, laser microscopes, 3D printers, barcode scanners and 3D imaging, for example.">
+<meta property="og:url" content="https://www.rp-photonics.com/laser_scanners.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/laser_scanners.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Laser scanners are devices or systems for scanning the direction of a laser beam. They can be used for laser displays, laser microscopes, 3D printers, barcode scanners and 3D imaging, for example.">
+<meta name="twitter:title" content="Laser Scanners">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/laser_scanners.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="GIOCKdc1Qr+vmPcskzNINA==">
+page="laser_scanners.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="GIOCKdc1Qr+vmPcskzNINA==">shownsponsors="El.En."</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_laser_scanners.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_l.html">letter L</a> &gt; <a href="laser_scanners.html">laser scanners</a></p>
+<h1>Laser Scanners</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_laser_scanners.html?s=vbox">21 suppliers for laser scanners</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://elenlaser.com/laser-products/z-axis-galvanometer-actuators/galvanometer-g1432.html" data-supplier="El.En." data-location="product-enc" data-keyword="laser scanners" rel="nofollow" class="bg externallink"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_laser_scanners.html?s=vbox">List of suppliers for<br>laser scanners</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: devices for scanning the direction of a laser beam</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Laser-Scanner</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a></p>
+<p><a href="encyclopedia_cite.html?article=laser%20scanners">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>A laser scanner is a device which can be used for controlling the direction of an outgoing <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a>.
+Typically, it is used for systematic periodic scanning (raster scanning), either in one dimension or in two dimensions.
+For example, a barcode reader requires scanning only in one dimension (along a straight line), while laser displays with point scanning require scanning in two dimensions &ndash; e.g. subsequently scanning straight horizontal lines, some number of which is arranged with some vertical offset.
+Some other scanners are suitable for freely addressing different beam directions, for example controlled with a computer algorithm.</p>
+<p>In some cases, a laser scanner is understood to be an instrument which besides the beam scanning apparatus contains additional hardware for performing certain functions.
+In particular, there are laser scanner instruments based on <a href="lidar.html" title="a technique for acquiring 3D images with laser pulses">LIDAR</a> which can acquire three-dimensional images of the room in which they are placed.
+Such scanners are widely used in architecture and for crime scene investigations, for example.</p>
+<h2 class="togglediv">Operation Principles of Laser Scanners</h2>
+<div>
+<p>There are very different kinds of laser scanners, which are based on different operation principles and explained in the following sections.</p>
+<h3 class="togglediv">Rotating Mirror Scanners</h3>
+<div>
+<p>Various kinds of scanners essentially rely on some kind of rotating <a href="mirrors.html" title="devices which reflect light">mirror</a>.
+For example, one may start with a cylindrical piece, where one end is cut off at some angle against the cylinder axis and equipped with a mirror coating.
+When that device is rotating around the cylinder axis, driven by some motor, and incident laser beam is periodically sent into different directions.</p>
+</div>
+<h3 class="togglediv">Polygon Scanners</h3>
+<div>
+<p>Many laser scanners are based on a polygon, which is continuously rotated around its axis and has its outer area covered with <a href="mirrors.html" title="devices which reflect light">mirror</a> segments.
+The incoming laser beam is reflected by those segments, and for each segment the outgoing beam covers a certain angular range.</p>
+<p>Polygon scanners may be regarded as a special kind of rotating mirror scanners.</p>
+<p>A scanner may contain optical elements such as a <a href="scanning_lenses.html" title="lens systems which are designed for use in laser scanners">scanning lens</a> in addition to those components actually moving the beam, such as the rotating polygon.</p>
+</div>
+<h3 class="togglediv">Galvanometer Scanners</h3>
+<div>
+<p>In a galvanometer scanner, a scanning mirror can be rotated to different positions by electromagnetic forces.
+Some of these devices are operated periodically, exploiting a mechanical resonance.
+The angular velocity is then of course not constant during a scan.</p>
+</div>
+<h3 class="togglediv">Other Mechanical Drives</h3>
+<div>
+<p>While most laser scanners are driven by some common kind of electrical motor or a galvanometer, some devices use a different kind of actuator, for example a piezoelectric or magnetostrictive actuator.
+There are also ways to realize microscanners (very tiny scanners) based on MEMS technology.</p>
+</div>
+<h3 class="togglediv">Reflective vs. Refractive Scanning</h3>
+<div>
+<p>In most cases, one uses some kind of movable mirror, but there are also scanners which employ <a href="refraction.html" title="the change of the propagation direction when a wave comes from one medium into another one">refractive</a> elements for beam deflection.
+For example, rotating Risley prisms may be used.
+Another possibility is to move an optical <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lens</a> in transverse directions; for example, some <a href="fiber_launch_systems.html" title="optical systems for launching light into optical fibers">fiber launch systems</a> are based on that scanner principle.</p>
+</div>
+<h3 class="togglediv">Acousto-optic and Electro-Optic Scanners</h3>
+<div>
+<p>Some scanners are based on an <a href="acousto_optic_deflectors.html" title="acousto-optic devices for deflecting and scanning laser beams">acousto-optic deflector</a>.
+These devices do not contain any movable parts, but exploit <a href="diffraction.html" title="wave phenomena which occur when light waves hit some structure with variable transmission or phase changes">diffraction</a> at an acoustic wave in a crystal or glass piece, where the deflection angle can be controlled through the radio frequency applied to the transducer.
+Acousto-optic scanners are very fast, and they are of course not limited to purely periodic scans.
+However, they mostly exhibit a quite limited range of deflection angles and a limited number of pixels that they can address.
+A larger deflection range can be obtained with beam-steered deflectors, where the direction of the acoustic wave can also be manipulated in some range.</p>
+<p>Another possibility is to use electro-optic devices, which can be extremely fast but can typically not scan over a large range of angles.</p>
+</div>
+<h3 class="togglediv">Optical Phased Arrays</h3>
+<div>
+<p>Another possibility for achieving beam scanning without mechanical parts is to realize an optical phased array.
+Here, one has an array of mutually <a href="coherence.html" title="a fixed phase relationship between the electric field values at different locations or at different times">coherent</a> emitters, where the phase difference between each pair of emitters is controlled in order to manipulate the direction of the outgoing combined beam.
+That technology may in the future be used for miniature <a href="lidar.html" title="a technique for acquiring 3D images with laser pulses">LIDAR</a> devices as required for self-driving vehicles.</p>
+</div>
+</div>
+<h2 class="togglediv">Applications of Laser Scanners</h2>
+<div>
+</div>
+<h2 class="togglediv">Laser Printers</h2>
+<div>
+<p>In a laser printer, one typically has a one-dimensional rotating polygon scanner, with which a beam from a <a href="laser_diodes.html" title="semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diode</a> is sent to variable locations on an image drum.
+The previously electrically charged drum is discharged at those locations hit by the modulated laser beam, so that the drum later electrostatically attracts toner powder only at the non-illuminated points.</p>
+<p>Laser scanners are also used for 3D printers.</p>
+<h3 class="togglediv">Laser Microscopy and OCT</h3>
+<div>
+<p>Some kinds of <a href="laser_microscopy.html" title="a technique for generating microscopic images by scanning objects with a laser">laser microscopes</a> do not capture a whole image in one moment, but rather acquire it sequentially, for example pixel by pixel by scanning a laser beam across the sample.
+Because with various methods one can largely restrict the contributions to the image signal to a short range around a beam focus in the sample, it is even possible to produce three-dimensional images.
+For example, <a href="confocal_scanning_microscopes.html" title="optical microscopes with enhanced depth resolution based on the confocal measurement principle">confocal scanning microscopes</a> and <a href="fluorescence_microscopy.html" title="a technique for acquiring microscopic images using fluorescence which is excited in the sample">fluorescence microscopes</a> can work in that manner.</p>
+<p>Similarly, <a href="optical_coherence_tomography.html" title="an optical imaging technique where longitudinal resolution is achieved based on interference effects with low-coherence light">optical coherence tomography</a> (OCT) usually involves beam scanning.</p>
+</div>
+<h3 class="togglediv">Laser Machining</h3>
+<div>
+<p>Various kinds of laser material processing utilize some kind of laser scanner for sending the processing beam to different locations on a workpiece, for example.
+This applies to processes like <a href="laser_marking.html" title="a group of methods for labeling materials with lasers">laser marking</a> and drilling, for example.</p>
+<p>In many cases, laser scanners are required which can handle fairly high <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical powers</a>.
+The deflected beams are frequently <a href="infrared_light.html" title="invisible light with wavelengths roughly between 750&thinsp;&thinsp;nm and 1&thinsp;&thinsp;mm">infrared</a> beams.</p>
+</div>
+<h3 class="togglediv">Barcode Readers</h3>
+<div>
+<p>A barcode reader typically uses a laser scanner, where the outgoing beam is moving in one direction, such that all the bars of the code are crossed, while the intensity of reflected (or backscattered) light is monitored.</p>
+</div>
+<h3 class="togglediv">3D Object Scanning</h3>
+<div>
+<p>With various kinds of <a href="lidar.html" title="a technique for acquiring 3D images with laser pulses">LIDAR</a> devices, it is desirable to send the measurement beam into different directions, controlled with a laser scanner.
+The direction from which returning light is collected is controlled with the same scanner.</p>
+</div>
+<h3 class="togglediv">Laser Displays and Laser Shows</h3>
+<div>
+<p>Most laser displays also rely on scanning &ndash; in some cases with one-dimensional scanning only, projecting a whole image line at a time, but more often in two dimensions.
+The usual image frame rates are low enough for 2D scanning with not too complicated laser scanners, and the image modulation is of course more easily done with that approach.
+For producing color images, one may for example modulate the intensity (<a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a>) of a red, green and blue laser beam from an <a href="rgb_sources.html" title="source of red, green and blue light, which is usually provided in the form laser beams">RGB source</a> in order to control the image brightness and color for each point.</p>
+<p>Similarly, laser shows utilize laser scanners for sending laser beams in different directions while there optical power is modulated.</p>
+</div>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_laser_scanners.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 21 suppliers for laser scanners. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://elenlaser.com/" data-supplier="El.En." data-location="product-enc" data-keyword="laser scanners" rel="nofollow" class="bg externallink" title="Visit the website of El.En."><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo"></a><a href="https://elenlaser.com/laser-products/z-axis-galvanometer-actuators/galvanometer-g1432.html" data-supplier="El.En." data-location="product-enc" data-keyword="laser scanners" rel="nofollow" class="bg externallink" title="Visit the website of El.En."><img src="./bg/products/elen/laser_scanners.jpg" alt="laser scanners" class="product"></a><h3><a href="./bg/profiles/elen.html" title="See the profile of El.En.">El.En.</a></h3><p>El.En.'s <a href="https://elenlaser.com/laser-products/z-axis-galvanometer-actuators/galvanometer-g1432.html" data-supplier="El.En." data-location="product-enc" data-keyword="laser scanners" rel="nofollow" class="externallink bg">laser scanning systems</a> are powered by these high speed galvanometer mirrors. Our galvanometer mirror are made with high quality components and are designed to operate with CO<sub>2</sub> laser beams. They are available in various sizes: this model, G122HS, is the smallest of the family and is studied for low power laser applications with laser beam diameters up between 3&nbsp;mm and 5&nbsp;mm.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="laser_scanners.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">Blog article: &ldquo;Laser Beam Deflections: The Angle&ndash;Diameter Product&rdquo;, <a href="spotlight_2009_02_13.html">The Photonics Spotlight 2009-02-13</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="acousto_optic_deflectors.html" title="acousto-optic devices for deflecting and scanning laser beams">acousto-optic deflectors</a>, <a href="scanning_lenses.html" title="lens systems which are designed for use in laser scanners">scanning lenses</a>, <a href="telecentric_lenses.html" title="lenses or objectives having the entrance or exit pupil at infinity">telecentric lenses</a><br>and other articles in the categories <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/laser_scanners.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Flaser_scanners.html&text=RP+Photonics+Encyclopedia+-+laser+scanners%2C+operation+principles%2C+applications%2C+displays%2C+barcode+readers%2C+3D+imaging%2C+LIDAR%2C+printing%2C+laser+microscopy" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Flaser_scanners.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Flaser_scanners.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/laser_scanners.html"&gt;<br>Article on Laser Scanners&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/laser_scanners.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/laser_scanners.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/laser_scanners.html<br>article on 'Laser Scanners' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Your Lab is Closed due to the Corona Virus Crisis?</h2>
+<p>Time to think how to best utilize your time!</p>
+<p>Here is a suggestion: <br> <b>Consider to start with physical modeling!</b></p>
+<ul>
+<li>Build models for your existing or planned lasers and amplifiers, resonators, etc.</li>
+<li>Utilize such models in order to <b>improve your qualitative and quantitative understanding</b>, solve problems, optimize device performance and <b>develop new ideas</b>.</li>
+<li>Power up your home office instead of wasting your time!</li>
+<li>When getting back to the lab, restart with fresh plans and full power.</li>
+</ul>
+<img src="./img/rp_photonics.png" alt="RP Photonics" style="margin-top:20px; width:225px;">
+<p>offers powerful <a href="./software.html?banner=lab_closed">simulation &amp; design software</a>, e.g. for <a href="./fiberpower.html?banner=lab_closed">active and passive fiber devices</a>, <a href="./resonator.html?banner=lab_closed">laser resonators</a> and <a href="./coating.html?banner=lab_closed">thin-film coatings</a>!</p>
+<p>Getting helpful <a href="./software_support.html?banner=lab_closed">support</a> from RP also benefits your projects.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="GIOCKdc1Qr+vmPcskzNINA==">shownbanner = "lab closed";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Latest Encyclopedia Articles</h2>
+<p>Here are the latest encyclopedia articles:</p>
+<ul>
+<li class="tight"><a href="./variable_reflectivity_mirrors.html">variable reflectivity mirrors</a></li>
+<li class="tight"><a href="./color_centers.html">color centers</a></li>
+<li class="tight"><a href="./excimer_lamps.html">excimer lamps</a></li>
+<li class="tight"><a href="./multimode_beams.html">multimode beams</a></li>
+<li class="tight"><a href="./channel_waveguides.html">channel waveguides</a></li>
+<li class="tight"><a href="./optical_crystals.html">optical crystals</a></li>
+<li class="tight"><a href="./standing_wave_resonators.html">standing-wave resonators</a></li>
+<li class="tight"><a href="./nonlinear_absorption.html">nonlinear absorption</a></li>
+<li class="tight"><a href="./passive_fibers.html">passive fibers</a></li>
+<li class="tight"><a href="./active_fibers.html">active fibers</a></li>
+<li class="tight"><a href="./oem_laser_modules.html">OEM laser modules</a></li>
+<li class="tight"><a href="./industrial_lasers.html">industrial lasers</a></li>
+<li class="tight"><a href="./scientific_lasers.html">scientific lasers</a></li>
+<li class="tight"><a href="./flint_glasses.html">flint glasses</a></li>
+<li class="tight"><a href="./crown_glasses.html">crown glasses</a></li>
+<li class="tight"><a href="./sodium_vapor_lamps.html">sodium vapor lamps</a></li>
+<li class="tight"><a href="./metal_vapor_lamps.html">metal vapor lamps</a></li>
+<li class="tight"><a href="./mercury_vapor_lamps.html">mercury vapor lamps</a></li>
+<li class="tight"><a href="./white_light.html">white light</a></li>
+<li class="tight"><a href="./cie_standard_illuminants.html">CIE standard illuminants</a></li>
+</ul>
+
+<p>The encyclopedia already contains 948 articles.</p>
+<p>See also the regularly appearing articles of the <a href="./spotlight.html?banner=new_articles">The Photonics Spotlight</a> and the <a href="./software_news.html?banner=new_articles">RP Photonics Software News</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="GIOCKdc1Qr+vmPcskzNINA==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/laser_scanners.html"
+    },
+    "headline": "Laser Scanners",
+    "image": "https://www.rp-photonics.com/previews/laser_scanners.png",
+    "datePublished": "2019-11-29",
+    "dateModified": "2020-03-14",
+    "description": "Laser scanners are devices or systems for scanning the direction of a laser beam. They can be used for laser displays, laser microscopes, 3D printers, barcode scanners and 3D imaging, for example.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter L",
+      "item": "https://www.rp-photonics.com/encyclopedia_l.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "laser scanners",
+      "item": "https://www.rp-photonics.com/laser_scanners.html"
+    }]}
+}
+</script>
+</body>
+</html>

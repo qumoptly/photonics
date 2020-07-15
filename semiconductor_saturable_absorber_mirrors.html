@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-TUk7aGmiQaq4wxhgV34mCQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - semiconductor saturable absorber mirrors, SESAM, passive mode locking, Q switching</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/semiconductor_saturable_absorber_mirrors.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-06-29">
+<meta name="description" content="Semiconductor saturable absorber mirrors are saturable semiconductor absorber devices acting as nonlinear mirrors. They are mostly used for passive mode locking of lasers.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="semiconductor saturable absorber mirrors, SESAM, passive mode locking, Q switching">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Semiconductor Saturable Absorber Mirrors">
+<meta property="og:description" content="Semiconductor saturable absorber mirrors are saturable semiconductor absorber devices acting as nonlinear mirrors. They are mostly used for passive mode locking of lasers.">
+<meta property="og:url" content="https://www.rp-photonics.com/semiconductor_saturable_absorber_mirrors.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/semiconductor_saturable_absorber_mirrors.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Semiconductor saturable absorber mirrors are saturable semiconductor absorber devices acting as nonlinear mirrors. They are mostly used for passive mode locking of lasers.">
+<meta name="twitter:title" content="Semiconductor Saturable Absorber Mirrors">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/semiconductor_saturable_absorber_mirrors.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="TUk7aGmiQaq4wxhgV34mCQ==">
+page="semiconductor_saturable_absorber_mirrors.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="TUk7aGmiQaq4wxhgV34mCQ==">shownsponsors="EKSMA OPTICS"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_semiconductor_saturable_absorber_mirrors.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_s.html">letter S</a> &gt; <a href="semiconductor_saturable_absorber_mirrors.html">semiconductor saturable absorber mirrors</a></p>
+<h1>Semiconductor Saturable Absorber Mirrors</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_semiconductor_saturable_absorber_mirrors.html?s=vbox">2 suppliers for semiconductor saturable absorber mirrors</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.reflekron.com/" data-supplier="RefleKron" data-location="product-enc" data-keyword="semiconductor saturable absorber mirrors" rel="nofollow" class="bg externallink"><img src="./bg/logos/reflekron.png" alt="RefleKron" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_semiconductor_saturable_absorber_mirrors.html?s=vbox">List of suppliers for<br>semiconductor saturable absorber mirrors</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="advicebox">
+<p>Ask <a href="index.html">RP Photonics</a> for advice on how to use SESAMs for Q switching or mode locking of any kind of laser. <a href="paschotta.html">Dr. Paschotta</a> has a very deep experience in this field.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p>Acronym: SESAM</p>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: saturable semiconductor absorber devices acting as nonlinear mirrors</p>
+<p>Alternative term: <a href="saturable_bragg_reflectors.html" title="a special type of saturable semiconductor absorbers">saturable Bragg reflectors</a></p>
+<p>More general term: <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorbers</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">sättigbare Halbleiterspiegel</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<p><a href="encyclopedia_cite.html?article=semiconductor%20saturable%20absorber%20mirrors">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>A semiconductor saturable absorber mirror (SESAM) (or simply SAM = saturable absorber mirror) is a mirror structure with an incorporated <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorber</a>, all made in semiconductor technology.
+Such devices are mostly used for the generation of <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a> by <a href="passive_mode_locking.html" title="a technique of mode locking, based on a saturable absorber inside the laser resonator">passive mode locking</a> of various types of <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">lasers</a>.</p>
+<h2 class="togglediv">Typical Structure of a SESAM</h2>
+<div>
+<p>Typically, a SESAM contains a semiconductor <a href="bragg_mirrors.html" title="mirror structures based on Bragg reflection at a period structure">Bragg mirror</a> and (near the surface) a single <a href="quantum_wells.html" title="thin layers confining carriers in one dimension">quantum well</a> absorber layer.
+The materials of the Bragg mirror have a larger <a href="band_gap.html" title="a range of energies for which there are no states of carriers in a medium">band gap energy</a>, so that essentially no <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorption</a> occur in that region.
+Such SESAMs are sometimes also called <a href="saturable_bragg_reflectors.html" title="a special type of saturable semiconductor absorbers"><em>saturable Bragg reflectors</em></a> (SBRs).
+For obtaining a large <a href="modulation_depth.html" title="a relative modulation amplitude, or (for a saturable absorber) the maximum change in absorption">modulation depth</a>, as required e.g. for passive <a href="q_switching.html" title="a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q switching</a>, a thicker absorber layer can be used.
+Also, a suitable passivation layer on the top surface can increase the device lifetime.</p>
+<figure>
+<img src="img/sesam.png" alt="SESAM structure">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Structure of a typical SESAM for operation around 1064&nbsp;nm.
+On a GaAs substrate, a GaAs/AlGaAs Bragg mirror is grown.
+Within the top layers, there is an InGaAs quantum well absorber layer, which may be e.g. 10&nbsp;nm thick.
+</figcaption>
+</figure>
+<p>The penetration of the optical field into a SESAM can be calculated with the same matrix method as applied to other types of <a href="dielectric_mirrors.html" title="mirrors consisting of multiple thin layers of different transparent optical materials">dielectric mirrors</a>.
+Of particular importance is the optical intensity in the region where the saturable material is placed.
+This influences the <a href="modulation_depth.html" title="a relative modulation amplitude, or (for a saturable absorber) the maximum change in absorption">modulation depth</a> and also the <a href="saturation_energy.html" title="a measure of the incident optical pulse energy required for achieving significant saturation of an absorber or a gain medium">saturation fluence</a> (see below).
+However, the design of the structure also influences the <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a> and the <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>.</p>
+<figure>
+<img src="img/sesam_e.png" alt="refractive index profile and intensity distribution in a SESAM">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Refractive index profile and <a href="optical_intensity.html" title="optical power per unit area">optical intensity</a> distribution within a SESAM with anti-resonant design, as is often used.
+The intensity distribution has a maximum at the absorber position (indicated by the vertical gray line).
+The diagram has been made with the software <a href="coating.html">RP Coating</a>.
+</figcaption>
+</figure>
+<p>Typically, an absorber layer is placed in an anti-node of the electric field (as in Figure&nbsp;2).
+That leads to maximum saturable absorption and the smallest possible saturation fluence.
+If multiple absorber layers are required for a high modulation depth, they may be placed in separate anti-nodes, or possibly several of them near one anti-node.</p>
+<p>There are also some more exotic types of semiconductor saturable absorbers, which can be based on, e.g., <a href="quantum_dots.html" title="microscopic structures confining charge carriers in three dimensions">quantum dots</a> embedded in glass [10,&thinsp;12] or on carbon nanotubes [13] or graphene [26,&thinsp;27].</p>
+</div>
+<h2 class="togglediv">Resonant and Nonresonant SESAM Designs</h2>
+<div>
+<p>As there is a <a href="fresnel_reflections.html" title="light reflections at optical interfaces">Fresnel reflection</a> at the semiconductor&ndash;air interface, this together with the Bragg reflection leads to a <a href="cavities.html" title="resonators for light (or for microwaves)">cavity</a> effect (resonance effect).
+In most cases, this cavity is designed to be antiresonant for the operation wavelength of the device (see also Figure&nbsp;2).
+Such devices exhibit a relatively broad wavelength range with a more or less constant degree of saturable absorption and with small <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>.
+Compared with devices with an <a href="anti_reflection_coatings.html" title="optical thin-film coatings for reducing reflections from surfaces">anti-reflection coating</a>, antiresonant designs have a lower field penetration into the absorber and thus a lower <a href="modulation_depth.html" title="a relative modulation amplitude, or (for a saturable absorber) the maximum change in absorption">modulation depth</a> in addition to a higher <a href="saturation_energy.html" title="a measure of the incident optical pulse energy required for achieving significant saturation of an absorber or a gain medium">saturation fluence</a> and higher <a href="laser_induced_damage.html" title="damage of optical components induced by laser radiation">damage threshold</a>.
+(The latter, however, is no advantage, because a higher incident pulse fluence is needed to saturate such a device.)</p>
+<p>In relatively rare cases, resonant designs are used.
+These have a higher modulation depth and lower saturation fluence, and a smaller range of operation wavelengths.</p>
+<p>By varying the material composition and certain design parameters, the macroscopic parameters of a SESAM (in particular, the operation wavelength, the modulation depth, the saturation fluence, and the recovery time) can be tailored for operation in very different regimes.</p>
+</div>
+<h2 class="togglediv">Physical Mechanism of Saturable Absorption</h2>
+<div>
+<figure class="right" style="width:177px;">
+<img src="img/sesam_ex.png" alt="excitation and relaxation of a SESAM">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Excitation and relaxation of carriers in a semiconductor.
+</figcaption>
+</figure>
+<p>The saturable absorption is related to an interband transition: the energy of absorbed <a href="photons.html" title="quanta of light energy">photons</a> is transferred to electrons, which are brought from the valence band to the conduction band.
+There is first some fairly rapid thermalization relaxation within the conduction and valence band within e.g. 50&ndash;100&nbsp;fs, and later (often on a time scale of tens or hundreds of picoseconds) the carriers recombine, often with the aid of crystal defects.</p>
+<p>For low optical intensities, the degree of electronic excitation is small, and the absorption remains unsaturated.
+At high optical intensities, however, electrons can accumulate in the conduction band, so that initial states for the absorbing transition are depleted while final states are occupied (<em>Pauli blocking</em>).
+Therefore, the absorption is reduced.
+After saturation with a short pulse, the absorption recovers, first partially due to intraband thermal relaxation, and later completely via recombination.</p>
+<figure>
+<img src="img/sesam_recovery.png" alt="reflectivity change in a SESAM, caused by a short pulse">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Reflectivity change of a semiconductor saturable absorber, hit by a short pulse at <span class="eqn_il"><i>t</i>&thinsp;=&thinsp;0</span>.
+Part of the reflectivity change disappears very quickly after the pulse, whereas another part takes many picoseconds to recover.
+Such curves can be recorded with <a href="pump_probe_measurements.html" title="techniques for investigating ultrafast phenomena, where a pump pulse excites a sample and a probe pulse is used for probing the sample after an adjustable delay time">pump&ndash;probe measurements</a>.
+</figcaption>
+</figure>
+</div>
+<h2 class="togglediv">Important Properties of SESAMs</h2>
+<div>
+<p>The most important characteristics of a SESAM as used e.g. for passive mode locking or Q switching are the following:</p>
+<ul>
+<li>The <a href="modulation_depth.html" title="a relative modulation amplitude, or (for a saturable absorber) the maximum change in absorption"><em>modulation depth</em></a> is the maximum nonlinear change in reflectivity.
+It depends on the thickness of the absorber, the material, the optical wavelength, and the degree of optical field penetration into the absorber structure.</li>
+<li>The <a href="saturation_energy.html" title="a measure of the incident optical pulse energy required for achieving significant saturation of an absorber or a gain medium"><em>saturation fluence</em></a> is the fluence of an incident short pulse which is required for causing significant absorption saturation.
+It depends on the absorber material, the wavelength, and the field penetration into the absorber structure.
+Also, there can be a &ldquo;roll-over&rdquo; of the saturation curve (i.e. a reduction in reflectivity for high fluence values), which can be caused by <a href="two_photon_absorption.html" title="a nonlinear absorption process where two photons are simultaneously absorbed">two-photon absorption</a> (for sub-picosecond pulses) or by other effects.</li>
+<li>The <em>recovery time</em> is the exponential time constant of absorption recovery after a saturating pulse.
+It is normally between a few picoseconds and hundreds of picoseconds.
+Note, however, that the recovery is often not of exponential form (see Figure&nbsp;4).
+The recovery time is strongly influenced by the defect density in the absorber, and possibly in nearby structures.</li>
+<li>There are normally some <em>nonsaturable losses</em>, which are unwanted, since they only lead to device heating while not contributing to the pulse shaping.
+Generally, nonsaturable losses tend to be higher for SESAMs with a larger modulation depth and faster recovery, but there are exceptions.</li>
+</ul>
+<p>Additional details concern the lateral homogeneity, the <a href="group_delay_dispersion.html" title="the frequency dependency of the group delay, or (quantitatively) the corresponding derivative with respect to angular frequency">group delay dispersion</a> (see below), the optical damage threshold and the device lifetime, also the suitability for high-power operation (see below).
+The lifetime of a SESAM is often difficult to assess and depends strongly on the operating conditions.
+Furthermore, it can be important that a SESAM can tolerate a certain heat load.
+Thermal issues become important not only at high average power levels, but also for operation with very high pulse repetition rates.</p>
+</div>
+<h2 class="togglediv">Semiconductor Materials for SESAMs</h2>
+<div>
+<p>By far the most common type of SESAM is used in lasers emitting in the 1-&mu;m wavelength region.
+Here, the saturable absorber is an InGaAs <a href="quantum_wells.html" title="thin layers confining carriers in one dimension">quantum well</a> (or sometimes multiple quantum wells), where the indium content is adjusted to achieve an appropriate value of the bandgap energy.
+The mirror structure is based on GaAs and AlAs, grown on a gallium arsenide wafer.
+The lattice mismatch of InGaAs on GaAs and AlAs causes significant compressive strain in the absorber layer.
+Particularly for high indium contents, this can cause the formation of defects.
+The effect of defects may even be helpful, as it reduces the recovery time and may thus allow for shorter pulses and better pulse stability in a mode-locked laser.
+The defect concentration is therefore often increased by low-temperature growth of the absorber layer.
+For too low growth temperature and/or a high indium content, however, nonsaturable losses can become too high.
+The recovery time may also be reduced by bombardment with fast ions after growth (<em>ion implantation</em>).
+Partial annealing of defects at some elevated temperature can help to find a better compromise between nonsaturable losses and recovery time.</p>
+<p>For use at shorter wavelengths, e.g. for passive mode locking of <a href="titanium_sapphire_lasers.html" title="lasers based on a Ti:sapphire gain medium">titanium&ndash;sapphire lasers</a> emitting around 800&nbsp;nm, GaAs quantum wells can be used.
+The use of GaAs then has to be avoided in the mirror structure; it is common to use a Bragg mirror made of AlGaAs/AlAs.
+For very short pulse durations, the reflectivity bandwidth of a Bragg mirror is not sufficient; in such cases, special broadband SESAM designs containing a <a href="metal_coated_mirrors.html" title="mirrors where the reflection is obtained from a metal coating">metallic mirror</a> are sometimes used.</p>
+<p>At longer wavelengths such as the bands around 1.3 or 1.5&nbsp;&mu;m, InGaAs quantum wells can still be used, but they then have a very high built-in strain.
+Therefore, GaInNAs (dilute nitride) absorbers have been developed, which allow for very low nonsaturable losses.
+It is also possible to use indium phosphide-based absorbers in devices grown on InP wafers.
+Various types of Bragg mirrors are used in the 1.5-&mu;m region, partially depending on the type of absorber layer.</p>
+</div>
+<h2 class="togglediv">SESAMs for High-power Operation</h2>
+<div>
+<p>There are passively <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked</a> <a href="high_power_lasers.html" title="lasers emitting very high optical powers">high-power lasers</a> with average output powers of well above 100&nbsp;W and intracavity average powers of well above 1&nbsp;kW.
+A SESAM used in such a laser will typically absorb between 0.2&#37; and 2&#37; of the incident power, and this can give rise to substantial thermal effects.
+In particular, there can be substantial <a href="thermal_lensing.html" title="a lensing effect induced by temperature gradients">thermal lensing</a>, which affects the mode properties of the <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a>.
+Also, the temperature increase may lead to accelerated aging or even optical damage.
+For such reasons, it is desirable to optimize SESAMs for use in high-power lasers [29] e.g. in the following ways:</p>
+<ul>
+<li>The <a href="modulation_depth.html" title="a relative modulation amplitude, or (for a saturable absorber) the maximum change in absorption">modulation depth</a> is chosen as small as possible for the required pulse shaping task.
+(Note that the laser design can be optimized for requiring a minimum amount of pulse shaping from the SESAM.)</li>
+<li>The device is designed for use with an incident laser beam having a relatively large <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a>, so that the generated heat is distributed over some relatively large area, leading to a reduced temperature rise.
+For that, the <a href="saturation_energy.html" title="a measure of the incident optical pulse energy required for achieving significant saturation of an absorber or a gain medium">saturation fluence</a> needs to be relatively low, so that a sufficient degree of saturation is possible without strong focusing of the radiation.
+Furthermore, the SESAM surface must be sufficiently flat, i.e., it must exhibit height variations over the whole beam area which are only a fraction of one wavelength.</li>
+<li>In a standard SESAM, the generated heat must be conducted through some hundreds of micrometer of semiconductor material (determined by the thickness of the used wafer).
+Substantial improvements are possible with flip-chip-bonded SESAMs, where the required semiconductor layers (including Bragg mirror and absorber layer) are grown in reverse order, before the device is contacted to a heat sink, and the substrate is removed with mechanical and chemical means (e.g. an etching procedure).
+There are also techniques where after growth the device is attached to a temporary substrate, then the substrate is removed with mechanical and chemical means, and afterwords the material is attached to a heat sink on the side where the substrate originally was located.
+Finally, the temporary substrate can be removed.
+The result of such techniques is that the thermal impedance of the device is much reduced, resulting in a much lower temperature rise in operation.
+Also, there is then a much lower temperature variation within the device, which implies reduced thermal lensing.
+The last described technique (which has originally been developed for <a href="crystalline_mirrors.html" title="multilayer mirrors where the reflecting parts consist of a monocrystalline material">crystalline semiconductor mirrors</a>) can also result in the strongly improved flatness of the surface [29].</li>
+</ul>
+<p>Using such methods, it should be possible to employ SESAMs even in passively mode-locked lasers with average output powers of multiple kilowatts.</p>
+<p>Note that a substantial local temperature increases can occur even in low-power lasers (e.g. with 1&nbsp;W of average output power) if the <a href="pulse_repetition_rate.html" title="the number of pulses emitted per second e.g. by a mode-locked or Q-switched laser">pulse repetition rate</a> is very high (many gigahertz).
+In that situation, one has to use relatively strong focusing of the radiation in order to achieve sufficiently strong saturation of the absorption despite the small <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a>.
+It can then be challenging to cope with the heat generation despite the quite moderate absorbed average power.
+High-power lasers with much lower pulse repetition rate (normally some tens of megahertz) allow the use of much larger beam areas, making it much easier to handle substantial absorbed powers.</p>
+</div>
+<h2 class="togglediv">Dispersive SESAMs</h2>
+<div>
+<p>Although most SESAMs exhibit only moderate amounts of <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> for reflected light, dispersion of any sign can be engineered into a SESAM via the multilayer structure [7,&thinsp;11].
+Such dispersive SESAMs may then serve the purpose of <a href="dispersion_compensation.html" title="the control of the overall chromatic dispersion of a system by adding optical elements with a suitable amount of dispersion">dispersion compensation</a> in a laser resonator, in addition to the function of a passive mode locker.
+However, such methods have only relatively rarely been applied, mostly because the need to control dispersion introduces certain design conflicts.
+For example, the wanted dispersion may only appear in a limited optical <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>, and wavelength-dependent losses of the device may drive the laser to operate outside that bandwidth.
+Also, it is restricting to work with SESAMs which offer certain fixed combinations of saturable absorption and dispersion.</p>
+</div>
+<h2 class="togglediv">Applications of SESAMs</h2>
+<div>
+<p>SESAMs are widely used for <a href="passive_mode_locking.html" title="a technique of mode locking, based on a saturable absorber inside the laser resonator">passive mode locking</a> of lasers, particularly for <a href="solid_state_lasers.html" title="lasers based on solid-state gain media (usually ion-doped crystals or glasses)">solid-state</a> <a href="bulk_lasers.html" title="lasers based on bulk crystals as gain media">bulk</a> and <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber lasers</a>.
+They work with a wide range of laser parameters and usually allow for reliable <a href="self_starting_mode_locking.html" title="mode locking which is quickly achieved after turning on a laser, without external intervention">self-starting mode locking</a>, if their device and operation parameters are correctly chosen.
+They can be used even at very high output power levels of tens of watts, provided that the overall <a href="laser_design.html" title="the design of a laser device, or the process of working out such a design">laser design</a> allows them to be operated in the appropriate regime.
+Another application is passive <a href="q_switching.html" title="a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q switching</a>, e.g. of <a href="microchip_lasers.html" title="solid-state lasers with a quasi-monolithic setup">microchip lasers</a> or <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber lasers</a>.</p>
+<p>A general condition for the successful use of SESAMs in lasers is the selection of a suitable SESAM design and the adjustment of a number of laser parameters, in particular the resonator mode size on the absorber.
+The use of a SESAM with inappropriate device and operation parameters often leads to problems in the form of various instabilities or SESAM damage.</p>
+<p>SESAMs can also be used for certain methods of nonlinear filtering and signal processing, e.g. in the context of <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a>.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_semiconductor_saturable_absorber_mirrors.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 2 suppliers for semiconductor saturable absorber mirrors. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.reflekron.com/" data-supplier="RefleKron" data-location="product-enc" data-keyword="semiconductor saturable absorber mirrors" rel="nofollow" class="bg externallink" title="Visit the website of RefleKron"><img src="./bg/logos/reflekron.png" alt="RefleKron" class="supplierlogo"></a><h3><a href="./bg/profiles/reflekron.html" title="See the profile of RefleKron">RefleKron</a></h3><p>customized <a href="http://www.reflekron.com/" data-supplier="RefleKron" data-location="product-enc" data-keyword="semiconductor saturable absorber mirrors" rel="nofollow" class="externallink bg">semiconductor saturable absorbers</a> for mode-locked and Q-switched lasers</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div class="comment">
+<p class="comment_details">2020-06-25</p>
+<p>Is the physical mechanism of the saturable absorber of the semiconductor explained above the same when the SA is fabricated from a quantum well structure?
+Could you briefly clarify how the quantum well behaves as a SA?</p>
+<p style="font-weight:bold">Answer from the <a href="paschotta.html" style="font-weight:bold">author</a>:</p>
+<p>A <a href="quantum_wells.html" title="thin layers confining carriers in one dimension">quantum well</a> (or <a href="quantum_dots.html" title="microscopic structures confining charge carriers in three dimensions">quantum dot</a>) structure modifies the electronic structure, and that has an effect on the absorption spectrum and also on the relaxation behavior.
+However, the absorption mechanism is not fundamentally different from that in a bulk device.</p>
+</div>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="semiconductor_saturable_absorber_mirrors.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">M. N. Islam <i>et al.</i>, &ldquo;Color center lasers passively mode locked by quantum wells&rdquo;, IEEE J. Quantum Electron. 25 (12), 2454 (1989), <a href="https://doi.org/10.1109/3.40629">doi:10.1109/3.40629</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">B. G. Kim <i>et al.</i>, &ldquo;Nonlinear Bragg reflector based on saturable absorption&rdquo;, Appl. Phys. Lett. 54, 1095 (1989), <a href="https://doi.org/10.1063/1.100768">doi:10.1063/1.100768</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">L. R. Brovelli <i>et al.</i>, &ldquo;Design and operation of antiresonant Fabry&ndash;P&eacute;rot saturable semiconductor absorbers for mode-locked solid-state lasers&rdquo;, J. Opt. Soc. Am. B 12 (2), 311 (1995), <a href="https://doi.org/10.1364/JOSAB.12.000311">doi:10.1364/JOSAB.12.000311</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">I. D. Jung <i>et al.</i>, &ldquo;Scaling of the antiresonant Fabry&ndash;P&eacute;rot saturable absorber design toward a thin saturable absorber&rdquo;, Opt. Lett. 20 (14), 1559 (1995), <a href="https://doi.org/10.1364/OL.20.001559">doi:10.1364/OL.20.001559</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">R. Fluck <i>et al.</i>, &ldquo;Broadband saturable absorber for 10-fs pulse generation&rdquo;, Opt. Lett. 21 (10), 743 (1996), <a href="https://doi.org/10.1364/OL.21.000743">doi:10.1364/OL.21.000743</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">S. Tsuda <i>et al.</i>, &ldquo;Mode-locking ultrafast solid-state lasers with saturable Bragg reflectors&rdquo;, J. Sel. Top. Quantum Electron. 2 (3), 454 (1996), <a href="https://doi.org/10.1109/2944.571744">doi:10.1109/2944.571744</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">D. Kopf <i>et al.</i>, &ldquo;All-in-one dispersion-compensating saturable absorber mirror for compact femtosecond laser sources&rdquo;, Opt. Lett. 21 (7), 486 (1996), <a href="https://doi.org/10.1364/OL.21.000486">doi:10.1364/OL.21.000486</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">U. Keller <i>et al.</i>, &ldquo;Semiconductor saturable absorber mirrors (SESAMs) for femtosecond to nanosecond pulse generation in solid-state lasers&rdquo;, J. Sel. Top. Quantum Electron. 2, 435 (1996), <a href="https://doi.org/10.1109/2944.571743">doi:10.1109/2944.571743</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">I. D. Jung <i>et al.</i>, &ldquo;Semiconductor saturable absorber mirrors supporting sub-10-fs pulses&rdquo;, Appl. Phys. B 65 (2), 137 (1997), <a href="https://doi.org/10.1007/s003400050259">doi:10.1007/s003400050259</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">P. T. Guerreiro and S. Ten, &ldquo;PbS quantum-dot doped glasses as saturable absorbers for mode locking of a Cr:forsterite laser&rdquo;, Appl. Phys. Lett. 71 (12), 1595 (1997), <a href="https://doi.org/10.1063/1.119843">doi:10.1063/1.119843</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">R. Paschotta <i>et al.</i>, &ldquo;Double-chirped semiconductor mirror for dispersion compensation in femtosecond lasers&rdquo;, Appl. Phys. Lett. 75 (15), 2166 (1999), <a href="https://doi.org/10.1063/1.124953">doi:10.1063/1.124953</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">A. M. Malyarevich <i>et al.</i>, &ldquo;Glass doped with PbS quantum dots as a saturable absorber for 1-&mu;m neodymium lasers&rdquo;, J. Opt. Soc. Am. B 19 (1), 28 (2002), <a href="https://doi.org/10.1364/JOSAB.19.000028">doi:10.1364/JOSAB.19.000028</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">S. Y. Set <i>et al.</i>, &ldquo;Ultrafast fiber pulsed lasers incorporating carbon nanotubes&rdquo;, J. Sel. Top. Quantum Electron. 10 (1), 137 (2004), <a href="https://doi.org/10.1109/JSTQE.2003.822912">doi:10.1109/JSTQE.2003.822912</a></td></tr>
+<tr><td class="refno">[14]</td><td class="refs">O. G. Okhotnikov and M. Pessa, &ldquo;Dilute nitride saturable absorber mirrors for optical pulse generation&rdquo;, J. Phys. Condens. Matter 16, S3107 (2004), <a href="https://doi.org/10.1088/0953-8984/16/31/008">doi:10.1088/0953-8984/16/31/008</a></td></tr>
+<tr><td class="refno">[15]</td><td class="refs">R. P. Prasankumar <i>et al.</i>, &ldquo;Design and characterization of semiconductor-doped silica film saturable absorbers&rdquo;, J. Opt. Soc. Am. B 21 (4), 851 (2004), <a href="https://doi.org/10.1364/JOSAB.21.000851">doi:10.1364/JOSAB.21.000851</a></td></tr>
+<tr><td class="refno">[16]</td><td class="refs">G. Paunescu <i>et al.</i>, &ldquo;In situ characterization of semiconductor saturable absorber mirrors in an operating Yb:KGW mode-locked laser&rdquo;, Opt. Lett. 30 (20), 2799 (2005), <a href="https://doi.org/10.1364/OL.30.002799">doi:10.1364/OL.30.002799</a></td></tr>
+<tr><td class="refno">[17]</td><td class="refs">M. Haiml <i>et al.</i>, &ldquo;Optical characterization of semiconductor saturable absorbers&rdquo;, Appl. Phys. B 79, 331 (2004), <a href="https://doi.org/10.1007/s00340-004-1535-1">doi:10.1007/s00340-004-1535-1</a></td></tr>
+<tr><td class="refno">[18]</td><td class="refs">V. Liverini <i>et al.</i>, &ldquo;Low-loss GaInNAs saturable absorber mode locking a 1.3-&mu;m solid-state laser&rdquo;, Appl. Phys. Lett. 84 (20), 4002 (2004), <a href="https://doi.org/10.1063/1.1748841">doi:10.1063/1.1748841</a></td></tr>
+<tr><td class="refno">[19]</td><td class="refs">G. J. Spühler <i>et al.</i>, &ldquo;Semiconductor saturable absorber mirror structures with low saturation fluence&rdquo;, Appl. Phys. B 81, 27 (2005), <a href="https://doi.org/10.1007/s00340-005-1879-1">doi:10.1007/s00340-005-1879-1</a></td></tr>
+<tr><td class="refno">[20]</td><td class="refs">S. Schön <i>et al.</i>, &ldquo;Dilute nitride absorbers in passive devices for mode locking of solid-state lasers&rdquo;, J. Cryst. Growth 278, 239 (2005), <a href="https://doi.org/10.1016/j.jcrysgro.2004.12.069">doi:10.1016/j.jcrysgro.2004.12.069</a></td></tr>
+<tr><td class="refno">[21]</td><td class="refs">R. Grange <i>et al.</i>, &ldquo;New regime of inverse saturable absorption for self-stabilizing passively modelocked lasers&rdquo;, Appl. Phys. B 80, 151 (2005), <a href="https://doi.org/10.1007/s00340-004-1622-3">doi:10.1007/s00340-004-1622-3</a></td></tr>
+<tr><td class="refno">[22]</td><td class="refs">R. Grange <i>et al.</i>, &ldquo;Antimonide semiconductor saturable absorber for passive mode locking of a 1.5-&mu;m Er:Yb:glass laser at 10&nbsp;GHz&rdquo;, IEEE Photon. Technol. Lett. 18 (7), 805 (2006), <a href="https://doi.org/10.1109/LPT.2006.871846">doi:10.1109/LPT.2006.871846</a></td></tr>
+<tr><td class="refno">[23]</td><td class="refs">A. Rutz <i>et al.</i>, &ldquo;Parameter tunable GaInNAs saturable absorbers for mode locking of solid-state lasers&rdquo;, J. Cryst. Growth 301, 570 (2007), <a href="https://doi.org/10.1016/j.jcrysgro.2006.11.260">doi:10.1016/j.jcrysgro.2006.11.260</a></td></tr>
+<tr><td class="refno">[24]</td><td class="refs">D. J. H. C. Maas <i>et al.</i>, &ldquo;High precision optical characterization of semiconductor saturable absorber mirrors&rdquo;, Opt. Express 16 (10), 7571 (2008), <a href="https://doi.org/10.1364/OE.16.007571">doi:10.1364/OE.16.007571</a></td></tr>
+<tr><td class="refno">[25]</td><td class="refs">D. J. H. C. Maas <i>et al.</i>, &ldquo;Growth parameter optimization for fast quantum dot SESAMs&rdquo;, Opt. Express 16 (23), 18646 (2008), <a href="https://doi.org/10.1364/OE.16.018646">doi:10.1364/OE.16.018646</a></td></tr>
+<tr><td class="refno">[26]</td><td class="refs">F. Bonaccorso <i>et al.</i>, &ldquo;Graphene photonics and optoelectronics&rdquo;, Nature Photon. 4 (9), 611 (2010), <a href="https://doi.org/10.1038/nphoton.2010.186">doi:10.1038/nphoton.2010.186</a></td></tr>
+<tr><td class="refno">[27]</td><td class="refs">Q. Bao <i>et al.</i>, &ldquo;Monolayer graphene as a saturable absorber in a mode-locked laser&rdquo;, Nano Res. 4 (3), 297 (2011), <a href="https://doi.org/10.1007/s12274-010-0082-9">doi:10.1007/s12274-010-0082-9</a></td></tr>
+<tr><td class="refno">[28]</td><td class="refs">C. J. Saraceno <i>et al.</i>, &ldquo;SESAMs for high-power oscillators: design guidelines and damage thresholds&rdquo;, IEEE J. Sel. Top. Quantum Electron. 18 (1), 29-41 (2012), <a href="https://doi.org/10.1109/JSTQE.2010.2092753">doi:10.1109/JSTQE.2010.2092753</a></td></tr>
+<tr><td class="refno">[29]</td><td class="refs">A. Diebold <i>et al.</i>, &ldquo;Optimized SESAMs for kilowatt-level ultrafast lasers&rdquo;, Opt. Express 24 (10), 10512 (2016), <a href="https://doi.org/10.1364/OE.24.010512">doi:10.1364/OE.24.010512</a></td></tr>
+<tr><td class="refno">[30]</td><td class="refs">U. Keller, &ldquo;Semiconductor nonlinearities for solid-state laser modelocking and Q-switching&rdquo;, in <i>Semiconductors and Semimetals</i>, Vol. 59A (eds. A. Kost and E. Garmire), Academic Press, Boston (1999)</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorbers</a>, <a href="passive_mode_locking.html" title="a technique of mode locking, based on a saturable absorber inside the laser resonator">passive mode locking</a>, <a href="self_starting_mode_locking.html" title="mode locking which is quickly achieved after turning on a laser, without external intervention">self-starting mode locking</a>, <a href="q_switching.html" title="a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q switching</a>, <a href="pulse_generation.html" title="the generation of light pulses (flashes)">pulse generation</a>, <a href="spotlight_2010_03_22.html">The Photonics Spotlight 2010-03-22</a>, <a href="spotlight_2010_07_27.html">The Photonics Spotlight 2010-07-27</a><br>and other articles in the categories <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<hr style="margin-top:16px; margin-bottom:12px;">
+<a href="paschotta.html"><img src="img/paschotta3_small.jpg" alt="Dr. R. Paschotta" style="float:left; margin:0px 16px 20px 18px;" width="80" height="97"></a>
+<div style="margin-bottom:12px;">
+<p style="font-size:90%; line-height:20px; padding-right:20px;">This encyclopedia is authored by <a href="paschotta.html" class="redlink">Dr. Rüdiger Paschotta</a>, the founder and executive of <a href="index.html" class="redlink">RP Photonics Consulting GmbH</a>.
+How about a <a href="training.html" class="redlink">tailored training course</a> from this distinguished expert at your location?
+<a href="contact.html" class="redlink">Contact</a> RP Photonics to find out how his <a href="./services.html" class="redlink">technical consulting services</a> (e.g. product designs, problem solving, independent evaluations, training) and <a href="software.html" class="redlink">software</a> could become very valuable for your business!</p>
+</div>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/semiconductor_saturable_absorber_mirrors.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fsemiconductor_saturable_absorber_mirrors.html&text=RP+Photonics+Encyclopedia+-+semiconductor+saturable+absorber+mirrors%2C+SESAM%2C+passive+mode+locking%2C+Q+switching" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fsemiconductor_saturable_absorber_mirrors.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fsemiconductor_saturable_absorber_mirrors.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/semiconductor_saturable_absorber_mirrors.html"&gt;<br>Article on Semiconductor Saturable Absorber Mirrors&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/semiconductor_saturable_absorber_mirrors.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/semiconductor_saturable_absorber_mirrors.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/semiconductor_saturable_absorber_mirrors.html<br>article on 'Semiconductor Saturable Absorber Mirrors' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="https://www.knightoptical.com/" data-supplier="Knight Optical" data-location="banner" rel="nofollow" class="bg externallink"><img src="./bg/banners/knight_optical.gif" alt="Knight Optical"></a>
+</div>
+</aside>
+<script type="text/javascript" nonce="TUk7aGmiQaq4wxhgV34mCQ==">shownbanner = "Knight Optical";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Encyclopedia as a Book</h2>
+<p>You know this famous encyclopedia from our website.
+This is a free service of <a href="./index.html?banner=encyclopedia_book">RP Photonics</a> to the worldwide photonics community.</p>
+<p>The encyclopedia is also available as a two-volume print version.
+Don't you think that it would deserve a place in your institute or group library?</p>
+<p style="text-align:center; margin:10px 0;"><a href="http://www.wiley-vch.de/publish/en/books/bySubjectEE00/ISBN3-527-40828-2"><img src="./img/encyclopedia_cover_medium.png" alt="Encyclopedia of Laser Physics and Technology"></a></p>
+<p>Click on the image to get to Wiley-VCH, were you can order the book.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="TUk7aGmiQaq4wxhgV34mCQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/semiconductor_saturable_absorber_mirrors.html"
+    },
+    "headline": "Semiconductor Saturable Absorber Mirrors",
+    "image": "https://www.rp-photonics.com/previews/semiconductor_saturable_absorber_mirrors.png",
+    "datePublished": "2005-04-14",
+    "dateModified": "2020-06-29",
+    "description": "Semiconductor saturable absorber mirrors are saturable semiconductor absorber devices acting as nonlinear mirrors. They are mostly used for passive mode locking of lasers.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter S",
+      "item": "https://www.rp-photonics.com/encyclopedia_s.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "semiconductor saturable absorber mirrors",
+      "item": "https://www.rp-photonics.com/semiconductor_saturable_absorber_mirrors.html"
+    }]}
+}
+</script>
+</body>
+</html>

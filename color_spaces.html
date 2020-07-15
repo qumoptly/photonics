@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-by4MD0mjVkNk96jLvAaXJA=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - color spaces, color models, LMS, CIE XYZ, RGB, CMYK, transformations</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/color_spaces.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Color spaces are mathematical spaces for representing color values. Various types of color spaces such as LMS, CIE XYZ, RGB and CMYK have been developed for different applications.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="color spaces, LMS, CIE XYZ, RGB, CMYK, transformations">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Color Spaces">
+<meta property="og:description" content="Color spaces are mathematical spaces for representing color values. Various types of color spaces such as LMS, CIE XYZ, RGB and CMYK have been developed for different applications.">
+<meta property="og:url" content="https://www.rp-photonics.com/color_spaces.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/color_spaces.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Color spaces are mathematical spaces for representing color values. Various types of color spaces such as LMS, CIE XYZ, RGB and CMYK have been developed for different applications.">
+<meta name="twitter:title" content="Color Spaces">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/color_spaces.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="by4MD0mjVkNk96jLvAaXJA==">
+page="color_spaces.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> <a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="by4MD0mjVkNk96jLvAaXJA==">shownsponsors="EKSMA OPTICS,Optikexpertisen"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_c.html">letter C</a> &gt; <a href="color_spaces.html">color spaces</a></p>
+<h1>Color Spaces</h1>
+<header style="margin-right:0;">
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: mathematical spaces for representing color values</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Farbräume</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a></p>
+<p><a href="encyclopedia_cite.html?article=color%20spaces">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Colors are essentially an interpretation of the human brain, applied to the limited spectral information received from the eyes.
+The relation between color perception and its physical basis is quite complicated and subject to various variable influences.
+Nevertheless, extensive research has established ways of objectively specifying perceivable colors with values in certain <em>color spaces</em>.</p>
+<p>Ideally, one would like to have a system where each color which can be perceived or generated is uniquely identified by a specific value in a color space, creating a perfect bidirectional mapping between the reality of <a href="color_vision.html" title="vision with some capability for spectral analysis of the light">color vision</a> and the constructed color space.
+Also, it would be desirable that distances in color space are well associated with differences in color perception.
+Further, the mathematical construction should not be too complicated, and the results should be easy to apply in practice.
+Unfortunately, however, color spaces can usually not have all desirable properties.
+For example, some of them cannot span the whole range of perceivable colors, while others contain imaginary colors (in addition to the perceivable colors) which cannot be physically realized.
+Different types of color spaces have been constructed, often with specific applications in mind.
+Overall, the development and application of colors basis is a rather involved subject, over which this encyclopedia article is meant to give a coarse overview.</p>
+<aside class="callout blue">Trichromatic vision leads to three-dimensional color spaces &ndash; at least mostly.</aside>
+<p>In most cases, a color space has three dimensions, according to the three different kinds of color receptors used for <a href="scotopic_and_photopic_vision.html" title="vision of the human eye at lower and higher light intensity levels, respectively">photopic vision</a> of the human eye, having <em>trichromatic vision</em>.
+Consequently, a color value can usually be specified with the combination of three color coordinates (<em>tristimulus values</em>).
+It can be considered as a combination of three <em>primary colors</em>, with each color coordinate specifying the strength of the contribution of one primary color.
+Some color spaces use primary colors which cannot be physically realized (<em>imaginary colors</em>).
+The mixing of primary colors is additive in most cases (e.g. in RGB color spaces), but subtractive in some others, e.g. in CMYK color spaces, related to the mixing of pigments or dyes.</p>
+<p>In some cases, one takes one dimension of the color space to be the <a href="luminance.html" title="luminous flux per unit solid angle and unit projected area">luminance</a> (specifying the perceived <a href="brightness.html" title="a term mostly used in a qualitative way, related to the output power and beam quality of a laser; quantitatively: often used instead of radiance or luminance">brightness</a>), and the remaining dimensions determines the <a href="chromaticity.html" title="an objective specification of measured or calculated colors, used in addition to luminance (brightness)">chromaticity</a>.
+Chromaticity may further be divided into hue (&ldquo;type of color&rdquo;) and color saturation.
+(Maximum color saturation is obtained for <em>spectral colors</em>, corresponding to monochromatic light.)
+However, not all color spaces realize such divisions; for example, RGB color spaces do not use a luminance channel.</p>
+<p>It is also possible to define a color space based on an arbitrary set of reference colors (<em>color swatches</em>), trying to span a wide range of perceivable or at least printable colors, but without arranging those in a multidimensional space.
+A prominent example is the system of Pantone colors, which is widely used for printing purposes.
+However, this article focuses on three-dimensional color spaces, as used e.g. for computer monitors, television and photography, with full capabilities of color mixing.</p>
+<p>Color spaces are often used within a <em>color management system</em>, made for obtaining the best possible color reproduction.
+For example, one may acquire color images with <a href="photo_cameras.html" title="optical instruments for taking photographic images">photo cameras</a>, producing image files with certain RGB color profiles (often defined more closely with an ICC color profile).
+One can then process such images in software for generating a PDF file sent to a printing facility, where one may e.g. use a CMYK color space which is better adapted to printing.
+The color management then must include appropriate transformations between different color spaces, ideally preserving the color information throughout the chain from image acquisition to printing.
+However, one may also apply color corrections, e.g. for eliminating effects of non-ideal illumination conditions or just to improve the appeal of the images.</p>
+<p>Of course, any <a href="light.html" title="electromagnetic radiation in the visible spectral range, or sometimes in an extended spectral region">light</a> would be much more comprehensively characterized by its <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a>, which represents (for infinitely fine wavelength or frequency resolution) a space with infinite dimensions.
+However, if the finally relevant aspect is only the caused color perception of the human eye, it would be neither economical nor practical to work with optical spectra.
+For example, a color image can be stored with much less memory when considering only the three dimensions in a color space instead of the many dimensions according to the wavelength channels of an optical <a href="spectrometers.html" title="devices for separating spectral components">spectrometer</a>.
+Also, it can be preferable to have only one possible point in color space corresponding to a certain color impression instead of a wide range of different optical spectra which are compatible with that (<em>metamerism</em>).
+For example, one can then easily judge which color values are similar.
+Some technical applications not related to color vision, however, make use of the much more comprehensive spectral information of images with many more wavelength channels (&rarr;&nbsp;<a href="hyperspectral_imaging.html" title="imaging which provides images with an optical spectrum corresponding to each pixel"><em>hyperspectral imaging</em></a>), which may also cover more than only the visible part of the spectrum.</p>
+<p>In the following, important color spaces are explained.
+For an introductory explanation of the physiological basis, see the article on <a href="color_vision.html" title="vision with some capability for spectral analysis of the light">color vision</a>.</p>
+<h2 class="togglediv">Important Color Spaces</h2>
+<div>
+<h3 class="togglediv">LMS Color Space</h3>
+<div>
+<p>The <em>LMS color space</em> is defined based on three coordinates L, M and S, each one measuring the strength of excitation of one of the three types of cones in the retina of the human eye.
+Note that it is physically not possible e.g. to have a non-zero M value combined with L and S being zero, because the spectral response curves of the three receptors are substantially overlapping.
+Therefore, the range of perceivable colors corresponds to a volume in LMS color space which is not simply a cuboid.</p>
+<p>For <a href="monochromatic_light.html" title="light with a single optical frequency">monochromatic light</a>, the L, M and S values are defined by the LMS color matching functions of CIE, see Figure&nbsp;1.
+These data can of course also be applied to <a href="polychromatic_light.html" title="light with multiple optical frequencies">polychromatic light</a>, integrating the contributions of different wavelength components according to some <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a>.</p>
+<figure>
+<img src="img/lms_functions.png" alt="LMS color matching functions">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+LMS color matching functions from CIE, based on the Stiles and Burch 10&deg; color matching functions. Data source: Colour &amp; Vision Research Laboratory of the University College London, <a href="http://cvrl.ioo.ucl.ac.uk/ciepr.htm" rel="nofollow">page on CIE 2006 physiologically-relevant LMS functions</a>.
+</figcaption>
+</figure>
+<p>LMS values can be directly measured e.g. in a tristimulus <a href="colorimeters.html" title="instruments for measuring quantities which are relevant for color perception">colorimeter</a> and are useful e.g. for comparing color values: two different optical spectra having the same LMS coordinates can be expected to create the same color impression, at least for human beings with normal color vision.</p>
+<p>LMS color space can represent any perceivable colors.
+However, it is not particularly suitable for some technical applications.
+In particular, it is not immediately apparent how to generate <a href="light.html" title="electromagnetic radiation in the visible spectral range, or sometimes in an extended spectral region">light</a> which creates the color impression related to a particular point in LMS color space; we cannot directly address the different receptors in the eye, because of their spectral sensitivity curves overlap substantially.</p>
+</div>
+<h3 class="togglediv">CIE XYZ Color Space and Derived Versions</h3>
+<div>
+<p>In 1931, the CIE (Commission Internationale de l'Éclairage = International Commission on Illumination) has defined its XYZ color space, which has become very important; it has become a general reference and the basis for the definition of various other color spaces.</p>
+<p>The CIE color model takes the <a href="luminance.html" title="luminous flux per unit solid angle and unit projected area">luminance</a> (as measure for perceived <a href="brightness.html" title="a term mostly used in a qualitative way, related to the output power and beam quality of a laser; quantitatively: often used instead of radiance or luminance">brightness</a>) as one of the three color coordinates, calling it Y.
+The spectral response of the luminance is specified as the <a href="scotopic_and_photopic_vision.html" title="vision of the human eye at lower and higher light intensity levels, respectively">photopic</a> <a href="luminosity_functions.html" title="functions describing the spectral sensitivity of the human eye">luminosity function</a>.
+The maximum possible Y value, e.g. for a color image, may be chosen to be 1 or 100, for example.
+The coordinate Z responds mostly to shorter-wavelength light, while X responds both to shorter- and longer-wavelength light.
+Figure&nbsp;2 shows the used color matching functions.</p>
+<figure>
+<img src="img/cie_xyz_cmf.png" alt="CIE XYZ values">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+The CIE XYZ color matching functions for a 2-degree field. Data source: Colour &amp; Vision Research Laboratory of the University College London, <a href="http://www.cvrl.org/ciexyzpr.htm" rel="nofollow">page on CIE XYZ functions</a>.
+</figcaption>
+</figure>
+<p>CIE has also introduced normalized coordinates <span class="eqn_il"><i>x</i></span>, <span class="eqn_il"><i>y</i></span> and <span class="eqn_il"><i>z</i></span>, obtained by dividing the X, Y and Z values by (X + Y + Z).
+One can then take <span class="eqn_il"><i>x</i></span> and <span class="eqn_il"><i>y</i></span> as <a href="chromaticity.html" title="an objective specification of measured or calculated colors, used in addition to luminance (brightness)">chromaticity</a> coordinates, determining color tones for a certain luminance.
+That system is called CIE xyY, because a color value is defined by the chromaticity coordinates <span class="eqn_il"><i>x</i></span> and <span class="eqn_il"><i>y</i></span> in addition to the luminance coordinate <span class="eqn_il"><i>Y</i></span>.</p>
+<figure>
+<img src="img/cie_chromaticity.png" alt="CIE chromaticity diagram">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+The CIE chromaticity diagram, showing colors for all combinations of the chromaticity coordinates <span class="eqn_il"><i>x</i></span> and <span class="eqn_il"><i>y</i></span>, as far as those belong to perceivable colors. Source: <a href="https://en.wikipedia.org/wiki/Chromaticity#/media/File:PlanckianLocus.png" rel="nofollow" class="url">https://en.wikipedia.org/wiki/Chromaticity#/media/File:PlanckianLocus.png</a>
+</figcaption>
+</figure>
+<p>The <em>CIE chromaticity diagram</em> (Figure&nbsp;3) would ideally display the true color tones for all <span class="eqn_il"><i>x</i>,&thinsp;<i>y</i></span> pairs in the perceivable range of colors, which corresponds to a horseshoe-shaped part of XYZ color space, called the <em>gamut</em> of human vision.
+Unfortunately, a computer monitor can display colors only in a limited part of the XYZ color space, e.g. the sRGB color space (see below), and even in that limited space the colors may not be accurate if one does not take special precautions, such as a careful color calibration according to the color space of the displayed image.
+Therefore, such CIE chromaticity diagrams, whether printed on paper or displayed on a screen, are usually showing colors only in quite approximate ways.
+A rather accurate reproduction could in principle be done with a laser-based display employing carefully controlled mixtures of several primary colors, e.g. deep red at 700&nbsp;nm, green at 530&nbsp;nm, blue-green at 500&nbsp;nm and blue-violet at 480&nbsp;nm.
+That would go substantially beyond the color limitations of displays with <a href="rgb_sources.html" title="source of red, green and blue light, which is usually provided in the form laser beams">RGB sources</a> (using three primary colors), but would also be correspondingly more complex and expensive, and is therefore not common.</p>
+<p>The primary colors of CIE XYZ color space (e.g. with X = 1, Y = Z = 0) are <em>imaginary colors</em>, i.e., they cannot be physically realized.
+Colors for <a href="monochromatic_light.html" title="light with a single optical frequency">monochromatic light</a> are located on the <em>spectral locus</em> of the chromaticity diagram, which is the curved boundary of the shown gamut; <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a> values in nanometers are indicated in Figure&nbsp;3.
+The lower boundary of the gamut, called the <em>line of purples</em>, basically represent some mixtures of red and violet, which cannot be reached with monochromatic light.</p>
+<p><a href="white_light.html" title="light which creates a white color impression">White light</a> with a flat power spectrum (<a href="cie_standard_illuminants.html" title="standardized optical spectra for white light sources">CIE standard illuminant E</a>) corresponds to the point with <span class="eqn_il"><i>x</i>&thinsp;=&thinsp;<i>y</i>&thinsp;=&thinsp;1/3</span>.
+In real life, one may encounter different white color tones like warm white (somewhat shifted towards yellow-orange), cold white (with higher blue content), etc.
+Figure&nbsp;3 also shows the color values of blackbody radiation (<a href="thermal_radiation.html" title="electromagnetic radiation which results from thermal emission">thermal radiation</a> with spectrally uniform <a href="emissivity.html" title="a measure for how strongly an object emits and absorbs thermal radiation">emissivity</a>) for a range of temperatures.</p>
+<p>Note that distances in CIE XYZ color space do not well reflect differences in perceived color tones; that deficiency of the system has led to the development of various other color spaces such as CIELUV, CIEUVW, and CIELAB, which are better in that respect and others.
+Relatively common e.g. for-color calculations is CIELAB (L*a*b*) with a luminance coordinate L* and two <a href="chromaticity.html" title="an objective specification of measured or calculated colors, used in addition to luminance (brightness)">chromaticity</a> coordinates a* (green to magenta) and b* (blue to yellow).</p>
+</div>
+<h3 class="togglediv">RGB Color Spaces</h3>
+<div>
+<p>On computer monitors and projection displays with <a href="rgb_sources.html" title="source of red, green and blue light, which is usually provided in the form laser beams">RGB sources</a>, colors are usually obtained by additive mixing of red, green and blue light.
+For example, these may be emitted by different <a href="phosphors.html" title="substances which exhibit luminescence, used mostly for illumination and displays">phosphors</a> of a cathode ray tube (CRT) or by <a href="light_emitting_diodes.html" title="semiconductor diodes that emit light via electroluminescence">light-emitting diodes</a>, or obtained with a suitable <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical filters</a> from an LED background light or a <a href="high_intensity_discharge_lamps.html" title="gas discharge lamps operating with high power density">high intensity discharge lamp</a>.
+For such applications, it is obviously convenient to have colors defined with RGB (red&ndash;green&ndash;blue) coordinates, i.e., in an RGB color space.
+One may then directly control the red, green and blue intensities according to the color coordinates, or sometimes first needs to apply a transformation.</p>
+<p>In principle, one may also work with a different set of colors, but with a combination of red, green and blue one can best produce a reasonably large color gamut.</p>
+<p>The RGB color model defines only the basic principle; one also needs to define the exact primary colors and some other details (e.g. a gamma function).
+There is a substantial number of different RGB color spaces:</p>
+<ul>
+<li>The <em>sRGB color space</em>, defined by HP and Microsoft, was originally designed to work well with cathode ray tube displays.
+The phosphors which are typically used in those (with substantially non-monochromatic emission) substantially limit the color gamut.
+Deficiencies are particularly apparent in the blue-green region, but a deep red is also not included.
+Typical CMYK spaces (see below) are largely, but not completely covered.
+Despite its limitations, the sRGB color space is still very widely used and often considered to be the default if the color space of an image is not explicitly specified.
+Flat panel <a href="liquid_crystal_displays.html" title="displays based on liquid crystal modulators">liquid crystal displays</a>, e.g. with LED-based backlight, often achieve a quite similar color gamut, so that the use of sRGB is still appropriate.
+That is not the case, however, for monitors with substantially expanded color gamut, which are used for example in applications like print productions and arts, sometimes also for video viewing.
+<a href="photo_cameras.html" title="optical instruments for taking photographic images">Photo cameras</a> also often deliver sRGB image data, e.g. in JPG files.</li>
+<li><em>Adobe RGB</em> is using a substantially wider color gamut, extended against sRGB in the green region.
+A later version is <em>Adobe Wide Gamut RGB</em>, having a further extended color gamut.
+Such versions are preferable for applications requiring a wider range of colors.</li>
+<li><em>CIE 1931 RGB</em> is a rather early version, using a set of monochromatic primary colors (700&nbsp;nm, 546.1&nbsp;nm and 435.8&nbsp;nm).
+It is a comparatively wide color gamut, which could actually be even much wider if a green color with shorter wavelength (e.g. 515&nbsp;nm) would be used.
+However, this place cannot be directly used for RGB displays, because those can usually not realize the required monochromatic primary colors.</li>
+</ul>
+<aside class="callout blue">Negative RGB values would allow one to break out of the triangular color gamut, but how to produce negative light intensities?</aside>
+<p>Note that mathematically one can cover the complete gamut of human vision with RGB coordinates, if one allows those to become negative.
+However, a pixel of a color monitor cannot contribute less than no green light at all, for example, although that would be required to generate color impressions in the deepest red region.
+Usually, one considers only non-negative RGB values, corresponding to colors which can physically be generated by mixing the used primary colors.</p>
+<p>Devices using RGB color profiles are often equipped with a color profile (most often based on a definition from ICC, the International Color Consortium), which essentially defines more closely the used primary colors.
+One may, for example, use a <a href="colorimeters.html" title="instruments for measuring quantities which are relevant for color perception">colorimeter</a> to generate a color profile of a computer monitor; the resulting file can then be used for properly adjusting the color values, e.g. such that the RGB color space of available media is accurately reproduced.
+Also, a photo camera my embed its color profile into produced JPEG images files in order to clearly define what color space has been used.</p>
+</div>
+<h3 class="togglediv">CMYK Color Spaces</h3>
+<div>
+<p>CMYK color spaces are based on a subtractive color model, as is appropriate in the context of printing, where colors are generated by mixing pigments or dyes.
+Here, each segment absorbs light in some range of wavelengths.
+CMYK values essentially specify what concentrations of C (cyan), M (magenta), Y (yellow) and K (black) pigments or dyes (e.g. in ink jet printers) need to be mixed to obtain the corresponding color.
+Although human vision is trichromatic, meaning that three different pigments would in principle be sufficient, a combination of four has been chosen to obtain a wider color gamut.
+Nevertheless, CMYK color gamuts are relatively narrow, with substantial deficiencies particularly in the blue&ndash;green region, but also for deep red color tones.
+This reflects the fundamental difficulties of achieving such colors with pigments.
+If a pigment were to generate a very “pure” color (close to some monochromatic light), it would have to absorb all light outside a narrow wavelength band, and leave only a tiny portion of the incident optical power.
+However, for subtractive color mixing to work reasonably well, one needs to have substantially overlapping spectral regions with low absorption, and that inevitably leads to broadband light with quite limited color saturation.</p>
+</div>
+</div>
+<h2 class="togglediv">Transformations between Color Spaces</h2>
+<div>
+<p>It is possible to do transformations between different color spaces, i.e., to calculate the color coordinates in one space from those in another space.
+That is required, for example, when a printing device needs CMYK data while the images are from a <a href="photo_cameras.html" title="optical instruments for taking photographic images">photo camera</a> delivering sRGB image data.
+In some cases, one needs to first transform into some intermediate color space (e.g. CIE XYZ) before getting to the final color space.</p>
+<p>Unfortunately, color transformations often do not perfectly work:</p>
+<ul>
+<li>Obviously, problems arise if the target color space does not cover all the possible colors of the source space.
+For the colors which can no longer be accurately represented, one may then use colors which at least approximate the real colors as well as possible.
+For other colors, one may also apply certain changes such as to preserve at least some color contrast in the extreme regions.</li>
+<li>In practice, color coordinates are often stored with a quite limited resolution, e.g. with 8 bits, allowing for only 256 different values.
+Even if this does not create substantial problems within one color space, it can lead to significant rounding errors in transformations.</li>
+<li>Many kinds of mistakes can occur, e.g. by confusing variants of RGB color spaces or ignoring certain boundary conditions such as a reference white color tone.</li>
+</ul>
+<p>When transforming an image into another color space and back again, the final result may significantly differ from the original image, particularly because of limited color spaces, but also because of rounding errors.</p>
+<p>Incomplete, misleading or just wrong specifications of color spaces, causing wrong transformations and other problems, are unfortunately quite common.
+Note that a complete understanding of <a href="color_vision.html" title="vision with some capability for spectral analysis of the light">color vision</a>, <a href="colorimetry.html" title="the science and technology of objectively measuring optical properties related to color impressions for the human eye">colorimetry</a> and all the details of color spaces is rather hard to acquire, and is far from what many persons dealing with such things can achieve.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="color_spaces.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="color_vision.html" title="vision with some capability for spectral analysis of the light">color vision</a>, <a href="colorimetry.html" title="the science and technology of objectively measuring optical properties related to color impressions for the human eye">colorimetry</a>, <a href="chromaticity.html" title="an objective specification of measured or calculated colors, used in addition to luminance (brightness)">chromaticity</a>, <a href="rgb_sources.html" title="source of red, green and blue light, which is usually provided in the form laser beams">RGB sources</a><br>and other articles in the category <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/color_spaces.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fcolor_spaces.html&text=RP+Photonics+Encyclopedia+-+color+spaces%2C+color+models%2C+LMS%2C+CIE+XYZ%2C+RGB%2C+CMYK%2C+transformations" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fcolor_spaces.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fcolor_spaces.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/color_spaces.html"&gt;<br>Article on Color Spaces&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/color_spaces.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/color_spaces.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/color_spaces.html<br>article on 'Color Spaces' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Website Tours</h2>
+<p>You can explore our website with the following tours:</p>
+<ul>
+<li><a href="./encyclopedia.html?tour=Encyclopedia">The RP Photonics Encyclopedia</a></li>
+<li><a href="./encyclopedia.html?tour=New_Encyclopedia_Articles">The latest encyclopedia articles</a></li>
+<li><a href="./buyersguide.html?tour=Using_the_Buyers_Guide">Using the Buyer's Guide</a></li>
+<li><a href="./buyersguide.html?tour=Advertising_in_the_Buyers_Guide">Advertising in the Buyer's Guide</a></li>
+</ul>
+<img src="./img/tour_bus.png" style="width:90%; margin:15px 0;" alt="&nbsp;">
+<p>You will be lead through a couple of pages, obtaining explanations on every one.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="by4MD0mjVkNk96jLvAaXJA==">shownbanner = "tours";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Numerical Modeling</h2>
+<p>Developing devices or systems in photonics requires a <b>comprehensive quantitative understanding</b> &ndash; otherwise, it becomes inefficient, waisting time and money.</p>
+<p><a href="./laser_modeling.html?banner=numerical_modeling">Numerical modeling</a> is often the most efficient way towards results:</p>
+<ul>
+<li>understand <em>quantitatively</em> what is going on</li>
+<li>check the influence of design changes or possible detrimental effects</li>
+<li>understand strange experimental observations</li>
+<li>find optimized designs more reliably and faster</li>
+</ul>
+<p style="text-align:center; margin:10px 0;"><a href="./laser_modeling.html?banner=numerical_modeling"><img src="./img/modeling.png" width="234" height="91" alt="laser modeling"></a></p>
+<h3>How to Get Your Modeling Done?</h3>
+<p>We offer both <a href="./consulting.html?banner=numerical_modeling">technical consultancy</a> and powerful <a href="./software.html?banner=numerical_modeling">simulation software</a>.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="by4MD0mjVkNk96jLvAaXJA==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/color_spaces.html"
+    },
+    "headline": "Color Spaces",
+    "image": "https://www.rp-photonics.com/previews/color_spaces.png",
+    "datePublished": "2019-12-28",
+    "dateModified": "2020-03-14",
+    "description": "Color spaces are mathematical spaces for representing color values. Various types of color spaces such as LMS, CIE XYZ, RGB and CMYK have been developed for different applications.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter C",
+      "item": "https://www.rp-photonics.com/encyclopedia_c.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "color spaces",
+      "item": "https://www.rp-photonics.com/color_spaces.html"
+    }]}
+}
+</script>
+</body>
+</html>

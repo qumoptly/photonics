@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-IJtSM4+8Gtoe5rcgMOtweg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Kerr lens mode locking, hard aperture KLM, soft aperture, self-starting, passive mode locking, titanium-sapphire lasers</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/kerr_lens_mode_locking.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-04-01">
+<meta name="description" content="Kerr lens mode locking is a technique for mode locking a laser, exploiting nonlinear self-focusing. It is suitable for generating few-femtosecond laser pulses.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="Kerr lens mode locking, hard aperture KLM, soft aperture, self-starting, passive mode locking, titanium-sapphire lasers">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kerr Lens Mode Locking">
+<meta property="og:description" content="Kerr lens mode locking is a technique for mode locking a laser, exploiting nonlinear self-focusing. It is suitable for generating few-femtosecond laser pulses.">
+<meta property="og:url" content="https://www.rp-photonics.com/kerr_lens_mode_locking.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/kerr_lens_mode_locking.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Kerr lens mode locking is a technique for mode locking a laser, exploiting nonlinear self-focusing. It is suitable for generating few-femtosecond laser pulses.">
+<meta name="twitter:title" content="Kerr Lens Mode Locking">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/kerr_lens_mode_locking.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="IJtSM4+8Gtoe5rcgMOtweg==">
+page="kerr_lens_mode_locking.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="IJtSM4+8Gtoe5rcgMOtweg==">shownsponsors="Knight Optical"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_k.html">letter K</a> &gt; <a href="kerr_lens_mode_locking.html">Kerr lens mode locking</a></p>
+<h1>Kerr Lens Mode Locking</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_kerr_lens_mode_locked_lasers.html?s=vbox">6 suppliers for Kerr lens mode-locked lasers</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.lightcon.com/Product/FLINT.html" data-supplier="Light Conversion" data-location="product-enc" data-keyword="Kerr lens mode-locked lasers" rel="nofollow" class="bg externallink"><img src="./bg/logos/light_conversion.png" alt="Light Conversion" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.kmlabs.com/product/collegiate/" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="Kerr lens mode-locked lasers" rel="nofollow" class="bg externallink"><img src="./bg/logos/kapteyn_murnane_laboratories.png" alt="Kapteyn-Murnane Laboratories" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_kerr_lens_mode_locked_lasers.html?s=vbox">List of suppliers for<br>Kerr lens mode-locked lasers</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="boxadvertisement">
+<h2>Simulation of Kerr Lens Mode Locking</h2>
+<p>The software <a href="resonator.html"><b>RP Resonator</b></a> can be used for calculating the sensitivity of a laser resonator to nonlinear lensing effects.
+With <a href="fiberpower.html"><b>RP Fiber Power</b></a> one may simulate the pulse generation with an artificial fast saturable absorber; that approach is far more efficient than a full spatio&ndash;temporal simulation.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p>Acronym: KLM</p>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a technique for mode locking a laser, exploiting nonlinear self-focusing</p>
+<p>More general terms: <a href="passive_mode_locking.html" title="a technique of mode locking, based on a saturable absorber inside the laser resonator">passive mode locking</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Kerr-Linsen-Modenkopplung</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<p><a href="encyclopedia_cite.html?article=Kerr%20lens%20mode%20locking">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Kerr lens mode locking is a technique of <a href="passive_mode_locking.html" title="a technique of mode locking, based on a saturable absorber inside the laser resonator">passive mode locking</a> a <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a>, using an artificial <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorber</a> based on <a href="kerr_lens.html" title="a lensing effect arising from the Kerr nonlinearity">Kerr lensing</a> in the <a href="gain_media.html" title="media for laser amplification">gain medium</a>.
+The latter effect causes a reduction in the beam size for high <a href="optical_intensity.html" title="optical power per unit area">optical intensities</a>.
+Via two different mechanisms, this can effectively act like a fast saturable absorber:</p>
+<ul>
+<li>In the case of <em>hard aperture KLM</em>, the Kerr lens reduces the optical losses at an <a href="optical_apertures.html" title="structures which limit the propagation of light">aperture</a> which the beam must pass in each resonator round trip.</li>
+<li>In the case of <em>soft aperture KLM</em>, the Kerr lens leads to a better overlap of laser and pump beam, and thus to a higher <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> for the peak of the pulse.
+That increase of gain has a similar effect as a decrease of losses; both effects increase the net round-trip gain.</li>
+</ul>
+<p>The article on <a href="passive_mode_locking.html" title="a technique of mode locking, based on a saturable absorber inside the laser resonator">passive mode locking</a> explains how a saturable absorber leads to mode locking.</p>
+<p>Kerr lens mode locking has enabled the generation of the <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">shortest pulses</a> with durations down to &asymp;&thinsp;5&nbsp;fs in <a href="titanium_sapphire_lasers.html" title="lasers based on a Ti:sapphire gain medium">Ti:sapphire lasers</a>.
+Its strength lies in the very fast response and the fact that no special saturable absorber medium is required.
+The main disadvantage is the need to operate the laser close to a <a href="stability_zones.html">stability limit</a> of its <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">resonator</a>, because otherwise the Kerr lensing effect is too weak.
+As a consequence, long-term stable operation is difficult to achieve, and the <a href="resonator_design.html" title="the description of the optical components from which an optical resonator is made, and their exact arrangement">resonator design</a> is a difficult task.
+Also, reliable <a href="self_starting_mode_locking.html" title="mode locking which is quickly achieved after turning on a laser, without external intervention">self-starting mode locking</a> is often not achieved.
+Often such lasers start in a noisy operation mode, not producing ultrashort pulses, after being turned on, and switch to mode-locked operation only after an external trigger, e.g. when a resonator mirror is manually tapped in order to stimulate power fluctuations.</p>
+<p>KLM is sometimes called <em>self mode locking</em> because it does not require a visible saturable absorber device.
+Its first observation [1], where that term was introduced, has not yet been explained with the influence of nonlinear focusing based on the Kerr effect; that was provided by others shortly after that first report [2].</p>
+<p>A kind of KLM has been applied to <a href="vertical_external_cavity_surface_emitting_lasers.html" title="surface-emitting semiconductor lasers with an external laser resonator">vertical external-cavity surface-emitting lasers</a> (VECSELs) [16].
+Their gain medium does not exhibit a true Kerr nonlinearity, but a similar effect based on gain saturation and the dependence of <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> on the carrier density.
+This typically leads to a negative index change due to gain saturation, but not with an index change in proportion to the momentary optical intensity.</p>
+<p>Comprehensive <a href="modeling.html">modeling</a> of Kerr lens mode locking is difficult due to the complicated spatio-temporal dynamics; note that the <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a> varies during the temporal pulse shape.
+Simplified models can at least roughly predict the achieved <a href="modulation_depth.html" title="a relative modulation amplitude, or (for a saturable absorber) the maximum change in absorption">modulation depth</a> and <a href="saturation_power.html" title="a measure of the incident optical power required for achieving significant saturation of an absorber or a gain medium">saturation power</a>, and thus assist in finding a suitable <a href="resonator_design.html" title="the description of the optical components from which an optical resonator is made, and their exact arrangement">resonator design</a>.</p>
+<p>A possible alternative to KLM is <a href="passive_mode_locking.html" title="a technique of mode locking, based on a saturable absorber inside the laser resonator">passive mode locking</a> with a real saturable absorber, e.g. with a <a href="semiconductor_saturable_absorber_mirrors.html" title="saturable semiconductor absorber devices acting as nonlinear mirrors">SESAM</a>.
+It is also possible to combine KLM and a SESAM with particularly broad reflection bandwidth to achieve <a href="self_starting_mode_locking.html" title="mode locking which is quickly achieved after turning on a laser, without external intervention">self-starting mode locking</a> and very short pulses.</p>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_kerr_lens_mode_locked_lasers.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 6 suppliers for Kerr lens mode-locked lasers. Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.lightcon.com/" data-supplier="Light Conversion" data-location="product-enc" data-keyword="Kerr lens mode-locked lasers" rel="nofollow" class="bg externallink" title="Visit the website of Light Conversion"><img src="./bg/logos/light_conversion.png" alt="Light Conversion" class="supplierlogo"></a><a href="http://www.lightcon.com/Product/FLINT.html" data-supplier="Light Conversion" data-location="product-enc" data-keyword="Kerr lens mode-locked lasers" rel="nofollow" class="bg externallink" title="Visit the website of Light Conversion"><img src="./bg/products/light_conversion/flint.jpg" alt="Kerr lens mode-locked lasers" class="product"></a><h3><a href="./bg/profiles/light_conversion.html" title="See the profile of Light Conversion">Light Conversion</a></h3><p>The <a href="http://www.lightcon.com/Product/FLINT.html" data-supplier="Light Conversion" data-location="product-enc" data-keyword="Kerr lens mode-locked lasers" rel="nofollow" class="externallink bg">femtosecond Yb oscillator FLINT</a> is based on an Yb-doped crystal pumped with a high brightness laser diode module. Generation of femtosecond pulses is achieved by Kerr lens mode-locking. Once started, mode-locking remains stable over a long period of time and is immune to minor mechanical impact. A piezo-actuator can be included in customized oscillators in order to control the cavity length. The FLINT oscillator can also be equipped with a carrier envelope phase (CEP) stabilization system.</p><p>FEATURES:</p><p>- sub-40&nbsp;fs without any additional pulse compressor</p><p>- 250&nbsp;nJ pulse energy</p><p>- 20&nbsp;W output power</p><p>- 76&nbsp;MHz is standard</p><p>- no amplified spontaneous emission</p><p>- rugged, industrial-grade mechanical design</p><p>- automated harmonic generator (517&nbsp;nm)</p><p>- optional CEP stabilization</p><p>- possibility to lock to external clock</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.kmlabs.com/" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="Kerr lens mode-locked lasers" rel="nofollow" class="bg externallink" title="Visit the website of Kapteyn-Murnane Laboratories"><img src="./bg/logos/kapteyn_murnane_laboratories.png" alt="Kapteyn-Murnane Laboratories" class="supplierlogo"></a><a href="https://www.kmlabs.com/product/collegiate/" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="Kerr lens mode-locked lasers" rel="nofollow" class="bg externallink" title="Visit the website of Kapteyn-Murnane Laboratories"><img src="./bg/products/kapteyn_murnane_laboratories/collegiate.jpg" alt="Kerr lens mode-locked lasers" class="product"></a><h3><a href="./bg/profiles/kapteyn_murnane_laboratories.html" title="See the profile of Kapteyn-Murnane Laboratories">Kapteyn-Murnane Laboratories</a></h3><p>The <a href="https://www.kmlabs.com/product/collegiate/" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="Kerr lens mode-locked lasers" rel="nofollow" class="externallink bg">Collegiate&trade;</a> ultrafast Ti:sapphire laser kit is the latest installment of the original KMLabs few-cycle oscillators. When it was introduced in 1994, this was the first commercial Ti:sapphire laser capable of generating pulses less than 12 femtoseconds in duration. Since then, as technology has evolved, KMLabs has been proud to continue pushing the boundaries in ultrafast laser science to some of the most challenging and advanced demands in the research field. Through this evolution, as KMLabs has expanded into offering turn-key laser systems, Collegiate endures as a workhorse user-serviceable laser, providing an entry-level Ti:sapphire laser system with state-of-the-art performance appropriate for both educational and research environments.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="kerr_lens_mode_locking.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">D. E. Spence, P. N. Kean, W. Sibbett, &ldquo;60-fsec pulse generation from a self-mode-locked Ti:sapphire laser&rdquo;, Opt. Lett. 16 (1), 42 (1991), <a href="https://doi.org/10.1364/OL.16.000042">doi:10.1364/OL.16.000042</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">F. Salin <i>et al.</i>, &ldquo;Modelocking of Ti:sapphire lasers and self-focusing: a Gaussian approximation&rdquo;, Opt. Lett. 16 (21), 1674 (1991), <a href="https://doi.org/10.1364/OL.16.001674">doi:10.1364/OL.16.001674</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">S. Chen and J. Wang, &ldquo;Self-starting issues of passive self-focusing mode locking&rdquo;, Opt. Lett. 16 (21), 1689 (1991), <a href="https://doi.org/10.1364/OL.16.001689">doi:10.1364/OL.16.001689</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">T. Brabec <i>et al.</i>, &ldquo;Kerr lens mode locking&rdquo;, Opt. Lett. 17 (18), 1292 (1992), <a href="https://doi.org/10.1364/OL.17.001292">doi:10.1364/OL.17.001292</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">Pich&eacute; <i>et al.</i>, &ldquo;Self-mode locking of solid-state lasers without apertures&rdquo; (soft aperture mode locking), Opt. Lett. 18 (13), 1041 (1993), <a href="https://doi.org/10.1364/OL.18.001041">doi:10.1364/OL.18.001041</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">J. Herrmann, &ldquo;Theory of Kerr-lens mode locking: role of self-focusing and radially varying gain&rdquo;, J. Opt. Soc. Am. B 11 (3), 498 (1994), <a href="https://doi.org/10.1364/JOSAB.11.000498">doi:10.1364/JOSAB.11.000498</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">Y. Chou <i>et al.</i>, &ldquo;Measurements of the self-starting threshold of Kerr-lens mode-locking lasers&rdquo;, Opt. Lett. 19 (8), 566 (1994), <a href="https://doi.org/10.1364/OL.19.000566">doi:10.1364/OL.19.000566</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">G. Cerullo <i>et al.</i>, &ldquo;Resonators for Kerr-lens mode-locked femtosecond Ti:sapphire lasers&rdquo;, Opt. Lett. 19 (11), 807 (1994), <a href="https://doi.org/10.1364/OL.19.000807">doi:10.1364/OL.19.000807</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">G. Cerullo <i>et al.</i>, &ldquo;Self-starting Kerr-lens mode locking of a Ti:sapphire laser&rdquo;, Opt. Lett. 19 (14), 1040 (1994), <a href="https://doi.org/10.1364/OL.19.001040">doi:10.1364/OL.19.001040</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">I. P. Christov <i>et al.</i>, &ldquo;Mode locking with a compensated space&ndash;time astigmatism&rdquo;, Opt. Lett. 20 (20), 2111 (1995), <a href="https://doi.org/10.1364/OL.20.002111">doi:10.1364/OL.20.002111</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">D. H. Sutter <i>et al.</i>, &ldquo;Semiconductor saturable-absorber mirror-assisted Kerr lens modelocked Ti:sapphire laser producing pulses in the two-cycle regime&rdquo;, Opt. Lett. 24 (9), 631 (1999), <a href="https://doi.org/10.1364/OL.24.000631">doi:10.1364/OL.24.000631</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">U. Morgner <i>et al.</i>, &ldquo;Sub-two cycle pulses from a Kerr-lens mode-locked Ti:sapphire laser&rdquo;, Opt. Lett. 24 (6), 411 (1999), <a href="https://doi.org/10.1364/OL.24.000411">doi:10.1364/OL.24.000411</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">S. Uemura and K. Torizuka, &ldquo;Generation of 12-fs pulses from a diode-pumped Kerr-lens mode-locked Cr:LiSAF laser&rdquo;, Opt. Lett. 24 (11), 780 (1999), <a href="https://doi.org/10.1364/OL.24.000780">doi:10.1364/OL.24.000780</a></td></tr>
+<tr><td class="refno">[14]</td><td class="refs">N. Tolstik <i>et al.</i>, &ldquo;Kerr-lens mode-locked Cr:ZnS laser&rdquo;, Opt. Lett. 38 (3), 299 (2013), <a href="https://doi.org/10.1364/OL.38.000299">doi:10.1364/OL.38.000299</a></td></tr>
+<tr><td class="refno">[15]</td><td class="refs">H. Zhao and A. Major, &ldquo;Powerful 67 fs Kerr-lens mode-locked prismless Yb:KGW oscillator&rdquo;, Opt. Express 21 (26), 31846 (2013), <a href="https://doi.org/10.1364/OE.21.031846">doi:10.1364/OE.21.031846</a></td></tr>
+<tr><td class="refno">[16]</td><td class="refs">A. R. Albrecht <i>et al.</i>, &ldquo;Exploring ultrafast negative Kerr effect for mode-locking vertical external-cavity surface-emitting lasers&rdquo;, Opt. Express 21 (23), 28801 (2013), <a href="https://doi.org/10.1364/OE.21.028801">doi:10.1364/OE.21.028801</a></td></tr>
+<tr><td class="refno">[17]</td><td class="refs">S. Yefet and A. Pe'er, &ldquo;A review of cavity design for Kerr lens mode-locked solid-state lasers&rdquo;, Appl. Sci. 3 (4), 694 (2013), <a href="https://doi.org/10.3390/app3040694">doi:10.3390/app3040694</a></td></tr>
+<tr><td class="refno">[18]</td><td class="refs">J. Brons <i>et al.</i>, &ldquo;Energy scaling of Kerr-lens mode-locked thin-disk oscillators&rdquo;, Opt. Lett. 39 (22), 6442 (2014), <a href="https://doi.org/10.1364/OL.39.006442">doi:10.1364/OL.39.006442</a></td></tr>
+<tr><td class="refno">[19]</td><td class="refs">S. Kimura <i>et al.</i>, &ldquo;Kerr-lens mode locking above a 20&nbsp;GHz repetition rate&rdquo;, Optica 6 (5), 532 (2019), <a href="https://doi.org/10.1364/OPTICA.6.000532">doi:10.1364/OPTICA.6.000532</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="kerr_lens.html" title="a lensing effect arising from the Kerr nonlinearity">Kerr lens</a>, <a href="kerr_effect.html" title="a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization">Kerr effect</a>, <a href="mode_locking.html" title="a group of techniques for generating ultrashort pulses in lasers">mode locking</a>, <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked lasers</a>, <a href="ultrafast_lasers.html" title="lasers emitting ultrashort pulses">ultrafast lasers</a>, <a href="self_starting_mode_locking.html" title="mode locking which is quickly achieved after turning on a laser, without external intervention">self-starting mode locking</a>, <a href="titanium_sapphire_lasers.html" title="lasers based on a Ti:sapphire gain medium">titanium&ndash;sapphire lasers</a><br>and other articles in the categories <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/kerr_lens_mode_locking.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fkerr_lens_mode_locking.html&text=RP+Photonics+Encyclopedia+-+Kerr+lens+mode+locking%2C+hard+aperture+KLM%2C+soft+aperture%2C+self-starting%2C+passive+mode+locking%2C+titanium-sapphire+lasers" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fkerr_lens_mode_locking.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fkerr_lens_mode_locking.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/kerr_lens_mode_locking.html"&gt;<br>Article on Kerr Lens Mode Locking&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/kerr_lens_mode_locking.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/kerr_lens_mode_locking.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/kerr_lens_mode_locking.html<br>article on 'Kerr Lens Mode Locking' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="./fiberpower_self_focusing.html?banner=RP_Fiber_Power_4"><img src="./img/fiberpower_self_focusing4b.png" alt="self-focusing in a fiber" style="margin-bottom:8px"></a>
+<p>Intensity distribution in a fiber at megawatt power levels. The Kerr nonlinearity destabilizes the initially launched LP<sub>11</sub> mode.</p>
+<p>This diagram has been made with the <a href="./fiberpower.html?banner=RP_Fiber_Power_4"><b>RP Fiber Power</b></a> software.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="IJtSM4+8Gtoe5rcgMOtweg==">shownbanner = "RP Fiber Power 4";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Fighting Fraud in Science</h2>
+<p>We occasionally read about scientific fraud &ndash; things like fabricated measurement results &ndash; which is utterly unfair and also undermines the trust of the public in science and its results.</p>
+<p>How to fight that problem?</p>
+<ul>
+<li>Do we need to tell young scientists more clearly that fraud is evil?</li>
+<li>Do supervisors have to stop trusting the results of their coworkers?</li>
+<li>Does the pressure to produce results inevitably favor fraud?</li>
+<li>Where exactly lies the responsibility, if something goes wrong?</li>
+</ul>
+<p>Our <a href="./spotlight_2009_10_19.html?banner=science_fraud">Photonics Spotlight article on science fraud</a> analyzes that carefully.
+It suggests that <b>the risk of fraud is close to zero where supervisors do a responsible job</b>.
+Relations to a more widespread problem &ndash; <b>corrupt authorship practices</b> &ndash; are also identified.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="IJtSM4+8Gtoe5rcgMOtweg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/kerr_lens_mode_locking.html"
+    },
+    "headline": "Kerr Lens Mode Locking",
+    "image": "https://www.rp-photonics.com/previews/kerr_lens_mode_locking.png",
+    "datePublished": "2006-06-17",
+    "dateModified": "2020-04-01",
+    "description": "Kerr lens mode locking is a technique for mode locking a laser, exploiting nonlinear self-focusing. It is suitable for generating few-femtosecond laser pulses.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter K",
+      "item": "https://www.rp-photonics.com/encyclopedia_k.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Kerr lens mode locking",
+      "item": "https://www.rp-photonics.com/kerr_lens_mode_locking.html"
+    }]}
+}
+</script>
+</body>
+</html>

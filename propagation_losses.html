@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-qC8PsAbyjsp5ZdCZgxuU4A=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - propagation losses, absorption, scattering, loss coefficient, extrinsic, intrinsic, dependence on wavelength, modes</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/propagation_losses.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="When light propagates in a transparent medium, some of its optical power maybe lost due to absorption or scattering.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="propagation losses, absorption, scattering, loss coefficient, extrinsic, intrinsic, modes">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Propagation Losses">
+<meta property="og:description" content="When light propagates in a transparent medium, some of its optical power maybe lost due to absorption or scattering.">
+<meta property="og:url" content="https://www.rp-photonics.com/propagation_losses.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/propagation_losses.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="When light propagates in a transparent medium, some of its optical power maybe lost due to absorption or scattering.">
+<meta name="twitter:title" content="Propagation Losses">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/propagation_losses.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="qC8PsAbyjsp5ZdCZgxuU4A==">
+page="propagation_losses.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="qC8PsAbyjsp5ZdCZgxuU4A==">shownsponsors="RPMC Lasers"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_p.html">letter P</a> &gt; <a href="propagation_losses.html">propagation losses</a></p>
+<h1>Propagation Losses</h1>
+<header style="margin-right:0;">
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: losses of optical energy during propagation of light</p>
+<p>More specific terms: <a href="bend_losses.html" title="propagation losses in an optical fiber (or other waveguide) caused by bending">bend losses</a>, <a href="depolarization_loss.html" title="losses of optical power in a laser resonator, caused by depolarization e.g. in a laser crystal">depolarization loss</a>, <a href="insertion_loss.html" title="power losses due to insertion of a device">insertion loss</a>, <a href="return_loss.html" title="a measure for how much reflected light is attenuated">return loss</a>, <a href="photodarkening.html" title="the phenomenon that the optical power losses in a medium can grow when the medium is irradiated with light at certain wavelengths">photoinduced losses</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Ausbreitungsverluste, Propagationsverluste</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<p><a href="encyclopedia_cite.html?article=propagation%20losses">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>When light propagates in a transparent medium, some of its <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a> may be lost due to different physical effects:</p>
+<ul>
+<li>Some of the light may be <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorbed</a>.
+The corresponding energy will often be converted into heat, but it may also lead to <a href="fluorescence.html" title="luminescence arising from irradiation with light">fluorescence</a> at other optical <a href="wavelength.html" title="the spatial period of a plane wave">wavelengths</a>.</li>
+<li>Light can also be <a href="scattering.html" title="processes where light is sent in other directions, usually but not always in random directions">scattered</a> (often in the form of <a href="rayleigh_scattering.html" title="scattering of light at scattering centers which are much smaller than the wavelength">Rayleigh scattering</a>), i.e., it is sent to other directions.
+Although that does not reduce the total amount of light, it reduces the amount which propagates along the original path.
+Therefore, scattered light is usually considered to be lost.
+In some situations, however, a significant part of the scattered light may be sent to approximately the original propagation direction by multiple scattering.
+It may then be more difficult to appropriately define a propagation loss coefficient.</li>
+<li>In some situations, there are losses due to <a href="nonlinear_frequency_conversion.html" title="the conversion of input light to light of other frequencies, using optical nonlinearities">nonlinear frequency conversion</a>; for example, energy may be transferred to a wave with twice the <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequency</a> (&rarr;&nbsp;<a href="frequency_doubling.html" title="the phenomenon that an input wave in a nonlinear material can generate a wave with twice the optical frequency"><em>frequency doubling</em></a>).</li>
+<li>For light propagation in <a href="waveguides.html" title="spatially inhomogeneous transparent structures for guiding light">waveguides</a> (e.g. optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>), there can be losses due to <a href="mode_coupling.html" title="a concept for describing and calculating light propagation in certain situations, e.g. involving nonlinear interactions">mode coupling</a> between guided and unguided modes.
+(Power transferred into unguided modes is usually considered as lost.)
+For example, they can be caused by strong bending (&rarr;&nbsp;<a href="bend_losses.html" title="propagation losses in an optical fiber (or other waveguide) caused by bending"><em>bend losses</em></a>).</li>
+</ul>
+<p>With propagation losses, one usually means only those losses which are distributed in the medium &ndash; not localized losses, such as those arising from <a href="fresnel_reflections.html" title="light reflections at optical interfaces">Fresnel reflections</a> at optical interfaces.</p>
+<p>In some situations, propagation losses may be compensated or over-compensated by <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> e.g. in a laser <a href="gain_media.html" title="media for laser amplification">gain medium</a> or by nonlinear effects (e.g. optical <a href="parametric_amplification.html" title="a process of optical amplification based on a parametric nonlinearity">parametric amplification</a>).</p>
+<h2 class="togglediv">Loss Coefficients</h2>
+<div>
+<p>The propagation losses in a medium can be quantified with a propagation loss coefficient <span class="eqn_il"><span class="greek">&alpha;</span></span>, which is the sum of contributions from absorption and scattering and has units of m<sup>&minus;1</sup>.
+If the loss coefficient is constant, the optical power is proportional to <span class="eqn_il">exp(&minus;<span class="greek">&alpha;</span>&thinsp;<i>z</i>)</span> where <span class="eqn_il"><i>z</i></span> is the propagation distance.</p>
+<p>Alternatively, the losses can be quantified in <a href="decibel.html" title="a logarithmic measure for power ratios, applied e.g. to optical powers or to noise powers">decibels</a> per meter (dB/m); the numerical values are then &approx;4.34 times higher than those of the loss coefficient in m<sup>&minus;1</sup>.
+It is also possible to describe propagation losses with a complex <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a>, where the losses are expressed in the imaginary part.
+Similarly, the evolution power and <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">optical phase</a> can be described with a complex <a href="propagation_constant.html" title="a mode- and frequency-dependent quantity describing the propagation of light in a medium or waveguide">propagation constant</a>.</p>
+</div>
+<h2 class="togglediv">Intrinsic and Extrinsic losses</h2>
+<div>
+<p>Propagation losses are called <em>intrinsic</em> when they inevitably arise from the basic properties of the material.
+On the other hand, <em>extrinsic losses</em> are those which arise from circumstances which can in principle be avoided.</p>
+<p>For example, <a href="silica_fibers.html" title="optical fibers based on fused silica or related materials">silica fibers</a> exhibit some intrinsic losses due to <a href="infrared_light.html" title="invisible light with wavelengths roughly between 750&thinsp;&thinsp;nm and 1&thinsp;&thinsp;mm">infrared</a> <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorption</a> and also due to <a href="rayleigh_scattering.html" title="scattering of light at scattering centers which are much smaller than the wavelength">Rayleigh scattering</a> at unavoidable inhomogeneities of the glass.
+(Note that a glass, having an amorphous structure, can never be completely optically homogeneous, even for perfectly optimized fabrication conditions.)
+On the other hand, there can be additional extrinsic losses due to impurities or non-perfect fabrication conditions.</p>
+</div>
+<h2 class="togglediv">Dependencies</h2>
+<div>
+<p>The propagation loss coefficient is generally <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>-dependent.
+In case of a <a href="waveguides.html" title="spatially inhomogeneous transparent structures for guiding light">waveguide</a>, it can also be strongly <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">mode</a>-dependent.</p>
+<p>Generally, propagation losses in <a href="waveguides.html" title="spatially inhomogeneous transparent structures for guiding light">waveguides</a> are larger than those in homogeneous media, mostly because non-perfect interfaces can lead to increased scattering.
+However, optimized <a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode fibers</a> (used e.g. as <a href="telecom_fibers.html" title="optical fibers for use in optical fiber communications">telecom fibers</a>) can have losses below 0.2&nbsp;dB/km in the 1.5-&mu;m spectral region, because highly purified <a href="silica_fibers.html" title="optical fibers based on fused silica or related materials">silica</a> (even when doped e.g. with germania) exhibits very little absorption and scattering in that wavelength region.</p>
+<p>For low enough <a href="optical_intensity.html" title="optical power per unit area">optical intensities</a>, the propagation loss is independent of the intensity.
+For higher intensities, optical <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a> can come into play.
+For example, the propagation loss may be increased by <a href="two_photon_absorption.html" title="a nonlinear absorption process where two photons are simultaneously absorbed">two-photon absorption</a> or by <a href="nonlinear_frequency_conversion.html" title="the conversion of input light to light of other frequencies, using optical nonlinearities">nonlinear frequency conversion</a> as mentioned above.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="propagation_losses.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="propagation_constant.html" title="a mode- and frequency-dependent quantity describing the propagation of light in a medium or waveguide">propagation constant</a>, <a href="absorption_coefficient.html" title="a logarithmic measure for the distributed absorption in a medium">absorption coefficient</a>, <a href="scattering.html" title="processes where light is sent in other directions, usually but not always in random directions">scattering</a><br>and other articles in the categories <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/propagation_losses.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fpropagation_losses.html&text=RP+Photonics+Encyclopedia+-+propagation+losses%2C+absorption%2C+scattering%2C+loss+coefficient%2C+extrinsic%2C+intrinsic%2C+dependence+on+wavelength%2C+modes" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fpropagation_losses.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fpropagation_losses.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/propagation_losses.html"&gt;<br>Article on Propagation Losses&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/propagation_losses.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/propagation_losses.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/propagation_losses.html<br>article on 'Propagation Losses' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Website Tours</h2>
+<p>You can explore our website with the following tours:</p>
+<ul>
+<li><a href="./encyclopedia.html?tour=Encyclopedia">The RP Photonics Encyclopedia</a></li>
+<li><a href="./encyclopedia.html?tour=New_Encyclopedia_Articles">The latest encyclopedia articles</a></li>
+<li><a href="./buyersguide.html?tour=Using_the_Buyers_Guide">Using the Buyer's Guide</a></li>
+<li><a href="./buyersguide.html?tour=Advertising_in_the_Buyers_Guide">Advertising in the Buyer's Guide</a></li>
+</ul>
+<img src="./img/tour_bus.png" style="width:90%; margin:15px 0;" alt="&nbsp;">
+<p>You will be lead through a couple of pages, obtaining explanations on every one.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="qC8PsAbyjsp5ZdCZgxuU4A==">shownbanner = "tours";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Sponsors of the Encyclopedia</h2>
+<p>We are grateful to the <a href="./encyclopedia_sponsoring.html?banner=sponsoring">sponsors</a> of our encyclopedia:</p>
+<div style="margin-top:10px; text-align:center;"><a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/nkt_photonics.html"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a></div>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="qC8PsAbyjsp5ZdCZgxuU4A==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/propagation_losses.html"
+    },
+    "headline": "Propagation Losses",
+    "image": "https://www.rp-photonics.com/previews/propagation_losses.png",
+    "datePublished": "2019-07-13",
+    "dateModified": "2020-03-14",
+    "description": "When light propagates in a transparent medium, some of its optical power maybe lost due to absorption or scattering.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter P",
+      "item": "https://www.rp-photonics.com/encyclopedia_p.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "propagation losses",
+      "item": "https://www.rp-photonics.com/propagation_losses.html"
+    }]}
+}
+</script>
+</body>
+</html>

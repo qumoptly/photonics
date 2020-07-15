@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-GjNbOrktk/qNJTT6tXfqmQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - mode radius, diameter, spot size, Gaussian beam, waveguide, single-mode fiber</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/mode_radius.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-06-25">
+<meta name="description" content="The mode radius is a measure of the transverse extent of a laser mode or laser beam. It is common to use a definition based on the second moment of the intensity profile.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="mode radius, diameter, spot size, Gaussian beam, waveguide, single-mode fiber">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mode Radius">
+<meta property="og:description" content="The mode radius is a measure of the transverse extent of a laser mode or laser beam. It is common to use a definition based on the second moment of the intensity profile.">
+<meta property="og:url" content="https://www.rp-photonics.com/mode_radius.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/mode_radius.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="The mode radius is a measure of the transverse extent of a laser mode or laser beam. It is common to use a definition based on the second moment of the intensity profile.">
+<meta name="twitter:title" content="Mode Radius">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/mode_radius.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="GjNbOrktk/qNJTT6tXfqmQ==">
+page="mode_radius.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="GjNbOrktk/qNJTT6tXfqmQ==">shownsponsors="EKSMA OPTICS"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_m.html">letter M</a> &gt; <a href="mode_radius.html">mode radius</a></p>
+<h1>Mode Radius</h1>
+<header style="margin-right:0;">
+<p>Acronym: MFD = mode field diameter = twice the mode radius</p>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a measure of the transverse extent of a laser mode or laser beam</p>
+<p>Alternative term: mode field radius</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Modenradius</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#fiber_optics_and_waveguides" title="other articles on fiber optics and waveguides">fiber optics and waveguides</a></p>
+<p>Units: m</p>
+<p><a href="encyclopedia_cite.html?article=mode%20radius">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>The transverse extent of the <a href="optical_intensity.html" title="optical power per unit area">optical intensity</a> distribution of a <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">mode</a> (e.g. of an optical <a href="cavities.html" title="resonators for light (or for microwaves)">cavity</a> or a <a href="waveguides.html" title="spatially inhomogeneous transparent structures for guiding light">waveguide</a>) is usually specified as a <em>mode radius</em> (or <em>mode field radius</em>).
+It is mostly of interest in the context of <a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode fibers</a>, or for the fundamental mode of <a href="multimode_fibers.html" title="fibers supporting more than one guided mode per polarization direction">multimode fibers</a> (mostly <a href="few_mode_fibers.html" title="fibers supporting only few guided modes">few-mode fibers</a>).
+It can be defined in different ways, as described in the following section.</p>
+<p>The <em>mode diameter</em> (or <em>mode field diameter</em>, MFD) is simply twice the mode radius.</p>
+<p>It is not recommended to use the common terms <em>mode size</em> or <em>spot size</em> in a quantitative sense, because it is then not clear whether the radius or the diameter is meant.</p>
+<h2 class="togglediv">Near-Field Based Definitions</h2>
+<div>
+<p>Traditionally, the mode field radius (or diameter) was defined as for <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beams</a>, where the <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a> is the radius where the intensity has dropped to 1/e<sup>2</sup> of the intensity on the beam axis.
+This is a suitable definition as long as the mode intensity profile has a close to Gaussian shape.
+For better accuracy, one can then use a Gaussian fit and take its radius as the result, rather than directly applying the 1/e<sup>2</sup> criterion to the mode intensity profile.</p>
+<p>For modes with clearly non-Gaussian profiles, as occur for some fibers (e.g., many <a href="dispersion_shifted_fibers.html" title="fibers with a non-standard zero dispersion wavelength">dispersion-shifted fibers</a>), such methods are not suitable.
+A more accurate way of obtaining the near-field beam radius is then to apply the D4&sigma; method (ISO Standard 11146) to the measured near-field beam profile.
+This technique is explained in the article on <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a>.
+It requires a high dynamic range and can profit from special smoothing techniques.</p>
+<p>In any case, near-field measurement methods are used.
+For example, one may image the <a href="near_field_and_far_field.html" title="the optical field either close to a source or object or far from it">near field</a> (i.e., the field distribution at a fiber end) onto a somewhat larger spot and scan that spot with a small <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a>.</p>
+</div>
+<h2 class="togglediv">Far-Field Based Definitions</h2>
+<div>
+<p>It is quite common to measure the <a href="near_field_and_far_field.html" title="the optical field either close to a source or object or far from it">far field</a> profile, i.e., the beam profile outside the fiber in a distance which is much larger than the <a href="rayleigh_length.html" title="the distance from a beam waist where the mode radius increased by a factor square root of 2">Rayleigh length</a>.
+This can be done e.g. with a <a href="cameras.html" title="optical instruments for recording still or moving images">camera</a> mounted in some distance to the fiber end, or by scanning the far field with a small <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a>.</p>
+<p>One can then calculate a near field mode radius (or diameter) from the measured angular width in the far field.
+The nowadays most common method is using the &ldquo;Petermann II mode field diameter definition&rdquo; [2,&thinsp;3], assuming a radially symmetric fiber mode:</p>
+<div class="eqn"><img src="eqn/mfd_petermann.gif" width="230" height="104" alt="Petermann II mode field diameter definition"></div>
+<p>(There is also a Petermann I definition, which applies directly to the near field and agrees with the common D4&sigma; definition of the <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a>.)</p>
+<p>For fibers with close to Gaussian mode profiles, the near-field and far-field mode field diameters agree quite well, whereas in other cases the far-field values can be significantly smaller.
+Both values are relevant for coupling losses at <a href="fiber_joints.html" title="permanent or removable connections between fiber ends">fiber joints</a>: the far-field mode radius is relevant for losses related to a transverse core offset, whereas the near-field mode radius is relevant concerning angular misalignment.</p>
+</div>
+<h2 class="togglediv">Indirect Measurement Techniques</h2>
+<div>
+<p>There are also various indirect techniques for measuring the mode field diameter (or radius).
+For example, the <em>transverse offset technique</em> is based on measuring coupling losses between two pieces of single-mode fiber as a function of a transverse core offset.
+These are related to the far-field beam radius.
+Other techniques are based on variable <a href="optical_apertures.html" title="structures which limit the propagation of light">aperture</a>.</p>
+</div>
+<h2 class="togglediv">Marcuse Formula for the Mode Radius of a Step-index Single-mode Fiber</h2>
+<div>
+<p>For <a href="step_index_fibers.html" title="optical fibers with a step-index refractive index profile">step-index</a> <a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode fibers</a>, the mode radius may be estimated from the <a href="fiber_core.html" title="the region in an optical fiber which guides light">core</a> radius <span class="eqn_il"><i>a</i></span> and the <a href="v_number.html" title="a normalized frequency parameter, which determines the number of modes of a step-index fiber"><i>V</i> number</a>, using Marcuse's equation [1]:</p>
+<div class="eqn"><img src="eqn/fiber_mode_radius.gif" width="182" height="41" alt="mode radius of single-mode fiber"></div>
+<p>This shows that the mode radius becomes smaller for higher frequencies, which have higher <span class="eqn_il"><i>V</i></span> values.
+The equation is fairly accurate for <span class="eqn_il"><i>V</i></span> values above 1.
+In the <a href="multimode_fibers.html" title="fibers supporting more than one guided mode per polarization direction">multimode</a> range (<span class="eqn_il"><i>V&thinsp;&gt;</i>&thinsp;2.405</span>), it applies to the fundamental mode.</p>
+<form id="calculate_mode_radius" class="calculatorform">
+<h2>Calculator for the Mode Radius of a Step-index Fiber</h2>
+<table>
+<tr>
+<td>Core radius:</td><td></td><td></td>
+<td><input name="a" value="" class="cf_calculate_mode_radius"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>V number:</td><td></td><td></td>
+<td><input name="V" value="" class="cf_calculate_mode_radius"></td>
+<td></td><td>(should be > 1)</td>
+</tr>
+<tr>
+<td>Mode radius:</td><td></td><td></td>
+<td><input name="w" value="" class="cf_calculate_mode_radius"></td>
+<td><span class="calcbutton" id="calc_w">calc</span></td><td></td>
+</tr>
+<tr>
+<td>Effective mode area:</td><td></td><td></td>
+<td><input name="A_eff" value="" class="cf_calculate_mode_radius"></td>
+<td><span class="calcbutton" id="calc_A_eff">calc</span></td><td></td>
+</tr>
+</table>
+<p class="comment">Enter input values with units, where appropriate. After you have modified some values, click a "calc" button to recalculate the field left of it.</p>
+<noscript>
+<p style="color:red">Attention: The buttons do not work, as Javascript is turned off in your browser!</p>
+</noscript>
+</form>
+<script type="text/javascript" src="calcform.js"></script>
+<script type="text/javascript" nonce="GjNbOrktk/qNJTT6tXfqmQ==">
+funits = new Array();
+funits["a"] = "m";
+funits["V"] = "";
+funits["w"] = "m";
+function calc_w() {
+  $("input[name=w]").val("???");
+  GetFieldValues("w","calculate_mode_radius");
+  w = a*(0.65+1.619/(V*Math.sqrt(V))+2.879/Math.pow(V,6));
+  $("input[name=w]").val(format_u(w, "m"));
+ }
+funits["A_eff"] = "&µm^2";
+function calc_A_eff() {
+  $("input[name=A_eff]").val("???");
+  GetFieldValues("A_eff","calculate_mode_radius");
+  A_eff = pi*Math.pow(a*(0.65+1.619/(V*Math.sqrt(V))+2.879/Math.pow(V,6)),2)/1e-12;
+  $("input[name=A_eff]").val(format_u(A_eff, "&µm^2"));
+ }
+$("input[name=a]").val("5 µm");
+$("input[name=V]").val("1.8");
+calc_w();
+calc_A_eff();
+$(document).ready(function() {
+  $("span#calc_w").click(function() { calc_w() })
+  $("span#calc_A_eff").click(function() { calc_A_eff() })
+});
+</script>
+<p>There is also a modified formula for approximating the Petermann II mode field radius [4]:</p>
+<div class="eqn"><img src="eqn/fiber_mode_radius_p.gif" width="328" height="41" alt="Petermann mode radius of single-mode fiber"></div>
+<p>This is accurate within 1&#37; for <span class="eqn_il"><i>V</i></span> between 1.5, and 2.5, the range of highest practical interest.</p>
+<figure>
+<img src="img/marcuse_formula.png" alt="mode field radius from Marcuse formula">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Mode radius relative to the core size according to the Marcuse formula and the modified version for approximating the Petermann II mode field radius.
+</figcaption>
+</figure>
+</div>
+<h2 class="togglediv">Relation of Mode Field Radius and Effective Mode Area</h2>
+<div>
+<p>It appears natural to relate the mode field radius to the mode area according to</p>
+<div class="eqn"><img src="eqn/mode_area_from_w.gif" width="74" height="26" alt="formula for mode area from mode radius"></div>
+<p>and to call this the <em>mode field area</em> (MFA).</p>
+<p>However, the <a href="effective_mode_area.html" title="a quantitative measure of the area which a waveguide or fiber mode effectively covers in the transverse dimensions">effective mode area</a> is actually defined differently:</p>
+<div class="eqn"><img src="eqn/mode_area.gif" width="201" height="69" alt="effective mode area"></div>
+<p>Depending on the mode shape, the values from the two definitions can deviate substantially from each other.
+For calculating the effective mode area from the mode field diameter, one can thus apply a correction factor, which depends on the wavelength [6].</p>
+<p>For judging the strength of fiber <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a>, the latter definition (<a href="effective_mode_area.html" title="a quantitative measure of the area which a waveguide or fiber mode effectively covers in the transverse dimensions">effective mode area</a>) is clearly more appropriate.</p>
+</div>
+<h2 class="togglediv">Relevance of the Mode Field Diameter</h2>
+<div>
+<p>The mode field diameter (or radius) is relevant e.g. at <a href="fiber_joints.html" title="permanent or removable connections between fiber ends">fiber joints</a>, where a mismatch of mode sizes and angular deviations can lead to substantial coupling losses.
+Note, however, that efficient coupling requires not only matching the mode field diameters, but of the complete mode profiles.</p>
+<p>As mentioned above, the strength of fiber <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a> is determined by the <a href="effective_mode_area.html" title="a quantitative measure of the area which a waveguide or fiber mode effectively covers in the transverse dimensions">effective mode area</a>, which is not directly related to the mode field diameter according to the usual definitions.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="mode_radius.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">D. Marcuse, &ldquo;Loss analysis of single-mode fiber splices&rdquo;, Bell Syst. Tech. J. 56, 703 (1977), <a href="https://doi.org/10.1002/j.1538-7305.1977.tb00534.x">doi:10.1002/j.1538-7305.1977.tb00534.x</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">K. Petermann, &ldquo;Constraints for fundamental mode spot size for broadband dispersion-compensated single-mode fibers&rdquo;, Electron. Lett. 19, 712 (1983), <a href="https://doi.org/10.1049/el:19830485">doi:10.1049/el:19830485</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">C. Pask, &ldquo;Physical interpretation of Petermann's strange spot size for single-mode fibres&rdquo;, Electron. Lett. 20 (3), 144 (1984), <a href="https://doi.org/10.1049/el:19840097">doi:10.1049/el:19840097</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">C. D. Hussey and F. Martinez, &ldquo;Approximate analytical forms for the propagation characteristics of single-mode optical fibres&rdquo;, Electron. Lett. 21 (23), 1103 (1985), <a href="https://doi.org/10.1049/el:19850783">doi:10.1049/el:19850783</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">M. Artiglia <i>et al.</i>, &ldquo;Mode field diameter measurements in single-mode optical fibers&rdquo;, J. Lightwave Technol. 7 (8), 1139 (1989)</td></tr>
+<tr><td class="refno">[6]</td><td class="refs">Y. Namihira, &ldquo;Relationship between nonlinear effective area and modefield diameter for dispersion shifted fibres&rdquo;, Electron. Lett. 30 (3), 262 (1994), <a href="https://doi.org/10.1049/el:19940149">doi:10.1049/el:19940149</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a>, <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beams</a>, <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a>, <a href="effective_mode_area.html" title="a quantitative measure of the area which a waveguide or fiber mode effectively covers in the transverse dimensions">effective mode area</a>, <a href="fiber_joints.html" title="permanent or removable connections between fiber ends">fiber joints</a>, <a href="mode_field_converters.html" title="optical devices which allow for efficient coupling between modes of different sizes">mode field converters</a>, <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>, <a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode fibers</a>, <a href="dispersion_shifted_fibers.html" title="fibers with a non-standard zero dispersion wavelength">dispersion-shifted fibers</a>, <a href="spotlight_2014_07_28.html">The Photonics Spotlight 2014-07-28</a><br>and other articles in the category <a href="categories.html#fiber_optics_and_waveguides" title="other articles on fiber optics and waveguides">fiber optics and waveguides</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/mode_radius.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fmode_radius.html&text=RP+Photonics+Encyclopedia+-+mode+radius%2C+diameter%2C+spot+size%2C+Gaussian+beam%2C+waveguide%2C+single-mode+fiber" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fmode_radius.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fmode_radius.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/mode_radius.html"&gt;<br>Article on Mode Radius&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/mode_radius.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/mode_radius.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/mode_radius.html<br>article on 'Mode Radius' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="./fiberpower_sc.html?banner=RP_Fiber_Power_2"><img src="./img/fiberpower_sc5b.png" alt="supercontinuum generation" style="margin-bottom:8px"></a>
+<p>Evolution of the spectrum of an ultrashort pulse in a fiber.
+The spectrum becomes very wide at the right end; this is called supercontinuum generation.</p>
+<p>This diagram has been made with the <a href="./fiberpower.html?banner=RP_Fiber_Power_2"><b>RP Fiber Power</b></a> software.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="GjNbOrktk/qNJTT6tXfqmQ==">shownbanner = "RP Fiber Power 2";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Numerical Modeling</h2>
+<p>Developing devices or systems in photonics requires a <b>comprehensive quantitative understanding</b> &ndash; otherwise, it becomes inefficient, waisting time and money.</p>
+<p><a href="./laser_modeling.html?banner=numerical_modeling">Numerical modeling</a> is often the most efficient way towards results:</p>
+<ul>
+<li>understand <em>quantitatively</em> what is going on</li>
+<li>check the influence of design changes or possible detrimental effects</li>
+<li>understand strange experimental observations</li>
+<li>find optimized designs more reliably and faster</li>
+</ul>
+<p style="text-align:center; margin:10px 0;"><a href="./laser_modeling.html?banner=numerical_modeling"><img src="./img/modeling.png" width="234" height="91" alt="laser modeling"></a></p>
+<h3>How to Get Your Modeling Done?</h3>
+<p>We offer both <a href="./consulting.html?banner=numerical_modeling">technical consultancy</a> and powerful <a href="./software.html?banner=numerical_modeling">simulation software</a>.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="GjNbOrktk/qNJTT6tXfqmQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/mode_radius.html"
+    },
+    "headline": "Mode Radius",
+    "image": "https://www.rp-photonics.com/previews/mode_radius.png",
+    "datePublished": "2007-02-17",
+    "dateModified": "2020-06-25",
+    "description": "The mode radius is a measure of the transverse extent of a laser mode or laser beam. It is common to use a definition based on the second moment of the intensity profile.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter M",
+      "item": "https://www.rp-photonics.com/encyclopedia_m.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "mode radius",
+      "item": "https://www.rp-photonics.com/mode_radius.html"
+    }]}
+}
+</script>
+</body>
+</html>

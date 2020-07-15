@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-N2d53OP2ADiE1jzcfTDFYA=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Q factor, quality factor, cavity, resonator, oscillator, frequency standards</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/q_factor.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-06-25">
+<meta name="description" content="The Q factor is a measure of the damping of resonator modes. Using super mirrors, for example, optical resonators with extremely high Q factor can be made.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="Q factor, quality factor, cavity, resonator, oscillator, frequency standards">
+<meta property="og:type" content="article">
+<meta property="og:title" content="<i>Q</i> Factor">
+<meta property="og:description" content="The Q factor is a measure of the damping of resonator modes. Using super mirrors, for example, optical resonators with extremely high Q factor can be made.">
+<meta property="og:url" content="https://www.rp-photonics.com/q_factor.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/q_factor.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="The Q factor is a measure of the damping of resonator modes. Using super mirrors, for example, optical resonators with extremely high Q factor can be made.">
+<meta name="twitter:title" content="<i>Q</i> Factor">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/q_factor.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="N2d53OP2ADiE1jzcfTDFYA==">
+page="q_factor.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> <a href="./sponsors/nkt_photonics.html"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="N2d53OP2ADiE1jzcfTDFYA==">shownsponsors="EKSMA OPTICS,NKT Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_q.html">letter Q</a> &gt; <a href="q_factor.html"><i>Q</i> factor</a></p>
+<h1><i>Q</i> Factor</h1>
+<header style="margin-right:0;">
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a measure of the damping of resonator modes</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Gütefaktor</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#optical_resonators" title="other articles on optical resonators">optical resonators</a></p>
+<p>Formula symbol: <span class="eqn_il"><i>Q</i></span></p>
+<p>Units: (dimensionless number)</p>
+<p><a href="encyclopedia_cite.html?article=Q%20factor">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>The <em>Q factor</em> (quality factor) of a resonator is a measure of the strength of the damping of its oscillations, or for the relative linewidth.
+The term was originally developed for electronic circuits, e.g. LC circuits, and for microwave <a href="cavities.html" title="resonators for light (or for microwaves)">cavities</a>, but later also became common in the context of <a href="optical_resonators.html" title="arrangements of optical components which allow a beam of light to circulate">optical resonators</a>.</p>
+<p>There are actually two different common definitions of the <span class="eqn_il"><i>Q</i></span> factor of a resonator:</p>
+<ul>
+<li>Definition via energy storage: the <span class="eqn_il"><i>Q</i></span> factor is 2<span class="eqn_il"><span class="greek">&pi;</span></span> times the ratio of the stored energy to the energy dissipated per oscillation cycle, or equivalently the ratio of the stored energy to the energy dissipated per radian of the oscillation.
+For a microwave or <a href="optical_resonators.html" title="arrangements of optical components which allow a beam of light to circulate">optical resonator</a>, one oscillation cycle is understood as corresponding to the field oscillation period, not the round-trip period.</li>
+<li>Definition via resonance bandwidth: the <span class="eqn_il"><i>Q</i></span> factor is the ratio of the resonance frequency <span class="eqn_il"><span class="greek">&nu;</span><sub>0</sub></span> and the full width at half-maximum (FWHM) <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a> <span class="eqn_il"><span class="greek">&delta;</span><span class="greek">&nu;</span></span> of the resonance:</li>
+</ul>
+<div class="eqn"><img src="eqn/q_factor_via_bw.gif" width="53" height="42" alt="Q factor definition via bandwidth"></div>
+<p>Both definitions are equivalent only in the limit of weakly damped oscillations, i.e. for high <span class="eqn_il"><i>Q</i></span> values.
+The term is mostly used in that regime.</p>
+<h2 class="togglediv"><i>Q</i> Factor of an Oscillator</h2>
+<div>
+<p>The term <em>Q factor</em> is sometimes also applied to continuously operating <em>oscillators</em>, such as active <a href="optical_frequency_standards.html" title="frequency standards using optical transitions in atoms, ions or molecules">optical frequency standards</a>.
+In that case, only the definition via the bandwidth can be used; the bandwidth is then the <a href="linewidth.html" title="width of the spectrum of a light beam or an absorption feature">linewidth</a> of the output signal.</p>
+<p>If the oscillator is based on some resonator (which is virtually always the case), the effective <span class="eqn_il"><i>Q</i></span> factor of the oscillator may deviate substantially from the intrinsic <span class="eqn_il"><i>Q</i></span> value of the resonator.
+Particularly measurements on atomic transitions (such as in a cesium atomic clock) have a limited measurement time, so that the effective linewidth of the reference transition is increased.
+(This problem can be severe for cesium clocks; cesium fountain clocks represent a significant advance towards longer measurement times.)
+On the other hand, a carefully stabilized oscillator can have a linewidth which is a tiny fraction of the linewidth of the underlying frequency standard; for cesium atom clocks, the quartz oscillator is often stabilized e.g. to a millionth of the linewidth of the signal from the cesium beam apparatus.
+Effectively, the good short-term stability of the quartz oscillator is combined with the high accuracy and low long-term drift of the cesium apparatus.</p>
+</div>
+<h2 class="togglediv"><i>Q</i> Factor of an Optical Resonator</h2>
+<div>
+<p>The <span class="eqn_il"><i>Q</i></span> factor of a resonator depends on the <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequency</a> <span class="eqn_il"><span class="greek">&nu;</span><sub>0</sub></span>, the fractional power loss <span class="eqn_il"><i>l</i></span> per round trip, and the round-trip time <span class="eqn_il"><i>T</i><sub>rt</sub></span>:</p>
+<div class="eqn"><img src="eqn/q_factor.gif" width="86" height="41" alt="Q factor"></div>
+<p>(assuming that <span class="eqn_il"><i>l&thinsp;&Lt;</i>&thinsp;1</span>).</p>
+<form id="calculate_Q_factor" class="calculatorform">
+<h2>Calculator for the Q Factor of a Resonator</h2>
+<table>
+<tr>
+<td>Wavelength:</td><td></td><td></td>
+<td><input name="lambda" value="" class="cf_calculate_Q_factor"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Round-trip time:</td><td></td><td></td>
+<td><input name="T_rt" value="" class="cf_calculate_Q_factor"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Round-trip loss:</td><td></td><td></td>
+<td><input name="loss" value="" class="cf_calculate_Q_factor"></td>
+<td></td><td>(has to be &Lt; 100 %)</td>
+</tr>
+<tr>
+<td>Q factor:</td><td></td><td></td>
+<td><input name="Q" value="" class="cf_calculate_Q_factor"></td>
+<td><span class="calcbutton" id="calc_Q">calc</span></td><td></td>
+</tr>
+</table>
+<p class="comment">Enter input values with units, where appropriate. After you have modified some inputs, click the "calc" button to recalculate the output.</p>
+<noscript>
+<p style="color:red">Attention: The buttons do not work, as Javascript is turned off in your browser!</p>
+</noscript>
+</form>
+<script type="text/javascript" src="calcform.js"></script>
+<script type="text/javascript" nonce="N2d53OP2ADiE1jzcfTDFYA==">
+funits = new Array();
+funits["lambda"] = "m";
+funits["T_rt"] = "s";
+funits["loss"] = "&%";
+funits["Q"] = "";
+function calc_Q() {
+  $("input[name=Q]").val("???");
+  GetFieldValues("Q","calculate_Q_factor");
+  Q = (2.9979e8/lambda)*T_rt*2*pi/(loss/100);
+  $("input[name=Q]").val(format_u(Q, ""));
+ }
+$("input[name=lambda]").val("1000 nm");
+$("input[name=T_rt]").val("1 ns");
+$("input[name=loss]").val("5 %");
+calc_Q();
+$(document).ready(function() {
+  $("span#calc_Q").click(function() { calc_Q() })
+});
+</script>
+<p>For a resonator consisting of two mirrors with air (or vacuum) in between, the <span class="eqn_il"><i>Q</i></span> factor rises as the resonator length is increased, because this decreases the energy loss per optical cycle.
+However, extremely high <span class="eqn_il"><i>Q</i></span> values (see below) are often achieved not by using very long resonators, but rather by strongly reducing the losses per round trip.
+For example, very high <span class="eqn_il"><i>Q</i></span> values are achieved with whispering gallery modes of tiny transparent spheres (see below).</p>
+</div>
+<h2 class="togglediv">Important Relations</h2>
+<div>
+<p>The <span class="eqn_il"><i>Q</i></span> factor of a resonator is related to various other quantities:</p>
+<ul>
+<li>The <span class="eqn_il"><i>Q</i></span> factor equals 2<span class="eqn_il"><span class="greek">&pi;</span></span> times the exponential decay time of the stored energy times the optical frequency.</li>
+<li>The <span class="eqn_il"><i>Q</i></span> factor equals 2<span class="eqn_il"><span class="greek">&pi;</span></span> times the number of oscillation periods required for the stored energy to decay to 1/e (&asymp;&thinsp;37&#37;) of its initial value.</li>
+<li>The <span class="eqn_il"><i>Q</i></span> factor of an <a href="optical_resonators.html" title="arrangements of optical components which allow a beam of light to circulate">optical resonator</a> equals the <a href="finesse.html" title="the free spectral range divided by the FWHM width of the resonances of an optical resonator">finesse</a> times the optical frequency divided by the <a href="free_spectral_range.html" title="frequency spacing of the axial modes of an optical resonator">free spectral range</a>.</li>
+</ul>
+</div>
+<h2 class="togglediv">High-<i>Q</i> Resonators</h2>
+<div>
+<p>One possibility for achieving very high <span class="eqn_il"><i>Q</i></span> values is to use <a href="supermirrors.html" title="laser mirrors with a very high reflectivity">supermirrors</a> with extremely low losses, suitable for ultra-high <span class="eqn_il"><i>Q</i></span> factors of the order of 10<sup>11</sup>.
+Also, there are toroidal silica microcavities with dimensions of the order of 100&nbsp;&mu;m and <span class="eqn_il"><i>Q</i></span> factors well above 10<sup>8</sup>, and silica microspheres with whispering gallery <a href="resonator_modes.html" title="modes of an optical or microwave resonator">resonator modes</a> exhibiting <span class="eqn_il"><i>Q</i></span> factors around 10<sup>10</sup>.</p>
+<p>High-<span class="eqn_il"><i>Q</i></span> optical resonators have various applications in fundamental research (e.g. in <a href="quantum_optics.html" title="the part of optics which deals with quantum effects">quantum optics</a>) and also in <a href="optical_data_transmission.html" title="the transmission of information using light beams, e.g. in fibers">telecommunications</a> (e.g. as <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical filters</a> for separating <a href="wavelength_division_multiplexing.html" title="a multiplexing technique working in the wavelength domain">WDM channels</a>).
+Also, high-<span class="eqn_il"><i>Q</i></span> <a href="reference_cavities.html" title="optical cavities serving as a kind of frequency reference">reference cavities</a> are used in <a href="frequency_metrology.html" title="the field of technology dealing with precise frequency measurements">frequency metrology</a>, e.g. for <a href="optical_frequency_standards.html" title="frequency standards using optical transitions in atoms, ions or molecules">optical frequency standards</a>.
+The <span class="eqn_il"><i>Q</i></span> factor then influences the precision with which the optical frequency of a <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a> can be <a href="stabilization_of_lasers.html" title="measures applied to lasers in order to improve their stability in terms of output power, optical frequency, or other quantities">stabilized</a> to a cavity resonance.</p>
+</div>
+<h2 class="togglediv">The <i>Q</i> Factor in Laser Physics</h2>
+<div>
+<p>When the <span class="eqn_il"><i>Q</i></span> factor of a <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a> is abruptly increased, an intense laser <a href="pulses.html" title="flashes of light">pulse</a> (<em>giant pulse</em>) can generated.
+This method is called <a href="q_switching.html" title="a method for obtaining energetic pulses from lasers by modulating the intracavity losses"><em>Q switching</em></a>.</p>
+<p>High-<span class="eqn_il"><i>Q</i></span> laser resonators can be used for obtaining laser output with a very narrow <a href="linewidth.html" title="width of the spectrum of a light beam or an absorption feature">linewidth</a>.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="q_factor.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="optical_resonators.html" title="arrangements of optical components which allow a beam of light to circulate">optical resonators</a>, <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>, <a href="finesse.html" title="the free spectral range divided by the FWHM width of the resonances of an optical resonator">finesse</a>, <a href="free_spectral_range.html" title="frequency spacing of the axial modes of an optical resonator">free spectral range</a>, <a href="q_switching.html" title="a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q switching</a>, <a href="reference_cavities.html" title="optical cavities serving as a kind of frequency reference">reference cavities</a>, <a href="optical_frequency_standards.html" title="frequency standards using optical transitions in atoms, ions or molecules">optical frequency standards</a><br>and other articles in the category <a href="categories.html#optical_resonators" title="other articles on optical resonators">optical resonators</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/q_factor.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fq_factor.html&text=RP+Photonics+Encyclopedia+-+Q+factor%2C+quality+factor%2C+cavity%2C+resonator%2C+oscillator%2C+frequency+standards" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fq_factor.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fq_factor.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/q_factor.html"&gt;<br>Article on &lt;i&gt;Q&lt;/i&gt; Factor&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/q_factor.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/q_factor.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/q_factor.html<br>article on '&lt;i&gt;Q&lt;/i&gt; Factor' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Special Discount for the Ad Package in the RP Photonics Buyer&#39;s Guide</h2>
+<p>Because of the challenges which the coronavirus crisis currently creates for many companies, we offer a <b>special discount for advertisers</b>:</p>
+<ul>
+<li>For new customers ordering our <a href="./bg_entries.html?banner=Corona_crisis_discount">ad package</a>: 25% discount on up to 6 months of the ad package.</li>
+<li>For existing ad package customers: For the next prolongation of the ad package, we will deduct 25% of the cost for 6 months &ndash; even if the crisis will be over by then.</li>
+</ul>
+<p>Let us continue to work together cooperatively in order to get through this crisis.</p>
+<p>See also our article:<br> <a href="./spotlight_2020_04_01.html?banner=Corona_crisis_discount" style="font-size:135%">Photonics Marketing in Times of the Corona&shy;virus Crisis</a></p>
+</div>
+</aside>
+<script type="text/javascript" nonce="N2d53OP2ADiE1jzcfTDFYA==">shownbanner = "Corona crisis discount";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>A Quiz Question</h2>
+<p style="margin-top:15px">taken from the <a href="./quiz.html?banner=quiz">Photonics Quiz</a>:</p><form action="/quiz.html" method="get" style="margin-bottom:12px;">
+<p><input name="n" value="5" type="hidden"></p>
+<p style="text-align:left;">Does a saturable absorber as used for passive Q switching of a laser necessarily lead to a substantially reduced power efficiency?</p>
+<p style="margin-left:50px; text-indent:-50px; text-align:left;"><input type="checkbox" name="answer_a" value="y"> (a) No, it doesn't. If its saturation energy is very low, not much energy is required to saturate the absorber.</p>
+<p style="margin-left:50px; text-indent:-50px; text-align:left;"><input type="checkbox" name="answer_b" value="y"> (b) No, it doesn't, if one photon can saturate several absorber ions.</p>
+<p style="margin-left:50px; text-indent:-50px; text-align:left;"><input type="checkbox" name="answer_c" value="y"> (c) Yes, the principle of using saturable absorption unavoidably degrades the efficiency, since the absorption must be similarly strong as the initial laser gain.</p>
+<p style="margin-top:15px;"><input type="submit" value="Get your answer checked" style="padding:3px 10px; font-size:14px;"></p>
+</form>
+<p>After selecting your answer(s) and pressing this button, find the explanations on the left side.</p>
+
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="N2d53OP2ADiE1jzcfTDFYA==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/q_factor.html"
+    },
+    "headline": "<i>Q</i> Factor",
+    "image": "https://www.rp-photonics.com/previews/q_factor.png",
+    "datePublished": "2005-09-23",
+    "dateModified": "2020-06-25",
+    "description": "The Q factor is a measure of the damping of resonator modes. Using super mirrors, for example, optical resonators with extremely high Q factor can be made.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter Q",
+      "item": "https://www.rp-photonics.com/encyclopedia_q.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "<i>Q</i> factor",
+      "item": "https://www.rp-photonics.com/q_factor.html"
+    }]}
+}
+</script>
+</body>
+</html>

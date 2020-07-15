@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-UkuD1D2d+CIhvoxZl01Nuw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - position-sensitive detectors, dual-segment, quadrant photodiodes, CCD, CMOS, lateral effect photodiodes</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/position_sensitive_detectors.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Some photodetectors can be used for measuring the position of light spots in one or two dimensions. They can be segmented photodiodes or photodiodes arrays, for example, but there are also analog devices based on other principles.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="position-sensitive detectors, dual-segment, quadrant photodiodes, CCD, CMOS, lateral effect photodiodes">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Position-sensitive Detectors">
+<meta property="og:description" content="Some photodetectors can be used for measuring the position of light spots in one or two dimensions. They can be segmented photodiodes or photodiodes arrays, for example, but there are also analog devices based on other principles.">
+<meta property="og:url" content="https://www.rp-photonics.com/position_sensitive_detectors.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/position_sensitive_detectors.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Some photodetectors can be used for measuring the position of light spots in one or two dimensions. They can be segmented photodiodes or photodiodes arrays, for example, but there are also analog devices based on other principles.">
+<meta name="twitter:title" content="Position-sensitive Detectors">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/position_sensitive_detectors.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="UkuD1D2d+CIhvoxZl01Nuw==">
+page="position_sensitive_detectors.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="UkuD1D2d+CIhvoxZl01Nuw==">shownsponsors="Knight Optical"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_position_sensitive_detectors.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_p.html">letter P</a> &gt; <a href="position_sensitive_detectors.html">position-sensitive detectors</a></p>
+<h1>Position-sensitive Detectors</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_position_sensitive_detectors.html?s=vbox">12 suppliers for position-sensitive detectors</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.gentec-eo.com/laser-beam-pointing-stability-measurement-system" data-supplier="Gentec Electro-Optics" data-location="product-enc" data-keyword="position-sensitive detectors" rel="nofollow" class="bg externallink"><img src="./bg/logos/gentec_electro_optics.png" alt="Gentec Electro-Optics" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_position_sensitive_detectors.html?s=vbox">List of suppliers for<br>position-sensitive detectors</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p>Acronym: PSD = position-sensitive diode (or detector or device)</p>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: photodetectors which can detect the position of a light spot in one or two dimensions</p>
+<p>Alternative terms: position detectors, position sensing detectors</p>
+<p>More general term: <a href="photodetectors.html" title="devices used for the detection of light">photodetectors</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">positionsempfindliche Detektoren</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a>, <a href="categories.html#optoelectronics" title="other articles on optoelectronics">optoelectronics</a>, <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a></p>
+<p><a href="encyclopedia_cite.html?article=position-sensitive%20detectors">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Position-sensitive detectors are <a href="photodetectors.html" title="devices used for the detection of light">photodetectors</a> with which one can measure the position of a light spot in one or two dimensions, normally with a relatively high speed.
+The mentioned light spot is usually caused by a <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a> hitting the detector.
+One can then accurately measure small reflections of such a beam, for example.
+Such detectors can be used to monitor beam alignment (<em>laser spot trackers</em>) and (within a feedback system) to stabilize the position of a laser beam (<em>auto aligners</em>).
+Another application is to measure <a href="distance_measurements_with_lasers.html" title="measurements of distances using laser light">distances</a> by <a href="triangulation.html" title="a method for distance measurements">triangulation</a>.</p>
+<p>Position-sensitive detectors can be based on different operation principles, which are explained in the following.
+Such devices are available as separate <a href="optoelectronics.html" title="the technology of electronic devices that interact with light">optoelectronic</a> components (e.g. quadrant photodiodes), but also as complete devices with additional electronics, housing and mount, etc.
+Most devices are based on <a href="photodiodes.html" title="semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiodes</a> or <a href="photoconductive_detectors.html" title="photodetectors which exhibit a reduction in electrical resistance caused by incoming light">photoresistors</a>, but there are also position-sensitive <a href="photomultipliers.html" title="photodetection devices based on the photoelectric effect and charge multiplication by secondary emission of electrons">photomultipliers</a>.</p>
+<h2 class="togglediv">Segmented Photodetectors</h2>
+<div>
+<p>One measurement principle for position sensing is to use a kind of segmented photodetector, which can measure optical intensities for a few or even many different spatial positions (pixels).
+From those data, one can calculate the position of the light spot.</p>
+<h3 class="togglediv">Dual-segment and Quadrant Photodiodes</h3>
+<div>
+<figure class="right" style="width:161px;">
+<img src="img/dual_pd.png" alt="Dual-segment photodiode">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Dual-segment photodiode with a laser spot shown in blue. The light gray areas indicate the active segments.
+</figcaption>
+</figure>
+<p>In the simplest case, a <a href="photodiodes.html" title="semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiode</a> with two segments (a <em>dual-segment photodiode</em> or <em>dual-cell photodiode</em>) is used, with only a narrow gap between them (see Figure&nbsp;1).
+The <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a> of the incident beam is chosen such that at least for beam positions in the intermediate range both detectors obtain some optical power (see Figure&nbsp;2).
+From the relative signals related to the two segments, one can calculate the beam position.</p>
+<p>Note that for this kind of device one obtains a nonlinear dependence of the signal on the position; one may have to apply some linearization technique.
+In addition, the relative intensities depend not only on the beam position, but also on the beam radius.
+For those reasons, such segmented diodes are not ideally suited for quantitative position measurements.
+They are useful, however, for checking whether a beam is properly centered (<em>centring  indicators</em>), e.g. within a feedback system for automatic alignment.
+For example, such devices are used in devices for optical data storage (CD-ROM, DVD etc.).</p>
+<figure>
+<img src="img/dual_pd_signal.png" alt="signals from 1D PSD">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Output signals from a photodiode with two signals as functions of the beam position.
+</figcaption>
+</figure>
+<p>Similarly, one can use a <em>quadrant photodiode</em> with four detector segments (Figure&nbsp;3), with which one can monitor positions in two dimensions.</p>
+<figure class="right" style="width:161px;">
+<img src="img/quadrant_pd.png" alt="Quadrant photodiode">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Quadrant photodiode.
+</figcaption>
+</figure>
+<p>Segmented photodiodes are often based on silicon PIN technology, with sensitivity in the visible spectral range and up to roughly 1&nbsp;&mu;m, but they are also available with other semiconductors such as indium gallium arsenide (InGaAs) for detection at longer <a href="infrared_light.html" title="invisible light with wavelengths roughly between 750&thinsp;&thinsp;nm and 1&thinsp;&thinsp;mm">infrared</a> wavelengths.</p>
+<p>The uniformity of response between different detector segments is of course an important quality figure of such devices.</p>
+</div>
+<h3 class="togglediv">Photodiode Arrays</h3>
+<div>
+<p>There are <a href="photodiode_arrays.html" title="typically linear arrays of photodiodes, provided as compact devices">photodiode arrays</a> containing a larger number of photodiode segments either in a linear array for one-dimensional position sensing or on a two-dimensional grid.
+Such devices can contain hundreds or thousands of diodes.</p>
+<p>In principle, one could derive the spot position simply by taking the coordinates of the pixel (detector segment) receiving the highest optical power.
+The spatial resolution would then be identical to the pixel spacing.
+A much better resolution can be achieved by using data from several pixels, assuming that the light spot is large enough.
+For example, one may fit a calculated curve to the pixel data, calculating the position and the beam radius is fit parameters.</p>
+<p>A computationally simpler approach is to calculate the centroid via first moments of the intensity distribution, possibly after discarding pixels which have intensity values below a certain threshold value or are spatially too far away from the intensity maximum.</p>
+</div>
+<h3 class="togglediv">CCD and CMOS Sensors</h3>
+<div>
+<p>A much larger number of pixels is possible when using an architecture which does not require one wire connection for each detector pixel.
+Most common are image sensors of CCD and CMOS type.
+Using software executed on a microprocessor, one can apply an algorithm which minimizes the sensitivity of such detectors to background light, for example, so that reliable position sensing with very high resolution and accuracy is achieved.
+However, the cost of such sensors including all the required digital electronics is substantially higher than for simple analog detectors.</p>
+<p>See the article on <a href="image_sensors.html" title="optoelectronic sensors which can be used for imaging">image sensors</a> for more details.</p>
+</div>
+</div>
+<h2 class="togglediv">Lateral Effect Photodiodes</h2>
+<div>
+<figure class="right" style="width:284px;">
+<img src="img/lateral_effect_pd.png" alt="lateral effect photodiode">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Lateral effect photodiode.
+</figcaption>
+</figure>
+<p>A completely different approach for position sensing is based on <em>lateral effect photodiodes</em>.
+We first consider the simplest possible type, which is a one-dimensional sensor.
+The photodiode chip may have an ordinary cathode connection on one side, while the other side has a transparent resistive layer with anode connections on its extreme sides.
+The distribution of <a href="photocurrent.html" title="an electric current which is induced by incident light in a photodetector">photocurrents</a> to the two anode connections (retrieved with low-impedance amplifiers) depends on the beam position: the more the beam moves to one side, the more of the photocurrent is delivered to the corresponding anode.
+For a high accuracy, the light intensity should be sufficiently high for good signal strength, but not cause detector saturation.</p>
+<p>From the difference of photocurrents, divided by the sum of photocurrents, one obtains a signal which can have a reasonably linear dependence on the beam position.
+There is no substantial influence of the beam radius on that signal.
+However, the operation can of course be substantially disturbed by additional light spots which may be caused by parasitic reflections in optical elements, for example.</p>
+<p>In a p&ndash;n photodiode, the resistive layer can be a semiconductor layer with a relatively low doping concentration.</p>
+<aside class="callout blue">Implementation with CMOS technology is also possible.</aside>
+<p>Instead of the common p&ndash;n junction photodiode, one may use a metal&ndash;oxide&ndash;semiconductor (MOS) architecture with Schottky junctions, which can be well integrated into CMOS chips.
+Here, the resistive layer may be realized with indium tin oxide (ITO).</p>
+<p>Lateral effect photodiodes can also be made for sensing in two dimensions, e.g. with an active area of 10&nbsp;mm &times; 10&nbsp;mm.
+One possibility is to have anode connections at the four edges of a square-shaped active region (<em>tetra-lateral photodiode</em>).
+That simple approach typically leads to reduced linearity for beam positions which are substantially away from the center position.
+Improved linearity can be obtained with modified geometric shapes of the active region, e.g. a pincushion shape.
+Another possibility is to have resistive layers on both sides (<em>duo-lateral photodiode</em>); the cathode side may be used for sensing in <span class="eqn_il"><i>x</i></span> direction and the anode side for the <span class="eqn_il"><i>y</i></span> direction, for example.
+Tetra-lateral devices usually exhibit a higher speed than the duo-lateral ones.</p>
+<p>The analog signals from lateral effect photodiodes allow precision sensing with a reasonable accuracy and resolution while not requiring complicated drive electronics.
+The accuracy may be limited by detector noise and by systematic errors e.g. in the form of non-uniformities of resistance and nonlinearities.
+It may be a fraction of a millimeter for a 10&nbsp;mm wide device, for example, if a very high bandwidth (see below) is not required.</p>
+<aside class="callout blue">There is a trade-off between measurement bandwidth and spatial resolution.</aside>
+<p>The measurement <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a> of such detectors can be tens or hundreds of kilohertz, depending on the required resolution: a higher position resolution requires a better <a href="signal_to_noise_ratio.html" title="the ratio of signal power to noise power in a detector">signal-to-noise ratio</a>, which can be achieved only in conjunction with a lower measurement bandwidth.
+Generally, position-sensitive detectors are substantially slower than simple <a href="photodiodes.html" title="semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiodes</a> without spatial resolution.</p>
+<p>Some devices contain additional electronics, for example transimpedance amplifiers and additional circuits for obtaining the sum and difference of two photocurrents.
+One may then simply obtain two analog output signals for the <span class="eqn_il"><i>x</i></span> and <span class="eqn_il"><i>y</i></span> direction.</p>
+<p>Some lateral effect photodiodes are used with a different operation principle, involving precise measurements of the relative temporal positions of current spikes induced by short laser <a href="pulses.html" title="flashes of light">pulses</a>.</p>
+<p>Another possibility is to implement the basic principle of a lateral effect diode with a one- or two-dimensional <a href="photodiode_arrays.html" title="typically linear arrays of photodiodes, provided as compact devices">photodiode array</a>, where one uses rows of resistors to convert positions into currents.
+One may then obtain a position sensing device with high spatial resolution but relatively few electrical connections (far less than one per photodiode).</p>
+</div>
+<h2 class="togglediv">Position-sensitive Photomultipliers</h2>
+<div>
+<p>There are <a href="photomultipliers.html" title="photodetection devices based on the photoelectric effect and charge multiplication by secondary emission of electrons">photomultipliers</a> which are position-sensitive and utilize essentially the same basic principles as explained above.
+For example, there are multi-anode devices which provide the spatial information basically just as multi-segment photodiodes.
+Others work in a way similar to lateral effect photodiodes, where the relative difference of two photocurrents is taken as a measure for position in one dimension.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_position_sensitive_detectors.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 12 suppliers for position-sensitive detectors. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.gentec-eo.com/" data-supplier="Gentec Electro-Optics" data-location="product-enc" data-keyword="position-sensitive detectors" rel="nofollow" class="bg externallink" title="Visit the website of Gentec Electro-Optics"><img src="./bg/logos/gentec_electro_optics.png" alt="Gentec Electro-Optics" class="supplierlogo"></a><a href="https://www.gentec-eo.com/laser-beam-pointing-stability-measurement-system" data-supplier="Gentec Electro-Optics" data-location="product-enc" data-keyword="position-sensitive detectors" rel="nofollow" class="bg externallink" title="Visit the website of Gentec Electro-Optics"><img src="./bg/products/gentec_electro_optics/position_sensitive_detectors.jpg" alt="position-sensitive detectors" class="product"></a><h3><a href="./bg/profiles/gentec_electro_optics.html" title="See the profile of Gentec Electro-Optics">Gentec Electro-Optics</a></h3><p>Gentec Electro-Optics offers <a href="https://www.gentec-eo.com/laser-beam-pointing-stability-measurement-system" data-supplier="Gentec Electro-Optics" data-location="product-enc" data-keyword="position-sensitive detectors" rel="nofollow" class="externallink bg">measurement systems for laser beam pointing</a> based on large area pyroelectric quadrant detectors. The instruments respond to laser beams from the UV to the far IR and can be used even in the terahertz region. Versions for pulsed sources, CW and high repetition rate (quasi-CW) operation are available.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="position_sensitive_detectors.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="photodiodes.html" title="semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiodes</a>, <a href="photodiode_arrays.html" title="typically linear arrays of photodiodes, provided as compact devices">photodiode arrays</a>, <a href="image_sensors.html" title="optoelectronic sensors which can be used for imaging">image sensors</a>, <a href="triangulation.html" title="a method for distance measurements">triangulation</a><br>and other articles in the categories <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a>, <a href="categories.html#optoelectronics" title="other articles on optoelectronics">optoelectronics</a>, <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/position_sensitive_detectors.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fposition_sensitive_detectors.html&text=RP+Photonics+Encyclopedia+-+position-sensitive+detectors%2C+dual-segment%2C+quadrant+photodiodes%2C+CCD%2C+CMOS%2C+lateral+effect+photodiodes" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fposition_sensitive_detectors.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fposition_sensitive_detectors.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/position_sensitive_detectors.html"&gt;<br>Article on Position-sensitive Detectors&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/position_sensitive_detectors.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/position_sensitive_detectors.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/position_sensitive_detectors.html<br>article on 'Position-sensitive Detectors' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Staff Training</h2>
+<p>Up-to-date technical know-how is the key to success in photonics.
+RP Photonics offers high quality <a href="./training.html?banner=staff_training">training courses</a> at your location:</p>
+<ul>
+<li>Courses on basic, intermediate or advanced topics &ndash; tailored to your needs and already existing knowledge.</li>
+<li>Boost the competence of your whole team within a few days!</li>
+<li>Get your questions answered straight away.</li>
+<li>Stimulate new ideas and motivate the whole team.</li>
+</ul>
+<p style="text-align:center;"><img src="./img/paschotta5.jpg" alt=" "></p>
+<p><a href="./paschotta.html?banner=staff_training">Dr. Paschotta</a> from RP Photonics</p>
+<ul>
+<li>is a top expert in laser technology, fiber optics and nonlinear optics, also highly respected and trustworthy partner,</li>
+<li>can explain complicated things in helpful ways, and</li>
+<li>addresses your needs.</li>
+</ul>
+<p>Could there be a better investment for a high-tech company?</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="UkuD1D2d+CIhvoxZl01Nuw==">shownbanner = "staff training";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2 style="font-size:150%">Tutorial on<br>Fiber Amplifiers</h2>
+<p>See our <a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial">comprehensive tutorial on fiber amplifiers</a>:</p>
+<ul>
+<li>laser-active dopants, gain and pump absorption</li>
+<li>double-clad fibers, pulse amplification</li>
+<li>ASE, noise issues, multi-stage amplifiers</li>
+</ul>
+<p style="margin-left:10px;"><a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial"><img src="./img/fiber_amplifier_small.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial"><img src="./img/dcf_designs_part.png" style="width:100%" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial"><img src="./img/yb_gain_small.png" alt="&nbsp;"></a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="UkuD1D2d+CIhvoxZl01Nuw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/position_sensitive_detectors.html"
+    },
+    "headline": "Position-sensitive Detectors",
+    "image": "https://www.rp-photonics.com/previews/position_sensitive_detectors.png",
+    "datePublished": "2019-04-29",
+    "dateModified": "2020-03-14",
+    "description": "Some photodetectors can be used for measuring the position of light spots in one or two dimensions. They can be segmented photodiodes or photodiodes arrays, for example, but there are also analog devices based on other principles.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter P",
+      "item": "https://www.rp-photonics.com/encyclopedia_p.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "position-sensitive detectors",
+      "item": "https://www.rp-photonics.com/position_sensitive_detectors.html"
+    }]}
+}
+</script>
+</body>
+</html>

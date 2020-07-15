@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-JLEvfBw/sGOLlb9IR27g3A=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - optical heterodyne detection, balanced detection, homodyne detection, coherent detection</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/optical_heterodyne_detection.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Optical heterodyne detection is a highly sensitive method of photodetection, reaching the standard quantum limit even for weak signal powers.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="optical heterodyne detection, balanced detection, homodyne detection, coherent detection">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Optical Heterodyne Detection">
+<meta property="og:description" content="Optical heterodyne detection is a highly sensitive method of photodetection, reaching the standard quantum limit even for weak signal powers.">
+<meta property="og:url" content="https://www.rp-photonics.com/optical_heterodyne_detection.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/optical_heterodyne_detection.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Optical heterodyne detection is a highly sensitive method of photodetection, reaching the standard quantum limit even for weak signal powers.">
+<meta name="twitter:title" content="Optical Heterodyne Detection">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/optical_heterodyne_detection.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="JLEvfBw/sGOLlb9IR27g3A==">
+page="optical_heterodyne_detection.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="JLEvfBw/sGOLlb9IR27g3A==">shownsponsors="EKSMA OPTICS"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_o.html">letter O</a> &gt; <a href="optical_heterodyne_detection.html">optical heterodyne detection</a></p>
+<h1>Optical Heterodyne Detection</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="advicebox">
+<p>Ask <a href="index.html">RP Photonics</a> for advice on photodetection. A deep expertise on photodetection, heterodyne and homodyne measurements, quantum noise, etc. is available.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a sensitive method of photodetection, reaching the standard quantum limit even for weak signal powers</p>
+<p>Alternative term: coherent detection</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">optische Heterodyn-Detektion</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a>, <a href="categories.html#quantum_optics" title="other articles on quantum optics">quantum optics</a>, <a href="categories.html#fluctuations_and_noise" title="other articles on fluctuations and noise">fluctuations and noise</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<p><a href="encyclopedia_cite.html?article=optical%20heterodyne%20detection">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Heterodyne detection (also called <em>coherent detection</em>) is a detection method which was originally developed in the field of radio waves and microwaves.
+There, a weak input signal is mixed with some strong &ldquo;local oscillator&rdquo; wave in some nonlinear device such as a rectifier, and the resulting mixing product is then detected, often after filtering out the original signal and the local oscillator frequency.
+The frequency of the mixing product is the sum or the difference of the frequencies of the signal and the local oscillator.</p>
+<figure class="right" style="width:223px;">
+<img src="img/heterodyne_setup.png" alt="optical heterodyne setup">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Setup for optical heterodyne detection.
+</figcaption>
+</figure>
+<p><em>Optical</em> heterodyne detection involves optical signal and local oscillator waves, whereas the mixing product is an electrical signal.
+The mixing product is <em>not</em> obtained by mixing the signal and local oscillator wave in a <a href="nonlinear_crystal_materials.html" title="crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal</a>, but rather simply by detecting the linearly superimposed waves with a square-law <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a>, typically a <a href="photodiodes.html" title="semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiode</a>.
+For example, one uses a beam combiner (or <a href="beam_splitters.html" title="devices for splitting a laser beam into two or more beams">beam splitter</a>) as in Figure&nbsp;1 and aligns the two beams such that they are <a href="mode_matching.html" title="the precise spatial matching of the electric field distributions of laser beams and resonator modes or waveguide modes">mode-matched</a>.
+This means not only that their intensity profiles overlap, but also that their <a href="wavefronts.html" title="surfaces connecting points with the same phase of a wave">wavefronts</a> have the same curvature on the detector, so that the <a href="interference.html" title="a range of phenomena associated with the superposition of waves">interference</a> conditions are uniform over the full detector area.
+Of course, this is possible only if the two beams are spatially <a href="coherence.html" title="a fixed phase relationship between the electric field values at different locations or at different times">coherent</a>.
+In a <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fiber</a>-optic setup, a <a href="fiber_couplers.html" title="fiber devices for coupling light from one or several input fibers to one or several output fibers, or from free space into a fiber">fiber coupler</a> would be used instead of the beam splitter, and all fibers would be <a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode fibers</a>, possibly of <a href="polarization_maintaining_fibers.html" title="specialty optical fibers with strong built-in birefringence, preserving the properly oriented linear polarization of an input beam">polarization-maintaining</a> type; the mode matching is then guaranteed without a special alignment.</p>
+<p>The resulting <a href="photocurrent.html" title="an electric current which is induced by incident light in a photodetector">photocurrent</a> is proportional to the total optical intensity, thus to the square of the total electric field amplitude.
+If the signal and local oscillator powers and frequencies are constant, the photocurrent has two different frequency components:</p>
+<ul>
+<li>The constant (zero-frequency) part is proportional to the sum of local oscillator and signal power.</li>
+<li>The part oscillating with the difference frequency (the <a href="beat_note.html" title="an oscillation of the optical intensity arising from the superposition of light with different optical frequencies">beat note</a>) has an amplitude proportional to the product of the electric field amplitudes (<em>not</em> the <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical powers</a>) of signal and local oscillator.</li>
+</ul>
+<p>The oscillating part can then be isolated and processed further with electronic means.
+Its electric power is proportional to the product of the optical powers of signal and local oscillator.</p>
+<p>With a strong local oscillator, the heterodyne signal resulting from a weak input signal can be much more powerful than for direct detection.
+In that sense, heterodyne detection provides a signal <a href="gain.html" title="a measure of the strength of optical amplification">gain</a>, although there is no optical amplification involved.</p>
+<h2 class="togglediv">Noise Limitations</h2>
+<div>
+<p>The noise in the detected signal has different contributions:</p>
+<ul>
+<li>There is <a href="shot_noise.html" title="quantum-limited intensity noise">shot noise</a>, the <a href="power_spectral_density.html" title="optical power or noise power per unit frequency interval">power spectral density</a> (PSD) of which is proportional to the optical average power.</li>
+<li>The <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a> may add some noise, for example due to some <a href="dark_current.html" title="a current from a photodetector which occurs even in the absence of a light input">dark current</a>.</li>
+<li>Additional noise can be added by the electronics.</li>
+</ul>
+<p>In many cases, the local oscillator power is made so high that the corresponding shot noise PSD exceeds that of any other noise.
+The possible <a href="signal_to_noise_ratio.html" title="the ratio of signal power to noise power in a detector">signal-to-noise ratio</a> is then fundamentally limited by shot noise.
+It can be calculated from the ratio of mean squared photocurrent contributions:</p>
+<div class="eqn"><img src="eqn/sn_heterodyne.gif" width="296" height="94" alt="signal-to-noise ratio for optical heterodyne detection"></div>
+<p>where <span class="eqn_il"><i>P</i><sub>s</sub></span> and <span class="eqn_il"><i>P</i><sub>lo</sub></span> are the optical signal power and local oscillator, respectively, at the photodiode, <span class="eqn_il"><span class="greek">&eta;</span><sub>q</sub></span> is the photodiode's <a href="quantum_efficiency.html" title="percentage of input photons which contribute to a desired effect">quantum efficiency</a>, <span class="eqn_il"><span class="greek">&eta;</span><sub>m</sub></span> is the overlap factor for the two beams, and <span class="eqn_il"><i>B</i></span> is the detection bandwidth.
+This result equals the number of photoelectrons generated on average within a time <span class="eqn_il">1&thinsp;/&thinsp;<i>B</i></span>.</p>
+<p>Further increases of local oscillator power would not increase the signal-to-noise ratio, as the signal power and the shot noise PSD are equally increased.</p>
+<p>It is also apparent that the beam combiner (see Figure&nbsp;1) should have a high transmission, so that most of the signal power is sent to the detector.
+The resulting high loss of local oscillator power at the detector can be compensated by increasing the local oscillator power incident on the beam combiner.</p>
+<p>If the beam combiner's transmission is high and the beam overlap is good (<span class="eqn_il"><span class="greek">&eta;</span><sub>m</sub>&thinsp;&asymp;&thinsp;1</span>), the obtained signal-to-noise ratio is twice that for direct detection.
+In practice, heterodyne detection can offer a much greater advantage in terms of sensitivity, because direct detection reaches the shot noise limit only for rather high signal powers, whereas with heterodyne detection the <a href="standard_quantum_limit.html" title="a limit for noise levels set by quantum mechanics">standard quantum limit</a> can be reached for much lower signal powers.
+Therefore, heterodyne detection is particularly suitable for very weak signals.
+Note, however, that there are cases where the standard quantum limit can not be reached because detector saturation limits the local oscillator power [11].</p>
+<p>An important detail is that the measured signal is not at zero frequency, but rather at some finite difference frequency, where the detector noise (e.g., <span class="eqn_il">1&thinsp;/&thinsp;<i>f</i></span> noise) can be much weaker than around zero frequency.</p>
+<p>Using an amplitude-<a href="squeezed_states_of_light.html" title="nonclassical states of light with noise below the standard quantum limit in one quadrature component">squeezed</a> local oscillator beam, it is even possible to beat the standard quantum limit with heterodyne detection [12].</p>
+</div>
+<h2 class="togglediv">Spatial Single-mode Nature of Heterodyne Detection</h2>
+<div>
+<p>A strong heterodyne signal is obtained only if the beam overlap factor <span class="eqn_il"><span class="greek">&eta;</span><sub>m</sub></span> is high.
+If the local oscillator beam is a perfect <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beam</a>, one may consider the total incident input signal light as a superposition of <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a>, using the mode system which is defined by the local oscillator beam.
+We see then that only the signal light in the lowest-order mode (the Gaussian) contributes to the heterodyne signal, because the overlap factors are zero for all <a href="higher_order_modes.html" title="transverse modes of a resonator or waveguide, excluding the fundamental (axial) modes">higher-order modes</a>.
+For any such higher-order mode, <a href="interference.html" title="a range of phenomena associated with the superposition of waves">interference</a> still occurs on the photodiode, but the local oscillations of intensity cancel out by integrating the power over the full detector area, provided that the detection efficiency is uniform over the full beam area.</p>
+<p>The single-mode nature of heterodyne detection is a crucial aspect.
+It can be very helpful, for example by suppressing influences of stray light in sensitive measurements.
+On the other hand, it would greatly reduce the detection efficiency, for example when light scattered on a large area needs to be detected.</p>
+<p>In principle, one could use a local oscillator beam consisting of different spatial modes, ideally each one being associated with a separate <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequency</a>.
+That would allow to simultaneously and independently measure signals in multiple modes.
+However, the power of each signal component in the heterodyne signal would then be proportional to the local oscillator power in the corresponding mode, whereas the noise level would be determined by the <em>total</em> local oscillator power.
+This shows again that heterodyne detection is essentially a single-mode detection technique.</p>
+</div>
+<h2 class="togglediv">Balanced Detection</h2>
+<div>
+<figure class="right" style="width:150px;">
+<img src="img/balanced_heterodyne_setup.png" alt="balanced optical heterodyne setup">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Setup for balanced optical heterodyne detection.
+</figcaption>
+</figure>
+<p>A remaining problem of heterodyne detection in the simple form as shown in Figure&nbsp;1 is that excess noise of the local oscillator wave directly affects the signal.
+This is avoided with a <a href="balanced_photodetection.html" title="a method of photodetection which is sensitive to differences in optical powers but not to common noise"><em>balanced</em></a> heterodyne setup [2,&thinsp;7] as shown in Figure&nbsp;2.
+Here, the beam splitter must have a reflectivity of precisely 50&#37;.
+With a simple electronic circuit, one can obtain the difference of the two photocurrents.
+That difference is to first order not influenced by noise of the local oscillator.</p>
+</div>
+<h2 class="togglediv">Temporal Coherence Issues</h2>
+<div>
+<p>If the <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a> delivering the local oscillator beam is totally independent of the signal, it is hardly possible to measure the <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">phase</a> of the input signal, because the phase of the electronic signal is also dependent on the local oscillator phase, which is stable only over the typically short <a href="coherence_time.html" title="a measure of temporal coherence, expressed as the time over which the field correlation decays">coherence time</a>.</p>
+<p>If phase measurements are required, the local oscillator and signal waves are usually generated from a single source, so that the <em>relative phase</em> of the two beams is fairly stable even if the source does not exhibit particularly low <a href="phase_noise.html" title="noise of the optical phase of a beam or of an electric signal">phase noise</a>.
+For example, a signal wave may be generated from a local oscillator wave by frequency-shifting part of it with an <a href="acousto_optic_modulators.html" title="optical modulators based on the acousto-optic effect">acousto-optic modulator</a>.
+A heterodyne measurement can then very sensitively reveal any phase changes to that signal.</p>
+<p>By bandpass-filtering the electronic signal, it is also possible to sample a very narrow spectral portion of the signal.
+That detection bandwidth can easily be far below what is possible with <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical bandpass filters</a>.
+This can be useful for precision <a href="laser_spectroscopy.html" title="methods where the interaction of laser light with matter is utilized">laser spectroscopy</a>, for example.</p>
+</div>
+<h2 class="togglediv">Homodyne Detection</h2>
+<div>
+<p>A variant of heterodyne detection is <em>homodyne detection</em>, where the local oscillator frequency equals the signal frequency.
+For optical homodyne measurements, both waves are virtually always derived from the same laser source.
+The homodyne technique is phase-sensitive in the sense that the power of the heterodyne signal depends on the relative phase of signal and local oscillator, and may even totally vanish.</p>
+<p>A useful modification is <em>balanced homodyne detection</em>, where two photodiodes (Figure&nbsp;2) are used after a beam splitter with precisely 50&#37; reflectivity, and the sum and difference of photocurrents are electronically obtained.
+If the signal port is blocked, the difference of photocurrents exhibits the shot noise level of the local oscillator beam, even if the actual noise level of that beam is different.
+The latter noise level can be obtained in addition by taking the sum of the photocurrents.
+That sum exhibits the same noise as for direct detection of the local oscillator beam with a single photodiode.
+The homodyne setup provides the difference signal in addition, which allows one to conveniently compare the actual noise with the shot noise limit.
+For amplitude-<a href="squeezed_states_of_light.html" title="nonclassical states of light with noise below the standard quantum limit in one quadrature component">squeezed light</a>, the sum of the photocurrents exhibits a lower noise than the difference.
+In many squeezed-light experiments, the degree of squeezing is measured with the homodyne technique.</p>
+<p>A possible interpretation of the situation without signal input is that the setup then measures <a href="vacuum_noise.html" title="quantum noise of the vacuum state, or quantum noise introduced into an optical system via a vacuum input">vacuum noise</a>.
+This is because although no <a href="photons.html" title="quanta of light energy">photons</a> can enter the signal input port, there are still vacuum fluctuations of the electric field.
+The measured local oscillator <a href="shot_noise.html" title="quantum-limited intensity noise">shot noise</a> is interpreted as being caused not by the local oscillator beam, but rather by the vacuum noise [6].
+This interpretation is supported by the fact that amplitude-squeezed light at the signal input can reduce that noise level.
+These findings are in conflict with the earlier (and still widespread) idea that shot noise is intrinsic to the detection process rather than a property of the light field.</p>
+</div>
+<h2 class="togglediv">Heterodyne Measurements with Pulsed Beams</h2>
+<div>
+<p>The heterodyne technique can also be applied to <a href="pulses.html" title="flashes of light">pulsed</a> signals by using a pulsed local oscillator beam.
+It is even possible to use <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a>.
+As the heterodyne detector is essentially sensitive only while the local oscillator light is there (assuming a signal power well below the local oscillator power), it is possible to obtain a very high temporal resolution without requiring a very fast photodetector.
+This technique is called <em>heterodyne (or homodyne) linear optical sampling</em> [15,&thinsp;16].</p>
+</div>
+<h2 class="togglediv">Applications of Heterodyne Detection</h2>
+<div>
+<p>Some examples for the application of optical heterodyne detection are:</p>
+<ul>
+<li>Heterodyne detection is used for <em>coherent Doppler <a href="lidar.html" title="a technique for acquiring 3D images with laser pulses">LIDAR</a> measurements</em> (and related laser radar techniques), where very weak light scattered in the atmosphere needs to be detected.
+It is possible, for example, to accurately measure wind speeds based on the Doppler shift.
+By deriving the signal and local oscillator beams from the same laser source (see above), it is possible to resolve very small Doppler shifts.</li>
+<li>There are other applications in <a href="laser_spectroscopy.html" title="methods where the interaction of laser light with matter is utilized">laser spectroscopy</a>.
+Examples are solar <a href="radiometry.html" title="the science and technology of measuring properties of electromagnetic radiation, including light">radiometry</a> [3] and cavity ring-down spectroscopy [14].</li>
+<li>The <a href="linewidth.html" title="width of the spectrum of a light beam or an absorption feature">linewidth</a> of a <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a>, for example, can be measured with the <a href="self_heterodyne_linewidth_measurement.html" title="a technique for laser linewidth measurements, based on a beat note between the beam and a delayed version of itself">self-heterodyne technique</a>, where a frequency-shifted copy of the laser beam is superimposed with a temporally delayed copy on a photodetector.</li>
+<li>In <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a>, the phase sensitivity of heterodyne and homodyne detection allows one to demodulate phase-encoded signals [8,&thinsp;10], based on techniques like frequency shift keying (FSK) (&rarr;&nbsp;<em>coherent communications</em>).
+Also, it the basis for some forms of electronic <a href="dispersion_compensation.html" title="the control of the overall chromatic dispersion of a system by adding optical elements with a suitable amount of dispersion">dispersion compensation</a>.</li>
+<li><a href="radio_and_microwave_over_fiber.html" title="the transmission of radio frequency signals through optical fibers">Radio and microwave over fiber</a> sometimes uses heterodyne detection.</li>
+</ul>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="optical_heterodyne_detection.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">B. M. Oliver, &ldquo;Signal to noise ratios in photoelectric mixing&rdquo;, Proc. IRE 49, 1960 (1961)</td></tr>
+<tr><td class="refno">[2]</td><td class="refs">H. R. Carleton and W. T. Maloney, &ldquo;A balanced optical heterodyne detector&rdquo;, Appl. Opt. 7 (6), 1241 (1968), <a href="https://doi.org/10.1364/AO.7.001241">doi:10.1364/AO.7.001241</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">J. H. McElroy, &ldquo;Infrared heterodyne solar radiometry&rdquo;, Appl. Opt. 11 (7), 1619 (1972), <a href="https://doi.org/10.1364/AO.11.001619">doi:10.1364/AO.11.001619</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">T. Takenaka, K. Tanaka and O. Fukumitsu, &ldquo;Signal-to-noise ratio in optical heterodyne detection for Gaussian fields&rdquo;, Appl. Opt. 17 (21), 3466 (1978), <a href="https://doi.org/10.1364/AO.17.003466">doi:10.1364/AO.17.003466</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">Y. Fujii <i>et al.</i>, &ldquo;Incoherent optical heterodyne detection and its application to air pollution detection&rdquo;, Appl. Opt. 17 (21), 3444 (1978), <a href="https://doi.org/10.1364/AO.17.003444">doi:10.1364/AO.17.003444</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">H. P. Yuen and V. W. S. Chan, &ldquo;Noise in homodyne and heterodyne detection&rdquo;, Opt. Lett. 8 (3), 177 (1983), <a href="https://doi.org/10.1364/OL.8.000177">doi:10.1364/OL.8.000177</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">R. Stierlin <i>et al.</i>, &ldquo;Excess-noise suppression in a fibre-optic balanced heterodyne detection system&rdquo;, Opt. Quantum Electron. 18 (6), 445 (1986), <a href="https://doi.org/10.1007/BF02041170">doi:10.1007/BF02041170</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">T. Okoshi, &ldquo;Recent advances in coherent optical fiber communications systems&rdquo;, IEEE J. Lightwave Technol. 5 (1), 44 (1987), <a href="https://doi.org/10.1109/JLT.1987.1075396">doi:10.1109/JLT.1987.1075396</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">M. J. Collett <i>et al.</i>, &ldquo;Quantum theory of optical homodyne and heterodyne detection&rdquo;, J. Mod. Opt. 34 (6-7), 881 (1987), <a href="https://doi.org/10.1080/09500348714550811">doi:10.1080/09500348714550811</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">R. A. Linke et A. H. Gnauck, &ldquo;High-capacity coherent lightwave systems&rdquo;, J. Lightwave Technol. 6 (11), 1750 (1988)</td></tr>
+<tr><td class="refno">[11]</td><td class="refs">J. F. Holmes and B. J. Rask, &ldquo;Optimum optical local-oscillator power levels for coherent detection with photodiodes&rdquo;, Appl. Opt. 34 (6), 927 (1995), <a href="https://doi.org/10.1364/AO.34.000927">doi:10.1364/AO.34.000927</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">Y. Li <i>et al.</i>, &ldquo;Sub-shot-noise-limited optical heterodyne detection using an amplitude-squeezed local oscillator&rdquo;, Phys. Rev. Lett. 82 (26), 5225 (1999), <a href="https://doi.org/10.1103/PhysRevLett.82.5225">doi:10.1103/PhysRevLett.82.5225</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">S. Schlamp <i>et al.</i>, &ldquo;Laser-induced thermal-acoustic velocimetry with heterodyne detection&rdquo;, Opt. Lett. 25 (4), 224 (2000), <a href="https://doi.org/10.1364/OL.25.000224">doi:10.1364/OL.25.000224</a></td></tr>
+<tr><td class="refno">[14]</td><td class="refs">Y. He and B. J. Orr, &ldquo;Rapidly swept, continuous-wave cavity ringdown spectroscopy with optical heterodyne detection: single- and multi-wavelength sensing of gases&rdquo;, Appl. Phys. B 75 (2-3), 267 (2002), <a href="https://doi.org/10.1007/s00340-002-0983-8">doi:10.1007/s00340-002-0983-8</a></td></tr>
+<tr><td class="refno">[15]</td><td class="refs">C. Dorrer <i>et al.</i>, &ldquo;Linear optical sampling&rdquo;, IEEE Photon. Technol. Lett. 15 (12), 1746 (2003), <a href="https://doi.org/10.1109/LPT.2003.819729">doi:10.1109/LPT.2003.819729</a></td></tr>
+<tr><td class="refno">[16]</td><td class="refs">E. Benkler <i>et al.</i>, &ldquo;Characterization of ultrashort optical pulse properties by amplitude-modulation-balanced heterodyne gating&rdquo;, Opt. Lett. 30 (15), 2016 (2005), <a href="https://doi.org/10.1364/OL.30.002016">doi:10.1364/OL.30.002016</a></td></tr>
+<tr><td class="refno">[17]</td><td class="refs">P. Fritschel <i>et al.</i>, &ldquo;Balanced homodyne readout for quantum limited gravitational wave detectors&rdquo;, Opt. Express 22 (4), 4224 (2014), <a href="https://doi.org/10.1364/OE.22.004224">doi:10.1364/OE.22.004224</a></td></tr>
+<tr><td class="refno">[18]</td><td class="refs">H. A. Haus, <i>Electromagnetic noise and quantum optical measurements</i>, Springer, New York (2000)</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="photodetectors.html" title="devices used for the detection of light">photodetectors</a>, <a href="shot_noise.html" title="quantum-limited intensity noise">shot noise</a>, <a href="balanced_photodetection.html" title="a method of photodetection which is sensitive to differences in optical powers but not to common noise">balanced photodetection</a>, <a href="standard_quantum_limit.html" title="a limit for noise levels set by quantum mechanics">standard quantum limit</a>, <a href="self_heterodyne_linewidth_measurement.html" title="a technique for laser linewidth measurements, based on a beat note between the beam and a delayed version of itself">self-heterodyne linewidth measurement</a><br>and other articles in the categories <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a>, <a href="categories.html#quantum_optics" title="other articles on quantum optics">quantum optics</a>, <a href="categories.html#fluctuations_and_noise" title="other articles on fluctuations and noise">fluctuations and noise</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/optical_heterodyne_detection.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Foptical_heterodyne_detection.html&text=RP+Photonics+Encyclopedia+-+optical+heterodyne+detection%2C+balanced+detection%2C+homodyne+detection%2C+coherent+detection" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Foptical_heterodyne_detection.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Foptical_heterodyne_detection.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/optical_heterodyne_detection.html"&gt;<br>Article on Optical Heterodyne Detection&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/optical_heterodyne_detection.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/optical_heterodyne_detection.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/optical_heterodyne_detection.html<br>article on 'Optical Heterodyne Detection' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="./coating_demo_gti.html?banner=RP_Coating_6"><img src="./img/coating_demo_gti7b.png" alt="Bragg mirror" style="margin-bottom:8px"></a>
+<p>A femtosecond pulse hits a Gires--Tournois interferometer (GTI).</p>
+<p>This diagram has been made with the <a href="./coating.html?banner=RP_Coating_6"><b>RP Coating</b></a> software.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="JLEvfBw/sGOLlb9IR27g3A==">shownbanner = "RP Coating 6";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>A Quiz Question</h2>
+<p style="margin-top:15px">taken from the <a href="./quiz.html?banner=quiz">Photonics Quiz</a>:</p><form action="/quiz.html" method="get" style="margin-bottom:12px;">
+<p><input name="n" value="1" type="hidden"></p>
+<p style="text-align:left;">A Gaussian laser beam is</p>
+<p style="margin-left:50px; text-indent:-50px; text-align:left;"><input type="checkbox" name="answer_a" value="y"> (a) a beam with Gaussian intensity profile</p>
+<p style="margin-left:50px; text-indent:-50px; text-align:left;"><input type="checkbox" name="answer_b" value="y"> (b) a beam with Gaussian intensity profile and plane wavefronts in the focus</p>
+<p style="margin-left:50px; text-indent:-50px; text-align:left;"><input type="checkbox" name="answer_c" value="y"> (c) a beam with Gaussian intensity profile and plane wavefronts at any position</p>
+<p style="margin-top:15px;"><input type="submit" value="Get your answer checked" style="padding:3px 10px; font-size:14px;"></p>
+</form>
+<p>After selecting your answer(s) and pressing this button, find the explanations on the left side.</p>
+
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="JLEvfBw/sGOLlb9IR27g3A==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/optical_heterodyne_detection.html"
+    },
+    "headline": "Optical Heterodyne Detection",
+    "image": "https://www.rp-photonics.com/previews/optical_heterodyne_detection.png",
+    "datePublished": "2009-10-24",
+    "dateModified": "2020-03-14",
+    "description": "Optical heterodyne detection is a highly sensitive method of photodetection, reaching the standard quantum limit even for weak signal powers.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter O",
+      "item": "https://www.rp-photonics.com/encyclopedia_o.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "optical heterodyne detection",
+      "item": "https://www.rp-photonics.com/optical_heterodyne_detection.html"
+    }]}
+}
+</script>
+</body>
+</html>

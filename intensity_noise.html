@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-cE3YCQqfSxysaxSpol/avQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - intensity noise, laser, power spectral density, r.m.s., RIN</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/intensity_noise.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Intensity noise is noise of the optical intensity or power of a laser beam. It is often specified in the form of relative intensity noise (RIN).">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="intensity noise, laser, power spectral density, r.m.s., RIN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Intensity Noise">
+<meta property="og:description" content="Intensity noise is noise of the optical intensity or power of a laser beam. It is often specified in the form of relative intensity noise (RIN).">
+<meta property="og:url" content="https://www.rp-photonics.com/intensity_noise.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/intensity_noise.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Intensity noise is noise of the optical intensity or power of a laser beam. It is often specified in the form of relative intensity noise (RIN).">
+<meta name="twitter:title" content="Intensity Noise">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/intensity_noise.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="cE3YCQqfSxysaxSpol/avQ==">
+page="intensity_noise.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo sponsor"></a> <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="cE3YCQqfSxysaxSpol/avQ==">shownsponsors="DataRay,EKSMA OPTICS,TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_i.html">letter I</a> &gt; <a href="intensity_noise.html">intensity noise</a></p>
+<h1>Intensity Noise</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_intensity_noise_measurement_equipment.html?s=vbox">1 supplier for intensity noise measurement equipment</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_intensity_noise_measurement_equipment.html?s=vbox">List of suppliers for<br>intensity noise measurement equipment</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="boxadvertisement">
+<h2>Advice on Laser Noise</h2>
+<p>Ask <a href="index.html">RP Photonics</a> for advice on any aspect of intensity noise, e.g. its reliable measurement, its proper specification, its simulation, its suppression with feedback systems, its coupling to phase noise, etc.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: noise of the optical intensity or power of a laser beam</p>
+<p>More general terms: <a href="laser_noise.html" title="fluctuations of various parameters of laser light, such as the optical power and phase">laser noise</a></p>
+<p>More specific terms: <a href="relative_intensity_noise.html" title="noise of the optical intensity (or actually power), normalized to its average value">relative intensity noise</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Intensitätsrauschen</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#fluctuations_and_noise" title="other articles on fluctuations and noise">fluctuations and noise</a></p>
+<p><a href="encyclopedia_cite.html?article=intensity%20noise">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>An important type of noise in a light beam is noise of its intensity.
+Strictly, the noise of the <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical <em>power</em></a>, rather than of the <a href="optical_intensity.html" title="optical power per unit area">optical <em>intensity</em></a>, is usually considered, but the common term is <em>intensity noise</em> rather than <em>power noise</em>.</p>
+<p>Considerable confusion can arise from the fact that in the context of intensity noise the term <em>power</em> occurs with two substantially different meanings:</p>
+<aside class="callout red">Do not confuse optical powers with noise powers!</aside>
+<ul>
+<li>The fluctuating quantity of interest is the <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a>, meaning the delivered light energy per unit time.</li>
+<li>Noise is often quantified with a <a href="power_spectral_density.html" title="optical power or noise power per unit frequency interval">power spectral density</a>, where <em>power</em> is related to the <em>squares</em> of fluctuation amplitudes; here we are dealing with <em>noise powers</em>.</li>
+</ul>
+<p>When measuring intensity noise (e.g. of a <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a>) with a <a href="photodiodes.html" title="semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiode</a>, one obtains a <a href="photocurrent.html" title="an electric current which is induced by incident light in a photodetector">photocurrent</a> which is directly proportional to the optical power.
+The photocurrent is often converted into a voltage, for example based on a resistor.
+The fluctuating voltage may then be fed into an electronic spectrum analyzer, which displays the frequency-dependent power spectral density (PSD) of its input voltage.
+Here, <em>power</em> means <em>electrical</em> power, which is proportional to the voltage squared, and thus proportional to the <em>square</em> of the optical power.
+That PSD is a measure for the <em>noise power</em> and has units of V<sup>2</sup>/Hz, although it is often displayed as a logarithmic quantity in units of <a href="dbm.html" title="dB relative to a reference power of 1&thinsp;&thinsp;mW">dBm</a>/Hz.
+Using the proportionality between voltage and optical power, one could calculate from that the PSD of the optical power with units of W<sup>2</sup>/Hz.</p>
+<p>If the voltage input of the spectrum analyzer is doubled, e.g. by reducing the attenuation of the laser beam hitting the photodetector, the electrical powers rise by a factor of 4, corresponding to 6 <a href="decibel.html" title="a logarithmic measure for power ratios, applied e.g. to optical powers or to noise powers">decibels</a>.</p>
+<p>Further difficulties arise from the fact that electronic spectrum analyzers are usually not calibrated for correctly displaying noise power densities; one needs to apply certain corrections.</p>
+<h2 class="togglediv">Specifications for Intensity Noise</h2>
+<div>
+<p>Intensity noise is usually quantified as <a href="relative_intensity_noise.html" title="noise of the optical intensity (or actually power), normalized to its average value"><em>relative intensity noise</em></a> (RIN), i.e. as noise of the optical power divided by the average optical power.
+Common specifications are based on</p>
+<ul>
+<li>an r.m.s. (root-mean-square) value for a certain measurement bandwidth</li>
+<li class="ta_left">a <a href="power_spectral_density.html" title="optical power or noise power per unit frequency interval">power spectral density</a> <i>S(f)</i></li>
+</ul>
+<p>Sometimes one encounters specifications like &ldquo;&plusmn;0.1&#37;&rdquo;, which are not valid without further specifications, since statistical aspects are not properly described, and it is not clear which range of noise frequencies is considered.</p>
+<p>More details are found in the article on <a href="noise_specifications.html" title="specifications for the noise properties of lasers, for example">noise specifications</a>.</p>
+</div>
+<h2 class="togglediv">Measurement of Intensity Noise</h2>
+<div>
+<p>Intensity noise is normally measured by detecting the intensity (or power) with a fast <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a> (e.g. with a <a href="p_i_n_photodiodes.html" title="photodiodes with a p&ndash;i&ndash;n semiconductor structure">p&ndash;i&ndash;n photodiode</a>) and evaluating the noise spectrum with an electronic spectrum analyzer.
+Although this appears simple in principle, there can be various technical challenges:</p>
+<ul>
+<li>The calibration of the intensity noise level often involves difficulties.
+Although an electronic spectrum analyzer displays noise spectra in proper units like dBc/Hz (where dBc = dB below carrier), the calibration usually has to be corrected because it is valid for sinusoidal signals, but not for random noise.
+It is common that 2&thinsp;<a href="decibel.html" title="a logarithmic measure for power ratios, applied e.g. to optical powers or to noise powers">decibels</a> have to be added to the noise level, but this can depend on the detailed settings of the spectrum analyzer such as the detection mode.
+Further difficulties arise when the DC component of the photocurrent needs to be suppressed in a preamplifier; a separate calibration measurement may then be required.</li>
+<li>The <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a> must of course be operated in a region with linear response, i.e., it should never be saturated.
+For measurements on low repetition rate <a href="pulses.html" title="flashes of light">pulse</a> trains, this can imply that the recorded average power is fairly low, so that a high sensitivity is difficult to achieve.</li>
+<li>For pulse trains, the measured signal is influenced not only by intensity noise, but also by <a href="timing_jitter.html" title="fluctuations of the temporal positions of pulses">timing jitter</a>, and both types of noise can even be correlated.
+Ignoring this can easily lead to wrong results.</li>
+</ul>
+<p>For the characterization of low-frequency noise, it may be required to record the power variations in the time domain and process them numerically.</p>
+</div>
+<h2 class="togglediv">Origins of Laser Intensity Noise</h2>
+<div>
+<p>Intensity noise of a laser results partly from quantum noise (associated with laser <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> and resonator losses) and partly from technical noise sources such as excess noise of the pump source, vibrations of <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">resonator</a> mirrors, thermal fluctuations in the <a href="gain_media.html" title="media for laser amplification">gain medium</a>, etc.
+The resulting intensity noise also depends on the operation conditions; in particular, it often becomes weaker at high pump powers, where <a href="relaxation_oscillations.html" title="small mutually coupled oscillations of the laser power and laser gain around their steady-state values">relaxation oscillations</a> are strongly damped.
+There are methods to reduce the noise further by using a feedback system (&rarr;&nbsp;<a href="stabilization_of_lasers.html" title="measures applied to lasers in order to improve their stability in terms of output power, optical frequency, or other quantities">stabilization of lasers</a>).</p>
+<p>In most cases, the lowest possible intensity noise level for laser beams results from <a href="shot_noise.html" title="quantum-limited intensity noise">shot noise</a>.
+At least at high noise frequencies, well above the <a href="relaxation_oscillations.html" title="small mutually coupled oscillations of the laser power and laser gain around their steady-state values">relaxation oscillation</a> frequency, this noise level is approached by many lasers.
+However, for so-called <a href="squeezed_states_of_light.html" title="nonclassical states of light with noise below the standard quantum limit in one quadrature component">squeezed states of light</a>, the intensity noise can be below the shot noise, at the cost of increased <a href="phase_noise.html" title="noise of the optical phase of a beam or of an electric signal">phase noise</a>.</p>
+<figure>
+<img src="img/intensity_noise.png" alt="intensity noise spectrum">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Intensity noise spectrum of a solid-state laser.
+The noise level is given in <a href="decibel.html" title="a logarithmic measure for power ratios, applied e.g. to optical powers or to noise powers">decibels</a> above the <a href="shot_noise.html" title="quantum-limited intensity noise">shot noise</a> limit.
+There is a peak at 74&nbsp;kHz, resulting from <a href="relaxation_oscillations.html" title="small mutually coupled oscillations of the laser power and laser gain around their steady-state values">relaxation oscillations</a>.
+Increased low-frequency noise is caused by excess noise of the pump source.
+</figcaption>
+</figure>
+</div>
+<h2 class="togglediv">Noise Reduction</h2>
+<div>
+<p>Intensity noise of a laser can be reduced in various ways:</p>
+<ul>
+<li>Influences of external noise sources can be reduced, e.g. by operating <a href="laser_diodes.html" title="semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diodes</a> with a well-stabilized injection current.</li>
+<li>The <a href="laser_design.html" title="the design of a laser device, or the process of working out such a design">laser design</a> can be optimized so that its susceptibility to external noise and the influence of <a href="quantum_noise.html" title="noise arising from quantum fluctuations">quantum noise</a> are minimized.</li>
+</ul>
+<p>The intensity noise in a <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a> (external to the laser cavity) may be reduced with a <a href="noise_eaters.html" title="devices for reducing the intensity noise of an optical beam by automatically adjusting the degree of power attenuation"><em>noise eater</em></a>.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_intensity_noise_measurement_equipment.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 1 supplier for intensity noise measurement equipment.</p>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="intensity_noise.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">R. Paschotta, &quot;<a href="article_noise_in_laser_technology1.html">Noise in Laser Technology &ndash; Part 1: Intensity and Phase Noise</a>&quot;</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="noise_specifications.html" title="specifications for the noise properties of lasers, for example">noise specifications</a>, <a href="relative_intensity_noise.html" title="noise of the optical intensity (or actually power), normalized to its average value">relative intensity noise</a>, <a href="phase_noise.html" title="noise of the optical phase of a beam or of an electric signal">phase noise</a>, <a href="laser_noise.html" title="fluctuations of various parameters of laser light, such as the optical power and phase">laser noise</a>, <a href="shot_noise.html" title="quantum-limited intensity noise">shot noise</a>, <a href="quantum_noise.html" title="noise arising from quantum fluctuations">quantum noise</a>, <a href="noise_eaters.html" title="devices for reducing the intensity noise of an optical beam by automatically adjusting the degree of power attenuation">noise eaters</a><br>and other articles in the categories <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#fluctuations_and_noise" title="other articles on fluctuations and noise">fluctuations and noise</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/intensity_noise.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fintensity_noise.html&text=RP+Photonics+Encyclopedia+-+intensity+noise%2C+laser%2C+power+spectral+density%2C+r.m.s.%2C+RIN" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fintensity_noise.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fintensity_noise.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/intensity_noise.html"&gt;<br>Article on Intensity Noise&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/intensity_noise.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/intensity_noise.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/intensity_noise.html<br>article on 'Intensity Noise' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="./coating_demo_bragg_mirror.html?banner=RP_Coating_3"><img src="./img/coating_demo_bragg_mirror6b.png" alt="Bragg mirror" style="margin-bottom:8px"></a>
+<p>Color-coded field penetration in a Bragg mirror as a function of wavelength.</p>
+<p>This diagram has been made with the <a href="./coating.html?banner=RP_Coating_3"><b>RP Coating</b></a> software.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="cE3YCQqfSxysaxSpol/avQ==">shownbanner = "RP Coating 3";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Tutorial on Fiber Optics</h2>
+<p>See our <a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial">comprehensive fiber optics tutorial</a>:</p>
+<ul>
+<li>guiding light in single-mode and multimode fibers</li>
+<li>fiber ends and joints, propagation and coupling losses</li>
+<li>couplers and splitters</li>
+<li>polarization issues, chromatic dispersion, nonlinearities, pulse propagation</li>
+<li>fiber accessories and tools</li>
+</ul>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/fiber_core_small.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/mode_solver.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/pm_fibers_small.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/fiberpower_self_focusing4_small.png" alt="&nbsp;"></a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="cE3YCQqfSxysaxSpol/avQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/intensity_noise.html"
+    },
+    "headline": "Intensity Noise",
+    "image": "https://www.rp-photonics.com/previews/intensity_noise.png",
+    "datePublished": "2008-08-16",
+    "dateModified": "2020-03-14",
+    "description": "Intensity noise is noise of the optical intensity or power of a laser beam. It is often specified in the form of relative intensity noise (RIN).",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter I",
+      "item": "https://www.rp-photonics.com/encyclopedia_i.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "intensity noise",
+      "item": "https://www.rp-photonics.com/intensity_noise.html"
+    }]}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-Z92uZ6bzITf0fRXRIxzZFQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - beam dumps, block, trap, scattered light, cooling, laser safety, high-power lasers</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/beam_dumps.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Beam dumps are required to safely absorb laser beams, avoiding laser hazards and other problematic effects. Besides complete blocking of a beam, avoiding scattered light may be important.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="beam dumps, block, trap, scattered light, cooling, laser safety">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Beam Dumps">
+<meta property="og:description" content="Beam dumps are required to safely absorb laser beams, avoiding laser hazards and other problematic effects. Besides complete blocking of a beam, avoiding scattered light may be important.">
+<meta property="og:url" content="https://www.rp-photonics.com/beam_dumps.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/beam_dumps.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Beam dumps are required to safely absorb laser beams, avoiding laser hazards and other problematic effects. Besides complete blocking of a beam, avoiding scattered light may be important.">
+<meta name="twitter:title" content="Beam Dumps">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/beam_dumps.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="Z92uZ6bzITf0fRXRIxzZFQ==">
+page="beam_dumps.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo sponsor"></a> <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="Z92uZ6bzITf0fRXRIxzZFQ==">shownsponsors="Knight Optical,TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_beam_dumps.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_b.html">letter B</a> &gt; <a href="beam_dumps.html">beam dumps</a></p>
+<h1>Beam Dumps</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_beam_dumps.html?s=vbox">17 suppliers for beam dumps</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.edmundoptics.com/c/laser-protection/962/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="beam dumps" rel="nofollow" class="bg externallink"><img src="./bg/logos/edmund_optics.png" alt="Edmund Optics" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.gentec-eo.com/laser-beam-dump" data-supplier="Gentec Electro-Optics" data-location="product-enc" data-keyword="beam dumps" rel="nofollow" class="bg externallink"><img src="./bg/logos/gentec_electro_optics.png" alt="Gentec Electro-Optics" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_beam_dumps.html?s=vbox">List of suppliers for<br>beam dumps</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: devices for blocking and absorbing light beams</p>
+<p>Alternative terms: beam blocks, beam stops, beam traps</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Strahlstopper</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a></p>
+<p><a href="encyclopedia_cite.html?article=beam%20dumps">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>There are various situations in which one has a <a href="light.html" title="electromagnetic radiation in the visible spectral range, or sometimes in an extended spectral region">light</a> beam, typically a <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a>, which is unwanted either temporarily or at all times, and therefore needs to be blocked &ndash; for example, for reasons of <a href="laser_safety.html" title="safety of the use of laser devices">laser safety</a>.
+For such purposes, one can use some kind of <em>beam dump</em> which safely <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorbs</a> the <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a>.
+In contrast to a <a href="beam_shutters.html" title="devices for blocking or releasing light beams">beam shutter</a>, a beam dump cannot be deactivated &ndash; to release the beam again, the device needs to be removed.</p>
+<p>Some typical situations in which beam dumps are required:</p>
+<ul>
+<li>When some kind of pump laser sends a beam to another device (e.g., a <a href="titanium_sapphire_lasers.html" title="lasers based on a Ti:sapphire gain medium">titanium&ndash;sapphire laser</a> or an <a href="optical_parametric_oscillators.html" title="coherent light sources based on parametric amplification within an optical resonator">OPO</a>), on which one needs to temporarily work without the pump light (e.g. cleaning some mirrors), one may insert a beam dump between the devices (instead of turning off the pump laser).</li>
+<li>One may need to permanently block beams resulting from parasitic reflections or transmissions.
+For example, even highly reflecting mirrors in a <a href="high_power_lasers.html" title="lasers emitting very high optical powers">high-power laser</a> may transmit a significant amount of optical power due to the high circulating intracavity power.
+Such parasitic beams may cause <a href="laser_safety.html" title="safety of the use of laser devices">laser hazards</a> or other problems, for example heating up the holders of some <a href="laser_mirrors.html" title="high-quality mirrors used in laser resonators and other optical setups">laser mirrors</a> and thus causing thermally induced misalignment.</li>
+<li>Some optical devices produce unwanted beams.
+For example, the non-diffracted beam of an <a href="acousto_optic_deflectors.html" title="acousto-optic devices for deflecting and scanning laser beams">acousto-optic deflector</a> or one of the outputs of a <a href="polarizers.html" title="optical filters where the light transmission depends strongly on the direction of polarization">polarizer</a> in a <a href="variable_optical_attenuators.html" title="optical attenuators with a variable degree of attenuation">variable optical attenuator</a> may need to be dumped.</li>
+<li>A kind of <a href="beam_shutters.html" title="devices for blocking or releasing light beams">beam shutter</a> for very high power levels can be realized with the combination of a beam dump and a movable <a href="mirrors.html" title="devices which reflect light">mirror</a>, which can be moved into the beam to send it to the dump.</li>
+</ul>
+<h2 class="togglediv">Functions and Types of Beam Dumps</h2>
+<div>
+<p>The perhaps most essential function of a beam dump is to avoid any of the light to be transmitted on its regular path.
+That purpose alone can be fulfilled with a simple <em>beam block</em> &ndash; for example, a metal part with a <a href="black_coatings.html" title="coatings with strong light absorption">black coating</a> (absorbing coating, e.g. anodized aluminum) and possibly some cooling fingers.
+Such parts are often home-made.</p>
+<aside class="callout blue">Strongly suppressing scattered light needs somewhat more refined designs.</aside>
+<p>In some cases, it is also important to strongly suppress any reflected and back-scattered light.
+For example, even a minimum fraction of scattered light from a kilowatt laser beam could be problematic in terms of <a href="laser_safety.html" title="safety of the use of laser devices">laser safety</a>.
+A simple beam stopper may then not be sufficient.
+Therefore, various kinds of <em>beam traps</em> have been developed which have somewhat more sophisticated setups.
+For example, there can be a cone-shaped black part into which the beam is sent.
+Most light which is reflected or scattered despite the absorbing coating reaches other parts of the black cone.
+Further, in front of the cone one may place some kind of cavity or tube which is also black inside.
+Optimized optical traps of such kinds send virtually no light back towards the source, at least when operated within the specified range of operation <a href="wavelength.html" title="the spatial period of a plane wave">wavelengths</a>.</p>
+</div>
+<h2 class="togglediv">Power Handling</h2>
+<div>
+<p>Beam dumps for use with high-power laser beams have to dissipate substantial powers, which are turned into heat.</p>
+<p>For powers up to a few watts, it is normally sufficient to have some kind of cooling fingers attached to the absorber, which can release heat both by convection of air and by heat radiation.
+Note, however, that beam dumps can become rather hot during operation &ndash; sometimes reaching temperatures above 100&thinsp;&deg;C.</p>
+<p>Substantially increased powers (sometimes hundreds of watts) can be dissipated with fan-cooled devices.
+Possible disadvantages are, besides the somewhat higher cost, that possibly disturbing air flows and vibrations are caused, and a power supply is needed.</p>
+<p>For even higher powers (for example, several kilowatts), there are water-cooled beam dumps.
+Of course, their operation involves additional requirements, such as providing cooling water, safely avoiding any water leaks etc.</p>
+<p>In extreme cases, the absorption needs to be distributed over a larger volume.
+A possible solution is to absorb the light in a tank of water with added substances for obtaining an appropriate amount of absorption.</p>
+<aside class="callout red">Energetic pulses may damage a beam dumped even if the average power is within the allowed range!</aside>
+<p>In any case, a high-power beam should not be sent into a beam dump with a too small <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a>, which would lead to excessive <a href="optical_intensity.html" title="optical power per unit area">optical intensities</a>.
+This is particularly the case for beams with high-energy <a href="pulses.html" title="flashes of light">pulses</a> as obtained from <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched lasers</a>.
+Such pulses may cause ablation or other kinds of degradation of the absorber material.
+Therefore, the specifications of beam dumps may contain limitations to the allowable <a href="fluence.html" title="optical energy per unit area">fluence</a> (in J/cm<sup>2</sup>) of pulses in addition to a limit for the average power.</p>
+</div>
+<h2 class="togglediv">Mounting</h2>
+<div>
+<p>Permanently needed beam dumps should usually be rigidly fixed in the optical setup, e.g. using screws.
+It may also be helpful to obtain some heat flow from the beam dump into the base plate.
+In other cases, heating of the base plate may be unwanted (e.g. if thermal expansion courses misalignment of sensitive setups); one may then need to use a mount which minimizes thermal conduction.</p>
+<p>For other beam dumps, which are used only temporarily, it may be more convenient to use a magnetic mount, for example.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_beam_dumps.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 17 suppliers for beam dumps. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.gentec-eo.com/" data-supplier="Gentec Electro-Optics" data-location="product-enc" data-keyword="beam dumps" rel="nofollow" class="bg externallink" title="Visit the website of Gentec Electro-Optics"><img src="./bg/logos/gentec_electro_optics.png" alt="Gentec Electro-Optics" class="supplierlogo"></a><a href="https://www.gentec-eo.com/laser-beam-dump" data-supplier="Gentec Electro-Optics" data-location="product-enc" data-keyword="beam dumps" rel="nofollow" class="bg externallink" title="Visit the website of Gentec Electro-Optics"><img src="./bg/products/gentec_electro_optics/beam_dumps.jpg" alt="beam dumps" class="product"></a><h3><a href="./bg/profiles/gentec_electro_optics.html" title="See the profile of Gentec Electro-Optics">Gentec Electro-Optics</a></h3><p>The <a href="https://www.gentec-eo.com/laser-beam-dump" data-supplier="Gentec Electro-Optics" data-location="product-enc" data-keyword="beam dumps" rel="nofollow" class="externallink bg">BD Series beam dumps</a> are rugged and easy-to-use, simply plug the water-cooling and you’re ready to go! Like our high power HP Series, these beam dumps have a highly resistant absorber that can withstand 4&nbsp;kW or even 12&nbsp;kW in continuous mode. Their very large aperture of 100&nbsp;mm in diameter accommodates even the largest beams.</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.edmundoptics.com/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="beam dumps" rel="nofollow" class="bg externallink" title="Visit the website of Edmund Optics"><img src="./bg/logos/edmund_optics.png" alt="Edmund Optics" class="supplierlogo"></a><a href="http://www.edmundoptics.com/c/laser-protection/962/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="beam dumps" rel="nofollow" class="bg externallink" title="Visit the website of Edmund Optics"><img src="./bg/products/edmund_optics/beam_dumps.jpg" alt="beam dumps" class="product"></a><h3><a href="./bg/profiles/edmund_optics.html" title="See the profile of Edmund Optics">Edmund Optics</a></h3><p>Edmund Optics offers <a href="http://www.edmundoptics.com/f/acktar-blackened-laser-beam-traps-and-blocks/39581/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="beam dumps" rel="nofollow" class="externallink bg">Acktar blackend laser beam traps and blocks</a> and other kinds of <a href="http://www.edmundoptics.com/f/metric-beam-dump-5cceafa7/12596/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="beam dumps" rel="nofollow" class="externallink bg">beam dumps</a>.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="beam_dumps.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="beam_shutters.html" title="devices for blocking or releasing light beams">beam shutters</a>, <a href="black_coatings.html" title="coatings with strong light absorption">black coatings</a><br>and other articles in the category <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/beam_dumps.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fbeam_dumps.html&text=RP+Photonics+Encyclopedia+-+beam+dumps%2C+block%2C+trap%2C+scattered+light%2C+cooling%2C+laser+safety%2C+high-power+lasers" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fbeam_dumps.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fbeam_dumps.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/beam_dumps.html"&gt;<br>Article on Beam Dumps&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/beam_dumps.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/beam_dumps.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/beam_dumps.html<br>article on 'Beam Dumps' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2 style="font-size:20px;">Debugging Is Now Fun!</h2>
+<p>The software products which are supporting our <a href="./software_script_language.html?banner=Debugger">script language</a> (e.g. <a href="./fiberpower.html?banner=Debugger">RP Fiber Power</a> and <a href="./coating.html?banner=Debugger">RP Coating</a>) have now got a <a href="./software_news_2017_05_31.html?banner=Debugger">powerful debugger</a>!</p>
+<a href="./software_news_2017_05_31.html?banner=Debugger"><img src="./img/expression_debugger_small.png" alt="debugger" style="margin:10px 0;"></a>
+<p>It works even within expressions, not only after each command!</p>
+<p>The <a href="./software_news.html?banner=Debugger">RP Photonics Software News</a> keep you informed.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="Z92uZ6bzITf0fRXRIxzZFQ==">shownbanner = "Debugger";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Encyclopedia as a Book</h2>
+<p>You know this famous encyclopedia from our website.
+This is a free service of <a href="./index.html?banner=encyclopedia_book">RP Photonics</a> to the worldwide photonics community.</p>
+<p>The encyclopedia is also available as a two-volume print version.
+Don't you think that it would deserve a place in your institute or group library?</p>
+<p style="text-align:center; margin:10px 0;"><a href="http://www.wiley-vch.de/publish/en/books/bySubjectEE00/ISBN3-527-40828-2"><img src="./img/encyclopedia_cover_medium.png" alt="Encyclopedia of Laser Physics and Technology"></a></p>
+<p>Click on the image to get to Wiley-VCH, were you can order the book.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="Z92uZ6bzITf0fRXRIxzZFQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/beam_dumps.html"
+    },
+    "headline": "Beam Dumps",
+    "image": "https://www.rp-photonics.com/previews/beam_dumps.png",
+    "datePublished": "2019-03-25",
+    "dateModified": "2020-03-14",
+    "description": "Beam dumps are required to safely absorb laser beams, avoiding laser hazards and other problematic effects. Besides complete blocking of a beam, avoiding scattered light may be important.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter B",
+      "item": "https://www.rp-photonics.com/encyclopedia_b.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "beam dumps",
+      "item": "https://www.rp-photonics.com/beam_dumps.html"
+    }]}
+}
+</script>
+</body>
+</html>

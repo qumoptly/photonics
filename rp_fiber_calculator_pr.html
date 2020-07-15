@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-kILsodRLEWy+Up8PC8ZgOg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>The fiber optics software RP Fiber Calculator: light propagation in the fiber</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/rp_fiber_calculator_pr.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-05-06">
+<meta name="description" content="Documentation for the software RP Fiber Calculator of RP Photonics Consulting GmbH, which can calculate fiber mode properties and light propagation in fibers.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="RP Fiber Calculator, software, fiber optics, documentation, propagation, light, fiber, near field, far field">
+<script type="text/javascript" src="./jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" nonce="kILsodRLEWy+Up8PC8ZgOg==">
+page="rp_fiber_calculator_pr.html"; cat="S"; shownbanner=""; ref="http://www.rp-photonics.com/rp_fiber_calculator_docu.html?banner=RP_Fiber_Calculator"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td class="selected"><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="rp_fiber_calculator_pr_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software_start" href="software.html">Introduction</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<p>Products:</p>
+<a id="Overview" href="software_overview.html">Overview</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html" class="sel">RP Fiber Calculator</a>
+<a href="rp_fiber_calculator_download.html" class="sub">Download</a>
+<a href="rp_fiber_calculator_docu.html" class="sub">Documentation</a>
+<a href="rp_fiber_calculator_feedback.html" class="sub">Feedback</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<p>Various aspects:</p>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<p>Take action:</p>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main"><main>
+<div class="softwarelogo">
+<p class="fig" style="margin-top:12px"><img src="img/fiberpower_logo.png" width="75" height="75" alt="RP Fiber Power logo"></p>
+</div>
+<p class="breadcrumbs"><a href="software.html">Software</a> &gt; <a href="rp_fiber_calculator.html">RP Fiber Calculator</a> &gt; <a href="rp_fiber_calculator_docu.html">Documentation</a> &gt; <a href="rp_fiber_calculator_pr.html">Propagation</a></p>
+<h1>RP Fiber Calculator &ndash; Documentation</h1>
+<p>Here we explain in detail how the <b>RP Fiber Calculator</b> software is used. <br>
+Each of the menu items explains one of the tabs.</p>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="rp_fiber_calculator_docu.html">Index profiles</a></td>
+<td class="sub_nav"><a class="sub_n" href="rp_fiber_calculator_gm.html">Guided modes</a></td>
+<td class="sub_nav"><a class="sub_n" href="rp_fiber_calculator_la.html">Launching a beam</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="rp_fiber_calculator_pr.html">Propagation</a></td>
+<td class="sub_nav"><a class="sub_n" href="rp_fiber_calculator_co.html">Fiber to fiber</a></td>
+<td class="sub_nav"><a class="sub_n" href="rp_fiber_calculator_fe.html">Fiber ends</a></td>
+</tr>
+</table>
+<h2 class="togglediv">Propagation</h2>
+<div>
+<p>Here you can simulate how launched light propagates in the fiber or after exiting the fiber.
+This is based on the parameters entered in the tabs &ldquo;Index profile&rdquo;, &ldquo;Guided modes&rdquo; and &ldquo;Launching a beam&rdquo;.
+In addition, you just select the propagation length in the fiber with the track bar.
+The step size on that bar is automatically chosen such that the transverse profile can change significantly, but not strongly in one step.</p>
+<figure>
+<img src="img/rp_fiber_calculator_pr.png" alt="RP Fiber Calculator, light propagation">
+</figure>
+<p>The calculation is done when you press on the button &ldquo;Calculate profile&rdquo;.
+If you have selected &ldquo;automatic on change of z&rdquo;, this also happens automatically when the <span class="eqn_il"><i>z</i></span> position is changed.</p>
+<h3 class="togglediv">Settings</h3>
+<div>
+<aside class="textbox tb_right redmargin" style=" width:300px;">
+<p>The <a href="fiberpower.html"><b>RP Fiber Power</b></a> software offers more features:</p>
+<ul>
+<li>create arbitrary plots and diagrams</li>
+<li class="ta_left">export of data in any form</li>
+<li class="ta_left ta_left">do numerical beam propagation (as an alternative to the mode-based approach), allowing arbitrary index profiles, bending of the fiber, nonlinearities, etc.</li>
+<li class="ta_left ta_left ta_left">laser amplification (also with pulsed signals)</li>
+<li class="ta_left ta_left ta_left ta_left">ultrashort pulse propagation with <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>, a wide range of <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a> etc.</li>
+</ul>
+<p>With numerical beam propagation, one can also take into account <a href="cladding_modes.html" title="modes in optical fibers (or other waveguides) which are not restricted to the region around the core">cladding modes</a>, arbitrary asymmetric index profiles, arbitrary bending, fiber <a href="tapered_fibers.html" title="optical fibers which are over some length stretched out to a very small diameter">tapers</a>, &hellip;</p>
+</aside>
+<p>The following settings affect the display:</p>
+<ul>
+<li>Intensity or amplitude.
+In the latter case, the color codes the phase of the complex amplitude, whereas the intensity determines the color saturation.</li>
+<li>Near field or far field: show the profile in the fiber (in real space) or in the far field after exiting the fiber (with angular coordinates).</li>
+<li>Size of the display: use the smaller size for higher speed.</li>
+</ul>
+</div>
+<h3 class="togglediv">The Generated Diagram</h3>
+<div>
+<p>If the diagram shows intensities, the used color scale is displayed in the form of a bar on the right side of the diagram.
+For complex amplitudes, the color scale is shown as a two-dimensional region.
+Note also that the color scale is automatically adjusted according to the peak intensity of the profile at the current <span class="eqn_il"><i>z</i></span> position.</p>
+<p>By clicking on the profile image with the right mouse button (PRO version only), you can call a context menu which allows you to copy the profile to the Windows clipboard.</p>
+</div>
+<h3 class="togglediv">How the Calculations are Done</h3>
+<div>
+<p>The software does the calculations as follows:</p>
+<ul>
+<li>From the launch conditions, a complex amplitude for the excitation of each guided mode is calculated.</li>
+<li>From the phase constants of the modes, the phase changes for propagation up to a certain position in the fiber can be calculated.
+(Changes in optical power due to propagation losses are not considered.)</li>
+<li>At the requested position, the total complex field is calculated as a superposition of the contribution of all guided modes.
+(Cladding modes are not considered.)
+The intensity profile can be calculated from the amplitudes.</li>
+<li>For the far field, one takes the two-dimensional spatial Fourier transform of the field in the fiber.</li>
+</ul>
+<p>Note that the calculations need more time if the fiber has many guided modes.
+For few modes only, however, the used method is much faster than numerical beam propagation.
+On the other hand, numerical beam propagation (as offered by the <a href="fiberpower.html"><b>RP Fiber Power</b></a> software) can also take into account cladding modes, bending effects, nonlinearities etc.</p>
+</div>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</main></div>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="kILsodRLEWy+Up8PC8ZgOg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Software",
+      "item": "https://www.rp-photonics.com/software.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "RP Fiber Calculator",
+      "item": "https://www.rp-photonics.com/rp_fiber_calculator.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Documentation",
+      "item": "https://www.rp-photonics.com/rp_fiber_calculator_docu.html"
+    },{
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Propagation",
+      "item": "https://www.rp-photonics.com/rp_fiber_calculator_pr.html"
+    }]}
+}
+</script>
+</body>
+</html>

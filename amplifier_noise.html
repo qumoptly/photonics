@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-kDMFNGQjS2/91F5BHUfAnw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - amplifier noise, spontaneous emission, excess noise, quantum limit</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/amplifier_noise.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Amplifier noise is noise with which a signal in an amplifier device (e.g., a fiber amplifier) is contaminated.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="amplifier noise, spontaneous emission, excess noise, quantum limit">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Amplifier Noise">
+<meta property="og:description" content="Amplifier noise is noise with which a signal in an amplifier device (e.g., a fiber amplifier) is contaminated.">
+<meta property="og:url" content="https://www.rp-photonics.com/amplifier_noise.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/amplifier_noise.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Amplifier noise is noise with which a signal in an amplifier device (e.g., a fiber amplifier) is contaminated.">
+<meta name="twitter:title" content="Amplifier Noise">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/amplifier_noise.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="kDMFNGQjS2/91F5BHUfAnw==">
+page="amplifier_noise.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo sponsor"></a> <a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo sponsor"></a> <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="kDMFNGQjS2/91F5BHUfAnw==">shownsponsors="eagleyard Photonics,El.En.,Optikexpertisen,TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_a.html">letter A</a> &gt; <a href="amplifier_noise.html">amplifier noise</a></p>
+<h1>Amplifier Noise</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="boxadvertisement">
+<h2>Analyzing Amplifier Noise</h2>
+<p>Ask <a href="index.html">RP Photonics</a> for advice on how to model amplifier noise, and how to find the optimum amplifier configuration.
+Or use the software <a href="fiberpower.html"><b>RP Fiber Power</b></a> for calculating the noise figure of an amplifier, and check its dependence on design and operation parameters.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: noise introduced to a signal in an amplifier device</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Verstärkerrauschen</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#optical_amplifiers" title="other articles on optical amplifiers">optical amplifiers</a>, <a href="categories.html#lightwave_communications" title="other articles on lightwave communications">lightwave communications</a></p>
+<p><a href="encyclopedia_cite.html?article=amplifier%20noise">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Apart from amplifying the input signal, every optical <a href="optical_amplifiers.html" title="devices for amplifying the power of light beams">amplifier</a> also adds some <em>excess noise</em> to the output.
+This is often quantified with the so-called <a href="noise_figure.html" title="a measure of the excess noise added in an amplifier">noise figure</a>.</p>
+<p>For phase-insensitive amplifiers (i.e., those where the <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> does not depend on the <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">phase</a> of the input), <a href="quantum_optics.html" title="the part of optics which deals with quantum effects">quantum optics</a> dictates some minimum <a href="quantum_noise.html" title="noise arising from quantum fluctuations">quantum noise</a> level of the added noise.
+For example, for high gain applied to a <a href="shot_noise.html" title="quantum-limited intensity noise">shot-noise</a> limited input (a <a href="coherent_states.html" title="a special kind of pure quantum-mechanical states of light">coherent state</a>), the output noise power of the <a href="intensity_noise.html" title="noise of the optical intensity or power of a laser beam">intensity noise</a> must be at least <em>twice</em> that of a hypothetical noiseless amplifier, i.e., the minimum <a href="noise_figure.html" title="a measure of the excess noise added in an amplifier">noise figure</a> is 2, corresponding to 3&nbsp;<a href="decibel.html" title="a logarithmic measure for power ratios, applied e.g. to optical powers or to noise powers">dB</a>.
+The <a href="phase_noise.html" title="noise of the optical phase of a beam or of an electric signal">phase noise</a> is also increased.</p>
+<h2 class="togglediv">Origins of Amplifier Noise</h2>
+<div>
+<p>For laser amplifiers (based on <a href="stimulated_emission.html" title="a quantum effect, where photon emission is triggered by other photons">stimulated emission</a>, e.g. <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifiers</a>), the unavoidable excess <a href="laser_noise.html" title="fluctuations of various parameters of laser light, such as the optical power and phase">noise</a> can be regarded as arising from <a href="spontaneous_emission.html" title="a quantum effect, causing the spontaneous decay of excited states of atoms or ions">spontaneous emission</a> of the <a href="gain_media.html" title="media for laser amplification">gain medium</a> into the amplified mode.
+For a <a href="four_level_and_three_level_gain_media.html" title="laser gain media without/with reabsorption from the lower laser level">four-level</a> gain medium with a low-noise pump, the excess noise can approach the minimum quantum-mechanically allowed level.
+(Note that the gain medium acts as an energy reservoir, effectively damping the influence of high-frequency pump noise.)
+The use of <a href="four_level_and_three_level_gain_media.html" title="laser gain media without/with reabsorption from the lower laser level">quasi-three-level</a> gain media leads to additional excess noise, because for a given <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> the upper-state population (and thus the <a href="spontaneous_emission.html" title="a quantum effect, causing the spontaneous decay of excited states of atoms or ions">spontaneous emission</a>) has to be higher to compensate for the signal reabsorption.
+The additional increase in noise in such situations can be quantified with a <em>spontaneous emission factor</em>, which decreases for increasing excitation levels.</p>
+<p><a href="raman_amplifiers.html" title="optical amplifiers based on Raman gain">Raman amplifiers</a> behave similarly, if operated at not too high temperatures.
+They can have fairly low <a href="noise_figure.html" title="a measure of the excess noise added in an amplifier">noise figures</a>, if the <a href="propagation_losses.html" title="losses of optical energy during propagation of light">propagation losses</a> are small.</p>
+<p>In a <em>non-degenerate</em> <a href="optical_parametric_amplifiers.html" title="optical amplifiers based on parametric nonlinear interactions">optical parametric amplifier</a>, the excess noise comes from vacuum fluctuations entering the idler port, and possibly also from the pump wave.
+A <em>degenerate</em> parametric amplifier does not need to add excess noise (it has no idler!), but its amplification is phase-sensitive.</p>
+<p>In addition to quantum noise, classical fluctuations of the pump source can also cause excess noise.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="amplifier_noise.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">H. Kogelnik and A. Yariv, &ldquo;Considerations of noise and schemes for its reduction in laser amplifiers&rdquo;, Proc. IEEE 52 (2), 165 (1964), <a href="https://doi.org/10.1109/PROC.1964.2805">doi:10.1109/PROC.1964.2805</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">C. M. Caves, &ldquo;Quantum limits on noise in linear amplifiers&rdquo;, Phys. Rev. D 26 (8), 1817 (1982), <a href="https://doi.org/10.1103/PhysRevD.26.1817">doi:10.1103/PhysRevD.26.1817</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">Y. Yamamoto, &ldquo;AM and FM quantum noise in semiconductor lasers - Part I: Theoretical analysis&rdquo;, IEEE J. Quantum Electron.19 (1), 34 (1983), <a href="https://doi.org/10.1109/JQE.1983.1071726">doi:10.1109/JQE.1983.1071726</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">R. Loudon, &ldquo;Theory of noise accumulation in linear optical-amplifier chains&rdquo;, IEEE J. Quantum Electron.21 (7), 766 (1985), <a href="https://doi.org/10.1109/JQE.1985.1072735">doi:10.1109/JQE.1985.1072735</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">C. R. Giles and E. Desurvire, &ldquo;Propagation of signal and noise in concatenated erbium-doped fiber optical amplifiers&rdquo;, IEEE J. Lightwave Technol. 9 (2), 147 (1991), <a href="https://doi.org/10.1109/50.65871">doi:10.1109/50.65871</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">E. Desurvire <i>et al.</i>, &ldquo;Characterization and modeling of amplified spontaneous emission in unsaturated erbium-doped fiber amplifiers&rdquo;, IEEE Photon. Technol. Lett. 3 (2), 127 (1991), <a href="https://doi.org/10.1109/68.76863">doi:10.1109/68.76863</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="noise_figure.html" title="a measure of the excess noise added in an amplifier">noise figure</a>, <a href="spontaneous_emission.html" title="a quantum effect, causing the spontaneous decay of excited states of atoms or ions">spontaneous emission</a>, <a href="quantum_noise.html" title="noise arising from quantum fluctuations">quantum noise</a>, <a href="amplified_spontaneous_emission.html" title="a process where spontaneously emitted radiation (luminescence) is amplified">amplified spontaneous emission</a>, <a href="optical_amplifiers.html" title="devices for amplifying the power of light beams">optical amplifiers</a>, <a href="laser_noise.html" title="fluctuations of various parameters of laser light, such as the optical power and phase">laser noise</a>, <a href="spotlight_2006_07_16.html">The Photonics Spotlight 2006-07-16</a><br>and other articles in the categories <a href="categories.html#optical_amplifiers" title="other articles on optical amplifiers">optical amplifiers</a>, <a href="categories.html#lightwave_communications" title="other articles on lightwave communications">lightwave communications</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/amplifier_noise.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Famplifier_noise.html&text=RP+Photonics+Encyclopedia+-+amplifier+noise%2C+spontaneous+emission%2C+excess+noise%2C+quantum+limit" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Famplifier_noise.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Famplifier_noise.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/amplifier_noise.html"&gt;<br>Article on Amplifier Noise&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/amplifier_noise.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/amplifier_noise.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/amplifier_noise.html<br>article on 'Amplifier Noise' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Corona Virus Crisis</h2>
+<p>It is interesting and instructive to realize certain analogies between the spread of an epidemic and elementary processes in lasers. In particular, one can <b>learn about the power of expnential growth</b> and the <b>threshold behavior</b>.</p>
+<p style="font-size:130%; margin:20px 0;">Read the article: <br> "<a href="./spotlight_2020_03_16.html?banner=Corona">Laser Physics Helps to Understand the Corona Virus Crisis</a>"!</p>
+<p>Comments are welcome &ndash; see the input form below the article.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="kDMFNGQjS2/91F5BHUfAnw==">shownbanner = "Corona";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Latest Encyclopedia Articles</h2>
+<p>Here are the latest encyclopedia articles:</p>
+<ul>
+<li class="tight"><a href="./variable_reflectivity_mirrors.html">variable reflectivity mirrors</a></li>
+<li class="tight"><a href="./color_centers.html">color centers</a></li>
+<li class="tight"><a href="./excimer_lamps.html">excimer lamps</a></li>
+<li class="tight"><a href="./multimode_beams.html">multimode beams</a></li>
+<li class="tight"><a href="./channel_waveguides.html">channel waveguides</a></li>
+<li class="tight"><a href="./optical_crystals.html">optical crystals</a></li>
+<li class="tight"><a href="./standing_wave_resonators.html">standing-wave resonators</a></li>
+<li class="tight"><a href="./nonlinear_absorption.html">nonlinear absorption</a></li>
+<li class="tight"><a href="./passive_fibers.html">passive fibers</a></li>
+<li class="tight"><a href="./active_fibers.html">active fibers</a></li>
+<li class="tight"><a href="./oem_laser_modules.html">OEM laser modules</a></li>
+<li class="tight"><a href="./industrial_lasers.html">industrial lasers</a></li>
+<li class="tight"><a href="./scientific_lasers.html">scientific lasers</a></li>
+<li class="tight"><a href="./flint_glasses.html">flint glasses</a></li>
+<li class="tight"><a href="./crown_glasses.html">crown glasses</a></li>
+<li class="tight"><a href="./sodium_vapor_lamps.html">sodium vapor lamps</a></li>
+<li class="tight"><a href="./metal_vapor_lamps.html">metal vapor lamps</a></li>
+<li class="tight"><a href="./mercury_vapor_lamps.html">mercury vapor lamps</a></li>
+<li class="tight"><a href="./white_light.html">white light</a></li>
+<li class="tight"><a href="./cie_standard_illuminants.html">CIE standard illuminants</a></li>
+</ul>
+
+<p>The encyclopedia already contains 948 articles.</p>
+<p>See also the regularly appearing articles of the <a href="./spotlight.html?banner=new_articles">The Photonics Spotlight</a> and the <a href="./software_news.html?banner=new_articles">RP Photonics Software News</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="kDMFNGQjS2/91F5BHUfAnw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/amplifier_noise.html"
+    },
+    "headline": "Amplifier Noise",
+    "image": "https://www.rp-photonics.com/previews/amplifier_noise.png",
+    "datePublished": "2006-12-07",
+    "dateModified": "2020-03-14",
+    "description": "Amplifier noise is noise with which a signal in an amplifier device (e.g., a fiber amplifier) is contaminated.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter A",
+      "item": "https://www.rp-photonics.com/encyclopedia_a.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "amplifier noise",
+      "item": "https://www.rp-photonics.com/amplifier_noise.html"
+    }]}
+}
+</script>
+</body>
+</html>

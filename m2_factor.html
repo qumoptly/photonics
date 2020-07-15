@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-IGgCfLwC73DFZT8nLCoRrg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - M2 factor, laser beam, quality factor, beam divergence, caustic, ISO Standard 11146</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/m2_factor.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-06-25">
+<meta name="description" content="The M2 factor is a parameter for quantifying the beam quality of laser beams. It is strongly related to the beam parameter product.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="M2 factor, laser beam, quality factor, beam divergence, caustic, ISO Standard 11146">
+<meta property="og:type" content="article">
+<meta property="og:title" content="<i>M</i><sup>2</sup> Factor">
+<meta property="og:description" content="The M2 factor is a parameter for quantifying the beam quality of laser beams. It is strongly related to the beam parameter product.">
+<meta property="og:url" content="https://www.rp-photonics.com/m2_factor.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/m2_factor.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="The M2 factor is a parameter for quantifying the beam quality of laser beams. It is strongly related to the beam parameter product.">
+<meta name="twitter:title" content="<i>M</i><sup>2</sup> Factor">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/m2_factor.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="IGgCfLwC73DFZT8nLCoRrg==">
+page="m2_factor.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="IGgCfLwC73DFZT8nLCoRrg==">shownsponsors="eagleyard Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_m.html">letter M</a> &gt; <a href="m2_factor.html"><i>M</i><sup>2</sup> factor</a></p>
+<h1><i>M</i><sup>2</sup> Factor</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="boxadvertisement">
+<h2>Advice on Laser Beam Quality</h2>
+<p>Ask <a href="index.html">RP Photonics</a> for any advice concerning laser beam quality, e.g. requirements for specific applications or measurement techniques.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a parameter for quantifying the beam quality of laser beams</p>
+<p>Alternative term: beam quality factor</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de"><i>M</i><sup>2</sup>-Faktor</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a></p>
+<p>Formula symbol: <span class="eqn_il"><i>M</i><sup>2</sup></span></p>
+<p>Units: (dimensionless)</p>
+<p><a href="encyclopedia_cite.html?article=M2%20factor">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>The <i>M</i><sup>2</sup> factor, also called <em>beam quality factor</em> or <em>beam propagation factor</em>, is a common measure of the <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a> of a <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a>.
+According to ISO Standard 11146 [4], it is defined as the <a href="beam_parameter_product.html" title="product of the beam radius in a focus and the far-field beam divergence">beam parameter product</a> divided by <span class="eqn_il"><span class="greek">&lambda;</span>&thinsp;/&thinsp;<span class="greek">&pi;</span></span>, the latter being the beam parameter product for a <a href="diffraction_limited_beams.html" title="beams with a minimum possible beam divergence for a given waist radius">diffraction-limited</a> <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beam</a> with the same <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>.
+In other words, the half-angle <a href="beam_divergence.html" title="a measure for how fast a laser beam expands far from its focus">beam divergence</a> is</p>
+<div class="eqn"><img src="eqn/theta_m2.gif" width="85" height="45" alt="beam divergence for non-ideal laser beam"></div>
+<p>where <span class="eqn_il"><i>w</i><sub>0</sub></span> is the <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a> at the <a href="beam_waist.html" title="location with minimum beam radius">beam waist</a> and <span class="eqn_il"><span class="greek">&lambda;</span></span> the wavelength.
+A laser beam is often said to be &ldquo;<span class="eqn_il"><i>M</i><sup>2</sup></span> times diffraction-limited&rdquo;.</p>
+<p>A <a href="diffraction_limited_beams.html" title="beams with a minimum possible beam divergence for a given waist radius">diffraction-limited beam</a> has an <span class="eqn_il"><i>M</i><sup>2</sup></span> factor of 1, and is a <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beam</a>.
+Smaller values of <span class="eqn_il"><i>M</i><sup>2</sup></span> are physically not possible.
+A <a href="hermite_gaussian_modes.html" title="propagation modes or resonator modes which are described with Hermite&ndash;Gaussian functions">Hermite&ndash;Gaussian</a> beam, related to a TEM<sub>nm</sub> <a href="resonator_modes.html" title="modes of an optical or microwave resonator">resonator mode</a>, has an <span class="eqn_il"><i>M</i><sup>2</sup></span> factor of <span class="eqn_il">(2<i>n</i>&thinsp;+&thinsp;1)</span> in the <span class="eqn_il"><i>x</i></span> direction, and <span class="eqn_il">(2<i>m</i>&thinsp;+&thinsp;1)</span> in the <span class="eqn_il"><i>y</i></span> direction [1].</p>
+<p>The <span class="eqn_il"><i>M</i><sup>2</sup></span> factor of a laser beam limits the degree to which the beam can be focused for a given <a href="beam_divergence.html" title="a measure for how fast a laser beam expands far from its focus">beam divergence</a> angle, which is often limited by the <a href="numerical_aperture.html" title="sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a> of the focusing <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lens</a>.
+Together with the <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a>, the beam quality factor determines the <a href="brightness.html" title="a term mostly used in a qualitative way, related to the output power and beam quality of a laser; quantitatively: often used instead of radiance or luminance">brightness</a> (more precisely, the <a href="radiance.html" title="the optical power per unit area and solid angle">radiance</a>) of a laser beam.</p>
+<form id="calculate_beam_quality" class="calculatorform">
+<h2>Beam Quality Calculations</h2>
+<table>
+<tr>
+<td>Center wavelength:</td><td></td><td></td>
+<td><input name="lambda" value="" class="cf_calculate_beam_quality"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td><i>M</i><sup>2</sup> factor:</td><td></td><td></td>
+<td><input name="M2" value="" class="cf_calculate_beam_quality"></td>
+<td><span class="calcbutton" id="calc_M2">calc</span></td><td>(from BPP)</td>
+</tr>
+<tr>
+<td>Beam parameter product:</td><td></td><td></td>
+<td><input name="BPP" value="" class="cf_calculate_beam_quality"></td>
+<td><span class="calcbutton" id="calc_BPP">calc</span></td><td>(from M<sup>2</sup>)</td>
+</tr>
+<tr>
+<td>Beam waist radius:</td><td></td><td></td>
+<td><input name="w0" value="" class="cf_calculate_beam_quality"></td>
+<td><span class="calcbutton" id="calc_w0">calc</span></td><td>(using the BPP)</td>
+</tr>
+<tr>
+<td>Divergence half-angle:</td><td></td><td></td>
+<td><input name="theta" value="" class="cf_calculate_beam_quality"></td>
+<td><span class="calcbutton" id="calc_theta">calc</span></td><td>(using the BPP)</td>
+</tr>
+</table>
+<p class="comment">Enter input values with units, where appropriate. After you have modified some values, click a "calc" button to recalculate the field left of it.</p>
+<noscript>
+<p style="color:red">Attention: The buttons do not work, as Javascript is turned off in your browser!</p>
+</noscript>
+</form>
+<script type="text/javascript" src="calcform.js"></script>
+<script type="text/javascript" nonce="IGgCfLwC73DFZT8nLCoRrg==">
+funits = new Array();
+funits["lambda"] = "m";
+funits["M2"] = "";
+function calc_M2() {
+  $("input[name=M2]").val("???");
+  GetFieldValues("M2","calculate_beam_quality");
+  M2 = (BPP*1e-6)/(lambda/Math.PI);
+  $("input[name=M2]").val(format_u(M2, ""));
+ }
+funits["BPP"] = "&mm mrad";
+function calc_BPP() {
+  $("input[name=BPP]").val("???");
+  GetFieldValues("BPP","calculate_beam_quality");
+  BPP = (lambda/pi)*M2/1e-6;
+  $("input[name=BPP]").val(format_u(BPP, "&mm mrad"));
+ }
+funits["w0"] = "m";
+function calc_w0() {
+  $("input[name=w0]").val("???");
+  GetFieldValues("w0","calculate_beam_quality");
+  w0 = (BPP*1e-6)/theta;
+  $("input[name=w0]").val(format_u(w0, "m"));
+ }
+funits["theta"] = "rad";
+function calc_theta() {
+  $("input[name=theta]").val("???");
+  GetFieldValues("theta","calculate_beam_quality");
+  theta = (BPP*1e-6)/w0;
+  $("input[name=theta]").val(format_u(theta, "rad"));
+ }
+$("input[name=lambda]").val("1064 nm");
+$("input[name=M2]").val("1");
+calc_BPP();
+$("input[name=w0]").val("1 mm");
+calc_theta();
+$(document).ready(function() {
+  $("span#calc_M2").click(function() { calc_M2() })
+  $("span#calc_BPP").click(function() { calc_BPP() })
+  $("span#calc_w0").click(function() { calc_w0() })
+  $("span#calc_theta").click(function() { calc_theta() })
+});
+</script>
+<p>For not circularly symmetric beams, the <span class="eqn_il"><i>M</i><sup>2</sup></span> factor can be different for two directions orthogonal to the beam axis and to each other.
+This is particularly the case for the output of <a href="diode_bars.html" title="a type of semiconductor laser containing a one-dimensional array of broad-area emitters">diode bars</a>, where the <span class="eqn_il"><i>M</i><sup>2</sup></span> factor is fairly low for the <em>fast axis</em> and much higher for the <em>slow axis</em>.</p>
+<p>According to ISO Standard 11146 [4], the <span class="eqn_il"><i>M</i><sup>2</sup></span> factor can be calculated from the measured evolution of the <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a> along the propagation direction (i.e. from the so-called <em>caustic</em>).
+See the article on <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a> for more details.
+A number of rules have to be observed, e.g. concerning the exact definition of the <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a> and details of the fitting procedure.
+Alternative methods are based on wavefront sensors, e.g. Shack&ndash;Hartmann sensors, which require the <a href="laser_beam_characterization.html" title="methods of assessing detailed properties of laser beams">characterization</a> of the beam only in a single plane.</p>
+<p>Note that the <span class="eqn_il"><i>M</i><sup>2</sup></span> factor, being a single number, cannot be considered as a complete characterization of beam quality.
+The actual quality of a beam for a certain application can depend on details which are not captured with such a single number. </p>
+<p>The concept of the <span class="eqn_il"><i>M</i><sup>2</sup></span> factor not only allows one to quantify the beam quality with a single number, but also to predict the evolution of the <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a> with a technically very simple extension of the <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beam</a> analysis: one simply has to replace the <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a> with <span class="eqn_il"><i>M</i><sup>2</sup></span> times the wavelength in all equations.
+This is very convenient for, e.g., designing the pump optics of <a href="diode_pumped_lasers.html" title="solid-state lasers which are pumped with laser diodes">diode-pumped lasers</a>.
+Note, however, that this method works only when the D4&sigma; method for obtaining the <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a> is used, which is suitable also for non-Gaussian beam shapes; see again ISO Standard 11146 [4] for details.</p>
+<h2 class="togglediv">Errors in <span class="eqn_il"><i>M</i><sup>2</sup></span> Measurements</h2>
+<div>
+<p>Unfortunately, essential details of the ISO 11146 standard are often not observed in <span class="eqn_il"><i>M</i><sup>2</sup></span> measurements, with the result that wrong <span class="eqn_il"><i>M</i><sup>2</sup></span> values are obtained or even published.
+Some frequently made mistakes in measurements based on the beam caustic are explained in the following:</p>
+<ul>
+<li>The <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a> is measured with a simple criterion, not based on the full intensity profile, although the beam profiles are not all close to <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian</a>.
+Only for nearly Gaussian beam shapes, such simple measurement methods are allowed.
+For others, the D4&sigma; method based on the second moment of the intensity distribution must be used.</li>
+<li>The beam is focused too tightly, so that the <a href="beam_waist.html" title="location with minimum beam radius">beam waist</a> is too small to measure its <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a> precisely.
+For example, a CCD <a href="cameras.html" title="optical instruments for recording still or moving images">camera</a> has a limited spatial resolution; it cannot be used for precise measurements if the beam diameter corresponds only to a few pixels.</li>
+<li>Background subtraction, a sensitive issue for the second-moment method, is not correctly done.
+Camera images can exhibit some background intensity level, which may either really be belonging to the laser beam (and should not be removed then) or is an artifact which must be removed.
+If such a background results from ambient light, the most reliable measure is to switch this off, or to carefully shield it with a black tube in front of the camera.
+(Subtracting a fixed level for all images is problematic since ambient light levels may change, e.g. when somebody moves in the room.)
+The background issue is particularly serious when the beam size is only a fraction of the camera's sensitive area.</li>
+<li>The beam intensity on a camera is too high or too low.
+If it is too high, the center pixels may be saturated, so that the beam intensity at the center is underestimated and the measured beam radius is too large.
+For too low intensities, intensity background issues may become more severe.</li>
+<li>The beam radii are not measured sufficiently far from the focus.
+In order to properly judge the <a href="beam_divergence.html" title="a measure for how fast a laser beam expands far from its focus">beam divergence</a>, the ISO 11146 standard demands that about half of the measurement points must be more than two effective Rayleigh lengths away from the beam focus (whereas the other half of the points is close to the focus, i.e., within one Rayleigh length).
+This may be difficult in practice when the beam waist is made relatively large, leading to a long <a href="rayleigh_length.html" title="the distance from a beam waist where the mode radius increased by a factor square root of 2">Rayleigh length</a> and correspondingly large space requirements for a correct measurement.</li>
+</ul>
+<p>When different instruments deliver different <span class="eqn_il"><i>M</i><sup>2</sup></span> values, this may easily be caused by such errors, rather than by the instruments themselves.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="m2_factor.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">A. E. Siegman, &ldquo;New developments in laser resonators&rdquo;, Proc. SPIE 1224, 2 (1990), <a href="https://doi.org/10.1117/12.18425">doi:10.1117/12.18425</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">A. E. Siegman, &ldquo;Defining, measuring, and optimizing laser beam quality&rdquo;, Proc. SPIE 1868, 2 (1993), <a href="https://doi.org/10.1117/12.150601">doi:10.1117/12.150601</a></td></tr>
+<tr><td class="refno"><sup>&nbsp;</sup>[3]</td><td class="refs">X. Luo <i>et al.</i>, &ldquo;Power content M<sup>2</sup>-values smaller than one&rdquo;, Appl. Phys. B 98 (1), 181 (2010), <a href="https://doi.org/10.1007/s00340-009-3623-8">doi:10.1007/s00340-009-3623-8</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs"><a href="http://www.iso.org/">ISO</a> Standard 11146, &ldquo;Lasers and laser-related equipment &ndash; Test methods for laser beam widths, divergence angles and beam propagation ratios&rdquo; (2005)</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="laser_beam_characterization.html" title="methods of assessing detailed properties of laser beams">laser beam characterization</a>, <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a>, <a href="beam_parameter_product.html" title="product of the beam radius in a focus and the far-field beam divergence">beam parameter product</a>, <a href="beam_divergence.html" title="a measure for how fast a laser beam expands far from its focus">beam divergence</a>, <a href="radiance.html" title="the optical power per unit area and solid angle">radiance</a>, <a href="brightness.html" title="a term mostly used in a qualitative way, related to the output power and beam quality of a laser; quantitatively: often used instead of radiance or luminance">brightness</a>, <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beams</a>, <a href="spotlight_2007_06_11.html">The Photonics Spotlight 2007-06-11</a><br>and other articles in the categories <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/m2_factor.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fm2_factor.html&text=RP+Photonics+Encyclopedia+-+M2+factor%2C+laser+beam%2C+quality+factor%2C+beam+divergence%2C+caustic%2C+ISO+Standard+11146" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fm2_factor.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fm2_factor.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/m2_factor.html"&gt;<br>Article on &lt;i&gt;M&lt;/i&gt;&lt;sup&gt;2&lt;/sup&gt; Factor&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/m2_factor.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/m2_factor.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/m2_factor.html<br>article on '&lt;i&gt;M&lt;/i&gt;&lt;sup&gt;2&lt;/sup&gt; Factor' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="./fiberpower.html?banner=RP_Fiber_Power_6"><img src="./img/fiberpower_ro3b.png" alt="relaxation oscillations" style="margin-bottom:8px"></a>
+<p>Evolution of output power and gain when an Yb-doped fiber laser is switched on. One can see the relaxation oscillations, with convergence towards the steady state. Each red or gray segment corresponds to 0.2&nbsp;&mu;s.</p>
+<p>This diagram has been made with the <a href="./fiberpower.html?banner=RP_Fiber_Power_6"><b>RP Fiber Power</b></a> software.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="IGgCfLwC73DFZT8nLCoRrg==">shownbanner = "RP Fiber Power 6";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Field Guide on Lasers</h2>
+<p>Enjoy a compact introduction to laser technology:</p>
+<ul>
+<li>basic principles</li>
+<li>laser beams</li>
+<li>laser resonators</li>
+<li>various types of lasers</li>
+<li>Q switching and mode locking</li>
+<li>frequency conversion</li>
+<li>laser safety</li>
+</ul>
+<p style="text-align:center;"><a href="http://spie.org/x648.html?product_id=767474"><img src="./img/fg_lasers.png" alt="FG Lasers"></a></p>
+<p>This book soon became a bestseller among the SPIE Field Guides.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="IGgCfLwC73DFZT8nLCoRrg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/m2_factor.html"
+    },
+    "headline": "<i>M</i><sup>2</sup> Factor",
+    "image": "https://www.rp-photonics.com/previews/m2_factor.png",
+    "datePublished": "2005-07-03",
+    "dateModified": "2020-06-25",
+    "description": "The M2 factor is a parameter for quantifying the beam quality of laser beams. It is strongly related to the beam parameter product.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter M",
+      "item": "https://www.rp-photonics.com/encyclopedia_m.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "<i>M</i><sup>2</sup> factor",
+      "item": "https://www.rp-photonics.com/m2_factor.html"
+    }]}
+}
+</script>
+</body>
+</html>

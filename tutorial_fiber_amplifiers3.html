@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-JK0U/wLJvFRpVUkfJ7lfwg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Tutorial &ldquo;Fiber Amplifiers&rdquo;, Part 3: self-consistent solutions for the steady state, shooting method, relaxation methods</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/tutorial_fiber_amplifiers3.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-04-05">
+<meta name="description" content="Tutorial on fiber amplifiers. The third part explains how one obtains self-consistent steady-state solutions for optical powers and excitation densities. This can be a difficult task.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="tutorial, fiber amplifiers, gain, excitation densities, steady state, shooting method, relaxation methods, software">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="JK0U/wLJvFRpVUkfJ7lfwg==">
+page="tutorial_fiber_amplifiers3.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="JK0U/wLJvFRpVUkfJ7lfwg==">shownsponsors="eagleyard Photonics,El.En."</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials" class="selected"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_tutorials.html">Tutorials</a> &gt; <a href="tutorial_fiber_amplifiers.html">Fiber amplifiers</a> &gt; <a href="tutorial_fiber_amplifiers3.html">Part 3</a></p>
+<h1>Fiber Amplifiers</h1>
+<p>This is part 3 of a <a href="tutorial_fiber_amplifiers.html">tutorial on fiber amplifiers</a> from <a href="paschotta.html">Dr. Paschotta</a>. The tutorial has the following parts:</p>
+<div class="article_parts"><span style='float:left; margin:5px 25px 5px 10px; font-size:60px; color:#888; font-weight:bold; line-height:100%;'>3</span>
+<p>1:&nbsp;<a href="tutorial_fiber_amplifiers1.html">Rare earth ions in fibers</a>, 2:&nbsp;<a href="tutorial_fiber_amplifiers2.html">Gain and pump absorption</a>, 3:&nbsp;<span style="text-decoration:underline;">Self-consistent solutions for the steady state</span>, 4:&nbsp;<a href="tutorial_fiber_amplifiers4.html">Amplified spontaneous emission</a>, 5:&nbsp;<a href="tutorial_fiber_amplifiers5.html">Forward and backward pumping</a>, 6:&nbsp;<a href="tutorial_fiber_amplifiers6.html">Double-clad fibers for high-power operation</a>, 7:&nbsp;<a href="tutorial_fiber_amplifiers7.html">Fiber amplifiers for nanosecond pulses</a>, 8:&nbsp;<a href="tutorial_fiber_amplifiers8.html">Fiber amplifiers for ultrashort pulses</a>, 9:&nbsp;<a href="tutorial_fiber_amplifiers9.html">Noise of fiber amplifiers</a>, 10:&nbsp;<a href="tutorial_fiber_amplifiers10.html">Multi-stage fiber amplifiers</a>
+</p>
+</div>
+<h2 class="togglediv">Part 3: Self-consistent Solutions for the Steady State</h2>
+<div>
+<h3 class="togglediv">Total Gain from Local Gain</h3>
+<div>
+<p>Once we know the local gain coefficients along the fiber, the dimensionless overall gain of a fiber amplifier can be calculated by integration over the whole fiber length:</p>
+<div class="eqn"><img src="eqn/total_gain.gif" width="128" height="50" alt="total gain"></div>
+<p>You can multiply this by 4.343 in order to obtain in <a href="decibel.html" title="a logarithmic measure for power ratios, applied e.g. to optical powers or to noise powers">decibels</a>, or take the exponential of it to get the power amplification factor.</p>
+</div>
+<h3 class="togglediv">Self-consistent Steady-State Solutions</h3>
+<div>
+<p>A substantial challenge lies ahead: how to calculate the overall gain in the steady state?
+The equation above seems to make it easy, but how to know the required gain coefficients at all locations in the fiber?
+After all, these depend on the local pump and signal powers, and we don't know these yet!
+They in turn depend on the yet unknown excitation densities.
+Obviously, we need to find a <em>self-consistent solution</em> for the optical powers and excitation densities at all positions in the fiber.</p>
+<p>In some situations, this is relatively simple to get.
+For example, if you have only a copropagating pump and signal, you can calculate the excitation density at the input end, get the local pump absorption and signal gain from that, and use it to propagate the powers a small step into the fiber.
+There, again calculate the excitation densities, the gain and absorption, etc.; just iterate this procedure until you have reached the fiber end.</p>
+<aside class="callout blue">Situations with counterpropagating signal and pump are not necessarily difficult, except if there are multiple waves.</aside>
+<p>For counterpropagating signal and pump, it is a bit more difficult, but you can use the <em>shooting algorithm</em>.
+Start at one end with the signal input and a rough estimate of the pump power remaining there.
+(It depends on the excitation of the fiber, which is not yet known.)
+Then propagate the pump power together with the signal to the other end.
+(The pump power will grow in that direction; you propagate it backward!)
+At the signal output end, you will generally find that the pump power doesn't fit the actually injected pump power.
+However, you can then refine your guess and iterate the procedure until you have the self-consistent solution.</p>
+<p>The real trouble comes when you have multiple counterpropagating waves.
+For example, even if you inject only a single pump wave and no signal, you may get intense light via <a href="amplified_spontaneous_emission.html" title="a process where spontaneously emitted radiation (luminescence) is amplified">amplified spontaneous emission</a> (see <a href="tutorial_fiber_amplifiers4.html">part 4</a>), traveling in both directions.
+In principle, one can generalize the mentioned shooting algorithm, but that involves multi-dimensional root finding.
+The involved exponential dependencies don't make that easier&hellip;</p>
+<aside class="callout blue">The challenge with relaxation methods is to obtain fast and reliable convergence.</aside>
+<p>There are other algorithms such as <em>relaxation methods</em>, where one propagates powers with estimated distributions of the excitation densities and later changes these to reduce errors.
+The challenge is to get such procedures converge nicely, i.e., both quickly and reliably.
+Here, reliability is rather difficult to get, as the behavior of such algorithms can be influenced strongly by various parameters of the amplifier.</p>
+<p>As this part is really hard, you may enjoy very much to have a piece of software which does that job for you.
+For example, our <a href="fiberpower.html">RP Fiber Power</a> software uses a very refined algorithm which does the job quickly and reliably.
+As a user, you just provide all the inputs and get the solution without any hazzle.</p>
+</div>
+<h3 class="togglediv">Example Case: Ytterbium-doped Fiber Amplifier</h3>
+<div>
+<p>As an example, consider an ytterbium-doped fiber amplifier with 500&nbsp;mW pump power at 940&nbsp;nm and a 1-mW signal input at 1030&nbsp;nm:</p>
+<figure>
+<img src="img/fiber_amplifier3.png" alt="ASE in fiber amplifier">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Optical powers along the length of an ytterbium-doped fiber amplifier.
+</figcaption>
+</figure>
+<p>The behavior of the fiber is surprisingly complicated:</p>
+<ul>
+<li>The resulting degree of Yb excitation is highest not at the input, where the pump power is highest, but a bit inside the fiber.
+This is because <a href="amplified_spontaneous_emission.html" title="a process where spontaneously emitted radiation (luminescence) is amplified">amplified spontaneous emission</a> (ASE, see <a href="tutorial_fiber_amplifiers4.html">part 4</a>) in backward direction becomes strong at the left end.</li>
+<li>Forward ASE also has an effect, but only in some region within the fiber.
+(One would hardly notice it in an experiment!)</li>
+<li>On the right side, where the pump is fully exhausted, the signal experiences some reabsorption.
+That is not very strong, however, as the reabsorption is saturated: the signal with &asymp;300&nbsp;mW of power (not the exhausted pump!) maintains the ytterbium excitation at &asymp;7&#37;, strongly reducing the absorption.
+(For a weak signal, that effect would be much stronger.)</li>
+<li>The pump power first drops quickly, then less rapidly where the Yb excitation is highest, and more quickly again.</li>
+</ul>
+<p>The fiber length in the example case was somewhat longer than ideal.
+Note, however, that changing a fiber length can modify ASE power levels in unexpected ways.
+So one should rather calculate such things rather than just guess.</p>
+<p>So we clearly see that the evolution of powers in the fiber depends substantially on the Yb excitations, whereas these of course are determined by the power levels.
+The resulting behavior can be quite complicated, so that even experienced persons are often surprised about the simulated results, and confused about unexpected experimental results.</p>
+<p>Go to <a href="tutorial_fiber_amplifiers4.html">Part 4: Amplified Spontaneous Emission</a> or back to the <a href="tutorial_fiber_amplifiers.html">start page</a>.</p>
+</div>
+</div>
+<hr>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="tutorial_fiber_amplifiers3.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Ftutorial_fiber_amplifiers3.html&text=RP+Photonics+Encyclopedia+-+Tutorial+%26ldquo%3BFiber+Amplifiers%26rdquo%3B%2C+Part+3%3A+self-consistent+solutions+for+the+steady+state%2C+shooting+method%2C+relaxation+methods" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Ftutorial_fiber_amplifiers3.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Ftutorial_fiber_amplifiers3.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></main></div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="https://www.dynasil.com/" data-supplier="Dynasil" data-location="banner" rel="nofollow" class="bg externallink"><img src="./bg/banners/dynasil.jpg" alt="Dynasil"></a>
+</div>
+</aside>
+<script type="text/javascript" nonce="JK0U/wLJvFRpVUkfJ7lfwg==">shownbanner = "Dynasil";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2 style="font-size:150%">Tutorial on<br>Fiber Amplifiers</h2>
+<p>See our <a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial">comprehensive tutorial on fiber amplifiers</a>:</p>
+<ul>
+<li>laser-active dopants, gain and pump absorption</li>
+<li>double-clad fibers, pulse amplification</li>
+<li>ASE, noise issues, multi-stage amplifiers</li>
+</ul>
+<p style="margin-left:10px;"><a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial"><img src="./img/fiber_amplifier_small.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial"><img src="./img/dcf_designs_part.png" style="width:100%" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial"><img src="./img/yb_gain_small.png" alt="&nbsp;"></a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="JK0U/wLJvFRpVUkfJ7lfwg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tutorials",
+      "item": "https://www.rp-photonics.com/encyclopedia_tutorials.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Fiber amplifiers",
+      "item": "https://www.rp-photonics.com/tutorial_fiber_amplifiers.html"
+    },{
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Part 3",
+      "item": "https://www.rp-photonics.com/tutorial_fiber_amplifiers3.html"
+    }]}
+}
+</script>
+</body>
+</html>

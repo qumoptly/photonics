@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-+oqpnJFg6i8sME/F/nINYg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - imaging with a lens, objective, focus, field of view, depth of field, image magnification, resolution, light collection efficiency, aberrations</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/imaging_with_a_lens.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="The article explains the basic principles of optical imaging with a single lens; many aspects can also be applied to multiple-lens systems (objectives). Terms like focusing, field of view, depth of field, image magnification and resolution, light collection efficiency and aberrations are discussed.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="imaging with a lens, objective, focus, field of view, depth of field, image magnification, resolution, light collection efficiency, aberrations">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Imaging with a Lens">
+<meta property="og:description" content="The article explains the basic principles of optical imaging with a single lens; many aspects can also be applied to multiple-lens systems (objectives). Terms like focusing, field of view, depth of field, image magnification and resolution, light collection efficiency and aberrations are discussed.">
+<meta property="og:url" content="https://www.rp-photonics.com/imaging_with_a_lens.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/imaging_with_a_lens.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="The article explains the basic principles of optical imaging with a single lens; many aspects can also be applied to multiple-lens systems (objectives). Terms like focusing, field of view, depth of field, image magnification and resolution, light collection efficiency and aberrations are discussed.">
+<meta name="twitter:title" content="Imaging with a Lens">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/imaging_with_a_lens.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="+oqpnJFg6i8sME/F/nINYg==">
+page="imaging_with_a_lens.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo sponsor"></a> <a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="+oqpnJFg6i8sME/F/nINYg==">shownsponsors="eagleyard Photonics,El.En.,RPMC Lasers"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_i.html">letter I</a> &gt; <a href="imaging_with_a_lens.html">imaging with a lens</a></p>
+<h1>Imaging with a Lens</h1>
+<header style="margin-right:0;">
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: creation of an optical image using a single lens</p>
+<p>More general term: <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Abbildung mit einer Linse</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<p><a href="encyclopedia_cite.html?article=imaging%20with%20a%20lens">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>This article explains the basic working principles of producing <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">optical images</a> with a single <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lens</a>, as e.g. used in various types of <a href="cameras.html" title="optical instruments for recording still or moving images">cameras</a>.
+Most of the aspects are essentially the same when using a multiple-lens system, for example a <a href="photographic_objectives.html" title="objective lenses used for photography">photographic objective</a> or a <a href="microscope_objectives.html" title="the optical component of a microscope which is next to the observed object">microscope objective</a>.</p>
+<p>Essentially, the generation of an optical image means that light received from points of an object is sent to different points on some <a href="image_planes.html" title="planes which are conjugate to an object plane, so that objects are imaged there">image plane</a>, where one may place a photographic film, an electronic <a href="image_sensors.html" title="optoelectronic sensors which can be used for imaging">image sensor</a> or a screen, for example.
+(Three-dimensional imaging is not considered in this article.)</p>
+<p>The simplest possible method of optical imaging, which does not require any lens, but only a <a href="pinholes.html" title="circular holes, typically with diameters well below one millimeter">pinhole</a>, has been realized with the <em>camera obscura</em>.
+This method has the severe disadvantage, however, that it involves a serious trade-off between resolution and light collection.
+One usually requires some method which can collect light from a larger area while maintaining high image resolution.
+The simplest approach with that combination of qualities is based on a single <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lens</a>, as shown in Figure&nbsp;1.</p>
+<figure>
+<img src="img/imaging_with_lens.png" alt="imaging with a lens">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Imaging of points from an object plane to an image plane. The light path is indicated with different colors for two different object points.
+</figcaption>
+</figure>
+<p>Some of the light emitted from a particular point in the object plane (e.g. by <a href="scattering.html" title="processes where light is sent in other directions, usually but not always in random directions">scattering</a> of illumination light on the object) gets to the imaging lens, which focuses it to a corresponding point on the image plane.
+Note that light from the object may be radiated in all kinds of other directions; Figure&nbsp;1 shows only the light which hits the entrance <a href="optical_apertures.html" title="structures which limit the propagation of light">aperture</a> of the lens.</p>
+<p>The obtained image is <em>inverted</em>; for example, points at a lower position on the object are imaged to points at a higher position in the image.
+That image inversion does not matter for recording images with photographic film or an image sensor, but it can be a problem for direct viewing.
+Therefore, one may use additional optics, for example in an SLR <a href="photo_cameras.html" title="optical instruments for taking photographic images">photo camera</a> a pentaprism for obtaining an upright image in the viewfinder.
+Similar techniques are used in some <a href="microscopes.html" title="instruments for seeing very small objects">microscopes</a>, particularly in manipulation microscopes.</p>
+<h2 class="togglediv">Field of View</h2>
+<div>
+<p>For a given size of an electronic image sensor, for example, the angular range over which object points can be imaged (the <a href="field_of_view.html" title="the angular extent of the field which can be observed with an optical instruments or the eye"><em>field of view</em></a>) is approximately twice the arctan of half the sensor dimension divided by the focal length.
+For example, a 24&nbsp;mm wide image sensor (DX format) combined with a 25-mm lens will result in a field of view of &approx;0.90&nbsp;rad, which is approximately 51&deg;.
+That value is similar to the viewing angle of the human eye, and therefore standard objectives work with such values.</p>
+<p>Using the same image sensor in combination with a tele lens, having a larger focal length, the field of view is correspondingly smaller, i.e., one can image more distant objects.</p>
+<figure>
+<img src="img/field_of_view.png" alt="field of view">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+For the same format of an image sensor, a lens with larger focal length leads to a smaller field of view.
+</figcaption>
+</figure>
+<p>If one could increase the sensor size accordingly while maintaining its pixel spacing unchanged, one could image a wider range with the same resolution.
+Usually, however, a <a href="photo_cameras.html" title="optical instruments for taking photographic images">photo camera</a> works with a fixed image sensor, and only the <a href="photographic_objectives.html" title="objective lenses used for photography">photographic objectives</a> can be exchanged.
+Even if one could insert a larger image sensor, the objectives may not be designed for good compensation over its full range.</p>
+<form id="field_of_view" class="calculatorform">
+<h2>Field of View Calculation</h2>
+<table>
+<tr>
+<td>Sensor width:</td><td></td><td></td>
+<td><input name="w" value="" class="cf_field_of_view"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Focal length:</td><td></td><td></td>
+<td><input name="f" value="" class="cf_field_of_view"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Field of view:</td><td></td><td></td>
+<td><input name="FOV" value="" class="cf_field_of_view"></td>
+<td><span class="calcbutton" id="calc_FOV">calc</span></td><td></td>
+</tr>
+</table>
+<p class="comment">Enter input values with units, where appropriate. After you have modified some inputs, click the "calc" button to recalculate the output.</p>
+<noscript>
+<p style="color:red">Attention: The buttons do not work, as Javascript is turned off in your browser!</p>
+</noscript>
+</form>
+<script type="text/javascript" src="calcform.js"></script>
+<script type="text/javascript" nonce="+oqpnJFg6i8sME/F/nINYg==">
+funits = new Array();
+funits["w"] = "m";
+funits["f"] = "m";
+funits["FOV"] = "°";
+function calc_FOV() {
+  $("input[name=FOV]").val("???");
+  GetFieldValues("FOV","field_of_view");
+  FOV = 2 * Math.atan((w/2) / f) * (180/Math.PI);
+  $("input[name=FOV]").val(format_u(FOV, "°"));
+ }
+$("input[name=w]").val("43 mm");
+$("input[name=f]").val("50 mm");
+calc_FOV();
+$(document).ready(function() {
+  $("span#calc_FOV").click(function() { calc_FOV() })
+});
+</script>
+</div>
+<h2 class="togglediv">Condition for Obtaining Sharp Images</h2>
+<div>
+<p>The imaging produces ideally sharp images only if the <em>lens equation</em> is fulfilled:</p>
+<figure class="right" style="width:212px;">
+<img src="img/lens_equation_fig.png" alt="illustration for lens equation">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Illustration of the lens equation.
+</figcaption>
+</figure>
+<div class="eqn"><img src="eqn/lens_equation.gif" width="69" height="41" alt="lens equation"></div>
+<p>where <span class="eqn_il"><i>a</i></span> is the distance from the object to the lens, <span class="eqn_il"><i>b</i></span> is the distance from the lens to the image plane, and <span class="eqn_il"><i>f</i></span> is the <a href="focal_length.html" title="a measure of how strongly an optical system focuses or defocuses light">focal length</a> of the lens.</p>
+<p>The symmetrical situation with <span class="eqn_il"><i>a</i>&thinsp;=&thinsp;<i>b</i>&thinsp;=&thinsp;2&thinsp;<i>f</i></span> leads to the smallest possible distance <span class="eqn_il"><i>a</i>&thinsp;+&thinsp;<i>b</i>&thinsp;=&thinsp;4&thinsp;<i>f</i></span> between object and image, and to a <a href="magnification.html" title="the enlargements of images">magnification</a> of &minus;1.</p>
+<p>For imaging of very distant points, i.e., cases with <span class="eqn_il"><i>a&thinsp;&Gt;&thinsp;f</i></span>, the object is essentially &ldquo;at infinity&rdquo;; the lens equation then shows that the image plane should lie in the back <a href="focal_points_and_focal_planes.html" title="points to which parallel input rays are concentrated by an optical system, and the planes going through those points">focal plane</a> of the lens (<span class="eqn_il"><i>b</i>&thinsp;=&thinsp;<i>f</i></span>).
+For objects at finite distances, however, the image plane needs to be placed in a somewhat larger distance (<span class="eqn_il"><i>b</i>&thinsp;>&thinsp;<i>f</i></span>).
+(One may consider that the divergence of the incoming light &ldquo;consumes&rdquo; some of the focusing power of the lens, so that less of it is left for focusing the beam again.)
+An imaging device such as a <a href="cameras.html" title="optical instruments for recording still or moving images">camera</a> often contains some adjustment knob with which one can slightly move either the image sensor or the lens in order to fulfill the focusing condition for a particular object distance.
+This is essential for <a href="photo_cameras.html" title="optical instruments for taking photographic images">photo cameras</a>, for example.</p>
+</div>
+<h2 class="togglediv">Depth of Field</h2>
+<div>
+<p>If the focusing condition is not exactly fulfilled, the light received from a particular object point will be sent to a larger area on the image plane, called the <em>circle of confusion</em> (see Figure&nbsp;4).
+This results in a reduction of image resolution &ndash; which can be a lack of image quality, but it sometimes intentionally used for artistic purposes &ndash; see Figure&nbsp;5 as an example.</p>
+<figure>
+<img src="img/imaging_with_lens_defocused.png" alt="defocused imaging with a lens">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+By using a smaller entrance aperture, one can reduce the size of the circle of confusion. This leads to an increased depth of field.
+</figcaption>
+</figure>
+<p>The <a href="depth_of_field.html" title="the distance between the nearest and furthest objects that can be imaged with reasonably sharp focus for a given focus setting"><em>depth of field</em></a> (DOF) is the range of object distances for which reasonably sharp imaging is achieved with a particular setting of the camera, i.e., with a particular distance between lens and image plane.
+This depends on several factors:</p>
+<figure class="right" style="width:500px;">
+<img src="img/clematis.jpg" alt="Clematis">
+<figcaption><span class="start">Figure&nbsp;5:</span> 
+Photograph of a flower (clematis), taken with a large aperture, which led to a relatively small depth of field. <span style="font-size:85&#37;">&copy; Christine Kirchrath Paschotta.</span>
+</figcaption>
+</figure>
+<ul>
+<li>If one uses a <a href="diaphragms.html" title="circular (or approximately circular) openings through which light can travel">diaphragm</a> (a type of <a href="optical_apertures.html" title="structures which limit the propagation of light">aperture</a>) just before or after the lens, this reduces the area to which light from one object point is sent, at least as long as <a href="diffraction.html" title="wave phenomena which occur when light waves hit some structure with variable transmission or phase changes">diffraction</a> effects are not substantial.
+For example, reducing the average diameter by a factor of two gives one twice the depth of field.
+However, that also implies a reduction of the light collection efficiency by a factor of 4, which may have to be compensated with an increased exposure time e.g. in case of a <a href="photo_cameras.html" title="optical instruments for taking photographic images">photo camera</a>.</li>
+</ul>
+<ul>
+<li>The depth of field is approximately proportional to the square of the object distance, i.e., it becomes very large for large object distances.
+This is because the objects are then close to infinity, all requiring the image plane to be close to the back focal plane.
+However, the acceptable size of the circle of confusion may actually get smaller for distant objects, so that the dependence of the depth of field on the distance is actually weaker.</li>
+<li>Using a lens with smaller focal length can also increase the depth of field.
+For a fixed <a href="f_number.html" title="a measure for the open aperture of a photographic objective">f-number</a> (focal length divided by aperture diameter), the depth of field is inversely proportional to the square of focal length, assuming that the allowed diameter of the circle of confusion stays constant (e.g. due to an unchanged pixel size of the image detector).
+When changing the f-number such that the aperture size remains constant, the depth of field is only proportional to the inverse focal length (not its square).
+Note, however, that the modified focal length also affects the field of view (for a given sensor size) and the resolution of object details.
+For a constant object detail resolution and constant aperture diameter, the depth of field no longer depends on the focal length.</li>
+<li>The depth of field is increased when a larger circle of confusion is acceptable, e.g. when using an image sensor with lower resolution.</li>
+</ul>
+<p>Figure&nbsp;6 shows how the diameter of the circle of confusion for an example case with focusing to three different distances.
+One can see that the distance range with good sharpness is much larger when focusing to a large distance.</p>
+<figure>
+<img src="img/depth_of_field.png" alt="depth of field">
+<figcaption><span class="start">Figure&nbsp;6:</span> 
+Diameter of the circle of confusion as a function of the object distance for a SLR camera with 38&nbsp;mm focal length, f-number 5.6, and focusing to three different distances.
+</figcaption>
+</figure>
+<p>The <a href="hyperfocal_distance.html" title="the smallest focusing distance of an imaging instruments for which objects at infinity appear with reasonably sharp focus"><em>hyperfocal distance</em></a> is defined as the distance beyond which acceptable focusing is achieved for all objects without further focus adjustment.
+Objectives with small focal length exhibit a small hyperfocal distance.
+It then becomes easier e.g. to obtain a photograph with good sharpness for some foreground object as well as for a distant background.</p>
+<p>Indirectly, the format of the image sensor can influence the depth of field: the larger the sensor, the larger the required focal length for a certain angular viewing range, and that in turn reduces the depth of field.</p>
+</div>
+<h2 class="togglediv">Depth of Focus</h2>
+<div>
+<p>The <a href="depth_of_focus.html" title="the half width of the range of longitudinal positions in which a reasonable focus for a film or image sensor is achieved"><em>depth of focus</em></a> is the range in which the position of the image sensor can be varied without substantially losing focus.
+It determines how precisely that distance needs to be adjusted for a given object distance.
+In many practical cases, the depth of focus is far smaller than the depth of field.</p>
+<p>The depth of focus is also relevant for the question what amount of tilt of the image sensor is tolerable, because that effectively changes the distance of various image points to the plane of the lens.</p>
+</div>
+<h2 class="togglediv">Image Magnification</h2>
+<div>
+<p>The photographic image <a href="magnification.html" title="the enlargements of images">magnification</a> <span class="eqn_il"><i>M</i></span> is defined as the ratio of image size to object size.
+It is easy to see that this is equal to the ratio <span class="eqn_il"><i>b</i>&thinsp;/&thinsp;<i>a</i></span>, with <span class="eqn_il"><i>a</i></span> and <span class="eqn_il"><i>b</i></span> defined as above.
+Using the lens equation (i.e., assuming perfect focusing), one can transform this further:</p>
+<div class="eqn"><img src="eqn/image_m.gif" width="148" height="41" alt="image magnification of lens"></div>
+<p>This shows that the magnification is not determined by the focal length <span class="eqn_il"><i>f</i></span> alone.
+In a <a href="photo_cameras.html" title="optical instruments for taking photographic images">photo camera</a>, for example, it also depends on the distance to the object: the larger that distance, the smaller the magnification.
+Note that photographic objectives are optimized for operation beyond a certain minimum distance; when trying to focus on closer objects by increasing the lens&ndash;sensor spacing, various kinds of <a href="optical_aberrations.html" title="degradations of optical images caused in imaging instruments">optical aberrations</a> might no longer be well corrected.</p>
+<p>In photography, the magnification is usually well below unity, since one uses relatively small pieces of film or image sensors for taking images of large objects.
+Of course, one may later produce printed images with larger sizes, or display images on large computer screens or with image projectors.
+In that sense, the magnification is not relevant for the user.</p>
+</div>
+<h2 class="togglediv">Image Resolution and Aberrations</h2>
+<div>
+<p>Of course, the imaging is never perfect, e.g. in the sense that light from one object point would be sent exactly to only one point (of infinitely small size) on the image plane.
+Therefore, there is a minimum distance between points in the object plane which can still be resolved in the image.</p>
+<aside class="callout blue">An image sensor with higher resolution may not help, if the resolution is limited by diffraction or by the optical quality of the objective.</aside>
+<p>A fundamental physical factors limiting the image resolution is <a href="diffraction.html" title="wave phenomena which occur when light waves hit some structure with variable transmission or phase changes">diffraction</a> at the <a href="optical_apertures.html" title="structures which limit the propagation of light">aperture</a>.
+As already mentioned above, operation with small aperture diameters can seriously limit the resolution, although at the same time it leads to a large depth of field.
+That effect cannot be altered with any optics design.</p>
+<p>Another possible resolution limit can be on the side of the detector.
+Photographic films &ndash; particularly those with high sensitivity &ndash; set such limits, and electronic <a href="image_sensors.html" title="optoelectronic sensors which can be used for imaging">image sensors</a> as well through their finite pixel spacing.</p>
+<p>In addition, limitations of the optical performance of the objective can cause various kinds of <a href="optical_aberrations.html" title="degradations of optical images caused in imaging instruments">optical aberrations</a> which also limit the resolution.</p>
+<p>Which factor is the finally limiting one e.g. in photography often depends on the situation, e.g. the choice of objective, adjustment of a zoom objective, choice of f-number, etc.</p>
+</div>
+<h2 class="togglediv">Light Collection Efficiency</h2>
+<div>
+<p>If we assume for simplicity that the object uniformly sends light in all directions, the <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a> received by the lens is proportional to the usable entrance area of the lens and inversely proportional to the square of the object distance.
+Obviously, a larger lens can collect more light and therefore produce a brighter image.
+In photography, for example, this means that pictures can be taken with a smaller exposure time, which may be advantageous e.g. to avoid any blurring of images related to movements of the object or the camera.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="imaging_with_a_lens.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lenses</a>, <a href="cameras.html" title="optical instruments for recording still or moving images">cameras</a>, <a href="image_planes.html" title="planes which are conjugate to an object plane, so that objects are imaged there">image planes</a>, <a href="focal_length.html" title="a measure of how strongly an optical system focuses or defocuses light">focal length</a>, <a href="f_number.html" title="a measure for the open aperture of a photographic objective">f-number</a>, <a href="field_of_view.html" title="the angular extent of the field which can be observed with an optical instruments or the eye">field of view</a>, <a href="depth_of_field.html" title="the distance between the nearest and furthest objects that can be imaged with reasonably sharp focus for a given focus setting">depth of field</a>, <a href="depth_of_focus.html" title="the half width of the range of longitudinal positions in which a reasonable focus for a film or image sensor is achieved">depth of focus</a>, <a href="hyperfocal_distance.html" title="the smallest focusing distance of an imaging instruments for which objects at infinity appear with reasonably sharp focus">hyperfocal distance</a>, <a href="optical_aberrations.html" title="degradations of optical images caused in imaging instruments">optical aberrations</a><br>and other articles in the categories <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/imaging_with_a_lens.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fimaging_with_a_lens.html&text=RP+Photonics+Encyclopedia+-+imaging+with+a+lens%2C+objective%2C+focus%2C+field+of+view%2C+depth+of+field%2C+image+magnification%2C+resolution%2C+light+collection+efficiency%2C+aberrations" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fimaging_with_a_lens.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fimaging_with_a_lens.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/imaging_with_a_lens.html"&gt;<br>Article on Imaging with a Lens&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/imaging_with_a_lens.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/imaging_with_a_lens.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/imaging_with_a_lens.html<br>article on 'Imaging with a Lens' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2 style="font-size:20px;">Debugging Is Now Fun!</h2>
+<p>The software products which are supporting our <a href="./software_script_language.html?banner=Debugger">script language</a> (e.g. <a href="./fiberpower.html?banner=Debugger">RP Fiber Power</a> and <a href="./coating.html?banner=Debugger">RP Coating</a>) have now got a <a href="./software_news_2017_05_31.html?banner=Debugger">powerful debugger</a>!</p>
+<a href="./software_news_2017_05_31.html?banner=Debugger"><img src="./img/expression_debugger_small.png" alt="debugger" style="margin:10px 0;"></a>
+<p>It works even within expressions, not only after each command!</p>
+<p>The <a href="./software_news.html?banner=Debugger">RP Photonics Software News</a> keep you informed.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="+oqpnJFg6i8sME/F/nINYg==">shownbanner = "Debugger";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Free Tutorial: Modeling of Fiber Amplifiers and Lasers</h2>
+<p>We have published a new <a href="./tutorial_modeling.html?banner=modeling_tutorial">tutorial</a> which discusses the modeling of fiber amplifiers and lasers.
+It addresses many questions:</p>
+<ul>
+<li>What is a <a href="./tutorial_modeling1.html?banner=modeling_tutorial">model</a>?</li>
+<li>Should one use <a href="./tutorial_modeling3.html?banner=modeling_tutorial">power propagation or field propagation</a>?</li>
+<li>How to simulate the behavior of <a href="./tutorial_modeling4.html?banner=modeling_tutorial">laser-active ions</a>?</li>
+<li>How to calculate <a href="./tutorial_modeling5.html?banner=modeling_tutorial">steady-state solutions</a>?</li>
+<li>How to simulate <a href="./tutorial_modeling6.html?banner=modeling_tutorial">dynamical behavior</a> and <a href="./tutorial_modeling7.html?banner=modeling_tutorial">ultrashort pulse propagation</a>?</li>
+<li>What aspects are important for the <a href="./tutorial_modeling8.html?banner=modeling_tutorial">decision</a> whether to develop own modeling software or use commercial software?</li>
+</ul>
+<p><a href="./tutorial_modeling.html?banner=modeling_tutorial">Read the tutorial!</a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="+oqpnJFg6i8sME/F/nINYg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/imaging_with_a_lens.html"
+    },
+    "headline": "Imaging with a Lens",
+    "image": "https://www.rp-photonics.com/previews/imaging_with_a_lens.png",
+    "datePublished": "2019-04-11",
+    "dateModified": "2020-03-14",
+    "description": "The article explains the basic principles of optical imaging with a single lens; many aspects can also be applied to multiple-lens systems (objectives). Terms like focusing, field of view, depth of field, image magnification and resolution, light collection efficiency and aberrations are discussed.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter I",
+      "item": "https://www.rp-photonics.com/encyclopedia_i.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "imaging with a lens",
+      "item": "https://www.rp-photonics.com/imaging_with_a_lens.html"
+    }]}
+}
+</script>
+</body>
+</html>

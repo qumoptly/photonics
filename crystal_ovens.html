@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-Dj2UD0hjDYuidHsozcEZzw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - crystal ovens, design, nonlinear crystals, temperature homogeneity, settling time, power consumption, adapters, temperature controller</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/crystal_ovens.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Crystal ovens are temperature-controlled ovens for keeping optical crystals close to the desired operation temperature.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="crystal ovens, design, nonlinear crystals, temperature homogeneity, settling time, power consumption, adapters, temperature controller">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Crystal Ovens">
+<meta property="og:description" content="Crystal ovens are temperature-controlled ovens for keeping optical crystals close to the desired operation temperature.">
+<meta property="og:url" content="https://www.rp-photonics.com/crystal_ovens.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/crystal_ovens.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Crystal ovens are temperature-controlled ovens for keeping optical crystals close to the desired operation temperature.">
+<meta name="twitter:title" content="Crystal Ovens">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/crystal_ovens.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="Dj2UD0hjDYuidHsozcEZzw==">
+page="crystal_ovens.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="Dj2UD0hjDYuidHsozcEZzw==">shownsponsors="eagleyard Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_crystal_ovens.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_c.html">letter C</a> &gt; <a href="crystal_ovens.html">crystal ovens</a></p>
+<h1>Crystal Ovens</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_crystal_ovens.html?s=vbox">13 suppliers for crystal ovens</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.hcphotonics.com/accessories" data-supplier="HC Photonics" data-location="product-enc" data-keyword="crystal ovens" rel="nofollow" class="bg externallink"><img src="./bg/logos/hc_photonics.png" alt="HC Photonics" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.covesion.com/products/ppln-ovens-accessories/ppln-ovens.html" data-supplier="Covesion" data-location="product-enc" data-keyword="crystal ovens" rel="nofollow" class="bg externallink"><img src="./bg/logos/covesion.png" alt="Covesion" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.eksmaoptics.com/nonlinear-and-laser-crystals/ovens-holders/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="crystal ovens" rel="nofollow" class="bg externallink"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_crystal_ovens.html?s=vbox">List of suppliers for<br>crystal ovens</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="advicebox">
+<p>Ask <a href="index.html">RP Photonics</a> for advice concerning nonlinear crystals, ovens, phase matching, etc.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: temperature-controlled ovens for keeping optical crystals at the desired operation temperature</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Kristallöfen</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#nonlinear_optics" title="other articles on nonlinear optics">nonlinear optics</a></p>
+<p><a href="encyclopedia_cite.html?article=crystal%20ovens">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Optical crystals often need to be operated in an oven at an elevated and stable temperature.
+There are different reasons for that need:</p>
+<ul>
+<li>For <a href="nonlinear_crystal_materials.html" title="crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystals</a>, it is necessary to achieve <a href="noncritical_phase_matching.html" title="a technique of phase matching which does not require a critical angular adjustment">noncritical phase matching</a> for a nonlinear conversion process (e.g., <a href="frequency_doubling.html" title="the phenomenon that an input wave in a nonlinear material can generate a wave with twice the optical frequency">frequency doubling</a> or <a href="parametric_amplification.html" title="a process of optical amplification based on a parametric nonlinearity">parametric amplification</a>).</li>
+<li>Another reason can be to avoid problems with hygroscopic crystal materials such as BBO, as these tend to attract moisture from the air when being kept at room temperature over longer periods of time.</li>
+<li>Finally, there are some crystal materials such as LiNbO<sub>3</sub> which exhibit disturbing photorefractive effects (particularly when operated with short-wavelength light), and these effects become weaker for operation at elevated temperatures.</li>
+</ul>
+<p>Operation of a crystal at elevated temperatures is possible in a suitable crystal oven in combination with an electronic temperature controller (essentially a thermostat).
+The oven heaters are usually of simple resistive type, but Peltier elements are also used if the temperature differences are not too high (e.g., of the order of 30 Kelvin).
+Various technical challenges and possible solutions are discussed in the following.
+On that basis it is easy to recognize that a simple home-made oven with non-optimized design can not achieve the highest performance in all relevant respects.
+Also, it is clear that the oven design involves certain trade-offs, and these should ideally be done knowing the concrete requirements.</p>
+<h2 class="togglediv">Temperature Range</h2>
+<div>
+<p>Many crystal ovens can be operated up to about 200&thinsp;&deg;C, but some models can go much higher.
+The maximum temperature at which an oven can be operated is normally limited by the durability of materials, or possibly by the available heating power.
+Of course, it must be ensured that there is no substantial out-gasing from any materials of the oven, which might be deposited on the crystal's end faces.</p>
+<p>High oven temperatures also lead to stronger convection currents in the ambient air.
+As the density and thus the <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> of air is reduced for higher temperatures, convection of air can lead to disturbing beam distortions and deflections which fluctuate.</p>
+<p>The minimum temperature often has to be somewhat above the ambient temperature, since otherwise the heat flow becomes very weak, and the settling time (see below) becomes too long.</p>
+</div>
+<h2 class="togglediv">Precision and Homogeneity of the Temperature</h2>
+<div>
+<p>The phase-matching conditions for nonlinear processes in crystals are often highly temperature-sensitive; the <a href="phase_matching_bandwidth.html" title="the width of an optical frequency range in which some process (e.g. a nonlinear interaction) can be efficient due to more or less precise phase matching">phase-matching bandwidth</a> in terms of temperature is sometimes well below 1&nbsp;K, although in other cases it may be several Kelvin.
+This means that in some cases the temperature should be kept very precisely at the desired value.</p>
+<p>In addition, one should also have quite low temperature variations along the whole beam path.
+A common problem is that the ends of the crystal are somewhat colder than the middle, e.g. because they are exposed to colder air (see below).
+This can lead to some reduction in power conversion efficiency or in the gain of an <a href="optical_parametric_amplifiers.html" title="optical amplifiers based on parametric nonlinear interactions">optical parametric amplifier</a>.
+Figure&nbsp;1 illustrates this effect.
+A reduced magnitude of temperature variations can tentatively be achieved with a longer oven design.</p>
+<figure>
+<img src="img/pm_for_linbo.png" alt="phase matching for LiNbO3">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Phase-matching curve for a <a href="frequency_doubling.html" title="the phenomenon that an input wave in a nonlinear material can generate a wave with twice the optical frequency">frequency doubler</a> based on a 30&nbsp;mm long MgO-doped LiNbO<sub>3</sub> crystal.
+The solid curve applies when the crystal temperature is constant within the crystal.
+The dashed curve applies to a case with a parabolic temperature profile, where the ends have a 0.5&nbsp;K lower temperature than the middle.
+</figcaption>
+</figure>
+<p>Particularly sensitive conditions arise for certain crystal materials and phase-matching configurations, and if a long nonlinear crystal is used.
+Note that for a long crystal the temperature deviations from the average must be smaller than for a short one, while it also becomes more difficult to obtain even the same maximum temperature deviations as for a short crystal.
+To achieve a certain temperature homogeneity also becomes more challenging for higher operation temperatures, as these imply higher thermal powers and thus higher thermal gradients within the oven.</p>
+<p>Before deciding for an oven design, one should calculate how stringent the demands on temperature homogeneity are.
+An oven working well in a certain situation may not be sufficient in another one, as the requirements can differ very much.</p>
+</div>
+<h2 class="togglediv">Access for a Laser Beam; Open vs. Sealed Ovens</h2>
+<div>
+<p>In contrast to crystal ovens for non-optical applications, such as those for quartz crystals used as frequency standards, ovens for optical crystals must allow access of some <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a>.
+Typically, a beam has to propagate through the crystal, i.e., it must enter the crystal on one side and exit on the other side.
+This necessity makes the oven design more difficult.
+There are in principle two different approaches:</p>
+<ul>
+<li>The oven may have free openings through which the optical beam can pass.
+This avoids any problems with <a href="optical_windows.html" title="flat transparent plates with optical quality, used for protection against the environment">optical windows</a> (see below), but air can also freely move in and out.
+This leads to some cooling of the oven, and particularly of the crystal's end faces.
+It thus becomes more difficult to minimize temperature inhomogeneities.</li>
+<li>The movement of air at least inside the oven can be prevented by using a closed (sealed) design with <a href="optical_windows.html" title="flat transparent plates with optical quality, used for protection against the environment">optical windows</a>.
+These, however, can have various detrimental side effects.
+Even if they are <a href="anti_reflection_coatings.html" title="optical thin-film coatings for reducing reflections from surfaces">anti-reflection coated</a>, they create at least some weak reflections, which may disturb the source of the beam if they directly go back to the source.
+A slight deviation from normal incidence can cure this problem, but some power losses remain.
+(This is most critical for crystals in <a href="enhancement_cavities.html" title="optical cavities for exploiting the resonant enhancement of the power of circulating light">enhancement cavities</a>.)
+For operation in a wide wavelength region, low-loss transmission may be difficult to achieve.
+<a href="laser_induced_damage.html" title="damage of optical components induced by laser radiation">Optical damage</a> is usually not a concern, as the damage threshold of nonlinear crystals is usually lower than that of window materials.</li>
+</ul>
+<p>A sealed oven may also be desirable if hygroscopic crystals (e.g., BBO) are used, or if the surroundings are not clean.</p>
+<p>Access for the laser beam is generally more difficult to arrange if the crystal has to be used with an angle of incidence near <a href="brewsters_angle.html" title="an angle of incidence at which there is no reflection of p-polarized light at an uncoated optical surface">Brewster's angle</a>.
+It is then not possible to place the crystal in a longer oven, and consequently the crystal ends will be more exposed to air.</p>
+</div>
+<h2 class="togglediv">Temperature Settling Time</h2>
+<div>
+<p>When the oven controller is turned on, or when the desired crystal temperature is changed, it will take some time until the oven has precisely reached the new temperature.
+The involved time delays are often substantially longer than desirable &ndash; in particular, when the oven temperature has to be scanned through some range.
+Various design details can be optimized to minimize the temperature settling time:</p>
+<ul>
+<li>The oven construction should not contain a larger heated mass than necessary.
+One may for example mount the crystal between two relatively thin plates, which are heated with thin film heaters.
+However, a lightweight construction often makes it more difficult to achieve a good temperature homogeneity.</li>
+<li>The temperature sensor used for the feedback system should be placed close to the heater and the crystal.
+(This may be more difficult when thin plates are used.)</li>
+<li>The thermal contact between the crystal and its mount should be good.
+The crystal should at least be gently pressed against a flat surface to ensure a good contact.
+The contact can be improved substantially by inserting some soft but thermally conducting material such as an indium foil or some heat transfer paste.
+The latter makes it less convenient, of course, to exchange crystals and to avoid contamination of the sensitive end faces.</li>
+<li>The temperature controller should be optimized.
+A simple PI controller should normally be sufficient; accurate adjustment of its parameters if more useful than using a more sophisticated type of controller.
+Note that the parameters for an oven operated in a wide temperature range should ideally be dependent on the set temperature, since the thermal &ldquo;constant&rdquo; exhibits some temperature dependence.</li>
+</ul>
+<p>A good thermal contact to the crystal is particularly essential if high-power laser beams heat the crystal due to parasitic absorption.</p>
+</div>
+<h2 class="togglediv">Power Consumption</h2>
+<div>
+<p>The better the thermal insulation of an oven against the outside world is, the lower the required heater power to maintain its temperature.
+This also minimizes possible detrimental effects of the radiated heat or convecting hot air on other parts of the setup.
+On the other hand, a high thermal insulation leads to longer settling times.
+Therefore, a reasonable trade-off between power consumption (heating effect) and settling time has to be done.</p>
+</div>
+<h2 class="togglediv">Outer Dimensions and Mounting</h2>
+<div>
+<p>Ideally, the outer dimension of an oven are small, such that full flexibility for the beam path is maintained.
+For example, some nonlinear crystals need to be placed within a bow-tie ring <a href="optical_resonators.html" title="arrangements of optical components which allow a beam of light to circulate">resonator</a>, where the folding angles should small in order to avoid excessive <a href="astigmatism.html" title="a kind of optical aberrations; alternatively, a defect of optical lenses or a property of laser beams">astigmatism</a>.
+One then requires beams which pass the crystal relatively closely.</p>
+<p>Particularly when the oven and not the passing laser beam must be aligned, it is important to properly mount an oven.
+The mounts should be sufficiently rigid, but should not provide an uncontrolled additional path for heat losses.
+Note also that heating of the base plate may cause problems with thermal expansion.</p>
+</div>
+<h2 class="togglediv">Ovens for Variable Crystal Sizes</h2>
+<div>
+<p>For research purposes, it is often convenient to have an oven which allows one to insert crystals with different sizes.
+If only their length varies, this is often no problem; a shorter crystal simply doesn't fill the full length of the oven.
+It is more difficult to allow for versatility concerning the transverse dimensions without accepting other disadvantages, such as larger size, higher thermal capacity, less solid mounting, etc.
+Some well constructed adapters can be very helpful.</p>
+</div>
+<h2 class="togglediv">Robust Materials</h2>
+<div>
+<p>The materials used next to the crystal should be resistant against the applied laser radiation.
+Note that a crystal could easily be damaged if a misaligned laser beam hits these materials and evaporates or burns them.
+Therefore, robust materials such as ceramics or metals are preferred.
+They should also be kept clean to avoid that dirt or oils, for example, contaminate the crystal.</p>
+</div>
+<h2 class="togglediv">Applying a High Voltage</h2>
+<div>
+<p>In some cases, a high electric voltage needs to be applied to electrodes on a crystal within an oven, for example in order to tune the resonance condition of an <a href="optical_resonators.html" title="arrangements of optical components which allow a beam of light to circulate">optical resonator</a> (an <a href="enhancement_cavities.html" title="optical cavities for exploiting the resonant enhancement of the power of circulating light">enhancement cavity</a>).
+Obviously, this requires the electrically insulating materials are used to mount the crystal.
+Also, an insulated high-voltage cable needs to be placed.</p>
+</div>
+<h2 class="togglediv">Details of the Temperature Controller</h2>
+<div>
+<p>Simple temperature controllers for crystal ovens allow the user to manually set the desired temperature by turning a knob or pressing some keys (for digital devices).
+There is also a temperature display, usually of digital type.
+A temperature resolution of 0.1&nbsp;K is usually sufficient, but not in all cases.</p>
+<p>More advanced temperature controllers offer a digital interface for connection to a PC, for example.
+This allows one to set the temperature from the PC (possibly automatically via some software), and possibly to monitor the actual oven temperature.
+Some oven controllers provide a &ldquo;ready&rdquo; signal in TTL format once the set temperature has been reached.</p>
+<p>As mentioned above, PI controllers are often used.
+The control parameters may be factory-set, if the controller is used only in conjunction with a specific oven model.
+Otherwise, it may be necessary that the user can adjust these parameters.</p>
+<p>Some controllers allow one to limit the rate at which the crystal temperature is changed.
+This can be necessary to minimize the risk that sensitive <a href="dielectric_coatings.html" title="thin-film coatings made of transparent dielectric materials, e.g. for laser mirrors or anti-reflection coatings">dielectric coatings</a> lose the contact with the crystal due to differing thermal expansion coefficients.</p>
+</div>
+<h2 class="togglediv">Avoiding the Use of a Crystal Oven</h2>
+<div>
+<p>The use of a crystal oven in an optical setup introduces a variety of disadvantage, such as additional cost, power consumption and settling time.
+Therefore, it would often be desirable to avoid the use of an oven, i.e., to operate the crystal at room temperature.
+For some <a href="nonlinear_frequency_conversion.html" title="the conversion of input light to light of other frequencies, using optical nonlinearities">nonlinear frequency conversion</a> applications, it is possible to find a <a href="phase_matching.html" title="a group of techniques for achieving efficient nonlinear interactions in a medium">phase-matching</a> configuration which works at room temperature.
+In particular, <a href="critical_phase_matching.html" title="phase matching of a nonlinear interaction by adjustment of a propagation direction">critical phase matching</a> with angle tuning is possible with various crystal materials.
+However, the involved <a href="spatial_walk_off.html" title="the phenomenon that the intensity distribution of a beam in an anisotropic crystal drifts away from the direction of the wave vector">spatial walk-off</a> then prevents strong focusing, so that efficient conversion is possible only for higher optical powers.</p>
+<p>Note that even for operation at room temperature, some temperature stabilization may be required.
+Here, however, one may use a simpler construction with a Peltier element.
+Compared with a high-temperature crystal oven, this allows for shorter temperature settling times and a substantially lower power consumption.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_crystal_ovens.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 13 suppliers for crystal ovens. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.eksmaoptics.com/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="crystal ovens" rel="nofollow" class="bg externallink" title="Visit the website of EKSMA OPTICS"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a><h3><a href="./bg/profiles/eksma_optics.html" title="See the profile of EKSMA OPTICS">EKSMA OPTICS</a></h3><p>Ovens with <a href="https://www.eksmaoptics.com/nonlinear-and-laser-crystals/ovens-holders/heatpoint-oven-for-nonlinear-crystals/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="crystal ovens" rel="nofollow" class="externallink bg">factory preset temperature</a>, as well as <a href="https://www.eksmaoptics.com/nonlinear-and-laser-crystals/ovens-holders/temperature-controller-tc2-with-oven-co1/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="crystal ovens" rel="nofollow" class="externallink bg">temperature controlled ovens</a> with temperature tuning range up to 200&nbsp;°C. Ideal solution for stabilization of crystal temperature at laboratory settings.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.hcphotonics.com/" data-supplier="HC Photonics" data-location="product-enc" data-keyword="crystal ovens" rel="nofollow" class="bg externallink" title="Visit the website of HC Photonics"><img src="./bg/logos/hc_photonics.png" alt="HC Photonics" class="supplierlogo"></a><a href="https://www.hcphotonics.com/accessories" data-supplier="HC Photonics" data-location="product-enc" data-keyword="crystal ovens" rel="nofollow" class="bg externallink" title="Visit the website of HC Photonics"><img src="./bg/products/hc_photonics/crystal_ovens.jpg" alt="crystal ovens" class="product"></a><h3><a href="./bg/profiles/hc_photonics.html" title="See the profile of HC Photonics">HC Photonics</a></h3><p>HC Photonics (HCP) provides <a href="https://www.hcphotonics.com/accessories" data-supplier="HC Photonics" data-location="product-enc" data-keyword="crystal ovens" rel="nofollow" class="externallink bg">crystal ovens</a> and controllers to well manage the temperature of nonlinear crystals, especially PPLN and PPLT. The operating range is from room temperature up to 200&deg;C, which enables a wide wavelength tuning range.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.covesion.com/" data-supplier="Covesion" data-location="product-enc" data-keyword="crystal ovens" rel="nofollow" class="bg externallink" title="Visit the website of Covesion"><img src="./bg/logos/covesion.png" alt="Covesion" class="supplierlogo"></a><a href="https://www.covesion.com/products/ppln-ovens-accessories/ppln-ovens.html" data-supplier="Covesion" data-location="product-enc" data-keyword="crystal ovens" rel="nofollow" class="bg externallink" title="Visit the website of Covesion"><img src="./bg/products/covesion/crystal_ovens.jpg" alt="crystal ovens" class="product"></a><h3><a href="./bg/profiles/covesion.html" title="See the profile of Covesion">Covesion</a></h3><p>Our range of <a href="https://www.covesion.com/products/ppln-ovens-accessories/ppln-ovens.html" data-supplier="Covesion" data-location="product-enc" data-keyword="crystal ovens" rel="nofollow" class="externallink bg">PPLN ovens</a> are specifically designed to provide robust thermal management of PPLN crystals.</p><p>Our PPLN clips are easily mounted into the oven using the auto-locating pins. These also allow the PPLN clips to be swapped in and out with minimal realignment of the optical train. Finely sprung pins in the oven lid hold the PPLN crystal clip securely in place. The oven and PPLN crystal can then be mounted in any orientation, flexible to your choice of optical arrangement.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="crystal_ovens.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="nonlinear_crystal_materials.html" title="crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal materials</a>, <a href="nonlinear_frequency_conversion.html" title="the conversion of input light to light of other frequencies, using optical nonlinearities">nonlinear frequency conversion</a>, <a href="phase_matching.html" title="a group of techniques for achieving efficient nonlinear interactions in a medium">phase matching</a>, <a href="noncritical_phase_matching.html" title="a technique of phase matching which does not require a critical angular adjustment">noncritical phase matching</a>, <a href="phase_matching_bandwidth.html" title="the width of an optical frequency range in which some process (e.g. a nonlinear interaction) can be efficient due to more or less precise phase matching">phase-matching bandwidth</a>, <a href="optical_windows.html" title="flat transparent plates with optical quality, used for protection against the environment">optical windows</a><br>and other articles in the category <a href="categories.html#nonlinear_optics" title="other articles on nonlinear optics">nonlinear optics</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/crystal_ovens.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fcrystal_ovens.html&text=RP+Photonics+Encyclopedia+-+crystal+ovens%2C+design%2C+nonlinear+crystals%2C+temperature+homogeneity%2C+settling+time%2C+power+consumption%2C+adapters%2C+temperature+controller" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fcrystal_ovens.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fcrystal_ovens.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/crystal_ovens.html"&gt;<br>Article on Crystal Ovens&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/crystal_ovens.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/crystal_ovens.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/crystal_ovens.html<br>article on 'Crystal Ovens' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="./propulse_demo_soliton.html?banner=RP_ProPulse_2"><img src="./img/propulse_demo_soliton4b.png" alt="higher-order solitons" style="margin-bottom:8px"></a>
+<p>Evolution of the spectrum of a third-order soliton pulse.</p>
+<p>This diagram has been made with the <a href="./propulse.html?banner=RP_ProPulse_2"><b>RP ProPulse</b></a> software.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="Dj2UD0hjDYuidHsozcEZzw==">shownbanner = "RP ProPulse 2";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Fighting Fraud in Science</h2>
+<p>We occasionally read about scientific fraud &ndash; things like fabricated measurement results &ndash; which is utterly unfair and also undermines the trust of the public in science and its results.</p>
+<p>How to fight that problem?</p>
+<ul>
+<li>Do we need to tell young scientists more clearly that fraud is evil?</li>
+<li>Do supervisors have to stop trusting the results of their coworkers?</li>
+<li>Does the pressure to produce results inevitably favor fraud?</li>
+<li>Where exactly lies the responsibility, if something goes wrong?</li>
+</ul>
+<p>Our <a href="./spotlight_2009_10_19.html?banner=science_fraud">Photonics Spotlight article on science fraud</a> analyzes that carefully.
+It suggests that <b>the risk of fraud is close to zero where supervisors do a responsible job</b>.
+Relations to a more widespread problem &ndash; <b>corrupt authorship practices</b> &ndash; are also identified.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="Dj2UD0hjDYuidHsozcEZzw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/crystal_ovens.html"
+    },
+    "headline": "Crystal Ovens",
+    "image": "https://www.rp-photonics.com/previews/crystal_ovens.png",
+    "datePublished": "2012-09-24",
+    "dateModified": "2020-03-14",
+    "description": "Crystal ovens are temperature-controlled ovens for keeping optical crystals close to the desired operation temperature.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter C",
+      "item": "https://www.rp-photonics.com/encyclopedia_c.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "crystal ovens",
+      "item": "https://www.rp-photonics.com/crystal_ovens.html"
+    }]}
+}
+</script>
+</body>
+</html>

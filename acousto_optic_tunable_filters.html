@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-sr7TAc8iY2b4v2UEMGyBwA=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - acousto-optic tunable filters, operation principle, filter designs, applications</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/acousto_optic_tunable_filters.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Acousto-optic tunable filters act as optical bandpass or notch filters which can be rapidly tuned with an RF input. This makes them interesting for various applications.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="acousto-optic tunable filters, operation principle, filter designs, applications">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Acousto-optic Tunable Filters">
+<meta property="og:description" content="Acousto-optic tunable filters act as optical bandpass or notch filters which can be rapidly tuned with an RF input. This makes them interesting for various applications.">
+<meta property="og:url" content="https://www.rp-photonics.com/acousto_optic_tunable_filters.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/acousto_optic_tunable_filters.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Acousto-optic tunable filters act as optical bandpass or notch filters which can be rapidly tuned with an RF input. This makes them interesting for various applications.">
+<meta name="twitter:title" content="Acousto-optic Tunable Filters">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/acousto_optic_tunable_filters.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="sr7TAc8iY2b4v2UEMGyBwA==">
+page="acousto_optic_tunable_filters.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> <a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="sr7TAc8iY2b4v2UEMGyBwA==">shownsponsors="EKSMA OPTICS,Knight Optical"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_acousto_optic_tunable_filters.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_a.html">letter A</a> &gt; <a href="acousto_optic_tunable_filters.html">acousto-optic tunable filters</a></p>
+<h1>Acousto-optic Tunable Filters</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_acousto_optic_tunable_filters.html?s=vbox">11 suppliers for acousto-optic tunable filters</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://gandh.com/product-categories/tunable-filters-aotf/" data-supplier="G&H" data-location="product-enc" data-keyword="acousto-optic tunable filters" rel="nofollow" class="bg externallink"><img src="./bg/logos/g_h.png" alt="G&H" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_acousto_optic_tunable_filters.html?s=vbox">List of suppliers for<br>acousto-optic tunable filters</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p>Acronym: AOTF</p>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: acousto-optic devices which can be used for filtering light, controlled with an RF input</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">akusto-optische abstimmbare Filter</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a></p>
+<p><a href="encyclopedia_cite.html?article=acousto-optic%20tunable%20filters">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>An acousto-optic tunable filter (AOTF) is a kind of <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical filter</a> which is based on a kind of <a href="acousto_optic_modulators.html" title="optical modulators based on the acousto-optic effect">acousto-optic modulator</a>.
+Wavelength tuning is electrically controlled through the applied RF frequencies.</p>
+<h2 class="togglediv">Operation Principle</h2>
+<div>
+<p>The basic operation principle is explained in the following.
+If a sinusoidal (fixed-frequency) RF input signal is applied to the modulator, diffraction is possible only in a narrow range of <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequencies</a>, where a <a href="phase_matching.html" title="a group of techniques for achieving efficient nonlinear interactions in a medium">phase matching</a> condition involving both optical and acoustic waves is fulfilled.
+Looking at the diffracted <a href="light.html" title="electromagnetic radiation in the visible spectral range, or sometimes in an extended spectral region">light</a>, one obtains a bandpass filter, while the non-diffracted light provides a notch filter.</p>
+<p>With RF waves of different frequencies, one can address different regions of optical frequencies.
+One may, for example, use an optical input from an <a href="argon_ion_lasers.html" title="gas lasers based on light amplification in ionized argon in a gas discharge">argon ion laser</a> emitting on different <a href="laser_lines.html" title="narrow spectral lines obtained from lasers">laser lines</a>, and with the tunable filter one can transmit just one of those lines at a time.</p>
+<p>It is also possible to use any superposition of different RF frequencies in order to obtain diffraction for different optical frequencies.
+The diffraction efficiency at any wavelength can be controlled via the corresponding RF power.</p>
+<p>Depending on the design, a AOTF may work over an optical wavelength range which is hundreds of nanometers wide.
+Other devices are optimized for high resolution in a narrower wavelength range.
+Some of them also work with <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a>.</p>
+</div>
+<h2 class="togglediv">Acousto-optic Filter Designs</h2>
+<div>
+<p>Because the requirements for different applications are quite diverse, different types of acousto-optic filters have been developed.</p>
+<aside class="callout blue">Collinear filters are most efficient but have a narrow angular acceptance range.</aside>
+<p>Some devices use a collinear interaction between light and sound waves.
+For example, one may use a tellurium oxide (TeO<sub>2</sub>) crystal, having a high acousto-optic figure of merit, and apply acoustic shear waves (i.e., with the oscillation perpendicular to the beam direction).
+The diffracted light will then have a <a href="polarization_of_light.html" title="direction of the electric field oscillation of a light beam">polarization</a> direction which is perpendicular to that of the linearly polarized input light.
+It is thus easy to isolate the diffracted light after the device with a <a href="polarizers.html" title="optical filters where the light transmission depends strongly on the direction of polarization">polarizer</a>.
+Such devices have a small acceptance angle, i.e., they work only with an appropriately aligned <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a> having a limited amount of <a href="beam_divergence.html" title="a measure for how fast a laser beam expands far from its focus">beam divergence</a>.</p>
+<aside class="callout blue">Non-collinear filters may be better for applications requiring large acceptance angles.</aside>
+<p>There are also tunable filters based on a non-collinear geometry.
+These typically have a much larger acceptance angle, but only a quite limited interaction length, so that the diffraction efficiency is correspondingly reduced, or higher RF powers are required.</p>
+<p>Some devices can work with an unpolarized input, exploiting the <a href="birefringence.html" title="the polarization dependence of the refractive index of a medium">birefringence</a> of the used crystal material.</p>
+<p>Different filter designs can differ greatly in terms of various performance parameters, for example</p>
+<ul>
+<li>the addressable range of optical wavelengths,</li>
+<li class="ta_left">the spectral resolution and quality of sidelobe suppression, and</li>
+<li class="ta_left">the diffraction efficiency and required RF power.</li>
+</ul>
+<p>The requirements of the used RF driver also depend very much on the device design and its application.</p>
+</div>
+<h2 class="togglediv">Applications of Acousto-optic Tunable Filters</h2>
+<div>
+<p>A widespread application of AOTF is in <a href="multispectral_imaging.html" title="imaging which provides images with multiple spectral channels">multispectral imaging</a>, e.g. in the form of <a href="laser_microscopy.html" title="a technique for generating microscopic images by scanning objects with a laser">laser microscopy</a>.
+The essential advantage of this technology is that very rapid scanning (e.g. compared with mechanically controlled <a href="spectrometers.html" title="devices for separating spectral components">spectrometers</a>) is possible, allowing for a fast acquisition of <a href="microscopes.html" title="instruments for seeing very small objects">microscope</a> images with spectral information.
+Also, the optical setup can be quite compact.</p>
+<p>For terrestrial observations with spectral resolution for monitoring the status of plants, for example, one may exploit the large <a href="field_of_view.html" title="the angular extent of the field which can be observed with an optical instruments or the eye">field of view</a> and high spatial resolution of a non-collinear filter.
+It is also possible to acquire additional information on the polarization of light (<em>spectropolarimetry</em>).</p>
+<p>There are other applications in <a href="laser_spectroscopy.html" title="methods where the interaction of laser light with matter is utilized">laser spectroscopy</a>.
+For example, one may use an AOTF for selecting certain wavelengths of an excitation laser and another AOFT for spectrally filtering <a href="fluorescence.html" title="luminescence arising from irradiation with light">fluorescence</a> light which the excitation light has caused on some sample.</p>
+<p>Some wavelength-agile <a href="wavelength_tunable_light_sources.html" title="light sources where the optical wavelength can be tuned">wavelength-tunable light sources</a> use an AOTF.</p>
+<p>The ability to rapidly select a certain wavelength region can also be used for <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a> based on <a href="wavelength_division_multiplexing.html" title="a multiplexing technique working in the wavelength domain">wavelength division multiplexing</a>.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_acousto_optic_tunable_filters.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 11 suppliers for acousto-optic tunable filters. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://gandh.com/" data-supplier="G&H" data-location="product-enc" data-keyword="acousto-optic tunable filters" rel="nofollow" class="bg externallink" title="Visit the website of G&amp;H"><img src="./bg/logos/g_h.png" alt="G&H" class="supplierlogo"></a><a href="https://gandh.com/product-categories/tunable-filters-aotf/" data-supplier="G&H" data-location="product-enc" data-keyword="acousto-optic tunable filters" rel="nofollow" class="bg externallink" title="Visit the website of G&amp;H"><img src="./bg/products/g_h/acousto_optic_tunable_filters.jpg" alt="acousto-optic tunable filters" class="product"></a><h3><a href="./bg/profiles/g_h.html" title="See the profile of G&H">G&H</a></h3><p>G&amp;H offers an extensive line of <a href="https://gandh.com/product-categories/tunable-filters-aotf/" data-supplier="G&H" data-location="product-enc" data-keyword="acousto-optic tunable filters" rel="nofollow" class="externallink bg">AOTFs</a> for wavelength regions from the UV through mid-IR, with resolution bandwidths of less than 1&nbsp;nm. We also offer options such as large-aperture imaging filtering and sideband suppression. Fiber-coupled AOTF devices are available upon request.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="acousto_optic_tunable_filters.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="acousto_optic_modulators.html" title="optical modulators based on the acousto-optic effect">acousto-optic modulators</a>, <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical filters</a>, <a href="wavelength_tunable_light_sources.html" title="light sources where the optical wavelength can be tuned">wavelength-tunable light sources</a><br>and other articles in the category <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/acousto_optic_tunable_filters.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Facousto_optic_tunable_filters.html&text=RP+Photonics+Encyclopedia+-+acousto-optic+tunable+filters%2C+operation+principle%2C+filter+designs%2C+applications" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Facousto_optic_tunable_filters.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Facousto_optic_tunable_filters.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/acousto_optic_tunable_filters.html"&gt;<br>Article on Acousto-optic Tunable Filters&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/acousto_optic_tunable_filters.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/acousto_optic_tunable_filters.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/acousto_optic_tunable_filters.html<br>article on 'Acousto-optic Tunable Filters' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Thin-film Optics Software</h2>
+<p><a href="./coating.html?banner=RP_Coating">RP Coating</a> is a most versatile software for thin-film design.
+Analyze and optimize a wide range of devices:</p>
+<ul>
+<li>dielectric mirrors, including <a href="./coating_demo_dichroic.html?banner=RP_Coating">dichroic</a> and <a href="./coating_demo_gti.html?banner=RP_Coating">dispersive mirrors</a></li>
+<li><a href="./coating_demo_ar.html?banner=RP_Coating">AR coatings</a></li>
+<li>filters (including <a href="./coating_demo_rugate.html?banner=RP_Coating">rugate filters</a>)</li>
+<li><a href="./coating_demo_polarizer.html?banner=RP_Coating">thin-film polarizers</a></li>
+<li>VECSELs</li>
+</ul>
+<p style="text-align:center;"><a href="./coating.html?banner=RP_Coating"><img src="./img/rp_coating_220.png" alt="coating design"></a></p>
+<p>Further features:</p>
+<ul>
+<li>extreme flexibility due to <a href="./software_script_language.html?banner=RP_Coating">scripting</a>: arbitrary parametrization e.g. of chirped layer structures, definition of arbitrary figure of merits for numerical optimization, generation of arbitrary plots</li>
+<li>comprehensive documentation (PDF and online)</li>
+<li>competent <a href="./software_support.html?banner=RP_Coating">technical support</a></li>
+</ul>
+<p>Use <a href="./coating.html?banner=RP_Coating"><b>RP Coating</b></a> to quickly become a thin-film expert!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="sr7TAc8iY2b4v2UEMGyBwA==">shownbanner = "RP Coating";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Tutorial on Fiber Optics</h2>
+<p>See our <a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial">comprehensive fiber optics tutorial</a>:</p>
+<ul>
+<li>guiding light in single-mode and multimode fibers</li>
+<li>fiber ends and joints, propagation and coupling losses</li>
+<li>couplers and splitters</li>
+<li>polarization issues, chromatic dispersion, nonlinearities, pulse propagation</li>
+<li>fiber accessories and tools</li>
+</ul>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/fiber_core_small.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/mode_solver.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/pm_fibers_small.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/fiberpower_self_focusing4_small.png" alt="&nbsp;"></a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="sr7TAc8iY2b4v2UEMGyBwA==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/acousto_optic_tunable_filters.html"
+    },
+    "headline": "Acousto-optic Tunable Filters",
+    "image": "https://www.rp-photonics.com/previews/acousto_optic_tunable_filters.png",
+    "datePublished": "2019-03-05",
+    "dateModified": "2020-03-14",
+    "description": "Acousto-optic tunable filters act as optical bandpass or notch filters which can be rapidly tuned with an RF input. This makes them interesting for various applications.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter A",
+      "item": "https://www.rp-photonics.com/encyclopedia_a.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "acousto-optic tunable filters",
+      "item": "https://www.rp-photonics.com/acousto_optic_tunable_filters.html"
+    }]}
+}
+</script>
+</body>
+</html>

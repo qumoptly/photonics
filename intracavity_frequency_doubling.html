@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-4UqFy1qOiZwT3iDNEdy7tQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - intracavity frequency doubling, second-harmonic generation, nonlinear frequency conversion, SHG, doubler crystal, green problem</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/intracavity_frequency_doubling.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-07-10">
+<meta name="description" content="Intracavity frequency doubling is frequency doubling with a nonlinear crystal within the laser resonator. It often allows for a high power conversion efficiency.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="intracavity frequency doubling, second-harmonic generation, nonlinear frequency conversion, SHG, doubler crystal, green problem">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Intracavity Frequency Doubling">
+<meta property="og:description" content="Intracavity frequency doubling is frequency doubling with a nonlinear crystal within the laser resonator. It often allows for a high power conversion efficiency.">
+<meta property="og:url" content="https://www.rp-photonics.com/intracavity_frequency_doubling.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/intracavity_frequency_doubling.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Intracavity frequency doubling is frequency doubling with a nonlinear crystal within the laser resonator. It often allows for a high power conversion efficiency.">
+<meta name="twitter:title" content="Intracavity Frequency Doubling">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/intracavity_frequency_doubling.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="4UqFy1qOiZwT3iDNEdy7tQ==">
+page="intracavity_frequency_doubling.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo sponsor"></a> <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> <a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo sponsor"></a> <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="4UqFy1qOiZwT3iDNEdy7tQ==">shownsponsors="DataRay,EKSMA OPTICS,Knight Optical,TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_i.html">letter I</a> &gt; <a href="intracavity_frequency_doubling.html">intracavity frequency doubling</a></p>
+<h1>Intracavity Frequency Doubling</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="advicebox">
+<p>Ask <a href="index.html">RP Photonics</a> for any advice concerning efficient and stable intracavity frequency doubling. RP Photonics can also help to make an informed decision on the general technological route, e.g. by comparing options like intracavity doubling, external doubling, resonant doubling, etc. in all relevant aspects.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: frequency doubling with a nonlinear crystal within the laser resonator</p>
+<p>More general terms: <a href="nonlinear_frequency_conversion.html" title="the conversion of input light to light of other frequencies, using optical nonlinearities">nonlinear frequency conversion</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Intracavity-Frequenzverdopplung</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#optical_resonators" title="other articles on optical resonators">optical resonators</a>, <a href="categories.html#nonlinear_optics" title="other articles on nonlinear optics">nonlinear optics</a>, <a href="categories.html#lasers" title="other articles on lasers">lasers</a></p>
+<p><a href="encyclopedia_cite.html?article=intracavity%20frequency%20doubling">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p><a href="frequency_doubling.html" title="the phenomenon that an input wave in a nonlinear material can generate a wave with twice the optical frequency">Frequency doubling</a>, similar to other processes of <a href="nonlinear_frequency_conversion.html" title="the conversion of input light to light of other frequencies, using optical nonlinearities">nonlinear frequency conversion</a>, can have a high power conversion efficiency only if sufficiently high <a href="optical_intensity.html" title="optical power per unit area">optical intensities</a> are reached in the <a href="nonlinear_crystal_materials.html" title="crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal material</a>.
+This is often not possible for low- or moderate-power <a href="continuous_wave_operation.html" title="operation mode of a laser with continuous light emission">continuous-wave</a> <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">lasers</a>.
+A good solution in such cases &ndash; particularly for <a href="solid_state_lasers.html" title="lasers based on solid-state gain media (usually ion-doped crystals or glasses)">solid-state lasers</a> &ndash; can be intracavity frequency doubling (or intracavity SHG = second-harmonic generation), where the doubler crystal is placed within the <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a> (or similarly within the <a href="optical_resonators.html" title="arrangements of optical components which allow a beam of light to circulate">resonator</a> of an <a href="optical_parametric_oscillators.html" title="coherent light sources based on parametric amplification within an optical resonator">optical parametric oscillator</a>).
+There are actually two different reasons why this works well:</p>
+<ul>
+<li>Within the laser resonator, the <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical powers</a> and thus the <a href="optical_intensity.html" title="optical power per unit area">intensities</a> achievable are much higher, increasing the conversion efficiency per path by often more than an order of magnitude.</li>
+<li>It is normally sufficient to achieve a single-pass conversion efficiency of just a few percent, because the unconverted power remains in the laser resonator rather than being lost.</li>
+</ul>
+<figure>
+<img src="img/verdi_setup.jpg" alt="VERDI green laser">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Photograph of the VERDI green laser from Coherent. A unidirectional ring laser resonator is used, enabling low-noise single-frequency operation. The image was kindly provided by <a href="bg/profiles/coherent.html">Coherent</a>.
+</figcaption>
+</figure>
+<p>It is therefore possible to generate a frequency-converted output power which is not much lower than that achievable with the same <a href="laser_heads.html" title="assemblies containing a mounted gain medium and means for pumping and cooling, or the complete optical parts of a laser, or assemblies for directing a laser beam to a workpiece">laser head</a> at the unconverted wavelength (without a frequency doubler, and with a suitable <a href="output_couplers.html" title="partially transparent laser mirrors, used for extracting output beams from laser resonators">output coupler</a> for the fundamental wavelength).</p>
+<p>The resonator must contain a <a href="dichroic_mirrors.html" title="mirrors with significantly different reflection or transmission properties at two different wavelengths">dichroic</a> <a href="laser_mirrors.html" title="high-quality mirrors used in laser resonators and other optical setups">mirror</a> which has a high transmission for the frequency-doubled beam, and all resonator mirrors should be highly reflective for the fundamental wavelength.
+(In general, an ordinary <a href="output_couplers.html" title="partially transparent laser mirrors, used for extracting output beams from laser resonators">output coupler</a> mirror will not be used.)
+For <a href="standing_wave_resonators.html" title="optical resonators with two end mirrors">linear resonators</a>, frequency doubling occurs in both propagation directions.
+However, the two resulting beams can be combined to a single output beam when there is a folding mirror with significant transmission for the frequency-doubled wavelength.
+For ideal relative phase changes on the end mirror and without parasitic losses, the double-pass conversion efficiency can be four times the single-pass value.</p>
+<p>Concerning <a href="polarization_of_laser_emission.html">polarization</a> and <a href="phase_matching.html" title="a group of techniques for achieving efficient nonlinear interactions in a medium">phase matching</a>, there are different options:</p>
+<ul>
+<li>A type I phase-matched frequency doubler may be used within a laser with polarized emission.</li>
+<li>A type II phase-matched frequency doubler is suitable for a laser with unpolarized emission.</li>
+</ul>
+<p>In both cases, the frequency-doubled light is linearly polarized.</p>
+<p>Many continuous-wave <a href="green_lasers.html" title="lasers emitting in the green spectral region">green</a> and <a href="blue_lasers.html" title="lasers emitting blue light">blue laser sources</a> are actually based on intracavity frequency doubling.
+There are versions generating tens of watts of output power.
+The technique is also applicable to <a href="red_lasers.html" title="lasers emitting red light">red laser sources</a>, based e.g. on 1342-nm <a href="vanadate_lasers.html" title="lasers based on rare-earth-doped yttrium, gadolinium or lutetium vanadate crystals, usually Nd:YVO<sub>4</sub>">vanadate lasers</a>.</p>
+<h2 class="togglediv">Typical Technical Issues</h2>
+<div>
+<p>There are some possible negative side effects of intracavity doubling in continuous-wave lasers.
+A very disturbing issue can be that under certain circumstances the laser can exhibit very strong <a href="intensity_noise.html" title="noise of the optical intensity or power of a laser beam">intensity noise</a> (<em>&ldquo;green problem&rdquo;</em>).
+This is a result of the introduced nonlinear dynamics of the <a href="resonator_modes.html" title="modes of an optical or microwave resonator">resonator modes</a>, which can be influenced not only by the nonlinear frequency conversion but also be <a href="spatial_hole_burning.html" title="a distortion of the gain shape in a laser medium (or the loss spectrum in a saturable absorber medium), caused by saturation effects of a standing wave">spatial hole burning</a> and oscillation of <a href="higher_order_modes.html" title="transverse modes of a resonator or waveguide, excluding the fundamental (axial) modes">higher-order resonator modes</a>.
+Aspects of polarization can also be important, particularly for frequency doubling with a type&nbsp;II phase-matched crystal.
+Depending on the situation, the instabilities can be eliminated by applying different techniques in the <a href="laser_design.html" title="the design of a laser device, or the process of working out such a design">laser design</a>.
+Examples are the use of a relatively long resonator (increasing the number of oscillating resonator modes) or to design for stable <a href="single_frequency_operation.html" title="an operation mode of a laser where only a single resonator mode acquires a significant power">single-frequency operation</a>.
+(Somewhat surprisingly, single-frequency operation can even be stabilized by an intracavity doubler.)
+Thermal effects in the nonlinear crystal (e.g. <a href="thermal_lensing.html" title="a lensing effect induced by temperature gradients">thermal lensing</a>) are usually less of a problem, since they tend to be weaker than in the <a href="laser_crystals.html" title="transparent crystals with laser-active dopants, used as laser gain media">laser crystal</a>.</p>
+<p>If the <a href="gain_bandwidth.html" title="the width of the optical frequency range in which significant gain is available from an amplifier">gain bandwidth</a> is larger than the <a href="phase_matching_bandwidth.html" title="the width of an optical frequency range in which some process (e.g. a nonlinear interaction) can be efficient due to more or less precise phase matching">phase-matching bandwidth</a> of the nonlinear crystal, the laser wavelength may &ldquo;escape&rdquo; the wavelength region where the nonlinear conversion occurs, and this can result in an extremely low conversion efficiency.
+This problem can be eliminated with an intracavity <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical filter</a>, which essentially fixes the laser wavelength.</p>
+<p>In the case that the frequency doubler does not work, e.g. due to a crystal temperature which does not allow for <a href="phase_matching.html" title="a group of techniques for achieving efficient nonlinear interactions in a medium">phase matching</a>, the intracavity power of the fundamental wave can become fairly high (particularly in a <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched laser</a>).
+The design should be such that <a href="laser_induced_damage.html" title="damage of optical components induced by laser radiation">laser-induced damage</a> of optical components is nevertheless avoided.</p>
+</div>
+<h2 class="togglediv">Other Approaches</h2>
+<div>
+<p>Only in rare cases is intracavity frequency doubling used with <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched</a> or <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked lasers</a>.
+This is partly because the <a href="peak_power.html" title="maximum optical power of a pulse">peak powers</a> of such pulsed lasers are anyway sufficiently high for efficient conversion, and partly because the nonlinear element can have a detrimental impact on the pulse formation.
+In Q-switched lasers, an intracavity frequency doubler can significantly slow the pulse build-up, and in a passively mode-locked laser it can prevent the generation of <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a> by counteracting the effect of the <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorber</a>.</p>
+<p>An alternative technique, applicable to both <a href="single_frequency_lasers.html" title="lasers emitting radiation in a single resonator mode">single-frequency lasers</a> and mode-locked lasers, is the use of a resonant <a href="enhancement_cavities.html" title="optical cavities for exploiting the resonant enhancement of the power of circulating light">enhancement cavity</a> (&rarr;&nbsp;<a href="resonant_frequency_doubling.html" title="frequency doubling with a nonlinear crystal placed in a resonant enhancement cavity"><em>resonant frequency doubling</em></a>) external to the laser.
+Normally, only one of the two techniques is used.
+However, Ref.&nbsp;[15] demonstrates the unusual combination of both techniques.
+Here, the frequency-doubling resonator has been placed within the <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a> of a <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber laser</a>.
+Normally, neither technique would be ideal for a <a href="high_power_fiber_lasers_and_amplifiers.html" title="fiber lasers and fiber amplifiers with high output powers of e.g. &gt;&thinsp;10&thinsp;&thinsp;W">high-power fiber laser</a>: the resonator losses are too high for efficient intracavity doubling, and frequency-stabilized narrowband operation for external resonant doubling is not very convenient.
+The combination of both methods, however, works well: the long fiber laser resonator automatically operates on frequencies which are resonant in the short doubling resonator (a <a href="ring_resonators.html" title="optical resonators where light can independently circulate in two different directions">ring resonator</a>), and the resonant enhancement takes place only in the nonlinear crystal, but not in the fiber, so that the higher losses in the fiber part are not relevant.</p>
+<p>It is also possible to perform other kinds of <a href="nonlinear_frequency_conversion.html" title="the conversion of input light to light of other frequencies, using optical nonlinearities">nonlinear frequency conversion</a> within a laser resonator; examples are stimulated <a href="raman_scattering.html" title="a nonlinear scattering process involving optical phonons">Raman scattering</a>, <a href="sum_and_difference_frequency_generation.html" title="nonlinear processes generating beams with the sum or difference of the frequencies of the input beams">sum and difference frequency generation</a>, and <a href="optical_parametric_oscillators.html" title="coherent light sources based on parametric amplification within an optical resonator">optical parametric oscillation</a>.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="intracavity_frequency_doubling.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">O. Svelto and R. Polloni, &ldquo;Optimum coupling for intracavity second harmonic generation&rdquo;, IEEE J. Quantum Electron. 4 (9), 528 (1968), <a href="https://doi.org/10.1109/JQE.1968.1075384">doi:10.1109/JQE.1968.1075384</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">R. G. Smith, &ldquo;Theory of intracavity optical second-harmonic generation&rdquo;, IEEE J. Quantum Electron. QE-6, 215 (1970), <a href="https://doi.org/10.1109/LEOS.2006.279220">doi:10.1109/LEOS.2006.279220</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">T. Baer, &ldquo;Large-amplitude fluctuations due to longitudinal mode coupling in diode-pumped intra-cavity doubled Nd:YAG lasers&rdquo;, J. Opt. Soc. Am. B 3 (9), 1175 (1986), <a href="https://doi.org/10.1364/JOSAB.3.001175">doi:10.1364/JOSAB.3.001175</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">M. Oka and S. Kubota, &ldquo;Stable intracavity doubling of orthogonal linearly polarized modes in diode-pumped Nd:YAG lasers&rdquo;, Opt. Lett. 13 (10), 805 (1988), <a href="https://doi.org/10.1364/OL.13.000805">doi:10.1364/OL.13.000805</a> (polarization issue for type&nbsp;II doubling resolved with additional quarter-wave plate)</td></tr>
+<tr><td class="refno">[5]</td><td class="refs">G. E. James <i>et al.</i>, &ldquo;Intermittency and chaos in intracavity doubled lasers. II&rdquo;, Phys. Rev. A 41 (5), 2778 (1990), <a href="https://doi.org/10.1103/PhysRevA.41.2778">doi:10.1103/PhysRevA.41.2778</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">V. Magni <i>et al.</i>, &ldquo;Intracavity frequency doubling of a cw high-power TEM<sub>00</sub> Nd:YLF laser&rdquo;, Opt. Lett. 18 (24), 2111 (1993), <a href="https://doi.org/10.1364/OL.18.002111">doi:10.1364/OL.18.002111</a> (suppression of noise by operation on hundreds of cavity modes)</td></tr>
+<tr><td class="refno">[7]</td><td class="refs">M. Tsunekane <i>et al.</i>, &ldquo;Elimination of chaos in a multilongitudinal-mode, diode-pumped, 6-W continuous-wave, intracavity-doubled Nd:YAG laser&rdquo;, Opt. Lett. 22 (13), 1000 (1997), <a href="https://doi.org/10.1364/OL.22.001000">doi:10.1364/OL.22.001000</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">K. I. Martin <i>et al.</i>, &ldquo;Stable, high-power, single-frequency generation at 532&nbsp;nm from a diode-bar-pumped Nd:YAG ring laser with an intracavity LBO frequency doubler&rdquo;, Appl. Opt. 36 (18), 4149 (1997), <a href="https://doi.org/10.1364/AO.36.004149">doi:10.1364/AO.36.004149</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">C. Czeranowsky, V. Baev, and G. Huber, &ldquo;Stabilization of intracavity frequency-doubled lasers with type&nbsp;I phase matching&rdquo;, Opt. Lett. 28 (21), 2100 (2003) (noise suppression by placing crystals at certain positions in the resonator)</td></tr>
+<tr><td class="refno">[10]</td><td class="refs">C. Du <i>et al.</i>, &ldquo;6-W diode-end-pumped Nd:GdVO<sub>4</sub>/LBO quasi-continuous-wave red laser at 671&nbsp;nm&rdquo;, Opt. Express 13 (6), 2013 (2005), <a href="https://doi.org/10.1364/OPEX.13.002013">doi:10.1364/OPEX.13.002013</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">Q. H. Xue <i>et al.</i>, &ldquo;High-power efficient diode-pumped Nd:YVO<sub>4</sub>/LiB<sub>3</sub>O<sub>5</sub> 457&nbsp;nm blue laser with 4.6&nbsp;W of output power&rdquo;, Opt. Lett. 31 (8), 1070 (2006), <a href="https://doi.org/10.1364/OL.31.001070">doi:10.1364/OL.31.001070</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">L. McDonagh and R. Wallenstein, &ldquo;Low-noise 62&nbsp;W CW intracavity-doubled TEM<sub>00</sub> Nd:YVO<sub>4</sub> green laser pumped at 888&nbsp;nm&rdquo;, Opt. Lett. 32 (7), 802 (2007), <a href="https://doi.org/10.1364/OL.32.000802">doi:10.1364/OL.32.000802</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">C. Stolzenburg <i>et al.</i>, &ldquo;Cavity-dumped intracavity-frequency-doubled Yb:YAG thin-disk laser with 100&nbsp;W average power&rdquo;, Opt. Lett. 32 (9), 1123 (2007), <a href="https://doi.org/10.1364/OL.32.001123">doi:10.1364/OL.32.001123</a></td></tr>
+<tr><td class="refno"><sup>&nbsp;</sup>[14]</td><td class="refs">T. Südmeyer <i>et al.</i>, &ldquo;Efficient 2<sup>nd</sup> and 4<sup>th</sup> harmonic generation of a single-frequency, continuous-wave fiber amplifier&rdquo;, Opt. Express 16 (3), 1546 (2008), <a href="https://doi.org/10.1364/OE.16.001546">doi:10.1364/OE.16.001546</a></td></tr>
+<tr><td class="refno">[15]</td><td class="refs">R. Cieslak and W. A. Clarkson, &ldquo;Internal resonantly enhanced frequency doubling of continuous-wave fiber lasers&rdquo;, Opt. Lett. 36 (10), 1896 (2011), <a href="https://doi.org/10.1364/OL.36.001896">doi:10.1364/OL.36.001896</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="frequency_doubling.html" title="the phenomenon that an input wave in a nonlinear material can generate a wave with twice the optical frequency">frequency doubling</a>, <a href="nonlinear_frequency_conversion.html" title="the conversion of input light to light of other frequencies, using optical nonlinearities">nonlinear frequency conversion</a>, <a href="resonant_frequency_doubling.html" title="frequency doubling with a nonlinear crystal placed in a resonant enhancement cavity">resonant frequency doubling</a>, <a href="green_lasers.html" title="lasers emitting in the green spectral region">green lasers</a>, <a href="blue_lasers.html" title="lasers emitting blue light">blue lasers</a>, <a href="red_lasers.html" title="lasers emitting red light">red lasers</a>, <a href="nonlinear_crystal_materials.html" title="crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal materials</a>, <a href="enhancement_cavities.html" title="optical cavities for exploiting the resonant enhancement of the power of circulating light">enhancement cavities</a><br>and other articles in the categories <a href="categories.html#optical_resonators" title="other articles on optical resonators">optical resonators</a>, <a href="categories.html#nonlinear_optics" title="other articles on nonlinear optics">nonlinear optics</a>, <a href="categories.html#lasers" title="other articles on lasers">lasers</a></p>
+<hr style="margin-top:16px; margin-bottom:12px;">
+<a href="paschotta.html"><img src="img/paschotta3_small.jpg" alt="Dr. R. Paschotta" style="float:left; margin:0px 16px 20px 18px;" width="80" height="97"></a>
+<div style="margin-bottom:12px;">
+<p style="font-size:90%; line-height:20px; padding-right:20px;">This encyclopedia is authored by <a href="paschotta.html" class="redlink">Dr. Rüdiger Paschotta</a>, the founder and executive of <a href="index.html" class="redlink">RP Photonics Consulting GmbH</a>.
+How about a <a href="training.html" class="redlink">tailored training course</a> from this distinguished expert at your location?
+<a href="contact.html" class="redlink">Contact</a> RP Photonics to find out how his <a href="./services.html" class="redlink">technical consulting services</a> (e.g. product designs, problem solving, independent evaluations, training) and <a href="software.html" class="redlink">software</a> could become very valuable for your business!</p>
+</div>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/intracavity_frequency_doubling.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fintracavity_frequency_doubling.html&text=RP+Photonics+Encyclopedia+-+intracavity+frequency+doubling%2C+second-harmonic+generation%2C+nonlinear+frequency+conversion%2C+SHG%2C+doubler+crystal%2C+green+problem" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fintracavity_frequency_doubling.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fintracavity_frequency_doubling.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/intracavity_frequency_doubling.html"&gt;<br>Article on Intracavity Frequency Doubling&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/intracavity_frequency_doubling.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/intracavity_frequency_doubling.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/intracavity_frequency_doubling.html<br>article on 'Intracavity Frequency Doubling' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Now is the Time for Training!</h2>
+<p>When your lab is closed, how to best utilize your time? With training, of course.</p>
+<p>Some suggestions:</p>
+<ul>
+<li>Use the RP Photonics website, reading <a href="./encyclopedia.html?banner=video_training">encyclopedia</a> articles, <a href="./tutorials.html?banner=video_training">tutorials</a>, <a href="./spotlight.html?banner=video_training">Photonics Spotlight</a> articles, etc. &ndash; all for free.</li>
+<li>Get a <a href="./training.html?banner=video_training">tailored training course</a> delivered through the internet &ndash; with every participant connected from home!</li>
+<li>Start with <a href="./software_modeling.html?banner=video_training">physical modeling</a> in order to fully understand your systems and devices, optimize performance, create new ideas&hellip;</li>
+</ul>
+<img src="./img/rp_photonics.png" alt="RP Photonics" style="margin-top:20px; width:225px;">
+<p>offers <a href="./training.html?banner=video_training">tailored training courses</a> and powerful <a href="./software.html?banner=video_training">simulation &amp; design software</a>, e.g. for <a href="./fiberpower.html?banner=video_training">active and passive fiber devices</a>, <a href="./resonator.html?banner=video_training">laser resonators</a> and <a href="./coating.html?banner=video_training">thin-film coatings</a>!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="4UqFy1qOiZwT3iDNEdy7tQ==">shownbanner = "video training";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>How PhD Students Should Get Supported by Supervisors</h2>
+<p>A recent <a href="./spotlight_2014_12_17.html?banner=supervisors">article in the Photonics Spotlight</a> discusses the responsibilities of supervisors (professors and senior research assistance).</p>
+<p>Some key statements:</p>
+<ul>
+<li>Even if PhD students can carry out most of the work in a research project, vital inputs are needed from supervisors particularly in the planning phase and when a crisis occurs.</li>
+<li>A helpful supervisor does not only benefit the supported students, but contributes to the effectiveness of the whole research team.</li>
+<li>If serious engagement were the condition of authorship of supervisors, supervisors would be more likely to do their job.</li>
+<li>A substantial risk for science fraud arises only in a serious crisis &ndash; and is in that case strongly dependent on how the supervisor performs!</li>
+</ul>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="4UqFy1qOiZwT3iDNEdy7tQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/intracavity_frequency_doubling.html"
+    },
+    "headline": "Intracavity Frequency Doubling",
+    "image": "https://www.rp-photonics.com/previews/intracavity_frequency_doubling.png",
+    "datePublished": "2006-02-20",
+    "dateModified": "2020-07-10",
+    "description": "Intracavity frequency doubling is frequency doubling with a nonlinear crystal within the laser resonator. It often allows for a high power conversion efficiency.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter I",
+      "item": "https://www.rp-photonics.com/encyclopedia_i.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "intracavity frequency doubling",
+      "item": "https://www.rp-photonics.com/intracavity_frequency_doubling.html"
+    }]}
+}
+</script>
+</body>
+</html>

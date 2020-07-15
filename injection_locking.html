@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-b9/vgmGCC6Qw4xXvyHMgjQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - injection locking, single-frequency laser</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/injection_locking.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-05-15">
+<meta name="description" content="Injection locking is a technique for enforcing operation of a laser on a certain optical frequency by injecting light with that frequency into the laser resonator.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="injection locking, single-frequency laser">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Injection Locking">
+<meta property="og:description" content="Injection locking is a technique for enforcing operation of a laser on a certain optical frequency by injecting light with that frequency into the laser resonator.">
+<meta property="og:url" content="https://www.rp-photonics.com/injection_locking.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/injection_locking.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Injection locking is a technique for enforcing operation of a laser on a certain optical frequency by injecting light with that frequency into the laser resonator.">
+<meta name="twitter:title" content="Injection Locking">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/injection_locking.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="b9/vgmGCC6Qw4xXvyHMgjQ==">
+page="injection_locking.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="b9/vgmGCC6Qw4xXvyHMgjQ==">shownsponsors="RPMC Lasers"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_i.html">letter I</a> &gt; <a href="injection_locking.html">injection locking</a></p>
+<h1>Injection Locking</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+</aside>
+<!--googleon: index-->
+<header style="margin-right:0;">
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a technique for enforcing operation of a laser on a certain optical frequency by injecting light with that frequency into the laser resonator</p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#fluctuations_and_noise" title="other articles on fluctuations and noise">fluctuations and noise</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<p><a href="encyclopedia_cite.html?article=injection%20locking">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Injection locking is a technique which is applied mainly to <a href="continuous_wave_operation.html" title="operation mode of a laser with continuous light emission">continuous-wave</a> <a href="single_frequency_lasers.html" title="lasers emitting radiation in a single resonator mode">single-frequency laser</a> sources when a high output power needs to be combined with a very low <a href="intensity_noise.html" title="noise of the optical intensity or power of a laser beam">intensity noise</a> and <a href="phase_noise.html" title="noise of the optical phase of a beam or of an electric signal">phase noise</a>.
+Such low-noise performance, or even just single-frequency operation, is significantly more difficult to achieve in <a href="high_power_lasers.html" title="lasers emitting very high optical powers">high-power lasers</a>, because these tend to be more susceptible to mechanical vibrations, cannot utilize very low-noise pump sources, and are subject to significant thermal influences.
+In addition, it is not desirable to insert <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical filters</a> into the <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a>, as such filters could degrade the <a href="wall_plug_efficiency.html" title="total electrical-to-optical power efficiency of a laser system">power efficiency</a> and might not be able to tolerate the high power level.</p>
+<p>In principle, one might construct a low-noise low-power laser and <a href="optical_amplifiers.html" title="devices for amplifying the power of light beams">amplify</a> its output, e.g. with a high-power <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifier</a> (&rarr;&nbsp;<a href="master_oscillator_power_amplifier.html" title="a laser system consisting of a seed laser and a laser amplifier for boosting the output power"><em>master oscillator power amplifier</em></a>).
+However, that approach is plagued by various fundamental and practical problems.
+In particular, the to some extent unavoidable <a href="amplifier_noise.html" title="noise introduced to a signal in an amplifier device">amplifier noise</a> raises the noise level, so that the standard <a href="quantum_noise.html" title="noise arising from quantum fluctuations">quantum noise</a> level can not be reached.
+Also, multiple amplifier stages (i.e. an <a href="amplifier_chains.html" title="amplifiers consisting of several stages">amplifier chain</a>) are often required if the required overall <a href="amplification_factor.html" title="the factor by which the power of a signal is amplified">amplification factor</a> is large.
+Finally, the <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a> of <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a> cause problems particularly for <a href="single_frequency_operation.html" title="an operation mode of a laser where only a single resonator mode acquires a significant power">single-frequency operation</a> (<em>stimulated <a href="brillouin_scattering.html" title="a nonlinear scattering effect involving acoustic phonons">Brillouin scattering</a></em>).</p>
+<figure>
+<img src="img/injection_locking.png" alt="injection-locked laser system">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Injection-locked ring laser system. The feedback electronics act on the resonator length to prevent the resonance from drifting too far away from the frequency of the seed laser.
+</figcaption>
+</figure>
+<p>Injection locking is a different approach, avoiding these problems.
+Here, the high output power is generated with a high-power laser (not with an <a href="optical_amplifiers.html" title="devices for amplifying the power of light beams">amplifier</a>), called the <a href="slave_laser.html" title="a laser which is injection-locked to another laser"><em>slave laser</em></a>, the noise level of which is strongly reduced by injecting the output of a low-noise low-power <a href="master_laser.html" title="a single-frequency laser used for injection locking one or several other lasers">master laser</a> (or <a href="seed_lasers.html" title="lasers which are used for generating some seed light into an amplifier or another laser"><em>seed laser</em></a>) (usually a <a href="bulk_lasers.html" title="lasers based on bulk crystals as gain media">bulk laser</a>) through a partially transparent resonator mirror.
+Provided that the frequencies of the master laser and the free-running slave laser are sufficiently close, the injection forces the slave laser to operate exactly on the injected frequency with relatively little noise.
+The higher the injected power, the larger is the allowable frequency offset between the seed laser and the slave laser's resonance.
+Close to quantum-limited intensity and phase noise can be achieved with this technique.</p>
+<p>The <a href="resonator_modes.html" title="modes of an optical or microwave resonator">resonator mode</a> on which the injection-locked laser operates is usually a <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian</a> mode, but it is also possible to enforce operation on some <a href="higher_order_modes.html" title="transverse modes of a resonator or waveguide, excluding the fundamental (axial) modes">higher-order mode</a>.</p>
+<p>Note that injection locking is more than <a href="injection_seeding.html" title="a technique for enforcing narrowband operation of a laser or optical parametric oscillator by injecting light into its resonator">injection seeding</a>: it means emission strictly on the seed laser frequency.
+Injection seeding without frequency locking is often applied to <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched lasers</a> and to <a href="optical_parametric_oscillators.html" title="coherent light sources based on parametric amplification within an optical resonator">optical parametric oscillators</a>, and sometimes incorrectly called injection <em>locking</em>.</p>
+<h2 class="togglediv">Self-injection Locking</h2>
+<div>
+<p>The term <em>self-injection locking</em> is sometimes used for a technique which is somewhat related to the technique explained above.
+However, the seed signal then comes from the same laser, rather than from an external seed laser.
+This means that the <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a> receives some optical feedback &ndash; usually with some spectral <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">filtering</a>.
+For example, filtered optical feedback can be provided to a <a href="laser_diodes.html" title="semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diode</a> by attaching an optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fiber</a> which contains a narrowband <a href="fiber_bragg_gratings.html" title="reflective structures in the core of an optical fiber with a periodic or aperiodic perturbation of the effective refractive index">fiber Bragg grating</a>.
+An alternative way to describe this situation is to see the combination of <a href="output_couplers.html" title="partially transparent laser mirrors, used for extracting output beams from laser resonators">output coupler</a> and external reflector as a kind of <a href="fabry_perot_interferometers.html" title="interferometers consisting of two highly reflecting mirrors, forming a standing-wave resonator">Fabry&ndash;P&eacute;rot interferometer</a>, forming an effective output coupler with strongly frequency-dependent transmission.
+This picture also explains why the spacing between output coupler and external reflector is important: it determines the <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a> of the Fabry&ndash;P&eacute;rot.
+In effect, the laser linewidth may be strongly reduced compared with the situation without the external reflector.</p>
+<p>In some cases, the term &ldquo;self-injection locking&rdquo; is used where <em>self <a href="injection_seeding.html" title="a technique for enforcing narrowband operation of a laser or optical parametric oscillator by injecting light into its resonator">injection seeding</a></em> would be more appropriate.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="injection_locking.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">R. H. Pantell, &ldquo;The laser oscillator with an external signal&rdquo;, Proc. IEEE 53, 474 (1965), <a href="https://doi.org/10.1109/PROC.1965.3817">doi:10.1109/PROC.1965.3817</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">C. L. Tang and H. Statz, &ldquo;Phase locking of laser oscillators by injected signals&rdquo;, J. Appl. Phys. 38 (1), 323 (1967), <a href="https://doi.org/10.1063/1.1708974">doi:10.1063/1.1708974</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">H. L. Stover and W. H. Steier, &ldquo;Locking of laser oscillators by light injection&rdquo;, Appl. Phys. Lett. 8, 91 (1966), <a href="https://doi.org/10.1063/1.1754502">doi:10.1063/1.1754502</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">C. J. Buczek <i>et al.</i>, &ldquo;Laser injection locking&rdquo;, Proc. IEEE 61, 1411 (1973), <a href="https://doi.org/10.1109/PROC.1973.9294">doi:10.1109/PROC.1973.9294</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">S. A. Magnitskii <i>et al.</i>, &ldquo;Generation of bandwidth-limited tunable picosecond pulses by injection-locked optical parametric oscillators&rdquo;, Opt. Lett. 11 (1), 18 (1986), <a href="https://doi.org/10.1364/OL.11.000018">doi:10.1364/OL.11.000018</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">L. Winkelmann <i>et al.</i>, &ldquo;Injection-locked single-frequency laser with an output power of 220&nbsp;W&rdquo;, Appl. Phys. B 102 (3), 529 (2011), <a href="https://doi.org/10.1007/s00340-011-4411-9">doi:10.1007/s00340-011-4411-9</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="injection_seeding.html" title="a technique for enforcing narrowband operation of a laser or optical parametric oscillator by injecting light into its resonator">injection seeding</a>, <a href="stabilization_of_lasers.html" title="measures applied to lasers in order to improve their stability in terms of output power, optical frequency, or other quantities">stabilization of lasers</a>, <a href="linewidth.html" title="width of the spectrum of a light beam or an absorption feature">linewidth</a>, <a href="single_frequency_lasers.html" title="lasers emitting radiation in a single resonator mode">single-frequency lasers</a>, <a href="laser_noise.html" title="fluctuations of various parameters of laser light, such as the optical power and phase">laser noise</a>, <a href="phase_noise.html" title="noise of the optical phase of a beam or of an electric signal">phase noise</a>, <a href="seed_lasers.html" title="lasers which are used for generating some seed light into an amplifier or another laser">seed lasers</a>, <a href="slave_laser.html" title="a laser which is injection-locked to another laser">slave laser</a><br>and other articles in the categories <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#fluctuations_and_noise" title="other articles on fluctuations and noise">fluctuations and noise</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/injection_locking.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Finjection_locking.html&text=RP+Photonics+Encyclopedia+-+injection+locking%2C+single-frequency+laser" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Finjection_locking.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Finjection_locking.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/injection_locking.html"&gt;<br>Article on Injection Locking&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/injection_locking.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/injection_locking.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/injection_locking.html<br>article on 'Injection Locking' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="./propulse_demo_soliton.html?banner=RP_ProPulse_2"><img src="./img/propulse_demo_soliton4b.png" alt="higher-order solitons" style="margin-bottom:8px"></a>
+<p>Evolution of the spectrum of a third-order soliton pulse.</p>
+<p>This diagram has been made with the <a href="./propulse.html?banner=RP_ProPulse_2"><b>RP ProPulse</b></a> software.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="b9/vgmGCC6Qw4xXvyHMgjQ==">shownbanner = "RP ProPulse 2";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Photonics Newsletters &ndash; <br>get high quality information, not the usual advertisements!</h2>
+<ul>
+<li>The <a href="./spotlight.html?banner=newsletters">Photonics Spotlight</a> presents high-quality information on technical and scientific aspects of photonics.</li>
+<li>The <a href="./software_news.html?banner=newsletters">RP Photonics Software News</a> present news and useful hints on software &ndash; for example, about how to use our software products, new features, updates and upgrades, and on algorithms.</li>
+</ul>
+<p style="text-align:center; margin:8px 8px;"><img src="./img/mail.png" alt="e-mail"></p>
+<h3>We won't flood you with e-mails!</h3>
+<p>Our newsletters appear only about once per month, and they carry valuable information.
+You will not regret to <a href="./newsletters.html?banner=newsletters">register</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="b9/vgmGCC6Qw4xXvyHMgjQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/injection_locking.html"
+    },
+    "headline": "Injection Locking",
+    "image": "https://www.rp-photonics.com/previews/injection_locking.png",
+    "datePublished": "2005-06-26",
+    "dateModified": "2020-05-15",
+    "description": "Injection locking is a technique for enforcing operation of a laser on a certain optical frequency by injecting light with that frequency into the laser resonator.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter I",
+      "item": "https://www.rp-photonics.com/encyclopedia_i.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "injection locking",
+      "item": "https://www.rp-photonics.com/injection_locking.html"
+    }]}
+}
+</script>
+</body>
+</html>

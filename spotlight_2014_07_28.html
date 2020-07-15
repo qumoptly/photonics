@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-g4bgDeSSp6CYruaRsTlJ6A=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>The Photonics Spotlight - How to Define the Mode Radius of a Fiber?</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/spotlight_2014_07_28.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2014-07-28">
+<meta name="description" content="This article discusses various issues in the context of defining what is the mode radius of an optical fiber. It turns out that beyond the known issues from the context of laser beams, there are additional issues about which one should know in the context of fiber optics.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="photonics, spotlight, news, publications, blog, RSS feed, encyclopedia, laser physics, technology">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Photonics Spotlight - How to Define the Mode Radius of a Fiber?">
+<meta property="og:description" content="This article discusses various issues in the context of defining what is the mode radius of an optical fiber. It turns out that beyond the known issues from the context of laser beams, there are additional issues about which one should know in the context of fiber optics.">
+<meta property="og:url" content="https://www.rp-photonics.com/spotlight_2014_07_28.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/spotlight_2014_07_28.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="This article discusses various issues in the context of defining what is the mode radius of an optical fiber. It turns out that beyond the known issues from the context of laser beams, there are additional issues about which one should know in the context of fiber optics.">
+<meta name="twitter:title" content="The Photonics Spotlight - How to Define the Mode Radius of a Fiber?">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/spotlight_2014_07_28.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="g4bgDeSSp6CYruaRsTlJ6A==">
+page="spotlight_2014_07_28.html"; cat="P"; shownbanner=""; ref="http://www.rp-photonics.com/spotlight.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="g4bgDeSSp6CYruaRsTlJ6A==">shownsponsors="TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight" class="selected"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="spotlight.html">The Photonics Spotlight</a> &gt; <a href="spotlight_2014_07_28.html">2014-07-28</a></p>
+<h1 class="posting">How to Define the Mode Radius of a Fiber?</h1>
+<div class="posting_details">
+<p>Posted on 2014-07-28 as a part of the <a href="spotlight.html">Photonics Spotlight (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="spotlight_2014_07_28.html" class="url">https://www.rp-photonics.com/spotlight_2014_07_28.html</a></p>
+<p>Author: <a href="https://www.rp-photonics.com/paschotta.html" rel="author">Dr. Rüdiger Paschotta</a>, <a href="https://www.rp-photonics.com/">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: This article discusses various issues in the context of defining what is the mode radius of an optical fiber. It turns out that beyond the known issues from the context of laser beams, there are additional issues about which one should know in the context of fiber optics.</p>
+</div>
+<p class="ref">Ref.: encyclopedia article on <a href="mode_radius.html" title="a measure of the transverse extent of a laser mode or laser beam">mode radius</a>; M. Artiglia et al., &ldquo;Mode field diameter measurements in single-mode optical fibers&rdquo;, J. Lightwave Technol. 7 (8), 1139 (1989)</p>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p>Most people who have worked with <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beams</a> know that it is not entirely trivial to find a reasonable definition for the <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a>.
+Still, you might believe that exactly the same issues apply to the modes of optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>.
+After all, they have similar intensity profiles like laser beams, so why should any new issues arise in this context?</p>
+<p>In the early days of fiber optics, one indeed used that approach and simply took the usual 1/e<sup>2</sup> intensity criterion for fiber modes.
+As long as fibers were used which had approximately <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian</a> mode profiles, this worked reasonably well.
+However, some of the fibers &ndash; in particular, some <a href="dispersion_shifted_fibers.html" title="fibers with a non-standard zero dispersion wavelength">dispersion-shifted fibers</a> &ndash; exhibited non-Gaussian intensity profiles, and this led to problems.
+Part of that was related to a common measurement method, where one records the far field intensity profile (which is somewhat simpler to get than the near field profile) and calculates the near field beam radius essentially from the <a href="beam_divergence.html" title="a measure for how fast a laser beam expands far from its focus">beam divergence</a> as calculated from the far field profile.
+For that, one uses a simple formula which is valid only for modes with Gaussian profiles.
+The mentioned formula then leads to a somewhat smaller result than a direct near field measurement.</p>
+<p>From this you may actually draw the lesson that in case of doubt you should always do a direct near field measurement, i.e., determine a <em>near field beam radius</em>, ideally using the common D4&sigma; criterion (see my encyclopedia article on <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a>).
+This, however, is also not true.
+It turned out, for example, that the beam radius as calculated from the far field divergence (which you may call the <em>far field beam radius</em>, or maybe more clearly the <em>far field derived beam radius</em>) is a better measure for the sensitivity of fiber splices to a small offset of the <a href="fiber_core.html" title="the region in an optical fiber which guides light">fiber cores</a>.
+On the other hand, the beam radius directly measured in the near field profile allows better predictions concerning the sensitivity to angular deviations.</p>
+<p>You can see that rather sophisticated issues are encountered in this context (about which the above cited paper of Artiglia gives a good overview).
+For sure, it is very desirable to know with which method a certain value for the beam radius has been determined.
+Unfortunately, it is a widespread habit in the industry to quote such numbers without revealing how they have been obtained.</p>
+<p>Of course, coupling losses at <a href="fiber_joints.html" title="permanent or removable connections between fiber ends">fiber joints</a> can anyway not be fully determined only from the two involved mode radii, as they depend on the full mode profiles.
+Only if their shapes are known, the beam radii are sufficient for calculating the coupling losses.</p>
+<p>By the way, the near field and far field beam radii can of course also be numerically calculated for a given fiber design.
+Recently, I have enabled our <a href="fiberpower.html">RP Fiber Power</a> software to calculate far field profiles, and from this you can of course also obtain the beam radius as explained above.
+You can then check yourself how much the beam radius values from the two definitions deviate from each other, and compare measured values with expected ones.</p>
+<hr>
+<p style="font-size:90%; margin-bottom:10px;">This article is a posting of the <a href="spotlight.html">Photonics Spotlight</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page and cite it, because its location is permanent.
+See also the <a href="encyclopedia.html">RP Photonics Encyclopedia</a>.</p>
+<p>Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="https://www.rp-photonics.com/spotlight.rss">RSS feed</a>.</p>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="spotlight_2014_07_28.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/spotlight_2014_07_28.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2014_07_28.html&text=The+Photonics+Spotlight+-+How+to+Define+the+Mode+Radius+of+a+Fiber%3F" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2014_07_28.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2014_07_28.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2014_07_28.html"&gt;<br>Article on The Photonics Spotlight - How to Define the Mode Radius of a Fiber?&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2014_07_28.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/spotlight_2014_07_28.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Paschotta</a>, RP Photonics Consulting GmbH. All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./marketing_contact.html">contact</a>, <a href="./privacy.html">data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Fiber Optics Software</h2>
+<a href="./rp_fiber_calculator.html?banner=RP_Fiber_Calculator" style="float:right; margin-left:3px"><img src="./img/fiberpower_logo.png" alt="RP Fiber Calculator software"></a>
+<p><a href="./rp_fiber_calculator.html?banner=RP_Fiber_Calculator">RP Fiber Calculator</a> &ndash; a convenient tool for calculations on optical fibers:</p>
+<ul>
+<li>Define <a href="./rp_fiber_calculator_docu.html?banner=RP_Fiber_Calculator">index or doping profiles</a> with the graphical user interface.</li>
+<li>Calculate the <a href="./rp_fiber_calculator_gm.html?banner=RP_Fiber_Calculator">guided modes</a> and all their properties.</li>
+</ul>
+<p style="text-align:center;"><a href="./rp_fiber_calculator_gm.html?banner=RP_Fiber_Calculator"><img src="./img/mode_solver.png" alt="mode profiles"></a></p>
+<ul>
+<li>Calculate how much power of a <a href="./rp_fiber_calculator_la.html?banner=RP_Fiber_Calculator">laser beam is launched</a> into the modes.</li>
+<li>Simulate <a href="./rp_fiber_calculator_pr.html?banner=RP_Fiber_Calculator">light propagation</a> within the fiber and <a href="./rp_fiber_calculator_co.html?banner=RP_Fiber_Calculator">coupling of light from one fiber to another</a>.</li>
+</ul>
+<a href="./rp_fiber_calculator.html?banner=RP_Fiber_Calculator"><img src="./img/rp_fiber_calculator_screenshot_small.png" alt="screen shot"></a>
+<p>The basic version of this software is offered <a href="./rp_fiber_calculator_download.html?banner=RP_Fiber_Calculator">for free</a>!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="g4bgDeSSp6CYruaRsTlJ6A==">shownbanner = "RP Fiber Calculator";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Latest Encyclopedia Articles</h2>
+<p>Here are the latest encyclopedia articles:</p>
+<ul>
+<li class="tight"><a href="./variable_reflectivity_mirrors.html">variable reflectivity mirrors</a></li>
+<li class="tight"><a href="./color_centers.html">color centers</a></li>
+<li class="tight"><a href="./excimer_lamps.html">excimer lamps</a></li>
+<li class="tight"><a href="./multimode_beams.html">multimode beams</a></li>
+<li class="tight"><a href="./channel_waveguides.html">channel waveguides</a></li>
+<li class="tight"><a href="./optical_crystals.html">optical crystals</a></li>
+<li class="tight"><a href="./standing_wave_resonators.html">standing-wave resonators</a></li>
+<li class="tight"><a href="./nonlinear_absorption.html">nonlinear absorption</a></li>
+<li class="tight"><a href="./passive_fibers.html">passive fibers</a></li>
+<li class="tight"><a href="./active_fibers.html">active fibers</a></li>
+<li class="tight"><a href="./oem_laser_modules.html">OEM laser modules</a></li>
+<li class="tight"><a href="./industrial_lasers.html">industrial lasers</a></li>
+<li class="tight"><a href="./scientific_lasers.html">scientific lasers</a></li>
+<li class="tight"><a href="./flint_glasses.html">flint glasses</a></li>
+<li class="tight"><a href="./crown_glasses.html">crown glasses</a></li>
+<li class="tight"><a href="./sodium_vapor_lamps.html">sodium vapor lamps</a></li>
+<li class="tight"><a href="./metal_vapor_lamps.html">metal vapor lamps</a></li>
+<li class="tight"><a href="./mercury_vapor_lamps.html">mercury vapor lamps</a></li>
+<li class="tight"><a href="./white_light.html">white light</a></li>
+<li class="tight"><a href="./cie_standard_illuminants.html">CIE standard illuminants</a></li>
+</ul>
+
+<p>The encyclopedia already contains 948 articles.</p>
+<p>See also the regularly appearing articles of the <a href="./spotlight.html?banner=new_articles">The Photonics Spotlight</a> and the <a href="./software_news.html?banner=new_articles">RP Photonics Software News</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="g4bgDeSSp6CYruaRsTlJ6A==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/spotlight_2014_07_28.html"
+    },
+    "headline": "How to Define the Mode Radius of a Fiber?",
+    "image": "https://www.rp-photonics.com/previews/spotlight_2014_07_28.png",
+    "datePublished": "2014-07-28",
+    "description": "This article discusses various issues in the context of defining what is the mode radius of an optical fiber. It turns out that beyond the known issues from the context of laser beams, there are additional issues about which one should know in the context of fiber optics.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "The Photonics Spotlight",
+      "item": "https://www.rp-photonics.com/spotlight.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "2014-07-28",
+      "item": "https://www.rp-photonics.com/spotlight_2014_07_28.html"
+    }]}
+}
+</script>
+</body>
+</html>

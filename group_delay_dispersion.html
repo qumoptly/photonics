@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-oeIraUQ0cE4NXfqNlMBbKQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - group delay dispersion, second-order dispersion</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/group_delay_dispersion.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Group delay dispersion (GDD) is the frequency dependency of the group delay, or (quantitatively) the corresponding derivative with respect to angular frequency.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="group delay dispersion, second-order dispersion">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Group Delay Dispersion">
+<meta property="og:description" content="Group delay dispersion (GDD) is the frequency dependency of the group delay, or (quantitatively) the corresponding derivative with respect to angular frequency.">
+<meta property="og:url" content="https://www.rp-photonics.com/group_delay_dispersion.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/group_delay_dispersion.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Group delay dispersion (GDD) is the frequency dependency of the group delay, or (quantitatively) the corresponding derivative with respect to angular frequency.">
+<meta name="twitter:title" content="Group Delay Dispersion">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/group_delay_dispersion.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="oeIraUQ0cE4NXfqNlMBbKQ==">
+page="group_delay_dispersion.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/encyclopedia.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="oeIraUQ0cE4NXfqNlMBbKQ==">shownsponsors="Knight Optical"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_g.html">letter G</a> &gt; <a href="group_delay_dispersion.html">group delay dispersion</a></p>
+<h1>Group Delay Dispersion</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="advicebox">
+<p>Ask <a href="index.html">RP Photonics</a> for any aspects of group delay dispersion, perhaps also for <a href="training.html">tailored staff training</a> on such topics.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p>Acronym: GDD</p>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: the frequency dependency of the group delay, or (quantitatively) the corresponding derivative with respect to angular frequency</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Gruppenverzögerungsdispersion</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<p>Formula symbol: <span class="eqn_il"><i>D</i><sub>2</sub></span></p>
+<p>Units: s<sup>2</sup></p>
+<p><a href="encyclopedia_cite.html?article=group%20delay%20dispersion">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>The group delay dispersion (also sometimes called <em>second-order dispersion</em>) of an optical element is the derivative of the <a href="group_delay.html" title="a measure of the time delay experienced by narrow-band light pulses in an optical device">group delay</a> with respect to the angular frequency, or the second derivative of the change in <a href="spectral_phase.html" title="the phase of the electric field in the frequency domain">spectral phase</a>:</p>
+<div class="eqn"><img src="eqn/gdd_def.gif" width="134" height="44" alt="group delay dispersion (GDD)"></div>
+<p>It is usually specified in fs<sup>2</sup> or ps<sup>2</sup>.
+Positive (negative) values correspond to normal (anomalous) <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>.
+For example, the group delay dispersion of a 1-mm thick silica plate is +35&nbsp;fs<sup>2</sup> at 800&nbsp;nm (normal dispersion) or &minus;26&nbsp;fs<sup>2</sup> at 1500&nbsp;nm (anomalous dispersion).
+Another example is given in Figure&nbsp;1.</p>
+<figure>
+<img src="img/gti_gdd.png" alt="dispersion of a GTI">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Wavelength-dependent group delay dispersion of a <a href="gires_tournois_interferometers.html" title="linear optical resonators used for introducing chromatic dispersion">Gires&ndash;Tournois interferometer</a> made of a 5-&mu;m thick silica layer on a high reflector.
+</figcaption>
+</figure>
+<p>If an optical element has only second order dispersion, i.e., a frequency-independent <span class="eqn_il"><i>D</i><sub>2</sub></span> value, its effect on an optical pulse or signal can be described as a change of the <a href="spectral_phase.html" title="the phase of the electric field in the frequency domain">spectral phase</a>:</p>
+<div class="eqn"><img src="eqn/gdd_phase.gif" width="145" height="41" alt="spectral phase change from GDD"></div>
+<p>where <span class="eqn_il"><span class="greek">&omega;</span><sub>0</sub></span> is the angular frequency at the center of the spectrum.</p>
+<p>Note that the group delay dispersion (GDD) always refers to some optical element or to some given length of a medium (e.g. an optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fiber</a>).
+The GDD per unit length (in units of s<sup>2</sup>/m) is the <a href="group_velocity_dispersion.html" title="the frequency dependence of the group velocity in a medium, or (quantitatively) the derivative of the inverse group velocity with respect to angular frequency"><em>group velocity dispersion</em></a> (GVD).</p>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="group_delay_dispersion.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">K. Naganuma <i>et al.</i>, &ldquo;Group-delay measurement using the Fourier transform of an interferometric cross correlation generated by white light&rdquo;, Opt. Lett. 15 (7), 393 (1990), <a href="https://doi.org/10.1364/OL.15.000393">doi:10.1364/OL.15.000393</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">A. P. Kovacs <i>et al.</i>, &ldquo;Group-delay measurement on laser mirrors by spectrally resolved white-light interferometry&rdquo;, Opt. Lett. 20 (7), 788 (1995), <a href="https://doi.org/10.1364/OL.20.000788">doi:10.1364/OL.20.000788</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">S. Diddams and J.-C. Diels, &ldquo;Dispersion measurements with white-light interferometry&rdquo;, J. Opt. Soc. Am. B 13 (6), 1120 (1996), <a href="https://doi.org/10.1364/JOSAB.13.001120">doi:10.1364/JOSAB.13.001120</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">A. Gosteva <i>et al.</i>, &ldquo;Noise-related resolution limit of dispersion measurements with white-light interferometers&rdquo;, J. Opt. Soc. Am. B 22 (9), 1868 (2005), <a href="https://doi.org/10.1364/JOSAB.22.001868">doi:10.1364/JOSAB.22.001868</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">T. V. Amotchkina <i>et al.</i>, &ldquo;Measurement of group delay of dispersive mirrors with white-light interferometer&rdquo;, Appl. Opt. 48 (5), 949 (2009), <a href="https://doi.org/10.1364/AO.48.000949">doi:10.1364/AO.48.000949</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>, <a href="group_velocity_dispersion.html" title="the frequency dependence of the group velocity in a medium, or (quantitatively) the derivative of the inverse group velocity with respect to angular frequency">group velocity dispersion</a>, <a href="group_delay.html" title="a measure of the time delay experienced by narrow-band light pulses in an optical device">group delay</a><br>and other articles in the categories <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/group_delay_dispersion.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fgroup_delay_dispersion.html&text=RP+Photonics+Encyclopedia+-+group+delay+dispersion%2C+second-order+dispersion" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fgroup_delay_dispersion.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fgroup_delay_dispersion.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/group_delay_dispersion.html"&gt;<br>Article on Group Delay Dispersion&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/group_delay_dispersion.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/group_delay_dispersion.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/group_delay_dispersion.html<br>article on 'Group Delay Dispersion' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Short-term Software Licenses Available</h2>
+<p>Do you need simulation software (such as our <a href="./fiberpower.html?banner=rented_software">RP Fiber Power</a>) only during a <b>short-term project</b>?</p>
+<p>Or do you want to <b>test such software very thoroughly</b> before fully committing to it?</p>
+<p>RP Photonics is now offering a solution: <a href="./software_licenses.html?banner=rented_software">software licenses</a> which are valid for a <b>limited time</b>.</p>
+<p>Our conditions are very fair:</p>
+<ul>
+<li>Pay only 5% of the amount for a permanent license for one month.</li>
+<li>When switching over to a permanent license directly thereafter, get the already paid money fully deducted!</li>
+<li>If you decide for that only later on, still get two thirds deducted.</li>
+</ul>
+<p>We are confident that you will like our software and finally decide for permanent licenses.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="oeIraUQ0cE4NXfqNlMBbKQ==">shownbanner = "rented software";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>A Quiz Question</h2>
+<p style="margin-top:15px">taken from the <a href="./quiz.html?banner=quiz">Photonics Quiz</a>:</p><form action="/quiz.html" method="get" style="margin-bottom:12px;">
+<p><input name="n" value="31" type="hidden"></p>
+<p style="text-align:left;">If we attenuate a laser beam (e.g. by sending it through an absorber), will that modify its relative intensity noise?</p>
+<p style="margin-left:50px; text-indent:-50px; text-align:left;"><input type="checkbox" name="answer_a" value="y"> (a) No. The power fluctuations relative to the average power will remain unchanged.</p>
+<p style="margin-left:50px; text-indent:-50px; text-align:left;"><input type="checkbox" name="answer_b" value="y"> (b) Yes. The relative power fluctuations will increase, since we have to consider the <em>squares</em> of the power deviations.</p>
+<p style="margin-left:50px; text-indent:-50px; text-align:left;"><input type="checkbox" name="answer_c" value="y"> (c) It depends. Relative intensity noise near the shot noise level will be increased, much stronger intensity noise will not.</p>
+<p style="margin-top:15px;"><input type="submit" value="Get your answer checked" style="padding:3px 10px; font-size:14px;"></p>
+</form>
+<p>After selecting your answer(s) and pressing this button, find the explanations on the left side.</p>
+
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="oeIraUQ0cE4NXfqNlMBbKQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/group_delay_dispersion.html"
+    },
+    "headline": "Group Delay Dispersion",
+    "image": "https://www.rp-photonics.com/previews/group_delay_dispersion.png",
+    "datePublished": "2007-10-17",
+    "dateModified": "2020-03-14",
+    "description": "Group delay dispersion (GDD) is the frequency dependency of the group delay, or (quantitatively) the corresponding derivative with respect to angular frequency.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter G",
+      "item": "https://www.rp-photonics.com/encyclopedia_g.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "group delay dispersion",
+      "item": "https://www.rp-photonics.com/group_delay_dispersion.html"
+    }]}
+}
+</script>
+</body>
+</html>

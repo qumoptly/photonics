@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-V9e8fDhHoJsCOnQalba5lw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - colorimetry, color spaces, tristimulus values, colorimeters, color perception, human eye, trichromatic color vision</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/colorimetry.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Colorimetry is the science and technology of objectively measuring optical properties related to color perceptions for the human eye.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="colorimetry, color spaces, tristimulus values, colorimeters, color perception, human eye, trichromatic color vision">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Colorimetry">
+<meta property="og:description" content="Colorimetry is the science and technology of objectively measuring optical properties related to color perceptions for the human eye.">
+<meta property="og:url" content="https://www.rp-photonics.com/colorimetry.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/colorimetry.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Colorimetry is the science and technology of objectively measuring optical properties related to color perceptions for the human eye.">
+<meta name="twitter:title" content="Colorimetry">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/colorimetry.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="V9e8fDhHoJsCOnQalba5lw==">
+page="colorimetry.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="V9e8fDhHoJsCOnQalba5lw==">shownsponsors="El.En."</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_c.html">letter C</a> &gt; <a href="colorimetry.html">colorimetry</a></p>
+<h1>Colorimetry</h1>
+<header style="margin-right:0;">
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: the science and technology of objectively measuring optical properties related to color impressions for the human eye</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Kolorimeter</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<p><a href="encyclopedia_cite.html?article=colorimetry">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Colorimetry is the science and technology of measuring optical properties related to color impressions (<a href="color_vision.html" title="vision with some capability for spectral analysis of the light">color vision</a>).
+Although one may use instruments like <a href="spectrophotometers.html" title="instruments for measuring the wavelength-dependent transmittance or reflectance of solutions or solid objects">spectrophotometers</a> which measure wavelength-dependent properties &ndash; for example, the <a href="reflectance.html" title="the ratio of reflected optical power to the incident optical power at some reflecting object">reflectance</a> spectrum of a sample &ndash; in colorimetry the interest is focused on the perception of colors by human eyes rather than on the physical properties of light.
+Note that the capability of an eye of utilizing spectral information is far more limited than that of a <a href="spectrometers.html" title="devices for separating spectral components">spectrometer</a> or <a href="spectrophotometers.html" title="instruments for measuring the wavelength-dependent transmittance or reflectance of solutions or solid objects">spectrophotometer</a>, for example; the human eye has only three different color receptors, while technical instruments can have hundreds or even many thousands of channels.
+Therefore, colorimetry is often performed with much simpler instruments.</p>
+<p>Essentially, the task of colorimetry is to provide objective measures for optical properties which are responsible for color perceptions.
+Those can be either properties of light (or light sources) or of objects interacting with light.
+Some examples:</p>
+<ul>
+<li>One can measure the colorimetric properties of a <a href="white_light_sources.html" title="light sources with very broad optical bandwidth">white light source</a>.
+Measurement results may include the <a href="color_temperature.html" title="the temperature of a blackbody radiator which leads to a color impression of the thermal light which matches most closely the light of a light source">color temperature</a> and the <a href="color_rendering_index.html" title="a quantity which can be used for estimating how accurately colors can be perceived when using a specific light source">color rendering index</a>.
+In the context of illumination, one may also assess the properties of light arriving at a certain location, which can depend not only on the properties of the used light sources, but also of other objects in the room.</li>
+<li>Similarly, one may determine the color balance of a computer or television screen.
+One may then modify the screen settings such that a certain standard color balance is achieved.
+While that is usually not relevant for ordinary office work, it can be essential for people working on graphics design or print productions.</li>
+<li>One can also measure color-related properties of absorbing objects such as printed materials or pieces of cloth.
+For example, one may monitor whether a printer consistently produces the required colors, and how paints and dyes change their color experience due to aging.</li>
+</ul>
+<aside class="callout blue">Where colors are not of the actual interest, one is not dealing with colorimetry in a meaningful sense.</aside>
+<p>As the physical background of colorimetry involves wavelength-dependent properties of light and objects, there is some relation to <a href="spectroscopy.html" title="methods where the interaction of light with matter is utilized, e.g. for detecting substances or measuring concentrations">spectroscopy</a>.
+However, for most methods of <a href="spectroscopy.html" title="methods where the interaction of light with matter is utilized, e.g. for detecting substances or measuring concentrations">spectroscopy</a> the actual interest is not the color perception, but rather some other aspect such as the concentration of some light-absorbing species.
+Although such methods may involve different colors of light, they should generally not considered to belong to the area of colorimetry.
+Nevertheless, the term is sometimes used in that way; the underlying reasoning is that one measures colors in order to derive other quantities of interest from those.
+More precisely speaking, however, one does not actually measure colors but rather wavelength-dependent absorption &ndash; just as in infrared spectroscopy, for example, where colors cannot be involved.</p>
+<p>Colorimetry does not only deal with colored light.
+In fact, the characterization of <a href="white_light_sources.html" title="light sources with very broad optical bandwidth">white light sources</a> with different &ldquo;tones&rdquo; of white (e.g. warm yellowish white or cold blueish light) is often of interest.</p>
+<p>Before the start of colorimetry as a scientifically founded discipline with carefully worked-out principles, assessments of colors were largely based on subjective impressions, which are easily influenced by a number of factors and take more time to acquire.
+Modern colorimetric devices and instruments can acquire color-related information with high speed and reliability.</p>
+<p>Colorimetry is relevant in a diverse range of application areas including lighting and illumination, digital imaging and printing, fashion and arts.</p>
+<h2 class="togglediv">Color Spaces</h2>
+<div>
+<aside class="callout blue">Color values are usually coordinates in some chosen color space.</aside>
+<p>For quantitatively specifying color values, one generally uses some kind of <a href="color_spaces.html" title="mathematical spaces for representing color values"><em>color space</em></a>.
+Essentially, color values are expressed as coordinates in such a color space; in other words, a color is determined as a linear combination of three <em>primary colors</em>.
+For example, in an RGB color space the primary colors are some well-defined types of red, green and blue, and the intensity contributions of each to a certain color (the RGB values offset color) can be specified as a measurement result.</p>
+<p>One dimension of that color space is actually the total <a href="luminance.html" title="luminous flux per unit solid angle and unit projected area">luminance</a> (visual <a href="brightness.html" title="a term mostly used in a qualitative way, related to the output power and beam quality of a laser; quantitatively: often used instead of radiance or luminance">brightness</a>).
+Therefore, the actual color space may be considered as two-dimensional, if the luminance information is ignored.</p>
+<p>The development of colorimetry has led to a substantial number of quite different color spaces.
+The most dominant color spaces are those developed by CIE, the Commission Internationale de l'Éclairage (International Commission on Illumination).
+Particularly important color spaces are CIE 1931 XYZ, CIE RGB and LMS.
+LMS stands for long-, middle- and short-wavelength types of the cone cells of the human eye; the L, M and S tristimulus values indicate how strongly those types of light receptors in the eye are excited by incoming light.
+The term <em>trichromatic color vision</em> expresses the effect that we have three different color receptors.</p>
+<p>Note that the eyes of other animals often use a different combination of color receptors, which leads to substantially different color perception.
+For example, cats have dichromatic vision, based on only two different color receptors.</p>
+<p>See the article on <a href="color_spaces.html" title="mathematical spaces for representing color values">color spaces</a> for more details.</p>
+</div>
+<h2 class="togglediv">Metamerism</h2>
+<div>
+<p>As color perception is based on stimulus values from only three different kinds of color receptors, light sources with quite different spectral compositions may appear with exactly the same color by producing the same tristimulus values.
+That phenomenon is called <em>metamerism</em>.</p>
+<p>As an example, we can consider the following situation:</p>
+<ul>
+<li><a href="monochromatic_light.html" title="light with a single optical frequency">Monochromatic</a> yellow light will mostly excite the M and L receptors, with the excitation ratio depending on the <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>.</li>
+<li>The same excitation ratio and thus the same color impression can be achieved with an appropriate combination of red and green light.</li>
+<li>The same can also be achieved with broadband light, e.g. from a <a href="light_emitting_diodes.html" title="semiconductor diodes that emit light via electroluminescence">light-emitting diode</a> (LED), having an optical <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a> of a few nanometers or even tens of nanometers.</li>
+</ul>
+<p>The less saturated colors are, the more room is for the phenomenon of metamerism.</p>
+<p>Metamerism can cause various problems:</p>
+<ul>
+<li>One may obtain an <em>illuminant metameric failure</em> if two objects appear with the same color (i.e., are color-matched) for illumination with one source but do not match with another source.
+That happens, for example, when one illumination source is a broadband white light source, while the other one has an <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a> with a number of narrow peaks &ndash; as is the case for a typical <a href="fluorescent_lamps.html" title="lamps which emit fluorescent light, usually generated by irradiation of a phosphor with light from an electric gas discharge">fluorescent lamp</a>.
+For color-critical applications, e.g. in the context of arts or fashion, such phenomenon may lead to significant deviations of perceived colors.
+They can be quantified with a <a href="color_rendering_index.html" title="a quantity which can be used for estimating how accurately colors can be perceived when using a specific light source">color rendering index</a> (CRI) of a light source.</li>
+<li><em>Observer metamerism color errors</em> can arise from differences in color vision between observers.
+For example, if a tristimulus <a href="colorimeters.html" title="instruments for measuring quantities which are relevant for color perception">colorimeter</a> works based on an RGB color space rather than with LMS tristimulus values, certain spectral absorption features may not produce the same color results as for a human eye.</li>
+</ul>
+<p>Metamerism is highly relevant for colorimetry.
+In fact, the trichromatic nature of human vision, which inevitably leads to the phenomenon of metamerism, is the basis for fundamental concepts of colorimetry.
+The possibility of metamerism also needs to be carefully considered in various colorimetric applications.</p>
+</div>
+<h2 class="togglediv">Instruments for Colorimetric Measurements</h2>
+<div>
+<p>Instruments which are specifically made for measurements in the context of colorimetry are called <em>colorimeters</em>.
+They may be applied either to light sources (e.g. in lighting or in displays) or to objects interacting with light, such as dyes and paints.
+See the article on <a href="colorimeters.html" title="instruments for measuring quantities which are relevant for color perception">colorimeters</a> for more details.
+Devices which only or primarily measure <a href="color_temperature.html" title="the temperature of a blackbody radiator which leads to a color impression of the thermal light which matches most closely the light of a light source">color temperatures</a> are called <em>color temperature meters</em>.</p>
+<p>In colorimetry, one may also use other instruments such as optical <a href="spectrometers.html" title="devices for separating spectral components">spectrometers</a> and <a href="spectrophotometers.html" title="instruments for measuring the wavelength-dependent transmittance or reflectance of solutions or solid objects">spectrophotometers</a>, which deliver wavelength-dependent measurement values.
+From those, one may subsequently calculate photometric quantities of interest &ndash; usually by integrating the product of the wavelength-dependent value with some color-matching functions, e.g. for obtaining RGB or LMS tristimulus values.
+Advanced colorimeters actually rely on that operation principle and also contain the required software for performing the mentioned integrations.</p>
+</div>
+<h2 class="togglediv">Limitations of Colorimetry</h2>
+<div>
+<p>Carefully worked-out colorimetry can deliver objective color information in the sense that it does not depend on particular properties or behaviors of an observer.
+However, human color perception is subject to a variety of influences.
+The most important ones are explained in the following:</p>
+<ul>
+<li>The spectral response of the cone cell receptors in the human eye is not exactly the same for all persons.
+This is particularly obvious for persons with striking limitations of color perception, e.g. red&ndash;green color blindness.
+However, there are many persons with a slight form of color vision deficiency (often some kind of anomalous trichromatic vision).
+Those are often not aware of any such limitation of their vision, but may have significant deviations from the average color perception of human beings.
+Obviously, results of colorimetric measurements, which are based on a standard human observer, cannot accurately predict the color perception of persons with such vision deficiencies.</li>
+<li>The color perception may also be modified by a wavelength-dependent <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorption</a> in the eye, e.g. in the lens.
+It is common that aging of the eye leads to increased absorption in the short-wavelength region, reducing the sensitivity to blue light.</li>
+<li>Further, the color perception of an object can be strongly influenced by other colors occurring in the environment, and also by the viewing direction of the object, relative to the direction of the most accurate viewing.
+Such influences can be minimized under optimized experimental settings, which e.g. involve the application of standardized background illumination.
+However, their variable influences in real life imply that color perception under such conditions cannot be accurately predicted.</li>
+</ul>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="colorimetry.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="color_vision.html" title="vision with some capability for spectral analysis of the light">color vision</a>, <a href="colorimeters.html" title="instruments for measuring quantities which are relevant for color perception">colorimeters</a>, <a href="color_spaces.html" title="mathematical spaces for representing color values">color spaces</a>, <a href="color_temperature.html" title="the temperature of a blackbody radiator which leads to a color impression of the thermal light which matches most closely the light of a light source">color temperature</a>, <a href="color_rendering_index.html" title="a quantity which can be used for estimating how accurately colors can be perceived when using a specific light source">color rendering index</a>, <a href="spectrophotometers.html" title="instruments for measuring the wavelength-dependent transmittance or reflectance of solutions or solid objects">spectrophotometers</a>, <a href="luminosity_functions.html" title="functions describing the spectral sensitivity of the human eye">luminosity functions</a>, <a href="white_light.html" title="light which creates a white color impression">white light</a><br>and other articles in the categories <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/colorimetry.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fcolorimetry.html&text=RP+Photonics+Encyclopedia+-+colorimetry%2C+color+spaces%2C+tristimulus+values%2C+colorimeters%2C+color+perception%2C+human+eye%2C+trichromatic+color+vision" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fcolorimetry.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fcolorimetry.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/colorimetry.html"&gt;<br>Article on Colorimetry&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/colorimetry.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/colorimetry.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/colorimetry.html<br>article on 'Colorimetry' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Promote Your White Papers and Videos</h2>
+<p>White papers and videos are great instruments for creating an interest in your technology and demonstrating the capabilities of a company. But <b>how to publicize them</b>, reaching the right audience?</p>
+<p><img class="whitepaper" style="padding:30px 5px; width:70%; height:70%;" src="./img/white_paper_example.png" alt="example for white paper"></p>
+<p>Our suggestion: <a href="./marketing_promotions.html?banner=white_papers">place a preview in a suitable encyclopedia article!</a>
+For example, the paper preview shown above would well fit into our articles on <a href="./laser_diodes.html?banner=white_papers">laser diodes</a> and <a href="./diode_bars.html?banner=white_papers">diode bars</a>.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="V9e8fDhHoJsCOnQalba5lw==">shownbanner = "white papers";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Interesting Articles</h2>
+<p>We offer a huge selection of interesting articles on laser technology and photonics. Some examples:</p>
+<ul>
+<li><a href="./spotlight_2018_09_28.html?banner=articles">Resonator modes in microchip lasers</a></li>
+<li><a href="./spotlight_2018_08_22.html?banner=articles">What is different for quasi-three-level lasers?</a></li>
+<li><a href="./spotlight_2018_06_08.html?banner=articles">Understanding intensity noise</a></li>
+<li><a href="./spotlight_2018_05_11.html?banner=articles">Gain saturation in solid-state lasers</a></li>
+<li><a href="./spotlight_2018_04_06.html?banner=articles">The essential roles of phonons in solid-state lasers</a></li>
+<li><a href="./spotlight_2018_01_08.html?banner=articles">Self-starting of passively mode-locked lasers</a></li>
+<li><a href="./spotlight_2017_12_04.html?banner=articles">Energy levels of solid-state gain media</a></li>
+<li><a href="./software_news_2018_08_02.html?banner=articles">Data grids for numerical beam propagation</a></li>
+<li><a href="./software_news_2018_05_22.html?banner=articles">Numerical representation of ultrashort pulses</a></li>
+</ul>
+<p>These articles belong to our newsletters, which appear about once per month.
+You will not regret to <a href="./newsletters.html?banner=articles">register</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="V9e8fDhHoJsCOnQalba5lw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/colorimetry.html"
+    },
+    "headline": "Colorimetry",
+    "image": "https://www.rp-photonics.com/previews/colorimetry.png",
+    "datePublished": "2019-12-23",
+    "dateModified": "2020-03-14",
+    "description": "Colorimetry is the science and technology of objectively measuring optical properties related to color perceptions for the human eye.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter C",
+      "item": "https://www.rp-photonics.com/encyclopedia_c.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "colorimetry",
+      "item": "https://www.rp-photonics.com/colorimetry.html"
+    }]}
+}
+</script>
+</body>
+</html>

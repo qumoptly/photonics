@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-m5dH0lW0fUXfvJ/P5QOo0g=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - photodiodes, photodetectors, p-i-n, InGaAs, silicon, germanium, PIN, bandwidth, linearity, current amplifier</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/photodiodes.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-06-25">
+<meta name="description" content="Photodiodes are semiconductor devices with a p-n or p-i-n structure for the detection of light. They can be highly sensitive and very linear detectors for use in various spectral regions.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="photodiodes, photodetectors, p-i-n, InGaAs, silicon, germanium, PIN, bandwidth, linearity, current amplifier">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Photodiodes">
+<meta property="og:description" content="Photodiodes are semiconductor devices with a p-n or p-i-n structure for the detection of light. They can be highly sensitive and very linear detectors for use in various spectral regions.">
+<meta property="og:url" content="https://www.rp-photonics.com/photodiodes.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/photodiodes.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Photodiodes are semiconductor devices with a p-n or p-i-n structure for the detection of light. They can be highly sensitive and very linear detectors for use in various spectral regions.">
+<meta name="twitter:title" content="Photodiodes">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/photodiodes.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="m5dH0lW0fUXfvJ/P5QOo0g==">
+page="photodiodes.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="m5dH0lW0fUXfvJ/P5QOo0g==">shownsponsors="TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_photodiodes.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_p.html">letter P</a> &gt; <a href="photodiodes.html">photodiodes</a></p>
+<h1>Photodiodes</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_photodiodes.html?s=vbox">59 suppliers for photodiodes</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.gentec-eo.com/laser-power-meter/photodiode" data-supplier="Gentec Electro-Optics" data-location="product-enc" data-keyword="photodiodes" rel="nofollow" class="bg externallink"><img src="./bg/logos/gentec_electro_optics.png" alt="Gentec Electro-Optics" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.menlosystems.com/products/photodetectors/" data-supplier="Menlo Systems" data-location="product-enc" data-keyword="photodiodes" rel="nofollow" class="bg externallink"><img src="./bg/logos/menlo_systems.png" alt="Menlo Systems" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_photodiodes.html?s=vbox">List of suppliers for<br>photodiodes</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light</p>
+<p>More general term: <a href="photodetectors.html" title="devices used for the detection of light">photodetectors</a></p>
+<p>More specific terms: <a href="avalanche_photodiodes.html" title="photodiodes with internal signal amplification through an avalanche process">avalanche photodiodes</a>, Geiger mode photodiodes, lateral effect photodiodes, quadrant photodiodes, <a href="p_i_n_photodiodes.html" title="photodiodes with a p&ndash;i&ndash;n semiconductor structure">p&ndash;i&ndash;n photodiodes</a>, silicon photodiodes, germanium photodiodes, InGaAs photodiodes</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Photodioden</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a>, <a href="categories.html#optoelectronics" title="other articles on optoelectronics">optoelectronics</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a></p>
+<p><a href="encyclopedia_cite.html?article=photodiodes">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Photodiodes are frequently used <a href="photodetectors.html" title="devices used for the detection of light">photodetectors</a>, which have largely replaced the formerly used <a href="phototubes.html" title="gas-filled or vacuum tubes which can be used as photodetectors">phototubes</a>.
+They are semiconductor devices which contain a p&ndash;n junction, and often an intrinsic (undoped) layer between n and p layers.
+Devices with an intrinsic layer are called <a href="p_i_n_photodiodes.html" title="photodiodes with a p&ndash;i&ndash;n semiconductor structure"><em>p&ndash;i&ndash;n</em> or <em>PIN photodiodes</em></a>.
+Light absorbed in the depletion region or the intrinsic region generates electron&ndash;hole pairs, most of which contribute to a <a href="photocurrent.html" title="an electric current which is induced by incident light in a photodetector">photocurrent</a>.
+The photocurrent can be quite precisely proportional to the absorbed (or incident) light intensity over a wide range of <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical powers</a>.</p>
+<figure class="right" style="width:216px;">
+<img src="img/pin_photodiode.png" alt="p&ndash;i&ndash;n photodiode">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Schematic drawing of a p&ndash;i&ndash;n photodiode. The green layer is an anti-reflection coating.
+</figcaption>
+</figure>
+<p>Figure&nbsp;1 schematically shows the typical design of the photodiode on p&ndash;i&ndash;n type.
+Here, one has an intrinsic region between an n-doped and a p-doped region, where most of the electric carriers are generated.
+Through the electrical contacts (anode and cathode), the generated photocurrent can be obtained.
+The anode may have a ring shape, so that the light can be injected through the hole.
+A large active area can be obtained with a correspondingly large ring, but that tends to increase the capacitance, thus reducing the detection <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>, and increases the <a href="dark_current.html" title="a current from a photodetector which occurs even in the absence of a light input">dark current</a>; also, the efficiency may drop if carriers are generated too far from the electrodes.</p>
+<p>For a high <a href="responsivity.html" title="photocurrent per unit optical power incident on a photodetector">responsivity</a>, one should have a material with a strong <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorption</a> for the optical wavelength of interest.
+When using a thicker layer for obtaining efficient absorption, one may lose a lot of the generated carriers.</p>
+<p>Some photodiodes are available in the form of <a href="photodiode_arrays.html" title="typically linear arrays of photodiodes, provided as compact devices">photodiode arrays</a>, mostly of one-dimensional kind.</p>
+<p>For substantially increased <a href="responsivity.html" title="photocurrent per unit optical power incident on a photodetector">responsivity</a>, one may either use <a href="avalanche_photodiodes.html" title="photodiodes with internal signal amplification through an avalanche process">avalanche photodiodes</a> (see below) or <a href="phototransistors.html" title="a type of semiconductor-based photodetector with internal current amplification for higher responsivity">phototransistors</a>.</p>
+<h2 class="togglediv">Operation Modes of Photodiodes</h2>
+<div>
+<p>Photodiodes can be operated in two very different modes:</p>
+<ul>
+<li><em>Photovoltaic mode</em>: like a solar cell, the illuminated photodiode generates a voltage which can be measured.
+However, the dependence of this voltage on the light power is nonlinear, and the dynamic range is fairly small.
+Also, the maximum speed is not achieved.</li>
+</ul>
+<figure class="right" style="width:197px;">
+<img src="img/photodiode_circuit.png" alt="simple photodiode circuit">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+A simple electronic circuit for a photodetector based on a photodiode.
+</figcaption>
+</figure>
+<ul>
+<li><em>Photoconductive mode</em>: here, a reverse voltage is applied to the diode (i.e., a voltage in the direction where the diode is not conducting without incident light) and measures the resulting <a href="photocurrent.html" title="an electric current which is induced by incident light in a photodetector">photocurrent</a>.
+The simplest solution for that <em>reversed-biased mode</em> is based on a voltage source and a load resistor, as shown in Figure&nbsp;2.
+The dependence of the photocurrent on the light power can be very linear over six or more orders of magnitude of the light power, e.g. in a range from a few nanowatts to tens of milliwatts for a silicon p&ndash;i&ndash;n photodiode with an active area of a few mm<sup>2</sup>.
+The magnitude of the reverse voltage has nearly no influence on the photocurrent and only a weak influence on the (typically small) dark current (obtained without light), but a higher voltage tends to make the response faster and also increases the heating of the device.</li>
+</ul>
+<figure>
+<img src="img/photodiode_ui.png" alt="I/U characteristics of a photodiode">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Current-voltage characteristics of a photodiode for different optical powers.
+In the photovoltaic mode (see the line for a 1-k&Omega; load resistor), the response is nonlinear.
+In the photoconductive mode, shown here for a simple circuit with a reverse bias applied through a load resistor, a very linear response is achieved.
+The same holds for a constant reverse bias (not shown).
+</figcaption>
+</figure>
+<p>Even when used in photoconductive mode, photodiodes are usually not understood to be <a href="photoconductive_detectors.html" title="photodetectors which exhibit a reduction in electrical resistance caused by incoming light">photoconductive detectors</a>.</p>
+<aside class="callout blue">Simple photodiode circuits lead to RC-limited detection bandwidth, which introduces a trade-off between bandwidth and sensitivity.</aside>
+<p>In the simple circuit according to Figure&nbsp;2, the magnitude of the bias voltage drops with increasing photocurrent due to the voltage drop at the load resistor.
+While that has little influence on the linearity, it leads to a charging or discharging of the photodiode's capacitance whenever the incident light intensity changes, so that the detection <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a> often becomes RC-limited.
+That introduces a trade-off between detection bandwidth and responsivity: a high bandwidth requires a small load resistor, which leads to a low responsivity and also a higher <a href="noise_equivalent_power.html" title="the input power to a detector which produces the same signal output power as the internal noise of the device">noise-equivalent power</a>, which is often limited by thermal noise (Johnson noise) of the load resistor.</p>
+<p>In order to avoid that trade-off, one often uses a <em>current amplifier</em> (also called <em>transimpedance amplifier</em>).
+Such an amplifier, which is typically realized with an operational amplifier (op-amp), keeps the voltage at the diode nearly constant (e.g. near zero, or at some possibly adjustable reverse bias), so that the photodiode's capacitance loses much of its relevance.
+The residual voltage variations at the photodiode are inversely proportional to the gain of the used operational amplifier.
+Still, it is good to minimize the input capacitance and requiring maximum bandwidth; for example, it is better to directly connect a photodiode to the current amplifier, instead of using a long cable connection.</p>
+<p>Current amplifiers, which are also available as OEM devices, can also have very good noise properties.
+The relevant figure is the noise-equivalent input current, which can be well below 1&nbsp;pA/Hz<sup>1/2</sup>.</p>
+<p>Commercially available laboratory current amplifiers help to make power measurements very flexible by providing many different sensitivity settings, and thus a huge dynamic range with low-noise performance, and also possibly a built-in display, adjustable bias voltage and signal offset, adjustable filters, etc.</p>
+</div>
+<h2 class="togglediv">Semiconductor Materials</h2>
+<div>
+<p>Typical photodiode materials are:</p>
+<ul>
+<li class="ta_left">silicon (Si): low <a href="dark_current.html" title="a current from a photodetector which occurs even in the absence of a light input">dark current</a>, high speed, good sensitivity between roughly 400 and 1000&nbsp;nm (best around 800&ndash;900&nbsp;nm)</li>
+<li class="ta_left">germanium (Ge): high dark current, slow speed due to large parasitic capacity, good sensitivity between roughly 900 and 1600&nbsp;nm (best around 1400&ndash;1500&nbsp;nm)</li>
+<li class="ta_left">indium gallium arsenide phosphide (InGaAsP): expensive, low dark current, high speed, good sensitivity roughly between 1000 and 1350&nbsp;nm (best around 1100&ndash;1300&nbsp;nm)</li>
+<li class="ta_left">indium gallium arsenide (InGaAs): expensive, low dark current, high speed, good sensitivity roughly between 900 and 1700&nbsp;nm (best around 1300&ndash;1600&nbsp;nm)</li>
+</ul>
+<p>The indicated wavelength ranges can sometimes be substantially exceeded by models with extended <a href="spectral_response_of_a_photodetector.html" title="the range of optical wavelengths for which a photodetector is sensitive">spectral response</a>.</p>
+</div>
+<h2 class="togglediv">Key Properties</h2>
+<div>
+<p>The most important properties of photodiodes are:</p>
+<ul>
+<li class="ta_left">the <a href="responsivity.html" title="photocurrent per unit optical power incident on a photodetector">responsivity</a>, i.e., the photocurrent divided by optical power &ndash; related to the <a href="quantum_efficiency.html" title="percentage of input photons which contribute to a desired effect">quantum efficiency</a>, dependent on the wavelength</li>
+<li class="ta_left">the active area, i.e., the light-sensitive area</li>
+<li class="ta_left">the maximum allowed photocurrent (usually limited by saturation)</li>
+<li class="ta_left">the breakdown voltage, setting a limit to the usable bias voltage</li>
+<li class="ta_left">the dark current (in photoconductive mode, important for the detection of low light levels)</li>
+<li class="ta_left">the speed, i.e. the <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>, related to the rise and fall time, often influenced by the capacitance</li>
+</ul>
+<p>Additional quantities may be of interest:</p>
+<ul>
+<li>The typically quite high shunt resistance contributes a small current when a bias voltage is applied.
+It also contributes some thermal noise current, which in some cases limits the sensitivity.</li>
+<li>The often small series resistance causes an additional voltage drop proportional to the photocurrent, and can also somewhat contribute to the detection noise.</li>
+</ul>
+<p>The speed (<a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>) of a photodiode is typically limited either by electrical parameters (capacitance and external resistor) or by internal effects such as carrier transit time in the depletion region.
+(In some cases, relatively slow diffusion of carriers generated outside the depletion region limits the bandwidth.)
+The highest bandwidths of tens of gigahertz are usually achieved with small active areas (diameters well below 1&nbsp;mm) and small absorption volumes.
+Such small active areas are still practical particularly for fiber-coupled devices, but they limit the photocurrents achievable to the order of 1&nbsp;mA or less, corresponding to optical powers of &asymp;&thinsp;2&nbsp;mW or less.
+Higher photocurrents are actually desirable for suppression of <a href="shot_noise.html" title="quantum-limited intensity noise">shot noise</a> and thermal noise.
+(Higher photocurrents increase shot noise in absolute terms, but decrease it relatively to the signal.)
+Larger active areas (with diameters up to the order of 1&nbsp;cm) allow for handling of larger beams and for much higher photocurrents, but at the expense of lower speed.</p>
+<p>The combination of high bandwidth (tens of gigahertz) and high photocurrents (tens of milliamperes) is achieved in <a href="velocity_matched_photodetectors.html" title="a type of photodetector where propagation velocities of light and electrical signals are matched in order to achieve a very high detection bandwidth">velocity-matched photodetectors</a>, containing several small-area photodetectors, which are weakly coupled to an optical waveguide and deliver their photocurrents into a common RF waveguide structure.</p>
+<p>The <a href="quantum_efficiency.html" title="percentage of input photons which contribute to a desired effect">quantum efficiency</a> of a photodiode is the fraction of the incident (or absorbed) <a href="photons.html" title="quanta of light energy">photons</a> which contribute to the photocurrent.
+For photodiodes without an <a href="avalanche_photodiodes.html" title="photodiodes with internal signal amplification through an avalanche process">avalanche effect</a>, it is directly related to the responsivity <span class="eqn_il"><i>S</i></span>: the photocurrent is</p>
+<div class="eqn"><img src="eqn/pd_response.gif" width="114" height="41" alt="response of a photodiode"></div>
+<p>with the quantum efficiency <span class="eqn_il"><span class="greek">&eta;</span></span>, the electron charge <span class="eqn_il"><i>e</i></span> and the <a href="photons.html" title="quanta of light energy">photon energy</a> <span class="eqn_il"><i>h<span class="greek">&nu;</span></i></span>.
+The quantum efficiency of a photodiode can be very high &ndash; in some cases more than 95&#37; &ndash; but varies significantly with wavelength.
+Apart from a high internal efficiency, a high quantum efficiency requires the suppression of reflections e.g. with an <a href="anti_reflection_coatings.html" title="optical thin-film coatings for reducing reflections from surfaces">anti-reflection coating</a>.</p>
+<form id="calculate_photodiode" class="calculatorform">
+<h2>Calculator for Photodiodes</h2>
+<table>
+<tr>
+<td>Center wavelength:</td><td></td><td></td>
+<td><input name="lambda" value="" class="cf_calculate_photodiode"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Quantum efficiency:</td><td></td><td></td>
+<td><input name="eta" value="" class="cf_calculate_photodiode"></td>
+<td><span class="calcbutton" id="calc_eta">calc</span></td><td></td>
+</tr>
+<tr>
+<td>Optical power:</td><td></td><td></td>
+<td><input name="P" value="" class="cf_calculate_photodiode"></td>
+<td><span class="calcbutton" id="calc_P">calc</span></td><td></td>
+</tr>
+<tr>
+<td>Photocurrent:</td><td></td><td></td>
+<td><input name="I" value="" class="cf_calculate_photodiode"></td>
+<td><span class="calcbutton" id="calc_I">calc</span></td><td></td>
+</tr>
+</table>
+<p class="comment">Enter input values with units, where appropriate. After you have modified some values, click a "calc" button to recalculate the field left of it.</p>
+<noscript>
+<p style="color:red">Attention: The buttons do not work, as Javascript is turned off in your browser!</p>
+</noscript>
+</form>
+<script type="text/javascript" src="calcform.js"></script>
+<script type="text/javascript" nonce="m5dH0lW0fUXfvJ/P5QOo0g==">
+funits = new Array();
+funits["lambda"] = "m";
+funits["eta"] = "&%";
+function calc_eta() {
+  $("input[name=eta]").val("???");
+  GetFieldValues("eta","calculate_photodiode");
+  eta = 100*I/(1.609e-19/(6.626e-34*2.9979e8/lambda)*P);
+  $("input[name=eta]").val(format_u(eta, "&%"));
+ }
+funits["P"] = "W";
+function calc_P() {
+  $("input[name=P]").val("???");
+  GetFieldValues("P","calculate_photodiode");
+  P = I/((eta/100)*1.609e-19/(6.626e-34*2.9979e8/lambda));
+  $("input[name=P]").val(format_u(P, "W"));
+ }
+funits["I"] = "A";
+function calc_I() {
+  $("input[name=I]").val("???");
+  GetFieldValues("I","calculate_photodiode");
+  I = (eta/100)*1.609e-19/(6.626e-34*2.9979e8/lambda)*P;
+  $("input[name=I]").val(format_u(I, "A"));
+ }
+$("input[name=lambda]").val("800 nm");
+$("input[name=eta]").val("90%");
+$("input[name=P]").val("1 mW");
+calc_I();
+$(document).ready(function() {
+  $("span#calc_eta").click(function() { calc_eta() })
+  $("span#calc_P").click(function() { calc_P() })
+  $("span#calc_I").click(function() { calc_I() })
+});
+</script>
+<p>In some cases, additional properties of photodiodes have to be observed, such as linearity of response over a wide dynamic range, the spatial uniformity of response, or the shape of the dynamic response (e.g. optimized for time domain or frequency domain), or the noise performance.</p>
+<p>The noise performance of photodiodes can be very good.
+For high photocurrents, it can be limited by <a href="shot_noise.html" title="quantum-limited intensity noise">shot noise</a>, although thermal noise in the electronics is often stronger than that.
+For the detection of very low light levels (e.g. for <a href="photons.html" title="quanta of light energy">photon</a> counting), the dark current can also play a role.</p>
+<p>A higher responsivity (although sometimes at the cost of lower quantum efficiency) can be achieved with <a href="avalanche_photodiodes.html" title="photodiodes with internal signal amplification through an avalanche process">avalanche photodiodes</a>.
+These are operated with a relatively high reverse bias voltage so that secondary electrons can be generated (as in <a href="photomultipliers.html" title="photodetection devices based on the photoelectric effect and charge multiplication by secondary emission of electrons">photomultipliers</a>).
+The avalanche process increases the <a href="responsivity.html" title="photocurrent per unit optical power incident on a photodetector">responsivity</a>, so that noise influences of subsequent electronic amplifiers are minimized, whereas <a href="quantum_noise.html" title="noise arising from quantum fluctuations">quantum noise</a> becomes more important and multiplication noise is also introduced.</p>
+<p>A photodiode is sometimes integrated into the package of a <a href="laser_diodes.html" title="semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diode</a>.
+It may detect some light getting through the highly reflecting back facet, the power of which is proportional to the output power.
+The signal obtained can be used, e.g., to stabilize the output power, or to detect device degradation.</p>
+<p>The electronics used in a photodiode-based <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a> can strongly influence the performance in terms of speed, linearity, and noise.
+As mentioned above, current amplifiers (transimpedance amplifiers) are often a good choice.</p>
+</div>
+<h2 class="togglediv">Fast Photodiodes</h2>
+<div>
+<p>For a particularly high detection bandwidth in the gigahertz region, advanced photodiode designs are used.
+For example, some devices contain an optical resonator around the thin absorbing section.
+In that way, one can achieve efficient absorption and thus a high quantum efficiency despite a rather small thickness of the intrinsic region, as is chosen for reducing the drift time.</p>
+<p>So-called waveguide photodiodes contain an optical waveguide which leads light along the absorbing region.
+That absorbing region can then again be very thin, and nevertheless one can obtain efficient absorption in a short length.
+By minimizing the length of the active region, one can also minimize the electrical capacitance and reach a very high bandwidth.</p>
+<p>In some cases, the electrode structure is made such that it forms an electrical waveguide, where the electric wave can propagate in parallel with the optical wave in the optical waveguide.
+Such traveling-wave photodiodes can reach a bandwidth well above 100&nbsp;GHz.</p>
+<p>Some semiconductor materials are intrinsically better suited than others for fast photodiodes.
+For example, indium gallium arsenide (InGaAs) is particularly suitable, because that direct <a href="band_gap.html" title="a range of energies for which there are no states of carriers in a medium">band gap</a> material (in contrast to silicon, for example) exhibits a rather short <a href="absorption_length.html" title="the length of which absorption reduces the optical intensity to 1/e of its initial value">absorption length</a>, allowing the realization of very thin absorbing layers, in which the photocarriers can be quickly collected.
+For fast <a href="avalanche_photodiodes.html" title="photodiodes with internal signal amplification through an avalanche process">avalanche photodiodes</a>, it is also important to have a low ratio of the impact ionization coefficients for holes and electrons.</p>
+</div>
+<h2 class="togglediv">Multi-segment Photodiodes and Photodiode Arrays</h2>
+<div>
+<p>Photodiodes are available not only is single-segment detectors.
+There are dual and quadrant photodiodes, which can be used for precision sensing, and also one-dimensional and two-dimensional <a href="photodiode_arrays.html" title="typically linear arrays of photodiodes, provided as compact devices">photodiode arrays</a>.
+For more details, see the article on <a href="position_sensitive_detectors.html" title="photodetectors which can detect the position of a light spot in one or two dimensions">position-sensitive detectors</a>.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_photodiodes.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 59 suppliers for photodiodes. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.gentec-eo.com/" data-supplier="Gentec Electro-Optics" data-location="product-enc" data-keyword="photodiodes" rel="nofollow" class="bg externallink" title="Visit the website of Gentec Electro-Optics"><img src="./bg/logos/gentec_electro_optics.png" alt="Gentec Electro-Optics" class="supplierlogo"></a><img src="./bg/products/gentec_electro_optics/photodiodes.png" alt="photodiodes" class="product"><h3><a href="./bg/profiles/gentec_electro_optics.html" title="See the profile of Gentec Electro-Optics">Gentec Electro-Optics</a></h3><p>Gentec Electro-Optics offers a great range of <a href="https://www.gentec-eo.com/laser-power-meter/photodiode" data-supplier="Gentec Electro-Optics" data-location="product-enc" data-keyword="photodiodes" rel="nofollow" class="externallink bg">power detectors</a> based on silicon or germanium photodiodes for powers up to 750&nbsp;mW.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.menlosystems.com/" data-supplier="Menlo Systems" data-location="product-enc" data-keyword="photodiodes" rel="nofollow" class="bg externallink" title="Visit the website of Menlo Systems"><img src="./bg/logos/menlo_systems.png" alt="Menlo Systems" class="supplierlogo"></a><a href="https://www.menlosystems.com/products/photodetectors/" data-supplier="Menlo Systems" data-location="product-enc" data-keyword="photodiodes" rel="nofollow" class="bg externallink" title="Visit the website of Menlo Systems"><img src="./bg/products/menlo_systems/photodetectors.jpg" alt="photodiodes" class="product"></a><h3><a href="./bg/profiles/menlo_systems.html" title="See the profile of Menlo Systems">Menlo Systems</a></h3><p>Menlo Systems offers a series of <a href="https://www.menlosystems.com/products/photodetectors/" data-supplier="Menlo Systems" data-location="product-enc" data-keyword="photodiodes" rel="nofollow" class="externallink bg">photodetectors</a> for lowest light level signals. From avalanche to PIN photodiodes, you can find the detector that is best for your specific application.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="photodiodes.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="p_i_n_photodiodes.html" title="photodiodes with a p&ndash;i&ndash;n semiconductor structure">p&ndash;i&ndash;n photodiodes</a>, <a href="photodiode_arrays.html" title="typically linear arrays of photodiodes, provided as compact devices">photodiode arrays</a>, <a href="position_sensitive_detectors.html" title="photodetectors which can detect the position of a light spot in one or two dimensions">position-sensitive detectors</a>, <a href="photodetectors.html" title="devices used for the detection of light">photodetectors</a>, <a href="phototransistors.html" title="a type of semiconductor-based photodetector with internal current amplification for higher responsivity">phototransistors</a>, <a href="velocity_matched_photodetectors.html" title="a type of photodetector where propagation velocities of light and electrical signals are matched in order to achieve a very high detection bandwidth">velocity-matched photodetectors</a>, <a href="avalanche_photodiodes.html" title="photodiodes with internal signal amplification through an avalanche process">avalanche photodiodes</a>, <a href="metal_semiconductor_metal_photodetectors.html" title="fast photodetector devices based on metal&ndash;semiconductor (Schottky) contacts">metal&ndash;semiconductor&ndash;metal photodetectors</a>, <a href="phototubes.html" title="gas-filled or vacuum tubes which can be used as photodetectors">phototubes</a>, <a href="shot_noise.html" title="quantum-limited intensity noise">shot noise</a>, <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>, <a href="spotlight_2006_10_16.html">The Photonics Spotlight 2006-10-16</a><br>and other articles in the categories <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a>, <a href="categories.html#optoelectronics" title="other articles on optoelectronics">optoelectronics</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a></p>
+<hr style="margin-top:16px; margin-bottom:12px;">
+<a href="paschotta.html"><img src="img/paschotta3_small.jpg" alt="Dr. R. Paschotta" style="float:left; margin:0px 16px 20px 18px;" width="80" height="97"></a>
+<div style="margin-bottom:12px;">
+<p style="font-size:90%; line-height:20px; padding-right:20px;">This encyclopedia is authored by <a href="paschotta.html" class="redlink">Dr. Rüdiger Paschotta</a>, the founder and executive of <a href="index.html" class="redlink">RP Photonics Consulting GmbH</a>.
+How about a <a href="training.html" class="redlink">tailored training course</a> from this distinguished expert at your location?
+<a href="contact.html" class="redlink">Contact</a> RP Photonics to find out how his <a href="./services.html" class="redlink">technical consulting services</a> (e.g. product designs, problem solving, independent evaluations, training) and <a href="software.html" class="redlink">software</a> could become very valuable for your business!</p>
+</div>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/photodiodes.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fphotodiodes.html&text=RP+Photonics+Encyclopedia+-+photodiodes%2C+photodetectors%2C+p-i-n%2C+InGaAs%2C+silicon%2C+germanium%2C+PIN%2C+bandwidth%2C+linearity%2C+current+amplifier" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fphotodiodes.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fphotodiodes.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/photodiodes.html"&gt;<br>Article on Photodiodes&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/photodiodes.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/photodiodes.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/photodiodes.html<br>article on 'Photodiodes' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Website Tours</h2>
+<p>You can explore our website with the following tours:</p>
+<ul>
+<li><a href="./encyclopedia.html?tour=Encyclopedia">The RP Photonics Encyclopedia</a></li>
+<li><a href="./encyclopedia.html?tour=New_Encyclopedia_Articles">The latest encyclopedia articles</a></li>
+<li><a href="./buyersguide.html?tour=Using_the_Buyers_Guide">Using the Buyer's Guide</a></li>
+<li><a href="./buyersguide.html?tour=Advertising_in_the_Buyers_Guide">Advertising in the Buyer's Guide</a></li>
+</ul>
+<img src="./img/tour_bus.png" style="width:90%; margin:15px 0;" alt="&nbsp;">
+<p>You will be lead through a couple of pages, obtaining explanations on every one.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="m5dH0lW0fUXfvJ/P5QOo0g==">shownbanner = "tours";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Sponsors of the Encyclopedia</h2>
+<p>We are grateful to the <a href="./encyclopedia_sponsoring.html?banner=sponsoring">sponsors</a> of our encyclopedia:</p>
+<div style="margin-top:10px; text-align:center;"><a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/nkt_photonics.html"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo"></a></div>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="m5dH0lW0fUXfvJ/P5QOo0g==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/photodiodes.html"
+    },
+    "headline": "Photodiodes",
+    "image": "https://www.rp-photonics.com/previews/photodiodes.png",
+    "datePublished": "2008-02-29",
+    "dateModified": "2020-06-25",
+    "description": "Photodiodes are semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light. They can be highly sensitive and very linear detectors for use in various spectral regions.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter P",
+      "item": "https://www.rp-photonics.com/encyclopedia_p.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "photodiodes",
+      "item": "https://www.rp-photonics.com/photodiodes.html"
+    }]}
+}
+</script>
+</body>
+</html>

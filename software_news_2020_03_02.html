@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-hzTu/cX5a5UBjMxjq86k5g=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>Software from RP Photonics - Creating Multimode Beams in Numerical Beam Propagation</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/software_news_2020_03_02.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-02">
+<meta name="description" content="Simulations of beam propagation often need multimode input beams. Here, it is explained how to generate such inputs with random phase and amplitude profiles.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="photonics, modeling, software, optics, lasers, simulations, analysis, optimization, news, newsletter">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Software from RP Photonics - Creating Multimode Beams in Numerical Beam Propagation">
+<meta property="og:description" content="Simulations of beam propagation often need multimode input beams. Here, it is explained how to generate such inputs with random phase and amplitude profiles.">
+<meta property="og:url" content="https://www.rp-photonics.com/software_news_2020_03_02.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/software_news_2020_03_02.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Simulations of beam propagation often need multimode input beams. Here, it is explained how to generate such inputs with random phase and amplitude profiles.">
+<meta name="twitter:title" content="Software from RP Photonics - Creating Multimode Beams in Numerical Beam Propagation">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/software_news_2020_03_02.png">
+<script type="text/javascript" src="./jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" nonce="hzTu/cX5a5UBjMxjq86k5g==">
+page="software_news_2020_03_02.html"; cat="S"; shownbanner=""; ref="http://www.rp-photonics.com/spotlight_2020_04_01.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td class="selected"><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software_start" href="software.html">Introduction</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="software_news" href="software_news.html" class="sel">Software News</a>
+<p>Products:</p>
+<a id="Overview" href="software_overview.html">Overview</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<p>Various aspects:</p>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<p>Take action:</p>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main" style="margin-top:20px;">
+<main>
+<p class="breadcrumbs"><a href="software.html">RP Photonics Software News</a> &gt; <a href="software_news_2020_03_02.html">2020-03-02</a></p>
+<h1 class="posting">Creating Multimode Beams in Numerical Beam Propagation</h1>
+<div class="posting_details">
+<p>Posted on 2020-03-02 in the <a href="software_news.html">RP Photonics Software News (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="software_news_2020_03_02.html" class="url">https://www.rp-photonics.com/software_news_2020_03_02.html</a></p>
+<p>Author: <a href="https://www.rp-photonics.com/paschotta.html" rel="author">Dr. Rüdiger Paschotta</a>, <a href="https://www.rp-photonics.com/">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: Simulations of beam propagation often need multimode input beams. Here, it is explained how to generate such inputs with random phase and amplitude profiles.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p>When doing numerical simulations of beam propagation in multimode devices &ndash; for example in <a href="multimode_fibers.html" title="fibers supporting more than one guided mode per polarization direction">multimode fibers</a> and <a href="fiber_optic_pump_combiners.html" title="fiber-optic couplers for sending pump and signal light into an amplifier or laser fiber">fiber-optic pump combiners</a> &ndash; one of the first encountered questions is how to generate a beam profile which resembles a multimode input (a <a href="multimode_beams.html" title="light beams in free space or in transparent media which involve multiple (often many) modes, frequently with highly random characteristics">multimode beam</a>).</p>
+<p>It turns out that this is indeed a substantially more difficult question than creating single-mode input profiles.
+That begins with the problem that one usually does not have a precise specification for the input beam.
+For example, you just may have a given beam profile (e.g. Gaussian or supergaussian) and a certain <a href="beam_divergence.html" title="a measure for how fast a laser beam expands far from its focus">beam divergence</a>, but obviously these few parameters do not determine a full two-dimensional phase profile.
+For numerical beam propagation, however, we need a full field of complex amplitudes as the input &ndash; how to produce that?</p>
+<p>One possible approach is to use the given intensity profile and combine that with a <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">phase</a> profile exhibiting random and irregular fluctuations.
+You may adjust the magnitude of those fluctuations (e.g. quantified with an r.m.s. value) such as to obtain the given beam divergence.
+Technically, this can just be a bit tricky: how exactly could one produce a two-dimensional random phase profile with reasonable statistical properties, ideally automating the process such that it reaches the given beam divergence?</p>
+<h2 class="togglediv">A Method for Generating Random Input Profiles</h2>
+<div>
+<p>Here is a quite practical method which I often use:</p>
+<!-- continue in browser -->
+<ul>
+<li>You start with a field of complex amplitudes which (a) has the given intensity profile and (b) completely random and uncorrelated values of the optical phase for each grid point.
+That's quite easy to do &ndash; only, that profile will exhibit a huge beam divergence and can therefore not be the final solution.</li>
+<li>Then you apply a two-dimensional spatial Fourier transform.
+That will exhibit a very broad distribution according to the huge beam divergence.
+You now filter the field in the Fourier domain simply by multiplying each Fourier amplitude with a filter function &ndash; for example, simply a top-hat or a Gaussian function in Fourier space.
+The width of that function is calculated from the wanted divergence.
+That way, you suppress the high-frequency components and thus limit the divergence.</li>
+<li>Transform that back to real space, and you have the wanted input field!
+In some cases, you may want to apply another filter function in real space, but often that is not necessary.</li>
+</ul>
+<p>The described procedure may seem to be difficult to implement, but it is not really that hard.
+In the <a href="fiberpower.html">RP Fiber Power</a> software, you just need a couple of code lines as those (after the definition of various input parameters, not shown here):</p>
+<pre class="codedisplay">
+defarray A0%[0, (N - 1) * dr, dr; 0, (N - 1) * dr, dr] (periodic)
+  { array for complex input amplitudes }
+sg(x2) := exp(-3 * x2^8)
+  { normalized super-Gaussian function,
+    made such that the values at x2 = x^2 = 1 are already pretty small }
+calc
+  begin
+    { Calculate the initial beam profile: low spatial coherence,
+      but high enough for efficient launching}
+    var f_max, df, f_m, P;
+    { First step: top-hat intensity profile
+      (according to fiber core diameter) with totally random amplitudes }
+    processarray_e(A0%[], '=',
+      if x^2 + y^2 &lt;= r_co^2 then ReIm(rnd(-1), rnd(-1)), 'x-,y-');
+    { Filter out higher spatial frequency components }
+    FFT(A0%[], A0_f%[], +1);
+      { Fourier transform, resulting in new array A0_f%[] }
+    df := 1 / (2 * r_max);
+    f_max := 0.5 * N * df;
+    f_m := NA_in / lambda;
+      { maximum allowed spatial frequency based on NA of fiber }
+    processarray_e(A0_f%[], '*', sg((f_x^2 + f_y^2) / f_m^2), 'f_x-,f_y-');
+    FFT(A0_f%[], A0%[], -1); { inverse Fourier transform }
+    { Filter again in real space: }
+    processarray_e(A0%[], '*', sg((x^2 + y^2) / r_co_in^2), 'x-,y-');
+    { Normalize the power to 1 W: }
+    P := arraysumsqr(A0%[]) * dr^2;
+    processarray(A0%[], '/', sqrt(P));
+  end
+A0%(x, y) := A0%[x, y] 
+  { amplitude profile function taking values out of the array }
+</pre>
+<p>Here we greatly profit from the availability of functions like processarray(), which do certain operations with the full two-dimensional arrays &ndash; avoiding nested loops, which are more cumbersome to write and slower in execution.
+By the way, such code can be executed on an ordinary PC within a fraction of a second.
+Here is an example profile obtained with that code:</p>
+<figure>
+<img src="img/create_multimode_profile.png" alt="multimode profile">
+</figure>
+<p>If you wonder how to develop such a piece of code within a reasonable time: as a software customer of us, just ask me, and you get it with no effort.
+Diligent technical support makes life easy.</p>
+</div>
+<h2 class="togglediv">How About the Structured Intensity Profile?</h2>
+<div>
+<p>As you can see in our example case, the resulting intensity profiles are generally quite structured &ndash; not the top-hat profile with which we started in this example case.
+How can you reconcile that with flat profiles as you can often observe in reality?</p>
+<p>Well, for numerical beam propagation we work with <a href="monochromatic_light.html" title="light with a single optical frequency">monochromatic</a> fields, and those cannot be flat &ndash; to understand that, consider them as superpositions of many fiber <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a>.
+So if in reality you have a flat beam profile, it must be a <a href="polychromatic_light.html" title="light with multiple optical frequencies">polychromatic</a> input &ndash; for example, an input beam from a <a href="laser_diodes.html" title="semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diode</a> with a certain optical <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a> of e.g. a few nanometers.
+Each of its frequency components will have a rather structured profile, but that looks different for each frequency component, and when adding up the profiles of those, the structures are more or less washed out.</p>
+<p>In some cases, you may want to properly simulate that by doing numerical beam propagation with multiple monochromatic fields at slightly different optical frequencies and adding up the resulting intensity profiles.
+We can do that; the problem may only be that for a large number of frequency components you will require correspondingly longer computation times.
+Often, however, you can regard a single frequency component as being representative &ndash; particularly in situations where the device has a large number of guided modes.</p>
+</div>
+<h2 class="togglediv">Alternative Method Based on Guided Modes</h2>
+<div>
+<p>Briefly describe a simple alternative method for the generation of a multimode profile.
+Here, you utilize the guided <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a>, calculated by the mode solver.
+You construct the input field as a superposition of all guided modes, each one having a random optical power and optical phase according to properly defined functions, e.g. such as to obtain the right kind of spatial profile and beam divergence.
+For example, you can reduce the beam divergence by assigning lower powers to higher-order modes.</p>
+<p>That method differs from the previously explained one in various aspects:</p>
+<ul>
+<li>It is even a conceptually a little easier.</li>
+<li class="ta_left">It naturally produces a profile consisting only of guided modes, fully suppressing any power in <a href="cladding_modes.html" title="modes in optical fibers (or other waveguides) which are not restricted to the region around the core">cladding modes</a>.
+That may be useful in some cases, but unacceptable in others.</li>
+<li class="ta_left ta_left">The method is not practical in cases where the number of guided modes is very large, because the computation of all those modes may be too time-consuming or even going beyond the capabilities of the mode solver.</li>
+</ul>
+<p>So it depends on the situation which method you should choose.</p>
+</div>
+<h2 class="togglediv">Concluding Remarks</h2>
+<div>
+<p>You have seen that somewhat tricky aspects are involved in the generation of <a href="multimode_beams.html" title="light beams in free space or in transparent media which involve multiple (often many) modes, frequently with highly random characteristics">multimode beam</a> profiles, as required for simulations with numerical beam propagation &ndash; for example, for investigations and optimizations of multimode devices such as <a href="fiber_optic_pump_combiners.html" title="fiber-optic couplers for sending pump and signal light into an amplifier or laser fiber">fiber-optic pump combiners</a>, splitters and <a href="cladding_mode_strippers.html" title="devices which can remove light from a fiber cladding">cladding mode strippers</a>.</p>
+<p>For a newcomer, this may look somewhat frightening.
+However, keep in mind that when doing this with our software, you would not only obtain a rather powerful piece of software, but also diligent and helpful support.
+I personally take care that our users obtain what they need &ndash; for example, carefully worded explanations of physical issues, suggestions for the use of certain methods and pieces of script code, or even complete scripts.
+For those who do not want to deal with all those technicalities at all, I can even provide a nicely worked out script containing a <a href="software_custom_forms.html">custom form</a>, where the users only have to enter their input parameters and push a button for starting the calculation, which then produces the needed numerical and graphical output.
+Here is an example for such a form for simulations on tapered multimode fibers:</p>
+<figure>
+<img src="img/tapered_mm_fiber_form.png" alt="form for multimode fiber simulation">
+</figure>
+<p>I would also like to emphasize that it is essential to have a software with extensive <a href="software_script_language.html">scripting</a> capabilities, because otherwise you could hardly have the required degree of flexibility for implementing a wide range of simulations, using different methods &ndash; even methods which the software developer has never anticipated to use.</p>
+</div>
+<hr>
+<p style="font-size:85%; margin-bottom:10px;">This article is a posting of the <a href="software_news.html">RP Photonics Software News</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page, because its location is permanent.</p>
+<p style="font-size:85%; margin-bottom:15px;">Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="https://www.rp-photonics.com/software_news.rss">RSS feed</a>.</p>
+
+<table style="border-spacing:0"><tr>
+<td style="width:60%; vertical-align:middle;">
+<img src="previews/software_news_2020_03_02.png" alt="preview" class="article_preview"></td>
+<td style="vertical-align:middle;">
+<div id="socialbox_article">
+<p style="font-size:90%">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fsoftware_news_2020_03_02.html&text=Software+from+RP+Photonics+-+Creating+Multimode+Beams+in+Numerical+Beam+Propagation" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fsoftware_news_2020_03_02.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fsoftware_news_2020_03_02.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td>
+</tr></table>
+
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide</span>
+</footer>
+</main></div>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="hzTu/cX5a5UBjMxjq86k5g==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/software_news_2020_03_02.html"
+    },
+    "headline": "Creating Multimode Beams in Numerical Beam Propagation",
+    "image": "https://www.rp-photonics.com/previews/software_news_2020_03_02.png",
+    "datePublished": "2020-03-02",
+    "description": "Simulations of beam propagation often need multimode input beams. Here, it is explained how to generate such inputs with random phase and amplitude profiles.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "RP Photonics Software News",
+      "item": "https://www.rp-photonics.com/software.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "2020-03-02",
+      "item": "https://www.rp-photonics.com/software_news_2020_03_02.html"
+    }]}
+}
+</script>
+</body>
+</html>

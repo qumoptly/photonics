@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-yKZGonpvdPiO/i+vjevrjw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Kramers-Kronig relations, dispersion relations, nonlinear refractive index</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/kramers_kronig_relations.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-07-05">
+<meta name="description" content="Kramers-Kronig relations are mathematical relations between absorption and refractive index of transparent media.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="Kramers-Kronig relations, dispersion relations, nonlinear refractive index">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kramers&ndash;Kronig Relations">
+<meta property="og:description" content="Kramers-Kronig relations are mathematical relations between absorption and refractive index of transparent media.">
+<meta property="og:url" content="https://www.rp-photonics.com/kramers_kronig_relations.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/kramers_kronig_relations.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Kramers-Kronig relations are mathematical relations between absorption and refractive index of transparent media.">
+<meta name="twitter:title" content="Kramers&ndash;Kronig Relations">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/kramers_kronig_relations.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="yKZGonpvdPiO/i+vjevrjw==">
+page="kramers_kronig_relations.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="yKZGonpvdPiO/i+vjevrjw==">shownsponsors="TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_k.html">letter K</a> &gt; <a href="kramers_kronig_relations.html">Kramers&ndash;Kronig relations</a></p>
+<h1>Kramers&ndash;Kronig Relations</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="advicebox">
+<p>Ask <a href="index.html">RP Photonics</a> for calculations based on Kramers&ndash;Kronig relations, e.g. in the context of nonlinear refractive index changes.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: mathematical relations between absorption coefficient and refractive index of transparent media</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Kramers-Kronig-Relationen</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<p><a href="encyclopedia_cite.html?article=Kramers--Kronig%20relations">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>(also sometimes used, but incorrect: &ldquo;Kramers&ndash;Krönig relations&rdquo;)</p>
+<p>Within the theory of analytic complex functions, general relations have been developed which relate the real part of such a function to an integral containing the imaginary part, and vice versa.
+Such relations have found widespread application in the area of linear and <a href="nonlinear_optics.html" title="the part of optics dealing with optical nonlinearities and their applications">nonlinear optics</a>.
+Applied to the frequency-dependent dielectric function <span class="eqn_il"><span class="greek">&epsilon;</span>(<span class="greek">&omega;</span>)</span>, they lead to the relation</p>
+<div class="eqn"><img src="eqn/kk_epsilon.gif" width="229" height="50" alt="Kramers--Kronig relations"></div>
+<p>which is named after Ralph Kronig and Hendrik Anthony Kramers. <span class="eqn_il">Re&thinsp;<span class="greek">&epsilon;</span>(<span class="greek">&omega;</span>)</span> is related to the <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> (see below), and <span class="eqn_il">Im&thinsp;<span class="greek">&epsilon;</span>(<span class="greek">&omega;</span>)</span> is related to the <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorption</a> (or <a href="gain.html" title="a measure of the strength of optical amplification">gain</a>) coefficient.
+The symbol <span class="eqn_il">&Omega;</span> is angular frequency variable running through the whole integration range.
+The P-like symbol in front of the integral denotes the Cauchy principal value, which requires some care e.g. when calculating such an integral numerically. (Note the pole of the integrand!)</p>
+<p>There is a second equation for the imaginary part of <span class="eqn_il"><span class="greek">&epsilon;</span>(<span class="greek">&omega;</span>)</span> (not shown here), calculating <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorption</a> at one wavelength from the <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> at all wavelengths.
+That equation is much less relevant for practical applications.
+Both equations combined are called the <em>Kramers&ndash;Kronig dispersion relations</em>.</p>
+<p>There is another form of Kramers&ndash;Kronig relations, relating the <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> <span class="eqn_il"><i>n</i></span> to the intensity <a href="absorption_coefficient.html" title="a logarithmic measure for the distributed absorption in a medium">absorption coefficient</a> <span class="eqn_il"><span class="greek">&alpha;</span></span>:</p>
+<div class="eqn"><img src="eqn/kk_n.gif" width="196" height="50" alt="Kramers--Kronig relations"></div>
+<p>These two forms are not directly related; note that in the first, but not in the second form there is a factor <span class="eqn_il">&Omega;</span> in the numerator of the integrand.</p>
+<h2 class="togglediv">Applications of Kramers&ndash;Kronig Relations</h2>
+<div>
+<p>The Kramers&ndash;Kronig relations allow one to calculate the refractive index profile and thus also the <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> of a medium solely from its frequency-dependent losses, which can be measured over a large spectral range.
+Note that a similar relation, allowing the calculation of the absorption from the refractive index, is much less useful because it is much more difficult to measure the refractive index in a wide frequency range.</p>
+<p>Modified Kramers&ndash;Kronig relations are also very useful in <a href="nonlinear_optics.html" title="the part of optics dealing with optical nonlinearities and their applications">nonlinear optics</a> [3]. The basic idea is that the <em>change</em> in the refractive index caused by some excitation of a medium (e.g. generation of carriers in a semiconductor) is related to the change in the absorption.
+As the change in the absorption is normally significant only in a limited range of <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequencies</a>, it is relatively easily measured.
+Such methods can also be applied to laser <a href="gain_media.html" title="media for laser amplification">gain media</a>, e.g. for calculating <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">phase</a> changes in <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifiers</a> associated with changes of the excitation level [4,&thinsp;5].
+Note that in the case of <a href="rare_earth_doped_gain_media.html" title="laser gain media which are doped with rare earth ions">rare-earth-doped gain media</a>, for example, it is not sufficient to consider only the changes in gain and loss around a certain <a href="laser_transitions.html" title="optical transitions where stimulated emission is used to obtain optical amplification">laser transition</a>, because changes in strong absorption lines in the <a href="ultraviolet_light.html" title="invisible light with wavelengths shorter than &asymp;&thinsp;400&thinsp;&thinsp;nm">ultraviolet</a> spectral region are also important.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div class="comment">
+<p class="comment_details">2020-07-05</p>
+<p>What happens when <span class="eqn_il">$omega;&thinsp;=&thinsp;$Omega;</span>?</p>
+<p style="font-weight:bold">Answer from the <a href="paschotta.html" style="font-weight:bold">author</a>:</p>
+<p>The integrand has a pole at that location, i.e., it diverges for <span class="eqn_il">$omega;&thinsp;&rarr;&thinsp;$Omega;</span>.
+This problem is handled by taking the so-called <a href="https://en.wikipedia.org/wiki/Cauchy_principal_value" rel="nofollow">Cauchy principal value</a>.
+Basically, that means removing a tiny interval around the pole from the integration and taking the limit for the width of that interval going towards zero.</p>
+</div>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="kramers_kronig_relations.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">R. de L. Kronig, &ldquo;On the theory of the dispersion of X-rays&rdquo;, J. Opt. Soc. Am. 12 (6), 547 (1926), <a href="https://doi.org/10.1364/JOSA.12.000547">doi:10.1364/JOSA.12.000547</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">M. Beck <i>et al.</i>, &ldquo;Group delay measurements of optical components near 800&nbsp;nm&rdquo;, IEEE J. Quantum Electron. 27 (8), 2074 (1991), <a href="https://doi.org/10.1109/3.83423">doi:10.1109/3.83423</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">D. C. Hutchings <i>et al.</i>, &ldquo;Kramers&ndash;Kronig relations in nonlinear optics&rdquo;, Opt. Quantum Electron. 24, 1 (1992)</td></tr>
+<tr><td class="refno">[4]</td><td class="refs">M. Montagna <i>et al.</i>, &ldquo;Nonlinear refractive index in erbium-doped optical amplifiers&rdquo;, Opt. Quantum Electron. 27, 871 (1995)</td></tr>
+<tr><td class="refno">[5]</td><td class="refs">J. W. Arkwright <i>et al.</i>, &ldquo;Experimental and theoretical analysis of the resonant nonlinearity in ytterbium-doped fiber&rdquo;, J. Lightwave Technol. 16 (5), 798 (1998)</td></tr>
+<tr><td class="refno">[6]</td><td class="refs">M. Sheik-Bahae, &ldquo;Nonlinear optics basics: Kramers&ndash;Kronig relations in nonlinear optics&rdquo;, in <i>Encyclopedia of Modern Optics</i> (eds. B. Guenter and D. Steel), Academic Press, London (2004)</td></tr>
+<tr><td class="refno">[7]</td><td class="refs">J. D. Jackson, <i>Classical Electrodynamics</i>, 2nd edn., John Wiley &amp; Sons, Inc., New York (1975)</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="dispersion.html" title="the dependence of the phase velocity in a medium on the optical frequency or the propagation mode">dispersion</a>, <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a>, <a href="causality.html" title="the concept of relating effects to causes, or the compatibility of phenomena with this concept">causality</a><br>and other articles in the categories <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/kramers_kronig_relations.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fkramers_kronig_relations.html&text=RP+Photonics+Encyclopedia+-+Kramers-Kronig+relations%2C+dispersion+relations%2C+nonlinear+refractive+index" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fkramers_kronig_relations.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fkramers_kronig_relations.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/kramers_kronig_relations.html"&gt;<br>Article on Kramers&amp;ndash;Kronig Relations&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/kramers_kronig_relations.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/kramers_kronig_relations.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/kramers_kronig_relations.html<br>article on 'Kramers&amp;ndash;Kronig Relations' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="https://artifex-engineering.com/instruments/" data-supplier="Artifex Engineering" data-location="banner" rel="nofollow" class="bg externallink"><img src="./bg/banners/artifex_engineering.jpg" alt="Artifex Engineering"></a>
+</div>
+</aside>
+<script type="text/javascript" nonce="yKZGonpvdPiO/i+vjevrjw==">shownbanner = "Artifex Engineering";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Photonics in Times of Trouble for International Trade</h2>
+<p style="font-size:14px;">This <a href="./spotlight_2017_02_17.html?banner=International_trade">article in the Photonics Spotlight</a> addresses the current serious concerns about the future of international trade and more generally international cooperation. Some key points:</p>
+<ul>
+<li>The <b>German trade surplus</b> deserves attention, but claiming unfair practices without differentiating between different sectors of the economy is just stupid talk.</li>
+<li>Already announced changes of US policy constitute a serious threat of beginning <b>trade wars</b>, which could have disastrous consequences.</li>
+<li>There are also <b>ruthless attacks on essential values</b>, contributing to a breakdown of cooperation.</li>
+<li>If we do not stop these developments in time, we may get into the <b>big crunch</b>.</li>
+<li>We must <b>fiercely defend fundamental values</b> as well as <b>international cooperation</b>, because this is the only chance to solve a wide range of serious problems.</li>
+</ul>
+<p style="font-size:14px;">You are welcome to <a href="./spotlight_2017_02_17.html?banner=International_trade">read the article</a>. Note that you can get the <a href="./spotlight.html?banner=International_trade">Photonics Spotlight</a> as an e-mail newsletter.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="yKZGonpvdPiO/i+vjevrjw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/kramers_kronig_relations.html"
+    },
+    "headline": "Kramers&ndash;Kronig Relations",
+    "image": "https://www.rp-photonics.com/previews/kramers_kronig_relations.png",
+    "datePublished": "2006-06-19",
+    "dateModified": "2020-07-05",
+    "description": "Kramers&ndash;Kronig relations are mathematical relations between absorption and refractive index of transparent media.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter K",
+      "item": "https://www.rp-photonics.com/encyclopedia_k.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Kramers&ndash;Kronig relations",
+      "item": "https://www.rp-photonics.com/kramers_kronig_relations.html"
+    }]}
+}
+</script>
+</body>
+</html>

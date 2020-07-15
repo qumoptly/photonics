@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-gufHoVKo79GRN5lwr9z0xQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Q-switched lasers, Q switching, pulses, design</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/q_switched_lasers.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Q-switched lasers are lasers which emit optical pulses, using the method of Q switching. Typically, they produce pulses with nanosecond durations.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="Q-switched lasers, Q switching, pulses, design">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Q-switched Lasers">
+<meta property="og:description" content="Q-switched lasers are lasers which emit optical pulses, using the method of Q switching. Typically, they produce pulses with nanosecond durations.">
+<meta property="og:url" content="https://www.rp-photonics.com/q_switched_lasers.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/q_switched_lasers.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Q-switched lasers are lasers which emit optical pulses, using the method of Q switching. Typically, they produce pulses with nanosecond durations.">
+<meta name="twitter:title" content="Q-switched Lasers">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/q_switched_lasers.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="gufHoVKo79GRN5lwr9z0xQ==">
+page="q_switched_lasers.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="gufHoVKo79GRN5lwr9z0xQ==">shownsponsors="eagleyard Photonics,EKSMA OPTICS"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_q_switched_lasers.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_q.html">letter Q</a> &gt; <a href="q_switched_lasers.html">Q-switched lasers</a></p>
+<h1>Q-switched Lasers</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_q_switched_lasers.html?s=vbox">87 suppliers for Q-switched lasers</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.ekspla.com/products/nanosecond-lasers" data-supplier="EKSPLA" data-location="product-enc" data-keyword="Q-switched lasers" rel="nofollow" class="bg externallink"><img src="./bg/logos/ekspla.png" alt="EKSPLA" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.rpmclasers.com/product-category/pulsed-lasers/" data-supplier="RPMC Lasers" data-location="product-enc" data-keyword="Q-switched lasers" rel="nofollow" class="bg externallink"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.quantel-laser.com/en/products.html" data-supplier="Lumibird" data-location="product-enc" data-keyword="Q-switched lasers" rel="nofollow" class="bg externallink"><img src="./bg/logos/lumibird.png" alt="Lumibird" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.teemphotonics.com/infrared-green-and-ultraviolet-laser-products/sub-ns-lasers/" data-supplier="Teem Photonics" data-location="product-enc" data-keyword="Q-switched lasers" rel="nofollow" class="bg externallink"><img src="./bg/logos/teem_photonics.png" alt="Teem Photonics" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_q_switched_lasers.html?s=vbox">List of suppliers for<br>Q-switched lasers</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="boxadvertisement">
+<h2>Designing Q-switched Lasers</h2>
+<p>RP Photonics can design a Q-switched laser according to your needs and calculate a variety of performance details before you start expensive and time-consuming experiments.</p>
+<p>Also, you may obtain the software <a href="fiberpower.html"><b>RP Fiber Power</b></a> for <a href="fiberpower_qs_yag.html"><b>modeling Q-switched lasers</b></a> yourself.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: lasers which emit optical pulses, relying on the method of Q switching</p>
+<p>More general term: <a href="pulsed_lasers.html" title="lasers emitting light in the form of pulses">pulsed lasers</a></p>
+<p>More specific term: actively or passively Q-switched lasers</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">gütegeschaltete Laser</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<p><a href="encyclopedia_cite.html?article=Q-switched%20lasers">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>A Q-switched laser is a <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a> to which the technique of active or passive <a href="q_switching.html" title="a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q switching</a> is applied, so that it emits energetic <a href="pulses.html" title="flashes of light">pulses</a>.
+Typical applications of such lasers are material processing (e.g. cutting, drilling, <a href="laser_marking.html" title="a group of methods for labeling materials with lasers">laser marking</a>), pumping <a href="nonlinear_frequency_conversion.html" title="the conversion of input light to light of other frequencies, using optical nonlinearities">nonlinear frequency conversion</a> devices, <a href="distance_measurements_with_lasers.html" title="measurements of distances using laser light">range finding</a>, and remote sensing.</p>
+<p>Note that the article on <a href="q_switching.html" title="a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q switching</a> contains more details on Q-switching techniques; it also contains a video explaining the basic principle of this method of pulse generation.</p>
+<p>Q-switched lasers can be pumped either continuously or with pulses, e.g. from <a href="flash_lamps.html" title="gas discharge lamps which are used for generating intense light pulses">flash lamps</a> (particularly for low pulse repetition rates).
+For continuous pumping, the <a href="gain_media.html" title="media for laser amplification">gain medium</a> should have a long <a href="upper_state_lifetime.html" title="the lifetime of the population of the upper laser level">upper-state lifetime</a> to reach a high enough stored energy rather than losing the energy as <a href="fluorescence.html" title="luminescence arising from irradiation with light">fluorescence</a>.
+In any case, the <a href="saturation_energy.html" title="a measure of the incident optical pulse energy required for achieving significant saturation of an absorber or a gain medium">saturation energy</a> should not be too low, because this could lead to excessive gain, so that the premature onset of lasing is more difficult to suppress.
+The latter problem can occur particularly for <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber lasers</a>.
+On the other hand, a too high saturation fluence can make efficient energy extraction difficult.</p>
+<h2 class="togglediv">Types of Q-switched Lasers</h2>
+<div>
+<figure class="right" style="width:213px;">
+<img src="img/actively_qs_laser.png" alt="actively Q-switched laser">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Schematic setup of an actively Q-switched laser.
+</figcaption>
+</figure>
+<p>The most common type is the actively Q-switched <a href="solid_state_lasers.html" title="lasers based on solid-state gain media (usually ion-doped crystals or glasses)">solid-state</a> <a href="bulk_lasers.html" title="lasers based on bulk crystals as gain media">bulk laser</a>.
+Solid-state gain media have a good energy storage capability, and bulk lasers allow for large mode areas (thus for higher pulse energies and peak powers) and shorter <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonators</a> (e.g. compared with <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber lasers</a>).
+The laser resonator contains an active <a href="q_switches.html" title="optical switches which are typically used for generating nanosecond pulses in lasers">Q switch</a> &ndash; an <a href="optical_modulators.html" title="devices allowing one to manipulate properties of light beams, such as the optical power or phase">optical modulator</a>, which in most cases is an <a href="acousto_optic_q_switches.html" title="acousto-optic modulators used for Q switching of lasers">acousto-optic Q switch</a>.</p>
+<p>For wavelengths in the 1-&mu;m spectral region, the most common pulsed lasers are based on a <a href="neodymium_doped_gain_media.html" title="laser gain media containing laser-active neodymium ions">neodymium-doped</a> <a href="laser_crystals.html" title="transparent crystals with laser-active dopants, used as laser gain media">laser crystal</a> such as <a href="yag_lasers.html" title="lasers based on YAG (yttrium aluminum garnet) crystals, usually Nd:YAG or Yb:YAG">Nd:YAG</a>, <a href="vanadate_lasers.html" title="lasers based on rare-earth-doped yttrium, gadolinium or lutetium vanadate crystals, usually Nd:YVO<sub>4</sub>">Nd:YVO<sub>4</sub></a>, or <a href="ylf_lasers.html" title="lasers based on YLF (yttrium lithium fluoride) crystals, usually Nd:YLF">Nd:YLF</a>, although <a href="ytterbium_doped_gain_media.html" title="laser gain media containing laser-active ytterbium ions">ytterbium-doped gain media</a> can also be used.
+A small actively Q-switched solid-state laser may emit 100&nbsp;mW of average power in 10-ns pulses with a 1-kHz repetition rate and 100&nbsp;&mu;J pulse energy.
+The peak power is then &asymp;&thinsp;9&nbsp;kW.
+The highest pulse energies and shortest <a href="pulse_duration.html" title="the duration of an optical pulse">pulse durations</a> are achieved for low <a href="pulse_repetition_rate.html" title="the number of pulses emitted per second e.g. by a mode-locked or Q-switched laser">pulse repetition rates</a> (below the inverse <a href="upper_state_lifetime.html" title="the lifetime of the population of the upper laser level">upper-state lifetime</a>), at the expense of somewhat reduced average output power.
+A somewhat larger Nd:YAG laser with a 10-W pump source (e.g. a <a href="diode_bars.html" title="a type of semiconductor laser containing a one-dimensional array of broad-area emitters">diode bar</a>) can reach pulse energies of several millijoules.
+<a href="vanadate_lasers.html" title="lasers based on rare-earth-doped yttrium, gadolinium or lutetium vanadate crystals, usually Nd:YVO<sub>4</sub>">Nd:YVO<sub>4</sub></a> is attractive particularly for short pulse durations and high pulse repetition rates, or for operation with low pump power.</p>
+<p>Q-switched lasers with longer emission wavelengths are often based on <a href="erbium_doped_gain_media.html" title="laser gain media doped with erbium ions">erbium-doped gain media</a> such as Er:YAG for 1.65 or 2.94&nbsp;&mu;m, or thulium-doped crystals for &asymp;&thinsp;2&nbsp;&mu;m.</p>
+<p>Significantly larger pulse energies can be obtained from <a href="optical_amplifiers.html" title="devices for amplifying the power of light beams">amplifier</a> systems (<a href="master_oscillator_power_amplifier.html" title="a laser system consisting of a seed laser and a laser amplifier for boosting the output power">MOPAs</a>).
+For high average powers combined with moderate pulse energies, fiber MOPAs, also called <a href="master_oscillator_fiber_amplifier.html" title="a laser system containing a fiber amplifier for boosting the output power">MOFAs</a>, can be used.</p>
+<figure class="right" style="width:213px;">
+<img src="img/passively_qs_laser.png" alt="passively Q-switched laser">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Schematic setup of a passively Q-switched laser. The saturable absorber is a crystal (e.g. of Cr:YAG) within the laser resonator.
+</figcaption>
+</figure>
+<p>Particularly for low pulse repetition rates, <a href="lamp_pumped_lasers.html" title="lasers which are pumped with flash lamps or arc lamps, or in rare cases with tungsten halogen lamps">lamp pumping</a> can be an economically favorable option, since discharge lamps are much cheaper than <a href="laser_diodes.html" title="semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diodes</a> for a given peak power.
+For higher powers, however, diode pumping becomes more attractive, also because thermal effects in the laser crystal are strongly reduced.</p>
+<p>A <em>passively</em> Q-switched laser contains a <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorber</a> (passive Q switch) instead of the modulator.
+For continuous pumping, a regular pulse train is obtained, where the timing of the pulses usually cannot be precisely controlled with external means, and the <a href="pulse_repetition_rate.html" title="the number of pulses emitted per second e.g. by a mode-locked or Q-switched laser">pulse repetition rate</a> increases with increasing pump power.
+The most frequently used saturable absorbers for 1-&mu;m lasers are Cr:YAG crystals.</p>
+<figure class="right" style="width:187px;">
+<img src="img/qs_microchip_laser.png" alt="Q-switched microchip laser">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Microchip laser, passively Q-switched with a <a href="semiconductor_saturable_absorber_mirrors.html" title="saturable semiconductor absorber devices acting as nonlinear mirrors">SESAM</a>. The left-hand side of the laser crystal has a dielectric coating, serving as the output coupling mirror.
+</figcaption>
+</figure>
+<p>Passively Q-switched <a href="microchip_lasers.html" title="solid-state lasers with a quasi-monolithic setup">microchip lasers</a> have particularly compact setups.
+Such lasers typically emit pulses with energies between nanojoules and a few microjoules, average output powers of some tens of milliwatts, and repetition rates between a few kilohertz and a few MHz.</p>
+<p>Generally, passively Q-switched lasers are more limited in average output power than actively Q-switched versions, since <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorbers</a> dissipate some of the energy, so that limiting thermal effects can occur.
+Note that saturable absorbers usually have some nonsaturable losses, which often increase the dissipated energy well beyond the level which is unavoidable in principle.</p>
+<p>Particularly some of the smaller Q-switched lasers, but also some lasers with longer resonators containing an <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical filter</a> such as a <a href="volume_bragg_gratings.html" title="Bragg gratings written into some bulk material">volume Bragg grating</a>, operate on a single axial <a href="resonator_modes.html" title="modes of an optical or microwave resonator">resonator mode</a>.
+This leads to a clean temporal shape and to a small optical <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>, often <a href="bandwidth_limited_pulses.html" title="pulses with a duration as short as possible with their optical spectrum">limited</a> by the pulse duration.
+Other lasers oscillate on multiple resonator modes, which leads to <a href="resonator_modes.html" title="modes of an optical or microwave resonator">mode</a> <a href="beat_note.html" title="an oscillation of the optical intensity arising from the superposition of light with different optical frequencies">beating</a> effects: the output <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a> is modulated with frequencies which are integer multiples of the resonator round-trip frequency.</p>
+<p><a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">Fiber lasers</a> can also be actively or passively Q-switched.
+However, all-fiber devices are fairly limited in terms of performance, whereas Q-switched fiber lasers containing bulk-optical elements (e.g. an <a href="acousto_optic_q_switches.html" title="acousto-optic modulators used for Q switching of lasers">acousto-optic Q switch</a>, see Figure&nbsp;4) are less robust and still less powerful than bulk lasers.
+The relatively small mode areas (even when using <a href="large_mode_area_fibers.html" title="optical fibers with relatively large mode areas and a single transverse mode or only a few modes">large mode area fibers</a>) introduce problems with fiber <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a> and <a href="laser_induced_damage.html" title="damage of optical components induced by laser radiation">laser-induced damage</a>, which set limits on the pulse energies and particularly the peak powers achievable.
+Note also that the typically very high laser <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> in a fiber laser has important effects on the <a href="laser_dynamics.html" title="the temporal evolution of quantities such as the optical power and gain in a laser">laser dynamics</a>; in particular, it can lead to the formation of a complicated temporal sub-structure.</p>
+<figure>
+<img src="img/qs_fiber_laser.png" alt="actively Q-switched fiber laser setup">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Setup of an actively Q-switched fiber laser.
+</figcaption>
+</figure>
+<p>On the other hand, <a href="high_power_fiber_lasers_and_amplifiers.html" title="fiber lasers and fiber amplifiers with high output powers of e.g. &gt;&thinsp;10&thinsp;&thinsp;W">high-power fiber amplifiers</a> are suitable for amplifying pulse trains with high average power but moderate pulse energy.
+Some degree of <a href="nonlinear_pulse_distortion.html" title="distortion of the spatial, temporal or spectral characteristics of an optical pulse, resulting from optical nonlinearities">nonlinear pulse distortion</a> in such an amplifier is often acceptable for applications.</p>
+</div>
+<h2 class="togglediv">Design Issues</h2>
+<div>
+<p>Depending on the <a href="laser_design.html" title="the design of a laser device, or the process of working out such a design">design</a> goals for a Q-switched laser, different solutions can be appropriate.
+In the following, some possible goals, encountered issues and trade-offs are listed:</p>
+<ul>
+<li>For short <a href="pulse_duration.html" title="the duration of an optical pulse">pulse durations</a>, a short <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a> and high laser <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> are required.
+The shortest pulses are achieved with <a href="microchip_lasers.html" title="solid-state lasers with a quasi-monolithic setup">microchip lasers</a> (see above), because these can have extremely short resonators, but the pulse energies achievable are moderate.
+Short pulse durations (a few nanoseconds) combined with millijoule pulse energies are possible with compact <a href="solid_state_lasers.html" title="lasers based on solid-state gain media (usually ion-doped crystals or glasses)">solid-state lasers</a>, particularly with <a href="end_pumping.html" title="a technique of optically pumping a laser medium in a direction along the laser beam">end-pumped</a> versions due to their higher gain.
+<a href="thin_disk_lasers.html" title="solid-state bulk lasers having a very thin disk of laser-active material as the gain medium">Thin-disk lasers</a> allow for very high pulse energies, but are not suitable for very short pulses owing to their relatively small <a href="gain.html" title="a measure of the strength of optical amplification">gain</a>.</li>
+<li>High <a href="pulse_energy.html" title="energy of an optical pulse">pulse energies</a> require good energy storage.
+For continuous pumping, this means that a long <a href="upper_state_lifetime.html" title="the lifetime of the population of the upper laser level">upper-state lifetime</a> is desirable.
+This results in advantages for <a href="ytterbium_doped_gain_media.html" title="laser gain media containing laser-active ytterbium ions">ytterbium-doped gain media</a>, e.g. Yb:YAG as compared with <a href="yag_lasers.html" title="lasers based on YAG (yttrium aluminum garnet) crystals, usually Nd:YAG or Yb:YAG">Nd:YAG</a>, although these typically have lower gain and therefore generate longer pulses.</li>
+<li>A too high <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> should actually be avoided, since it brings with it the risk of losing energy via <a href="amplified_spontaneous_emission.html" title="a process where spontaneously emitted radiation (luminescence) is amplified">ASE</a> or <a href="parasitic_lasing.html" title="unwanted laser operation in a laser or amplifier device">parasitic lasing</a>.</li>
+<li>The <a href="pulse_repetition_rate.html" title="the number of pulses emitted per second e.g. by a mode-locked or Q-switched laser">pulse repetition rate</a> can often be varied in a large range, but this influences not only the pulse energy achievable, but also the pulse duration.</li>
+<li>At high <a href="optical_intensity.html" title="optical power per unit area">optical intensities</a>, the <a href="laser_induced_damage.html" title="damage of optical components induced by laser radiation"><em>laser-induced damage</em></a> of intracavity components such as <a href="laser_mirrors.html" title="high-quality mirrors used in laser resonators and other optical setups">laser mirrors</a> can be a problem.
+One therefore requires <a href="resonator_design.html" title="the description of the optical components from which an optical resonator is made, and their exact arrangement">resonator designs</a> with sufficiently large mode areas not only in the <a href="laser_crystals.html" title="transparent crystals with laser-active dopants, used as laser gain media">laser crystal</a> but also on all resonator mirrors and in the Q-switch.
+Particularly in combination with a short resonator length, this can be difficult to achieve.
+Numerical optimization of resonator designs can sometimes lead to significantly improved performance values, together with improved stability, ease of alignment, and a long lifetime.</li>
+<li>A reduced emission <a href="linewidth.html" title="width of the spectrum of a light beam or an absorption feature">linewidth</a> can be achieved with <a href="injection_seeding.html" title="a technique for enforcing narrowband operation of a laser or optical parametric oscillator by injecting light into its resonator">injection seeding</a>.</li>
+</ul>
+</div>
+<h2 class="togglediv">Applications of Q-switched Lasers</h2>
+<div>
+<p>Q-switched lasers have a wide range of applications.
+Some examples:</p>
+<ul>
+<li>laser material processing, e.g. laser cutting, laser drilling, <a href="laser_marking.html" title="a group of methods for labeling materials with lasers">laser marking</a>, laser patterning</li>
+<li><a href="laser_rangefinders.html" title="devices for measuring distances to objects, using lasers">laser rangefinders</a></li>
+<li><a href="lidar.html" title="a technique for acquiring 3D images with laser pulses">LIDAR</a> for 3-dimensional <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a></li>
+<li><a href="laser_induced_breakdown.html" title="a kind of spark, initiated by intense laser light">laser-induced breakdown</a> spectroscopy</li>
+<li><a href="medical_lasers.html" title="laser systems used for medical applications">medical</a> applications, e.g. dermatology and tattoo removal</li>
+<li>pumping devices for <a href="nonlinear_frequency_conversion.html" title="the conversion of input light to light of other frequencies, using optical nonlinearities">nonlinear frequency conversion</a>, e.g. pulsed <a href="optical_parametric_oscillators.html" title="coherent light sources based on parametric amplification within an optical resonator">optical parametric oscillators</a></li>
+<li><a href="fluorescence_spectroscopy.html" title="spectroscopy which is based on the analysis of fluorescence light">fluorescence spectroscopy</a></li>
+</ul>
+</div>
+<h2 class="togglediv">Laser Safety</h2>
+<div>
+<p>Note that the high <a href="pulse_energy.html" title="energy of an optical pulse">pulse energies</a> and <a href="peak_power.html" title="maximum optical power of a pulse">peak powers</a> can raise serious <a href="laser_safety.html" title="safety of the use of laser devices">laser safety</a> issues even for lasers with low average output power.
+A single shot into an eye will in many cases be the last thing that an eye has seen.
+Such risks can be substantially reduced by using Q-switched lasers operating at <a href="eye_safe_lasers.html" title="lasers emitting in a wavelength region with relatively low hazards for the human eye">eye-safe wavelengths</a>.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_q_switched_lasers.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 87 suppliers for Q-switched lasers. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.lumibird.com/en" data-supplier="Lumibird" data-location="product-enc" data-keyword="Q-switched lasers" rel="nofollow" class="bg externallink" title="Visit the website of Lumibird"><img src="./bg/logos/lumibird.png" alt="Lumibird" class="supplierlogo"></a><a href="https://www.quantel-laser.com/en/products.html" data-supplier="Lumibird" data-location="product-enc" data-keyword="Q-switched lasers" rel="nofollow" class="bg externallink" title="Visit the website of Lumibird"><img src="./bg/products/lumibird/q_switched_lasers.jpg" alt="Q-switched lasers" class="product"></a><h3><a href="./bg/profiles/lumibird.html" title="See the profile of Lumibird">Lumibird</a></h3><p>Lumibird <a href="https://www.quantel-laser.com/en/products.html" data-supplier="Lumibird" data-location="product-enc" data-keyword="Q-switched lasers" rel="nofollow" class="externallink bg">nanosecond Q-switched Nd:YAG lasers</a> are well known for their ruggeness and versatility. From 5&nbsp;mJ to 1.5&nbsp;J at 1064&nbsp;nm, from single pulse to 400&nbsp;Hz, they can be diode-pumped (compactness, ease of use) or flashlamp-pumped (high energy), and are available at 532&nbsp;nm, 355&nbsp;nm, 266&nbsp;nm and 1.5&nbsp;µm. <a href="https://www.quantel-laser.com/en/products/cat/double-pulse-nd-yag-systems.html" data-supplier="Lumibird" data-location="product-enc" data-keyword="Q-switched lasers" rel="nofollow" class="externallink bg">Double pulse models</a> are also proposed for applications in fluid mechanics (PIV).</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.teemphotonics.com/" data-supplier="Teem Photonics" data-location="product-enc" data-keyword="Q-switched lasers" rel="nofollow" class="bg externallink" title="Visit the website of Teem Photonics"><img src="./bg/logos/teem_photonics.png" alt="Teem Photonics" class="supplierlogo"></a><a href="https://www.teemphotonics.com/infrared-green-and-ultraviolet-laser-products/sub-ns-lasers/" data-supplier="Teem Photonics" data-location="product-enc" data-keyword="Q-switched lasers" rel="nofollow" class="bg externallink" title="Visit the website of Teem Photonics"><img src="./bg/products/teem_photonics/powerchip.jpg" alt="Q-switched lasers" class="product"></a><h3><a href="./bg/profiles/teem_photonics.html" title="See the profile of Teem Photonics">Teem Photonics</a></h3><p>Teem Photonics offers <a href="https://www.teemphotonics.com/infrared-green-and-ultraviolet-laser-products/sub-ns-lasers/" data-supplier="Teem Photonics" data-location="product-enc" data-keyword="Q-switched lasers" rel="nofollow" class="externallink bg">passively Q-switched lasers</a> &ndash; Microchip lasers and more powerful devices from the Powerchip laser series. Some are free running, while others are triggerable up to 100&nbsp;kHz. All can generate sub-nanosecond pulses. Available emission wavelengths are 1535&nbsp;nm, 1064&nbsp;nm, 532&nbsp;nm, 355&nbsp;nm, 266&nbsp;nm and 213&nbsp;nm.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.rpmclasers.com/" data-supplier="RPMC Lasers" data-location="product-enc" data-keyword="Q-switched lasers" rel="nofollow" class="bg externallink" title="Visit the website of RPMC Lasers"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a><a href="https://www.rpmclasers.com/product-category/pulsed-lasers/" data-supplier="RPMC Lasers" data-location="product-enc" data-keyword="Q-switched lasers" rel="nofollow" class="bg externallink" title="Visit the website of RPMC Lasers"><img src="./bg/products/rpmc_lasers/lamp_pumped_lasers.jpg" alt="Q-switched lasers" class="product"></a><h3><a href="./bg/profiles/rpmc_lasers.html" title="See the profile of RPMC Lasers">RPMC Lasers</a></h3><p>RPMC Lasers offers a wide range of <a href="https://www.rpmclasers.com/product-category/pulsed-lasers/" data-supplier="RPMC Lasers" data-location="product-enc" data-keyword="Q-switched lasers" rel="nofollow" class="externallink bg">Q-switched laser sources</a> with wavelengths from the UV through the IR. These offerings include DPSS lasers, flashlamp lasers, fiber lasers, and micro lasers/microchip lasers with both active and passive Q-switches.</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.ekspla.com/" data-supplier="EKSPLA" data-location="product-enc" data-keyword="Q-switched lasers" rel="nofollow" class="bg externallink" title="Visit the website of EKSPLA"><img src="./bg/logos/ekspla.png" alt="EKSPLA" class="supplierlogo"></a><a href="http://www.ekspla.com/products/nanosecond-lasers" data-supplier="EKSPLA" data-location="product-enc" data-keyword="Q-switched lasers" rel="nofollow" class="bg externallink" title="Visit the website of EKSPLA"><img src="./bg/products/ekspla/q_switched_lasers.jpg" alt="Q-switched lasers" class="product"></a><h3><a href="./bg/profiles/ekspla.html" title="See the profile of EKSPLA">EKSPLA</a></h3><p>Short pulse duration, a wide range of customization options and high stability are distinctive feature of EKSPLA <a href="http://www.ekspla.com/products/nanosecond-lasers" data-supplier="EKSPLA" data-location="product-enc" data-keyword="Q-switched lasers" rel="nofollow" class="externallink bg">nanosecond Q-switched lasers</a>. Employing latest achievements in laser technologies, our team of dedicated engineers designed wide range of products tailored for specific applications: from compact, simple and robust EKSPLA <a href="http://www.ekspla.com/product/nl230-series-nanosecond-q-switched-dpss-ndyag-lasers/" data-supplier="EKSPLA" data-location="product-enc" data-keyword="Q-switched lasers" rel="nofollow" class="externallink bg">nanosecond Q-switched DPSS NL230 series lasers for OEM manufacturers</a> to <a href="http://www.ekspla.com/product/nl940-series-high-energy-narrow-band-arbitrary-temporary-shaped-nanosecond-ndyag-lasers/" data-supplier="EKSPLA" data-location="product-enc" data-keyword="Q-switched lasers" rel="nofollow" class="externallink bg">high energy customized flash-lamp multijoule systems for research laboratories</a>.</p><p>Second (532&nbsp;nm), third (355&nbsp;nm), fourth (266&nbsp;nm) and fifth (213&nbsp;nm) (where available) harmonic options combined with various accessories and customization possibilities make these lasers well suited for many OEM and laboratory applications like OPO, OPCPA, Ti:sapphire and dye laser pumping, spectroscopy, remote sensing and plasma research.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="q_switched_lasers.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">F. J. McClung and R. W. Hellwarth, &ldquo;Giant optical pulsations from ruby&rdquo;, J. Appl. Phys. 33 (3), 828 (1962), <a href="https://doi.org/10.1063/1.1777174">doi:10.1063/1.1777174</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">G. Smith, &ldquo;The early laser years at Hughes Aircraft Company&rdquo;, IEEE J. Quantum Electron. 20 (6), 577 (1984), <a href="https://doi.org/10.1109/JQE.1984.1072445">doi:10.1109/JQE.1984.1072445</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">J. J. Zayhowski, &ldquo;Q-switched operation of microchip lasers&rdquo;, Opt. Lett. 16 (8), 575 (1991), <a href="https://doi.org/10.1364/OL.16.000575">doi:10.1364/OL.16.000575</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">L. E. Holder <i>et al.</i>, &ldquo;One joule per Q-switched pulse diode-pumped laser&rdquo;, IEEE J. Quantum Electron. 28 (4), 986 (1992), <a href="https://doi.org/10.1109/3.135217">doi:10.1109/3.135217</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">J. J. Zayhowski and C. Dill III, &ldquo;Coupled-cavity electro-optically Q-switched Nd:YVO<sub>4</sub> microchip lasers&rdquo;, Opt. Lett. 20 (7), 716 (1995), <a href="https://doi.org/10.1364/OL.20.000716">doi:10.1364/OL.20.000716</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">J. J. Degnan, &ldquo;Optimization of passively Q-switched lasers&rdquo;, IEEE J. Quantum Electron. 31 (11), 1890 (1995), <a href="https://doi.org/10.1109/3.469267">doi:10.1109/3.469267</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">R. S. Conroy <i>et al.</i>, &ldquo;Self-Q-switched Nd:YVO<sub>4</sub> microchip lasers&rdquo;, Opt. Lett. 23 (6), 457 (1998), <a href="https://doi.org/10.1364/OL.23.000457">doi:10.1364/OL.23.000457</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">G. J. Spühler <i>et al.</i>, &ldquo;Experimentally confirmed design guidelines for passively Q-switched microchip lasers using semiconductor saturable absorbers&rdquo;, J. Opt. Soc. Am. B 16 (3), 376 (1999), <a href="https://doi.org/10.1364/JOSAB.16.000376">doi:10.1364/JOSAB.16.000376</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">R. Paschotta <i>et al.</i>, &ldquo;Passively Q-switched 0.1&nbsp;mJ fiber laser system at 1.53&nbsp;&mu;m&rdquo;, Opt. Lett. 24 (6), 388 (1999), <a href="https://doi.org/10.1364/OL.24.000388">doi:10.1364/OL.24.000388</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">J. A. Alvarez-Chavez <i>et al.</i>, &ldquo;High-energy, high-power ytterbium-doped Q-switched fiber laser&rdquo;, Opt. Lett. 25 (1), 37 (2000), <a href="https://doi.org/10.1364/OL.25.000037">doi:10.1364/OL.25.000037</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">K. Du <i>et al.</i>, &ldquo;Electro-optically Q-switched Nd:YVO<sub>4</sub> slab laser with a high repetition rate and a short pulse width&rdquo;, Opt. Lett. 28 (2), 87 (2003), <a href="https://doi.org/10.1364/OL.28.000087">doi:10.1364/OL.28.000087</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">A. A. Fotiadi <i>et al.</i>, &ldquo;Dynamics of a self-Q-switched fiber laser with a Rayleigh-stimulated Brillouin scattering ring mirror&rdquo;, Opt. Lett. 29 (10), 1078 (2004), <a href="https://doi.org/10.1364/OL.29.001078">doi:10.1364/OL.29.001078</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">Y. Wang and C. Xu, &ldquo;Modeling and optimization of Q-switched double-clad fiber lasers&rdquo;, Appl. Opt. 45 (9), 2058 (2006), <a href="https://doi.org/10.1364/AO.45.002058">doi:10.1364/AO.45.002058</a></td></tr>
+<tr><td class="refno">[14]</td><td class="refs">L. McDonagh <i>et al.</i>, &ldquo;47&nbsp;W, 6&nbsp;ns constant pulse duration, high-repetition-rate cavity-dumped Q-switched TEM<sub>00</sub> Nd:YVO<sub>4</sub> oscillator&rdquo;, Opt. Lett. 31 (22), 3303 (2006), <a href="https://doi.org/10.1364/OL.31.003303">doi:10.1364/OL.31.003303</a></td></tr>
+<tr><td class="refno">[15]</td><td class="refs">T. Hakulinen and O. G. Okhotnikov, &ldquo;8&nbsp;ns fiber laser Q switched by the resonant saturable absorber mirror&rdquo;, Opt. Lett. 32 (18), 2677 (2007), <a href="https://doi.org/10.1364/OL.32.002677">doi:10.1364/OL.32.002677</a></td></tr>
+<tr><td class="refno">[16]</td><td class="refs">N. Vorobiev <i>et al.</i>, &ldquo;Single-frequency-mode Q-switched Nd:YAG and Er:glass lasers controlled by volume Bragg gratings&rdquo;, Opt. Express 16 (12), 9199 (2008), <a href="https://doi.org/10.1364/OE.16.009199">doi:10.1364/OE.16.009199</a></td></tr>
+<tr><td class="refno">[17]</td><td class="refs">R. Horiuchi <i>et al.</i>, &ldquo;1.4-MHz repetition rate electro-optic Q-switched Nd:YVO<sub>4</sub> laser&rdquo;, Opt. Express 16 (21), 16729 (2008), <a href="https://doi.org/10.1364/OE.16.016729">doi:10.1364/OE.16.016729</a></td></tr>
+<tr><td class="refno">[18]</td><td class="refs">A. Steinmetz <i>et al.</i>, &ldquo;Reduction of timing jitter in passively Q-switched microchip lasers using self-injection seeding&rdquo;, Opt. Lett. 35 (17), 2885 (2010), <a href="https://doi.org/10.1364/OL.35.002885">doi:10.1364/OL.35.002885</a></td></tr>
+<tr><td class="refno"><sup>&nbsp;</sup>[19]</td><td class="refs">R. Bhandari and T. Taira, &ldquo;Megawatt level UV output from &#91;110&#93; Cr<sup>4+</sup>:YAG passively Q-switched microchip laser&rdquo;, Opt. Express 19 (23), 22510 (2011), <a href="https://doi.org/10.1364/OE.19.022510">doi:10.1364/OE.19.022510</a></td></tr>
+<tr><td class="refno">[20]</td><td class="refs">R. W. Hellwarth, &ldquo;Control of fluorescent pulsations&rdquo;, in <i>Advances in Quantum Electronics</i> (ed. R. Singer), Columbia University Press, New York (1961), p. 334</td></tr>
+<tr><td class="refno">[21]</td><td class="refs">R. Paschotta, &quot;<a href="article_noise_in_laser_technology2.html">Noise in Laser Technology &ndash; Part 2: Fluctuations in Pulsed Lasers</a>&quot;</td></tr>
+<tr><td class="refno">[22]</td><td class="refs">R. Paschotta, <a href="fiberpower_qs_yag_bp.html">case study on an actively Q-switched Nd:YAG laser</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="q_switching.html" title="a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q switching</a>, <a href="q_switches.html" title="optical switches which are typically used for generating nanosecond pulses in lasers">Q switches</a>, <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">lasers</a>, <a href="nanosecond_lasers.html" title="lasers emitting optical pulses with nanosecond durations">nanosecond lasers</a>, <a href="lamp_pumped_lasers.html" title="lasers which are pumped with flash lamps or arc lamps, or in rare cases with tungsten halogen lamps">lamp-pumped lasers</a>, <a href="laser_safety.html" title="safety of the use of laser devices">laser safety</a>, <a href="laser_induced_damage.html" title="damage of optical components induced by laser radiation">laser-induced damage</a>, <a href="spotlight_2006_09_16.html">The Photonics Spotlight 2006-09-16</a>, <a href="spotlight_2009_03_07.html">The Photonics Spotlight 2009-03-07</a><br>and other articles in the categories <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<hr style="margin-top:16px; margin-bottom:12px;">
+<a href="paschotta.html"><img src="img/paschotta3_small.jpg" alt="Dr. R. Paschotta" style="float:left; margin:0px 16px 20px 18px;" width="80" height="97"></a>
+<div style="margin-bottom:12px;">
+<p style="font-size:90%; line-height:20px; padding-right:20px;">This encyclopedia is authored by <a href="paschotta.html" class="redlink">Dr. Rüdiger Paschotta</a>, the founder and executive of <a href="index.html" class="redlink">RP Photonics Consulting GmbH</a>.
+How about a <a href="training.html" class="redlink">tailored training course</a> from this distinguished expert at your location?
+<a href="contact.html" class="redlink">Contact</a> RP Photonics to find out how his <a href="./services.html" class="redlink">technical consulting services</a> (e.g. product designs, problem solving, independent evaluations, training) and <a href="software.html" class="redlink">software</a> could become very valuable for your business!</p>
+</div>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/q_switched_lasers.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fq_switched_lasers.html&text=RP+Photonics+Encyclopedia+-+Q-switched+lasers%2C+Q+switching%2C+pulses%2C+design" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fq_switched_lasers.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fq_switched_lasers.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/q_switched_lasers.html"&gt;<br>Article on Q-switched Lasers&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/q_switched_lasers.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/q_switched_lasers.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/q_switched_lasers.html<br>article on 'Q-switched Lasers' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Now is the Time for Training!</h2>
+<p>When your lab is closed, how to best utilize your time? With training, of course.</p>
+<p>Some suggestions:</p>
+<ul>
+<li>Use the RP Photonics website, reading <a href="./encyclopedia.html?banner=video_training">encyclopedia</a> articles, <a href="./tutorials.html?banner=video_training">tutorials</a>, <a href="./spotlight.html?banner=video_training">Photonics Spotlight</a> articles, etc. &ndash; all for free.</li>
+<li>Get a <a href="./training.html?banner=video_training">tailored training course</a> delivered through the internet &ndash; with every participant connected from home!</li>
+<li>Start with <a href="./software_modeling.html?banner=video_training">physical modeling</a> in order to fully understand your systems and devices, optimize performance, create new ideas&hellip;</li>
+</ul>
+<img src="./img/rp_photonics.png" alt="RP Photonics" style="margin-top:20px; width:225px;">
+<p>offers <a href="./training.html?banner=video_training">tailored training courses</a> and powerful <a href="./software.html?banner=video_training">simulation &amp; design software</a>, e.g. for <a href="./fiberpower.html?banner=video_training">active and passive fiber devices</a>, <a href="./resonator.html?banner=video_training">laser resonators</a> and <a href="./coating.html?banner=video_training">thin-film coatings</a>!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="gufHoVKo79GRN5lwr9z0xQ==">shownbanner = "video training";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Field Guide on Lasers</h2>
+<p>Enjoy a compact introduction to laser technology:</p>
+<ul>
+<li>basic principles</li>
+<li>laser beams</li>
+<li>laser resonators</li>
+<li>various types of lasers</li>
+<li>Q switching and mode locking</li>
+<li>frequency conversion</li>
+<li>laser safety</li>
+</ul>
+<p style="text-align:center;"><a href="http://spie.org/x648.html?product_id=767474"><img src="./img/fg_lasers.png" alt="FG Lasers"></a></p>
+<p>This book soon became a bestseller among the SPIE Field Guides.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="gufHoVKo79GRN5lwr9z0xQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/q_switched_lasers.html"
+    },
+    "headline": "Q-switched Lasers",
+    "image": "https://www.rp-photonics.com/previews/q_switched_lasers.png",
+    "datePublished": "2005-08-23",
+    "dateModified": "2020-03-14",
+    "description": "Q-switched lasers are lasers which emit optical pulses, using the method of Q switching. Typically, they produce pulses with nanosecond durations.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter Q",
+      "item": "https://www.rp-photonics.com/encyclopedia_q.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Q-switched lasers",
+      "item": "https://www.rp-photonics.com/q_switched_lasers.html"
+    }]}
+}
+</script>
+</body>
+</html>

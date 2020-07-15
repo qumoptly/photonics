@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-FKq7aprFlzyd6ZyyrVq3lg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - photoconductive detectors, intrinsic, extrinsic, design, thermal excitation, responsivity, bandwidth, lead salt, mercury cadmium telluride, silicon</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/photoconductive_detectors.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Photoconductive detectors, also called photoresistors, are photodetectors which exhibit a reduction in electrical resistance caused by incoming light. They are based on intrinsic or extrinsic absorption of light in semiconductors.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="photoconductive detectors, intrinsic, extrinsic, design, thermal excitation, responsivity, bandwidth, lead salt, mercury cadmium telluride, silicon">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Photoconductive Detectors">
+<meta property="og:description" content="Photoconductive detectors, also called photoresistors, are photodetectors which exhibit a reduction in electrical resistance caused by incoming light. They are based on intrinsic or extrinsic absorption of light in semiconductors.">
+<meta property="og:url" content="https://www.rp-photonics.com/photoconductive_detectors.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/photoconductive_detectors.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Photoconductive detectors, also called photoresistors, are photodetectors which exhibit a reduction in electrical resistance caused by incoming light. They are based on intrinsic or extrinsic absorption of light in semiconductors.">
+<meta name="twitter:title" content="Photoconductive Detectors">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/photoconductive_detectors.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="FKq7aprFlzyd6ZyyrVq3lg==">
+page="photoconductive_detectors.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="FKq7aprFlzyd6ZyyrVq3lg==">shownsponsors="TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_photoconductive_detectors.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_p.html">letter P</a> &gt; <a href="photoconductive_detectors.html">photoconductive detectors</a></p>
+<h1>Photoconductive Detectors</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_photoconductive_detectors.html?s=vbox">11 suppliers for photoconductive detectors</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_photoconductive_detectors.html?s=vbox">List of suppliers for<br>photoconductive detectors</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: photodetectors which exhibit a reduction in electrical resistance caused by incoming light</p>
+<p>Alternative terms: photoresistors, light-dependent resistors, photocells</p>
+<p>More general term: <a href="photodetectors.html" title="devices used for the detection of light">photodetectors</a></p>
+<p>Opposite term: <a href="photoemissive_detectors.html" title="photodetectors which are based on the external photoelectric effect">photoemissive detectors</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Photowiderstände</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a>, <a href="categories.html#optoelectronics" title="other articles on optoelectronics">optoelectronics</a></p>
+<p><a href="encyclopedia_cite.html?article=photoconductive%20detectors">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Photoconductive detectors are a type of <a href="photodetectors.html" title="devices used for the detection of light">photodetectors</a> which are based on photoconductive semiconductor materials.
+Here, the <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorption</a> of incident light creates non-equilibrium electrical carriers, and that reduces the electrical resistance across two electrodes.
+There are also some exotic cases with negative photo conductivity, i.e., with an increase of resistance caused by illumination.</p>
+<p>Alternative terms for photoconductive detectors are <em>photoresistors</em>, <em>light-dependent resistors</em> and <em>photocells</em>.</p>
+<p>While for the detection of visible light one would usually prefer <a href="photodiodes.html" title="semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiodes</a> due to their clearly superior performance (except sometimes in cost-critical applications), photoconductive detectors are often used as <a href="infrared_detectors.html" title="detectors for infrared light">infrared detectors</a>.</p>
+<p>In principle, one could consider <a href="photodiodes.html" title="semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiodes</a> to be photoconductors, at least when used in <em>photoconductive mode</em>, i.e., with a negative bias voltage.
+However, in this article we assume photoconductors to be devices without a p&ndash;n junction.
+The electrical characteristics are profoundly different from those of photodiodes; for example, one obtains a substantial dependence of the <a href="photocurrent.html" title="an electric current which is induced by incident light in a photodetector">photocurrent</a> on the applied bias voltage.</p>
+<p>Photoconductive antennas are often used to <a href="terahertz_detectors.html" title="detectors for terahertz radiation">detect</a> <a href="terahertz_radiation.html" title="electromagnetic radiation with frequencies around 0.1 THz to 10 THz">terahertz radiation</a>.
+Although such devices can also be called photoconductive detectors, in this article we consider only detectors for light, i.e., electromagnetic radiation with much higher <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequencies</a>.</p>
+<h2 class="togglediv">Intrinsic and Extrinsic Photoconductors</h2>
+<div>
+<p>An important distinction is that between intrinsic and extrinsic photoconductors:</p>
+<h3 class="togglediv">Intrinsic Materials</h3>
+<div>
+<p>In an <em>intrinsic</em> material, one exploits <em>interband transitions</em>, i.e., optical transitions across the <a href="band_gap.html" title="a range of energies for which there are no states of carriers in a medium">band gap</a> from the valence band to the conduction band.
+This is possible only when the <a href="photons.html" title="quanta of light energy">photon</a> energy is above the band gap energy, i.e., for a sufficiently short optical <a href="wavelength.html" title="the spatial period of a plane wave">wavelengths</a>.</p>
+<p>For example, lead salt, cadmium sulfide and mercury cadmium selenide detectors are based on that operation principle.</p>
+</div>
+<h3 class="togglediv">Extrinsic Materials</h3>
+<div>
+<p>In an <em>extrinsic</em> material for <em>impurity band detectors</em>, one exploits additional energy levels introduced by impurities.
+These are introduced by doping with additional chemical species and provide additional excitation pathways.
+High doping concentrations are preferable to obtain strong absorption, so that rather thin layers can be used; only, for too high doping the <a href="dark_current.html" title="a current from a photodetector which occurs even in the absence of a light input">dark current</a> and noise properties are degraded.</p>
+<p>For allowing particularly high doping concentrations, <em>blocked impurity band</em> (BIB) detectors have been developed, which contain an additional intrinsic layer, called the blocking layer, besides the heavily doped active layer.
+The intrinsic layer has the function to suppress hopping carriers in the impurity band.</p>
+<p>Examples for extrinsic materials are silicon and germanium, doped with arsenic, copper, gold, or indium.
+They are mostly used for detecting infrared light with particularly long wavelength, and are dominant in that applications beyond 20&nbsp;&mu;m.</p>
+</div>
+</div>
+<h2 class="togglediv">Device Design</h2>
+<div>
+<p>A photoconductive detector can simply consist of a piece of semiconductor material with two attached metallic electrodes for sensing the resistance.
+Instead of simply attaching two electrodes to opposite sides of a semiconductor chip, one will typically apply serpentine-shaped electrodes to the surface of a semiconductor chip and illuminate the area between them.
+Light hitting the electrodes is then lost, if the illumination comes from the side of the electrodes.
+However, it is also possible to use back illumination, i.e., having the electrodes on the side opposite to the one where the light enters the semiconductor.
+Generally, one tries to keep the electrode distance small (for reasons which become apparent below), and for a large active area one consequently needs serpentine-like electrode structures.</p>
+<p>Due to the typically strong light <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorption</a>, a rather thin semiconductor layer (e.g. with a thickness of only a few micrometers) is sufficient.
+It can be a polycrystalline layer which is deposited with a simple evaporation technique.</p>
+<aside class="callout blue">The simpler device design and fabrication, compared with photodiodes, is an advantage of the photoconductive concept.</aside>
+<p>In contrast to <a href="photodiodes.html" title="semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiodes</a>, no p&ndash;n junction is required, so that the device design of photoresistors is simpler.
+It is also not necessary to apply epitaxial growth of highly pure semiconductor material; the fabrication of a polycrystalline layer is normally sufficient.
+Therefore, photoconductive detectors can be realized with materials which are hardly suitable for the fabrication of photodiodes.
+In particular, that includes materials which are suitable for detection of <a href="infrared_light.html" title="invisible light with wavelengths roughly between 750&thinsp;&thinsp;nm and 1&thinsp;&thinsp;mm">infrared light</a> at relatively long optical <a href="wavelength.html" title="the spatial period of a plane wave">wavelengths</a>; see the article on <a href="infrared_detectors.html" title="detectors for infrared light">infrared detectors</a>.</p>
+</div>
+<h2 class="togglediv">Problem of Thermal Excitation</h2>
+<div>
+<p>Particularly for photoconductors requiring only small excitation energies, as required for detecting long-wave infrared light, additional carriers can be generated by thermal excitation, and the resulting signals can of course mask real signals from incident light.
+It is not only that one obtains an additional constant current, but also the corresponding noise.</p>
+<p>That problem is often mitigated by operation at reduced temperatures.
+In some cases, a moderate reduction of temperature with a Peltier (thermoelectric) cooler is sufficient &ndash; and sometimes primarily used to eliminate the effects of temperature variations &ndash;, while other devices are operated at much reduced temperatures as such as 100&nbsp;K or in extreme cases even 4&nbsp;K.
+In some cases, not only the detector chip, but also an <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">infrared filter</a> needs to be cooled, because otherwise <a href="thermal_radiation.html" title="electromagnetic radiation which results from thermal emission">thermal radiation</a> from the filter may produce unwanted signals in the detector.</p>
+<p>A problem which can <em>not</em> be solved by cooling the detector or filter is background <a href="thermal_radiation.html" title="electromagnetic radiation which results from thermal emission">thermal radiation</a> coming from objects near the observed objects.
+This is a problem, for example, when detecting a weak infrared signal coming from the sky, together with infrared radiation from the atmosphere.</p>
+</div>
+<h2 class="togglediv">Responsivity and Bandwidth</h2>
+<div>
+<p>The <a href="responsivity.html" title="photocurrent per unit optical power incident on a photodetector">responsivity</a> of a photoconductive detector is proportional to the mean lifetime of the generated carriers: the longer such a carrier lives, the longer it can contribute to the <a href="photocurrent.html" title="an electric current which is induced by incident light in a photodetector">photocurrent</a>.
+On the other hand, the photocurrent is inversely proportional to the transit time of the carriers: the faster a carrier can get through the device structure, the more it contributes to the current (which means charge per unit time).
+With a quite simplified physical model, one can show that the responsivity (ratio of photocurrent to incident optical power) is given by</p>
+<div class="eqn"><img src="eqn/r_pc_detector.gif" width="120" height="48" alt="responsivity of photoconductive detector"></div>
+<p>where the first term is the same as for a <a href="photodiodes.html" title="semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiode</a> and the ratio <span class="eqn_il"><span class="greek">&tau;</span><sub>r</sub>&thinsp;/&thinsp;<span class="greek">&tau;</span><sub>t</sub></span> of the recombination time and the transit time is called the <em>photoconductive gain</em> <span class="eqn_il"><i>G</i><sub>p</sub></span>, which depends on the applied voltage <span class="eqn_il"><i>U</i></span> and the carrier mobility <span class="eqn_il"><span class="greek">&mu;</span></span>:</p>
+<div class="eqn"><img src="eqn/pc_gain.gif" width="116" height="46" alt="photoconductive gain"></div>
+<p>where <span class="eqn_il"><i>d</i></span> is the electrode distance.
+The photoconductive gain can be substantially larger than unity, which means that the obtained <a href="photocurrent.html" title="an electric current which is induced by incident light in a photodetector">photocurrent</a> for a given light power (i.e., the responsivity) can be much larger than that of a photodiode.
+This is possible only because minority carriers reaching an electrode can lead to the injection of additional majority carriers; otherwise, an excited carrier could contribute to the photocurrent for no longer than its transit time.</p>
+<p>A high responsivity can be achieved by using a photoconductive material with long carrier recombination time and higher carrier mobility.
+Further, the electrode distance should be small, since a larger distance not only increases the distance over which carriers must travel, but also decreases the internal electric field.</p>
+<aside class="callout red">There is an intrinsic trade-off between responsivity and bandwidth.</aside>
+<p>Unfortunately, a long carrier relaxation time, as is useful for obtaining a high responsivity, also leads to a small detection <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>.
+Nevertheless, one often uses materials with quite long carrier relaxation times.</p>
+<p>The response of photoconductive detectors is often quite nonlinear &ndash; very much in contrast to that of photodiodes.
+This is essentially due to the role of the carrier lifetime, which is limited by the recombination rate, that depends on the carrier density.
+For quantifying that nonlinearity, some manufacturers specify a <span class="eqn_il"><span class="greek">&gamma;</span></span> value based on resistance values measured for two different values of the <a href="illuminance.html" title="the incident luminous flux per unit area on a surface">illuminance</a>, e.g 10&nbsp;lux and 100&thinsp;lux; they define <span class="eqn_il"><span class="greek">&gamma;</span>&thinsp;=&thinsp;lg(<i>R</i><sub>10&thinsp;lux</sub>&thinsp;/&thinsp;<i>R</i><sub>100&thinsp;lux</sub></span>, which would be unity in case of a linear response.
+Cadmium selenide photoresistors, for example, can have <span class="eqn_il"><span class="greek">&gamma;</span></span> values around 0.6 to 0.8.</p>
+</div>
+<h2 class="togglediv">Dark Resistance</h2>
+<div>
+<p>It is desirable that a photoconductive detector has a high dark resistance, i.e., exhibits only a low electrical conductivity without incident light.
+The dark resistance can be of the order of 10<sup>18</sup> &Omega; or even higher for some detectors (e.g. high-quality CdS detectors), while it is far lower for others (e.g. low-quality CdS).
+Tentatively, it is lower for long-wavelength detectors.</p>
+<p>The term <a href="dark_current.html" title="a current from a photodetector which occurs even in the absence of a light input"><em>dark current</em></a> is not common for photoconductive detectors; it would depend on the applied bias voltage.</p>
+</div>
+<h2 class="togglediv">Noise</h2>
+<div>
+<p>Different types of noise can affect the output signal of a photoconductive detector:</p>
+<ul>
+<li>There is a thermal noise, also called Johnson noise, arising from the thermal movement of carriers.
+Its strength depends on the resistance and the operation temperature.</li>
+<li>There is noise arising from generation and recombination of carriers.</li>
+<li>In addition, there is some amount of 1/f noise, which hurts mostly at low frequencies.</li>
+</ul>
+<p>There can of course be additional noise from a preamplifier, which however is often negligible for high quality amplifiers.</p>
+</div>
+<h2 class="togglediv">Common Photoconductors</h2>
+<div>
+<p>The following semiconductor materials are mostly used:</p>
+<h3 class="togglediv">Cadmium-based Detectors</h3>
+<div>
+<p>Cadmium sulfide (CdS) detectors mostly respond to light in the blue-green spectral region.
+They have been widely used in various consumer devices such as cameras (as light meters), automatic light control devices and as detectors in light barriers, mostly because they are fairly cheap.
+However, their use is increasingly restricted e.g. through the RoHS ban on cadmium; they can often easily be replaced with other devices, e.g. silicon photodiodes.</p>
+<p>The response times of cadmium sulfide detectors are in the millisecond regime, e.g. between 5 and 100&nbsp;ms.
+in addition, there are pronounced memory effects, i.e., the response significantly depends on the illumination history, even over time scales of seconds.
+Such phenomena can be explained with physical models involving different types of recombination centers and trapping centers, introduced by crystal defects.</p>
+<p>In some cases, the slow response of CdS has been exploited in electronic circuits, e.g. for dynamic loudness compressors.</p>
+<p>Higher-quality cadmium sulfide detectors can be fabricated, where a thin CdS film is deposited on a sapphire substrate.
+With such devices, it is possible to obtain very high dark resistance and detect optical powers on the picowatt level.</p>
+<p>Similar detectors can be made with cadmium selenide (CdSe), which has its peak <a href="spectral_response_of_a_photodetector.html" title="the range of optical wavelengths for which a photodetector is sensitive">spectral response</a> at longer wavelengths (around 0.7&nbsp;&mu;m).
+One can also use the ternary compound CdS<sub>x</sub>Se<sub>1&minus;x</sub> with intermediate properties.</p>
+</div>
+<h3 class="togglediv">Lead Salts</h3>
+<div>
+<p>Lead sulfide (PbS) has been recognized as a photoconductive materials for infrared light early on, and is suitable for wavelengths up to &approx;3&nbsp;&mu;m.
+Lead tellurite (PbTe) is a similar material, but with a narrower bandgap and thus allows operation up to &approx;7&nbsp;&mu;m.
+Both materials have been developed mainly for military applications (e.g. heat-seeking missiles) during the second world war and thereafter.
+Later on, they have largely been replaced with mercury cadmium telluride (see below).</p>
+</div>
+<h3 class="togglediv">Mercury Cadmium Telluride</h3>
+<div>
+<p>Mercury cadmium telluride (MCT, Hg<sub>x</sub>Cd<sub>1&minus;x</sub>Te, but somewhat non-stoichiometric) is an intrinsic material which can provide good performance even at relatively long infrared wavelengths beyond 10&nbsp;&mu;m.
+Through the composition parameter <span class="eqn_il"><i>x</i></span>, one can tune the <a href="band_gap.html" title="a range of energies for which there are no states of carriers in a medium">band gap energy</a> in a wide range from 0.8&nbsp;&mu;m (CdTe) to essentially zero, because HgTe is a semimetal (having no bandgap).
+MCT with a suitable composition can be used in the atmospheric windows at 3&ndash;5&nbsp;&mu;m and 8&ndash;12&nbsp;&mu;m.
+The latter wavelength range is quite suitable for <a href="thermal_imaging.html" title="imaging based on thermal radiation">thermal imaging</a> even at low temperatures and with high precision.</p>
+<p>MCT detectors are usually cooled during operation, mostly below 200&nbsp;K or even below 100&nbsp;K &ndash; but less than some other detector materials for similarly long wavelengths (e.g. extrinsic silicon).
+A Stirling cooler is typically used.
+The required operation temperature may be reached within a few minutes after turn-on.</p>
+<p>Mercury cadmium telluride is of course a rather poisonous and therefore problematic material.
+Unfortunately, it is difficult to replace in some applications.
+Therefore, they are some temporary exceptions e.g. within the European RoHS regulations, allowing the use of that material for some applications.</p>
+<p>For some common applications like the <a href="thermal_imaging.html" title="imaging based on thermal radiation">thermal imaging</a> of buildings, one would normally not use MCT, but e.g. devices based on microbolometers, although they cannot reach the same performance levels.</p>
+</div>
+<h3 class="togglediv">Extrinsic Silicon and Germanium</h3>
+<div>
+<p>Silicon is not only widely used as an intrinsic material for <a href="photodiodes.html" title="semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiodes</a>, but also in the form of an extrinsic material for long-wave infrared detection.
+In the latter case, it is heavily doped with arsenic, copper, gold, or indium.
+It is then suitable for very long wavelengths, partly even beyond 200&nbsp;&mu;m wavelength.
+It needs to be cooled to very low temperatures (e.g. 4&nbsp;K with liquid helium), because thermal excitation would otherwise mask any infrared light signals.</p>
+<p>An interesting aspect is that extrinsic silicon detectors can be made with CMOS and CCD technology, and can thus be well used for infrared <a href="image_sensors.html" title="optoelectronic sensors which can be used for imaging">image sensors</a>.
+In that case, they are usually operated as charge-transfer devices, operating essentially like conventional CCD chips.
+They are also realized in the form of <a href="focal_plane_arrays.html" title="arrays of light detectors placed in the focal plane of an imaging system">focal plane arrays</a>.
+However, the required very low operation temperature partially leads to preferences for mercury cadmium telluride, except for the very long wavelength region.</p>
+<p>Germanium can similarly be used as an extrinsic material and has some advantages for the very long wavelengths.
+However, it is less popular than silicon &ndash; partly because of its much lower solubility for impurities, and also because silicon technology is generally much better developed.</p>
+</div>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_photoconductive_detectors.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 11 suppliers for photoconductive detectors.</p>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="photoconductive_detectors.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="photodetectors.html" title="devices used for the detection of light">photodetectors</a>, <a href="infrared_detectors.html" title="detectors for infrared light">infrared detectors</a>, <a href="photoconductive_sampling.html" title="a technique of optical sampling with photoconductive switches">photoconductive sampling</a>, <a href="photoconductive_switches.html" title="electric switches controlled by light via photo-induced conductivity">photoconductive switches</a><br>and other articles in the categories <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a>, <a href="categories.html#optoelectronics" title="other articles on optoelectronics">optoelectronics</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/photoconductive_detectors.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fphotoconductive_detectors.html&text=RP+Photonics+Encyclopedia+-+photoconductive+detectors%2C+intrinsic%2C+extrinsic%2C+design%2C+thermal+excitation%2C+responsivity%2C+bandwidth%2C+lead+salt%2C+mercury+cadmium+telluride%2C+silicon" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fphotoconductive_detectors.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fphotoconductive_detectors.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/photoconductive_detectors.html"&gt;<br>Article on Photoconductive Detectors&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/photoconductive_detectors.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/photoconductive_detectors.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/photoconductive_detectors.html<br>article on 'Photoconductive Detectors' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Your Lab is Closed due to the Corona Virus Crisis?</h2>
+<p>Time to think how to best utilize your time!</p>
+<p>Here is a suggestion: <br> <b>Consider to start with physical modeling!</b></p>
+<ul>
+<li>Build models for your existing or planned lasers and amplifiers, resonators, etc.</li>
+<li>Utilize such models in order to <b>improve your qualitative and quantitative understanding</b>, solve problems, optimize device performance and <b>develop new ideas</b>.</li>
+<li>Power up your home office instead of wasting your time!</li>
+<li>When getting back to the lab, restart with fresh plans and full power.</li>
+</ul>
+<img src="./img/rp_photonics.png" alt="RP Photonics" style="margin-top:20px; width:225px;">
+<p>offers powerful <a href="./software.html?banner=lab_closed">simulation &amp; design software</a>, e.g. for <a href="./fiberpower.html?banner=lab_closed">active and passive fiber devices</a>, <a href="./resonator.html?banner=lab_closed">laser resonators</a> and <a href="./coating.html?banner=lab_closed">thin-film coatings</a>!</p>
+<p>Getting helpful <a href="./software_support.html?banner=lab_closed">support</a> from RP also benefits your projects.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="FKq7aprFlzyd6ZyyrVq3lg==">shownbanner = "lab closed";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Latest Encyclopedia Articles</h2>
+<p>Here are the latest encyclopedia articles:</p>
+<ul>
+<li class="tight"><a href="./variable_reflectivity_mirrors.html">variable reflectivity mirrors</a></li>
+<li class="tight"><a href="./color_centers.html">color centers</a></li>
+<li class="tight"><a href="./excimer_lamps.html">excimer lamps</a></li>
+<li class="tight"><a href="./multimode_beams.html">multimode beams</a></li>
+<li class="tight"><a href="./channel_waveguides.html">channel waveguides</a></li>
+<li class="tight"><a href="./optical_crystals.html">optical crystals</a></li>
+<li class="tight"><a href="./standing_wave_resonators.html">standing-wave resonators</a></li>
+<li class="tight"><a href="./nonlinear_absorption.html">nonlinear absorption</a></li>
+<li class="tight"><a href="./passive_fibers.html">passive fibers</a></li>
+<li class="tight"><a href="./active_fibers.html">active fibers</a></li>
+<li class="tight"><a href="./oem_laser_modules.html">OEM laser modules</a></li>
+<li class="tight"><a href="./industrial_lasers.html">industrial lasers</a></li>
+<li class="tight"><a href="./scientific_lasers.html">scientific lasers</a></li>
+<li class="tight"><a href="./flint_glasses.html">flint glasses</a></li>
+<li class="tight"><a href="./crown_glasses.html">crown glasses</a></li>
+<li class="tight"><a href="./sodium_vapor_lamps.html">sodium vapor lamps</a></li>
+<li class="tight"><a href="./metal_vapor_lamps.html">metal vapor lamps</a></li>
+<li class="tight"><a href="./mercury_vapor_lamps.html">mercury vapor lamps</a></li>
+<li class="tight"><a href="./white_light.html">white light</a></li>
+<li class="tight"><a href="./cie_standard_illuminants.html">CIE standard illuminants</a></li>
+</ul>
+
+<p>The encyclopedia already contains 948 articles.</p>
+<p>See also the regularly appearing articles of the <a href="./spotlight.html?banner=new_articles">The Photonics Spotlight</a> and the <a href="./software_news.html?banner=new_articles">RP Photonics Software News</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="FKq7aprFlzyd6ZyyrVq3lg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/photoconductive_detectors.html"
+    },
+    "headline": "Photoconductive Detectors",
+    "image": "https://www.rp-photonics.com/previews/photoconductive_detectors.png",
+    "datePublished": "2019-05-19",
+    "dateModified": "2020-03-14",
+    "description": "Photoconductive detectors, also called photoresistors, are photodetectors which exhibit a reduction in electrical resistance caused by incoming light. They are based on intrinsic or extrinsic absorption of light in semiconductors.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter P",
+      "item": "https://www.rp-photonics.com/encyclopedia_p.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "photoconductive detectors",
+      "item": "https://www.rp-photonics.com/photoconductive_detectors.html"
+    }]}
+}
+</script>
+</body>
+</html>

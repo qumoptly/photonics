@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-kSAxrDWYzIvDmLdbW/XEYg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - optical coherence tomography, time domain, Fourier domain, swept source, sensitivity, medical imaging</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/optical_coherence_tomography.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Optical coherence tomography is an optical imaging technique similar to laser microscopy, where however longitudinal resolution is achieved based on interference effects with low-coherence light.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="optical coherence tomography, time domain, Fourier domain, swept source, sensitivity, medical imaging">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Optical Coherence Tomography">
+<meta property="og:description" content="Optical coherence tomography is an optical imaging technique similar to laser microscopy, where however longitudinal resolution is achieved based on interference effects with low-coherence light.">
+<meta property="og:url" content="https://www.rp-photonics.com/optical_coherence_tomography.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/optical_coherence_tomography.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Optical coherence tomography is an optical imaging technique similar to laser microscopy, where however longitudinal resolution is achieved based on interference effects with low-coherence light.">
+<meta name="twitter:title" content="Optical Coherence Tomography">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/optical_coherence_tomography.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="kSAxrDWYzIvDmLdbW/XEYg==">
+page="optical_coherence_tomography.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="kSAxrDWYzIvDmLdbW/XEYg==">shownsponsors="El.En."</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_o.html">letter O</a> &gt; <a href="optical_coherence_tomography.html">optical coherence tomography</a></p>
+<h1>Optical Coherence Tomography</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_optical_coherence_tomography_instruments_and_components.html?s=vbox">13 suppliers for optical coherence tomography instruments and components</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.toptica.com/applications/ultrafast-studies/oct/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="optical coherence tomography instruments and components" rel="nofollow" class="bg externallink"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://gandh.com/product-categories/oct-assemblies-components/" data-supplier="G&H" data-location="product-enc" data-keyword="optical coherence tomography instruments and components" rel="nofollow" class="bg externallink"><img src="./bg/logos/g_h.png" alt="G&H" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_optical_coherence_tomography_instruments_and_components.html?s=vbox">List of suppliers for<br>optical coherence tomography instruments and components</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p>Acronym: OCT</p>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: an optical imaging technique where longitudinal resolution is achieved based on interference effects with low-coherence light</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">optische Kohärenztomographie</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<p><a href="encyclopedia_cite.html?article=optical%20coherence%20tomography">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Optical coherence tomography is a widely used high-resolution <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">optical imaging</a> technique, which is typically applied to transparent or semi-transparent objects of limited depth &ndash; in particular, to biological tissues.
+It is suitable for various applications in medical imaging such as ophthalmology (e.g. retinal imaging for diagnosing conditions like glaucoma or macular degeneration), dermatology, oncology (cancer detection) and cardiology; the capability of high-resolution (possibly sub-micrometer) real-time in-vivo imaging makes OCT a valuable tool for the diagnosis of many different medical conditions as well as for medical research.</p>
+<h2 class="togglediv">Working Principles of OCT</h2>
+<div>
+<p>Optical coherence tomography has some similarity to <a href="laser_microscopy.html" title="a technique for generating microscopic images by scanning objects with a laser">laser microscopy</a> (although in many cases a laser source is not used).
+In two transverse dimensions, image resolution is obtained by scanning a tightly focused light beam over the sample and performing measurements on back-scattered light.
+In the third (longitudinal) dimension, one exploits the principle of low-coherence interferometry.
+The 3D nature of the obtained images is of course an essential advantage.
+At the same time, the spatial resolution can be much higher than e.g. with ultrasound imaging methods.</p>
+<h3 class="togglediv">Time Domain OCT</h3>
+<div>
+<aside class="callout blue">The conceptually simplest approach is time domain OCT.</aside>
+<p>We begin with the originally conceived operation principle [1], now called <em>time domain OCT</em>.
+It is based on the principle of white light interferometry as explained in the article on <a href="white_light_interferometers.html" title="interferometers using broadband light inputs">white light interferometers</a>.
+Essentially, in a <a href="michelson_interferometers.html" title="an interferometer with two separate arms and a single beam splitter">Michelson</a> or Mach&ndash;Zehnder interferometer, back-scattered light from the sample is superimposed with light from a reference beam, which is obtained with a <a href="beam_splitters.html" title="devices for splitting a laser beam into two or more beams">beam splitter</a> in the path from the light source to the sample.
+Only light from a selected small depth range can contribute to an oscillatory signal since only that light has a substantial temporal <a href="coherence.html" title="a fixed phase relationship between the electric field values at different locations or at different times">coherence</a> with the reference beam.
+Back-scattered light from outside that selected depth range cannot contribute, being outside the <a href="coherence_length.html" title="a measure of temporal coherence, expressed as the propagation distance over which the coherence significantly decays">coherence length</a> of the light.
+For obtaining high longitudinal resolution, one needs to apply light with a very short coherence length, i.e., low temporal coherence and a large optical <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>.</p>
+<p>The length of an <a href="optical_delay_lines.html" title="an optical setup which is used to introduce a time delay for a light beam">optical delay line</a> is scanned (usually with mechanical means such as a piezo transducer) in order to access different longitudinal positions in the sample.
+During that scan, one records the overall back-scattered optical powers and associates them with the different positions.</p>
+<p>One can thus acquire image information for one voxel (three-dimensional pixel) at a time, and a computer controlling the instrument can rapidly scan both the transverse beam position and the longitudinal coordinate.
+The computer can then collect all the image data to produce a three-dimensional image.
+Images can &ndash; often after sophisticated processing &ndash; be inspected on a computer screen or printed out.
+(Figure&nbsp;1 is an example for a pseudo-3D image.)
+This is again similar to <a href="laser_microscopy.html" title="a technique for generating microscopic images by scanning objects with a laser">laser microscopy</a>.</p>
+<figure>
+<img src="img/oct_of_finger.jpg" alt="OCT image of human finger">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+OCT image of a human finger. Image provided by <a href="https://www.optores.de/" rel="nofollow">Optores</a>.
+</figcaption>
+</figure>
+</div>
+<h3 class="togglediv">Fourier Domain OCT</h3>
+<div>
+<aside class="callout blue">There are different variants of Fourier domain OCT, where the data processing involves Fourier transforms.</aside>
+<p>Later on, a more refined class of techniques has been invented, which is called <em>Fourier domain OCT</em> (FD-OCT).
+Here, one does measurements without scanning a delay.</p>
+<p>According to a first variant of Fourier domain OCT, called <em>spectral domain OCT</em> [2], instead of recording not only the overall back-scattered optical powers, one records whole optical spectra of that light, using some kind of <a href="spectrographs.html" title="instruments for spectrally analyzing light">spectrograph</a>.
+(For example, one may spatially disperse the light at a <a href="diffraction_gratings.html" title="optical components containing a periodic structure which diffracts light">diffraction grating</a> before sending it to a linear photodetector array.)
+Essentially, one can consider each optical <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a> to provide information about the variation of optical properties of the sample with a certain spatial period.
+The spatial dependence can then be retrieved by applying a Fourier transform.</p>
+<aside class="callout blue">The swept-source technique is technically different, but not fundamentally: it also involves the recording of optical spectra.</aside>
+<p>Another realization of Fourier domain OCT is <em>swept source OCT</em> (SS-OCT) [3,&thinsp;4,&thinsp;7], where one uses a <a href="wavelength_swept_lasers.html" title="lasers which allow for period and fast wavelength tuning">wavelength-swept laser</a> (see below) and a photodetector without spectral resolution; the latter is sufficient because different wavelengths are probed at different times.
+So one obtains the same information &ndash; essentially frequency-dependent reflectivities &ndash; and can apply a Fourier transform to obtain a depth profile.</p>
+<p>With any such frequency domain OCT methods, one measurement produces a whole depth profile, and by scanning only the transverse beam position one again obtains a three-dimensional image.</p>
+<p>Generally, Fourier domain OCT methods offer two crucial advantages over time domain OCT:</p>
+<ul>
+<li>One obtains a higher sensitivity by providing an improved <a href="signal_to_noise_ratio.html" title="the ratio of signal power to noise power in a detector">signal-to-noise ratio</a>, which is ultimately limited only by <a href="shot_noise.html" title="quantum-limited intensity noise">shot noise</a>.
+The fundamental sensitivity advantage was clearly recognized and understood only several years after the invention of Fourier domain OCT [12,&thinsp;14,&thinsp;15].</li>
+<li>The scanning speed can be far higher, as a whole depth profile can be measured very quickly.</li>
+</ul>
+</div>
+</div>
+<h2 class="togglediv">Typical Qualities of Optical Coherence Tomography</h2>
+<div>
+<p>The explained working principles all more or less imply the following qualities of such imaging methods:</p>
+<aside class="callout blue">OCT has remarkable capabilities, particularly for medical imaging applications.</aside>
+<ul>
+<li>They can be performed in living tissues (<em>in vivo</em>), as far as one can reach a sufficiently large imaging depth.
+One may e.g. access a fraction of the outer millimeter of human skin or the eye's retina, or other parts of the eye such as the cornea or the lens.
+With endoscopes, one may inspect deeper structures.</li>
+<li>The applied light <a href="optical_intensity.html" title="optical power per unit area">intensities</a> are usually not strong enough to damage biological tissue.
+The applied radiation is non-ionizing, i.e., it should not be causing gene mutations and cancer; at most, there might be some photobiological effects which are presumably less severe.
+However, in some cases the light intensity needs to be limited for safety reasons, with limiting effects on the image quality and/or the scan rate.</li>
+<li>The image resolution can be very high: in some cases below 1&nbsp;&mu;m in all three dimensions; in other cases the resolution is e.g. only of the order of 10&nbsp;&mu;m.</li>
+<li>The image acquisition can be quite fast, allowing one to acquire real-time (video-rate) images and observe even rapid changes of the sample.</li>
+</ul>
+</div>
+<h2 class="togglediv">Applications of Optical Coherence Tomography</h2>
+<div>
+<p>Medical imaging is a particularly important application area of OCT.
+The probably most important application in medical diagnostics is high resolution imaging of the retina.
+This can be very useful for assessing conditions like macular degeneration, damage due to diabetes, multiple sclerosis, defect photoreceptors, glaucoma and others.
+The depth resolution is an interesting advantage over conventional methods of retinal photography.</p>
+<p>Another important field is dermatology, where one has direct access to the skin and can image its top layers.
+Particularly high resolution techniques are required for the detection of skin cancer (melanoma).</p>
+<p>In conjunction with an endoscope, one can also investigate structures inside the body.
+For example, one can investigate coronary arteries with high resolution angiography in order to assess heart risks.
+Endoscopic OCT can also sometimes have applied for cancer diagnostics.</p>
+<p>OCT is also useful for fundamental biological and medical research.
+For example, it is used for imaging brains of mice through a transparent optical window which is implanted in the skull.</p>
+<p>There are also non-biomedical OCT applications such as criminology, the analysis of artworks and of composite artificial materials.
+Finally, one can use OCT for inspecting industrial products, for example in micro-technology and semiconductor electronics fabrication.</p>
+</div>
+<h2 class="togglediv">Light Sources for Optical Coherence Tomography</h2>
+<div>
+<h3 class="togglediv">Broadband Sources</h3>
+<div>
+<p>According to the classical principle of OCT (<em>time domain OCT</em>), a broadband light source is used, i.e., a light source with very low temporal <a href="coherence.html" title="a fixed phase relationship between the electric field values at different locations or at different times">coherence</a>, implying a large optical <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>; this is required for high longitudinal resolution.
+The same holds for Fourier domain OCT in the form of spectral domain OCT.</p>
+<p>In addition to the low temporal coherence, a high <em>spatial</em> coherence is often desirable, as that allows one to efficiently direct light in the form of a tightly focused beam to the sample.</p>
+<p>A simple bulb would offer low temporal coherence but also very low spatial coherence, and that would lead to a very low light collection efficiency, i.e., to very low intensities at the sample.
+Image acquisition would then be too slow for many applications.</p>
+<aside class="callout blue">Superluminescent diodes are very common for time domain and Fourier domain OCT.</aside>
+<p>Therefore, it is common to use some kind of <a href="superluminescent_sources.html" title="optical sources based on superluminescence">superluminescent sources</a> &ndash; in many cases, <a href="superluminescent_diodes.html" title="broadband semiconductor light sources based on superluminescence">superluminescent diodes</a> (SLDs), which are similar in some respects to <a href="laser_diodes.html" title="semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diodes</a>, but do not exploit a <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">lasing</a> process.
+They can offer a similarly high spatial coherence as a laser diode while having a broad and continuous <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a>.
+One usually has to carefully avoid excessive optical feedback to maintain the spectral properties.
+The optical bandwidth is typically some tens of nanometers, sometimes even above 100&nbsp;nm.
+Output powers of broadband devices are often a few milliwatts or less, which is normally well sufficient for OCT, given that the light can be efficiently directed to the sample.</p>
+</div>
+<h3 class="togglediv">Wavelength-swept Sources</h3>
+<div>
+<p>As an alternative to a very broadband sources, one can use a <a href="wavelength_swept_lasers.html" title="lasers which allow for period and fast wavelength tuning">wavelength-swept laser</a>.
+This is basically a narrowband laser which is <a href="tunable_lasers.html" title="lasers the output wavelengths of which can be tuned">wavelength-tunable</a>, and is periodically tuned through a large <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a> range.</p>
+<aside class="callout red">The point of using a wavelength-swept source is not just to obtain a broad averaged optical spectrum!</aside>
+<p>One might first think about applying a wavelength-swept laser for time domain OCT.
+Vaguely speaking, the generated light that has a large bandwidth <em>on average</em>, producing similar images as a broadband source when acquiring data over at least one sweep period.
+However, that approach would not lead to optimum sensitivity.
+Better performance is achieved when using a wavelength-swept source for Fourier domain OCT, where the frequency-dependent <a href="reflectance.html" title="the ratio of reflected optical power to the incident optical power at some reflecting object">reflectance</a> of the sample is recorded.
+As different wavelength components are hitting the sample at different times, it is sufficient to use a simple broadband <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a> with no spectral resolution capabilities, and associate different times with different wavelengths in the numerical image processing.</p>
+<p>As the fastest wavelength-swept lasers offer sweep frequencies of the order of 1&nbsp;MHz or even more, very rapid image scanning remains possible.</p>
+<p>A wavelength-swept laser for OCT can e.g. be made as an <a href="external_cavity_diode_lasers.html" title="non-monolithic diode lasers where the laser cavity (resonator) is completed with external optical elements">external-cavity diode laser</a>, where the <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a> contains an <a href="semiconductor_optical_amplifiers.html" title="optical amplifiers based on semiconductor gain media">semiconductor optical amplifier</a> chip, one or two collimation <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lenses</a>, a MEMS scanner and a <a href="diffraction_gratings.html" title="optical components containing a periodic structure which diffracts light">diffraction grating</a>.
+Due to its low mass, a MEMS scanner can be very fast.</p>
+<p>Of course, a wavelength-swept laser for OCT should exhibit low <a href="laser_noise.html" title="fluctuations of various parameters of laser light, such as the optical power and phase">laser noise</a>, as otherwise shot-noise limited detection is not possible.</p>
+</div>
+<h3 class="togglediv">Different Wavelength Regions</h3>
+<div>
+<p>Both broadband and wavelength-swept sources are available for different wavelength regions &ndash; usually either in the visible or <a href="infrared_light.html" title="invisible light with wavelengths roughly between 750&thinsp;&thinsp;nm and 1&thinsp;&thinsp;mm">infrared</a> region.
+This is important due to restrictions e.g. by light <a href="scattering.html" title="processes where light is sent in other directions, usually but not always in random directions">scattering</a> in tissues, which can be substantially reduced by using longer optical wavelengths.
+On the other hand, the construction of both light sources and <a href="photodetectors.html" title="devices used for the detection of light">photodetectors</a> if often simpler for shorter wavelengths, which also potentially allow for higher resolution.
+For any concrete application, the right balance of those aspects has to be found.</p>
+</div>
+</div>
+<h2 class="togglediv">Other Required Components</h2>
+<div>
+<p>Apart from a light source, various other components are typically required for an OCT setup:</p>
+<ul>
+<li>Typically, the interferometric setup is made based on optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>.
+Instead of a bulk <a href="beam_splitters.html" title="devices for splitting a laser beam into two or more beams">beam splitter</a>, one then uses a <a href="fiber_couplers.html" title="fiber devices for coupling light from one or several input fibers to one or several output fibers, or from free space into a fiber">fiber coupler</a>.
+That device should of course have a rather wide operation bandwidth, within which a suitable coupling ratio is obtained.
+Specially designed broadband couplers are often needed for that application.</li>
+<li>For spectral domain OCT, one requires some time of <a href="spectrographs.html" title="instruments for spectrally analyzing light">spectrograph</a>.
+It may be realized, for example, with a <a href="diffraction_gratings.html" title="optical components containing a periodic structure which diffracts light">diffraction grating</a> and a linear CCD array or a linear <a href="photodiodes.html" title="semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiode</a> array which is suitable for the chosen wavelength range.
+A very fast readout speed is required in some cases.</li>
+<li>As for <a href="laser_microscopy.html" title="a technique for generating microscopic images by scanning objects with a laser">laser microscopes</a>, a scanning apparatus is required.</li>
+</ul>
+</div>
+<h2 class="togglediv">Further Developments</h2>
+<div>
+<p>Traditional OCT methods are based on backscattering alone.
+Additional information can be acquired with <em>Doppler OCT</em> (D-OCT), which also exploits Doppler shifts associated with movements &ndash; for example, for obtaining information on in vivo blood flow as is also obtained in some ultrasound imaging techniques.
+Such Doppler methods for functional imaging have first been applied to time domain OCT [5,&thinsp;6] but later also to Fourier domain OCT [11,&thinsp;13,&thinsp;16].</p>
+<p>Another development are <em>parallel methods</em>, with illumination of a whole line or even full field instead of point scanning.
+This is important particularly for in-vivo imaging, since it allows for faster image acquisition without applying excessive optical intensities.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_optical_coherence_tomography_instruments_and_components.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 13 suppliers for optical coherence tomography instruments and components. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.toptica.com/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="optical coherence tomography instruments and components" rel="nofollow" class="bg externallink" title="Visit the website of TOPTICA Photonics"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a><a href="https://www.toptica.com/applications/ultrafast-studies/oct/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="optical coherence tomography instruments and components" rel="nofollow" class="bg externallink" title="Visit the website of TOPTICA Photonics"><img src="./bg/products/toptica_photonics/optical_coherence_tomography.jpg" alt="optical coherence tomography instruments and components" class="product"></a><h3><a href="./bg/profiles/toptica_photonics.html" title="See the profile of TOPTICA Photonics">TOPTICA Photonics</a></h3><p>Originally developed for ophthalmology, <a href="https://www.toptica.com/applications/ultrafast-studies/oct/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="optical coherence tomography instruments and components" rel="nofollow" class="externallink bg">Optical Coherence Tomography</a> (OCT) now spreads over to a variety of applications. The benefit of this technique is the imaging capability of sample structures even at a few millimeters depth with micrometer resolution. For example, invisible defects lying underneath the surface of manufactured parts or different layers in biological tissue and in medieval paintings can be visualized. OCT relies on low coherence interferometry utilizing spectrally broad light sources like superluminescent diodes or femtosecond lasers.</p><p>TOPTICA has developed a new optical sampling method: Electronically Controlled Optical Sampling (ECOPS), which speeds up TD-OCT measurements by several orders of magnitude avoiding movable parts in the set-up, using two synchronized femtosecond fiber lasers. The imaging depth remains large and the scan can be hold on any position or zoomed in on interesting features in the OCT image.</p></aside>
+<aside class="bg_vendoritem"><a href="https://gandh.com/" data-supplier="G&H" data-location="product-enc" data-keyword="optical coherence tomography instruments and components" rel="nofollow" class="bg externallink" title="Visit the website of G&amp;H"><img src="./bg/logos/g_h.png" alt="G&H" class="supplierlogo"></a><a href="https://gandh.com/product-categories/oct-assemblies-components/" data-supplier="G&H" data-location="product-enc" data-keyword="optical coherence tomography instruments and components" rel="nofollow" class="bg externallink" title="Visit the website of G&amp;H"><img src="./bg/products/g_h/optical_coherence_tomography.jpg" alt="optical coherence tomography instruments and components" class="product"></a><h3><a href="./bg/profiles/g_h.html" title="See the profile of G&H">G&H</a></h3><p>G&amp;H is an established manufacturer of high quality <a href="https://gandh.com/product-categories/oct-assemblies-components/" data-supplier="G&H" data-location="product-enc" data-keyword="optical coherence tomography instruments and components" rel="nofollow" class="externallink bg">optical components and optical sub-systems for the biomedical imaging market</a> with manufacturing bases in the UK and the USA.</p><p>Our extremely wideband optical coupler offers uniform performance over a 140&nbsp;nm wavelength range for spectral domain OCT, and can be integrated into modules like our OCT optical delay line. We also offer a compact OCT optical spectrometer with high resolution and image capture rate, completing a line of modular OCT components that may be purchased for research and OEM use, or integrated by our engineering team into a customized, complete system.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="optical_coherence_tomography.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">D. Huang <i>et al.</i>, &ldquo;Optical coherence tomography&rdquo;, Science 254 (5035), 1178 (1991), <a href="https://doi.org/10.1126/science.1957169">doi:10.1126/science.1957169</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">A. F. Fercher <i>et al.</i>, &ldquo;Measurement of intraocular distances by backscattering spectral interferometry&rdquo;, Opt. Commun. 117 (1-2), 43 (1995), <a href="https://doi.org/10.1016/0030-4018(95)00119-S">doi:10.1016/0030-4018(95)00119-S</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">S. R. Chinn, E. A. Swandson and J. G. Fujimoto, &ldquo;Optical coherence tomography using a frequency-tunable optical source&rdquo;, Opt. Lett. 22 (5), 340 (1997), <a href="https://doi.org/10.1364/OL.22.000340">doi:10.1364/OL.22.000340</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">B. Golubovic <i>et al.</i>, &ldquo;Optical frequency-domain reflectometry using rapid wavelength tuning of a Cr<sup>4+</sup>:forsterite laser&rdquo;, Opt. Lett. 22 (22), 1704 (1997), <a href="https://doi.org/10.1364/OL.22.001704">doi:10.1364/OL.22.001704</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">Z. P. Chen <i>et al.</i>, &ldquo;Noninvasive imaging of in vivo blood flow velocity using optical Doppler tomography&rdquo;, Opt. Lett. 22 (14), 1119 (1997), <a href="https://doi.org/10.1364/OL.22.001119">doi:10.1364/OL.22.001119</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">J. A. Izatt <i>et al.</i>, &ldquo;In vivo bidirectional color Doppler flow imaging of picoliter blood volumes using optical coherence tomography&rdquo;, Opt. Lett. 22 (18), 1439 (1997), <a href="https://doi.org/10.1364/OL.22.001439">doi:10.1364/OL.22.001439</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">H. Hiratsuka, E. Kido and T. Yoshimura, &ldquo;Simultaneous measurements of three-dimensional reflectivity distributions in scattering media based on optical frequency-domain reflectometry&rdquo;, Opt. Lett. 23 (18), 1420 (1998), <a href="https://doi.org/10.1364/OL.23.001420">doi:10.1364/OL.23.001420</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">J. M. Schmitt, &ldquo;Optical coherence tomography (OCT): a review&rdquo;, J. Sel. Top. Quantum Electron. 5 (4), 1205 (1999), <a href="https://doi.org/10.1109/2944.796348">doi:10.1109/2944.796348</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">W. Drexler <i>et al.</i>, &ldquo;Ultrahigh-resolution ophthalmic optical coherence tomography&rdquo;, Nature Med. 7 (4), 502 (2001), <a href="https://doi.org/10.1038/86589">doi:10.1038/86589</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">V. R. Shidlovski and J. Wei, &ldquo;Superluminescent diodes for optical coherence tomography&rdquo;, Proc. SPIE 4648, 139 (2002), <a href="https://doi.org/10.1117/12.462650">doi:10.1117/12.462650</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">R. Leitgeb <i>et al.</i>, &ldquo;Flow velocity measurements by frequency domain short coherence interferometry&rdquo;, Proc. SPIE 4619, 16 (2002)</td></tr>
+<tr><td class="refno">[12]</td><td class="refs">R. Leitgeb, C. K. Hitzenberger and A. F. Fercher, &ldquo;Performance of Fourier domain vs. time domain optical coherence tomography&rdquo;, Opt. Express 11 (8), 889 (2003), <a href="https://doi.org/10.1364/OE.11.000889">doi:10.1364/OE.11.000889</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">R. A. Leitgeb <i>et al.</i>, &ldquo;Real-time assessment of retinal blood flow with ultrafast acquisition by color Doppler Fourier domain optical coherence tomography&rdquo;, Opt. Express 11 (23), 3116 (2003), <a href="https://doi.org/10.1364/OE.11.003116">doi:10.1364/OE.11.003116</a></td></tr>
+<tr><td class="refno">[14]</td><td class="refs">J. F. de Boer <i>et al.</i>, &ldquo;Improved signal-to-noise ratio in spectral-domain compared with time-domain optical coherence tomography&rdquo;, Opt. Lett. 28 (21), 2067 (2003), <a href="https://doi.org/10.1364/OL.28.002067">doi:10.1364/OL.28.002067</a></td></tr>
+<tr><td class="refno">[15]</td><td class="refs">M. A. Choma <i>et al.</i>, &ldquo;Sensitivity advantage of swept source and Fourier domain optical coherence tomography&rdquo;, Opt. Express 11 (18), 2183 (2003), <a href="https://doi.org/10.1364/OE.11.002183">doi:10.1364/OE.11.002183</a></td></tr>
+<tr><td class="refno">[16]</td><td class="refs">B. R. White <i>et al.</i>, &ldquo;In vivo dynamic human retinal blood flow imaging using ultra-high-speed spectral domain optical Doppler tomography&rdquo;, Opt. Express 11 (25), 3490 (2003), <a href="https://doi.org/10.1364/OE.11.003490">doi:10.1364/OE.11.003490</a></td></tr>
+<tr><td class="refno">[17]</td><td class="refs">Y. Yasuno <i>et al.</i>, &ldquo;Three-dimensional and high-speed swept-source optical coherence tomography for in vivo investigation of human anterior eye segments&rdquo;, Opt. Express 13 (26), 10652 (2005), <a href="https://doi.org/10.1364/OPEX.13.010652">doi:10.1364/OPEX.13.010652</a></td></tr>
+<tr><td class="refno">[18]</td><td class="refs">L. Froehly and R. Leitgeb, &ldquo;Scan-free optical correlation techniques: history and applications to optical coherence tomography&rdquo;, J. Opt. 12 (8), 084001 (2010), <a href="https://doi.org/10.1088/2040-8978/12/8/084001">doi:10.1088/2040-8978/12/8/084001</a></td></tr>
+<tr><td class="refno">[19]</td><td class="refs">J. F. de Boer, R. Leitgeb and M. Wojtkowski, &ldquo;Twenty-five years of optical coherence tomography: the paradigm shift in sensitivity and speed provided by Fourier domain OCT&rdquo; (an invited review paper), Biomed Opt. Express 8 (7), 3248 (2017), <a href="https://doi.org/10.1364/BOE.8.003248">doi:10.1364/BOE.8.003248</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="white_light_interferometers.html" title="interferometers using broadband light inputs">white light interferometers</a>, <a href="laser_microscopy.html" title="a technique for generating microscopic images by scanning objects with a laser">laser microscopy</a>, <a href="coherence.html" title="a fixed phase relationship between the electric field values at different locations or at different times">coherence</a>, <a href="white_light_sources.html" title="light sources with very broad optical bandwidth">white light sources</a>, <a href="wavelength_swept_lasers.html" title="lasers which allow for period and fast wavelength tuning">wavelength-swept lasers</a>, <a href="fourier_transform_spectroscopy.html" title="a method for spectroscopy rare an optical spectrum is computed from raw data with a Fourier transform">Fourier transform spectroscopy</a><br>and other articles in the categories <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/optical_coherence_tomography.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Foptical_coherence_tomography.html&text=RP+Photonics+Encyclopedia+-+optical+coherence+tomography%2C+time+domain%2C+Fourier+domain%2C+swept+source%2C+sensitivity%2C+medical+imaging" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Foptical_coherence_tomography.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Foptical_coherence_tomography.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/optical_coherence_tomography.html"&gt;<br>Article on Optical Coherence Tomography&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/optical_coherence_tomography.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/optical_coherence_tomography.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/optical_coherence_tomography.html<br>article on 'Optical Coherence Tomography' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="./fiberpower_regen.html?banner=RP_Fiber_Power_3"><img src="./img/fiberpower_regen6b.png" alt="regenerative amplifier" style="margin-bottom:8px"></a>
+<p>Pulse energy from a <a href="./fiberpower_regen.html?banner=RP_Fiber_Power_3">regenerative amplifier</a>, when the number of resonator round-trips per amplification cycle is varied. Such instabilities (involving several bifurcations) can be well studied with a numerical model.</p>
+<p>This diagram has been made with the <a href="./fiberpower.html?banner=RP_Fiber_Power_3"><b>RP Fiber Power</b></a> software.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="kSAxrDWYzIvDmLdbW/XEYg==">shownbanner = "RP Fiber Power 3";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Free Tutorial: Modeling of Fiber Amplifiers and Lasers</h2>
+<p>We have published a new <a href="./tutorial_modeling.html?banner=modeling_tutorial">tutorial</a> which discusses the modeling of fiber amplifiers and lasers.
+It addresses many questions:</p>
+<ul>
+<li>What is a <a href="./tutorial_modeling1.html?banner=modeling_tutorial">model</a>?</li>
+<li>Should one use <a href="./tutorial_modeling3.html?banner=modeling_tutorial">power propagation or field propagation</a>?</li>
+<li>How to simulate the behavior of <a href="./tutorial_modeling4.html?banner=modeling_tutorial">laser-active ions</a>?</li>
+<li>How to calculate <a href="./tutorial_modeling5.html?banner=modeling_tutorial">steady-state solutions</a>?</li>
+<li>How to simulate <a href="./tutorial_modeling6.html?banner=modeling_tutorial">dynamical behavior</a> and <a href="./tutorial_modeling7.html?banner=modeling_tutorial">ultrashort pulse propagation</a>?</li>
+<li>What aspects are important for the <a href="./tutorial_modeling8.html?banner=modeling_tutorial">decision</a> whether to develop own modeling software or use commercial software?</li>
+</ul>
+<p><a href="./tutorial_modeling.html?banner=modeling_tutorial">Read the tutorial!</a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="kSAxrDWYzIvDmLdbW/XEYg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/optical_coherence_tomography.html"
+    },
+    "headline": "Optical Coherence Tomography",
+    "image": "https://www.rp-photonics.com/previews/optical_coherence_tomography.png",
+    "datePublished": "2019-02-01",
+    "dateModified": "2020-03-14",
+    "description": "Optical coherence tomography is an optical imaging technique similar to laser microscopy, where however longitudinal resolution is achieved based on interference effects with low-coherence light.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter O",
+      "item": "https://www.rp-photonics.com/encyclopedia_o.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "optical coherence tomography",
+      "item": "https://www.rp-photonics.com/optical_coherence_tomography.html"
+    }]}
+}
+</script>
+</body>
+</html>

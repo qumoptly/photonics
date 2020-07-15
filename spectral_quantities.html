@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-H7Al/86n9yXV03RHhKwKbg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - spectral quantities, spectral flux, integration, units, conversion factor</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/spectral_quantities.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Spectral quantities in radiometry and photometry describe the distribution e.g. of a radiant flux over different optical frequencies or wavelengths.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="spectral quantities, spectral flux, integration, units, conversion factor">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spectral Quantities">
+<meta property="og:description" content="Spectral quantities in radiometry and photometry describe the distribution e.g. of a radiant flux over different optical frequencies or wavelengths.">
+<meta property="og:url" content="https://www.rp-photonics.com/spectral_quantities.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/spectral_quantities.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Spectral quantities in radiometry and photometry describe the distribution e.g. of a radiant flux over different optical frequencies or wavelengths.">
+<meta name="twitter:title" content="Spectral Quantities">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/spectral_quantities.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="H7Al/86n9yXV03RHhKwKbg==">
+page="spectral_quantities.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> <a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="H7Al/86n9yXV03RHhKwKbg==">shownsponsors="EKSMA OPTICS,Optikexpertisen"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_s.html">letter S</a> &gt; <a href="spectral_quantities.html">spectral quantities</a></p>
+<h1>Spectral Quantities</h1>
+<header style="margin-right:0;">
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: quantities in radiometry and photometry which describe the distribution e.g. of a radiant flux over different optical frequencies or wavelengths</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">spektrale Größen</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a></p>
+<p><a href="encyclopedia_cite.html?article=spectral%20quantities">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>In <a href="radiometry.html" title="the science and technology of measuring properties of electromagnetic radiation, including light">radiometry</a> and <a href="photometry.html" title="the science and technology of measuring properties of light related to its perceived brightness for human eyes">photometry</a>, some of the used quantities are <em>spectral quantities</em>, which generally depend on the <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequency</a> or <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>.
+Some of them are simply frequency-dependent properties of materials or objects, such as a <a href="reflectance.html" title="the ratio of reflected optical power to the incident optical power at some reflecting object">reflectance</a>, <a href="transmittance.html" title="the ratio of transmitted optical power to the incident optical power at some partial transparent object">transmittance</a> or <a href="absorbance.html" title="the logarithm with base 10 of the inverse transmittance">absorbance</a>.
+Others describe the distribution e.g. of a <a href="radiant_flux.html" title="radiant energy per unit time which is emitted, transmitted, reflected or received by an object">radiant flux</a> over different <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequencies</a> or <a href="wavelength.html" title="the spatial period of a plane wave">wavelengths</a>.
+Their symbols often contain &ldquo;&nu;&rdquo; (for the optical frequency) or &ldquo;&lambda;&rdquo; (for the wavelength) in the subscript.</p>
+<p>For example, the <em>spectral flux</em> <span class="eqn_il">&Phi;<sub>e,<span class="greek_small">&nu;</span></sub></span> is the <a href="radiant_flux.html" title="radiant energy per unit time which is emitted, transmitted, reflected or received by an object">radiant flux</a> <span class="eqn_il">&Phi;<sub>e</sub></span> per (infinitesimally small) unit frequency integral in fundamental units of W/Hz; similarly <span class="eqn_il">&Phi;<sub>e,<span class="greek_small">&lambda;</span></sub></span> is the radiant flux per unit wavelength interval in units of W/m.</p>
+<p>Some important examples of such quantities:</p>
+<table class="stdtable">
+<tr><th style="width:150px">Quantity</th><th>Symbol</th><th style="width:125px">Units</th><th>Remarks</th></tr>
+<tr><td>spectral flux</td><td><span class="eqn_il">&Phi;<sub>e,<span class="greek_small">&nu;</span></sub></span> <br> <span class="eqn_il">&Phi;<sub>e,<span class="greek_small">&lambda;</span></sub></span></td><td>W/Hz <br> W/nm</td><td><a href="radiant_flux.html" title="radiant energy per unit time which is emitted, transmitted, reflected or received by an object">radiant flux</a> per unit frequency or  wavelength</td></tr>
+<tr><td>spectral intensity</td><td><span class="eqn_il"><i>I</i><sub>e,&Omega;,<span class="greek_small">&nu;</span></sub></span> <br> <span class="eqn_il"><i>I</i><sub>e,&Omega;,<span class="greek_small">&lambda;</span></sub></span></td><td>W sr<sup>&minus;1</sup>&thinsp;Hz<sup>&minus;1</sup> <br> W sr<sup>&minus;1</sup>&thinsp;nm<sup>&minus;1</sup></td><td><a href="radiant_intensity.html" title="radiant flux per unit solid angle">radiant intensity</a> per unit frequency or wavelength</td></tr>
+<tr><td>spectral radiance</td><td><span class="eqn_il"><i>L</i><sub>e,&Omega;,<span class="greek_small">&nu;</span></sub></span> <br> <span class="eqn_il"><i>L</i><sub>e,&Omega;,<span class="greek_small">&lambda;</span></sub></span></td><td>W sr<sup>&minus;1</sup>&thinsp;m<sup>&minus;2</sup>&thinsp;Hz<sup>&minus;1</sup> <br> W sr<sup>&minus;1</sup>&thinsp;m<sup>&minus;2</sup>&thinsp;nm<sup>&minus;1</sup></td><td><a href="radiance.html" title="the optical power per unit area and solid angle">radiance</a> per unit frequency or wavelength</td></tr>
+<tr><td>spectral irradiance</td><td><span class="eqn_il"><i>E</i><sub>e,<span class="greek_small">&nu;</span></sub></span> <br> <span class="eqn_il"><i>E</i><sub>e,<span class="greek_small">&lambda;</span></sub></span></td><td>W&thinsp;m<sup>&minus;2</sup>&thinsp;Hz<sup>&minus;1</sup> <br> W&thinsp;m<sup>&minus;2</sup>&thinsp;nm<sup>&minus;1</sup></td><td><a href="irradiance.html" title="the radiant flux (optical power) received by a surface per unit area">irradiance</a> per unit frequency or wavelength</td></tr>
+<tr><td>spectral radiosity</td><td><span class="eqn_il"><i>J</i><sub>e,<span class="greek_small">&nu;</span></sub></span> <br> <span class="eqn_il"><i>J</i><sub>e,<span class="greek_small">&lambda;</span></sub></span></td><td>W&thinsp;m<sup>&minus;2</sup>&thinsp;Hz<sup>&minus;1</sup> <br> W&thinsp;m<sup>&minus;2</sup>&thinsp;nm<sup>&minus;1</sup></td><td>radiosity per unit frequency or wavelength</td></tr>
+<tr><td>spectral exitance</td><td><span class="eqn_il"><i>M</i><sub>e,<span class="greek_small">&nu;</span></sub></span> <br> <span class="eqn_il"><i>M</i><sub>e,<span class="greek_small">&lambda;</span>;</sub></span></td><td>W&thinsp;m<sup>&minus;2</sup>&thinsp;Hz<sup>&minus;1</sup> <br> W&thinsp;m<sup>&minus;2</sup>&thinsp;nm<sup>&minus;1</sup></td><td><a href="radiant_exitance.html" title="radiant flux emitted by a surface per unit area">radiant exitance</a> per unit frequency or wavelength</td></tr>
+<tr><td>spectral exposure</td><td><span class="eqn_il"><i>H</i><sub>e,<span class="greek_small">&nu;</span></sub></span> <br> <span class="eqn_il"><i>H</i><sub>e,<span class="greek_small">&lambda;</span></sub></span></td><td>J&thinsp;m<sup>&minus;2</sup>&thinsp;Hz<sup>&minus;1</sup> <br> J&thinsp;m<sup>&minus;2</sup>&thinsp;nm<sup>&minus;1</sup></td><td>radiant exposure per unit frequency or wavelength</td></tr>
+<tr><td>spectral luminous flux</td><td><span class="eqn_il">&Phi;<sub>v,<span class="greek_small">&nu;</span></sub></span> <br> <span class="eqn_il">&Phi;<sub>v,<span class="greek_small">&lambda;</span></sub></span></td><td>lm&thinsp;Hz<sup>&minus;1</sup> <br> lm&thinsp;nm<sup>&minus;1</sup></td><td><a href="luminous_flux.html" title="a measure of the perceived power of light, e.g. from a light source">luminous flux</a> per unit frequency or wavelength</td></tr>
+<tr><td>spectral luminous intensity</td><td><span class="eqn_il"><i>I</i><sub>v,<span class="greek_small">&nu;</span></sub></span> <br> <span class="eqn_il"><i>I</i><sub>v,<span class="greek_small">&lambda;</span></sub></span></td><td>cd&thinsp;Hz<sup>&minus;1</sup> <br> cd&thinsp;nm<sup>&minus;1</sup></td><td><a href="luminous_intensity.html" title="luminous flux per unit solid angle">luminous intensity</a> per unit frequency or wavelength</td></tr>
+<tr><td>spectral illuminance</td><td><span class="eqn_il"><i>E</i><sub>v,<span class="greek_small">&nu;</span></sub></span> <br> <span class="eqn_il"><i>E</i><sub>v,<span class="greek_small">&lambda;</span></sub></span></td><td>lx&thinsp;Hz<sup>&minus;1</sup> <br> lx&thinsp;nm<sup>&minus;1</sup></td><td><a href="illuminance.html" title="the incident luminous flux per unit area on a surface">illuminance</a> per unit frequency or wavelength</td></tr>
+</table>
+<p>(The subscript &ldquo;e&rdquo; stand for energy, indicating <a href="radiometry.html" title="the science and technology of measuring properties of electromagnetic radiation, including light">radiometric</a> quantity, while &ldquo;v&rdquo; stands for &ldquo;vision&rdquo;, indicating <a href="photometry.html" title="the science and technology of measuring properties of light related to its perceived brightness for human eyes">photometric</a> quantities.)</p>
+<p>By integration of those quantities over all <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequencies</a> or <a href="wavelength.html" title="the spatial period of a plane wave">wavelengths</a>, respectively, one obtains the corresponding integral quantities.
+For example, the radiant flux equals the frequency- or wavelength-integrated spectral flux.</p>
+<p>In most cases, the spectral distributions result from statistical processes.
+A notable exception is the generation or <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a> with <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked lasers</a>, which is a highly deterministic process.
+Here, optical spectra maybe calculated from <a href="power_spectral_density.html" title="optical power or noise power per unit frequency interval">power spectral densities</a> of field amplitudes.</p>
+<h2 class="togglediv">Conversion Between Frequency- and Wavelength-related Spectral Quantities</h2>
+<div>
+<p>Note that it is <em>not</em> correct e.g. to integrate <span class="eqn_il">&Phi;<sub>e,<span class="greek_small">&nu;</span></sub></span> (a quantity referring to optical frequencies) over all <em>wavelengths</em>, simply using the argument <span class="eqn_il"><span class="greek">&nu;</span>&thinsp;=&thinsp;<i>c</i>&thinsp;/&thinsp;<span class="greek">&lambda;</span></span>.
+Even the resulting units would not be correct.
+One also needs to take into account the conversion from frequency to wavelength intervals.
+As we can calculate the integrated radiant flux as</p>
+<div class="eqn"><img src="eqn/int_phi_e.gif" width="222" height="29" alt="radiant flux"></div>
+<p>we must conclude that</p>
+<div class="eqn"><img src="eqn/phi_e.gif" width="232" height="41" alt="radiant flux"></div>
+<p>where the conversion factor is wavelength-dependent.</p>
+<p>A consequence of that is that the peak location of a spectral quantity in terms of optical frequency does <em>not</em> generally agree with <span class="eqn_il"><i>c</i></span> divided by the peak wavelength, calculated from the corresponding wavelength-related quantity.
+In cases with broad spectral distributions &ndash; for example, the spectrum of <a href="thermal_radiation.html" title="electromagnetic radiation which results from thermal emission">blackbody radiation</a> &ndash;, that can make a substantial difference.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="spectral_quantities.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="radiometry.html" title="the science and technology of measuring properties of electromagnetic radiation, including light">radiometry</a>, <a href="photometry.html" title="the science and technology of measuring properties of light related to its perceived brightness for human eyes">photometry</a>, <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a>, <a href="spectral_phase.html" title="the phase of the electric field in the frequency domain">spectral phase</a>, <a href="power_spectral_density.html" title="optical power or noise power per unit frequency interval">power spectral density</a><br>and other articles in the category <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/spectral_quantities.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fspectral_quantities.html&text=RP+Photonics+Encyclopedia+-+spectral+quantities%2C+spectral+flux%2C+integration%2C+units%2C+conversion+factor" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fspectral_quantities.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fspectral_quantities.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spectral_quantities.html"&gt;<br>Article on Spectral Quantities&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spectral_quantities.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/spectral_quantities.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/spectral_quantities.html<br>article on 'Spectral Quantities' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Corona Virus Crisis</h2>
+<p>It is interesting and instructive to realize certain analogies between the spread of an epidemic and elementary processes in lasers. In particular, one can <b>learn about the power of expnential growth</b> and the <b>threshold behavior</b>.</p>
+<p style="font-size:130%; margin:20px 0;">Read the article: <br> "<a href="./spotlight_2020_03_16.html?banner=Corona">Laser Physics Helps to Understand the Corona Virus Crisis</a>"!</p>
+<p>Comments are welcome &ndash; see the input form below the article.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="H7Al/86n9yXV03RHhKwKbg==">shownbanner = "Corona";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Numerical Modeling</h2>
+<p>Developing devices or systems in photonics requires a <b>comprehensive quantitative understanding</b> &ndash; otherwise, it becomes inefficient, waisting time and money.</p>
+<p><a href="./laser_modeling.html?banner=numerical_modeling">Numerical modeling</a> is often the most efficient way towards results:</p>
+<ul>
+<li>understand <em>quantitatively</em> what is going on</li>
+<li>check the influence of design changes or possible detrimental effects</li>
+<li>understand strange experimental observations</li>
+<li>find optimized designs more reliably and faster</li>
+</ul>
+<p style="text-align:center; margin:10px 0;"><a href="./laser_modeling.html?banner=numerical_modeling"><img src="./img/modeling.png" width="234" height="91" alt="laser modeling"></a></p>
+<h3>How to Get Your Modeling Done?</h3>
+<p>We offer both <a href="./consulting.html?banner=numerical_modeling">technical consultancy</a> and powerful <a href="./software.html?banner=numerical_modeling">simulation software</a>.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="H7Al/86n9yXV03RHhKwKbg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/spectral_quantities.html"
+    },
+    "headline": "Spectral Quantities",
+    "image": "https://www.rp-photonics.com/previews/spectral_quantities.png",
+    "datePublished": "2019-12-31",
+    "dateModified": "2020-03-14",
+    "description": "Spectral quantities in radiometry and photometry describe the distribution e.g. of a radiant flux over different optical frequencies or wavelengths.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter S",
+      "item": "https://www.rp-photonics.com/encyclopedia_s.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "spectral quantities",
+      "item": "https://www.rp-photonics.com/spectral_quantities.html"
+    }]}
+}
+</script>
+</body>
+</html>

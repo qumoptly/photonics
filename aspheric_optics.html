@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-tlHAsZVRguJlBz7dD1UOqw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - aspheric optics, spherical aberrations, off-axis, optical design, fabrication</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/aspheric_optics.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-06-24">
+<meta name="description" content="Aspheric lenses and mirrors have surfaces with a non-constant local radius of curvature. They can be used to minimize spherical aberrations while keeping an optical system very compact.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="aspheric optics, spherical aberrations, off-axis, optical design, fabrication">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Aspheric Optics">
+<meta property="og:description" content="Aspheric lenses and mirrors have surfaces with a non-constant local radius of curvature. They can be used to minimize spherical aberrations while keeping an optical system very compact.">
+<meta property="og:url" content="https://www.rp-photonics.com/aspheric_optics.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/aspheric_optics.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Aspheric lenses and mirrors have surfaces with a non-constant local radius of curvature. They can be used to minimize spherical aberrations while keeping an optical system very compact.">
+<meta name="twitter:title" content="Aspheric Optics">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/aspheric_optics.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="tlHAsZVRguJlBz7dD1UOqw==">
+page="aspheric_optics.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo sponsor"></a> <a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="tlHAsZVRguJlBz7dD1UOqw==">shownsponsors="Knight Optical,Optikexpertisen"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_aspheric_optics.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_a.html">letter A</a> &gt; <a href="aspheric_optics.html">aspheric optics</a></p>
+<h1>Aspheric Optics</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_aspheric_optics.html?s=vbox">85 suppliers for aspheric optics</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://gandh.com/product-categories/precision-lenses/" data-supplier="G&H" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="bg externallink"><img src="./bg/logos/g_h.png" alt="G&H" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.eksmaoptics.com/optical-components/lenses/aspherical-lenses/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="bg externallink"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.shanghai-optics.com/components/aspheric-lenses/" data-supplier="Shanghai Optics" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="bg externallink"><img src="./bg/logos/shanghai_optics.png" alt="Shanghai Optics" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.knightoptical.com/stock/default/lenses/aspheric-lenses.html" data-supplier="Knight Optical" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="bg externallink"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="http://www.edmundoptics.com/c/aspheric-lenses/653/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="bg externallink"><img src="./bg/logos/edmund_optics.png" alt="Edmund Optics" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_aspheric_optics.html?s=vbox">List of suppliers for<br>aspheric optics</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: optical elements with non-spherical surfaces</p>
+<p>Alternative terms: aspherical optics, non-spherical optics</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">aspherische Optik</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a></p>
+<p><a href="encyclopedia_cite.html?article=aspheric%20optics">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Most <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lenses</a> and focusing or defocusing <a href="mirrors.html" title="devices which reflect light">mirrors</a>, as used in general optical instruments and in <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a> technology, have spherical optical surfaces &ndash; surfaces which have the shape of a sphere within some extended region.
+(They can be either convex or concave.)
+However, some optical elements are also available with non-spherical surfaces and are then called <em>aspheric optics</em> (or sometimes <em>aspherical optics</em>).
+They exhibit surface profiles which do <em>not</em> have a constant local radius of curvature &ndash; often with weaker curvature of parts which are more distant to the optical axis.
+In most cases, surface profiles are at least rotationally symmetric.</p>
+<p>The purpose of using aspheric optics is usually to avoid <a href="spherical_aberrations.html" title="optical aberrations resulting from spherical optical surfaces">spherical aberrations</a>, as explained in more detail below.</p>
+<p>When surfaces deviate more profoundly from spherical shapes, e.g. with oscillations, such components are called <em>free-form optics</em>.</p>
+<h2 class="togglediv">Fabrication of Spherical and Aspherical Lenses</h2>
+<div>
+<p>Spherical optical surfaces are typically not used because they were ideal concerning the optical function &ndash; usually they are not &ndash;, but only because they are most convenient to <a href="optical_fabrication.html" title="the fabrication of optical components like lenses, prisms and mirrors">manufacture</a>.
+The usually employed generation process naturally produces spherical surfaces.
+Note that it is not possible geometrically to obtain non-spherical surfaces with simple grinding; spherical surfaces are the only ones where one can transversely move around the grinding tool while maintaining full contact with the process surface.</p>
+<aside class="callout blue">Various fabrication techniques for aspheric optics have been developed.</aside>
+<p>Therefore, more refined manufacturing methods are required to produce aspherical optics.
+There are adapted grinding processes, also diamond turning techniques, which can work without the mentioned full contact between the work tool and the processed sample.
+Some of them involve the use of computer-controlled machines (CNC, robotic manufacturing).</p>
+<p>In some cases (particularly for polymer-based optical elements, plastic optics), one simply uses molding forms with appropriate shapes, which by their nature do not need to be spherical.
+Such injection molding and also compression molding processes can be used for cheap mass production, but usually do not with a particularly high optical quality.
+There are also <a href="optical_glasses.html" title="glasses of high quality, made for optical applications">glass</a> molding techniques with subsequent annealing, leading to higher quality but at higher cost.</p>
+<figure>
+<img src="img/aspheric_lens.png" alt="aspheric lens">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Surface profile of an aspheric lens (solid curve), having some deviations with respect to a purely spherical profile (dashed curve).
+</figcaption>
+</figure>
+<p>A substantial variety of manufacturing techniques for aspheric optics has been developed in the last couple of decades.
+Some of them can also be applied to different kinds of <a href="mirrors.html" title="devices which reflect light">mirrors</a>.
+Some methods are suitable for generating arbitrary freeform surfaces.
+The choice of fabrication method can depend on various aspects:</p>
+<ul>
+<li>Some methods are applicable only to certain <a href="optical_materials.html" title="materials used for optical components">optical materials</a>.
+For example, diamond turning works with polymers and metals, but not with <a href="optical_glasses.html" title="glasses of high quality, made for optical applications">glasses</a>.</li>
+<li>Some methods are well suited for the flexible production of prototypes or small volumes, while others are more efficient for volume production.</li>
+<li>There are also trade-offs between production cost and optical quality.</li>
+</ul>
+</div>
+<h2 class="togglediv">Spherical and Other Aberrations</h2>
+<div>
+<p>The essential function of focusing or defocusing optical elements is to cause a radially varying optical phase change.
+For example, for simple focusing of a <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a> with originally flat <a href="wavefronts.html" title="surfaces connecting points with the same phase of a wave">wavefronts</a> one would ideally apply a phase change which has a quadratic component with radius (but no higher-order terms); this kind of radial dependence is approximated by an optical element with spherical shape, as long as one stays close to the beam axis.
+For more extreme positions, so-called <a href="spherical_aberrations.html" title="optical aberrations resulting from spherical optical surfaces">spherical aberrations</a> become relevant &ndash; particularly for lenses with high <a href="numerical_aperture.html" title="sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a>.
+Similar effects occur in <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a> applications.</p>
+<p>Optical elements and systems also produce other kinds of <a href="optical_aberrations.html" title="degradations of optical images caused in imaging instruments">optical aberrations</a> such as <a href="astigmatism.html" title="a kind of optical aberrations; alternatively, a defect of optical lenses or a property of laser beams">astigmatism</a> and coma, which can lead to non-ideal performance of focusing or imaging devices.
+There are sophisticated optical design principles which allow one to minimize different kinds of aberrations of optical systems, even when using only spherical optical elements.
+However, the number of required optical elements and consequently the number of involved optical surfaces may be substantially increased compare with what would be required just to obtain the basic optical function.</p>
+</div>
+<h2 class="togglediv">Sag Equation</h2>
+<div>
+<p>Traditionally, the exact shape of aspheric surfaces is described with the <em>sag equation</em>:</p>
+<div class="eqn"><img src="eqn/sag_equation.gif" width="365" height="52" alt="sag equation"></div>
+<p>Here, <span class="eqn_il"><i>z</i></span> is the profile height as a function of the radial coordinate <span class="eqn_il"><i>h</i></span> (distance from the optical axis). <span class="eqn_il"><i>K</i></span> is the <em>conic constant</em>, which can be used to obtain certain typical shapes (which may be modified further with the additional terms):</p>
+<ul>
+<li>For <span class="eqn_il"><i>K</i>&thinsp;=&thinsp;0</span>, the formula describes a spherical surface with the inverse radius of curvature <span class="eqn_il"><i>C</i></span>.</li>
+<li><span class="eqn_il"><i>K</i>&thinsp;=&thinsp;&minus;1</span> results in a parabolic shape.
+This is appropriate, for example, for <a href="collimated_beams.html" title="laser beams with weak divergence">collimating</a> a beam coming from a tight focus, or for tightly focusing a collimated beam.
+This is often used for <a href="parabolic_mirrors.html" title="mirrors with the surface shape of a paraboloid, or at least a parabolic cross section">parabolic mirrors</a>, which however can also be made for off-axis operation, where the above equation could not be applied with <span class="eqn_il"><i>h</i></span> being the distance from the center of the mirror.</li>
+<li><span class="eqn_il"><i>K&thinsp;&gt;&thinsp;&minus;</i>1</span> produces an ellipsoid, which can be useful for transferring light from one focus into another.</li>
+<li><span class="eqn_il"><i>K&thinsp;&lt;&thinsp;&minus;</i>1</span> produces a hyperbola shape, e.g. for modifying the wavefront curvature of an already divergent beam.</li>
+</ul>
+<p>Further modifications are possible with the coefficients <span class="eqn_il"><i>K</i><sub>4</sub></span> and higher; due to the high powers in <span class="eqn_il"><i>h</i></span>, they affect mostly the outer parts of the profile.</p>
+</div>
+<h2 class="togglediv">Advantages of Using Aspheric Optics</h2>
+<div>
+<p>As aspheric optics allow one to avoid spherical and other aberrations in the first place, they can substantially simplify both the optical design process and the resulting optical designs.
+This can also lead to a <b>more compact</b> optical systems, which is particularly relevant e.g. for the design of mobile devices.
+For example, extremely compact <a href="cameras.html" title="optical instruments for recording still or moving images">camera</a> <a href="objectives.html" title="optical elements for collecting light from inspected objects, or for sending light to objects">objectives</a> as required for smartphones must work with a <b>minimum number of optical elements</b> and therefore heavily depend on aspheric optics.
+The reduced number of optical surface may also be a relevant advantage.
+Besides, because of various complex trade-offs in optical design, by using aspheric elements one can often eliminate certain requirements and finally achieve overall better optical performance.</p>
+<p>Other applications are in optical data storage, <a href="fiber_optics.html" title="optics based on optical fibers">fiber optics</a> (e.g. launching laser beams into fibers or <a href="fiber_collimators.html" title="devices for collimating the light coming from a fiber, or for launching collimated light into the fiber">fiber collimators</a>) and optical space technology.
+Depending on the situation, the overall manufacturing cost may even be reduced, despite the higher cost of producing aspherical optical elements.
+For such reasons, modern software packages for optical design must have extended features concerning aspheric and general freeform optics.
+In fact, numerical methods are nowadays most often used for aspheric lens design.</p>
+<aside class="callout red">A single aspheric surface in a system is often sufficient!</aside>
+<p>Note that it is usually neither necessary nor advisable to use aspheric optics throughout in a system.
+Instead, it is often sufficient to use a single aspheric surface to obtain good control of various types of aberrations.
+Such a surface may either be close to spherical, but with some specific deviations, or it may not have an own focusing function, only compensating aberrations introduced by other elements (<em>correction plates</em>).</p>
+<p>Frequently, aspheric lenses are made as plano-convex or plano-concave elements, i.e., with one side being flat.</p>
+<p>There are also lenses which are at the same time aspheric and <a href="achromatic_optics.html" title="optical devices or setups with minimized chromatic aberrations">achromatic</a>.
+For example, one can combine a spherical glass lens with a aspheric polymer part.
+There are even hybrid aspheres, combining refractive and refractive properties.</p>
+</div>
+<h2 class="togglediv">Off-the-shelf and Custom Aspherics</h2>
+<div>
+<p>In some cases, it is sufficient to use standard aspheric lenses or mirrors as are available from various manufacturers on stock.
+However, aspheric lenses have a number of additional parameters (see above), making it substantially more difficult to find the required combination of properties in stock lenses.
+Mostly, this is possible only for lenses which are optimized for standard optical tasks such as <a href="collimated_beams.html" title="laser beams with weak divergence">collimating</a> a strongly focused beam.
+In other cases, <a href="custom_optics.html" title="optical elements made according to customer-specific specifications">custom optics</a> have to be used.</p>
+<p>Some computer-controlled fabrication techniques are well suited for making custom aspherics.
+In some cases, components which are normally used in spherical form are subject additional treatment where they are turned into aspherics.</p>
+</div>
+<h2 class="togglediv">Metrology of Aspheric Optics</h2>
+<div>
+<p>Note that there are technical challenges not only concerning the fabrication of aspheric surfaces, but also concerning optical metrology.
+One needs to measure not only simple quantities like focal lengths (i.e., assess <em>radius errors</em>), but also additional parameters of the sag equation (see above).
+Both the surface accuracy and surface roughness are of interest; the former tells how well an optical service matches the designed shape over larger areas, while roughness is a phenomenon on smaller scales.
+Different methods are used for quantifying such inaccuracies of optical elements.</p>
+<p>In many cases, refined types of <a href="interferometers.html" title="optical devices utilizing the phenomenon of interference">interferometers</a> in combination with suitable computer software are used for such purposes.
+They allow for the precise assessment of the highest surface accuracies, far below 1&nbsp;&mu;m or a small fraction of the optical wavelength.
+Another option is to use 2D or 3D <a href="optical_profilometers.html" title="optical non-contact instruments for precisely measuring surface profiles">optical profilometers</a>.
+The latter of are quite flexible method, but usually substantially lower accuracies than interferometry.</p>
+</div>
+<h2 class="togglediv">Cylindrical Optics</h2>
+<div>
+<p>The same issues with aberrations also occur for cylindrical optics, focusing only in one direction.
+Therefore, instead of true <a href="cylindrical_lenses.html" title="lenses which focus or defocus light only in one direction">cylindrical lenses</a>, for example, one often uses lenses with a slightly acylindrical surface.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_aspheric_optics.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 85 suppliers for aspheric optics. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.knightoptical.com/" data-supplier="Knight Optical" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="bg externallink" title="Visit the website of Knight Optical"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo"></a><a href="https://www.knightoptical.com/stock/default/lenses/aspheric-lenses.html" data-supplier="Knight Optical" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="bg externallink" title="Visit the website of Knight Optical"><img src="./bg/products/knight_optical/aspheric_optics.jpg" alt="aspheric optics" class="product"></a><h3><a href="./bg/profiles/knight_optical.html" title="See the profile of Knight Optical">Knight Optical</a></h3><p>A cost-effective alternative to multi-lens systems, <a href="https://www.knightoptical.com/stock/default/lenses/aspheric-lenses/precision-grade-aspheric-lenses.html" data-supplier="Knight Optical" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="externallink bg">aspheric</a> optics are commonly used to correct spherical aberrations that may hinder optical performance. Available from stock or as custom-made components, our wide range of high-quality aspheric optics include <a href="https://www.knightoptical.com/stock/default/lenses/aspheric-lenses/precision-grade-aspheric-lenses.html" data-supplier="Knight Optical" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="externallink bg">precision-grade</a>, <a href="https://www.knightoptical.com/stock/default/lenses/aspheric-lenses/plastic-aspheric-lenses.html" data-supplier="Knight Optical" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="externallink bg">plastic</a>, <a href="https://www.knightoptical.com/stock/default/lenses/aspheric-lenses/fire-polished-aspheric-lenses.html" data-supplier="Knight Optical" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="externallink bg">fire-polished</a> and <a href="https://www.knightoptical.com/stock/default/lenses/aspheric-lenses.html" data-supplier="Knight Optical" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="externallink bg">diamond-turned</a> lenses.</p></aside>
+<aside class="bg_vendoritem"><a href="https://gandh.com/" data-supplier="G&H" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="bg externallink" title="Visit the website of G&amp;H"><img src="./bg/logos/g_h.png" alt="G&H" class="supplierlogo"></a><a href="https://gandh.com/product-categories/precision-lenses/" data-supplier="G&H" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="bg externallink" title="Visit the website of G&amp;H"><img src="./bg/products/g_h/aspheric_optics.jpg" alt="aspheric optics" class="product"></a><h3><a href="./bg/profiles/g_h.html" title="See the profile of G&H">G&H</a></h3><p><a href="https://gandh.com/product-categories/precision-lenses/" data-supplier="G&H" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="externallink bg">Lens processing capabilities</a> of G&amp;H include CNC generating, grinding, and polishing. We polish spherical, semi-spherical, and aspheric lenses. 5-axis grinding and polishing machines are utilized for manufacturing high precision aspheric surfaces on optical glass. Single point diamond turning is used for aspheric and diffractive optical elements.</p><p>G&amp;H manufacture custom precision lenses for imaging, focusing, collimation and illumination, using standard polishing and grinding techniques, as well as single point diamond turning and MRF&reg;.</p><p>We take a design-for-manufacture approach to lens production, facilitating the production of cost-effective, high quality custom precision lenses.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.eksmaoptics.com/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="bg externallink" title="Visit the website of EKSMA OPTICS"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a><h3><a href="./bg/profiles/eksma_optics.html" title="See the profile of EKSMA OPTICS">EKSMA OPTICS</a></h3><p>Ex-stock delivery of standard plano-convex <a href="https://www.eksmaoptics.com/optical-components/lenses/aspherical-lenses/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="externallink bg">aspherical lenses</a> made of N-BK7 or high refractive index N-LAH64 glass. We can produce custom design aspheric lenses in our CNC lens polishing facility. Lenses can be supplied with anti-reflection coatings to suit your particular laser application.</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.edmundoptics.com/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="bg externallink" title="Visit the website of Edmund Optics"><img src="./bg/logos/edmund_optics.png" alt="Edmund Optics" class="supplierlogo"></a><a href="http://www.edmundoptics.com/c/aspheric-lenses/653/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="bg externallink" title="Visit the website of Edmund Optics"><img src="./bg/products/edmund_optics/aspheric_optics.jpg" alt="aspheric optics" class="product"></a><h3><a href="./bg/profiles/edmund_optics.html" title="See the profile of Edmund Optics">Edmund Optics</a></h3><p>Edmund Optics offers various aspheric lenses, including <a href="http://www.edmundoptics.com/c/cnc-polished/1231/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="externallink bg">CNC polished lenses</a>, <a href="http://www.edmundoptics.com/c/infrared/1232/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="externallink bg">infrared lenses with diffraction-limited performance</a>, <a href="http://www.edmundoptics.com/c/precision-glass-molded/1233/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="externallink bg">precision glass molded lenses</a>, <a href="http://www.edmundoptics.com/c/color-corrected/1234/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="externallink bg">color-corrected lenses</a>, <a href="http://www.edmundoptics.com/c/condenser-lenses/1235/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="externallink bg">condenser lenses</a> and <a href="http://www.edmundoptics.com/c/plastic-molded/1230/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="externallink bg">plastic molded lenses</a>.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.shanghai-optics.com/" data-supplier="Shanghai Optics" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="bg externallink" title="Visit the website of Shanghai Optics"><img src="./bg/logos/shanghai_optics.png" alt="Shanghai Optics" class="supplierlogo"></a><a href="https://www.shanghai-optics.com/components/aspheric-lenses/" data-supplier="Shanghai Optics" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="bg externallink" title="Visit the website of Shanghai Optics"><img src="./bg/products/shanghai_optics/aspheric_optics.jpg" alt="aspheric optics" class="product"></a><h3><a href="./bg/profiles/shanghai_optics.html" title="See the profile of Shanghai Optics">Shanghai Optics</a></h3><p><a href="https://www.shanghai-optics.com/components/aspheric-lenses/" data-supplier="Shanghai Optics" data-location="product-enc" data-keyword="aspheric optics" rel="nofollow" class="externallink bg">Precision aspheric lenses</a> reduce visual defects and produce clearer images, making them ideal for many applications. In addition, because the surface of an aspheric lens is designed and formed to effectively reduce aberration in specific applications, custom aspheric lenses make flexible solutions to complex problems. At Shanghai Optics, we use two main methods to produce custom aspheric lenses: molding and traditional polishing with the state-of-the-art manufacturing and metrology equipment.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="aspheric_optics.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="spherical_aberrations.html" title="optical aberrations resulting from spherical optical surfaces">spherical aberrations</a>, <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lenses</a>, <a href="parabolic_mirrors.html" title="mirrors with the surface shape of a paraboloid, or at least a parabolic cross section">parabolic mirrors</a>, <a href="achromatic_optics.html" title="optical devices or setups with minimized chromatic aberrations">achromatic optics</a>, <a href="custom_optics.html" title="optical elements made according to customer-specific specifications">custom optics</a>, <a href="paraxial_approximation.html" title="a frequently used approximation, essentially assuming small angular deviations of the propagation directions from some beam axis">paraxial approximation</a><br>and other articles in the category <a href="categories.html#general_optics" title="other articles on general optics">general optics</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/aspheric_optics.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Faspheric_optics.html&text=RP+Photonics+Encyclopedia+-+aspheric+optics%2C+spherical+aberrations%2C+off-axis%2C+optical+design%2C+fabrication" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Faspheric_optics.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Faspheric_optics.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/aspheric_optics.html"&gt;<br>Article on Aspheric Optics&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/aspheric_optics.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/aspheric_optics.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/aspheric_optics.html<br>article on 'Aspheric Optics' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Discount for Startups</h2>
+<p>We have introduced a special offer: there is now a <a href="./bg_startups.html?banner=Startup_discount">startup discount</a> of 25% for the <a href="./bg_entries.html?banner=Startup_discount">advertising package</a> in the <a href="./buyersguide.html?banner=Startup_discount">RP Photonics Buyer&#39;s Guide</a>.
+</p>
+<p>We understand the challenge for technology startups and are happy to support them with our powerful resource and our marketing expertise.</p>
+<p>Note that marketing is particularly vital for startups: get orders before financially running out of steam!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="tlHAsZVRguJlBz7dD1UOqw==">shownbanner = "Startup discount";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Free Tutorial: Modeling of Fiber Amplifiers and Lasers</h2>
+<p>We have published a new <a href="./tutorial_modeling.html?banner=modeling_tutorial">tutorial</a> which discusses the modeling of fiber amplifiers and lasers.
+It addresses many questions:</p>
+<ul>
+<li>What is a <a href="./tutorial_modeling1.html?banner=modeling_tutorial">model</a>?</li>
+<li>Should one use <a href="./tutorial_modeling3.html?banner=modeling_tutorial">power propagation or field propagation</a>?</li>
+<li>How to simulate the behavior of <a href="./tutorial_modeling4.html?banner=modeling_tutorial">laser-active ions</a>?</li>
+<li>How to calculate <a href="./tutorial_modeling5.html?banner=modeling_tutorial">steady-state solutions</a>?</li>
+<li>How to simulate <a href="./tutorial_modeling6.html?banner=modeling_tutorial">dynamical behavior</a> and <a href="./tutorial_modeling7.html?banner=modeling_tutorial">ultrashort pulse propagation</a>?</li>
+<li>What aspects are important for the <a href="./tutorial_modeling8.html?banner=modeling_tutorial">decision</a> whether to develop own modeling software or use commercial software?</li>
+</ul>
+<p><a href="./tutorial_modeling.html?banner=modeling_tutorial">Read the tutorial!</a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="tlHAsZVRguJlBz7dD1UOqw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/aspheric_optics.html"
+    },
+    "headline": "Aspheric Optics",
+    "image": "https://www.rp-photonics.com/previews/aspheric_optics.png",
+    "datePublished": "2019-02-18",
+    "dateModified": "2020-06-24",
+    "description": "Aspheric lenses and mirrors have surfaces with a non-constant local radius of curvature. They can be used to minimize spherical aberrations while keeping an optical system very compact.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter A",
+      "item": "https://www.rp-photonics.com/encyclopedia_a.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "aspheric optics",
+      "item": "https://www.rp-photonics.com/aspheric_optics.html"
+    }]}
+}
+</script>
+</body>
+</html>

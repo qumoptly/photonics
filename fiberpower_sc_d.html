@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-luEMO9Ez8zK7IfUJLZGvJQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>Die Software RP Fiber Power: Superkontinuum-Erzeugung, numerisch simuliert</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/fiberpower_sc_d.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-05-22">
+<meta name="description" content="Superkontinuum-Erzeugung in einer Glasfaser wurde mit der Software RP Fiber Power simuliert. Die starke spektrale Verbreiterung entsteht durch eine komplexe nichtlineare Interaktion.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="RP Fiber Power, Simulation, Design, Software, Superkontinuum-Erzeugung">
+<script type="text/javascript" src="./jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" nonce="luEMO9Ez8zK7IfUJLZGvJQ==">
+page="fiberpower_sc_d.html"; cat="S"; shownbanner=""; ref="http://www.rp-photonics.com/fiberpower_d.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="./encyclopedia_de.html">Encyclopedia</a></td>
+<td><a href="./buyersguide_d.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting_d.html">Dienste und Modellierung</a></td></tr>
+<tr><td><a href="./consulting_d.html">Beratung</a></td>
+<td class="selected"><a href="./software_d.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Software</span> <span id="slogan">&hellip; leistungsfähige Tools für Ihre Forschung &amp; Entwicklung!</span></p>
+<div id="other_language"><a href="fiberpower_sc.html">English</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software_start" href="software_d.html">Einleitung</a>
+<a id="Modellierung" href="software_modeling_d.html">Modellierung</a>
+<a id="software_news" href="software_news_d.html">Software News</a>
+<p>Produkte:</p>
+<a id="Software" href="software_overview_d.html">Überblick</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator_d.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower_d.html" class="sel">RP Fiber Power</a>
+<a href="fiberpower_features_d.html" class="sub">Features</a>
+<a href="fiberpower_speed_d.html" class="sub">Geschwindigkeit</a>
+<a href="fiberpower_model_d.html" class="sub">Modell</a>
+<a href="fiberpower_data_d.html" class="sub">Faser-Daten</a>
+<a href="fiberpower_interface_d.html" class="sub">Benutzung</a>
+<a href="fiberpower_case_studies_d.html" class="sub sel">Demos</a>
+<a href="fiberpower_versions_d.html" class="sub">Versionen</a>
+<a id="rp_resonator" href="resonator_d.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse_d.html">RP ProPulse</a>
+<a id="rp_coating" href="coating_d.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch_d.html">RP Q-switch</a>
+<p>Diverse Aspekte:</p>
+<a id="script_language" href="software_script_language_d.html">Scriptsprache</a>
+<a id="debugger" href="software_debugger_d.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms_d.html">Formulare</a>
+<a id="licenses" href="software_licenses_d.html">Lizenzen</a>
+<a id="documentation" href="software_docu_d.html">Dokumentation</a>
+<a id="support" href="software_support_d.html">Support</a>
+<a id="distributors" href="software_distributors_d.html">Distributoren</a>
+<p>Aktion:</p>
+<a id="contact" href="software_contact_d.html">*Angebot anfordern*</a>
+</div>
+</nav>
+<div id="main"><main>
+<div class="softwarelogo">
+<p class="fig" style="margin-top:12px"><img src="img/fiberpower_logo.png" width="75" height="75" alt="RP Fiber Power logo"></p>
+</div>
+<p class="breadcrumbs"><a href="software_d.html">Software</a> &gt; <a href="fiberpower_d.html">RP Fiber Power</a> &gt; <a href="fiberpower_case_studies_d.html">Demo</a> &gt; <a href="fiberpower_sc_d.html">Superkontinuum</a></p>
+<h1>RP Fiber Power: Simulations- und Design-Software <br> für Faseroptik, Faserverstärker und Faserlaser</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_d.html">Überblick</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_features_d.html">Features</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_speed_d.html">Geschwindigkeit</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_model_d.html">Modell</a></td>
+</tr><tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_data_d.html">Faser-Daten</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_interface_d.html">Benutzung</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="fiberpower_case_studies_d.html">Demos</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_versions_d.html">Versionen</a></td>
+</tr>
+</table>
+<h2>Beispiel: Superkontinuum-Erzeugung</h2>
+<h3>Beschreibung des Modells</h3>
+<p>Hier simulieren wir numerisch die Superkontinuumerzeugung in einer Germanosilikatfaser.
+Die Faser wurde so gestaltet, dass die Wellenlänge mit verschwindender chromatischer Dispersion nicht weit von der Pumpwellenlänge von 1550&nbsp;nm entfernt ist, da dies eine bessere spektrale Verbreiterung ermöglicht.
+Der mode solver wurde benutzt, um die <a href="effective_mode_area.html" title="a quantitative measure of the area which a waveguide or fiber mode effectively covers in the transverse dimensions">effektive Modenfläche</a> und die <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatische Dispersion</a> aus dem gegebenen Brechungsindexprofil zu berechnen.
+Die Wellenlängenabhängigkeit der Brechungsindizes wird mit Hilfe von Sellmeier-Gleichungen berücksichtigt.</p>
+<p>Pulse mit 1&nbsp;nJ Energie und 400&nbsp;fs Dauer werden in die Faser geschickt.
+Die Superkontinuum&shy;erzeugung involviert ein kompliziertes Zusammenspiel von Nichtlinearität und Dispersion in der Faser.
+Betreffend die Nichtlinearität muss nicht nur der Kerr-Effekt berücksichtigt werden, sondern auch <a href="raman_scattering.html" title="a nonlinear scattering process involving optical phonons">Ramanstreuung</a> und self-steepening.
+Das volle Profil der chromatischen Dispersion wird direkt vom mode solver übernommen.
+Die integrierte automatische Schrittweitenkontrolle ist nützlich, da gegen Ende der Faser wesentlich feinere numerische Schritte benötigt werden, um eine gute Genauigkeit zu erhalten.</p>
+<h3>Ergebnisse</h3>
+<p>Abbildung&nbsp;1 zeigt die die wellenlängenabhängige Gruppengeschwindigkeitsdispersion und den Gruppenindex der Faser.
+Beides wurde aus dem Brechungsindexprofil berechnet.
+Man erkennt, dass die Wellenlänge mit veschwindender Dispersion bei ca. 1500&nbsp;nm liegt, nicht weit von der Pumpwellenlänge (1550&nbsp;nm).</p>
+<figure>
+<img src="img/fiberpower_sc2.png" alt="dispersion profile of the fiber">
+<figcaption><span class="start">Abbildung&nbsp;1:</span> 
+Gruppengeschwindigkeitsdispersion und Gruppenindex der Faser.
+</figcaption>
+</figure>
+<p>Abbildung&nbsp;2 zeigt den erhaltenen Puls in der zeitlichen Domäne.
+Der Anfang des Pulses wurde nicht stark verändert, der Rest jedoch schon.</p>
+<figure>
+<img src="img/fiberpower_sc3.png" alt="pulses in time domain">
+<figcaption><span class="start">Abbildung&nbsp;2:</span> 
+Puls am Ende der Faser in der zeitlichen Domäne.
+</figcaption>
+</figure>
+<p>Abbildung&nbsp;3 zeigt das Spektrum des Pulses auf einer logarithmischen Skala.
+Eine starke spektrale Verbreiterung ist erkennbar.</p>
+<figure>
+<img src="img/fiberpower_sc4.png" alt="pulses in frequency domain">
+<figcaption><span class="start">Abbildung&nbsp;3:</span> 
+Spektrum des Pulses am Ende der Faser.
+</figcaption>
+</figure>
+<p>Abbildung&nbsp;4 zeigt, wie sich das Pulsspektrum in der Faser entwickelt.
+Die spektrale Verbreiterung beginnt langsam und wird dann stärker, um dann nicht mehr wesentlich weiter zu wachsen.</p>
+<figure>
+<img src="img/fiberpower_sc5.png" alt="evolution of pulse spectra in the fiber">
+<figcaption><span class="start">Abbildung&nbsp;4:</span> 
+Entwicklung des Pulsspektrums in der Faser.
+</figcaption>
+</figure>
+<p>Abbildung&nbsp;5 ist das Spektrogramm des Pulses am Ende der Faser.
+Die Farbskala wurde logarithmisch gewählt, so dass auch schwache Ausläufer gut sichtbar sind.</p>
+<figure>
+<img src="img/fiberpower_sc6.png" alt="spectrogram of the output pulse">
+<figcaption><span class="start">Abbildung&nbsp;5:</span> 
+Spektrogramm.
+</figcaption>
+</figure>
+<p>(<a href="fiberpower_case_studies_d.html">zurück zu der Liste der Beispiele</a>)</p>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">Kontakt und Impressum</a>, <a href="privacy_d.html">Datenschutzerklärung</a>
+</footer>
+</main></div>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="luEMO9Ez8zK7IfUJLZGvJQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Software",
+      "item": "https://www.rp-photonics.com/software_d.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "RP Fiber Power",
+      "item": "https://www.rp-photonics.com/fiberpower_d.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Demo",
+      "item": "https://www.rp-photonics.com/fiberpower_case_studies_d.html"
+    },{
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Superkontinuum",
+      "item": "https://www.rp-photonics.com/fiberpower_sc_d.html"
+    }]}
+}
+</script>
+</body>
+</html>

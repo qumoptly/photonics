@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-3WhEH3Jt21RRvIqf+AI36A=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - wavelength-swept lasers, intracavity bandpass filter, Fourier domain mode locking, application, optical coherence tomography</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/wavelength_swept_lasers.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-07-10">
+<meta name="description" content="Wavelength-swept lasers are lasers which allow periodic and rapid wavelength during, usually through a substantial wavelength range.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="wavelength-swept lasers, intracavity bandpass filter, Fourier domain mode locking, application, optical coherence tomography">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Wavelength-swept Lasers">
+<meta property="og:description" content="Wavelength-swept lasers are lasers which allow periodic and rapid wavelength during, usually through a substantial wavelength range.">
+<meta property="og:url" content="https://www.rp-photonics.com/wavelength_swept_lasers.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/wavelength_swept_lasers.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Wavelength-swept lasers are lasers which allow periodic and rapid wavelength during, usually through a substantial wavelength range.">
+<meta name="twitter:title" content="Wavelength-swept Lasers">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/wavelength_swept_lasers.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="3WhEH3Jt21RRvIqf+AI36A==">
+page="wavelength_swept_lasers.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo sponsor"></a> <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="3WhEH3Jt21RRvIqf+AI36A==">shownsponsors="DataRay,eagleyard Photonics,EKSMA OPTICS"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_wavelength_swept_lasers.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_w.html">letter W</a> &gt; <a href="wavelength_swept_lasers.html">wavelength-swept lasers</a></p>
+<h1>Wavelength-swept Lasers</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_wavelength_swept_lasers.html?s=vbox">11 suppliers for wavelength-swept lasers</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_wavelength_swept_lasers.html?s=vbox">List of suppliers for<br>wavelength-swept lasers</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: lasers which allow for period and fast wavelength tuning</p>
+<p>More general term: <a href="tunable_lasers.html" title="lasers the output wavelengths of which can be tuned">tunable lasers</a></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#lasers" title="other articles on lasers">lasers</a></p>
+<p><a href="encyclopedia_cite.html?article=wavelength-swept%20lasers">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>For some applications, it is required to periodically tune the optical <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a> of a laser source through a certain range.
+In some cases, one requires tuning through a relatively large range of e.g. 100&nbsp;nm or more, and that quite rapidly, with a sweep frequency of tens or hundreds of kilohertz, sometimes even more than 1&nbsp;MHz; conventional <a href="tunable_lasers.html" title="lasers the output wavelengths of which can be tuned">tunable lasers</a> cannot be tuned that fast.
+The operation of a wavelength-swept laser implies rapid periodic changes of the <a href="instantaneous_frequency.html" title="temporal derivative of the oscillation phase divided by 2&pi;">instantaneous frequency</a> of the laser output.
+Typically, one has a kind of triangular frequency modulation: approximately linear up- and down-sweeps, each occupying half of the sweep period.
+In some cases, however, the instantaneous wavelength of frequency versus time deviates substantially from such a triangular shape.</p>
+<h2 class="togglediv">Operation Principles</h2>
+<div>
+<p>Various kinds of <em>wavelength-swept lasers</em> have been developed for such purposes, and the most important operation principles are described in the following.</p>
+<h3 class="togglediv">Current Tuning</h3>
+<div>
+<p>Many <a href="laser_diodes.html" title="semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diodes</a> can to some extent be wavelength-tuned by modulating their drive current, essentially because that affects the junction temperature.
+Because the involved active volume is relatively small, the junction temperature can react quickly to changes of the drive current.
+Therefore, relatively rapid wavelength tuning is possible.</p>
+<p>Without additional measures, one usually cannot achieve precisely linear frequency chirps.
+One may apply a pre-distortion of the temporal form of the input current to improve that.
+Further, it is possible to improve the precision of the frequency sweeps by applying opto-electronic feedback [13].</p>
+</div>
+<h3 class="togglediv">Wavelength-swept Filter in a Laser Resonator</h3>
+<div>
+<p>In many cases, the basic operation principle of a wavelength-swept laser is the following.
+One has a <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a>, with a <a href="gain_media.html" title="media for laser amplification">gain medium</a> having a relatively large <a href="gain_bandwidth.html" title="the width of the optical frequency range in which significant gain is available from an amplifier">gain bandwidth</a>, and there is a fast <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">bandpass filter</a> in its <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a>.
+If the transmission wavelength of the filter is tuned, the laser wavelength follows accordingly, unless certain speed limits are reached.
+For high-speed tuning, it is advantageous to have a short <a href="photons.html" title="quanta of light energy">photon</a> lifetime of the resonator, i.e., ideally a short resonator combined with high round-trip power losses.
+When approaching the limits of tuning speed, the laser does not reach steady-state performance parameters, e.g. concerning its instantaneous <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>, which however may not be a problem for the application.
+On the other hand, slow frequency sweeps are easily obtained.</p>
+<p>The explained principle of operation is typically applied to <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber lasers</a> and to <a href="diode_lasers.html" title="semiconductor laser devices based on laser diodes">diode lasers</a>, the latter usually in the form of <a href="external_cavity_diode_lasers.html" title="non-monolithic diode lasers where the laser cavity (resonator) is completed with external optical elements">external-cavity diode lasers</a> (ECDLs).
+The gain medium can then be considered as a <a href="semiconductor_optical_amplifiers.html" title="optical amplifiers based on semiconductor gain media">semiconductor optical amplifier</a> (SOA).
+The by far highest sweep frequencies are achieved with semiconductor lasers, having short resonators and low photon lifetimes.
+On the other hand, fiber lasers can produce substantially higher output powers and can access some additional wavelength regions.</p>
+<p>Often used wavelength tuning elements are the following:</p>
+<ul>
+<li>A <a href="fabry_perot_interferometers.html" title="interferometers consisting of two highly reflecting mirrors, forming a standing-wave resonator">Fabry&ndash;P&eacute;rot interferometer</a> can be equipped with a piezo transducer, typically reaching scanning frequencies of tens of kilohertz, sometimes even hundreds of kilohertz (with mechanically resonant excitation).</li>
+<li>For lower scanning speeds, one may also use a <a href="diffraction_gratings.html" title="optical components containing a periodic structure which diffracts light">diffraction grating</a> in the laser resonator which is tilted with a piezo actuator.</li>
+<li>Some devices are based on MEMS technology (microelectromechanical systems) [14]; low-mass systems are intrinsically faster.</li>
+</ul>
+</div>
+<h3 class="togglediv">Fourier-domain Mode Locking</h3>
+<div>
+<p>Fourier-domain mode locking (FDML) [5] is similar to <a href="active_mode_locking.html" title="a technique of mode locking, based on active modulation of the intracavity losses or the round-trip phase change">active mode locking</a>, where however one does not simply modulate the intracavity losses, but instead the transmission wavelength of an intracavity filter.
+In addition to the similar operation principle described in the previous section, here one precisely synchronizes the modulation of transmission wavelength with the resonator round trips.
+As a result, the laser operates in a steady state, with the optical powers in the resonator modes staying constant.
+What changes periodically is only the output wavelength, but lasing at all wavelength simultaneously occurs in that kind of laser.
+Compared with the previously explained operation principle of a swept laser source, this operation mode is subject to much less <a href="laser_noise.html" title="fluctuations of various parameters of laser light, such as the optical power and phase">laser noise</a>, since lasing at any particular wavelength does not to be re-established in every resonator round-trip.
+The photon lifetime is no longer a limiting factor.</p>
+<p>The output of such a laser can also be considered as a periodic sequence of strongly <a href="chirp.html" title="time dependence of the instantaneous frequency of an optical pulse">chirped</a> pulses, similar to the <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a> from some ordinary <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked lasers</a>, but with the pulse duration being so long that subsequent pulses are actually no longer separated (i.e., with low power in between).</p>
+<aside class="callout blue">Fourier domain mode locking allows for the highest sweep frequencies.</aside>
+<p>Of course, certain constraints are introduced by the principle of Fourier domain mode locking.
+The modulation frequency needs to be precisely synchronized with the round-trip time of the resonator.
+It can actually also be an integer multiple of the round-trip frequency, resulting in a correspondingly higher sweep frequency.
+For very low sweep frequencies, one would need a very long resonator, which may be impractical; however, such lasers are very useful for high sweep frequencies, which are beneficial for applications like <a href="optical_coherence_tomography.html" title="an optical imaging technique where longitudinal resolution is achieved based on interference effects with low-coherence light">optical coherence tomography</a> (see below).
+In fact, the highest sweep frequencies &ndash; sometimes above 1&nbsp;MHz even in commercial products &ndash; are achieved with Fourier domain mode locking.</p>
+</div>
+<h3 class="togglediv">Sources With Dispersion Tuning</h3>
+<div>
+<p>It is also possible to realize wavelength-swept laser sources which do not require an intracavity bandpass filter.
+Instead, they can be based on <em>dispersion tuning</em> [7].
+Essentially, this means <a href="active_mode_locking.html" title="a technique of mode locking, based on active modulation of the intracavity losses or the round-trip phase change">active mode locking</a> of a laser where the resonator contains elements with large <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>.
+For a constant modulation frequency, the laser will emit short (typically picosecond) pulses at a wavelength which the laser chooses such that the round-trip time matches the modulation frequency.
+By tuning the modulation frequency within some narrow range, one can tune the laser to operate on different wavelengths.
+The tuning speed is limited by the need of the laser to find a new steady state.</p>
+</div>
+<h3 class="togglediv">Mode-locked Laser Plus Dispersive Delay Line</h3>
+<div>
+<p>Another possibility is to use a <a href="femtosecond_lasers.html" title="lasers emitting light pulses with durations between a few femtoseconds and hundreds of femtoseconds">femtosecond laser</a> and send its output pulses through a delay line with strong <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> [3].
+That leads to much longer, strongly chirped output pulses, which also perform a frequency sweep.
+In contrast to other swept sources, the output power is not approximately constant, but undergoes a strong modulations with the sweep frequency.
+While this technical approach may be relatively expensive, it could be applied to very broadband lasers, leading to the highest possible axial image resolution.</p>
+</div>
+</div>
+<h2 class="togglediv">Applications of Wavelength-swept Lasers</h2>
+<div>
+<p>A typical application of wavelength-swept lasers is in frequency domain <a href="optical_coherence_tomography.html" title="an optical imaging technique where longitudinal resolution is achieved based on interference effects with low-coherence light">optical coherence tomography</a> (FD-OCT), used e.g. in ophthalmology and dermatology.
+(The method is more specifically also called SS-OCT.)
+Here, it is necessary to sweep through a broad wavelength range in order to achieve a high spatial resolution in the direction of the laser beam.
+At the same time, very high scanning speeds are desirable, because that allows for fast image acquisition.</p>
+<p>Another application is the interrogation of <a href="fiber_optic_sensors.html" title="optical sensors based on fiber devices">fiber-optic sensors</a> [9,&thinsp;18].
+A sensor fiber may contain multiple <a href="fiber_bragg_gratings.html" title="reflective structures in the core of an optical fiber with a periodic or aperiodic perturbation of the effective refractive index">fiber Bragg gratings</a> with different reflection wavelengths, which are sensitive to the local strain all temperature conditions.
+For quickly interrogating multiple such sensors, it is necessary to scan the probe laser wavelengths quickly through a wide range, and wavelength-swept lasers are well suited for that purpose.</p>
+<p>There are methods of <a href="distance_measurements_with_lasers.html" title="measurements of distances using laser light">laser range finding</a> where wavelength-swept lasers are applied.</p>
+<p>In some cases, the rapid wavelength sweeping is applied in order to suppress nonlinear reflections caused by stimulated <a href="brillouin_scattering.html" title="a nonlinear scattering effect involving acoustic phonons">Brillouin scattering</a> (SBS), particularly in high-power <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifiers</a> [20].</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_wavelength_swept_lasers.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 11 suppliers for wavelength-swept lasers.</p>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="wavelength_swept_lasers.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">S. H. Yun <i>et al.</i>, &ldquo;High-speed wavelength-swept semiconductor laser with a polygon-scanner-based wavelength swept filter&rdquo;, Opt. Lett. 28 (20), 1981 (2003), <a href="https://doi.org/10.1364/OL.28.001981">doi:10.1364/OL.28.001981</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">M. Choma <i>et al.</i>, &ldquo;Sensitivity advantage of swept source and Fourier domain optical coherence tomography&rdquo;, Opt. Express 11 (18), 2183 (2003), <a href="https://doi.org/10.1364/OE.11.002183">doi:10.1364/OE.11.002183</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">S. Bourquin <i>et al.</i>, &ldquo;Ultrahigh resolution real time OCT imaging using a compact femtosecond Nd:glass laser and nonlinear fiber&rdquo;, Opt. Express 11 (24), 3290 (2003), <a href="https://doi.org/10.1364/OE.11.003290">doi:10.1364/OE.11.003290</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">W. Y. Oh <i>et al.</i>, &ldquo;115&nbsp;kHz tuning repetition rate ultrahigh-speed wavelength-swept semiconductor laser&rdquo;, Opt. Lett. 30 (23), 3159 (2005), <a href="https://doi.org/10.1364/OL.30.003159">doi:10.1364/OL.30.003159</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">R. Huber, M. Wojtkowski and J. G. Fujimoto, &ldquo;Fourier domain mode locking (FDML): a new laser operating regime and applications for optical coherence tomography&rdquo;, Opt. Express 14 (8), 3225 (2006), <a href="https://doi.org/10.1364/OE.14.003225">doi:10.1364/OE.14.003225</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">R. Huber <i>et al.</i>, &ldquo;Amplified, frequency swept lasers for frequency domain reflectometry and OCT imaging: design and scaling principles&rdquo;, Opt. Express 13 (9), 3513 (2005), <a href="https://doi.org/10.1364/OPEX.13.003513">doi:10.1364/OPEX.13.003513</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">S. Yamashita and M. Asano, &ldquo;Wide and fast wavelength-tunable mode-locked fiber laser based on dispersion tuning&rdquo;, Opt. Express 14 (20), 9299 (2006), <a href="https://doi.org/10.1364/OE.14.009299">doi:10.1364/OE.14.009299</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">R. Huber <i>et al.</i>, &ldquo;Fourier domain mode locking at 1050&nbsp;nm for ultra-high-speed optical coherence tomography of the human retina at 236,000 axial scans per second&rdquo;, Opt. Lett. 32 (14), 2049 (2007), <a href="https://doi.org/10.1364/OL.32.002049">doi:10.1364/OL.32.002049</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">E. J. Jung <i>et al.</i>, &ldquo;Characterization of FBG sensor interrogation based on a FDML wavelength swept laser&rdquo;, Opt. Express 16 (21), 16552 (2008), <a href="https://doi.org/10.1364/OE.16.016552">doi:10.1364/OE.16.016552</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">M. Y. Jeon <i>et al.</i>, &ldquo;High-speed and wide bandwidth Fourier domain mode-locked wavelength swept laser with multiple SOAs&rdquo;, Opt. Express 16 (4), 2547 (2008), <a href="https://doi.org/10.1364/OE.16.002547">doi:10.1364/OE.16.002547</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">Y. Zhou <i>et al.</i>, &ldquo;Tunable VCSEL with ultra-thin high contrast grating for high-speed tuning&rdquo;, Opt. Express 16 (18), 14221 (2008), <a href="https://doi.org/10.1364/OE.16.014221">doi:10.1364/OE.16.014221</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">S. Yamashita <i>et al.</i>, &ldquo;Wide and fast wavelength-swept fiber laser based on dispersion tuning for dynamic sensing&rdquo; (review article), <a href="http://dx.doi.org/10.1155/2009/572835">J. Sensors, Vol. 2009, Article ID 572835 (2009)</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">N. Satyan <i>et al.</i>, &ldquo;Precise control of broadband frequency chirps using optoelectronic feedback&rdquo;, Opt. Express 17 (18), 15991 (2009), <a href="https://doi.org/10.1364/OE.17.015991">doi:10.1364/OE.17.015991</a></td></tr>
+<tr><td class="refno">[14]</td><td class="refs">M. Kuznetsov <i>et al.</i>, &ldquo;Compact ultrafast reflective Fabry&ndash;P&eacute;rot tunable lasers for OCT imaging applications&rdquo;, Proc. SPIE 7554, 75541F (2010), <a href="https://doi.org/10.1117/12.842567">doi:10.1117/12.842567</a></td></tr>
+<tr><td class="refno">[15]</td><td class="refs">S.-W. Lee <i>et al.</i>, &ldquo;Wide tuning range wavelength-swept laser with a single SOA at 1020&nbsp;nm for ultrahigh resolution Fourier-domain optical coherence tomography&rdquo;, Opt. Express 19 (22), 21227 (2011), <a href="https://doi.org/10.1364/OE.19.021227">doi:10.1364/OE.19.021227</a></td></tr>
+<tr><td class="refno">[16]</td><td class="refs">T. Klein <i>et al.</i>, &ldquo;Megahertz OCT for ultrawide-field retinal imaging with a 1050&nbsp;nm Fourier domain mode-locked laser&rdquo;, Opt. Express 19 (4), 3044 (2011), <a href="https://doi.org/10.1364/OE.19.003044">doi:10.1364/OE.19.003044</a></td></tr>
+<tr><td class="refno">[17]</td><td class="refs">V. Jayaraman <i>et al.</i>, &ldquo;Rapidly swept, ultra-widely-tunable 1060&nbsp;nm MEMS-VCSELs&rdquo;, Electron. Lett. 48 (21), 1331 (2012), <a href="https://doi.org/10.1049/el.2012.3180">doi:10.1049/el.2012.3180</a></td></tr>
+<tr><td class="refno">[18]</td><td class="refs">Y. S. Kwon <i>et al.</i>, &ldquo;Dynamic sensor interrogation using wavelength-swept laser with a polygon-scanner-based wavelength filter&rdquo;, Sensors 13 (8), 9669 (2013), <a href="https://doi.org/10.3390/s130809669">doi:10.3390/s130809669</a></td></tr>
+<tr><td class="refno">[19]</td><td class="refs">T. Klein and R. Huber, &ldquo;High-speed OCT light sources and systems&rdquo; (invited article), Biomed Opt. Express 8 (2), 828 (2017), <a href="https://doi.org/10.1364/BOE.8.000828">doi:10.1364/BOE.8.000828</a></td></tr>
+<tr><td class="refno">[20]</td><td class="refs">J. O. White <i>et al.</i>, &ldquo;1.6&nbsp;kW Yb fiber amplifier using chirped seed amplification for stimulated Brillouin scattering suppression&rdquo;, Appl. Opt. 56 (3), B116 (2017), <a href="https://doi.org/10.1364/AO.56.00B116">doi:10.1364/AO.56.00B116</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="tunable_lasers.html" title="lasers the output wavelengths of which can be tuned">tunable lasers</a>, <a href="optical_coherence_tomography.html" title="an optical imaging technique where longitudinal resolution is achieved based on interference effects with low-coherence light">optical coherence tomography</a>, <a href="instantaneous_frequency.html" title="temporal derivative of the oscillation phase divided by 2&pi;">instantaneous frequency</a><br>and other articles in the category <a href="categories.html#lasers" title="other articles on lasers">lasers</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/wavelength_swept_lasers.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fwavelength_swept_lasers.html&text=RP+Photonics+Encyclopedia+-+wavelength-swept+lasers%2C+intracavity+bandpass+filter%2C+Fourier+domain+mode+locking%2C+application%2C+optical+coherence+tomography" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fwavelength_swept_lasers.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fwavelength_swept_lasers.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/wavelength_swept_lasers.html"&gt;<br>Article on Wavelength-swept Lasers&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/wavelength_swept_lasers.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/wavelength_swept_lasers.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/wavelength_swept_lasers.html<br>article on 'Wavelength-swept Lasers' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Corona Virus Crisis</h2>
+<p>It is interesting and instructive to realize certain analogies between the spread of an epidemic and elementary processes in lasers. In particular, one can <b>learn about the power of expnential growth</b> and the <b>threshold behavior</b>.</p>
+<p style="font-size:130%; margin:20px 0;">Read the article: <br> "<a href="./spotlight_2020_03_16.html?banner=Corona">Laser Physics Helps to Understand the Corona Virus Crisis</a>"!</p>
+<p>Comments are welcome &ndash; see the input form below the article.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="3WhEH3Jt21RRvIqf+AI36A==">shownbanner = "Corona";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>More to Read</h2>
+ <p>Here are some randomly selected encyclopedia articles &ndash; just to make you curious:</p>
+  <ul>
+<li><a href="./red_lasers.html">red lasers</a></li><li><a href="./optical_pumping.html">optical pumping</a></li><li><a href="./abcd_matrix.html">ABCD matrix</a></li><li><a href="./semiconductor_optical_amplifiers.html">semiconductor optical amplifiers</a></li><li><a href="./free_spectral_range.html">free spectral range</a></li><li><a href="./plastic_optics.html">plastic optics</a></li><li><a href="./nodal_points.html">nodal points</a></li><li><a href="./beam_pointing_fluctuations.html">beam pointing fluctuations</a></li><li><a href="./self_heterodyne_linewidth_measurement.html">self-heterodyne linewidth measurement</a></li><li><a href="./laser_lines.html">laser lines</a></li><li><a href="./orientation_patterned_semiconductors.html">orientation-patterned semiconductors</a></li><li><a href="./nonlinear_polarization.html">nonlinear polarization</a></li><li><a href="./spectral_imaging.html">spectral imaging</a></li><li><a href="./erbium_doped_gain_media.html">erbium-doped gain media</a></li><li><a href="./objectives.html">objectives</a></li></ul>
+
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="3WhEH3Jt21RRvIqf+AI36A==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/wavelength_swept_lasers.html"
+    },
+    "headline": "Wavelength-swept Lasers",
+    "image": "https://www.rp-photonics.com/previews/wavelength_swept_lasers.png",
+    "datePublished": "2019-02-16",
+    "dateModified": "2020-07-10",
+    "description": "Wavelength-swept lasers are lasers which allow periodic and rapid wavelength during, usually through a substantial wavelength range.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter W",
+      "item": "https://www.rp-photonics.com/encyclopedia_w.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "wavelength-swept lasers",
+      "item": "https://www.rp-photonics.com/wavelength_swept_lasers.html"
+    }]}
+}
+</script>
+</body>
+</html>

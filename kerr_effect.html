@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-jURi140XZ3zs4sjjaK3VKg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Kerr effect, DC Kerr effect, Kerr cells, AC Kerr effect, nonlinearity, self-phase modulation, fiber, nonlinear polarization, self-steepening</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/kerr_effect.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="The Kerr effect is a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="Kerr effect, DC Kerr effect, Kerr cells, AC Kerr effect, nonlinearity, self-phase modulation, fiber, nonlinear polarization, self-steepening">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kerr Effect">
+<meta property="og:description" content="The Kerr effect is a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization.">
+<meta property="og:url" content="https://www.rp-photonics.com/kerr_effect.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/kerr_effect.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="The Kerr effect is a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization.">
+<meta name="twitter:title" content="Kerr Effect">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/kerr_effect.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="jURi140XZ3zs4sjjaK3VKg==">
+page="kerr_effect.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/nkt_photonics.html"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="jURi140XZ3zs4sjjaK3VKg==">shownsponsors="NKT Photonics,RPMC Lasers"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_k.html">letter K</a> &gt; <a href="kerr_effect.html">Kerr effect</a></p>
+<h1>Kerr Effect</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="boxadvertisement">
+<h2>Simulate Consequences of the Kerr Effect</h2>
+<p>With the <a href="fiberpower.html"><b>RP Fiber Power</b></a> software, one can investigate various consequences of the optical Kerr effect, e.g. <a href="self_phase_modulation.html" title="nonlinear phase modulation of a beam, caused by its own intensity via the Kerr effect">self-phase modulation</a> or <a href="cross_phase_modulation.html" title="a nonlinear effect where the optical intensity of one beam influences the phase change of another beam">cross-phase modulation</a> on ultrashort pulses or nonlinear <a href="self_focusing.html" title="focusing of a beam in a transparent medium, caused by the beam itself through a nonlinear process in the medium">self-focusing</a>.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization</p>
+<p>More general term: optical <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Kerr-effekt</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#nonlinear_optics" title="other articles on nonlinear optics">nonlinear optics</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<p><a href="encyclopedia_cite.html?article=Kerr%20effect">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>The Kerr effect is a <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinear</a> optical effect which can occur when light propagates in <a href="laser_crystals.html" title="transparent crystals with laser-active dopants, used as laser gain media">crystals</a> and <a href="laser_crystals_versus_glasses.html">glasses</a>, but also in other media such as gases.
+It can be described as a change in <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> caused by electric fields, and being proportional to the square of the electric field strength.
+It comes in two different forms, which are explained in the following sections.</p>
+<h2 class="togglediv">Kerr Electro-optic Effect (DC Kerr Effect)</h2>
+<div>
+<p>In this context, one considers a slowly varying electric field, which is applied to some medium, e.g. to a piece of glass using two electrodes.
+A light beam passing the glass can then experience a <a href="polarization_of_light.html" title="direction of the electric field oscillation of a light beam">polarization</a>-dependent change of <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">optical phase</a> which is proportional to the square of the voltage applied to the electrodes, i.e., to the square of the electric field strength.
+The polarization dependence implies that <a href="birefringence.html" title="the polarization dependence of the refractive index of a medium">birefringence</a> is induced even in an <a href="optical_materials.html" title="materials used for optical components">optical material</a> which is naturally not birefringent.
+Subsequently, the considered piece of glass could be used as an electrically controllable <a href="waveplates.html" title="transparent plates with a defined amount of birefringence, used for modifying the polarization of light">waveplate</a>.</p>
+<p>Assuming a constant electric field strength over some path length <span class="eqn_il"><i>L</i></span>, the field-induced phase change is</p>
+<div class="eqn"><img src="eqn/dn_dc.gif" width="158" height="41" alt="DC Kerr effect"></div>
+<p>where <span class="eqn_il"><span class="greek">&Delta;</span><i>n</i></span> is the difference in refractive index between two polarization directions (parallel and perpendicular to the electric field direction), <span class="eqn_il"><i>K</i></span> is the Kerr constant of the material and <span class="eqn_il"><i>E</i></span> is the applied electric field strength.</p>
+<p>Particularly large values of the Kerr constant are found for some polar liquids such as nitrotoluene and nitrobenzene, where molecules can be oriented by the applied electric field.
+Such liquids, filled into glass cells, are called <em>Kerr cells</em>.</p>
+<p>The Kerr electro-optic effect is generally quite weak compared with the <a href="pockels_effect.html" title="the phenomenon that the refractive index of a medium exhibits a modification which is proportional to the strength of an applied electric field (<em>linear electro-optic effect</em>)"><em>Pockels effect</em></a>, where the refractive index changes are proportional to the electric field strength, rather than its square.
+The Pockels effect is exploited in <a href="pockels_cells.html" title="electro-optic devices, used for building modulators">Pockels cells</a>.</p>
+</div>
+<h2 class="togglediv">Optical Kerr Effect (AC Kerr Effect)</h2>
+<div>
+<p>Another variant of the Kerr effect occurs without an externally applied electric field, based on the electric field of a <a href="light.html" title="electromagnetic radiation in the visible spectral range, or sometimes in an extended spectral region">light</a> wave only.
+The Kerr effect is the effect of an instantaneously occurring <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinear</a> response, which can be described as modifying the <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a>.
+In particular, the refractive index for the high intensity light beam itself is modified according to</p>
+<div class="eqn"><img src="eqn/spm_dn.gif" width="65" height="24" alt="index change via SPM"></div>
+<p>with the <a href="nonlinear_index.html" title="a parameter for quantifying the Kerr nonlinearity of a medium"><em>nonlinear index</em></a> <span class="eqn_il"><i>n</i><sub>2</sub></span> and the <a href="optical_intensity.html" title="optical power per unit area">optical intensity</a> <span class="eqn_il"><i>I</i></span>, which is proportional to the modulus squared of the electric field strength.
+The <span class="eqn_il"><i>n</i><sub>2</sub></span> value of a medium is related to the third-order susceptibility <span class="eqn_il"><span class="greek">&chi;</span><sup>(3)</sup></span> and can be measured e.g. with the <a href="z_scan_measurements.html" title="a technique for measuring the strength of the Kerr nonlinearity of a material, relying on self-focusing">z-scan technique</a>.
+Note that in addition to the Kerr effect (a purely electronic nonlinearity), <em>electrostriction</em> can significantly contribute to the value of the nonlinear index [3,&thinsp;4].
+The electric field of light causes density variations (acoustic waves) which themselves influence the refractive index via the photoelastic effect.
+That mechanism, however, occurs on a much longer time scale and is thus relevant only for relatively slow power modulations, but not for <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a>.</p>
+<p>Fused silica, as used e.g. for <a href="silica_fibers.html" title="optical fibers based on fused silica or related materials">silica fibers</a>, has a nonlinear index of &asymp;&thinsp;3&thinsp;&times;&thinsp;10<sup>&minus;16</sup>&thinsp;cm<sup>2</sup>/W.
+For soft glasses and particularly for semiconductors, it can be much higher, because it depends strongly on the <a href="band_gap.html" title="a range of energies for which there are no states of carriers in a medium">band gap energy</a>.
+The nonlinearity is also often negative for photon energies above roughly 70&#37; of the bandgap energy (<em>self-defocusing nonlinearity</em>).</p>
+<p>The time- and frequency-dependent refractive index change leads to <a href="self_phase_modulation.html" title="nonlinear phase modulation of a beam, caused by its own intensity via the Kerr effect">self-phase modulation</a> and <a href="kerr_lens.html" title="a lensing effect arising from the Kerr nonlinearity">Kerr lensing</a>, for different overlapping light beams also to <a href="cross_phase_modulation.html" title="a nonlinear effect where the optical intensity of one beam influences the phase change of another beam">cross-phase modulation</a>.
+Note that the effective refractive index increase caused by some intense beam for <em>other</em> beams is twice as large as that according to the equation shown above, assuming that both beams are in the same polarization state.</p>
+<p>The description of the optical Kerr effect via an intensity-dependent refractive index is actually based on a certain approximation, valid for light with a small optical <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>.
+For very short and broadband <a href="pulses.html" title="flashes of light">pulses</a>, a deviation from this simple behavior can be observed, which is called <em>self-steepening</em>.
+It reduces the <a href="velocity_of_light.html" title="the velocity with which light propagates in a medium">velocity</a> with which the peak of the pulse propagates (i.e. it reduces the <a href="group_velocity.html" title="the velocity with which the envelope of a weak narrow-band optical pulse propagates in a medium">group velocity</a>) and thus leads to an increasing slope of the trailing part of the pulse.
+This effect is relevant e.g. for <a href="supercontinuum_generation.html" title="a nonlinear process for strong spectral broadening of light">supercontinuum generation</a>.
+Furthermore, the strength of the Kerr effect is known to saturate at very high optical intensities.</p>
+<p>At extremely high optical intensities, there may not be a further increase of refractive index in proportion to the intensity, but a saturation and even substantial decrease of refractive index [5].
+This can be understood as an effect of multiphoton ionization, leading to induced losses, which are related to additional <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">phase</a> changes via <a href="kramers_kronig_relations.html" title="mathematical relations between absorption coefficient and refractive index of transparent media">Kramers&ndash;Kronig relations</a> [7,&thinsp;8].</p>
+<p>A nonlinear polarization with delayed (non-instantaneous) response cannot be simply described as a modification of the refractive index.
+Its effect is called <a href="raman_scattering.html" title="a nonlinear scattering process involving optical phonons"><em>Raman scattering</em></a>, and is not considered to be part of the Kerr effect.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="kerr_effect.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">R. H. Stolen and A. Ashkin, &ldquo;Optical Kerr effect in glass waveguide&rdquo;, Appl. Phys. Lett. 22, 294 (1973), <a href="https://doi.org/10.1063/1.1654644">doi:10.1063/1.1654644</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">M. Sheik-Bahae <i>et al.</i>, &ldquo;Dispersion and band-gap scaling of the electronic Kerr effect in solids associated with two-photon absorption&rdquo;, Phys. Rev. Lett. 65 (1), 96 (1990), <a href="https://doi.org/10.1103/PhysRevLett.65.96">doi:10.1103/PhysRevLett.65.96</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">E. L. Buckland and R. W. Boyd, &ldquo;Electrostrictive contribution to the intensity-dependent refractive index of optical fibers&rdquo;, Opt. Lett. 21 (15), 1117 (1996), <a href="https://doi.org/10.1364/OL.21.001117">doi:10.1364/OL.21.001117</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">E. L. Buckland and R. W. Boyd, &ldquo;Measurement of the frequency response of the electrostrictive nonlinearity in optical fibers&rdquo;, Opt. Lett. 22 (10), 676 (1997), <a href="https://doi.org/10.1364/OL.22.000676">doi:10.1364/OL.22.000676</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">V. Loriot <i>et al.</i>, &ldquo;Measurement of high order Kerr refractive index of major air components&rdquo;, Opt. Express 17 (16), 13429 (2009), <a href="https://doi.org/10.1364/OE.17.013429">doi:10.1364/OE.17.013429</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">D. N. Schimpf <i>et al.</i>, &ldquo;Circular versus linear polarization in laser-amplifiers with Kerr-nonlinearity&rdquo;, Opt. Express 17 (21), 18774 (2009), <a href="https://doi.org/10.1364/OE.17.018774">doi:10.1364/OE.17.018774</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">C. Brée, A. Demircan and G. Steinmeyer, &ldquo;Saturation of the all-optical Kerr effect&rdquo;, Phys. Rev. Lett. 106 (18), 183902 (2011), <a href="https://doi.org/10.1103/PhysRevLett.106.183902">doi:10.1103/PhysRevLett.106.183902</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">B. Borchers <i>et al.</i>, &ldquo;Saturation of the all-optical Kerr effect in solids&rdquo;, Opt. Lett. 37 (9), 1541 (2012), <a href="https://doi.org/10.1364/OL.37.001541">doi:10.1364/OL.37.001541</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">E. Fedulova <i>et al.</i>, &ldquo;Kerr effect in multilayer dielectric coatings&rdquo;, Opt. Express 24 (19), 21802 (2016), <a href="https://doi.org/10.1364/OE.24.021802">doi:10.1364/OE.24.021802</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">G. P. Agrawal, <i>Nonlinear Fiber Optics</i>, 4th edn., Academic Press, New York (2007)</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="kerr_lens.html" title="a lensing effect arising from the Kerr nonlinearity">Kerr lens</a>, <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">optical phase</a>, <a href="self_phase_modulation.html" title="nonlinear phase modulation of a beam, caused by its own intensity via the Kerr effect">self-phase modulation</a>, <a href="cross_phase_modulation.html" title="a nonlinear effect where the optical intensity of one beam influences the phase change of another beam">cross-phase modulation</a>, <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a>, <a href="nonlinear_index.html" title="a parameter for quantifying the Kerr nonlinearity of a medium">nonlinear index</a>, <a href="group_velocity.html" title="the velocity with which the envelope of a weak narrow-band optical pulse propagates in a medium">group velocity</a>, <a href="raman_scattering.html" title="a nonlinear scattering process involving optical phonons">Raman scattering</a><br>and other articles in the categories <a href="categories.html#nonlinear_optics" title="other articles on nonlinear optics">nonlinear optics</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/kerr_effect.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fkerr_effect.html&text=RP+Photonics+Encyclopedia+-+Kerr+effect%2C+DC+Kerr+effect%2C+Kerr+cells%2C+AC+Kerr+effect%2C+nonlinearity%2C+self-phase+modulation%2C+fiber%2C+nonlinear+polarization%2C+self-steepening" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fkerr_effect.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fkerr_effect.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/kerr_effect.html"&gt;<br>Article on Kerr Effect&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/kerr_effect.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/kerr_effect.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/kerr_effect.html<br>article on 'Kerr Effect' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Website Tours</h2>
+<p>You can explore our website with the following tours:</p>
+<ul>
+<li><a href="./encyclopedia.html?tour=Encyclopedia">The RP Photonics Encyclopedia</a></li>
+<li><a href="./encyclopedia.html?tour=New_Encyclopedia_Articles">The latest encyclopedia articles</a></li>
+<li><a href="./buyersguide.html?tour=Using_the_Buyers_Guide">Using the Buyer's Guide</a></li>
+<li><a href="./buyersguide.html?tour=Advertising_in_the_Buyers_Guide">Advertising in the Buyer's Guide</a></li>
+</ul>
+<img src="./img/tour_bus.png" style="width:90%; margin:15px 0;" alt="&nbsp;">
+<p>You will be lead through a couple of pages, obtaining explanations on every one.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="jURi140XZ3zs4sjjaK3VKg==">shownbanner = "tours";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Fighting Fraud in Science</h2>
+<p>We occasionally read about scientific fraud &ndash; things like fabricated measurement results &ndash; which is utterly unfair and also undermines the trust of the public in science and its results.</p>
+<p>How to fight that problem?</p>
+<ul>
+<li>Do we need to tell young scientists more clearly that fraud is evil?</li>
+<li>Do supervisors have to stop trusting the results of their coworkers?</li>
+<li>Does the pressure to produce results inevitably favor fraud?</li>
+<li>Where exactly lies the responsibility, if something goes wrong?</li>
+</ul>
+<p>Our <a href="./spotlight_2009_10_19.html?banner=science_fraud">Photonics Spotlight article on science fraud</a> analyzes that carefully.
+It suggests that <b>the risk of fraud is close to zero where supervisors do a responsible job</b>.
+Relations to a more widespread problem &ndash; <b>corrupt authorship practices</b> &ndash; are also identified.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="jURi140XZ3zs4sjjaK3VKg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/kerr_effect.html"
+    },
+    "headline": "Kerr Effect",
+    "image": "https://www.rp-photonics.com/previews/kerr_effect.png",
+    "datePublished": "2007-11-28",
+    "dateModified": "2020-03-14",
+    "description": "The Kerr effect is a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter K",
+      "item": "https://www.rp-photonics.com/encyclopedia_k.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Kerr effect",
+      "item": "https://www.rp-photonics.com/kerr_effect.html"
+    }]}
+}
+</script>
+</body>
+</html>

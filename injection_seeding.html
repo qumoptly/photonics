@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-O9HNGxQtc0h4ZFmCmnKuxw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - injection seeding, laser, optical parametric oscillator, narrow, linewidth, prelasing</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/injection_seeding.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Injection seeding is a technique for enforcing narrowband operation of a laser or optical parametric oscillator by injecting light into its resonator.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="injection seeding, laser, optical parametric oscillator, narrow, linewidth, prelasing">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Injection Seeding">
+<meta property="og:description" content="Injection seeding is a technique for enforcing narrowband operation of a laser or optical parametric oscillator by injecting light into its resonator.">
+<meta property="og:url" content="https://www.rp-photonics.com/injection_seeding.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/injection_seeding.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Injection seeding is a technique for enforcing narrowband operation of a laser or optical parametric oscillator by injecting light into its resonator.">
+<meta name="twitter:title" content="Injection Seeding">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/injection_seeding.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="O9HNGxQtc0h4ZFmCmnKuxw==">
+page="injection_seeding.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/encyclopedia.html?tour=Encyclopedia"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="O9HNGxQtc0h4ZFmCmnKuxw==">shownsponsors="Optikexpertisen"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_i.html">letter I</a> &gt; <a href="injection_seeding.html">injection seeding</a></p>
+<h1>Injection Seeding</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_injection_seeded_lasers.html?s=vbox">3 suppliers for injection-seeded lasers</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_injection_seeded_lasers.html?s=vbox">List of suppliers for<br>injection-seeded lasers</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="advicebox">
+<p>Ask <a href="index.html">RP Photonics</a> for advice on any injection-locked lasers or OPOs.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a technique for enforcing narrowband operation of a laser or optical parametric oscillator by injecting light into its resonator</p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#fluctuations_and_noise" title="other articles on fluctuations and noise">fluctuations and noise</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<p><a href="encyclopedia_cite.html?article=injection%20seeding">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Injection seeding is a technique which is mostly applied to <a href="pulse_generation.html" title="the generation of light pulses (flashes)">pulsed</a> <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">lasers</a> and <a href="optical_parametric_oscillators.html" title="coherent light sources based on parametric amplification within an optical resonator">optical parametric oscillators</a>, usually with the main goal of achieving emission with a narrower optical <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a> (<a href="linewidth.html" title="width of the spectrum of a light beam or an absorption feature">linewidth</a>).
+Essentially it means that light from a <a href="seed_lasers.html" title="lasers which are used for generating some seed light into an amplifier or another laser">seed laser</a>, which is usually a <a href="single_frequency_lasers.html" title="lasers emitting radiation in a single resonator mode">single-frequency laser</a> in <a href="continuous_wave_operation.html" title="operation mode of a laser with continuous light emission">continuous-wave operation</a>, is injected into a <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched</a> <a href="slave_laser.html" title="a laser which is injection-locked to another laser">slave laser</a> or into a nanosecond <a href="optical_parametric_oscillators.html" title="coherent light sources based on parametric amplification within an optical resonator">optical parametric oscillator</a> at the beginning of a pulse buildup period.
+Without that seed light, the slave laser or OPO would normally emit on multiple <a href="resonator_modes.html" title="modes of an optical or microwave resonator">resonator modes</a> having an optical <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> of comparable magnitude, and the power distribution on several modes may fluctuate from pulse to pulse.
+If the <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequency</a> of the seed light is close enough to the resonance frequency of one particular resonator mode of the slave device, that mode can start oscillation with a much higher power than all the competing modes, and can therefore strongly dominate in the output pulse.
+In that way, the emission bandwidth is drastically reduced, compared with unseeded (free-running) emission, and the temporal pulse profile can be smoother, because mode beating is avoided.</p>
+<p>Another effect of injection seeding is a significantly reduced pulse build-up time.
+This is particularly useful in an OPO with a nanosecond pump source, where the pump power can not be converted during the pulse build-up phase: a shorter build-up time increases the output <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a> and conversion efficiency.
+For a Q-switched laser, the reduced build-up time will usually not influence the power efficiency, but with proper stabilization of the resonator frequencies (see below), the <a href="timing_jitter.html" title="fluctuations of the temporal positions of pulses">timing jitter</a> may be reduced.</p>
+<p>Injection seeding does not require an exact match of the seed laser frequency and a resonance of the slave laser.
+It is sufficient that some substantial <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a> is injected into one of the resonator modes, and for that purpose some moderate mismatch of frequencies (some fraction of the <a href="free_spectral_range.html" title="frequency spacing of the axial modes of an optical resonator">free spectral range</a> of the slave laser resonator) is acceptable.
+The frequency of the generated pulse may then deviate from the injected frequency; this is in contrast to the method of <a href="injection_locking.html" title="a technique for enforcing operation of a laser on a certain optical frequency by injecting light with that frequency into the laser resonator">injection locking</a>, where the emission frequency exactly equals the injected frequency.
+Frequency locking may occur in an injected-seeded laser, but the method can work also outside the narrow locking band.</p>
+<p>Different methods can be used for the (approximate) stabilization of the slave laser frequency to the seed frequency.
+An error signal can be generated e.g. with a dithering technique, as also used for the <a href="stabilization_of_lasers.html" title="measures applied to lasers in order to improve their stability in terms of output power, optical frequency, or other quantities">stabilization</a> of continuous-wave lasers.
+Alternatively, it is possible to adjust the slave laser's frequency automatically (e.g. via moving a resonator mirror) so that the build-up time is minimized.
+It is also possible to scan some range of frequencies and fire the <a href="q_switches.html" title="optical switches which are typically used for generating nanosecond pulses in lasers">Q switch</a> as soon as a resonance is detected (<em>ramp-fire technique</em>).</p>
+<h2 class="togglediv">Self-injection Seeding</h2>
+<div>
+<p>An obvious disadvantage of the conventional method of injection seeding is that an additional seed laser (<a href="master_laser.html" title="a single-frequency laser used for injection locking one or several other lasers"><em>master laser</em></a>) is required.
+Self-injection seeding is a modified method, where the seed laser is eliminated.
+The seed light is then produced from the seeded laser itself, or at least using the same <a href="gain_media.html" title="media for laser amplification">gain medium</a>.</p>
+<p>For example, a dual-cavity arrangement has been demonstrated, which contains a <a href="pockels_cells.html" title="electro-optic devices, used for building modulators">Pockels cell</a> as an optical switch [3].
+In the initial phase, directly after injection of a pump pulse into the gain medium, the laser resonator contains frequency-selective elements, which introduce some losses and could not tolerate a high power level, but allow for the build-up of light with a narrow <a href="linewidth.html" title="width of the spectrum of a light beam or an absorption feature">linewidth</a>.
+Once a certain power level has been reached, the Pockels cell is switched, and this reconfigures the laser resonator so that the light does no longer go through the sensitive frequency-selective elements.
+Although the laser resonator is much less frequency-selective in this state, the light generated in the previous phase acts as a seed so that the linewidth remains narrow during subsequent further amplification.</p>
+<p>A variant of this technique uses <em>prelasing</em> in the same resonator, when the resonator loss is kept at a relatively high level.
+Although the resonator is then not particularly frequency-selective in the prelasing phase, the linewidth may be strongly reduced.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_injection_seeded_lasers.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 3 suppliers for injection-seeded lasers.</p>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="injection_seeding.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">J. E. Bjorkholm and H. G. Danielmeyer, &ldquo;Frequency control of a pulsed optical parametric oscillator by radiation injection&rdquo;, Appl. Phys. Lett. 15, 171 (1969), <a href="https://doi.org/10.1063/1.1652954">doi:10.1063/1.1652954</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">U. Ganiel <i>et al.</i>, &ldquo;Analysis of injection locking in pulsed dye laser systems&rdquo;, IEEE J. Quantum Electron. 12 (11), 704 (1976), <a href="https://doi.org/10.1109/JQE.1976.1069060">doi:10.1109/JQE.1976.1069060</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">N. P. Barnes <i>et al.</i>, &ldquo;A self injection locked, Q-switched, line-narrowed Ti:Al<sub>2</sub>O<sub>3</sub> laser&rdquo;, IEEE J. Quantum Electron. 24 (6), 1021 (1988), <a href="https://doi.org/10.1109/3.224">doi:10.1109/3.224</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">S. Basu and R. L. Byer, &ldquo;Short pulse injection seeding of Q-switched Nd:glass laser oscillators &ndash; theory and experiment&rdquo;, IEEE J. Quantum Electron. 26 (1), 149 (1990), <a href="https://doi.org/10.1109/3.44928">doi:10.1109/3.44928</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">N. P. Barnes and J. C. Barnes, &ldquo;Injection seeding I: Theory&rdquo;, IEEE J. Quantum Electron. 29 (10), 2670 (1993), <a href="https://doi.org/10.1109/3.250390">doi:10.1109/3.250390</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">J. C. Barnes <i>et al.</i>, &ldquo;Injection seeding II: Ti:Al<sub>2</sub>O<sub>3</sub> experiments&rdquo;, IEEE J. Quantum Electron. 29 (10), 2684 (1993), <a href="https://doi.org/10.1109/3.250391">doi:10.1109/3.250391</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">D.-K. Ko <i>et al.</i>, &ldquo;Self-seeding in a dual-cavity type pulsed Ti:sapphire laser oscillator&rdquo;, Opt. Lett. 20 (7), 710 (1995), <a href="https://doi.org/10.1364/OL.20.000710">doi:10.1364/OL.20.000710</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">A. Fix <i>et al.</i>, &ldquo;Tunable beta-barium borate optical parametric oscillator: operating characteristics with and without injection seeding&rdquo;, J. Opt. Soc. Am. B 10 (9), 1744 (1993), <a href="https://doi.org/10.1364/JOSAB.10.001744">doi:10.1364/JOSAB.10.001744</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">A. J. McGrath <i>et al.</i>, &ldquo;Injection-seeded, single-frequency, Q-switched erbium:glass laser for remote sensing&rdquo;, Appl. Opt. 37 (24), 5706 (1998), <a href="https://doi.org/10.1364/AO.37.005706">doi:10.1364/AO.37.005706</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="injection_locking.html" title="a technique for enforcing operation of a laser on a certain optical frequency by injecting light with that frequency into the laser resonator">injection locking</a>, <a href="seed_lasers.html" title="lasers which are used for generating some seed light into an amplifier or another laser">seed lasers</a><br>and other articles in the categories <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#fluctuations_and_noise" title="other articles on fluctuations and noise">fluctuations and noise</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/injection_seeding.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Finjection_seeding.html&text=RP+Photonics+Encyclopedia+-+injection+seeding%2C+laser%2C+optical+parametric+oscillator%2C+narrow%2C+linewidth%2C+prelasing" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Finjection_seeding.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Finjection_seeding.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/injection_seeding.html"&gt;<br>Article on Injection Seeding&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/injection_seeding.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/injection_seeding.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/injection_seeding.html<br>article on 'Injection Seeding' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="https://www.shanghai-optics.com/" data-supplier="Shanghai Optics" data-location="banner" rel="nofollow" class="bg externallink"><img src="./bg/banners/shanghai_optics.jpg" alt="Shanghai Optics"></a>
+</div>
+</aside>
+<script type="text/javascript" nonce="O9HNGxQtc0h4ZFmCmnKuxw==">shownbanner = "Shanghai Optics";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>How PhD Students Should Get Supported by Supervisors</h2>
+<p>A recent <a href="./spotlight_2014_12_17.html?banner=supervisors">article in the Photonics Spotlight</a> discusses the responsibilities of supervisors (professors and senior research assistance).</p>
+<p>Some key statements:</p>
+<ul>
+<li>Even if PhD students can carry out most of the work in a research project, vital inputs are needed from supervisors particularly in the planning phase and when a crisis occurs.</li>
+<li>A helpful supervisor does not only benefit the supported students, but contributes to the effectiveness of the whole research team.</li>
+<li>If serious engagement were the condition of authorship of supervisors, supervisors would be more likely to do their job.</li>
+<li>A substantial risk for science fraud arises only in a serious crisis &ndash; and is in that case strongly dependent on how the supervisor performs!</li>
+</ul>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="O9HNGxQtc0h4ZFmCmnKuxw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/injection_seeding.html"
+    },
+    "headline": "Injection Seeding",
+    "image": "https://www.rp-photonics.com/previews/injection_seeding.png",
+    "datePublished": "2007-10-26",
+    "dateModified": "2020-03-14",
+    "description": "Injection seeding is a technique for enforcing narrowband operation of a laser or optical parametric oscillator by injecting light into its resonator.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter I",
+      "item": "https://www.rp-photonics.com/encyclopedia_i.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "injection seeding",
+      "item": "https://www.rp-photonics.com/injection_seeding.html"
+    }]}
+}
+</script>
+</body>
+</html>

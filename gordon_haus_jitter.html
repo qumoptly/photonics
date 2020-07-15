@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-256IgZXEf6YDiDi7jBd6vQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Gordon-Haus jitter, timing, solitons, pulses, fiber</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/gordon_haus_jitter.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Gordon-Haus jitter is a timing jitter originating from fluctuations of the center frequency, which subsequently affect the group velocity via chromatic dispersion.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="Gordon-Haus jitter, timing, solitons, pulses, fiber">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gordon&ndash;Haus Jitter">
+<meta property="og:description" content="Gordon-Haus jitter is a timing jitter originating from fluctuations of the center frequency, which subsequently affect the group velocity via chromatic dispersion.">
+<meta property="og:url" content="https://www.rp-photonics.com/gordon_haus_jitter.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/gordon_haus_jitter.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Gordon-Haus jitter is a timing jitter originating from fluctuations of the center frequency, which subsequently affect the group velocity via chromatic dispersion.">
+<meta name="twitter:title" content="Gordon&ndash;Haus Jitter">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/gordon_haus_jitter.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="256IgZXEf6YDiDi7jBd6vQ==">
+page="gordon_haus_jitter.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo sponsor"></a> <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="256IgZXEf6YDiDi7jBd6vQ==">shownsponsors="DataRay,eagleyard Photonics,Knight Optical"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_g.html">letter G</a> &gt; <a href="gordon_haus_jitter.html">Gordon&ndash;Haus jitter</a></p>
+<h1>Gordon&ndash;Haus Jitter</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="boxadvertisement">
+<h2>Simulation of Gordon--Haus Jitter</h2>
+<p>Gordon&ndash;Haus jitter in telecom lines or in mode-locked lasers can be numerically simulated with the software <a href="fiberpower.html"><b>RP Fiber Power</b></a>.
+The results can be statistically processed, e.g. in order to obtain noise spectra.</p>
+</aside>
+<aside class="advicebox">
+<p>Ask <a href="index.html">RP Photonics</a> for advice on timing jitter, pulse propagation, or soliton effects. Extensive <a href="modeling.html">modeling</a> <a href="software.html">software</a> is available.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a timing jitter originating from fluctuations of the center frequency</p>
+<p>More general term: <a href="timing_jitter.html" title="fluctuations of the temporal positions of pulses">timing jitter</a></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#fluctuations_and_noise" title="other articles on fluctuations and noise">fluctuations and noise</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<p><a href="encyclopedia_cite.html?article=Gordon--Haus%20jitter">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>There are several mechanisms causing <a href="timing_jitter.html" title="fluctuations of the temporal positions of pulses">timing jitter</a> of <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a> either during their generation in a <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked laser</a> or during propagation in an <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">optical fiber</a> e.g. within an <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a> system.
+In addition to a direct impact of various effects such as <a href="spontaneous_emission.html" title="a quantum effect, causing the spontaneous decay of excited states of atoms or ions">spontaneous emission</a> on the pulse timing, jitter can also arise via coupling of other types of noise to the timing.</p>
+<p>One of these coupling mechanisms is the <em>Gordon&ndash;Haus effect</em> [1].
+Here, fluctuations of the center frequency of the optical pulses are coupled to the timing via <a href="group_velocity_dispersion.html" title="the frequency dependence of the group velocity in a medium, or (quantitatively) the derivative of the inverse group velocity with respect to angular frequency">group velocity dispersion</a>: a change in center frequency translates into a change in <a href="group_velocity.html" title="the velocity with which the envelope of a weak narrow-band optical pulse propagates in a medium">group velocity</a>, which will subsequently affect the pulse timing.</p>
+<p>More specifically, Gordon and Haus considered the noise in a <a href="fiber_optic_links.html" title="optical communication links where the signal light is transported in fibers">fiber-optic link</a> with periodically spaced <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifiers</a>.
+Here, the <a href="optical_amplifiers.html" title="devices for amplifying the power of light beams">amplifiers</a>, which were implicitly assumed to have a wavelength-independent <a href="gain.html" title="a measure of the strength of optical amplification">gain</a>, introduce <a href="quantum_noise.html" title="noise arising from quantum fluctuations">quantum noise</a> which shifts the optical center frequency by a random amount.
+In many subsequent amplifiers, the center frequency (and with it the group velocity) of each pulse undergoes a random walk, without any correlation between the center frequency changes of different pulses.
+Subsequently, the timing deviations of the pulses accumulate more and more.
+A central result is that the variance of the timing errors grows in proportion to the fiber losses per unit length, the third power of the transmission distance, and inversely to the square root of the optical energy per pulse.
+The whole analysis was actually based on the assumption of <a href="solitons.html" title="pulses with a certain balance of nonlinear and dispersive effects">soliton pulse</a> propagation, with reference to soliton perturbation theory; however, the basic results can be generalized for non-solitonic pulses.</p>
+<p>Note that Gordon&ndash;Haus jitter in the originally considered situation becomes the dominant source of jitter for long-haul data transmission.
+This is due to the third-power dependence on length, which results from the unbounded drift of the center frequency.
+However, Gordon&ndash;Haus jitter can be effectively suppressed by using regularly spaced <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical filters</a>, or simply amplifiers with limited <a href="gain_bandwidth.html" title="the width of the optical frequency range in which significant gain is available from an amplifier">gain bandwidth</a>, in order to eliminate this unbounded drift.
+The jitter performance may then be limited by other kinds of noise.</p>
+<p>The term <em>Gordon&ndash;Haus effect</em> is often used in a more general way &ndash; essentially always when center frequency fluctuations couple to the timing via chromatic dispersion.</p>
+<h2 class="togglediv">Gordon&ndash;Haus Jitter in Mode-locked Lasers</h2>
+<div>
+<p>A coupling from center frequency fluctuations to the timing occurs also in every <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked laser</a> &ndash; not only in mode-locked <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber lasers</a>.
+Here, the center frequency can never undergo an unbounded drift, because the <a href="gain_bandwidth.html" title="the width of the optical frequency range in which significant gain is available from an amplifier">gain bandwidth</a> of the <a href="gain_media.html" title="media for laser amplification">gain medium</a> is limited.
+Nevertheless, the effect on the timing can be significant [2,&thinsp;6] &ndash; particularly at low noise frequencies and for short pulses (because the latter are less affected by the direct impact of spontaneous emission).
+Its strength depends on the <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> and the <a href="gain_bandwidth.html" title="the width of the optical frequency range in which significant gain is available from an amplifier">gain bandwidth</a>, and the statistics are different from those for unbounded drifts of the center frequency.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="gordon_haus_jitter.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">J. P. Gordon and H. A. Haus, &ldquo;Random walk of coherently amplified solitons in optical fiber transmission&rdquo;, Opt. Lett. 11 (10), 665 (1986), <a href="https://doi.org/10.1364/OL.11.000665">doi:10.1364/OL.11.000665</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">H. A. Haus and A. Mecozzi, &ldquo;Noise of mode-locked lasers&rdquo;, IEEE J. Quantum Electron. 29 (3), 983 (1993), <a href="https://doi.org/10.1109/3.206583">doi:10.1109/3.206583</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">S. Kumar and F. Lederer, &ldquo;Gordon&ndash;Haus effect in dispersion-managed soliton systems&rdquo;, Opt. Lett. 22 (24), 1870 (1997), <a href="https://doi.org/10.1364/OL.22.001870">doi:10.1364/OL.22.001870</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">T. Okamawari <i>et al.</i>, &ldquo;Analysis of Gordon&ndash;Haus jitter in a dispersion-compensated optical transmission system&rdquo;, Opt. Lett. 23 (9), 694 (1998), <a href="https://doi.org/10.1364/OL.23.000694">doi:10.1364/OL.23.000694</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">C. J. McKinstrie, &ldquo;Effects of filtering on Gordon&ndash;Haus timing jitter in dispersion-managed systems&rdquo;, J. Opt. Soc. Am. B 19 (6), 1275 (2002), <a href="https://doi.org/10.1364/JOSAB.19.001275">doi:10.1364/JOSAB.19.001275</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">R. Paschotta, &ldquo;Noise of mode-locked lasers. Part II: timing jitter and other fluctuations&rdquo;, Appl. Phys. B 79, 163 (2004), <a href="https://doi.org/10.1007/s00340-004-1548-9">doi:10.1007/s00340-004-1548-9</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="timing_jitter.html" title="fluctuations of the temporal positions of pulses">timing jitter</a>, <a href="solitons.html" title="pulses with a certain balance of nonlinear and dispersive effects">solitons</a>, <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a>, <a href="pulse_propagation_modeling.html" title="working with physical models describing the propagation of ultrashort pulses e.g. in lasers or optical fibers">pulse propagation modeling</a><br>and other articles in the categories <a href="categories.html#fluctuations_and_noise" title="other articles on fluctuations and noise">fluctuations and noise</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/gordon_haus_jitter.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fgordon_haus_jitter.html&text=RP+Photonics+Encyclopedia+-+Gordon-Haus+jitter%2C+timing%2C+solitons%2C+pulses%2C+fiber" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fgordon_haus_jitter.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fgordon_haus_jitter.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/gordon_haus_jitter.html"&gt;<br>Article on Gordon&amp;ndash;Haus Jitter&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/gordon_haus_jitter.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/gordon_haus_jitter.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/gordon_haus_jitter.html<br>article on 'Gordon&amp;ndash;Haus Jitter' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Your Lab is Closed due to the Corona Virus Crisis?</h2>
+<p>Time to think how to best utilize your time!</p>
+<p>Here is a suggestion: <br> <b>Consider to start with physical modeling!</b></p>
+<ul>
+<li>Build models for your existing or planned lasers and amplifiers, resonators, etc.</li>
+<li>Utilize such models in order to <b>improve your qualitative and quantitative understanding</b>, solve problems, optimize device performance and <b>develop new ideas</b>.</li>
+<li>Power up your home office instead of wasting your time!</li>
+<li>When getting back to the lab, restart with fresh plans and full power.</li>
+</ul>
+<img src="./img/rp_photonics.png" alt="RP Photonics" style="margin-top:20px; width:225px;">
+<p>offers powerful <a href="./software.html?banner=lab_closed">simulation &amp; design software</a>, e.g. for <a href="./fiberpower.html?banner=lab_closed">active and passive fiber devices</a>, <a href="./resonator.html?banner=lab_closed">laser resonators</a> and <a href="./coating.html?banner=lab_closed">thin-film coatings</a>!</p>
+<p>Getting helpful <a href="./software_support.html?banner=lab_closed">support</a> from RP also benefits your projects.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="256IgZXEf6YDiDi7jBd6vQ==">shownbanner = "lab closed";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Latest Encyclopedia Articles</h2>
+<p>Here are the latest encyclopedia articles:</p>
+<ul>
+<li class="tight"><a href="./variable_reflectivity_mirrors.html">variable reflectivity mirrors</a></li>
+<li class="tight"><a href="./color_centers.html">color centers</a></li>
+<li class="tight"><a href="./excimer_lamps.html">excimer lamps</a></li>
+<li class="tight"><a href="./multimode_beams.html">multimode beams</a></li>
+<li class="tight"><a href="./channel_waveguides.html">channel waveguides</a></li>
+<li class="tight"><a href="./optical_crystals.html">optical crystals</a></li>
+<li class="tight"><a href="./standing_wave_resonators.html">standing-wave resonators</a></li>
+<li class="tight"><a href="./nonlinear_absorption.html">nonlinear absorption</a></li>
+<li class="tight"><a href="./passive_fibers.html">passive fibers</a></li>
+<li class="tight"><a href="./active_fibers.html">active fibers</a></li>
+<li class="tight"><a href="./oem_laser_modules.html">OEM laser modules</a></li>
+<li class="tight"><a href="./industrial_lasers.html">industrial lasers</a></li>
+<li class="tight"><a href="./scientific_lasers.html">scientific lasers</a></li>
+<li class="tight"><a href="./flint_glasses.html">flint glasses</a></li>
+<li class="tight"><a href="./crown_glasses.html">crown glasses</a></li>
+<li class="tight"><a href="./sodium_vapor_lamps.html">sodium vapor lamps</a></li>
+<li class="tight"><a href="./metal_vapor_lamps.html">metal vapor lamps</a></li>
+<li class="tight"><a href="./mercury_vapor_lamps.html">mercury vapor lamps</a></li>
+<li class="tight"><a href="./white_light.html">white light</a></li>
+<li class="tight"><a href="./cie_standard_illuminants.html">CIE standard illuminants</a></li>
+</ul>
+
+<p>The encyclopedia already contains 948 articles.</p>
+<p>See also the regularly appearing articles of the <a href="./spotlight.html?banner=new_articles">The Photonics Spotlight</a> and the <a href="./software_news.html?banner=new_articles">RP Photonics Software News</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="256IgZXEf6YDiDi7jBd6vQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/gordon_haus_jitter.html"
+    },
+    "headline": "Gordon&ndash;Haus Jitter",
+    "image": "https://www.rp-photonics.com/previews/gordon_haus_jitter.png",
+    "datePublished": "2006-03-14",
+    "dateModified": "2020-03-14",
+    "description": "Gordon&ndash;Haus jitter is a timing jitter originating from fluctuations of the center frequency, which subsequently affect the group velocity via chromatic dispersion.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter G",
+      "item": "https://www.rp-photonics.com/encyclopedia_g.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Gordon&ndash;Haus jitter",
+      "item": "https://www.rp-photonics.com/gordon_haus_jitter.html"
+    }]}
+}
+</script>
+</body>
+</html>

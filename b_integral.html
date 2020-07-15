@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-AXmZCzekcGPo59T81CPYVw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - B integral, nonlinear phase shift, self-focusing, amplifier</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/b_integral.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="The B integral is a measure of the nonlinear phase shift of light, e.g. in a fiber amplifier.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="B integral, nonlinear phase shift, self-focusing, amplifier">
+<meta property="og:type" content="article">
+<meta property="og:title" content="<i>B</i> Integral">
+<meta property="og:description" content="The B integral is a measure of the nonlinear phase shift of light, e.g. in a fiber amplifier.">
+<meta property="og:url" content="https://www.rp-photonics.com/b_integral.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/b_integral.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="The B integral is a measure of the nonlinear phase shift of light, e.g. in a fiber amplifier.">
+<meta name="twitter:title" content="<i>B</i> Integral">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/b_integral.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="AXmZCzekcGPo59T81CPYVw==">
+page="b_integral.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="AXmZCzekcGPo59T81CPYVw==">shownsponsors="EKSMA OPTICS"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_b.html">letter B</a> &gt; <a href="b_integral.html"><i>B</i> integral</a></p>
+<h1><i>B</i> Integral</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="advicebox">
+<p>Ask <a href="index.html">RP Photonics</a> for any advice concerning the design of optical amplifiers.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a measure of the nonlinear phase shift of light, e.g. in an amplifier</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">B-Integral</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#nonlinear_optics" title="other articles on nonlinear optics">nonlinear optics</a></p>
+<p><a href="encyclopedia_cite.html?article=B%20integral">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>The <span class="eqn_il"><i>B</i></span> integral is frequently used in the context of <a href="ultrafast_amplifiers.html" title="amplifiers for ultrashort (femtosecond or picosecond) optical pulses">ultrafast amplifiers</a>, e.g. for optical components such as the <a href="pockels_cells.html" title="electro-optic devices, used for building modulators">Pockels cell</a> of a <a href="regenerative_amplifiers.html" title="optical amplifiers with a resonator in which a light pulse can do multiple round trips before being coupled out">regenerative amplifier</a>.
+It is defined as</p>
+<div class="eqn"><img src="eqn/b_integral.gif" width="125" height="41" alt="B integral"></div>
+<p>where <span class="eqn_il"><i>I</i>(<i>z</i>)</span> is the <a href="optical_intensity.html" title="optical power per unit area">optical intensity</a> along the beam axis (assumed to be highest intensity in the transverse direction, e.g. for a <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beam</a>), <span class="eqn_il"><i>z</i></span> the position in beam direction, and <span class="eqn_il"><i>n</i><sub>2</sub></span> the <a href="nonlinear_index.html" title="a parameter for quantifying the Kerr nonlinearity of a medium">nonlinear index</a> quantifying the <a href="kerr_effect.html" title="a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization">Kerr nonlinearity</a>.
+As <span class="eqn_il"><i>n</i><sub>2</sub>&thinsp;<i>I</i></span> is the nonlinear change in the <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a>, one easily recognizes the <span class="eqn_il"><i>B</i></span> integral to be the total on-axis nonlinear <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">phase</a> shift accumulated in a passage through the device.</p>
+<h2 class="togglediv">Importance for Self-focusing</h2>
+<div>
+<p>For high optical intensities, as often occur when <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a> are amplified e.g. in a <a href="regenerative_amplifiers.html" title="optical amplifiers with a resonator in which a light pulse can do multiple round trips before being coupled out">regenerative amplifier</a>, the <span class="eqn_il"><i>B</i></span> integral can become larger than 1.
+For values above &asymp;&thinsp;3&ndash;5, there is a risk that <a href="self_focusing.html" title="focusing of a beam in a transparent medium, caused by the beam itself through a nonlinear process in the medium">self-focusing</a> may occur: the nonlinear lensing effect can become so strong that the beam collapses to a very small radius, so that the optical intensities are strongly further increased and easily exceed the <a href="laser_induced_damage.html" title="damage of optical components induced by laser radiation">damage threshold</a>.
+A single <a href="pulses.html" title="flashes of light">pulse</a> in this regime may be sufficient for destroying the amplifier <a href="gain_media.html" title="media for laser amplification">gain medium</a> or some other component.
+Other possible effects in this regime are strong spectral broadening and even the breakup of the amplified pulse, a reduction in the achievable <a href="gain.html" title="a measure of the strength of optical amplification">gain</a>, and a severely reduced <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a>.</p>
+<p>The threshold for self-focusing in terms of the <span class="eqn_il"><i>B</i></span> integral actually depends on the conditions.
+The approximate value given above is based on the assumption that this value is acquired in a length below the <a href="rayleigh_length.html" title="the distance from a beam waist where the mode radius increased by a factor square root of 2">Rayleigh length</a>, so that <a href="diffraction.html" title="wave phenomena which occur when light waves hit some structure with variable transmission or phase changes">diffraction</a> effects will not be strong enough to stabilize the <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a>.
+In a <a href="regenerative_amplifiers.html" title="optical amplifiers with a resonator in which a light pulse can do multiple round trips before being coupled out">regenerative amplifier</a>, the total <span class="eqn_il"><i>B</i></span> integral for multiple passes through the gain medium may sometimes be well above 5 without causing self-focusing.
+Similarly, it does not matter that the accumulated <span class="eqn_il"><i>B</i></span> integral for an ultrashort pulse circulating in a <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked laser</a> easily becomes greater than 10 within a single microsecond.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="b_integral.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="kerr_effect.html" title="a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization">Kerr effect</a>, <a href="nonlinear_index.html" title="a parameter for quantifying the Kerr nonlinearity of a medium">nonlinear index</a>, <a href="optical_amplifiers.html" title="devices for amplifying the power of light beams">optical amplifiers</a>, <a href="self_focusing.html" title="focusing of a beam in a transparent medium, caused by the beam itself through a nonlinear process in the medium">self-focusing</a>, <a href="laser_induced_damage.html" title="damage of optical components induced by laser radiation">laser-induced damage</a><br>and other articles in the category <a href="categories.html#nonlinear_optics" title="other articles on nonlinear optics">nonlinear optics</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/b_integral.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fb_integral.html&text=RP+Photonics+Encyclopedia+-+B+integral%2C+nonlinear+phase+shift%2C+self-focusing%2C+amplifier" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fb_integral.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fb_integral.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/b_integral.html"&gt;<br>Article on &lt;i&gt;B&lt;/i&gt; Integral&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/b_integral.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/b_integral.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/b_integral.html<br>article on '&lt;i&gt;B&lt;/i&gt; Integral' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Thin-film Optics Software</h2>
+<p><a href="./coating.html?banner=RP_Coating">RP Coating</a> is a most versatile software for thin-film design.
+Analyze and optimize a wide range of devices:</p>
+<ul>
+<li>dielectric mirrors, including <a href="./coating_demo_dichroic.html?banner=RP_Coating">dichroic</a> and <a href="./coating_demo_gti.html?banner=RP_Coating">dispersive mirrors</a></li>
+<li><a href="./coating_demo_ar.html?banner=RP_Coating">AR coatings</a></li>
+<li>filters (including <a href="./coating_demo_rugate.html?banner=RP_Coating">rugate filters</a>)</li>
+<li><a href="./coating_demo_polarizer.html?banner=RP_Coating">thin-film polarizers</a></li>
+<li>VECSELs</li>
+</ul>
+<p style="text-align:center;"><a href="./coating.html?banner=RP_Coating"><img src="./img/rp_coating_220.png" alt="coating design"></a></p>
+<p>Further features:</p>
+<ul>
+<li>extreme flexibility due to <a href="./software_script_language.html?banner=RP_Coating">scripting</a>: arbitrary parametrization e.g. of chirped layer structures, definition of arbitrary figure of merits for numerical optimization, generation of arbitrary plots</li>
+<li>comprehensive documentation (PDF and online)</li>
+<li>competent <a href="./software_support.html?banner=RP_Coating">technical support</a></li>
+</ul>
+<p>Use <a href="./coating.html?banner=RP_Coating"><b>RP Coating</b></a> to quickly become a thin-film expert!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="AXmZCzekcGPo59T81CPYVw==">shownbanner = "RP Coating";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Transparent Laser</h2>
+<p>The dream of each laser developer, and not only of each laser scientist: have a <b>transparent laser</b>, where you can <b>look into any components</b> and see e.g.</p>
+<ul>
+<li>optical intensities</li>
+<li>excitation densities of laser-active ions</li>
+</ul>
+<p>&hellip; and this at any location and time, with arbitrary resolution!</p>
+<p>If you had this, finally you could</p>
+<ul>
+<li>fully understand what goes on in your laser,</li>
+<li>quickly identify and fix any problems, and</li>
+<li><span style="font-weight:bold; color:#B20B28;">make faster progress <br> while saving a lot of money.</span></li>
+</ul>
+<p>Absolutely marvelous, but only a dream?!?</p>
+<p>Good news: such transparent lasers can be made!
+See our presentation:</p>
+<a href="./transparent_laser.html?banner=transparent_laser"><img src="./img/transparent_laser.png" width="234" height="162" alt="presentation"></a>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="AXmZCzekcGPo59T81CPYVw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/b_integral.html"
+    },
+    "headline": "<i>B</i> Integral",
+    "image": "https://www.rp-photonics.com/previews/b_integral.png",
+    "datePublished": "2006-06-27",
+    "dateModified": "2020-03-14",
+    "description": "The B integral is a measure of the nonlinear phase shift of light, e.g. in a fiber amplifier.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter B",
+      "item": "https://www.rp-photonics.com/encyclopedia_b.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "<i>B</i> integral",
+      "item": "https://www.rp-photonics.com/b_integral.html"
+    }]}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-HzlUbRgSjafYwDP/+NMGgQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - timing jitter, mode-locked laser, noise, measurement, techniques</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/timing_jitter.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-05-28">
+<meta name="description" content="Timing jitter means fluctuations of the temporal positions of pulses. Mode-locked lasers can exhibit extremely low timing jitter, particularly over short time scales.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="timing jitter, mode-locked laser, noise, measurement, techniques">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Timing Jitter">
+<meta property="og:description" content="Timing jitter means fluctuations of the temporal positions of pulses. Mode-locked lasers can exhibit extremely low timing jitter, particularly over short time scales.">
+<meta property="og:url" content="https://www.rp-photonics.com/timing_jitter.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/timing_jitter.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Timing jitter means fluctuations of the temporal positions of pulses. Mode-locked lasers can exhibit extremely low timing jitter, particularly over short time scales.">
+<meta name="twitter:title" content="Timing Jitter">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/timing_jitter.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="HzlUbRgSjafYwDP/+NMGgQ==">
+page="timing_jitter.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="HzlUbRgSjafYwDP/+NMGgQ==">shownsponsors="TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_t.html">letter T</a> &gt; <a href="timing_jitter.html">timing jitter</a></p>
+<h1>Timing Jitter</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_timing_jitter_measurement_devices.html?s=vbox">2 suppliers for timing jitter measurement devices</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://menhir-photonics.com/products/" data-supplier="Menhir Photonics" data-location="product-enc" data-keyword="timing jitter measurement devices" rel="nofollow" class="bg externallink"><img src="./bg/logos/menhir_photonics.png" alt="Menhir Photonics" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_timing_jitter_measurement_devices.html?s=vbox">List of suppliers for<br>timing jitter measurement devices</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="boxadvertisement">
+<h2>Simulating Timer Jitter</h2>
+<p>In the software <a href="fiberpower.html"><b>RP Fiber Power</b></a> one can simulate the impact of quantum noise on the pulses, which causes timing jitter and other kinds of noise.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: fluctuations of the temporal positions of pulses</p>
+<p>Alternative term: timing noise</p>
+<p>More specific terms: <a href="gordon_haus_jitter.html" title="a timing jitter originating from fluctuations of the center frequency">Gordon&ndash;Haus jitter</a>, pulse-to-pulse jitter</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">zeitliche Fluktuationen</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#fluctuations_and_noise" title="other articles on fluctuations and noise">fluctuations and noise</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a></p>
+<p><a href="encyclopedia_cite.html?article=timing%20jitter">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p><a href="pulses.html" title="flashes of light">Pulse</a> trains, generated e.g. in <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked lasers</a>, exhibit some deviations of the temporal pulse positions from those in a perfectly periodic pulse train.
+This pheno&shy;menon is called <em>timing jitter</em> and is important for many applications, e.g. for long-range <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a> or for <a href="optical_sampling.html" title="a technique of sampling signals using laser light, often in the form of ultrashort pulses">optical sampling</a> measurements.
+Similarly, pulses from <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched lasers</a> exhibit timing jitter, although the involved physical mechanisms are very different.
+Another type of timing jitter occurs in <a href="photodetectors.html" title="devices used for the detection of light">photodetectors</a>, as also discussed below.</p>
+<h2 class="togglediv">Timing Jitter of Mode-locked Lasers</h2>
+<div>
+<p>The timing errors considered can be of different kinds:</p>
+<ul>
+<li>the deviations between the temporal pulse positions and those of perfectly regular clock ticks</li>
+<li>the deviations between the temporal pulse positions and those of the ticks of a real (noisy) oscillator (e.g. the electronic oscillator which drives the modulator of an actively mode-locked laser)</li>
+<li>the deviations of the pulse-to-pulse spacing from the average pulse period (<em>pulse-to-pulse jitter</em> or <em>cycle jitter</em>)</li>
+</ul>
+<p>In <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">telecom systems</a>, the relevant jitter can be that between data-carrying pulses and a clock signal.
+The latter may have been extracted from the data stream itself, or transmitted separately.
+In the former case, the low-frequency jitter is transferred to the extracted clock signal, and often is not relevant for detection.</p>
+<p>Timing errors may be quantified (&rarr;&nbsp;<a href="noise_specifications.html" title="specifications for the noise properties of lasers, for example"><em>noise specifications</em></a>) in different ways:</p>
+<ul>
+<li>with an <abbr title="root-mean-square">r.m.s.</abbr> (root-mean-square) value for a certain measurement <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a></li>
+<li>as a <a href="power_spectral_density.html" title="optical power or noise power per unit frequency interval">power spectral density</a>, either of the timing deviation or of the <a href="timing_phase.html" title="a phase reflecting timing deviations by relating them to the pulse period">timing phase</a></li>
+</ul>
+<p>Timing jitter is related to <a href="phase_noise.html" title="noise of the optical phase of a beam or of an electric signal">phase noise</a> in the <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequency</a> components of the pulse train.
+In the absence of technical noise, the jitter of a <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked laser</a> is limited by <a href="quantum_noise.html" title="noise arising from quantum fluctuations">quantum noise</a>, but in most cases it is dominated by vibrations and drifts of the <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a>.
+Important theoretical results, based on analytical and numerical modeling, are discussed in Refs.&nbsp;[5,&thinsp;12,&thinsp;13,&thinsp;15].</p>
+<figure>
+<img src="img/jitter_spectrum.png" alt="timing jitter spectrum of a passively mode-locked laser">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Theoretically calculated quantum-limited timing jitter spectrum of a 10-GHz Er:Yb:glass miniature laser. In reality, the low-frequency noise (e.g. below 10&nbsp;kHz) is higher due to technical noise. To some extent, relaxation oscillations (at &asymp;&thinsp;230&nbsp;kHz) are converted into timing jitter. With a feedback system, the long-term timing drift can be suppressed, so that the low-frequency jitter is strongly reduced.
+</figcaption>
+</figure>
+<p>The timing jitter of various kinds of mode-locked lasers (e.g. miniature <a href="bulk_lasers.html" title="lasers based on bulk crystals as gain media">bulk lasers</a>, <a href="mode_locked_fiber_lasers.html" title="ultrafast fiber lasers which are actively or passively mode-locked for generating ultrashort pulses">fiber lasers</a>, or <a href="external_cavity_diode_lasers.html" title="non-monolithic diode lasers where the laser cavity (resonator) is completed with external optical elements">external-cavity</a> <a href="mode_locked_diode_lasers.html" title="diode lasers which are actively, passively or hybrid mode-locked for generating ultrashort pulses">diode lasers</a>) can be very small (see Figure&nbsp;1) &ndash; in some cases significantly smaller than that of high-quality electronic oscillators.
+This applies particularly to short time scales, where a laser can be used as a very precise timing reference (as a kind of flywheel).
+The long-term timing drifts can also be suppressed to extremely small levels using self-referenced <a href="frequency_combs.html" title="optical spectra consisting of equidistant lines">frequency combs</a>.</p>
+</div>
+<h2 class="togglediv">Measurement of Timing Jitter</h2>
+<div>
+<p>There are a variety of different methods for measuring the timing jitter of mode-locked lasers:</p>
+<ul>
+<li>The popular <em>von der Linde method</em> [2] is based on the evaluation of RF spectra of <a href="photodiodes.html" title="semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiode</a> signals.
+It is fairly simple, but rests on assumptions (small fluctuation amplitudes, no correlations between <a href="optical_intensity.html" title="optical power per unit area">intensity</a> and <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">phase</a> fluctuations, etc.) which are not always well satisfied, and is subjected to various technical limitations.
+In particular, <a href="phase_noise.html" title="noise of the optical phase of a beam or of an electric signal">phase noise</a> of the local oscillator of the electronic spectrum analyzer can affect the results [14].</li>
+<li>The <em>phase detector method</em> (see e.g. [3]) is often applied to actively mode-locked lasers, where the laser timing is compared with that of the electronic driver signal (<em>residual jitter</em>).
+It is not easy to achieve good suppression of the influence of <a href="intensity_noise.html" title="noise of the optical intensity or power of a laser beam">intensity noise</a>, particularly due to the phenomenon of drifting mixer offsets.
+Refined methods are available to measure <em>relative timing jitter</em> between different lasers, which must, however, be <a href="synchronization_of_lasers.html" title="the synchronization of light pulses generated with lasers">synchronized</a>.</li>
+<li>The <em>relative timing jitter</em> of free-running passively mode-locked lasers (but also of synchronized lasers) can be measured with a versatile method based on a <a href="beat_note.html" title="an oscillation of the optical intensity arising from the superposition of light with different optical frequencies">beat note</a> of photodiode signals, generated with appropriate RF techniques and numerical processing [14].
+This method is very versatile, extremely sensitive, and relatively immune to a range of problems as frequently encountered with other methods.
+It is not affected by electronic oscillator noise and mixer offsets, and only very weakly by intensity noise.
+By comparison of different lasers, the absolute timing jitter can be obtained.
+For example, if one laser is known to have a lower jitter, the measured relative jitter is close to the absolute jitter of the other laser.
+If both lasers are very similar but uncorrelated, the recorded power spectral density at each noise frequency is twice that of a single laser.</li>
+<li>Very precise measurements are possible with a balanced optical cross-correlator based on a &chi;<sup>(2)</sup> <a href="nonlinear_crystal_materials.html" title="crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal</a> [18].
+One may, e.g., compare the timing of two mode-locked lasers.
+The r.m.s. noise floor in a 10-MHz bandwidth, for example, can be well below 1&nbsp;fs.
+Note that this method allows one to measure timing deviations only if the pulses have a quite low distance, e.g. up to 100&nbsp;fs.
+Therefore, it is usually applied only to timing-stabilized lasers, exhibiting bounded timing fluctuations.</li>
+</ul>
+</div>
+<h2 class="togglediv">Timing Jitter of Q-switched and Gain-switched Lasers</h2>
+<div>
+<p>In an <em>actively</em> <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched laser</a>, there is some time delay between the opening of the <a href="q_switches.html" title="optical switches which are typically used for generating nanosecond pulses in lasers">Q switch</a> and the generated pulse.
+The magnitude of this time delay is subject to fluctuations, so that a timing jitter results even if the modulator signal is very regular.
+The origin of that jitter may be fluctuations of the pump power, but thermal effects, vibrations and other disturbances can also contribute.
+A variation of the pulse timing by more than the <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a> (Figure&nbsp;2) is not unusual in such lasers.
+The jitter can be reduced e.g. with <a href="injection_seeding.html" title="a technique for enforcing narrowband operation of a laser or optical parametric oscillator by injecting light into its resonator">injection seeding</a>.</p>
+<figure>
+<img src="img/timing_jitter_aqs.png" alt="timing jitter of an actively Q-switched laser">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Simulated timing jitter of an actively Q-switched laser, caused by fluctuations of the pump power. The timing fluctuations are strongly correlated with those of peak power and pulse duration.
+</figcaption>
+</figure>
+<p>In <em>passively</em> Q-switched lasers, fluctuations of pump power may lead to a larger timing jitter, as a pulse is emitted as soon as the laser <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> becomes high enough to overcome the losses.
+On the other hand, noise of the pulse energy is reduced.</p>
+<p>If pulses from an actively Q-switched laser are used in a timing-critical setup, it can be a good approach to trigger that setup with a <a href="photodiodes.html" title="semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiode</a> signal indicating the pulse arrival times, rather than with the modulator signal.</p>
+<p>Gain-switched lasers also exhibit relatively large timing jitter, compared with mode-locked lasers.</p>
+</div>
+<h2 class="togglediv">Timing Jitter of Photodetectors</h2>
+<div>
+<p>When a <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a> such as a <a href="photodiodes.html" title="semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiode</a> is used for measuring <a href="pulses.html" title="flashes of light">pulse</a> arrival times, the <a href="photocurrent.html" title="an electric current which is induced by incident light in a photodetector">photocurrent</a> also exhibits some timing jitter, and the timing error in the measured result may be further increased by noise in the detector electronics.</p>
+<p>Details such as r.m.s. jitter and the shape of the probability distribution depend very much on the type of detector.
+For example, <a href="avalanche_photodiodes.html" title="photodiodes with internal signal amplification through an avalanche process">avalanche photodiodes</a> in Geiger mode, used as SPADs (single-<a href="photons.html" title="quanta of light energy">photon</a> avalanche detectors), have other noise characteristics than ordinary photodiodes used at higher optical signal levels.
+The r.m.s. jitter of a fast SPAD can be below 100&nbsp;ps for single-photon detection.
+Averaging over multiple pulses can be used to further reduce the effective jitter.</p>
+<p>In the detection of pulse trains for mode-locked lasers, saturation effects are often a limiting factor: the <a href="peak_power.html" title="maximum optical power of a pulse">peak power</a> must be limited in order to avoid saturation, and this results in a low average power and thus a poor signal-to-noise ratio.
+A possible solution is to use a source with a high <a href="pulse_repetition_rate.html" title="the number of pulses emitted per second e.g. by a mode-locked or Q-switched laser">pulse repetition rate</a>, or to increase the repetition rate of an existing source by repetition rate multiplication using <a href="interferometers.html" title="optical devices utilizing the phenomenon of interference">interferometers</a> [24].</p>
+<p><a href="shot_noise.html" title="quantum-limited intensity noise">Shot noise</a> is a limiting factor the precision with which the pulse position (defined as a &ldquo;center of gravity&rdquo;) can be determined.
+For a given <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a>, the shot noise impact is higher for longer pulses [13].
+Curiously, however, the shot noise limit for photo-detected pulses in a coherent pulse train is <em>not</em> determined by the <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a>'s temporal resolution: due to correlations in the photocurrent spectrum, the noise limit can be lower for shorter optical pulses, even if this does not result in shorter detected pulses [28].</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_timing_jitter_measurement_devices.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 2 suppliers for timing jitter measurement devices. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://menhir-photonics.com/" data-supplier="Menhir Photonics" data-location="product-enc" data-keyword="timing jitter measurement devices" rel="nofollow" class="bg externallink" title="Visit the website of Menhir Photonics"><img src="./bg/logos/menhir_photonics.png" alt="Menhir Photonics" class="supplierlogo"></a><a href="https://menhir-photonics.com/products/" data-supplier="Menhir Photonics" data-location="product-enc" data-keyword="timing jitter measurement devices" rel="nofollow" class="bg externallink" title="Visit the website of Menhir Photonics"><img src="./bg/products/menhir_photonics/femtosecond_lasers1.png" alt="timing jitter measurement devices" class="product"></a><h3><a href="./bg/profiles/menhir_photonics.html" title="See the profile of Menhir Photonics">Menhir Photonics</a></h3><p>The <a href="https://menhir-photonics.com/products/" data-supplier="Menhir Photonics" data-location="product-enc" data-keyword="timing jitter measurement devices" rel="nofollow" class="externallink bg">MENHIR-1550 SERIES</a> is the first industrial-grade, femtosecond laser at 1550&nbsp;nm with GHz repetition-rate and ultra-low noise performances. Find more about the stability of <a href="https://menhir-photonics.com/products/" data-supplier="Menhir Photonics" data-location="product-enc" data-keyword="timing jitter measurement devices" rel="nofollow" class="externallink bg">Menhir Photonics’ products</a>.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div class="comment">
+<p class="comment_details">2020-05-25</p>
+<p>What is considered to be a low value of timing jitter? Any value lower than the pulse-to-pulse separation? Or any value lower than the temporal pulse width?</p>
+<p>In an optical sampling experiment, what would be considered a small enough value of jitter so that the effect is negligible?</p>
+<p style="font-weight:bold">Answer from the <a href="paschotta.html" style="font-weight:bold">author</a>:</p>
+<p>It depends very much on the application what value of timing jitter is considered as low.
+In your example of optical sampling, one would usually require that the r.m.s. timing deviation is well below the pulse duration.</p>
+<p>Note that timing jitter cannot always be specified in units of seconds &ndash; in particular, if there are unbounded timing drifts.</p>
+</div>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="timing_jitter.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">J. P. Gordon and H. A. Haus, &ldquo;Random walk of coherently amplified solitons in optical fiber transmission&rdquo;, Opt. Lett. 11 (10), 665 (1986), <a href="https://doi.org/10.1364/OL.11.000665">doi:10.1364/OL.11.000665</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">D. von der Linde, &ldquo;Characterization of the noise in continuously operating mode-locked lasers&rdquo;, Appl. Phys. B 39, 201 (1986), <a href="https://doi.org/10.1007/BF00697487">doi:10.1007/BF00697487</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">M. J. W. Rodwell <i>et al.</i>, &ldquo;Subpicosecond laser timing stabilization&rdquo;, IEEE J. Quantum Electron. 25 (4), 817 (1989), <a href="https://doi.org/10.1109/3.17346">doi:10.1109/3.17346</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">D. J. Derickson <i>et al.</i>, &ldquo;Residual and absolute timing jitter in actively mode-locked semiconductor lasers&rdquo;, Electron. Lett. 26 (24), 2026 (1990), <a href="https://doi.org/10.1049/el:19901308">doi:10.1049/el:19901308</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">H. A. Haus and A. Mecozzi, &ldquo;Noise of mode-locked lasers&rdquo;, IEEE J. Quantum Electron. 29 (3), 983 (1993), <a href="https://doi.org/10.1109/3.206583">doi:10.1109/3.206583</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">L. A. Jiang <i>et al.</i>, &ldquo;Quantum-limited noise performance of a mode-locked laser diode&rdquo;, Opt. Lett. 27 (1), 49 (2002), <a href="https://doi.org/10.1364/OL.27.000049">doi:10.1364/OL.27.000049</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">M. C. Gross <i>et al.</i>, &ldquo;Spectral method for the simultaneous determination of uncorrelated and correlated amplitude and timing jitter&rdquo;, Appl. Phys. Lett. 80 (20), 3694 (2002), <a href="https://doi.org/10.1063/1.1480105">doi:10.1063/1.1480105</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">R. K. Shelton <i>et al.</i>, &ldquo;Subfemtosecond timing jitter between two independent, actively synchronized, mode-locked lasers&rdquo;, Opt. Lett. 27 (5), 312 (2002), <a href="https://doi.org/10.1364/OL.27.000312">doi:10.1364/OL.27.000312</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">M. E. Grein <i>et al.</i>, &ldquo;Observation of quantum-limited timing jitter in an active, harmonically mode-locked fiber laser&rdquo;, Opt. Lett. 27 (11), 957 (2002), <a href="https://doi.org/10.1364/OL.27.000957">doi:10.1364/OL.27.000957</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">F. W. Helbing <i>et al.</i>, &ldquo;Carrier&ndash;envelope offset phase-locking with attosecond timing jitter&rdquo;, J. Sel. Top. Quantum Electron. 9 (4), 1030 (2003), <a href="https://doi.org/10.1109/JSTQE.2003.819104">doi:10.1109/JSTQE.2003.819104</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">T. R. Schibli <i>et al.</i>, &ldquo;Attosecond active synchronization of passively mode-locked lasers by balanced cross correlation&rdquo;, Opt. Lett. 28 (11), 947 (2003), <a href="https://doi.org/10.1364/OL.28.000947">doi:10.1364/OL.28.000947</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">R. Paschotta, &ldquo;Noise of mode-locked lasers. Part I: numerical model&rdquo;, Appl. Phys. B 79, 153 (2004), <a href="https://doi.org/10.1007/s00340-004-1547-x">doi:10.1007/s00340-004-1547-x</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">R. Paschotta, &ldquo;Noise of mode-locked lasers. Part II: timing jitter and other fluctuations&rdquo;, Appl. Phys. B 79, 163 (2004), <a href="https://doi.org/10.1007/s00340-004-1548-9">doi:10.1007/s00340-004-1548-9</a></td></tr>
+<tr><td class="refno">[14]</td><td class="refs">R. Paschotta <i>et al.</i>, &ldquo;Relative timing jitter measurements with an indirect phase comparison method&rdquo;, Appl. Phys. B 80 (2), 185 (2005), <a href="https://doi.org/10.1007/s00340-004-1704-2">doi:10.1007/s00340-004-1704-2</a></td></tr>
+<tr><td class="refno">[15]</td><td class="refs">R. Paschotta <i>et al.</i>, &ldquo;Optical phase noise and carrier&ndash;envelope offset noise of mode-locked lasers&rdquo;, Appl. Phys. B 82 (2), 265 (2006), <a href="https://doi.org/10.1007/s00340-005-2041-9">doi:10.1007/s00340-005-2041-9</a></td></tr>
+<tr><td class="refno">[16]</td><td class="refs">F. Quinlan <i>et al.</i>, &ldquo;Ultralow-jitter and -amplitude-noise semiconductor-based actively mode-locked laser&rdquo;, Opt. Lett. 31 (19), 2870 (2006), <a href="https://doi.org/10.1364/OL.31.002870">doi:10.1364/OL.31.002870</a></td></tr>
+<tr><td class="refno">[17]</td><td class="refs">S. Gee <i>et al.</i>, &ldquo;Self-stabilization of an actively mode-locked semiconductor-based fiber-ring laser for ultralow jitter&rdquo;, IEEE Photon. Technol. Lett. 19 (7), 498 (2007), <a href="https://doi.org/10.1109/LPT.2007.892902">doi:10.1109/LPT.2007.892902</a></td></tr>
+<tr><td class="refno">[18]</td><td class="refs">J. Kim <i>et al.</i>, &ldquo;Attosecond-resolution timing jitter characterization of free-running mode-locked lasers&rdquo;, Opt. Lett. 32 (24), 3519 (2007), <a href="https://doi.org/10.1364/OL.32.003519">doi:10.1364/OL.32.003519</a></td></tr>
+<tr><td class="refno">[19]</td><td class="refs">O. Prochnow <i>et al.</i>, &ldquo;Quantum-limited noise performance of a femtosecond all-fiber ytterbium laser&rdquo;, Opt. Express 17 (18), 15525 (2009), <a href="https://doi.org/10.1364/OE.17.015525">doi:10.1364/OE.17.015525</a></td></tr>
+<tr><td class="refno">[20]</td><td class="refs">R. Paschotta, &ldquo;Timing jitter and phase noise of mode-locked fiber lasers&rdquo;, Opt. Express 18 (5), 5041 (2010), <a href="https://doi.org/10.1364/OE.18.005041">doi:10.1364/OE.18.005041</a></td></tr>
+<tr><td class="refno">[21]</td><td class="refs">J. Kim and F. X. Kärtner, &ldquo;Attosecond-precision ultrafast photonics&rdquo;, Laser &amp; Photon. Rev. 4 (3), 432 (2010), <a href="https://doi.org/10.1002/lpor.200910003">doi:10.1002/lpor.200910003</a></td></tr>
+<tr><td class="refno">[22]</td><td class="refs">J. A. Cox <i>et al.</i>, &ldquo;Complete characterization of quantum-limited timing jitter in passively mode-locked fiber lasers&rdquo;, Opt. Lett. 35 (20), 3522 (2010), <a href="https://doi.org/10.1364/OL.35.003522">doi:10.1364/OL.35.003522</a></td></tr>
+<tr><td class="refno">[23]</td><td class="refs">Y. Song <i>et al.</i>, &ldquo;Impact of pulse dynamics on timing jitter in mode-locked fiber lasers&rdquo;, Opt. Lett. 36 (10), 1761 (2011), <a href="https://doi.org/10.1364/OL.36.001761">doi:10.1364/OL.36.001761</a></td></tr>
+<tr><td class="refno">[24]</td><td class="refs">A. Haboucha <i>et al.</i>, &ldquo;Optical-fiber pulse rate multiplier for ultralow phase-noise signal generation&rdquo;, Opt. Lett. 36 (18), 3654 (2011), <a href="https://doi.org/10.1364/OL.36.003654">doi:10.1364/OL.36.003654</a></td></tr>
+<tr><td class="refno">[25]</td><td class="refs">T. K. Kim <i>et al.</i>, &ldquo;Sub-100-as timing jitter optical pulse trains from mode-locked Er-fiber lasers&rdquo;, Opt. Lett. 36 (22), 4443 (2011), <a href="https://doi.org/10.1364/OL.36.004443">doi:10.1364/OL.36.004443</a></td></tr>
+<tr><td class="refno">[26]</td><td class="refs">D. Li <i>et al.</i>, &ldquo;Attosecond timing jitter pulse trains from semiconductor saturable absorber mode-locked Cr:LiSAF lasers&rdquo;, Opt. Express 20 (21), 23422 (2012), <a href="https://doi.org/10.1364/OE.20.023422">doi:10.1364/OE.20.023422</a></td></tr>
+<tr><td class="refno">[27]</td><td class="refs">A. J. Benedick <i>et al.</i>, &ldquo;Optical flywheels with attosecond jitter&rdquo;, Nature Photon. 6 (2), 97 (2012), <a href="https://doi.org/10.1038/nphoton.2011.326">doi:10.1038/nphoton.2011.326</a></td></tr>
+<tr><td class="refno">[28]</td><td class="refs">F. Quinlan <i>et al.</i>, &ldquo;Exploiting shot noise correlations in the photodetection of ultrashort optical pulse trains&rdquo;, Nature Photon. 7, 290 (2013), <a href="https://doi.org/10.1038/nphoton.2013.33">doi:10.1038/nphoton.2013.33</a></td></tr>
+<tr><td class="refno">[29]</td><td class="refs">X. Xie <i>et al.</i>, &ldquo;Photonic microwave signals with zeptosecond-level absolute timing noise&rdquo;, Nature Photon. 11, 44 (2017), <a href="https://doi.org/10.1038/nphoton.2016.215">doi:10.1038/nphoton.2016.215</a></td></tr>
+<tr><td class="refno">[30]</td><td class="refs">R. Paschotta, H. R. Telle, and U. Keller, &ldquo;Noise of Solid State Lasers&rdquo;, in <i>Solid-State Lasers and Applications</i> (ed. A. Sennaroglu), CRC Press, Boca Raton, FL (2007), Chapter 12, pp. 473&ndash;510</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="noise_specifications.html" title="specifications for the noise properties of lasers, for example">noise specifications</a>, <a href="timing_phase.html" title="a phase reflecting timing deviations by relating them to the pulse period">timing phase</a>, <a href="laser_noise.html" title="fluctuations of various parameters of laser light, such as the optical power and phase">laser noise</a>, <a href="phase_noise.html" title="noise of the optical phase of a beam or of an electric signal">phase noise</a>, <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked lasers</a>, <a href="frequency_combs.html" title="optical spectra consisting of equidistant lines">frequency combs</a>, <a href="gordon_haus_jitter.html" title="a timing jitter originating from fluctuations of the center frequency">Gordon&ndash;Haus jitter</a>, <a href="synchronization_of_lasers.html" title="the synchronization of light pulses generated with lasers">synchronization of lasers</a><br>and other articles in the categories <a href="categories.html#fluctuations_and_noise" title="other articles on fluctuations and noise">fluctuations and noise</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/timing_jitter.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Ftiming_jitter.html&text=RP+Photonics+Encyclopedia+-+timing+jitter%2C+mode-locked+laser%2C+noise%2C+measurement%2C+techniques" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Ftiming_jitter.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Ftiming_jitter.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/timing_jitter.html"&gt;<br>Article on Timing Jitter&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/timing_jitter.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/timing_jitter.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/timing_jitter.html<br>article on 'Timing Jitter' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Learn About Photonics Marketing!</h2>
+<p>We have published a number of comprehensive articles where we explain how a wide range of tools for the marketing of photonics, optics and laser product works.</p>
+<p>Start reading here:</p>
+<p><a href="./marketing_overview.html?banner=marketing_articles" style="font-size:20px; font-weight:bold;">Marketing of Photonics and Laser Technology Products &ndash; an Overview</a></p>
+<p>You will learn not only about the tools which we offer ourselves &ndash; the <a href="./buyersguide.html?banner=marketing_articles">RP Photonics Buyer's Guide</a>, <a href="./marketing_promotions.html?banner=marketing_articles">special promotions</a> and <a href="./marketing_banners.html?banner=marketing_articles">banners</a> &ndash; but also about many others.</p>
+<p>See also our <a href="./marketing_glossary.html?banner=marketing_articles">glossary of photonics marketing</a>.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="HzlUbRgSjafYwDP/+NMGgQ==">shownbanner = "marketing articles";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Company News</h2>
+<p>Suppliers having an <a href="./bg_entries.html?banner=company_news">ad package</a> in the <a href="./buyersguide.html?banner=company_news">RP Photonics Buyer&#39;s Guide</a> can publish their <a href="./company_news.html?banner=company_news">company news</a>. For example, they may announce mergers and acquisitions, new product lines, or new cooperrations with distributors.</p>
+<p>Currently we have news from the following companies:</p>
+<ul>
+<li><a href="./bg/profiles/laser_quantum
+.html">Laser Quantum
+</a>: High power in a compact platform at key wavelengths
+</li>
+</ul>
+
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="HzlUbRgSjafYwDP/+NMGgQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/timing_jitter.html"
+    },
+    "headline": "Timing Jitter",
+    "image": "https://www.rp-photonics.com/previews/timing_jitter.png",
+    "datePublished": "2007-03-13",
+    "dateModified": "2020-05-28",
+    "description": "Timing jitter means fluctuations of the temporal positions of pulses. Mode-locked lasers can exhibit extremely low timing jitter, particularly over short time scales.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter T",
+      "item": "https://www.rp-photonics.com/encyclopedia_t.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "timing jitter",
+      "item": "https://www.rp-photonics.com/timing_jitter.html"
+    }]}
+}
+</script>
+</body>
+</html>

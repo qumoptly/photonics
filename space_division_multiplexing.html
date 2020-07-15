@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-Ncb4Y+mnMyIHes292K2gXg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - space division multiplexing, fiber division, high bit rates, SDM fibers, multi-core fibers, multimode fibers, mode division multiplexing, cross-talk, MIMO</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/space_division_multiplexing.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-07-11">
+<meta name="description" content="Space division multiplexing is a technique for optical data transmission where one utilizes multiple spatial channels, e.g. in multi-core fibers or the different modes of multimode fibers.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="space division multiplexing, fiber division, high bit rates, SDM fibers, multi-core fibers, multimode fibers, mode division multiplexing, cross-talk, MIMO">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Space Division Multiplexing">
+<meta property="og:description" content="Space division multiplexing is a technique for optical data transmission where one utilizes multiple spatial channels, e.g. in multi-core fibers or the different modes of multimode fibers.">
+<meta property="og:url" content="https://www.rp-photonics.com/space_division_multiplexing.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/space_division_multiplexing.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Space division multiplexing is a technique for optical data transmission where one utilizes multiple spatial channels, e.g. in multi-core fibers or the different modes of multimode fibers.">
+<meta name="twitter:title" content="Space Division Multiplexing">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/space_division_multiplexing.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="Ncb4Y+mnMyIHes292K2gXg==">
+page="space_division_multiplexing.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="Ncb4Y+mnMyIHes292K2gXg==">shownsponsors="EKSMA OPTICS"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_s.html">letter S</a> &gt; <a href="space_division_multiplexing.html">space division multiplexing</a></p>
+<h1>Space Division Multiplexing</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_space_division_multiplexing_devices.html?s=vbox">3 suppliers for space division multiplexing devices</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_space_division_multiplexing_devices.html?s=vbox">List of suppliers for<br>space division multiplexing devices</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p>Acronym: SDM</p>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a multiplexing technique for optical data transmission where multiple spatial channels are utilized</p>
+<p>Alternative term: spatial division multiplexing</p>
+<p>More general term: optical multiplexing</p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#lightwave_communications" title="other articles on lightwave communications">lightwave communications</a></p>
+<p><a href="encyclopedia_cite.html?article=space%20division%20multiplexing">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p><a href="optical_data_transmission.html" title="the transmission of information using light beams, e.g. in fibers">Optical data transmission</a>, particularly in the form of <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a>, is used to transmit data at bit rates which have been enormously increased over the last few decades.
+An important aspect is always the use of certain multiplexing techniques for improving transmission capacities, preferably without laying down additional fibers.
+Most common are <a href="wavelength_division_multiplexing.html" title="a multiplexing technique working in the wavelength domain">wavelength division multiplexing</a> (WDM, using multiple wavelength channels) and <a href="time_division_multiplexing.html" title="a multiplexing technique operating in the time domain">time division multiplexing</a> (TDM, interleaving channels temporally).
+Another option &ndash; topic of this article &ndash; is <em>space division multiplexing</em>, where one utilized multiple spatial channels.
+It is also called <em>spatial division multiplexing</em> (SDM).
+As the potentials of WDM have largely been realized, SDM will be needed for further substantial increases of transmission capacities, avoiding the expected shortage of capacity (&ldquo;capacity crunch&rdquo;).
+It is considered to be particularly needed for long-haul communications (e.g. through submarine communications cables), but later on also for applications on smaller scales such as regional networks.
+Certain forms of space division multiplexing will of course be used in conjunction with other techniques like wavelength division multiplexing, rather than as a replacement for those.</p>
+<p>In <a href="free_space_optical_communications.html" title="optical data transmission through free space, usually through air or vacuum">free-space optical communications</a>, one could simply utilize multiple <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beams</a> in parallel for transmitting data at a higher overall bit rate.
+Unfortunately, that method does not scale well; the number of practically usable beams is limited, and the cost increases nearly linearly with the number of transmission lines.
+In <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a>, however, there are various interesting options, discussed in the following sections.</p>
+<h2 class="togglediv">Fiber Division Multiplexing</h2>
+<div>
+<p>The technical simplest approach is to use multiple optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a> for obtaining higher overall bit rates.
+One essentially multiplies most of the hardware for transmitting information via multiple parallel information channels.
+The used components are essentially the same as for single <a href="fiber_optic_links.html" title="optical communication links where the signal light is transported in fibers">fiber-optic links</a>.
+Only to a moderately extent, one tries to reduce the cost by using a single component for multiple channels:</p>
+<ul>
+<li>One may use a single <a href="laser_diodes.html" title="semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diode</a> in conjunction with fiber splitters for pumping multiple <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifiers</a>.</li>
+<li>Multiple fibers can be integrated into a single <a href="fiber_cables.html" title="cables containing one or several optical fibers">fiber cable</a>.
+For small distances, fiber ribbons may be used.</li>
+<li>Multiple laser transmitters maybe he realized as a laser array on a single chip, e.g. a <a href="vertical_cavity_surface_emitting_lasers.html" title="a monolithic kind of semiconductor lasers with beam emission perpendicular to the wafer surface">VCSEL</a> array.</li>
+<li>Multiple receivers may also be combined on a single chip (&rarr;&nbsp;<a href="photonic_integrated_circuits.html" title="integrated circuits with optical functions">photonic integrated circuits</a>), and some of the electronics can be shared between the channels.</li>
+</ul>
+<p>The disadvantage of this approach is that the cost still rises substantially for an increasing number of transmission channels.
+However, the development is relatively simple, and no essential new optical components are required.</p>
+</div>
+<h2 class="togglediv">Multi-core Fibers</h2>
+<div>
+<p>A potentially more economical solution &ndash; particularly for large transmission distances and a substantial number of transmission channels &ndash; is to use a single fiber containing multiple <a href="fiber_core.html" title="the region in an optical fiber which guides light">fiber cores</a>.
+Such fibers are called <a href="multi_core_fibers.html" title="optical fibers containing more than one fiber core"><em>multi-core fibers</em></a> [21].
+Each individual core can provide one communication channel.</p>
+<aside class="callout blue">One may try to keep the fiber cores uncoupled, but this limits the number of cores.</aside>
+<p>In the simplest situation, the fiber cores are sufficiently separated from each other such that there is negligible light coupling between the fibers, thus negligible cross-talk between the channels.
+The signal processing for such <em>uncoupled SDM fibers</em> is relatively simple.
+However, that requirement severely limits the number of fiber cores, as their distance needs to be substantial.
+One may try to &ldquo;insulate&rdquo; relatively closely spaced cores with refractive index trenches.
+Alternatively, one may use fibers with larger <a href="fiber_cladding.html" title="the area(s) around the core of an optical fiber">cladding</a> diameter, but that approach has serious disadvantages, particularly the increased tendency for breaking fibers even for moderate bend radii, but also difficulties for fiber interfaces, e.g. with <a href="fusion_splicing_of_fibers.html" title="a technique of making low-loss fiber joints by fusing fiber ends together">fusion splicing</a>.</p>
+<aside class="callout blue">Coupled SDM fibers allow a smaller core spacing.</aside>
+<p>Due to the limitations of uncoupled fibers, there is a tendency to use fibers with more cores, put so closely together that a significant amount of coupling between the fibers occurs (<em>coupled SDM fibers</em>), and <em>supermodes</em> are formed.
+In order to deal with the resulting cross-talk issue, one uses refined MIMO techniques (multiple inputs / multiple outputs), based on electronic signal processors, which are in principle similar to those used in wireless data transmission (e.g. for WLAN with multiple antennas).
+As the <a href="group_velocity.html" title="the velocity with which the envelope of a weak narrow-band optical pulse propagates in a medium">group velocities</a> of the different fiber cores are quite similar, and a moderate amount of coupling does not lead to a substantial spread of group velocities, MIMO receivers with limited complexity are sufficient to obtain high bit rates with sufficiently small <a href="bit_error_rate.html" title="average fraction of wrongly transmitted bits in a communication link">bit error rates</a>.</p>
+<aside class="callout green">How to produce fiber preforms with multiple cores?</aside>
+<p>Various technical challenges are encountered.
+The perhaps smallest one is the <a href="fiber_fabrication.html" title="the fabrication of optical fibers">fabrication</a> of multi-core fibers.
+Although traditional techniques of fabricating fiber preforms can not be used, there are alternative solutions e.g. based on <a href="photonic_crystal_fibers.html" title="specialty optical fibers with a built-in microstructure, in most cases consisting of small air holes in glass">photonic crystal fibers</a> which are very flexible in that respect.
+Once a multi-core fiber preform has been made, it can be drawn into fiber in traditional fiber drawing towers.</p>
+<aside class="callout blue">Special solutions are required for connecting fibers and for interfacing them to single-mode fibers.</aside>
+<h3 class="togglediv">Connecting Multi-core Fibers</h3>
+<div>
+<p>Connecting multi-core fibers is obviously more difficult than for standard fibers: the fibers need to be rotationally aligned such that the core positions match.
+For example, special provisions are needed to ensure the correct rotational orientation when <a href="fusion_splicing_of_fibers.html" title="a technique of making low-loss fiber joints by fusing fiber ends together">fusion splicing</a> multi-core fibers.
+Depending on the system architecture, it may even be necessary to ensure that the association between input and output cores is maintained e.g. when a connection is released and made again.
+Special types of <a href="fiber_connectors.html" title="connectors used as terminations of optical fiber cables">fiber connectors</a> are available which e.g. contain pins on one side to ensure that plugging in is possible only with the correct rotational orientation.</p>
+</div>
+<h3 class="togglediv">Spatial Multiplexers</h3>
+<div>
+<p>It is also necessary to couple multi-core fibers to separate single-mode fibers, either for combining input signals from such fibers or for distributing output signals to separate <a href="photodetectors.html" title="devices used for the detection of light">photodetectors</a> in a telecom receiver.
+Spatial multiplexers of different kinds have been developed for such purposes:</p>
+<ul>
+<li>There are miniature bulk-optical systems containing elements like <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lenses</a> and <a href="prisms.html" title="transparent optical devices which refract or reflect light">prisms</a> for launching light from separate fibers into the cores of a multi-core fiber.</li>
+<li>Another solution is to use laser-inscribed 3D <a href="waveguides.html" title="spatially inhomogeneous transparent structures for guiding light">waveguides</a> in a small glass block, which connect different cores of a MCF with the cores of a set of output or input fibers which are arranged in a linear sequence [2].</li>
+</ul>
+</div>
+<h3 class="togglediv">Fiber Amplifiers for Multi-core Fibers</h3>
+<div>
+<aside class="callout blue">There are special fiber amplifiers which can be used for amplifying signals in multiple cores.</aside>
+<p>Communications systems require <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifiers</a> for maintaining sufficient channel powers over large transmission distances.
+When using multi-core fibers, one requires special multi-core fiber amplifiers [6,&thinsp;24].
+They need to be optimized such that the obtained amplifier <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> is sufficiently uniform over the spatial modes; in other words, the <em>differential gain</em> must be small.</p>
+<p>Although the design of such amplifiers is somewhat more difficult, it is obviously economical and also more energy-efficient to use one multi-core amplifier instead of multiple single-mode amplifiers, each one with a separate <a href="active_fibers.html" title="optical fibers containing laser-active dopants in the fiber core">active fiber</a>, pump source, couplers etc.</p>
+</div>
+</div>
+<h2 class="togglediv">Multimode / Few-mode Fibers</h2>
+<div>
+<p>It is also possible to realize space division multiplexing with <a href="multimode_fibers.html" title="fibers supporting more than one guided mode per polarization direction">multimode fibers</a>, where each spatial mode is used for one transmission channel.
+Typically, one uses <a href="few_mode_fibers.html" title="fibers supporting only few guided modes">few-mode fibers</a>, having a quite limited number of modes, for example 3, 6, 7, 12 or 19.
+The specific term for that technique is <a href="mode_division_multiplexing.html" title="a multiplexing technique for data transmission in fibers, where different fiber modes are used for different channels"><em>mode division multiplexing</em></a>.</p>
+<p>When comparing that approach with using multi-core fibers, there are various important differences:</p>
+<ul>
+<li>The used fibers are simpler to make.
+In some cases, one may even use fibers of existing <a href="multimode_fibers.html" title="fibers supporting more than one guided mode per polarization direction">multimode</a> <a href="fiber_optic_links.html" title="optical communication links where the signal light is transported in fibers">fiber-optic links</a>, where previously one has used only a single spatial channel.</li>
+<li>Connecting multimode fibers e.g. with <a href="fiber_connectors.html" title="connectors used as terminations of optical fiber cables">fiber connectors</a> or <a href="fusion_splicing_of_fibers.html" title="a technique of making low-loss fiber joints by fusing fiber ends together">splices</a> is much easier than coupling multi-core fibers, where the cores of the two fibers need to be aligned.
+However, the quality requirements for <a href="fusion_splicing_of_fibers.html" title="a technique of making low-loss fiber joints by fusing fiber ends together">fusion splicing</a> are higher than for ordinary multimode fiber communications, because mode-dependent loss must be minimized.</li>
+<li>Interfacing to single fibers is technically different; special spatial mode multiplexers are required.
+They can be realized with certain phase plates or as photonic lanterns, for example.</li>
+<li>The cross-talk between different fiber modes is more substantial than that between separate cores.
+Besides, there are significant differences in <a href="group_velocity.html" title="the velocity with which the envelope of a weak narrow-band optical pulse propagates in a medium">group velocity</a> between different modes.
+Therefore, a MIMO receiver (digital signal processor) with higher complexity is required.
+One may also optimize <a href="few_mode_fibers.html" title="fibers supporting only few guided modes">few-mode fibers</a> such that their spread of group velocities (modal differential group delay, MDGD) is minimized &ndash; typically by using a graded-index profile.
+At the same time, one should try to minimize <a href="mode_coupling.html" title="a concept for describing and calculating light propagation in certain situations, e.g. involving nonlinear interactions">mode coupling</a>.</li>
+<li>Again, special fiber amplifiers are required, which provide sufficiently similar gainfully different fiber modes [8].</li>
+</ul>
+<p>When comparing with the use of multi-core fibers, the ease a trade-off: the optical set up is simpler with multimode fibers, but on the other hand one requires more sophisticated electronics.</p>
+</div>
+<h2 class="togglediv">Multi-core Few-mode Fibers</h2>
+<div>
+<p>It is also possible to combine the two approaches described above: using a firewall which contains multiple cores, each one having several spatial modes.</p>
+</div>
+<h2 class="togglediv">Availability of SDM Hardware</h2>
+<div>
+<p>In recent years, a lot of new hardware has been developed for space division multiplexing.
+Partially, such items are commercially available:</p>
+<ul>
+<li>There are various kinds of SDM fibers, particularly multi-core fibers and few-mode fibers, partially with minimized modal differential group delay.
+<a href="fiber_cables.html" title="cables containing one or several optical fibers">Fiber cables</a> containing such fibers are also available.</li>
+<li>There are various kinds of spatial multiplexers, mode connectors and the like.</li>
+<li>Special <a href="erbium_doped_fiber_amplifiers.html" title="fiber amplifiers based on erbium-doped optical fibers">erbium-doped fiber amplifiers</a> for few-mode fibers and for multi-core fibers have been developed.</li>
+<li>Further, there are fusion splicers which are suitable for splicing multi-core fibers, sometimes also with increased cleaning diameters.</li>
+</ul>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_space_division_multiplexing_devices.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 3 suppliers for space division multiplexing devices.</p>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="space_division_multiplexing.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">S. Berdagué and P. Facq, &ldquo;Mode division multiplexing in optical fibers&rdquo;, Appl. Opt. 21 (11), 1950 (1982), <a href="https://doi.org/10.1364/AO.21.001950">doi:10.1364/AO.21.001950</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">R. R. Thomson <i>et al.</i>, &ldquo;Ultrafast-laser inscription of a three dimensional fan-out device for multicore fiber coupling applications&rdquo;, Opt. Express 15 (18), 11691 (2007), <a href="https://doi.org/10.1364/OE.15.011691">doi:10.1364/OE.15.011691</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">R. W. Tkach, &ldquo;Scaling optical communications for the next decade and beyond&rdquo;, Bell Labs Tech. J. 14 (4), 3 (2010), <a href="https://doi.org/10.1002/bltj.20400">doi:10.1002/bltj.20400</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">F. Yaman <i>et al.</i>, &ldquo;Long distance transmission in few-mode fibers&rdquo;, Opt. Express 18 (12), 13250 (2010), <a href="https://doi.org/10.1364/OE.18.013250">doi:10.1364/OE.18.013250</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">B. Zhu <i>et al.</i>, &ldquo;70-Gb/s multicore multimode fiber transmissions for optical data links&rdquo;, IEEE Photonics Technol. Lett. 22 (22), 1647 (2010), <a href="https://doi.org/10.1109/LPT.2010.2070490">doi:10.1109/LPT.2010.2070490</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">K. S. Abedin <i>et al.</i>, &ldquo;Amplification and noise properties of an erbium-doped multicore fiber amplifier&rdquo;, Opt. Express 19 (17), 16715 (2011), <a href="https://doi.org/10.1364/OE.19.016715">doi:10.1364/OE.19.016715</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">B. Zhu <i>et al.</i>, &ldquo;112-Tb/s Space-division multiplexed DWDM transmission with 14-b/s/Hz aggregate spectral efficiency over a 76.8-km seven-core fiber&rdquo;, Opt. Express 19 (17), 16665 (2011), <a href="https://doi.org/10.1364/OE.19.016665">doi:10.1364/OE.19.016665</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">Y. Jung <i>et al.</i>, &ldquo;First demonstration and detailed characterization of a multimode amplifier for space division multiplexed transmission systems&rdquo;, Opt. Express 19 (26), B952 (2011), <a href="https://doi.org/10.1364/OE.19.00B952">doi:10.1364/OE.19.00B952</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">T. Sakamoto <i>et al.</i>, &ldquo;Transmission over large-core few-mode photonic crystal fiber using distance-independent modal dispersion compensation technique&rdquo;, Opt. Express 19 (26), B478 (2011), <a href="https://doi.org/10.1364/OE.19.00B478">doi:10.1364/OE.19.00B478</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">R. Ryf <i>et al.</i>, &ldquo;Mode-division multiplexing over 96&nbsp;km of a few-mode fiber using coherent 6 &times; 6 MIMO processing&rdquo;, J. Lightwave Technol. 30 (4), 521 (2012), <a href="https://doi.org/10.1109/JLT.2011.2174336">doi:10.1109/JLT.2011.2174336</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">J. D. Love and N. Riesen, &ldquo;Mode-selective couplers for few-mode optical fiber networks&rdquo;, Opt. Lett. 37 (19), 3990 (2012), <a href="https://doi.org/10.1364/OL.37.003990">doi:10.1364/OL.37.003990</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">Q. Kang <i>et al.</i>, &ldquo;Accurate modal gain control in a multimode erbium doped fiber amplifier incorporating ring doping and a simple LP<sub>01</sub> pump configuration&rdquo;, Opt. Express 20 (19), 20835 (2012), <a href="https://doi.org/10.1364/OE.20.020835">doi:10.1364/OE.20.020835</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">V. A. J. M. Sleiffer <i>et al.</i>, &ldquo;73.7 Tb/s (96 × 3 × 256-Gb/s) mode-division-multiplexed DP-16QAM transmission with inline MM-EDFA&rdquo;, Opt. Express 20 (26), B428 (2012), <a href="https://doi.org/10.1364/OE.20.00B428">doi:10.1364/OE.20.00B428</a></td></tr>
+<tr><td class="refno">[14]</td><td class="refs">D. J. Richardson, J. M. Fini and L. E. Nelson, &ldquo;Space-division multiplexing in optical fibers&rdquo;, Nat. Photonics 7 (5), 354 (2013), <a href="https://doi.org/10.1038/nphoton.2013.94">doi:10.1038/nphoton.2013.94</a></td></tr>
+<tr><td class="refno">[15]</td><td class="refs">A. Sano <i>et al.</i>, &ldquo;409-Tb/s + 409-Tb/s crosstalk suppressed bidirectional MCF transmission over 450&nbsp;km using propagation-direction interleaving&rdquo;, Opt. Express 21 (14), 16777 (2013), <a href="https://doi.org/10.1364/OE.21.016777">doi:10.1364/OE.21.016777</a></td></tr>
+<tr><td class="refno">[16]</td><td class="refs">T. Hayashi <i>et al.</i>, &ldquo;Physical interpretation of intercore crosstalk in multicore fiber: Effects of macrobend, structure fluctuation, and microbend&rdquo;, Opt. Express 21 (5), 5401 (2013), <a href="https://doi.org/10.1364/OE.21.005401">doi:10.1364/OE.21.005401</a></td></tr>
+<tr><td class="refno">[17]</td><td class="refs">P. Sillard, M. Bigot-Astruc and D. Molin, &ldquo;Few-mode fibers for mode-division-multiplexed systems&rdquo;, J. Lightwave Technol. 32 (16), 2824 (2014), <a href="https://doi.org/10.1109/JLT.2014.2312845">doi:10.1109/JLT.2014.2312845</a></td></tr>
+<tr><td class="refno">[18]</td><td class="refs">P. J. Winzer, &ldquo;Making spatial multiplexing a reality&rdquo;, Nat. Photonics 8 (5), 345 (2014), <a href="https://doi.org/10.1038/nphoton.2014.58">doi:10.1038/nphoton.2014.58</a></td></tr>
+<tr><td class="refno">[19]</td><td class="refs">R. G. H. van Uden <i>et al.</i>, &ldquo;Ultra-high-density spatial division multiplexing with a few-mode multicore fibre&rdquo;, Nature Photonics 8, 865 (2014), <a href="https://doi.org/10.1038/nphoton.2014.243">doi:10.1038/nphoton.2014.243</a></td></tr>
+<tr><td class="refno">[20]</td><td class="refs">Y. Jung <i>et al.</i>, &ldquo;Cladding pumped few-mode EDFA for mode division multiplexed transmission&rdquo;, Opt. Express 22 (23), 29008 (2014), <a href="https://doi.org/10.1364/OE.22.029008">doi:10.1364/OE.22.029008</a></td></tr>
+<tr><td class="refno">[21]</td><td class="refs">K. Saitoh and S. Matsuo, &ldquo;Multicore fiber technology&rdquo; (tutorial review), J. Lightwave Technol. 34 (1), 55 (2016)</td></tr>
+<tr><td class="refno">[22]</td><td class="refs">H. Chen <i>et al.</i>, &ldquo;Integrated cladding-pumped multicore few-mode erbium-doped fibre amplifier for space-division-multiplexed communications&rdquo;, Nature Photonics 10, 529 (2016), <a href="https://doi.org/10.1038/nphoton.2016.125">doi:10.1038/nphoton.2016.125</a></td></tr>
+<tr><td class="refno">[23]</td><td class="refs">G. Lopez-Galmiche <i>et al.</i>, &ldquo;Few-mode erbium-doped fiber amplifier with photonic lantern for pump spatial mode control&rdquo;, Opt. Lett. 41 (11), 2588 (2016), <a href="https://doi.org/10.1364/OL.41.002588">doi:10.1364/OL.41.002588</a></td></tr>
+<tr><td class="refno">[24]</td><td class="refs">S. Jain <i>et al.</i>, &ldquo;32-core erbium/ytterbium-doped multicore fiber amplifier for next generation space-division multiplexed transmission system&rdquo;, Opt. Express 25 (26), 32887 (2017), <a href="https://doi.org/10.1364/OE.25.032887">doi:10.1364/OE.25.032887</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="optical_data_transmission.html" title="the transmission of information using light beams, e.g. in fibers">optical data transmission</a>, <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a>, <a href="multi_core_fibers.html" title="optical fibers containing more than one fiber core">multi-core fibers</a>, <a href="few_mode_fibers.html" title="fibers supporting only few guided modes">few-mode fibers</a>, <a href="multimode_fibers.html" title="fibers supporting more than one guided mode per polarization direction">multimode fibers</a>, <a href="mode_division_multiplexing.html" title="a multiplexing technique for data transmission in fibers, where different fiber modes are used for different channels">mode division multiplexing</a><br>and other articles in the category <a href="categories.html#lightwave_communications" title="other articles on lightwave communications">lightwave communications</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/space_division_multiplexing.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fspace_division_multiplexing.html&text=RP+Photonics+Encyclopedia+-+space+division+multiplexing%2C+fiber+division%2C+high+bit+rates%2C+SDM+fibers%2C+multi-core+fibers%2C+multimode+fibers%2C+mode+division+multiplexing%2C+cross-talk%2C+MIMO" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fspace_division_multiplexing.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fspace_division_multiplexing.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/space_division_multiplexing.html"&gt;<br>Article on Space Division Multiplexing&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/space_division_multiplexing.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/space_division_multiplexing.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/space_division_multiplexing.html<br>article on 'Space Division Multiplexing' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Now is the Time for Training!</h2>
+<p>When your lab is closed, how to best utilize your time? With training, of course.</p>
+<p>Some suggestions:</p>
+<ul>
+<li>Use the RP Photonics website, reading <a href="./encyclopedia.html?banner=video_training">encyclopedia</a> articles, <a href="./tutorials.html?banner=video_training">tutorials</a>, <a href="./spotlight.html?banner=video_training">Photonics Spotlight</a> articles, etc. &ndash; all for free.</li>
+<li>Get a <a href="./training.html?banner=video_training">tailored training course</a> delivered through the internet &ndash; with every participant connected from home!</li>
+<li>Start with <a href="./software_modeling.html?banner=video_training">physical modeling</a> in order to fully understand your systems and devices, optimize performance, create new ideas&hellip;</li>
+</ul>
+<img src="./img/rp_photonics.png" alt="RP Photonics" style="margin-top:20px; width:225px;">
+<p>offers <a href="./training.html?banner=video_training">tailored training courses</a> and powerful <a href="./software.html?banner=video_training">simulation &amp; design software</a>, e.g. for <a href="./fiberpower.html?banner=video_training">active and passive fiber devices</a>, <a href="./resonator.html?banner=video_training">laser resonators</a> and <a href="./coating.html?banner=video_training">thin-film coatings</a>!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="Ncb4Y+mnMyIHes292K2gXg==">shownbanner = "video training";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Field Guide on Fiber Optics</h2>
+<p>A quick introduction to fiber optics:</p>
+<ul>
+<li>basics of optical fibers</li>
+<li>fiber nonlinearities and their effects</li>
+<li>passive fibers for data transmission</li>
+<li>photonic crystal fibers</li>
+<li>large mode area fibers</li>
+<li>passive fiber-optic components</li>
+<li>active fiber devices: fiber amplifiers and lasers</li>
+</ul>
+<p style="text-align:center;"><a href="http://spie.org/x648.html?product_id=853722"><img src="./img/fg_fibers.png" alt="FG Fiber Optics"></a></p>
+<p>Note that we have also published a <a href="./passive_fiber_optics.html?banner=FG_Fiber_Optics">free tutorial on fiber optics</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="Ncb4Y+mnMyIHes292K2gXg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/space_division_multiplexing.html"
+    },
+    "headline": "Space Division Multiplexing",
+    "image": "https://www.rp-photonics.com/previews/space_division_multiplexing.png",
+    "datePublished": "2019-03-01",
+    "dateModified": "2020-07-11",
+    "description": "Space division multiplexing is a technique for optical data transmission where one utilizes multiple spatial channels, e.g. in multi-core fibers or the different modes of multimode fibers.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter S",
+      "item": "https://www.rp-photonics.com/encyclopedia_s.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "space division multiplexing",
+      "item": "https://www.rp-photonics.com/space_division_multiplexing.html"
+    }]}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-nXJ9V6eH00wU/cSaphbjFA=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>The fiber optics software RP Fiber Calculator: defining refractive index profiles</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/rp_fiber_calculator_docu.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-05-06">
+<meta name="description" content="Documentation of the software RP Fiber Calculator of RP Photonics Consulting GmbH, which can calculate fiber mode properties and light propagation in fibers.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="RP Fiber Calculator, software, fiber optics, mode solver, documentation, refractive index profile">
+<script type="text/javascript" src="./jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" nonce="nXJ9V6eH00wU/cSaphbjFA==">
+page="rp_fiber_calculator_docu.html?banner=RP_Fiber_Calculator"; cat="S"; shownbanner=""; ref="http://www.rp-photonics.com/marketing_media_data.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td class="selected"><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="rp_fiber_calculator_docu_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software_start" href="software.html">Introduction</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<p>Products:</p>
+<a id="Overview" href="software_overview.html">Overview</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html" class="sel">RP Fiber Calculator</a>
+<a href="rp_fiber_calculator_download.html" class="sub">Download</a>
+<a href="rp_fiber_calculator_docu.html" class="sub sel">Documentation</a>
+<a href="rp_fiber_calculator_feedback.html" class="sub">Feedback</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<p>Various aspects:</p>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<p>Take action:</p>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main"><main>
+<div class="softwarelogo">
+<p class="fig" style="margin-top:12px"><img src="img/fiberpower_logo.png" width="75" height="75" alt="RP Fiber Power logo"></p>
+</div>
+<p class="breadcrumbs"><a href="software.html">Software</a> &gt; <a href="rp_fiber_calculator.html">RP Fiber Calculator</a> &gt; <a href="rp_fiber_calculator_docu.html">Documentation</a></p>
+<h1>RP Fiber Calculator &ndash; Documentation</h1>
+<p>Here we explain in detail how the <b>RP Fiber Calculator</b> software is used. <br>
+Each of the menu items explains one of the tabs.</p>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="rp_fiber_calculator_docu.html">Index profiles</a></td>
+<td class="sub_nav"><a class="sub_n" href="rp_fiber_calculator_gm.html">Guided modes</a></td>
+<td class="sub_nav"><a class="sub_n" href="rp_fiber_calculator_la.html">Launching a beam</a></td>
+<td class="sub_nav"><a class="sub_n" href="rp_fiber_calculator_pr.html">Propagation</a></td>
+<td class="sub_nav"><a class="sub_n" href="rp_fiber_calculator_co.html">Fiber to fiber</a></td>
+<td class="sub_nav"><a class="sub_n" href="rp_fiber_calculator_fe.html">Fiber ends</a></td>
+</tr>
+</table>
+<h2 class="togglediv">Index Profiles</h2>
+<div>
+<p>In this tab, you can define refractive index profiles of up to 10 different fibers.
+You can give a name to each of them (e.g., a product name or any remark helping you to identify that fiber).
+Switch between these data sets by clicking on the selection tool at the top.</p>
+<p>The entered data are stored automatically, so that you still have them the next time you start the software.</p>
+<figure>
+<img src="img/rp_fiber_calculator_ip.png" alt="RP Fiber Calculator, entering refractive index profiles">
+</figure>
+<p>In the text areas at the bottom, you can get some help texts and learn what features are available in other software.</p>
+<h3 class="togglediv">Basic Parameters</h3>
+<div>
+<aside class="textbox tb_right redmargin" style=" width:300px;">
+<p>Note that the <a href="fiberpower.html"><b>RP Fiber Power</b></a> software offers more features:</p>
+<ul>
+<li>refractive index profiles based on arbitrary parametrized mathematical expressions</li>
+<li>reading tabulated index values from files (with any text format or binary format)</li>
+<li>generate arbitrary plots</li>
+<li>numerical optimizations</li>
+</ul>
+<p>For example, in <a href="fiberpower.html"><b>RP Fiber Power</b></a> you could generate an index profile with certain features (some bumps or dips) which you can control with a set of parameters (such as a bump height and width).
+You could then have these parameters automatically optimized such that certain mode properties are obtained.</p>
+<p>Generally, <a href="fiberpower.html"><b>RP Fiber Power</b></a> is far more flexible since it offers a powerful script language.</p>
+</aside>
+<p>For each fiber, you can enter the following parameters:</p>
+<ul>
+<li>Core radius: this is the radius of the <a href="fiber_core.html" title="the region in an optical fiber which guides light">fiber core</a>, i.e., the region which has a modified <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a>.
+Around the core, there is the <a href="fiber_cladding.html" title="the area(s) around the core of an optical fiber">cladding</a>, having a constant refractive index.
+You can modify the core radius in steps of 1&nbsp;&mu;m by using the small arrows just write of the input field; when holding the Ctrl key pressed, you change the radius in smaller steps of 0.1&nbsp;&mu;m.</li>
+<li>Number of core segments: the <a href="fiber_core.html" title="the region in an optical fiber which guides light">fiber core</a> region is subdivided into some number of segments for which the refractive index can be determined.
+The more core segments you choose, the more complicated index profiles you can define.</li>
+<li>Type of profile: you can have an index profile defined via steps (with constant index within each segment), with linear interpolation or with a cubic spline interpolation for smooth profiles.</li>
+</ul>
+<p>For example, for a simple <a href="step_index_fibers.html" title="optical fibers with a step-index refractive index profile">step-index fiber</a>, take a single core segment and choose a step profile.</p>
+<p>Further in the &ldquo;Refractive index&rdquo; tab you can enter the index range, i.e., the range to be displayed on the vertical axis in the diagram below.
+It should be at least as large as the range of indices used for the profile.</p>
+</div>
+<h3 class="togglediv">Defining the Index Profile</h3>
+<div>
+<p>The refractive index profile can be determined in three different ways:</p>
+<ul>
+<li>Choose &ldquo;Index defined by diagram&rdquo; in order to directly determine the index values.
+In order to change the refractive index of some segment, simply click with the left mouse button on the vertical line which indicates its left boundary.
+(In case of step profiles and for the cladding, you can also click anywhere in the diagram.)
+If you click with the right mouse button, you can edit the numerical value of the refractive index.
+With the button “Edit data in table”, all index values can be edited as numerical values.</li>
+<li>Choose &ldquo;Index defined by doping profile&rdquo; (PRO feature), if you want the refractive index to be calculated from the doping profile (e.g. of germania in silica) which you can edit in the &ldquo;Doping profile&rdquo; tab.
+In that case, the refractive index can become wavelength-dependent, i.e., <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> is included.
+The material data are contained in a file which you can open and edit by pressing the &ldquo;M&rdquo; button.
+By adding a function named n&#95;myfiber(r,l), for example, you would define the material named &ldquo;myfiber&rdquo;, which you could then select in the material selection box.</li>
+<li>Choose &ldquo;Index defined by expression&rdquo; (PRO feature), if you want to use your own refractive index data, e.g. in the form of <a href="sellmeier_formula.html" title="an equation for calculating the wavelength-dependent refractive index of a medium">Sellmeier equations</a>.
+The index can depend on the radial coordinate and on the wavelength.
+A simple example for such a formula: 1.45 + (if r &lt; r&#95;core then 5e-3*(1 - (r/r&#95;core)<sup>2</sup>)) defines a parabolic profile.
+You could also refer to functions defined in the material data file.</li>
+</ul>
+<p>The free version supports only the first option (direct input of index profiles).</p>
+<p>The diagram shows you the refractive index profile.
+On the right side, it has an axis which shows what <a href="numerical_aperture.html" title="sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a> (NA) a <a href="step_index_fibers.html" title="optical fibers with a step-index refractive index profile">step-index fiber</a> with a certain core index would have.</p>
+</div>
+<h3 class="togglediv">Monitoring Mode Properties and Optimizing Fiber Designs</h3>
+<div>
+<p>RP Fiber Calculator PRO version offers a very handy feature for displaying the most important mode properties in a window below the displayed index profile.
+Just activate &ldquo;MP display&rdquo; (the check box near the bottom right edge of the form) in order to open another panel at the bottom.
+On the left side, you can enter one or several lists of expressions, and their values will be displayed on the right side.
+These displays can be automatically updated whenever you do a change to the index profile.</p>
+<figure>
+<img src="img/rp_fiber_calculator_ip_mp.png" alt="RP Fiber Calculator, displaying mode properties">
+</figure>
+<p>For example, you may enter</p>
+<pre class="codedisplay">
+"A&#95;eff: ", A&#95;eff(0, 1, 1550e-9)/1e-12:f0:&quot;µm²&quot;
+"cut-off: ", cut&#95;off(1,1):d4:&quot;m&quot;
+</pre>
+<p>in order to display the effective mode area of the fundamental mode at 1550&nbsp;nm and the cut-off wavelength of the LP<sub>11</sub> mode.
+As you see, you can also mathematically transform the values and use formatting instructions to get rounding to some number of valid digits and some units.
+Besides, you can use a wide range of mathematical standard functions such as abs(), trunc(), round(), sqr(), sqrt(), exp(), ln(), lg(), sin(), cos() and sinh(), and the standard arithmetic operators (+, &minus;, *, /, &#94;).
+Apart from arithmetic expressions, you can use strings &ndash; for example, string constants in single or double quotes.</p>
+<p>If you develop optimized fiber designs, you usually have to observe several mode properties.
+For a single-mode fiber, for example, you may need to reach desired values for the effective mode area, the cut-off wavelength of the LP<sub>11</sub> mode and possibly a certain value of the group velocity dispersion (GVD).</p>
+<p>Obviously, it would be tedious to look up all these properties elsewhere after each change of the refractive index profile in order to decide on further changes.
+The explained feature of the PRO version makes this more convenient, as you can get mode properties displayed directly where you edit the index profile.</p>
+<p>You can take this even further by displaying a &ldquo;figure of merit&rdquo; (FOM) value, that is zero in the ideal case and contains positive &ldquo;penalties&rdquo; otherwise.
+As an example, you may want to optimize a single-mode fiber design where you need an effective LP<sub>01</sub> mode area of 80&thinsp;&mu;m<sup>2</sup> and a cut-off wavelength of 1400&nbsp;nm for the LP<sub>11</sub> mode.
+The FOM display can then be defined as follows:</p>
+<pre class="codedisplay">
+"FOM: ", ((A&#95;eff(0,1,1550e-9)-80e-12)/10e-12)&#94;2 + ((cut&#95;off(1,1)-1400e-9)/50e-9)&#94;2:d3
+</pre>
+<p>The penalties for deviations from the ideal mode area and cut-off wavelength are weighted by dividing them by corresponding tolerances.</p>
+<p>You may then modify the index profile simply until you get the smallest possible FOM value.
+Instead of observing several target properties, you can focus on the minimization of a single number.</p>
+</div>
+<h3 class="togglediv">Hint for Convenient Use</h3>
+<div>
+<p>Behind various input fields, you find small arrows for increasing or decreasing the numerical value by clicking with the mouse key.
+For floating-point values, you can produce 10 times smaller changes by holding the Ctrl key pressed.</p>
+</div>
+<h3 class="togglediv">Underlying Assumptions of the Model</h3>
+<div>
+<p>Note that the software is suitable only for <em>weakly guiding fibers</em>, i.e., for fibers with a low refractive index contrast, having a radially symmetric index profile.
+These assumptions are quite well fulfilled for most glass fibers.
+(Exceptions are <a href="photonic_crystal_fibers.html" title="specialty optical fibers with a built-in microstructure, in most cases consisting of small air holes in glass">photonic crystal fibers</a> and some <a href="polarization_maintaining_fibers.html" title="specialty optical fibers with strong built-in birefringence, preserving the properly oriented linear polarization of an input beam">polarization-maintaining fibers</a>.)
+The modes are then nearly transverse electromagnetic (TEM) waves and can be treated as <a href="lp_modes.html" title="linearly polarized modes of optical fibers with radially symmetric index profiles in the approximation of weak guidance">LP modes</a>.
+(In the not weakly guiding case, we would have to distinguish TE, TM, HE and EH modes, and the situation gets far more complicated.)</p>
+</div>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</main></div>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="nXJ9V6eH00wU/cSaphbjFA==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Software",
+      "item": "https://www.rp-photonics.com/software.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "RP Fiber Calculator",
+      "item": "https://www.rp-photonics.com/rp_fiber_calculator.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Documentation",
+      "item": "https://www.rp-photonics.com/rp_fiber_calculator_docu.html"
+    }]}
+}
+</script>
+</body>
+</html>

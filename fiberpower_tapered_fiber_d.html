@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-tN8nh2hdxNtkyT/5n2FuaA=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>Die Software RP Fiber Power: Einkoppeln von Licht in eine verjüngte Faser, numerische Simulation</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/fiberpower_tapered_fiber_d.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-05-22">
+<meta name="description" content="Die Ausbreitung von Licht in einer verjüngten Faser wurde simuliert. Die Leistungsverluste sind stark modenabhängig.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="RP Fiber Power, Simulation, Design, Software, Faserverstärker, Einkoppeln, verjüngte Faser">
+<script type="text/javascript" src="./jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" nonce="tN8nh2hdxNtkyT/5n2FuaA==">
+page="fiberpower_tapered_fiber_d.html"; cat="S"; shownbanner=""; ref="http://www.rp-photonics.com/fiberpower_d.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="./encyclopedia_de.html">Encyclopedia</a></td>
+<td><a href="./buyersguide_d.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting_d.html">Dienste und Modellierung</a></td></tr>
+<tr><td><a href="./consulting_d.html">Beratung</a></td>
+<td class="selected"><a href="./software_d.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Software</span> <span id="slogan">&hellip; leistungsfähige Tools für Ihre Forschung &amp; Entwicklung!</span></p>
+<div id="other_language"><a href="fiberpower_tapered_fiber.html">English</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software_start" href="software_d.html">Einleitung</a>
+<a id="Modellierung" href="software_modeling_d.html">Modellierung</a>
+<a id="software_news" href="software_news_d.html">Software News</a>
+<p>Produkte:</p>
+<a id="Software" href="software_overview_d.html">Überblick</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator_d.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower_d.html" class="sel">RP Fiber Power</a>
+<a href="fiberpower_features_d.html" class="sub">Features</a>
+<a href="fiberpower_speed_d.html" class="sub">Geschwindigkeit</a>
+<a href="fiberpower_model_d.html" class="sub">Modell</a>
+<a href="fiberpower_data_d.html" class="sub">Faser-Daten</a>
+<a href="fiberpower_interface_d.html" class="sub">Benutzung</a>
+<a href="fiberpower_case_studies_d.html" class="sub sel">Demos</a>
+<a href="fiberpower_versions_d.html" class="sub">Versionen</a>
+<a id="rp_resonator" href="resonator_d.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse_d.html">RP ProPulse</a>
+<a id="rp_coating" href="coating_d.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch_d.html">RP Q-switch</a>
+<p>Diverse Aspekte:</p>
+<a id="script_language" href="software_script_language_d.html">Scriptsprache</a>
+<a id="debugger" href="software_debugger_d.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms_d.html">Formulare</a>
+<a id="licenses" href="software_licenses_d.html">Lizenzen</a>
+<a id="documentation" href="software_docu_d.html">Dokumentation</a>
+<a id="support" href="software_support_d.html">Support</a>
+<a id="distributors" href="software_distributors_d.html">Distributoren</a>
+<p>Aktion:</p>
+<a id="contact" href="software_contact_d.html">*Angebot anfordern*</a>
+</div>
+</nav>
+<div id="main"><main>
+<div class="softwarelogo">
+<p class="fig" style="margin-top:12px"><img src="img/fiberpower_logo.png" width="75" height="75" alt="RP Fiber Power logo"></p>
+</div>
+<p class="breadcrumbs"><a href="software_d.html">Software</a> &gt; <a href="fiberpower_d.html">RP Fiber Power</a> &gt; <a href="fiberpower_case_studies_d.html">Demo</a> &gt; <a href="fiberpower_tapered_fiber_d.html">Verjüngte Faser</a></p>
+<h1>RP Fiber Power: Simulations- und Design-Software <br> für Faseroptik, Faserverstärker und Faserlaser</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_d.html">Überblick</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_features_d.html">Features</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_speed_d.html">Geschwindigkeit</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_model_d.html">Modell</a></td>
+</tr><tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_data_d.html">Faser-Daten</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_interface_d.html">Benutzung</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="fiberpower_case_studies_d.html">Demos</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_versions_d.html">Versionen</a></td>
+</tr>
+</table>
+<h2>Beispiel: Verjüngte Faser</h2>
+<p>Hier untersuchen wir, wie Licht in einer Faser propagiert, die durch Ziehen über einer Flamme in einer gewissen Region verjüngt wurde.
+Der Kerndurchmesser ist in dieser Region entsprechend verkleinert.</p>
+<h3>Beschreibung des Modells</h3>
+<p>Die Reduktion des Kerndurchmessers wird mit einer einfachen Funktion beschrieben:</p>
+<pre class="codedisplay">
+t_min := 0.5
+t(z) := t_min + (1 - t_min) * 0.5 * (1 + cos(2pi * z / z_max))
+</pre>
+<p>Wenn wir später das Brechungsindexprofil definieren, können wir einfach diese Funktion benutzen, um das ursprünglich zweidimensionale Brechungsindexprofil abzuändern:</p>
+<pre class="codedisplay">
+  bp_set_n_z('n_f(sqrt(x^2 + y^2) / t(z))', 'z'); { index profile }
+</pre>
+<p>Die numerische Auflösung muss so hoch gewählt werden, dass auch Cladding-Moden realistisch berechnet werden, da wir erwraten müssen, dass ein Teil des Lichts vom Kern entweicht.</p>
+<h3>Ergebnisse</h3>
+<p>Zunächst betrachten wir eine einmodige Stufenindex-Faser.
+Das einfallende Licht soll komplett in der geführten Mode (LP<sub>01</sub>) propagieren.
+Abbildung&nbsp;1 zeigt die Amplitudenverteilung in der Faser.
+Die grauen Kurven illustrieren die verjüngte Region; der Faserdurchmesser wird um bis zu 50&#37; reduziert.
+Die rote Kurve zeigt, dass ca. 20&#37; der optischen Leistung verloren gehen.
+Dies liegt daran, dass die LP<sub>01</sub>-Mode in der verjüngten Region ziemlich schwach geführt wird, und dass der Übergang etwas zu schnell für eine adiabatische Anpassung der Mode verläuft.</p>
+<figure>
+<img src="img/fiberpower_tapered_fiber1.png" alt="amplitude distribution along the fiber">
+<figcaption><span class="start">Abbildung&nbsp;1:</span> 
+Amplitudenverteilung in der Faser.
+</figcaption>
+</figure>
+<p>Abbildung&nbsp;2 zeigt, wie sich diverse Parameter entlang der Faser entwickeln.
+Drei unterschiedliche Maße für die Strahlgröße werden verwendet:</p>
+<ul>
+<li>Der Strahlradius, berechnet aus dem zweiten Moment der Intensitätsverteilung.
+(Die Software bietet hierfür eine vordefinierte Funktion an.)
+Dieser Wert nimmt in der verjüngten Region erheblich zu.</li>
+<li>Das Strahlradius kann ebenfalls aus der <a href="effective_mode_area.html" title="a quantitative measure of the area which a waveguide or fiber mode effectively covers in the transverse dimensions">effektiven Fläche</a> berechnet werden, was eine völlig andere Definition darstellt.
+Dieser Wert wäre relevant, um die Stärke nichtlinearer Effekte zu beurteilen.
+Er nimmt ebenfalls in der verjüngten Region zu, aber weniger stark.</li>
+<li>Die halbe Breite der Intensitätsverteilung.
+(Eine solche Funktion kann mit wenigen Zeilen Skriptcode vom Benutzer definiert werden.)
+Diese Art von Strahlradius nimmt anfangs sogar etwas ab und ändert sich insgesamt nur wenig.
+Beachten Sie, dass diese Definition die langen &ldquo;Ausläufer&rdquo; von Moden im schwach geführten Regime nicht berücksichtigt.</li>
+</ul>
+<figure>
+<img src="img/fiberpower_tapered_fiber2.png" alt="amplitude distribution along the fiber">
+<figcaption><span class="start">Abbildung&nbsp;2:</span> 
+Entwicklung der Strahlparameter entlang der Faser.
+</figcaption>
+</figure>
+<p>In einer zweiten Simulation betrachten wir eine Faser mit verdoppelter numerischer Apertur (0,2 statt 0,1).
+Diese stärker führende Faser hat auch eine LP<sub>11</sub>-Mode &ndash; aber nicht in der verjüngten Region.
+Wenn wir den Strahl in die LP<sub>01</sub>-Mode (die Grundmode) einführen (wie oben), kann diese die verjüngte Region ohne wesentliche Verluste &ldquo;überstehen&rdquo;.
+Die Strahlgröße (hier nicht gezeigt) weist nur geringe Variationen auf.</p>
+<figure>
+<img src="img/fiberpower_tapered_fiber3.png" alt="amplitude distribution along the fiber">
+<figcaption><span class="start">Abbildung&nbsp;3:</span> 
+Amplitudenverteilung entlang der Faser mit höherer numerischer Apertur.
+</figcaption>
+</figure>
+<p>Wenn wir das Licht in die LP<sub>11</sub>-Mode injizieren, wird es in der verjüngten Region vollkommen verloren, wie in Abbildung&nbsp;4 gezeigt:</p>
+<figure>
+<img src="img/fiberpower_tapered_fiber4.png" alt="amplitude distribution along the fiber">
+<figcaption><span class="start">Abbildung&nbsp;4:</span> 
+Amplitudenverteilung entlang der Faser, wenn die LP<sub>11</sub>-Mode gepumpt wird.
+</figcaption>
+</figure>
+<p>Man sieht auch, dass Reflexionen von den Rändern des numerischen Rasters &ndash; ein numerischer Artefakt &ndash; nicht komplett unterdrückt werden.
+Dies ist jedoch für den Zweck dieser Untersuchung wenig relevant; lediglich der genaue Verlauf des Leistungsabfalls und die berechneten 0,1&#37; Transmission für die LP<sub>11</sub>-Mode sind nicht ganz korrekt &ndash; die letztere Größe sollte im Prinzip Null sein.</p>
+<p>(<a href="fiberpower_case_studies_d.html">zurück zu der Liste der Beispiele</a>)</p>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">Kontakt und Impressum</a>, <a href="privacy_d.html">Datenschutzerklärung</a>
+</footer>
+</main></div>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="tN8nh2hdxNtkyT/5n2FuaA==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Software",
+      "item": "https://www.rp-photonics.com/software_d.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "RP Fiber Power",
+      "item": "https://www.rp-photonics.com/fiberpower_d.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Demo",
+      "item": "https://www.rp-photonics.com/fiberpower_case_studies_d.html"
+    },{
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Verjüngte Faser",
+      "item": "https://www.rp-photonics.com/fiberpower_tapered_fiber_d.html"
+    }]}
+}
+</script>
+</body>
+</html>

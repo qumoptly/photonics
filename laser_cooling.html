@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-2kAjXcmPyLFKqzlVakVDtg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - laser cooling, Doppler cooling, light forces, ion trap</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/laser_cooling.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Laser cooling denotes a variety of techniques for reducing the temperature (i.e., the random motion) of small particles such as atoms or ions. In many cases, extremely low temperatures are achieved.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="laser cooling, Doppler cooling, light forces, ion trap">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Laser Cooling">
+<meta property="og:description" content="Laser cooling denotes a variety of techniques for reducing the temperature (i.e., the random motion) of small particles such as atoms or ions. In many cases, extremely low temperatures are achieved.">
+<meta property="og:url" content="https://www.rp-photonics.com/laser_cooling.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/laser_cooling.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Laser cooling denotes a variety of techniques for reducing the temperature (i.e., the random motion) of small particles such as atoms or ions. In many cases, extremely low temperatures are achieved.">
+<meta name="twitter:title" content="Laser Cooling">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/laser_cooling.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="2kAjXcmPyLFKqzlVakVDtg==">
+page="laser_cooling.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="2kAjXcmPyLFKqzlVakVDtg==">shownsponsors="EKSMA OPTICS"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_l.html">letter L</a> &gt; <a href="laser_cooling.html">laser cooling</a></p>
+<h1>Laser Cooling</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_laser_cooling_and_trapping_systems.html?s=vbox">3 suppliers for laser cooling and trapping systems</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.toptica.com/applications/fundamental-quantum-technology/atom-laser-cooling-trapping/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="laser cooling and trapping systems" rel="nofollow" class="bg externallink"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="http://www.sukhamburg.de/products/fiberoptics/multicube/systems/cluster/2.html" data-supplier="Schäfter + Kirchhoff" data-location="product-enc" data-keyword="laser cooling and trapping systems" rel="nofollow" class="bg externallink"><img src="./bg/logos/schaefter_kirchhoff.png" alt="Schäfter + Kirchhoff" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.nktphotonics.com/lasers-fibers/product/koheras-harmonik-high-power-frequency-doubled-laser-system/" data-supplier="NKT Photonics" data-location="product-enc" data-keyword="laser cooling and trapping systems" rel="nofollow" class="bg externallink"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_laser_cooling_and_trapping_systems.html?s=vbox">List of suppliers for<br>laser cooling and trapping systems</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a variety of techniques for reducing the temperature (i.e., the random motion) of small particles such as atoms or ions</p>
+<p>More specific terms: <a href="doppler_cooling.html" title="a technique of laser cooling based on velocity-dependent absorption processes">Doppler cooling</a>, <a href="sisyphus_cooling.html" title="a mechanism for laser cooling of atoms or ions">Sisyphus cooling</a>, <a href="optical_refrigeration.html" title="a technique for cooling macroscopic samples via laser-induced fluorescence">optical refrigeration</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Laserkühlung</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#quantum_optics" title="other articles on quantum optics">quantum optics</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<p><a href="encyclopedia_cite.html?article=laser%20cooling">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>In this article, <em>laser cooling</em> is <em>not</em> meant to be the cooling of lasers (&rarr;&nbsp;<a href="laser_cooling_units.html" title="devices used for cooling of high-power lasers">laser cooling units</a>), but rather the use of dissipative <a href="light_forces.html" title="forces associated with absorption, reflection or scattering of light">light forces</a> for reducing the random motion and thus the temperature of small particles, typically atoms or ions.
+Depending on the mechanism used, the temperature achieved can be in the millikelvin, microkelvin, or even nanokelvin regime.
+A totally different kind of laser cooling, where macroscopic samples are cooled, is treated in a separate article on <a href="optical_refrigeration.html" title="a technique for cooling macroscopic samples via laser-induced fluorescence">optical refrigeration</a>.</p>
+<h2 class="togglediv">Methods of Laser Cooling</h2>
+<div>
+<p>A simple scheme for laser cooling is <a href="doppler_cooling.html" title="a technique of laser cooling based on velocity-dependent absorption processes">Doppler cooling</a>, where <a href="light_forces.html" title="forces associated with absorption, reflection or scattering of light">light forces</a> are exerted by <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorption</a> and subsequent <a href="spontaneous_emission.html" title="a quantum effect, causing the spontaneous decay of excited states of atoms or ions">spontaneous emission</a> of <a href="photons.html" title="quanta of light energy">photons</a> and the rate of these processes depends on the velocity of an atom or ion due to the Doppler shift.
+For example, a beam of atoms in a vacuum chamber can be stopped and cooled with a counterpropagating <a href="single_frequency_lasers.html" title="lasers emitting radiation in a single resonator mode">single-frequency</a> <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a>, the <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequency</a> of which is first chosen to be somewhat higher than the atomic resonance, so that only the fastest atoms can absorb photons.
+Subsequently, the laser frequency is reduced so that slower and slower atoms participate in the interaction, and finally all atoms have a greatly reduced speed (at least in one dimension).
+This corresponds to a lower temperature, assuming that thermal equilibrium can be re-established.</p>
+<p>Doppler cooling can also be used in an <a href="optical_molasses.html" title="an arrangement of laser beams used for cooling atoms or ions">optical molasses</a> [3] for damping the atomic motion in one to three spatial dimensions.</p>
+<p>The method of Doppler cooling is limited in terms of the reachable temperature (&rarr;&nbsp;<a href="doppler_limit.html" title="a limit for the temperature which is achievable with certain laser cooling techniques"><em>Doppler limit</em></a>).
+There are other methods, most notably <a href="sisyphus_cooling.html" title="a mechanism for laser cooling of atoms or ions">Sisyphus cooling</a>, which allow one to get substantially below the Doppler limit, down to the much lower <em>recoil limit</em> associated with the recoil momentum related to the absorption or emission of a single photon.
+Even the recoil limit is not the final one: specifically the method of <em>velocity-selective coherent population trapping</em> [5] allows sub-recoil temperatures in the nanokelvin regime.</p>
+<p>Another technique is <em>evaporative cooling</em>, where the capturing potential in an atom or ion trap is gradually reduced so that the fastest particles can escape, and the average energy of the remaining particles is reduced.
+Subsequent collisions can re-establish a thermal equilibrium, corresponding to a reduced temperature.</p>
+</div>
+<h2 class="togglediv">Applications</h2>
+<div>
+<p>Some examples of applications of laser cooling are:</p>
+<ul>
+<li>high-resolution spectroscopic measurements (e.g. for frequency standards in <a href="optical_clocks.html" title="time measurement devices based on optical frequency standards">optical clocks</a> based on ultracold ions or atoms) by the elimination of <a href="doppler_broadening.html" title="broadening of the linewidth of atomic transitions, caused by random motion of the emitting atoms">Doppler broadening</a></li>
+<li>studying the behavior of ultracold gases, which can exhibit interesting phenomena such as Bose&ndash;Einstein condensation (BEC), for example</li>
+<li><a href="quantum_optics.html" title="the part of optics which deals with quantum effects">quantum optics</a> research and applications in quantum information technology (e.g., quantum computing)</li>
+<li>ultraprecise measurement of gravitational fields (used e.g. for gravitational physics or for oil field exploration), based on the Doppler shift of free-falling cooled atoms, on Bloch oscillations</li>
+<li>lithography with cold atomic beams to form very accurately controlled structures</li>
+</ul>
+<p>In 1997, the Nobel Prize in Physics was awarded to Steven Chu, Claude Cohen-Tannoudji and William D. Phillips, for the development of methods to cool and trap atoms with laser light.
+Important early contributions to this field were also brought by Theodor W. Hänsch [1], Nobel Prize winner in 2005 (for other achievements).</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_laser_cooling_and_trapping_systems.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 3 suppliers for laser cooling and trapping systems. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.toptica.com/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="laser cooling and trapping systems" rel="nofollow" class="bg externallink" title="Visit the website of TOPTICA Photonics"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a><a href="https://www.toptica.com/applications/fundamental-quantum-technology/atom-laser-cooling-trapping/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="laser cooling and trapping systems" rel="nofollow" class="bg externallink" title="Visit the website of TOPTICA Photonics"><img src="./bg/products/toptica_photonics/laser_cooling_and_trapping.jpg" alt="laser cooling and trapping systems" class="product"></a><h3><a href="./bg/profiles/toptica_photonics.html" title="See the profile of TOPTICA Photonics">TOPTICA Photonics</a></h3><p>Atom optics is a challenging field for laser applications. Special or even customized <a href="https://www.toptica.com/applications/fundamental-quantum-technology/atom-laser-cooling-trapping/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="laser cooling and trapping systems" rel="nofollow" class="externallink bg">lasers</a> are needed with always changing demands according to the newest scientific research topics. TOPTICA is key supplier of such laser systems not only to Nobel Laureates but also to most research groups all around the world. Since more than a decade, we are well known for the quality of our products always at the front line of research and for our flexibility.</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.sukhamburg.de/" data-supplier="Schäfter + Kirchhoff" data-location="product-enc" data-keyword="laser cooling and trapping systems" rel="nofollow" class="bg externallink" title="Visit the website of Schäfter + Kirchhoff"><img src="./bg/logos/schaefter_kirchhoff.png" alt="Schäfter + Kirchhoff" class="supplierlogo"></a><a href="http://www.sukhamburg.de/products/fiberoptics/multicube/systems/cluster/2.html" data-supplier="Schäfter + Kirchhoff" data-location="product-enc" data-keyword="laser cooling and trapping systems" rel="nofollow" class="bg externallink" title="Visit the website of Schäfter + Kirchhoff"><img src="./bg/products/schaefter_kirchhoff/laser_cooling_and_trapping_systems.jpg" alt="laser cooling and trapping systems" class="product"></a><h3><a href="./bg/profiles/schaefter_kirchhoff.html" title="See the profile of Schäfter + Kirchhoff">Schäfter + Kirchhoff</a></h3><p>Schäfter+Kirchhoff offers <a href="http://www.sukhamburg.de/products/fiberoptics/multicube/systems/cluster/2.html" data-supplier="Schäfter + Kirchhoff" data-location="product-enc" data-keyword="laser cooling and trapping systems" rel="nofollow" class="externallink bg">fiber port clusters</a>, which are compact,rugged opto-mechanical units that combine two fiber-coupled sources with same wavelengths and then splits the combined radiation into multiple output fiber cables with high efficiency and variable splitting ratio.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.nktphotonics.com/" data-supplier="NKT Photonics" data-location="product-enc" data-keyword="laser cooling and trapping systems" rel="nofollow" class="bg externallink" title="Visit the website of NKT Photonics"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo"></a><a href="https://www.nktphotonics.com/lasers-fibers/product/koheras-harmonik-high-power-frequency-doubled-laser-system/" data-supplier="NKT Photonics" data-location="product-enc" data-keyword="laser cooling and trapping systems" rel="nofollow" class="bg externallink" title="Visit the website of NKT Photonics"><img src="./bg/products/nkt_photonics/boostik.jpg" alt="laser cooling and trapping systems" class="product"></a><h3><a href="./bg/profiles/nkt_photonics.html" title="See the profile of NKT Photonics">NKT Photonics</a></h3><p><a href="https://www.nktphotonics.com/lasers-fibers/application/atomic-trapping-and-cooling/" data-supplier="NKT Photonics" data-location="product-enc" data-keyword="laser cooling and trapping systems" rel="nofollow" class="externallink bg">Laser cooling and trapping</a> is the ability to cool atoms down to unprecedented kinetic temperatures, and to confine and support isolated atoms in “atom traps”. This unique new level of control of atomic motion allows researchers to study the behavior of atoms and quantum mechanical properties. Our <a href="https://www.nktphotonics.com/lasers-fibers/product/koheras-harmonik-high-power-frequency-doubled-laser-system/" data-supplier="NKT Photonics" data-location="product-enc" data-keyword="laser cooling and trapping systems" rel="nofollow" class="externallink bg">Koheras lasers</a> are ideal for resonant laser cooling where a very precise wavelength is required to match a specific atomic/ion transition.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="laser_cooling.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">T. W. Hänsch and A. L. Schawlow, &ldquo;Cooling of gases with laser radiation&rdquo;, Opt. Commun. 13, 68 (1975), <a href="https://doi.org/10.1016/0030-4018(75)90159-5">doi:10.1016/0030-4018(75)90159-5</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">D. J. Wineland and W. M. Itano, &ldquo;Laser cooling of atoms&rdquo;, Phys. Rev. A 20 (4), 1521 (1979), <a href="https://doi.org/10.1103/PhysRevA.20.1521">doi:10.1103/PhysRevA.20.1521</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">S. Chu <i>et al.</i>, &ldquo;Three-dimensional viscous confinement and cooling of atoms by resonance radiation pressure&rdquo;, Phys. Rev. Lett. 55 (1), 48 (1985), <a href="https://doi.org/10.1103/PhysRevLett.55.48">doi:10.1103/PhysRevLett.55.48</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">S. Stenholm, &ldquo;The semiclassical theory of laser cooling&rdquo;, Rev. Mod. Phys. 58, 699 (1986), <a href="https://doi.org/10.1103/RevModPhys.58.699">doi:10.1103/RevModPhys.58.699</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">A. Aspect <i>et al.</i>, &ldquo;Laser cooling below the one-photon recoil energy by velocity-selective coherent population trapping&rdquo;, Phys. Rev. Lett. 61 (7), 826 (1988), <a href="https://doi.org/10.1103/PhysRevLett.61.826">doi:10.1103/PhysRevLett.61.826</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">P. D. Lett <i>et al.</i>, &ldquo;Optical molasses&rdquo;, J. Opt. Soc. Am. B 6 (11), 2084 (1989), <a href="https://doi.org/10.1364/JOSAB.6.002084">doi:10.1364/JOSAB.6.002084</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">F. Diedrich <i>et al.</i>, &ldquo;Laser cooling to the zero point of energy&rdquo;, Phys. Rev. Lett. 62 (4), 403 (1989), <a href="https://doi.org/10.1103/PhysRevLett.62.403">doi:10.1103/PhysRevLett.62.403</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">J. Dalibard and C. Cohen-Tannoudji, &ldquo;Laser cooling below the Doppler limit by polarization gradients: simple theoretical models&rdquo;, J. Opt. Soc. Am. B 6 (11), 2023 (1989), <a href="https://doi.org/10.1364/JOSAB.6.002023">doi:10.1364/JOSAB.6.002023</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">M. Kasevich and S. Chu, &ldquo;Laser cooling below a photon recoil with three-level atoms&rdquo;, Phys. Rev. Lett. 69 (12), 1741 (1992), <a href="https://doi.org/10.1103/PhysRevLett.69.1741">doi:10.1103/PhysRevLett.69.1741</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">H. Katori <i>et al.</i>, &ldquo;Magneto-optical trapping and cooling of strontium atoms down to the photon recoil temperature&rdquo;, Phys. Rev. Lett. 82 (6), 1116 (1999), <a href="https://doi.org/10.1103/PhysRevLett.82.1116">doi:10.1103/PhysRevLett.82.1116</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">T. Binnewies <i>et al.</i>, &ldquo;Doppler cooling and trapping on forbidden transitions&rdquo;, Phys. Rev. Lett. 87 (12), 123002 (2001), <a href="https://doi.org/10.1103/PhysRevLett.87.123002">doi:10.1103/PhysRevLett.87.123002</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">U. Vogl and M. Weitz, &ldquo;Laser cooling by collisional redistribution of radiation&rdquo;, Nature 461, 70 (2009), <a href="https://doi.org/10.1038/nature08203">doi:10.1038/nature08203</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">E. S. de L. Filho <i>et al.</i>, &ldquo;Laser-induced cooling of a Yb:YAG crystal in air at atmospheric pressure&rdquo;, Opt. Express 21 (21), 24711 (2013), <a href="https://doi.org/10.1364/OE.21.024711">doi:10.1364/OE.21.024711</a></td></tr>
+<tr><td class="refno">[14]</td><td class="refs">M. G. Raizen <i>et al.</i>, &ldquo;Magneto-optical cooling of atoms&rdquo;, Opt. Lett. 39 (15), 4502 (2014), <a href="https://doi.org/10.1364/OL.39.004502">doi:10.1364/OL.39.004502</a></td></tr>
+<tr><td class="refno">[15]</td><td class="refs">J. Knall <i>et al.</i>, &ldquo;Laser cooling in a silica optical fiber at atmospheric pressure&rdquo;, Opt. Lett. 45 (5), 1092 (2020), <a href="https://doi.org/10.1364/OL.384658">doi:10.1364/OL.384658</a></td></tr>
+<tr><td class="refno">[16]</td><td class="refs">C. Savage, &ldquo;Introduction to light forces, atom cooling, and atom trapping&rdquo;, <a href="http://arxiv.org/abs/atom-ph/9510004" class="url">http://arxiv.org/abs/atom-ph/9510004</a></td></tr>
+<tr><td class="refno">[17]</td><td class="refs">The Nobel Prize in Physics 1997, <a href="https://www.nobelprize.org/prizes/physics/1997/" class="url">https://www.nobelprize.org/prizes/physics/1997/</a>, awarded to Steven Chu, Claude Cohen-Tannoudji, and William D. Phillips; see also the Nobel Lectures of <a href="https://www.nobelprize.org/prizes/physics/1997/chu/lecture/">S. Chu, &ldquo;The manipulation of neutral particles&rdquo;</a>, <a href="https://www.nobelprize.org/prizes/physics/1997/cohen-tannoudji/lecture/">C. N. Cohen-Tannoudji, &ldquo;Manipulating atoms with photons&rdquo;</a>, and <a href="https://www.nobelprize.org/prizes/physics/1997/phillips/lecture/">W. D. Phillips, &ldquo;Laser cooling and trapping of neutral atoms&rdquo;</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="light_forces.html" title="forces associated with absorption, reflection or scattering of light">light forces</a>, <a href="doppler_cooling.html" title="a technique of laser cooling based on velocity-dependent absorption processes">Doppler cooling</a>, <a href="doppler_broadening.html" title="broadening of the linewidth of atomic transitions, caused by random motion of the emitting atoms">Doppler broadening</a>, <a href="optical_molasses.html" title="an arrangement of laser beams used for cooling atoms or ions">optical molasses</a>, <a href="sisyphus_cooling.html" title="a mechanism for laser cooling of atoms or ions">Sisyphus cooling</a>, <a href="optical_frequency_standards.html" title="frequency standards using optical transitions in atoms, ions or molecules">optical frequency standards</a>, <a href="optical_clocks.html" title="time measurement devices based on optical frequency standards">optical clocks</a>, <a href="optical_refrigeration.html" title="a technique for cooling macroscopic samples via laser-induced fluorescence">optical refrigeration</a><br>and other articles in the categories <a href="categories.html#quantum_optics" title="other articles on quantum optics">quantum optics</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/laser_cooling.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Flaser_cooling.html&text=RP+Photonics+Encyclopedia+-+laser+cooling%2C+Doppler+cooling%2C+light+forces%2C+ion+trap" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Flaser_cooling.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Flaser_cooling.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/laser_cooling.html"&gt;<br>Article on Laser Cooling&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/laser_cooling.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/laser_cooling.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/laser_cooling.html<br>article on 'Laser Cooling' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>RP Fiber Power &ndash; the versatile Fiber Optics Software</h2>
+<div id="my_rot_box" class="rot_box" style="height:490px;">
+<div>
+<h3>An Amazing Tool</h3>
+<a href="./fiberpower.html?banner=RP_Fiber_Power" style="float:right; margin-left:3px"><img src="./img/fiberpower_logo.png" style="margin-bottom:2px;" alt="RP Fiber Power software"></a>
+<p>This amazing tool is extremely helpful for the development of passive and active fiber devices.</p>
+<img src="./img/ase_in_fa_small.png" alt="ASE">
+<p>Watch our <a href="https://www.rp-photonics.com/fiberpower_video1.html" rel="nofollow">quick video tour</a>!</p>
+</div>
+<div>
+<h3>Single-mode and Multi&shy;mode Fibers</h3>
+<img src="./img/fiber_small.png" alt="fibers">
+<p>Calculate mode properties such as</p>
+<ul>
+<li>amplitude distributions (near field and far field)</li>
+<li>effective mode area</li>
+<li>effective index</li>
+<li>group delay and chromatic dispersion</li>
+</ul>
+<p>Also calculate fiber coupling efficiencies; simulate effects of bending, nonlinear self-focusing or gain guiding on beam propagation, higher-order soliton propagation, etc.</p>
+</div>
+<div>
+<h3>Arbitrary Index Profiles</h3>
+<p>A fiber's index profile may be more complicated than just a circle:</p>
+<img src="./img/rp_fiber.png" alt="special fibers">
+<p>Here, we "printed" some letters, translated this into an index profile and initial optical field, propagated the light over some distance and plotted the output field &ndash; all automated with a little script code.</p>
+</div>
+<div>
+<h3>Fiber Couplers, Double-clad Fibers, Multicore Fibers, &hellip;</h3>
+<img src="./img/fiber_devices_small.png" alt="fiber devices">
+<p>Simulate pump absorption in double-clad fibers, study beam propagation in fiber couplers, light propagation in tapered fibers, analyze the impact of bending, cross-saturation effects in amplifiers, leaky modes, etc.</p>
+</div>
+<div>
+<h3>Fiber Amplifiers</h3>
+<img src="./img/fiber_amplifier_small.png" alt="fiber amplifier">
+<p>For example, calculate</p>
+<ul>
+<li>gain and saturation characteristics (for continuous or pulsed operation)</li>
+<li>energy transfers in erbium-ytterbium-doped amplifier fibers</li>
+<li>influence of quenching effects, amplified spontaneous emission etc.</li>
+</ul>
+<p>in single amplifier stages or in multi-stage amplifier systems, with double-clad fibers, etc.</p>
+</div>
+<div>
+<h3>Fiber-optic Telecom Systems</h3>
+<img src="./img/fiberpower_data_trans2_small.png" alt="eye diagram">
+<p>For example,</p>
+<ul>
+<li>analyze dispersive and nonlinear signal distortions</li>
+<li>investigate the impact of amplifier noise</li>
+<li>optimize nonlinear management and the placement of amplifiers</li>
+</ul>
+<p>Find out in detail what is going on in such a system!</p>
+</div>
+<div>
+<h3>Fiber Lasers</h3>
+<img src="./img/ml_erbium_fiber_laser_small.png" alt="fiber laser">
+<p>For example, analyze and optimize the</p>
+<ul>
+<li>power conversion efficiency</li>
+<li>wavelength tuning range</li>
+<li>Q switching dynamics</li>
+<li>femtosecond pulse generation with mode locking</li>
+</ul>
+<p>for lasers based on double-clad fiber, with linear or ring resonator, etc.</p>
+</div>
+<div>
+<h3>Ultrafast Fiber Lasers and Amplifiers</h3>
+<img src="./img/figure_of_eight_laser_small.png" alt="fiber laser">
+<p>For example, study</p>
+<ul>
+<li>pulse formation mechanisms</li>
+<li>impact of nonlinearities and chromatic dispersion</li>
+<li>parabolic pulse amplification</li>
+<li>feedback sensitivity</li>
+<li>supercontinuum generation</li>
+</ul>
+<p>Apply any sequence of elements to your pulses!</p>
+</div>
+<div>
+<h3>&hellip; and even Bulk Devices</h3>
+<img src="./img/regenerative_amplifier_small.png" alt="regenerative amplifier">
+<p>For example, study</p>
+<ul>
+<li>Q switching dynamics</li>
+<li>mode-locking behavior</li>
+<li>impact of nonlinearities and chromatic dispersion</li>
+<li>influence of a saturable absorber</li>
+<li>chirped-pulse amplification</li>
+<li>regenerative amplification</li>
+</ul>
+<p><a href="./fiberpower.html?banner=RP_Fiber_Power">RP Fiber Power</a> is an extremely versatile tool!</p>
+</div>
+<div>
+<h3>Mode Solver</h3>
+<img src="./img/mode_solver.png" alt="fiber modes">
+<p>For example, calculate</p>
+<ul>
+<li>amplitude and intensity profiles</li>
+<li>effective mode areas</li>
+<li>cut-off wavelengths</li>
+<li>propagation constants</li>
+<li>group velocities</li>
+<li>chromatic dispersion</li>
+</ul>
+<p>All this is calculated with high efficiency!</p>
+</div>
+<div>
+<h3>Beam Propagation</h3>
+<a href="./fiberpower_coupler.html?banner=RP_Fiber_Power"><img src="./img/fiberpower_coupler_small.gif" alt="beam propagation"></a>
+<p>Propagate optical field with arbitrary wavefronts through fibers.
+These may be asymmetric, bent, tapered, exhibit random disturbances, etc.</p>
+<p>See our <a href="./fiberpower_video4.html?banner=RP_Fiber_Power">demo video for numerical beam propagation</a>.</p>
+</div>
+<div>
+<h3>Laser-active Ions</h3>
+<img src="./img/thulium_levels_small.png" alt="level scheme">
+<p>Work with the standard gain model, or define your own level scheme!</p>
+<p>Can include different ions, energy transfers, upconversion and quenching effects, complicated pumping schemes, etc.</p>
+</div>
+<div>
+<h3>Multiple Pump and Signal Waves, ASE</h3>
+<img src="./img/optical_channels_smaller.png" alt="optical channels">
+<p>Define multiple pump and signal waves and many ASE channels &ndash; each one with its own transverse intensity profile, loss coefficient etc.</p>
+<p>The power calculations are highly efficient and reliable.</p>
+</div>
+<div>
+<h3>Simple Use and High Flexibility Combined</h3>
+<p>For simpler tasks, use convenient forms:</p>
+<a href="./fiberpower.html?banner=RP_Fiber_Power"><img src="./img/fiberpower_signal.png" style="position:relative; left:-6px;" alt="signal parameters"></a>
+<p>Script code is automatically generated and can then be modified by the user.
+A <a href="./software_script_language.html?banner=RP_Fiber_Power">powerful script language</a> gives you an unparalleled flexibility!</p>
+</div>
+<div>
+<h3>High-quality Documentation and Competent Support</h3>
+<p>The carefully prepared comprehensive documentation includes a <b>PDF manual</b> and an <b>interactive online help system</b>.</p>
+<p>Competent <a href="./software_support.html?banner=RP_Fiber_Power">technical support</a> is provided: the developer himself will help you and make sure that any problem is solved!</p>
+<p>Our support is like included technical consulting.</p>
+</div>
+<div>
+<h3>Boost your competence, efficiency and creativity!</h3>
+<ul>
+<li>Stop fishing in the dark! Develop a clear quantitative understanding of your devices.</li>
+<li>Explore the effects of possible design changes on your desk.</li>
+<li>That way, get most efficient in the lab.</li>
+<li>Find optimized solutions efficiently, minimizing <b>time to market</b>.</li>
+<li>Get new ideas by playing with your models.</li>
+</ul>
+<p>Efficiency and success of<br>R&thinsp;&amp;&thinsp;D are not a matter of chance.</p>
+</div>
+</div>
+<table class="rot_box_buttons">
+<tr><td>
+<button id="backwardbutton" title="move backward">&lt;</button>
+<button id="stopbutton" title="stop movement">| |</button>
+<button id="forwardbutton" title="move forward">&gt;</button></td></tr>
+</table>
+<script type="text/Javascript" nonce="2kAjXcmPyLFKqzlVakVDtg==">
+  period = 20000
+  hh = parseInt($("#my_rot_box").css("height")) + 30;
+  $("#my_rot_box").children().css("height", hh);
+  var ns = $("#my_rot_box").children().length;
+  var pp = 0;
+  function MoveContent(t_move, t_fade) {
+    var y = (hh + 4) * pp;
+    if (t_fade != 0)
+      $("#my_rot_box").fadeTo(t_fade, 0.5).animate({scrollTop:y}, t_move, "swing").fadeTo(t_fade, 1);
+    else
+      $("#my_rot_box").animate({scrollTop:y}, t_move, "swing");
+    }
+  $("#backwardbutton").click(function() {
+    clearInterval(timer); $("#stopbutton").text("--"); if (pp > 0) pp--; MoveContent(200, 0);
+  });
+  $("#stopbutton").click(function() {
+    if ($("#stopbutton").text() == "| |") {
+      clearInterval(timer);
+      $("#stopbutton").text("---");
+      $("#stopbutton").attr("title", "restart automatic movement");
+    }
+    else {
+      $("#stopbutton").text("| |");
+      timer = setInterval(advance, period);
+      $("#stopbutton").attr("title", "stop automatic movement");
+    }
+  });
+  $("#forwardbutton").click(function() {
+    clearInterval(timer); $("#stopbutton").text("--"); if (pp < ns - 1) pp++; MoveContent(200, 0);
+  });
+  function advance() {
+    pp++;  if (pp == ns) pp = 0;
+    if (pp == 0) t = 1800; else t = 600;
+    MoveContent(t, 1800);
+    }
+  timer = setInterval(advance, period);
+</script>
+<div style="border:1px solid #B20B28; border-left:8px solid #B20B28; border-right:8px solid #B20B28; padding:8px;">
+<p>See our <a href="./fiberpower.html?banner=RP_Fiber_Power">detailed description</a> with many <a href="./fiberpower_case_studies.html?banner=RP_Fiber_Power">case studies</a>!</p>
+<p><a href="./contact.html?banner=RP_Fiber_Power">Contact us</a> to get a quotation!</p>
+</div>
+</div>
+</aside>
+<script type="text/javascript" nonce="2kAjXcmPyLFKqzlVakVDtg==">shownbanner = "RP Fiber Power";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Latest Encyclopedia Articles</h2>
+<p>Here are the latest encyclopedia articles:</p>
+<ul>
+<li class="tight"><a href="./variable_reflectivity_mirrors.html">variable reflectivity mirrors</a></li>
+<li class="tight"><a href="./color_centers.html">color centers</a></li>
+<li class="tight"><a href="./excimer_lamps.html">excimer lamps</a></li>
+<li class="tight"><a href="./multimode_beams.html">multimode beams</a></li>
+<li class="tight"><a href="./channel_waveguides.html">channel waveguides</a></li>
+<li class="tight"><a href="./optical_crystals.html">optical crystals</a></li>
+<li class="tight"><a href="./standing_wave_resonators.html">standing-wave resonators</a></li>
+<li class="tight"><a href="./nonlinear_absorption.html">nonlinear absorption</a></li>
+<li class="tight"><a href="./passive_fibers.html">passive fibers</a></li>
+<li class="tight"><a href="./active_fibers.html">active fibers</a></li>
+<li class="tight"><a href="./oem_laser_modules.html">OEM laser modules</a></li>
+<li class="tight"><a href="./industrial_lasers.html">industrial lasers</a></li>
+<li class="tight"><a href="./scientific_lasers.html">scientific lasers</a></li>
+<li class="tight"><a href="./flint_glasses.html">flint glasses</a></li>
+<li class="tight"><a href="./crown_glasses.html">crown glasses</a></li>
+<li class="tight"><a href="./sodium_vapor_lamps.html">sodium vapor lamps</a></li>
+<li class="tight"><a href="./metal_vapor_lamps.html">metal vapor lamps</a></li>
+<li class="tight"><a href="./mercury_vapor_lamps.html">mercury vapor lamps</a></li>
+<li class="tight"><a href="./white_light.html">white light</a></li>
+<li class="tight"><a href="./cie_standard_illuminants.html">CIE standard illuminants</a></li>
+</ul>
+
+<p>The encyclopedia already contains 948 articles.</p>
+<p>See also the regularly appearing articles of the <a href="./spotlight.html?banner=new_articles">The Photonics Spotlight</a> and the <a href="./software_news.html?banner=new_articles">RP Photonics Software News</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="2kAjXcmPyLFKqzlVakVDtg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/laser_cooling.html"
+    },
+    "headline": "Laser Cooling",
+    "image": "https://www.rp-photonics.com/previews/laser_cooling.png",
+    "datePublished": "2005-03-07",
+    "dateModified": "2020-03-14",
+    "description": "Laser cooling denotes a variety of techniques for reducing the temperature (i.e., the random motion) of small particles such as atoms or ions. In many cases, extremely low temperatures are achieved.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter L",
+      "item": "https://www.rp-photonics.com/encyclopedia_l.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "laser cooling",
+      "item": "https://www.rp-photonics.com/laser_cooling.html"
+    }]}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-w62Q1FH6AgmlOWh61wmG2Q=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - optical aberrations, chromatic, spherical, astigmatism, coma, field curvature, image distortion, Zernike polynomials, compensation, image quality</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/optical_aberrations.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-04-24">
+<meta name="description" content="Optical imaging systems can exhibit various kinds of aberrations, i.e., reductions of image quality which can be analyzed based on geometrical optics. Design substantial extent, they can be avoided or compensated with various kinds of design measures.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="optical aberrations, chromatic, spherical, astigmatism, coma, field curvature, image distortion, Zernike polynomials, image quality">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Optical Aberrations">
+<meta property="og:description" content="Optical imaging systems can exhibit various kinds of aberrations, i.e., reductions of image quality which can be analyzed based on geometrical optics. Design substantial extent, they can be avoided or compensated with various kinds of design measures.">
+<meta property="og:url" content="https://www.rp-photonics.com/optical_aberrations.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/optical_aberrations.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Optical imaging systems can exhibit various kinds of aberrations, i.e., reductions of image quality which can be analyzed based on geometrical optics. Design substantial extent, they can be avoided or compensated with various kinds of design measures.">
+<meta name="twitter:title" content="Optical Aberrations">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/optical_aberrations.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="w62Q1FH6AgmlOWh61wmG2Q==">
+page="optical_aberrations.html?banner=photography"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/encyclopedia_k.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="w62Q1FH6AgmlOWh61wmG2Q==">shownsponsors="EKSMA OPTICS,TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_o.html">letter O</a> &gt; <a href="optical_aberrations.html">optical aberrations</a></p>
+<h1>Optical Aberrations</h1>
+<header style="margin-right:0;">
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: degradations of optical images caused in imaging instruments</p>
+<p>More specific terms: defocus, <a href="astigmatism.html" title="a kind of optical aberrations; alternatively, a defect of optical lenses or a property of laser beams">astigmatism</a>, coma, <a href="spherical_aberrations.html" title="optical aberrations resulting from spherical optical surfaces">spherical aberrations</a>, <a href="chromatic_aberrations.html" title="image distortions caused by wavelength-dependent optical effects">chromatic aberrations</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">optische Aberrationen</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a></p>
+<p><a href="encyclopedia_cite.html?article=optical%20aberrations">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Many optical instruments such as <a href="photo_cameras.html" title="optical instruments for taking photographic images">photo cameras</a>, <a href="telescopes.html" title="optical instruments for viewing distant objects, or sometimes more generally afocal systems">telescopes</a> and <a href="microscopes.html" title="instruments for seeing very small objects">microscopes</a> involve some kind of optical <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a>.
+Ideally, the produced optical images would have the following properties, as obtained within <a href="gaussian_optics.html" title="a framework for describing optical phenomena, which is based on geometrical optics and the paraxial approximation">Gaussian optics</a>:</p>
+<ul>
+<li>There is an exact correspondence between object points and image points, where every object point is precisely imaged to one point.
+In other words, one obtains perfectly sharp images.</li>
+<li>At least for object points in one plane, images would not exhibit any geometric distortions.
+For example, a square region would always be imaged to a square region, having exactly straight boundaries.</li>
+<li>There would be no wavelength (color) dependence of the imaging properties.</li>
+</ul>
+<p>Such ideal performance can in practice never be reached for various reasons:</p>
+<ul>
+<li><a href="diffraction.html" title="wave phenomena which occur when light waves hit some structure with variable transmission or phase changes">Diffraction</a> of light sets a limit to the possible image resolution.
+An infinitely small point on the object, for example, is always imaged to an area of finite size (described by the point spread function).</li>
+<li>Various properties of an imaging system cause different kinds of <b>optical aberrations</b> &ndash; image imperfections which can be analyzed with <a href="geometrical_optics.html" title="a concept of optics which is based on the propagation of light rays, ignoring wave properties of light">geometrical optics</a> (ray optics).
+These can occur even if the optical parts perfectly adhere to the specifications, e.g. with perfectly spherical surfaces.</li>
+<li>There can be imperfections of optical elements, which further add aberrations.
+For example, an <a href="aspheric_optics.html" title="optical elements with non-spherical surfaces">aspheric lens</a> based on cheap <a href="plastic_optics.html" title="optical elements made of organic polymer materials">plastic optics</a> may have an imperfect shape.</li>
+</ul>
+<p>An essential part of the design of optical instruments is the minimization of aberrations.
+This is true particularly for <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a> systems, while illumination systems are often not critical in this respect.</p>
+<p>Aberrations are also often relevant for the achievable <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a> of <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">lasers</a>.
+For example, <a href="thermal_lensing.html" title="a lensing effect induced by temperature gradients">thermal lenses</a> in <a href="laser_crystals.html" title="transparent crystals with laser-active dopants, used as laser gain media">laser crystals</a> often exhibit substantial aberrations.</p>
+<aside class="callout blue">The paraxial approximation provides a reference for aberrations.</aside>
+<p>As mentioned above, optical aberrations are usually analyzed based on pure ray optics (not considering wave aspects).
+As a reference, one usually uses beam paths, focus positions etc. based on the <a href="paraxial_approximation.html" title="a frequently used approximation, essentially assuming small angular deviations of the propagation directions from some beam axis">paraxial approximation</a>; aberrations are considered as deviations from those, while deviations of the actual physical behavior due to the wave aspects of light (e.g. <a href="diffraction.html" title="wave phenomena which occur when light waves hit some structure with variable transmission or phase changes">diffraction</a>) are <em>not</em> considered as aberrations.
+The latter are also often weaker than the aberrations in the explained sense.</p>
+<p>The theory of optical aberrations is rather complicated, involving many non-trivial geometrical considerations and a considerable amount of mathematics.
+Unfortunately, various aspects, including even quite fundamental ones, are often presented in misleading or even contradictory ways.
+For example, it is not consistent to define aberrations only via not perfectly sharp images (for any physical reasons, and ignoring geometrical distortions) and at the same time as departures from the behavior based on paraxial optics.
+A comprehensive understanding requires detailed studies.
+This article only gives a very brief overview; some more details are contained in more specific articles cited here.</p>
+<h2 class="togglediv">Types of Optical Aberrations</h2>
+<div>
+<p>The typically occurring kinds of aberrations are described in the following.</p>
+<h3 class="togglediv">Defocus</h3>
+<div>
+<p>If an imaging system is not focused to the actual distance of the imaged objects, the image becomes blurred.
+That problem is not necessarily considered as an imperfection of the optical system, which needs to be addressed via design optimization, since one could simply correct the focus adjustment accordingly.
+However, that works only as long as all imaged objects are within a certain distance range for which reasonably sharp images can be obtained: Imaging systems usually have a limited <a href="depth_of_field.html" title="the distance between the nearest and furthest objects that can be imaged with reasonably sharp focus for a given focus setting"><em>depth of field</em></a>.
+Also, perfect focusing over the full image area may not be possible due to field curvature (see below).</p>
+</div>
+<h3 class="togglediv">Chromatic Aberrations</h3>
+<div>
+<aside class="callout red">Imaging optics usually need to work with a wide range of wavelengths!</aside>
+<p>Due to <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> (caused by wavelength-dependent <a href="refraction.html" title="the change of the propagation direction when a wave comes from one medium into another one">refraction</a>), a lens will usually have a <a href="focal_length.html" title="a measure of how strongly an optical system focuses or defocuses light">focal length</a> which slightly depends on the optical <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>.
+Obviously, that phenomenon can cause substantial degradations of image quality, called <a href="chromatic_aberrations.html" title="image distortions caused by wavelength-dependent optical effects"><em>chromatic aberrations</em></a>, since the visible wavelength range spans nearly one octave (roughly 400&nbsp;nm to 700&nbsp;nm).
+However, there are certain ways to obtain <a href="achromatic_optics.html" title="optical devices or setups with minimized chromatic aberrations">achromatic optics</a>, essentially by properly combining different lenses made from different <a href="optical_materials.html" title="materials used for optical components">optical materials</a>.
+Another possibility is to work with reflective optics, which are generally free of chromatic aberrations.</p>
+<p>See the article on <a href="chromatic_aberrations.html" title="image distortions caused by wavelength-dependent optical effects">chromatic aberrations</a> for more details.</p>
+<p>The further sections explain types of aberrations which occur even for <a href="monochromatic_light.html" title="light with a single optical frequency">monochromatic light</a>.
+They are the five types of <em>primary aberrations</em> as identified by Phillip Ludwig Seidel in the 19<sup>th</sup> century.</p>
+</div>
+<h3 class="togglediv">Spherical Aberrations</h3>
+<div>
+<p>Most optical <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lenses</a> have spherical surfaces, because those are most easily fabricated.
+That surface shape, however, is not ideal for imaging; the outer parts of the lens are then too strongly curved.
+This results in so-called <em>spherical aberrations</em> which can seriously degrade the image quality.</p>
+<aside class="callout blue">Aspheric optics allow the realization of high-performance objectives with fewer components.</aside>
+<p>This problem can be solved either by using <a href="aspheric_optics.html" title="optical elements with non-spherical surfaces">aspheric lenses</a> or by using a combination of lenses designed such that spherical aberrations are well compensated.
+The development of improved <a href="optical_fabrication.html" title="the fabrication of optical components like lenses, prisms and mirrors">optical fabrication</a> methods for aspheric optics has led to their increased use, allowing manufacturers to make high-performance objectives with fewer lenses &ndash; which can also result in improved light throughput.</p>
+<p>Note that spherical aberrations are also often considered in a more general sense of non-ideal phase changes for larger radial positions.
+Such errors can also be caused by simple optical plates and by <a href="thermal_lensing.html" title="a lensing effect induced by temperature gradients">thermal lensing</a> in <a href="laser_crystals.html" title="transparent crystals with laser-active dopants, used as laser gain media">laser crystals</a>, for example.</p>
+<p>See the article on <a href="spherical_aberrations.html" title="optical aberrations resulting from spherical optical surfaces">spherical aberrations</a> for more details.</p>
+</div>
+<h3 class="togglediv">Astigmatism</h3>
+<div>
+<p>The problem of <a href="astigmatism.html" title="a kind of optical aberrations; alternatively, a defect of optical lenses or a property of laser beams">astigmatism</a> is frequently observed when light propagates with a substantial angle against the optical axis.
+For example, when light rays hit a <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lens</a> or a curved <a href="mirrors.html" title="devices which reflect light">mirror</a> under substantial angle, the distance from the lens to the <a href="focal_points_and_focal_planes.html" title="points to which parallel input rays are concentrated by an optical system, and the planes going through those points">focal point</a> somewhat differs between the vertical and horizontal direction, or more precisely in the meridional and sagittal plane.
+In the <a href="focal_points_and_focal_planes.html" title="points to which parallel input rays are concentrated by an optical system, and the planes going through those points">focal plane</a> corresponding to each of those directions, a point is thus imaged to an elliptical region.</p>
+<p>Astigmatism of a lens depends on the lens design, but cannot be fully corrected for a single lens.
+Also, it does not disappear simply by using a narrow aperture stop, preventing light from going through the outer region of a lens.
+Nevertheless, anastigmatic optical systems (i.e., systems not exhibiting astigmatism) can be designed with a suitable combination of lenses.</p>
+<p>See the article on <a href="astigmatism.html" title="a kind of optical aberrations; alternatively, a defect of optical lenses or a property of laser beams">astigmatism</a> for more details.</p>
+</div>
+<h3 class="togglediv">Coma</h3>
+<div>
+<p>The phenomenon of coma occurs when light has a substantial angle to the optical axis and in addition propagates throughout outer regions of a lens.
+An object point is then imaged to a region with a more or less complicated shape, often somewhat reminiscent of that of a comet.</p>
+<p>Coma can be reduced with an aperture stop (at the cost of losing image brightness) or with more sophisticated design methods.</p>
+<p>As an example, astigmatism and coma may be observed by watching a small dot on a piece of paper through a <a href="magnifying_glasses.html" title="optical lenses held above objects for viewing them with some moderate magnification">magnifying glass</a> which is substantially tilted against the viewing direction.
+It is more pronounced for glasses with high <a href="magnification.html" title="the enlargements of images">magnification</a>.</p>
+</div>
+<h3 class="togglediv">Field Curvature</h3>
+<div>
+<p>Field curvature denotes the problem that the focal points of a lens as obtained with different incidence angles do not lie on a plane, but on a curved surface &ndash; particularly for wide open <a href="optical_apertures.html" title="structures which limit the propagation of light">apertures</a>.
+When using a plane <a href="image_sensors.html" title="optoelectronic sensors which can be used for imaging">image sensor</a>, for example, that can make it impossible to adjust the optics for sharp imaging over the full <a href="image_planes.html" title="planes which are conjugate to an object plane, so that objects are imaged there">image plane</a>.
+One will therefore either try to minimize field curvature or in some cases to use an appropriately curved image sensor.</p>
+<p>The problem of field curvature has been analyzed particularly by Joseph Petzval, and is therefore often called <em>Petzval field curvature</em>.
+It is particularly relevant for measurement <a href="microscopes.html" title="instruments for seeing very small objects">microscopes</a>, for example.</p>
+</div>
+<h3 class="togglediv">Image Distortion</h3>
+<div>
+<p>There are geometric image distortions, letting straight lines of an object appear as non-straight curves in an image.
+Frequently encountered problems are <em>barrel distortions</em> and <em>pincushion distortions</em>.
+Such problems are particularly observed in wide-angle <a href="photographic_objectives.html" title="objective lenses used for photography">objectives</a>.</p>
+</div>
+<h3 class="togglediv">Zernike Polynomials</h3>
+<div>
+<p>A common method for characterizing any kind of monochromatic aberrations (i.e., everything except for chromatic aberrations) is based on a set of mutually orthogonal functions developed by Frits Zernike.
+These functions depend on the polar coordinates <span class="eqn_il"><span class="greek">&rho;</span></span> and <span class="eqn_il"><span class="greek">&phi;</span></span>.
+The radial part as described by Zernike polynomials, while the azimuthal factor is <span class="eqn_il">cos&thinsp;<i>m<span class="greek">&phi;</span></i></span> or <span class="eqn_il">sin&thinsp;<i>m<span class="greek">&phi;</span></i></span>.
+One decomposes the wavefront distortions versus position in two dimensions, and the obtained coefficients of those functions quantify the corresponding types of aberrations.</p>
+</div>
+</div>
+<h2 class="togglediv">Minimization of Aberrations</h2>
+<div>
+<p>All kind of image aberrations can be minimized with certain design methods for <a href="objectives.html" title="optical elements for collecting light from inspected objects, or for sending light to objects">objectives</a>, and by operating objectives within reasonable parameter regions e.g. concerning the object distance.
+Some kind of aberrations can be compensated locally; for example, one may use an achromatic lens doublets instead of a single lens.
+Other kinds of aberrations need to be compensated in other ways, where aberrations from different elements in an optical system (possibly with a wider distance between them) approximately cancel each other.
+Often, one needs to use different <a href="optical_glasses.html" title="glasses of high quality, made for optical applications">optical glasses</a> (or <a href="plastic_optics.html" title="optical elements made of organic polymer materials">plastics</a>) for different components.</p>
+<aside class="callout red">Design optimizations in terms of optical aberrations can be rather difficult to make!</aside>
+<p>It can be rather difficult to precisely compensate various kinds of aberrations at the same time.
+Note that any design change can modify all kinds of aberrations, so that one generally cannot solve the different problems one after the other.
+One will often accept some compromises based on the priorities for certain imaging applications.
+For example, the minimization of image distortions is particularly important for a measurement <a href="microscopes.html" title="instruments for seeing very small objects">microscope</a>, where light throughput and chromatic aberrations may be less of an issue, since one may use illumination with bright narrowband light.</p>
+<p>For the design of optical systems, one normally uses optical design software which can calculate all relevant kinds of image aberrations and offers tools for numerically minimizing them via design adjustments.
+Still, a thorough understanding of many aspects of aberrations is vital, since otherwise one may not be able to properly interpret the calculated results or to decide for a principle design architecture which has a chance to reach the required performance.</p>
+</div>
+<h2 class="togglediv">Compensating Effects of Aberrations</h2>
+<div>
+<p>Some kind of aberrations in digital images can be compensated to a considerable degree with numerical software.
+Some examples:</p>
+<aside class="callout blue">Software can be used to reduce various kinds of aberrations substantially.</aside>
+<ul>
+<li>There are various algorithms for improving the image sharpness, which can work reasonably well at least if there is not too much image noise.</li>
+<li>Geometric image distortions can be well corrected, but one may lose some outer regions of the image.</li>
+<li>Software can detect and correct color effects at boundaries, which are caused by chromatic aberrations.</li>
+<li>Problems with field curvature may be reduced by combining data from exposures with slightly different focus settings.</li>
+</ul>
+<p>Such techniques are often used in digital <a href="photo_cameras.html" title="optical instruments for taking photographic images">photo cameras</a> in order to improve the image quality, and possibly to realize devices which achieve a satisfactory image quality with cheaper objects.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div class="comment">
+<p class="comment_details">2020-04-24</p>
+<p>What are the disadvantages of using variable attenuators?</p>
+<p style="font-weight:bold">Answer from the <a href="paschotta.html" style="font-weight:bold">author</a>:</p>
+<p>Apart from the higher cost, there can be a number of practical disadvantages.
+For example, they may have a lower power handling capability, the achieved loss may be less uniform over the beam area, the setting may be inadvertently change, etc.</p>
+</div>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="optical_aberrations.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="spherical_aberrations.html" title="optical aberrations resulting from spherical optical surfaces">spherical aberrations</a>, <a href="chromatic_aberrations.html" title="image distortions caused by wavelength-dependent optical effects">chromatic aberrations</a>, <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a>, <a href="imaging_with_a_lens.html" title="creation of an optical image using a single lens">imaging with a lens</a>, <a href="photographic_objectives.html" title="objective lenses used for photography">photographic objectives</a>, <a href="geometrical_optics.html" title="a concept of optics which is based on the propagation of light rays, ignoring wave properties of light">geometrical optics</a>, <a href="paraxial_approximation.html" title="a frequently used approximation, essentially assuming small angular deviations of the propagation directions from some beam axis">paraxial approximation</a><br>and other articles in the categories <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/optical_aberrations.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Foptical_aberrations.html&text=RP+Photonics+Encyclopedia+-+optical+aberrations%2C+chromatic%2C+spherical%2C+astigmatism%2C+coma%2C+field+curvature%2C+image+distortion%2C+Zernike+polynomials%2C+compensation%2C+image+quality" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Foptical_aberrations.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Foptical_aberrations.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/optical_aberrations.html"&gt;<br>Article on Optical Aberrations&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/optical_aberrations.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/optical_aberrations.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/optical_aberrations.html<br>article on 'Optical Aberrations' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Learning on Photography</h2>
+<p>Are you interested in photography? We have various encyclopedia articles on such topics, explaining physical foundations and technological aspects:</p>
+<ul>
+<li><a href="./photo_cameras.html?banner=photography">photo cameras</a></li>
+<li><a href="./photographic_objectives.html?banner=photography">camera objectives</a></li>
+<li><a href="./imaging_with_a_lens.html?banner=photography">imaging with a lens</a></li>
+<li><a href="./image_sensors.html?banner=photography">image sensors</a> (basics of optical imaging)</li>
+<li><a href="./optical_aberrations.html?banner=photography">optical aberrations</a></li>
+<li><a href="./f_number.html?banner=photography">f-number</a></li>
+<li><a href="./vignetting.html?banner=photography">vignetting</a></li>
+</ul>
+<p style="margin:20px"><img src="./img/imaging_vertical.png" alt=" "></p>
+</div>
+</aside>
+<script type="text/javascript" nonce="w62Q1FH6AgmlOWh61wmG2Q==">shownbanner = "photography";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Shortages of rare earth materials &ndash; a problem for photonics?</h2>
+<p>Photonics heavily depends on the supply of rare earth materials in various areas &ndash; think of <a href="./laser_crystals.html?banner=rare_earth_shortage">laser crystals</a>, <a href="./rare_earth_doped_fibers.html?banner=rare_earth_shortage">active fibers</a> and <a href="./light_emitting_diodes.html?banner=rare_earth_shortage">LEDs</a>, for example.
+It is hard to see how such things could be done without rare earth materials.
+And those have recently been subject to enormous price increases and were even involved in a trade war.</p>
+<p>Is that now a reason for serious concerns in the area of photonics?
+Do we need to undertake serious recycling efforts?
+Our <a href="./spotlight_2014_06_27.html?banner=rare_earth_shortage">Photonics Spotlight article</a> analyzes the situation.</p>
+<p>Receiving the <a href="./spotlight.html?banner=rare_earth_shortage">Photonics Spotlight</a> via our <a href="./newsletters.html?banner=rare_earth_shortage">newsletter</a> might be a good idea &hellip;</p>
+
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="w62Q1FH6AgmlOWh61wmG2Q==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/optical_aberrations.html"
+    },
+    "headline": "Optical Aberrations",
+    "image": "https://www.rp-photonics.com/previews/optical_aberrations.png",
+    "datePublished": "2019-04-20",
+    "dateModified": "2020-04-24",
+    "description": "Optical imaging systems can exhibit various kinds of aberrations, i.e., reductions of image quality which can be analyzed based on geometrical optics. Design substantial extent, they can be avoided or compensated with various kinds of design measures.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter O",
+      "item": "https://www.rp-photonics.com/encyclopedia_o.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "optical aberrations",
+      "item": "https://www.rp-photonics.com/optical_aberrations.html"
+    }]}
+}
+</script>
+</body>
+</html>

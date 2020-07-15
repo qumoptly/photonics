@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-GcajTEiZhfqn+bDccrRxqw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - absorption, light, processes, linear and nonlinear, parasitic, thermal effects, quantum noise</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/absorption.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Various kinds of linear and nonlinear physical processes can be involved in the absorption of light.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="absorption, light, processes, linear and nonlinear, parasitic, quantum noise">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Absorption">
+<meta property="og:description" content="Various kinds of linear and nonlinear physical processes can be involved in the absorption of light.">
+<meta property="og:url" content="https://www.rp-photonics.com/absorption.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/absorption.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Various kinds of linear and nonlinear physical processes can be involved in the absorption of light.">
+<meta name="twitter:title" content="Absorption">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/absorption.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="GcajTEiZhfqn+bDccrRxqw==">
+page="absorption.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="GcajTEiZhfqn+bDccrRxqw==">shownsponsors="eagleyard Photonics,EKSMA OPTICS"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_a.html">letter A</a> &gt; <a href="absorption.html">absorption</a></p>
+<h1>Absorption</h1>
+<header style="margin-right:0;">
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a process where light energy is converted to another form of energy</p>
+<p>More specific terms: infrared absorption, <a href="excited_state_absorption.html" title="absorption of light by ions or atoms in an excited electronic state, rather than in the electronic ground state">excited-state absorption</a>, <a href="pump_absorption.html" title="the absorption of pump light, e.g. in a laser or a laser amplifier">pump absorption</a>, <a href="photodarkening.html" title="the phenomenon that the optical power losses in a medium can grow when the medium is irradiated with light at certain wavelengths">light-induced absorption</a>, <a href="multiphonon_absorption.html" title="absorption processes involving multiple phonons">multiphonon absorption</a>, <a href="multiphoton_absorption.html" title="absorption processes where multiple photons are absorbed simultaneously">multiphoton absorption</a>, <a href="two_photon_absorption.html" title="a nonlinear absorption process where two photons are simultaneously absorbed">two-photon absorption</a>, <a href="pump_absorption.html" title="the absorption of pump light, e.g. in a laser or a laser amplifier">pump absorption</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Absorption</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a></p>
+<p><a href="encyclopedia_cite.html?article=absorption">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Through different kinds of processes, which are explained in the following section, <a href="light.html" title="electromagnetic radiation in the visible spectral range, or sometimes in an extended spectral region">light</a> can be absorbed in various media.
+This implies that the optical energy is converted into some other form of energy.
+In most cases, the energy is eventually transformed into heat (thermal energy).</p>
+<p>The term <em>absorption</em> is not only used for absorption processes, but also often for related quantities, e.g. instead of <a href="absorption_coefficient.html" title="a logarithmic measure for the distributed absorption in a medium">absorption coefficient</a>.</p>
+<h2 class="togglediv">Absorption Processes</h2>
+<div>
+<p>The following kind of physical processes can be involved in the linear absorption of light:</p>
+<ul>
+<li>In an insulating material, having a certain <a href="band_gap.html" title="a range of energies for which there are no states of carriers in a medium">band gap energy</a>, strong linear absorption occurs when the <a href="photons.html" title="quanta of light energy">photon</a> energy of the light exceeds the bandgap energy (which is often possible only in the <a href="ultraviolet_light.html" title="invisible light with wavelengths shorter than &asymp;&thinsp;400&thinsp;&thinsp;nm">ultraviolet</a> spectral region).
+Each absorption of a photon causes the excitation of one electric carrier across the bandgap, so that one obtains one additional carrier in the conduction band and one hole in the valence band.
+The electronic excitation energy can subsequently be converted to heat (i.e., to multiple <a href="phonons.html" title="quantized microscopic vibrations in solid media">phonons</a>) or partially to <a href="fluorescence.html" title="luminescence arising from irradiation with light">fluorescence</a> light, often within nanoseconds or even faster.</li>
+<li>Strongly linear absorption is also possible at long (<a href="infrared_light.html" title="invisible light with wavelengths roughly between 750&thinsp;&thinsp;nm and 1&thinsp;&thinsp;mm">infrared</a>) <a href="wavelength.html" title="the spatial period of a plane wave">wavelengths</a> through <a href="multiphonon_absorption.html" title="absorption processes involving multiple phonons">multiphonon absorption</a>.
+For example, in fused silica that happens for wavelength beyond the <em>infrared absorption edge</em> at approximately 2&nbsp;&mu;m.</li>
+<li>Similar processes occur in semiconductors, where however the bandgap energy is smaller, so that strong absorption is possible also in the visible spectral region.</li>
+<li>The situation is different in metals, where the conduction band is not completely filled.
+Due to strong reflection, one can have absorption only within a thin surface layer, which can nevertheless be substantial in certain wavelength regions.
+The absorption properties can also depend on the roughness of the surface, and are sometimes intentionally modified by nano-structuring.</li>
+</ul>
+<p>There are also many cases where a material contains some absorbing dopant while the host material itself exhibits only negligible absorption.
+This is the case for solid-state (doped-insulator) <a href="gain_media.html" title="media for laser amplification">gain media</a>.</p>
+<p>In some special cases, nearly all of the absorbed light causes <a href="fluorescence.html" title="luminescence arising from irradiation with light">fluorescence</a> rather than heat, and there can be even a net cooling effect (&rarr;&nbsp;<a href="laser_cooling.html" title="a variety of techniques for reducing the temperature (i.e., the random motion) of small particles such as atoms or ions"><em>laser cooling</em></a>).</p>
+</div>
+<h2 class="togglediv">Linear and Nonlinear Absorption</h2>
+<div>
+<p>Linear absorption means that the <a href="absorption_coefficient.html" title="a logarithmic measure for the distributed absorption in a medium">absorption coefficient</a> is independent of the <a href="optical_intensity.html" title="optical power per unit area">optical intensity</a>.
+There are also <em>nonlinear</em> absorption processes, where the absorption coefficient is a linear or higher-order function of the intensity.
+For example, <a href="two_photon_absorption.html" title="a nonlinear absorption process where two photons are simultaneously absorbed">two-photon absorption</a> is a process where two photons are absorbed simultaneously, and the absorption coefficient rises linearly with the intensity.
+<a href="multiphoton_absorption.html" title="absorption processes where multiple photons are absorbed simultaneously">Multiphoton absorption</a> processes of higher order are often involved in <a href="laser_induced_damage.html" title="damage of optical components induced by laser radiation">laser-induced damage</a> caused by intense laser <a href="pulses.html" title="flashes of light">pulses</a>.</p>
+<p><a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">Saturable absorption</a> can also be considered as a kind of nonlinear absorption.
+Here, however, the absorption coefficient is <em>reduced</em> under the influence of intense light, e.g. because the starting electronic level for the light absorption is depleted.</p>
+</div>
+<h2 class="togglediv">Parasitic Absorption</h2>
+<div>
+<p>In cases where a medium or an optical component should normally not be absorbing, some nevertheless occurring and disturbing amount of absorption is often called <em>parasitic absorption</em> or <em>residual absorption</em>.</p>
+<p>Parasitic absorption occurs in <a href="laser_crystals.html" title="transparent crystals with laser-active dopants, used as laser gain media">laser crystals</a> and <a href="nonlinear_crystal_materials.html" title="crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal materials</a>, for example, as a result of impurities (<em>extrinsic absorption</em>), or sometimes due to multiphonon absorption (<em>intrinsic absorption</em>, not avoidable even with perfect material quality).
+For many photonic devices, parasitic absorption limits the power handling capability.</p>
+</div>
+<h2 class="togglediv">Effects on the Absorbing Medium and its Optical Properties</h2>
+<div>
+<p>In most cases, absorption of light causes heating of the absorbing medium and subsequently thermal expansion.
+The heating is often strongly inhomogeneous; for example, it may occur within a focused <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a>.
+The local thermal expansion then leads to mechanical stress in the medium, which can even result in fracture when the deposited thermal power or energy is sufficiently high.
+Further, the temperature causes a slight local modification of the <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a>, which (together with stress-related effects) can cause <a href="thermal_lensing.html" title="a lensing effect induced by temperature gradients">thermal lensing</a> effects.</p>
+<p>Further, the modified population of electronic states can modify the absorption at the wavelength of the absorbed light and also at other wavelengths.
+It has already been mentioned that absorption may be saturated.
+Also, one may obtain <a href="excited_state_absorption.html" title="absorption of light by ions or atoms in an excited electronic state, rather than in the electronic ground state">excited-state absorption</a> at wavelengths where the material would normally not be absorbing.
+In semiconductors, at high intensities one obtains free carrier absorption.</p>
+<p>At some wavelengths, one may obtain <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a> amplification for strong enough excitation of the medium, usually involving a <a href="population_inversion.html" title="a state of a medium where a higher-lying electronic level has a higher population than a lower-lying level">population inversion</a>.
+In an optically pumped laser <a href="gain_media.html" title="media for laser amplification">gain medium</a>, sufficiently strong <a href="pump_absorption.html" title="the absorption of pump light, e.g. in a laser or a laser amplifier">pump absorption</a> is required, since only absorbed pump light can be utilized.</p>
+<p>Absorption of light can also have electrical effects.
+For example, there are <a href="photoconductive_detectors.html" title="photodetectors which exhibit a reduction in electrical resistance caused by incoming light">photoresistors</a>, where the electrical resistance is reduced by absorbed light.
+In <a href="photodiodes.html" title="semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiodes</a> and <a href="phototransistors.html" title="a type of semiconductor-based photodetector with internal current amplification for higher responsivity">phototransistors</a>, one exploits the internal <a href="photoelectric_effect.html" title="the emission or excitation of electric carriers related to the absorption of light">photoelectric effect</a>, related to the excitation of electric carriers by light absorption.</p>
+<p>If light is absorbed by atoms or molecules of a gas, <a href="light_forces.html" title="forces associated with absorption, reflection or scattering of light">light forces</a> associated with the absorption may become relevant.
+They can be used for <a href="doppler_cooling.html" title="a technique of laser cooling based on velocity-dependent absorption processes">Doppler cooling</a>, for example.</p>
+</div>
+<h2 class="togglediv">Quantifying Absorption</h2>
+<div>
+<p>Absorption in a semi-transparent medium is usually quantified with an <a href="absorption_coefficient.html" title="a logarithmic measure for the distributed absorption in a medium">absorption coefficient</a>, telling which fraction of the <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a> is lost per unit length.
+The inverse of an absorption coefficient is called an <a href="absorption_length.html" title="the length of which absorption reduces the optical intensity to 1/e of its initial value">absorption length</a>.
+The absorption of a given length of material (e.g. of a plate with a certain thickness) can be quantified with an <a href="absorbance.html" title="the logarithm with base 10 of the inverse transmittance">absorbance</a>.</p>
+<p>If absorption is caused by some absorbing dopant, the contribution to the absorption per dopant atom or ion is often quantified with an <a href="transition_cross_sections.html" title="material parameters for quantifying the likelihood or rate of optical transition events">absorption cross section</a>.</p>
+<p>As absorption coefficients are wavelength-dependent, one often produces <em>absorption spectra</em>, showing an absorption coefficient as a function of wavelength or <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequency</a>.</p>
+<p>Non-transparent objects can be attributed an <a href="absorptance.html" title="the fraction of incoming radiant flux which is absorbed by an object">absorptance</a>, which is the fraction of incident light which is absorbed rather than transmitted, reflected or <a href="scattering.html" title="processes where light is sent in other directions, usually but not always in random directions">scattered</a>.</p>
+</div>
+<h2 class="togglediv">Generation of Quantum Noise via Absorption</h2>
+<div>
+<p>Even simple linear absorption processes introduce some amount of <a href="quantum_noise.html" title="noise arising from quantum fluctuations">quantum noise</a>.
+This can be intuitively understood by considering that some of the incident <a href="photons.html" title="quanta of light energy">photon</a> are randomly removed, while other photons remain in the light beam.
+An initially perfectly regular stream of photons (&rarr;&nbsp;<a href="amplitude_squeezed_light.html" title="light with an intensity noise below the shot noise level">amplitude-squeezed light</a>) would thus be converted into a random stream of photons, exhibiting some <a href="intensity_noise.html" title="noise of the optical intensity or power of a laser beam">intensity noise</a>.</p>
+<p>If the incident light is in a <a href="coherent_states.html" title="a special kind of pure quantum-mechanical states of light">coherent state</a>, exhibiting the standard <a href="shot_noise.html" title="quantum-limited intensity noise">shot noise</a> level, the extra noise added through linear absorption is just enough to keep the residual light at the shot noise level (which is relatively stronger for weaker light).</p>
+<p>Nonlinear absorption processes can modify quantum noise properties in more complicated ways.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="absorption.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="absorption_coefficient.html" title="a logarithmic measure for the distributed absorption in a medium">absorption coefficient</a>, <a href="absorption_length.html" title="the length of which absorption reduces the optical intensity to 1/e of its initial value">absorption length</a>, <a href="absorbance.html" title="the logarithm with base 10 of the inverse transmittance">absorbance</a>, <a href="absorptance.html" title="the fraction of incoming radiant flux which is absorbed by an object">absorptance</a>, <a href="nonlinear_absorption.html" title="absorption where the absorption coefficient depends on the optical intensity">nonlinear absorption</a>, <a href="two_photon_absorption.html" title="a nonlinear absorption process where two photons are simultaneously absorbed">two-photon absorption</a>, <a href="quantum_noise.html" title="noise arising from quantum fluctuations">quantum noise</a><br>and other articles in the category <a href="categories.html#general_optics" title="other articles on general optics">general optics</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/absorption.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fabsorption.html&text=RP+Photonics+Encyclopedia+-+absorption%2C+light%2C+processes%2C+linear+and+nonlinear%2C+parasitic%2C+thermal+effects%2C+quantum+noise" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fabsorption.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fabsorption.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/absorption.html"&gt;<br>Article on Absorption&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/absorption.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/absorption.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/absorption.html<br>article on 'Absorption' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Photonics Marketing</h2>
+<p>The article</p>
+<p><a href="./spotlight_2020_04_01.html?banner=Corona_crisis_marketing" style="font-size:135%">Photonics Marketing in Times of the Corona&shy;virus Crisis</a></p>
+<p>in our blog, the <a href="./spotlight.html?banner=Corona_crisis_marketing">Photonics Spotlight</a>, discusses specific questions raised in the Coronavirus crisis for the <a href="./marketing.html?banner=Corona_crisis_marketing">marketing of photonics products</a>:</p>
+<ul>
+<li>What are the remaining marketing options?</li>
+<li>What criteria should one apply for checking the value of marketing proposals?</li>
+<li>How to make sure that advertising money is spent wisely?</li>
+<li>What are the possible consequences of budget cuts?</li>
+</ul>
+<p>Finding good questions is often the essential step to a solution &ndash; here: for <b>making your business resilent in times of crisis</b>.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="GcajTEiZhfqn+bDccrRxqw==">shownbanner = "Corona crisis marketing";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Fighting Fraud in Science</h2>
+<p>We occasionally read about scientific fraud &ndash; things like fabricated measurement results &ndash; which is utterly unfair and also undermines the trust of the public in science and its results.</p>
+<p>How to fight that problem?</p>
+<ul>
+<li>Do we need to tell young scientists more clearly that fraud is evil?</li>
+<li>Do supervisors have to stop trusting the results of their coworkers?</li>
+<li>Does the pressure to produce results inevitably favor fraud?</li>
+<li>Where exactly lies the responsibility, if something goes wrong?</li>
+</ul>
+<p>Our <a href="./spotlight_2009_10_19.html?banner=science_fraud">Photonics Spotlight article on science fraud</a> analyzes that carefully.
+It suggests that <b>the risk of fraud is close to zero where supervisors do a responsible job</b>.
+Relations to a more widespread problem &ndash; <b>corrupt authorship practices</b> &ndash; are also identified.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="GcajTEiZhfqn+bDccrRxqw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/absorption.html"
+    },
+    "headline": "Absorption",
+    "image": "https://www.rp-photonics.com/previews/absorption.png",
+    "datePublished": "2019-04-27",
+    "dateModified": "2020-03-14",
+    "description": "Various kinds of linear and nonlinear physical processes can be involved in the absorption of light.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter A",
+      "item": "https://www.rp-photonics.com/encyclopedia_a.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "absorption",
+      "item": "https://www.rp-photonics.com/absorption.html"
+    }]}
+}
+</script>
+</body>
+</html>

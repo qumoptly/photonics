@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-eWqBkwkv24xrpbRj2YQgog=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - ring resonators, cavities, properties, applications, enhancement cavities, ring laser, OPO, filter, mode cleaner</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/ring_resonators.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Ring resonators are optical resonators where light can independently circulate in two different directions. They are used for ring lasers, for example.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="ring resonators, cavities, properties, applications, enhancement cavities, ring laser, OPO, filter, mode cleaner">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ring Resonators">
+<meta property="og:description" content="Ring resonators are optical resonators where light can independently circulate in two different directions. They are used for ring lasers, for example.">
+<meta property="og:url" content="https://www.rp-photonics.com/ring_resonators.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/ring_resonators.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Ring resonators are optical resonators where light can independently circulate in two different directions. They are used for ring lasers, for example.">
+<meta name="twitter:title" content="Ring Resonators">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/ring_resonators.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="eWqBkwkv24xrpbRj2YQgog==">
+page="ring_resonators.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/encyclopedia.html?tour=Encyclopedia"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="eWqBkwkv24xrpbRj2YQgog==">shownsponsors="eagleyard Photonics,EKSMA OPTICS"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_r.html">letter R</a> &gt; <a href="ring_resonators.html">ring resonators</a></p>
+<h1>Ring Resonators</h1>
+<header style="margin-right:0;">
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: optical resonators where light can independently circulate in two different directions</p>
+<p>More general term: <a href="optical_resonators.html" title="arrangements of optical components which allow a beam of light to circulate">optical resonators</a></p>
+<p>Opposite term: linear resonators, <a href="standing_wave_resonators.html" title="optical resonators with two end mirrors">standing-wave resonators</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Ringresonatoren</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#optical_resonators" title="other articles on optical resonators">optical resonators</a></p>
+<p><a href="encyclopedia_cite.html?article=ring%20resonators">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p><a href="optical_resonators.html" title="arrangements of optical components which allow a beam of light to circulate">Optical resonators</a> can be made with two different topologies:</p>
+<ul>
+<li><em>Linear resonators</em> (<a href="standing_wave_resonators.html" title="optical resonators with two end mirrors">standing-wave resonators</a>) have two end mirrors with perpendicular incidence of light.
+Circulating light will then inevitably have two counterpropagating components.</li>
+<li><em>Ring resonators</em> do not have any end mirrors; none of the resonator mirrors reflects light back into itself.</li>
+</ul>
+<p>As an example, Figure&nbsp;1 shows a ring resonator, where light is injected through a partially transmissive <a href="mirrors.html" title="devices which reflect light">mirror</a>, and light is coupled out through another mirror:</p>
+<figure>
+<img src="img/ring_resonator.png" alt="unidirectional ring laser">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+A ring resonator with external light input through a partially transmissive mirror and an <a href="output_couplers.html" title="partially transparent laser mirrors, used for extracting output beams from laser resonators">output coupler</a> mirror.
+</figcaption>
+</figure>
+<p>Note that the incident light leads to light circulating in the resonator only in one direction.
+Therefore, one obtains a single output beam on the upper right side.</p>
+<p>If the transmission of both plane mirrors is the same and the two curved mirrors are highly reflecting, we have impedance matching in resonance: all incident power is transmitted on the other side, and there is effectively no reflected power, because the directly reflected component and the light leaking out from the resonator cancel each other by destructive <a href="interference.html" title="a range of phenomena associated with the superposition of waves">interference</a>.</p>
+<h2 class="togglediv">Different Forms of Ring Resonators</h2>
+<div>
+<p>Ring resonators may be formed by combining some <a href="laser_mirrors.html" title="high-quality mirrors used in laser resonators and other optical setups">laser mirrors</a> as shown above.
+However, there are other possibilities:</p>
+<figure class="right" style="width:192px;">
+<img src="img/npro.png" alt="NPRO (or MISER) laser setup">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Setup of a nonplanar ring oscillator.
+</figcaption>
+</figure>
+<ul>
+<li>One may employ <a href="total_internal_reflection.html" title="the phenomenon that light incident on the boundary between two transparent media is fully reflected if the light is coming from the optical more dense medium and the angle of incidence is sufficiently large">total internal reflection</a>.
+This is done for <a href="nonplanar_ring_oscillators.html" title="a type of monolithic single-frequency lasers, based on a nonplanar ring resonator">nonplanar ring oscillators</a>, for example (see Figure&nbsp;2).
+Ref. [4] provides another example, where evanescent wave coupling with a <a href="prisms.html" title="transparent optical devices which refract or reflect light">prism</a> is used.
+That mechanism provides a variable degree of coupling.</li>
+<li>One can use <a href="fiber_optics.html" title="optics based on optical fibers">fiber optics</a> to form a fiber ring resonator.
+That way, one can realize resonators with a very long round-trip time.
+A <a href="fiber_couplers.html" title="fiber devices for coupling light from one or several input fibers to one or several output fibers, or from free space into a fiber">fiber coupler</a> can be used for coupling the light into the resonator or for extracting it.</li>
+<li>A spherical glass piece can be used as a ring resonator, exhibiting so-called whispering gallery modes.
+Coupling is possible with a prism, using evanescent waves.</li>
+<li>There are micro-ring cavities which are realized with <a href="integrated_optics.html" title="the technology dealing with the construction of photonic integrated circuits">integrated optics</a> as <a href="waveguides.html" title="spatially inhomogeneous transparent structures for guiding light">waveguide</a> structures.
+Here, one may employ evanescent wave coupling with a straight waveguide passing the ring in a close distance.</li>
+</ul>
+</div>
+<h2 class="togglediv">Differences to Linear Resonators</h2>
+<div>
+<p>In various respects, the properties of the ring resonators differ from those of <a href="standing_wave_resonators.html" title="optical resonators with two end mirrors">linear resonators</a>:</p>
+<ul>
+<li>The reflected light will never go directly back to its source, because we do not have normal incidence on any mirror surfaces.
+That can be an essential advantage of a ring resonator, which is used for example as a <a href="mode_cleaners.html" title="devices which can improve the beam quality of laser beams">mode cleaner</a> for a <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a>, which might otherwise well be irritated by back-reflected light.</li>
+<li>When the circulating light hits a curved (focusing or defocusing) resonator mirror, that introduces some <a href="astigmatism.html" title="a kind of optical aberrations; alternatively, a defect of optical lenses or a property of laser beams">astigmatism</a>, since we cannot have normal incidence.
+(The <a href="dioptric_power.html" title="the inverse of the focal length">dioptric power</a> of a curved mirror is different between tangential and sagittal direction.)
+One often tries to minimize that astigmatism by using small angles of incidence.
+Therefore, it is common to use a bow-tie ring resonator geometry, as shown e.g. in Figure&nbsp;1, rather than e.g. a rectangular geometry with 45&deg; angle of incidence of the mirrors.</li>
+<li>In a ring resonator, light can independently circulate in two different directions, unless there is some coupling introduced e.g. by parasitic reflections.
+As long as unidirectional operation is maintained, one avoids the presence of counter-propagating light in a ring resonator (except close to resonator mirrors, where there is some overlap of incident and reflected beams).
+Therefore, <a href="spatial_hole_burning.html" title="a distortion of the gain shape in a laser medium (or the loss spectrum in a saturable absorber medium), caused by saturation effects of a standing wave">spatial hole burning</a> effects are eliminated.
+This is relevant for some <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">lasers</a> (see below).</li>
+<li>A ring resonator has only a single <a href="stability_zones_of_optical_resonators.html" title="parameter regions of an optical resonator where the resonator is geometrically stable">stability zone</a> e.g. with respect to the <a href="dioptric_power.html" title="the inverse of the focal length">dioptric power</a> of the <a href="thermal_lensing.html" title="a lensing effect induced by temperature gradients">thermal lens</a> of a <a href="laser_crystals.html" title="transparent crystals with laser-active dopants, used as laser gain media">laser crystal</a>.
+Linear resonators have two such stability zones.</li>
+</ul>
+</div>
+<h2 class="togglediv">Applications of Ring Resonators</h2>
+<div>
+<h3 class="togglediv">Resonant Enhancement Cavities</h3>
+<div>
+<p>Resonant <a href="enhancement_cavities.html" title="optical cavities for exploiting the resonant enhancement of the power of circulating light">enhancement cavities</a> are used for various applications where the substantial increase of circulating <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a> can be exploited.</p>
+<p>A particularly important application is <a href="resonant_frequency_doubling.html" title="frequency doubling with a nonlinear crystal placed in a resonant enhancement cavity">resonant frequency doubling</a>.
+Here, a ring resonator geometry (see Figure&nbsp;3) is often preferred, since one avoids the back-reflection of light towards the laser source, and it is easy to couple out essentially all frequency-doubled light at a single mirror (typically the one just after the <a href="nonlinear_crystal_materials.html" title="crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal</a>).</p>
+<figure>
+<img src="img/resonant_frequency_doubler.png" alt="resonator frequency doubler">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+A resonant frequency doubler. The lower left mirror should partially transmit incident pump light, while the other mirrors should be fully reflecting for pump light. The lower right mirror should fully couple out of the frequency-doubled light.
+</figcaption>
+</figure>
+</div>
+<h3 class="togglediv">Ring Lasers</h3>
+<div>
+<p>As an example, Figure&nbsp;4 shows a ring laser resonator, containing a laser crystal and a <a href="faraday_isolators.html" title="optical isolators based on the Faraday effect">Faraday isolator</a>:</p>
+<figure>
+<img src="img/ring_laser.png" alt="unidirectional ring laser">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+A ring laser resonator, where unidirectional operation is enforced with an optical isolator.
+</figcaption>
+</figure>
+<p>While most lasers are realized with linear resonators, which are tentatively simpler to build, ring laser resonators are preferred in some situations:</p>
+<ul>
+<li><a href="single_frequency_operation.html" title="an operation mode of a laser where only a single resonator mode acquires a significant power">Single frequency operation</a> is more easily achieved because <a href="spatial_hole_burning.html" title="a distortion of the gain shape in a laser medium (or the loss spectrum in a saturable absorber medium), caused by saturation effects of a standing wave">spatial hole burning</a> is avoided.</li>
+<li><a href="intracavity_frequency_doubling.html" title="frequency doubling with a nonlinear crystal within the laser resonator">Intracavity frequency doubling</a> generates frequency-doubled light only in one direction, which can be advantageous.</li>
+</ul>
+</div>
+<h3 class="togglediv">Optical Parametric Oscillators</h3>
+<div>
+<p>Similarly, ring resonators are used for <a href="optical_parametric_oscillators.html" title="coherent light sources based on parametric amplification within an optical resonator">optical parametric oscillators</a> (OPOs).
+Here, one typically uses a resonance for either the signal light or for the idler wave.
+In some cases, one realizes a doubly resonant OPO, where both signal and idler are resonant.</p>
+</div>
+<h3 class="togglediv">Filtering and Signal Processing</h3>
+<div>
+<p>There are some applications for one uses a ring resonator as an <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical filter</a>.
+For example, in <a href="integrated_optics.html" title="the technology dealing with the construction of photonic integrated circuits">integrated optics</a> one may realize tiny rings, which are coupled to all straight waveguides on opposite sides.
+Only when input light to a waveguide is resonant, it will coupled into the ring and get to the other waveguide, while light with all optical frequencies is transmitted by the first waveguide.
+Such techniques can be used for <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a> with <a href="wavelength_division_multiplexing.html" title="a multiplexing technique working in the wavelength domain">wavelength division multiplexing</a>, for example.</p>
+</div>
+<h3 class="togglediv">Frequency Comb Generation</h3>
+<div>
+<p>Special kinds of ring resonators are used for generating <a href="frequency_combs.html" title="optical spectra consisting of equidistant lines">frequency combs</a> [7,&thinsp;8].</p>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="ring_resonators.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">T. J. Kane and R. L. Byer, &ldquo;Monolithic, unidirectional single-mode Nd:YAG ring laser&rdquo;, Opt. Lett. 10 (2), 65 (1985), <a href="https://doi.org/10.1364/OL.10.000065">doi:10.1364/OL.10.000065</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">W. W. Chow <i>et al.</i>, &ldquo;The ring laser gyro&rdquo;, Rev. Mod. Phys. 57, 61 (1985), <a href="https://doi.org/10.1103/RevModPhys.57.61">doi:10.1103/RevModPhys.57.61</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">S. De Silvestri <i>et al.</i>, &ldquo;Rod thermal lensing effects in solid-state laser ring resonators&rdquo;, Opt. Commun. 65 (5), 373 (1988), <a href="https://doi.org/10.1016/0030-4018(88)90106-X">doi:10.1016/0030-4018(88)90106-X</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">K. Fiedler <i>et al.</i>, &ldquo;Highly efficient frequency doubling with a doubly-resonant monolithic total internal reflection ring resonator&rdquo;, Opt. Lett. 18 (21), 1786 (1993), <a href="https://doi.org/10.1364/OL.18.001786">doi:10.1364/OL.18.001786</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">L. E. Nelson <i>et al.</i>, &ldquo;Ultrashort-pulse fiber ring lasers&rdquo;, Appl. Phys. B 65, 277 (1997), <a href="https://doi.org/10.1007/s003400050273">doi:10.1007/s003400050273</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">K. I. Martin <i>et al.</i>, &ldquo;Stable, high-power, single-frequency generation at 532&nbsp;nm from a diode-bar-pumped Nd:YAG ring laser with an intracavity LBO frequency doubler&rdquo;, Appl. Opt. 36 (18), 4149 (1997), <a href="https://doi.org/10.1364/AO.36.004149">doi:10.1364/AO.36.004149</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">I. Demirtzioglou <i>et al.</i>, &ldquo;Frequency comb generation in a silicon ring resonator modulator&rdquo;, Opt. Express 26 (2), 790 (2018), <a href="https://doi.org/10.1364/OE.26.000790">doi:10.1364/OE.26.000790</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">M. Zhang, &ldquo;Broadband electro-optic frequency comb generation in a lithium niobate microring resonator&rdquo;, Nature 568, 373 (2019), <a href="https://doi.org/10.1038/s41586-019-1008-7">doi:10.1038/s41586-019-1008-7</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">R. Paschotta, <a href="resonator_ring.html">case study on a ring resonator</a> with the <a href="resonator.html">RP Resonator</a> software</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="optical_resonators.html" title="arrangements of optical components which allow a beam of light to circulate">optical resonators</a>, <a href="ring_lasers.html" title="lasers with a ring resonator">ring lasers</a>, <a href="standing_wave_resonators.html" title="optical resonators with two end mirrors">standing-wave resonators</a>, <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonators</a><br>and other articles in the category <a href="categories.html#optical_resonators" title="other articles on optical resonators">optical resonators</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/ring_resonators.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fring_resonators.html&text=RP+Photonics+Encyclopedia+-+ring+resonators%2C+cavities%2C+properties%2C+applications%2C+enhancement+cavities%2C+ring+laser%2C+OPO%2C+filter%2C+mode+cleaner" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fring_resonators.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fring_resonators.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/ring_resonators.html"&gt;<br>Article on Ring Resonators&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/ring_resonators.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/ring_resonators.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/ring_resonators.html<br>article on 'Ring Resonators' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Photonics Marketing</h2>
+<p>The article</p>
+<p><a href="./spotlight_2020_04_01.html?banner=Corona_crisis_marketing" style="font-size:135%">Photonics Marketing in Times of the Corona&shy;virus Crisis</a></p>
+<p>in our blog, the <a href="./spotlight.html?banner=Corona_crisis_marketing">Photonics Spotlight</a>, discusses specific questions raised in the Coronavirus crisis for the <a href="./marketing.html?banner=Corona_crisis_marketing">marketing of photonics products</a>:</p>
+<ul>
+<li>What are the remaining marketing options?</li>
+<li>What criteria should one apply for checking the value of marketing proposals?</li>
+<li>How to make sure that advertising money is spent wisely?</li>
+<li>What are the possible consequences of budget cuts?</li>
+</ul>
+<p>Finding good questions is often the essential step to a solution &ndash; here: for <b>making your business resilent in times of crisis</b>.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="eWqBkwkv24xrpbRj2YQgog==">shownbanner = "Corona crisis marketing";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Field Guide on Fiber Optics</h2>
+<p>A quick introduction to fiber optics:</p>
+<ul>
+<li>basics of optical fibers</li>
+<li>fiber nonlinearities and their effects</li>
+<li>passive fibers for data transmission</li>
+<li>photonic crystal fibers</li>
+<li>large mode area fibers</li>
+<li>passive fiber-optic components</li>
+<li>active fiber devices: fiber amplifiers and lasers</li>
+</ul>
+<p style="text-align:center;"><a href="http://spie.org/x648.html?product_id=853722"><img src="./img/fg_fibers.png" alt="FG Fiber Optics"></a></p>
+<p>Note that we have also published a <a href="./passive_fiber_optics.html?banner=FG_Fiber_Optics">free tutorial on fiber optics</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="eWqBkwkv24xrpbRj2YQgog==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/ring_resonators.html"
+    },
+    "headline": "Ring Resonators",
+    "image": "https://www.rp-photonics.com/previews/ring_resonators.png",
+    "datePublished": "2019-06-04",
+    "dateModified": "2020-03-14",
+    "description": "Ring resonators are optical resonators where light can independently circulate in two different directions. They are used for ring lasers, for example.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter R",
+      "item": "https://www.rp-photonics.com/encyclopedia_r.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ring resonators",
+      "item": "https://www.rp-photonics.com/ring_resonators.html"
+    }]}
+}
+</script>
+</body>
+</html>

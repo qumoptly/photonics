@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-XJ/ZNOj8qoWCHknITDxJEg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Hermite-Gaussian modes, Gauss-Hermite, beams, Hermite polynomial, mode family</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/hermite_gaussian_modes.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Hermite-Gaussian modes are propagation modes or resonator modes which are described with Hermite-Gaussian functions.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="Hermite-Gaussian modes, Gauss-Hermite, beams, Hermite polynomial, mode family">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hermite&ndash;Gaussian Modes">
+<meta property="og:description" content="Hermite-Gaussian modes are propagation modes or resonator modes which are described with Hermite-Gaussian functions.">
+<meta property="og:url" content="https://www.rp-photonics.com/hermite_gaussian_modes.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/hermite_gaussian_modes.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Hermite-Gaussian modes are propagation modes or resonator modes which are described with Hermite-Gaussian functions.">
+<meta name="twitter:title" content="Hermite&ndash;Gaussian Modes">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/hermite_gaussian_modes.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="XJ/ZNOj8qoWCHknITDxJEg==">
+page="hermite_gaussian_modes.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="XJ/ZNOj8qoWCHknITDxJEg==">shownsponsors="eagleyard Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_h.html">letter H</a> &gt; <a href="hermite_gaussian_modes.html">Hermite&ndash;Gaussian modes</a></p>
+<h1>Hermite&ndash;Gaussian Modes</h1>
+<header style="margin-right:0;">
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: propagation modes or resonator modes which are described with Hermite&ndash;Gaussian functions</p>
+<p>More general terms: <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Hermite-Gauß-Moden</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#optical_resonators" title="other articles on optical resonators">optical resonators</a></p>
+<p><a href="encyclopedia_cite.html?article=Hermite--Gaussian%20modes">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>When light propagates in free space or in a homogeneous optical medium, its intensity profile will generally change during propagation.
+For certain electric field amplitude distributions, however, which are called <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space"><em>modes</em></a>, this is not the case: the shape of the amplitude profile remains constant, even though there may be a re-scaling of the profile, an overall change in <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">optical phase</a>, and possibly also a change in the total <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a>.</p>
+<p>For each combination of an <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequency</a>, a beam axis, a focus position, and some <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a> of a <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beam</a> in the focus, there is a whole family of Hermite&ndash;Gaussian modes (TEM<sub>nm</sub> modes, Gauss&ndash;Hermite modes).
+These are approximate solutions of the wave equation, valid for weak focusing (&rarr;&nbsp;<a href="paraxial_approximation.html" title="a frequently used approximation, essentially assuming small angular deviations of the propagation directions from some beam axis"><em>paraxial approximation</em></a>).
+Their electric field distributions are essentially given by the product of a Gaussian function and a Hermite polynomial, apart from the phase term:</p>
+<div class="eqn"><img src="eqn/hermite_gaussian.gif" width="422" height="164" alt="Hermite--Gaussian beam"></div>
+<p>where <span class="eqn_il"><i>H</i><sub><i>n</i></sub>(<i>x</i>)</span> is the Hermite polynomial with the non-negative integer index <span class="eqn_il"><i>n</i></span>.
+The indices <span class="eqn_il"><i>n</i></span> and <span class="eqn_il"><i>m</i></span> determine the shape of the profile in the <span class="eqn_il"><i>x</i></span> and <span class="eqn_il"><i>y</i></span> direction, respectively.
+The quantities <span class="eqn_il"><i>w</i></span> and <span class="eqn_il"><i>R</i></span> evolve in the <span class="eqn_il"><i>z</i></span> direction as described in the article on <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beams</a>.</p>
+<p>The intensity distribution of such a mode (Figure&nbsp;1) has <span class="eqn_il"><i>n</i></span> nodes in the horizontal direction and <span class="eqn_il"><i>m</i></span> nodes in the vertical direction.
+For <span class="eqn_il"><i>n</i>&thinsp;=&thinsp;<i>m</i></span> = 0, a <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beam</a> is obtained.
+This mode is called the <em>fundamental mode</em> or <em>axial mode</em>, and it has the highest <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a> with an <a href="m2_factor.html" title="a parameter for quantifying the beam quality of laser beams"><i>M</i><sup>2</sup> factor</a> of 1.
+Other Hermite&ndash;Gaussian modes with indices <span class="eqn_il"><i>n</i></span> and <span class="eqn_il"><i>m</i></span> have an <span class="eqn_il"><i>M</i><sup>2</sup></span> factor of <span class="eqn_il">(2<i>n</i>&thinsp;+&thinsp;1)</span> in the <span class="eqn_il"><i>x</i></span> direction, and <span class="eqn_il">(2<i>m</i>&thinsp;+&thinsp;1)</span> in the <span class="eqn_il"><i>y</i></span> direction.</p>
+<figure>
+<img src="img/tem_modes.png" alt="intensity distributions of Hermite&ndash;Gaussian modes">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Intensity profiles of the lowest-order Hermite&ndash;Gaussian modes, starting with TEM<sub>00</sub> (lower left-hand side) and going up to TEM<sub>33</sub> (upper right-hand side).
+</figcaption>
+</figure>
+<p>A further generalization of the equation above would allow for different mode sizes and focus positions (<a href="astigmatism.html" title="a kind of optical aberrations; alternatively, a defect of optical lenses or a property of laser beams"><em>astigmatism</em></a>) for the <span class="eqn_il"><i>x</i></span> and <span class="eqn_il"><i>y</i></span> directions.
+The direction of the electric field, not specified in the equation above, determines the <a href="polarization_of_laser_emission.html">polarization</a>.</p>
+<p>The electric field distributions of the Hermite&ndash;Gaussian modes are a system of functions which are mutually orthogonal.
+Arbitrary field distributions can be decomposed into Hermite&ndash;Gaussian functions, where the amplitude content of each one is determine by an overlap integral.</p>
+<p>Hermite&ndash;Gaussian modes can often be used to represent the <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a> of an <a href="optical_resonators.html" title="arrangements of optical components which allow a beam of light to circulate">optical resonator</a>, if the optical elements in the resonator only do simple changes to the phase and intensity profiles (e.g., approximately preserving parabolic phase profiles) and the <a href="paraxial_approximation.html" title="a frequently used approximation, essentially assuming small angular deviations of the propagation directions from some beam axis">paraxial approximation</a> is satisfied.
+As these conditions are very often fulfilled in <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonators</a>, laser resonator modes are often of Hermite&ndash;Gaussian kind.
+If such a <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a> operates on a single mode, a characteristic intensity profile of the output beam as in Figure&nbsp;1 can be observed.</p>
+<p>Another frequently used mode family is that of Laguerre&ndash;Gaussian modes.</p>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="hermite_gaussian_modes.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a>, <a href="higher_order_modes.html" title="transverse modes of a resonator or waveguide, excluding the fundamental (axial) modes">higher-order modes</a>, <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beams</a><br>and other articles in the categories <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#optical_resonators" title="other articles on optical resonators">optical resonators</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/hermite_gaussian_modes.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fhermite_gaussian_modes.html&text=RP+Photonics+Encyclopedia+-+Hermite-Gaussian+modes%2C+Gauss-Hermite%2C+beams%2C+Hermite+polynomial%2C+mode+family" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fhermite_gaussian_modes.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fhermite_gaussian_modes.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/hermite_gaussian_modes.html"&gt;<br>Article on Hermite&amp;ndash;Gaussian Modes&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/hermite_gaussian_modes.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/hermite_gaussian_modes.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/hermite_gaussian_modes.html<br>article on 'Hermite&amp;ndash;Gaussian Modes' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Fiber Optics Software</h2>
+<a href="./rp_fiber_calculator.html?banner=RP_Fiber_Calculator" style="float:right; margin-left:3px"><img src="./img/fiberpower_logo.png" alt="RP Fiber Calculator software"></a>
+<p><a href="./rp_fiber_calculator.html?banner=RP_Fiber_Calculator">RP Fiber Calculator</a> &ndash; a convenient tool for calculations on optical fibers:</p>
+<ul>
+<li>Define <a href="./rp_fiber_calculator_docu.html?banner=RP_Fiber_Calculator">index or doping profiles</a> with the graphical user interface.</li>
+<li>Calculate the <a href="./rp_fiber_calculator_gm.html?banner=RP_Fiber_Calculator">guided modes</a> and all their properties.</li>
+</ul>
+<p style="text-align:center;"><a href="./rp_fiber_calculator_gm.html?banner=RP_Fiber_Calculator"><img src="./img/mode_solver.png" alt="mode profiles"></a></p>
+<ul>
+<li>Calculate how much power of a <a href="./rp_fiber_calculator_la.html?banner=RP_Fiber_Calculator">laser beam is launched</a> into the modes.</li>
+<li>Simulate <a href="./rp_fiber_calculator_pr.html?banner=RP_Fiber_Calculator">light propagation</a> within the fiber and <a href="./rp_fiber_calculator_co.html?banner=RP_Fiber_Calculator">coupling of light from one fiber to another</a>.</li>
+</ul>
+<a href="./rp_fiber_calculator.html?banner=RP_Fiber_Calculator"><img src="./img/rp_fiber_calculator_screenshot_small.png" alt="screen shot"></a>
+<p>The basic version of this software is offered <a href="./rp_fiber_calculator_download.html?banner=RP_Fiber_Calculator">for free</a>!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="XJ/ZNOj8qoWCHknITDxJEg==">shownbanner = "RP Fiber Calculator";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Latest Encyclopedia Articles</h2>
+<p>Here are the latest encyclopedia articles:</p>
+<ul>
+<li class="tight"><a href="./variable_reflectivity_mirrors.html">variable reflectivity mirrors</a></li>
+<li class="tight"><a href="./color_centers.html">color centers</a></li>
+<li class="tight"><a href="./excimer_lamps.html">excimer lamps</a></li>
+<li class="tight"><a href="./multimode_beams.html">multimode beams</a></li>
+<li class="tight"><a href="./channel_waveguides.html">channel waveguides</a></li>
+<li class="tight"><a href="./optical_crystals.html">optical crystals</a></li>
+<li class="tight"><a href="./standing_wave_resonators.html">standing-wave resonators</a></li>
+<li class="tight"><a href="./nonlinear_absorption.html">nonlinear absorption</a></li>
+<li class="tight"><a href="./passive_fibers.html">passive fibers</a></li>
+<li class="tight"><a href="./active_fibers.html">active fibers</a></li>
+<li class="tight"><a href="./oem_laser_modules.html">OEM laser modules</a></li>
+<li class="tight"><a href="./industrial_lasers.html">industrial lasers</a></li>
+<li class="tight"><a href="./scientific_lasers.html">scientific lasers</a></li>
+<li class="tight"><a href="./flint_glasses.html">flint glasses</a></li>
+<li class="tight"><a href="./crown_glasses.html">crown glasses</a></li>
+<li class="tight"><a href="./sodium_vapor_lamps.html">sodium vapor lamps</a></li>
+<li class="tight"><a href="./metal_vapor_lamps.html">metal vapor lamps</a></li>
+<li class="tight"><a href="./mercury_vapor_lamps.html">mercury vapor lamps</a></li>
+<li class="tight"><a href="./white_light.html">white light</a></li>
+<li class="tight"><a href="./cie_standard_illuminants.html">CIE standard illuminants</a></li>
+</ul>
+
+<p>The encyclopedia already contains 948 articles.</p>
+<p>See also the regularly appearing articles of the <a href="./spotlight.html?banner=new_articles">The Photonics Spotlight</a> and the <a href="./software_news.html?banner=new_articles">RP Photonics Software News</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="XJ/ZNOj8qoWCHknITDxJEg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/hermite_gaussian_modes.html"
+    },
+    "headline": "Hermite&ndash;Gaussian Modes",
+    "image": "https://www.rp-photonics.com/previews/hermite_gaussian_modes.png",
+    "datePublished": "2008-05-03",
+    "dateModified": "2020-03-14",
+    "description": "Hermite&ndash;Gaussian modes are propagation modes or resonator modes which are described with Hermite&ndash;Gaussian functions.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter H",
+      "item": "https://www.rp-photonics.com/encyclopedia_h.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Hermite&ndash;Gaussian modes",
+      "item": "https://www.rp-photonics.com/hermite_gaussian_modes.html"
+    }]}
+}
+</script>
+</body>
+</html>

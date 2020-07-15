@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-1LjScQZ/mc90hxNO+wdw/g=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>The Photonics Spotlight - Gaussian Apertures in Resonator Models: Not Only for Exotic Lasers, But Also for Gain Guiding</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/spotlight_2017_11_02.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2017-11-02">
+<meta name="description" content="It is shown that gain guiding effects can be taken into account in resonator design software when it supports Gaussian apertures. In some situations, the effects on the resonator modes are substantial.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="photonics, spotlight, news, publications, blog, RSS feed, encyclopedia, laser physics, technology">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Photonics Spotlight - Gaussian Apertures in Resonator Models: Not Only for Exotic Lasers, But Also for Gain Guiding">
+<meta property="og:description" content="It is shown that gain guiding effects can be taken into account in resonator design software when it supports Gaussian apertures. In some situations, the effects on the resonator modes are substantial.">
+<meta property="og:url" content="https://www.rp-photonics.com/spotlight_2017_11_02.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/spotlight_2017_11_02.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="It is shown that gain guiding effects can be taken into account in resonator design software when it supports Gaussian apertures. In some situations, the effects on the resonator modes are substantial.">
+<meta name="twitter:title" content="The Photonics Spotlight - Gaussian Apertures in Resonator Models: Not Only for Exotic Lasers, But Also for Gain Guiding">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/spotlight_2017_11_02.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="1LjScQZ/mc90hxNO+wdw/g==">
+page="spotlight_2017_11_02.html"; cat="P"; shownbanner=""; ref="http://www.rp-photonics.com/spotlight.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="1LjScQZ/mc90hxNO+wdw/g==">shownsponsors="El.En."</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight" class="selected"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="spotlight.html">The Photonics Spotlight</a> &gt; <a href="spotlight_2017_11_02.html">2017-11-02</a></p>
+<h1 class="posting">Gaussian Apertures in Resonator Models: Not Only for Exotic Lasers, But Also for Gain Guiding</h1>
+<div class="posting_details">
+<p>Posted on 2017-11-02 as a part of the <a href="spotlight.html">Photonics Spotlight (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="spotlight_2017_11_02.html" class="url">https://www.rp-photonics.com/spotlight_2017_11_02.html</a></p>
+<p>Author: <a href="https://www.rp-photonics.com/paschotta.html" rel="author">Dr. Rüdiger Paschotta</a>, <a href="https://www.rp-photonics.com/">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: It is shown that gain guiding effects can be taken into account in resonator design software when it supports Gaussian apertures. In some situations, the effects on the resonator modes are substantial.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p>Some programs for the <a href="resonator_design.html" title="the description of the optical components from which an optical resonator is made, and their exact arrangement">resonator design</a> of <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">lasers</a> &ndash; for example, our product <a href="resonator.html"><b>RP Resonator</b></a> &ndash; allow one to include so-called Gaussian apertures.
+What that means is an element where the power transmission exhibits a Gaussian radial dependence, i.e., high transmission on the beam axis and reduced transmission for increasing distances from that axis.</p>
+<p>Obviously, one requires that feature for modeling some lasers where the <a href="output_couplers.html" title="partially transparent laser mirrors, used for extracting output beams from laser resonators">output coupler</a> has such a radial dependence; one can indeed buy such Gaussian mirrors, more generally graded reflectivity mirrors.
+Their probably most important application is to realize lasers with <a href="unstable_resonators.html" title="optical resonators which are dynamically unstable with respect to transverse beam offsets">unstable resonators</a>, which can give improved beam quality despite the quite large mode sizes.</p>
+<p>However, even for quite ordinary lasers it can be useful to have the software which allows for Gaussian apertures.
+Specifically, in <a href="end_pumping.html" title="a technique of optically pumping a laser medium in a direction along the laser beam">end-pumped lasers</a> one often has a laser <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> which is highest on the pump beam axis and gets a small for positions away from that axis.
+That radial variation of the gain actually has some effect on the resonator modes.
+That can now be simulated by including a Gaussian aperture in the resonator model - placed e.g. in the middle of the laser crystal.
+That aperture does not include the laser gain as such, which is not relevant for the mode calculation, but only its radial decay.
+If you like, we effectively combine a spatially constant gain (omitted for the model) with an element having a power loss increasing in the radial direction.</p>
+<h2 class="togglediv">How to Calculate Such Effects?</h2>
+<div>
+<p>Most programs for calculating the modes of laser resonators without <a href="optical_aberrations.html" title="degradations of optical images caused in imaging instruments">optical aberrations</a> are based on an <a href="abcd_matrix.html" title="a 2-by-2 matrix describing the effect of an optical element on a laser beam">ABCD matrix</a> algorithm.
+Here, it is possible to introduce a Gaussian aperture when considering only the second-order radial dependence.
+The resulting ABCD matrix for such an aperture looks similar to that for a <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lens</a>, but one important difference is that one of the matrix elements becomes imaginary.
+As a result, the round-trip ABCD matrix now becomes complex, whereas without such elements it would be purely real.</p>
+</div>
+<h2 class="togglediv">An Example Case</h2>
+<div>
+<p>In the following, I show you an example case, in which you can see a number of interesting physics details.
+The model has been set up with our software <a href="resonator.html"><b>RP Resonator</b></a>, which has been supporting complex ABCD matrices for a long time.
+We consider an end-pumped Nd:YAG laser, where a 5&nbsp;mm long laser crystal is placed between a flat output coupler and a convex highly reflecting mirror with 500&nbsp;mm radius of curvature:</p>
+<figure>
+<img src="img/laser_with_ga1.png" alt="resonator setup">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+The resonator setup, containing a Nd:YAG crystal (gray area) between two laser mirrors. The vertical line at the crystal indicates the assumed location of the Gaussian aperture.
+</figcaption>
+</figure>
+<p>Disregarding the radial dependence of the laser gain, one would calculate the beam radius of 261&nbsp;&mu;m in the laser crystal.
+But now we assume that the laser crystal is end-pumped, where the pump beam has a beam radius of 300&nbsp;&mu;m and the single-pass gain is &approx;0.5&nbsp;dB, consistent with an output coupler transmission of 20&#37;.
+(The magnitude of gain is now relevant, because the more gain we have, the stronger is its transverse decay for a given beam radius.)
+For now, we assume that the local gain is proportional to the pump intensity.</p>
+<p>With those assumptions, we can now plot the calculated beam radius versus position:</p>
+<figure>
+<img src="img/laser_with_ga2.png" alt="beam radius vs. position">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+The beam radius versus longitudinal position in the laser resonator. Due to the Gaussian aperture, the beam radii are not the same for forward and backward direction!
+</figcaption>
+</figure>
+<p>The calculation would of course be somewhat more realistic if we had a distributed Gaussian aperture in our model, but that would not lead to essentially different results.</p>
+<p>You can see that the evolution of beam radius is now different for the forward and backward propagation direction, although normally (i.e., without a Gaussian aperture) there would be no difference.
+That effect can actually be understood quite easily.
+Consider the light corresponding to the fundamental resonator mode, coming from the left side (the output coupler).
+When that light is transmitted through the Gaussian aperture, its beam radius is reduced, because the radial decay of intensity is enhanced by the aperture.
+(In reality, we have a stronger amplification on the beam axis, compared with positions away from that axis.)
+After reflection of the beam at the curved highly reflecting mirror, the beam radius stays relatively large, until it is again reduced at the aperture.
+Only that way it is possible that the beam reproduces itself after one round-trip &ndash; which by definition is required for a resonator mode.</p>
+<p>A natural consequence of that effect is that the wavefronts on the end mirrors do no longer coincide with the mirror surfaces; otherwise, we would have the well-known ordinary behavior where the beam radius does not depend on the propagation direction.
+That also implies that we can no longer assume to have a beam focus on the output coupler mirror; the output beam is somewhat more divergent than it would be without the beam aperturing (<a href="gain_guiding.html" title="guiding of light based on spatially inhomogeneous optical gain">gain guiding</a>) in the laser crystal &ndash; even if the <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a> is perfect.</p>
+<p>By the way, with that gain guiding we can have a functioning laser resonator even if both resonator mirrors are flat.
+If we use a flat highly reflecting mirror in our example case, the beam radii just become somewhat larger:</p>
+<figure>
+<img src="img/laser_with_ga2b.png" alt="beam radius vs. position">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Same as before, except that the right mirror is now flat.
+</figcaption>
+</figure>
+<p>You can call such a resonator an <a href="unstable_resonators.html" title="optical resonators which are dynamically unstable with respect to transverse beam offsets">unstable resonator</a>, which however is somewhat misleading because that concept in fact allows one to produce rather practical resonators with good stability despite large mode radius, as required e.g. for Q-switched lasers with high pulse energy and high <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a>.</p>
+</div>
+<h2 class="togglediv">Consider Gain Saturation</h2>
+<div>
+<p>There was still one dubious assumption in our numerical model, namely that the local gain is proportional to the pump intensity.
+That is actually not true, because it also depends on the laser intensity, which causes substantial <a href="gain_saturation.html" title="the phenomenon that the gain of an amplifier is reduced for high input signal powers">gain saturation</a> if we operate the laser well above threshold (as usual).</p>
+<p>Therefore, I did a simple sanity check: I calculated the Nd excitation from the pump and laser intensity for given beam parameters: pump beam with 5&nbsp;W (i.e., roughly 5 times above threshold) and 300&nbsp;&mu;m beam radius, laser beam with 2.5&nbsp;W / 0.20 (output coupling) &middot; 2 (forward and backward beam) = 25&nbsp;W and 261&nbsp;&mu;m beam radius (as calculated without gain guiding).</p>
+<figure>
+<img src="img/laser_with_ga3.png" alt="transverse dependencies">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Transverse dependencies of pump intensity and Nd excitation.
+</figcaption>
+</figure>
+<p>From the diagram we see that our assumption concerning the gain profile was utterly wrong, at least for those parameters!
+In reality, gain saturation more than flattens the gain profile around the beam axis, and the resulting gain profile, having substantial higher-order components, cannot be treated with the ABCD matrix algorithm.
+Anyway, we can expect the overall effect on the beam radii to be weaker than obtained above.
+On the other hand, if we only reduce the pump beam radius from 300&nbsp;&mu;m to 250&nbsp;&mu;m (not shown here), the mentioned assumption is much more valid, and the obtained excitation profile would at least give you a gain guiding effect which is half as strong as naively estimated.
+So you see that such effects can quite sensitively depend on the pump beam size, and of course on how far above threshold the laser is operated.</p>
+</div>
+<h2 class="togglediv">In Which Situations Are Gain Guiding Effects Strong?</h2>
+<div>
+<p>If you have in the past always disregarded the gain guiding in end-pumped lasers, you may now feel somewhat uneasy.
+The question is now in which situations we should not disregard gain guiding effects.
+The following factors should be considered:</p>
+<ul>
+<li>First we need to estimate the gain profile, since the radial flattening effect by gain saturation can be stronger or weaker, depending on factors like the intracavity power and the involved beam radii.
+To be sure, one should at least do a relatively simple sanity check as I have shown above.</li>
+<li>Obviously, the guiding effect is stronger when using a smaller pump beam radius.
+It can already be quite significant when the pump beam radius of a Gaussian-shaped pump beam equals the laser mode radius (as calculated without the aperture).
+It becomes weaker e.g. for a super-Gaussian pump beam (for which a model based on ABCD matrices cannot be used).</li>
+<li>The higher the laser gain is, the stronger the effect.
+Typically, we have relatively low gains in continuous-wave solid-state lasers &ndash; e.g. a single-pass gain of the order of 0.5&nbsp;dB to 1&nbsp;dB &ndash;, whereas for <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched lasers</a> one often uses a substantially higher gain in order to obtain a high <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a>, a short <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a> and a high <a href="peak_power.html" title="maximum optical power of a pulse">peak power</a>.
+However, that gain will then be strongly saturated during pulse emission.
+Therefore, the guiding effects will be substantially time-dependent.
+For analyzing such a situation, it is no more sufficient just to consider resonator modes.
+One can, for example, use numerical beam propagation, as I have done in an <a href="fiberpower_qs_yag_bp.html">example case</a> for our software <a href="fiberpower.html"><b>RP Fiber Power</b></a>.</li>
+</ul>
+</div>
+<h2 class="togglediv">Some Conclusions</h2>
+<div>
+<p>May be the most important conclusion of the shown analysis is that there is a lot to discover when you numerically simulate certain issues in laser physics.
+By making some common and quite innocent looking assumptions, you may be seriously misled and subsequently surprised in experiments which don't work as you expected.
+With numerical models, one can nicely check such things and then be sure in which parameter regimes a laser works, which effects are relevant for the performance, etc.
+In the end, you might well save time and money, even though it also take some time and money to get suitable numerical simulations done.</p>
+<p>It is also clear that one should have substantial experience in laser physics and not just a piece of software.
+Well, if the software comes with competent <a href="software_support.html">technical support</a>, you can actually learn a lot from that.</p>
+</div>
+<hr>
+<p style="font-size:90%; margin-bottom:10px;">This article is a posting of the <a href="spotlight.html">Photonics Spotlight</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page and cite it, because its location is permanent.
+See also the <a href="encyclopedia.html">RP Photonics Encyclopedia</a>.</p>
+<p>Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="https://www.rp-photonics.com/spotlight.rss">RSS feed</a>.</p>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="spotlight_2017_11_02.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/spotlight_2017_11_02.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2017_11_02.html&text=The+Photonics+Spotlight+-+Gaussian+Apertures+in+Resonator+Models%3A+Not+Only+for+Exotic+Lasers%2C+But+Also+for+Gain+Guiding" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2017_11_02.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2017_11_02.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2017_11_02.html"&gt;<br>Article on The Photonics Spotlight - Gaussian Apertures in Resonator Models: Not Only for Exotic Lasers, But Also for Gain Guiding&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2017_11_02.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/spotlight_2017_11_02.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Paschotta</a>, RP Photonics Consulting GmbH. All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./marketing_contact.html">contact</a>, <a href="./privacy.html">data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Learn About Photonics Marketing!</h2>
+<p>We have published a number of comprehensive articles where we explain how a wide range of tools for the marketing of photonics, optics and laser product works.</p>
+<p>Start reading here:</p>
+<p><a href="./marketing_overview.html?banner=marketing_articles" style="font-size:20px; font-weight:bold;">Marketing of Photonics and Laser Technology Products &ndash; an Overview</a></p>
+<p>You will learn not only about the tools which we offer ourselves &ndash; the <a href="./buyersguide.html?banner=marketing_articles">RP Photonics Buyer's Guide</a>, <a href="./marketing_promotions.html?banner=marketing_articles">special promotions</a> and <a href="./marketing_banners.html?banner=marketing_articles">banners</a> &ndash; but also about many others.</p>
+<p>See also our <a href="./marketing_glossary.html?banner=marketing_articles">glossary of photonics marketing</a>.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="1LjScQZ/mc90hxNO+wdw/g==">shownbanner = "marketing articles";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Sponsors of the Encyclopedia</h2>
+<p>We are grateful to the <a href="./encyclopedia_sponsoring.html?banner=sponsoring">sponsors</a> of our encyclopedia:</p>
+<div style="margin-top:10px; text-align:center;"><a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/nkt_photonics.html"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo"></a></div>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="1LjScQZ/mc90hxNO+wdw/g==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/spotlight_2017_11_02.html"
+    },
+    "headline": "Gaussian Apertures in Resonator Models: Not Only for Exotic Lasers, But Also for Gain Guiding",
+    "image": "https://www.rp-photonics.com/previews/spotlight_2017_11_02.png",
+    "datePublished": "2017-11-02",
+    "description": "It is shown that gain guiding effects can be taken into account in resonator design software when it supports Gaussian apertures. In some situations, the effects on the resonator modes are substantial.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "The Photonics Spotlight",
+      "item": "https://www.rp-photonics.com/spotlight.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "2017-11-02",
+      "item": "https://www.rp-photonics.com/spotlight_2017_11_02.html"
+    }]}
+}
+</script>
+</body>
+</html>

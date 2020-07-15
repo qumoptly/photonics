@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-SfHyapegpqURUiE+hH1CFg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Pockels cells, electro-optic modulator, Q switch, BBO, KDP, KTP, LiNbO3, LiTaO3, ADP, half-wave voltage, intensity modulator</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/pockels_cells.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-04-21">
+<meta name="description" content="Pockels cells are electro-optic devices, used for building modulators. They can be used for Q switching of lasers, for regenerate if amplifiers and in various other devices.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="Pockels cells, electro-optic modulator, Q switch, BBO, KDP, KTP, , ADP, half-wave voltage, intensity modulator">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pockels Cells">
+<meta property="og:description" content="Pockels cells are electro-optic devices, used for building modulators. They can be used for Q switching of lasers, for regenerate if amplifiers and in various other devices.">
+<meta property="og:url" content="https://www.rp-photonics.com/pockels_cells.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/pockels_cells.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Pockels cells are electro-optic devices, used for building modulators. They can be used for Q switching of lasers, for regenerate if amplifiers and in various other devices.">
+<meta name="twitter:title" content="Pockels Cells">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/pockels_cells.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="SfHyapegpqURUiE+hH1CFg==">
+page="pockels_cells.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="SfHyapegpqURUiE+hH1CFg==">shownsponsors="EKSMA OPTICS"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_pockels_cells.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_p.html">letter P</a> &gt; <a href="pockels_cells.html">Pockels cells</a></p>
+<h1>Pockels Cells</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_pockels_cells.html?s=vbox">34 suppliers for Pockels cells</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://gandh.com/product-categories/pockels-cells/" data-supplier="G&H" data-location="product-enc" data-keyword="Pockels cells" rel="nofollow" class="bg externallink"><img src="./bg/logos/g_h.png" alt="G&H" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.eksmaoptics.com/pockels-cells-and-drivers/pockels-cells/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="Pockels cells" rel="nofollow" class="bg externallink"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.artifex-engineering.com/optics/pockels-cells/" data-supplier="Artifex Engineering" data-location="product-enc" data-keyword="Pockels cells" rel="nofollow" class="bg externallink"><img src="./bg/logos/artifex_engineering.png" alt="Artifex Engineering" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_pockels_cells.html?s=vbox">List of suppliers for<br>Pockels cells</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="advicebox">
+<p>Ask <a href="index.html">RP Photonics</a> for simulations e.g. on how a Pockels cell will work in your regenerative amplifier concerning pulse switching, dispersive and nonlinear effects, etc.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: electro-optic devices, used for building modulators</p>
+<p>Alternative term: electro-optic modulators</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Pockelszelle</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a></p>
+<p><a href="encyclopedia_cite.html?article=Pockels%20cells">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>A Pockels cell is a device consisting of an <a href="electro_optic_effect.html" title="the phenomenon that the refractive index of a material can be modified with an electric field">electro-optic</a> crystal (with some electrodes attached to it) through which a light beam can propagate.
+The <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">phase</a> delay in the crystal (&rarr;&nbsp;<a href="pockels_effect.html" title="the phenomenon that the refractive index of a medium exhibits a modification which is proportional to the strength of an applied electric field (<em>linear electro-optic effect</em>)"><em>Pockels effect</em></a>) can be modulated by applying a variable electric voltage.
+The Pockels cell thus acts as a <em>voltage-controlled <a href="waveplates.html" title="transparent plates with a defined amount of birefringence, used for modifying the polarization of light">waveplate</a></em>.
+Pockels cells are the basic components of <a href="electro_optic_modulators.html" title="optical modulators based on the electro-optic effect">electro-optic modulators</a>, used e.g. for <a href="q_switching.html" title="a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q switching</a> lasers.</p>
+<h2 class="togglediv">Geometries and Materials</h2>
+<div>
+<p>Pockels cells can have two different geometries concerning the direction of the applied electric field:</p>
+<ul>
+<li><em>Longitudinal devices</em> have the electric field in the direction of the light beam, which passes through holes in the electrodes.
+Large <a href="optical_apertures.html" title="structures which limit the propagation of light">apertures</a> can easily be realized, as the required drive voltage is basically independent of the aperture.
+The electrodes can be metallic rings (Figure&nbsp;1, left) or transparent layers on the end faces (right) with metallic contacts.</li>
+</ul>
+<figure>
+<img src="img/pockels_cell_l.png" alt="Pockels cells with longitudinal electric field">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Pockels cells with longitudinal electric field.
+The electrodes are either rings on the end faces (left side) or on the outer face (right side).
+</figcaption>
+</figure>
+<ul>
+<li><em>Transverse devices</em> have the electric field perpendicular to the light beam.
+The field is applied through electrodes at the sides of the crystal.
+For small apertures, they can have lower switching voltages.</li>
+</ul>
+<figure>
+<img src="img/pockels_cells_t.png" alt="Pockels cells with transverse electric field">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Pockels cells with transverse electric field. On the left is a bulk modulator and on the right a waveguide modulator.
+</figcaption>
+</figure>
+<p>Common <a href="nonlinear_crystal_materials.html" title="crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal materials</a> for Pockels cells are potassium di-deuterium phosphate (KD<sup>*</sup>P = DKDP), potassium titanyl phosphate (KTP), &beta;-barium borate (BBO) (the latter for higher average powers and/or higher switching frequencies), lithium niobate (LiNbO<sub>3</sub>), lithium tantalate (LiTaO<sub>3</sub>), and ammonium dihydrogen phosphate (NH<sub>4</sub>H<sub>2</sub>PO<sub>4</sub>, ADP).</p>
+</div>
+<h2 class="togglediv">Half-wave Voltage</h2>
+<div>
+<figure class="right" style="width:250px;">
+<img src="img/pockels_cell.jpg" alt="Pockels cell">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+A Pockels cell based on KD<sup>*</sup>P, which can be used for <a href="q_switching.html" title="a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q switching</a> of <a href="solid_state_lasers.html" title="lasers based on solid-state gain media (usually ion-doped crystals or glasses)">solid-state lasers</a>.
+The photograph has been kindly provided by <a href="bg/profiles/ekspla.html">EKSPLA</a>.
+</figcaption>
+</figure>
+<p>An important property of a Pockels cell is the half-wave voltage <span class="eqn_il"><i>U</i><sub><span class="greek_small">&pi;</span></sub></span> (also called <span class="eqn_il"><i>U</i><sub><span class="greek_small">&lambda;</span>/2</sub></span> or <span class="eqn_il"><i>V</i><sub><span class="greek_small">&lambda;</span>/2</sub></span>).
+This is the voltage required for inducing a <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">phase</a> change of <span class="eqn_il"><span class="greek">&pi;</span></span>, equivalent to a half an optical wavelength.
+In an amplitude modulator, the applied voltage has to be changed by this value in order to go from the operation point with minimum transmission to that with maximum transmission.</p>
+<p>The half-wave voltage of a Pockels cell with <em>transverse</em> electric field depends on the crystal material, the electrode separation, and the length of the region where the electric field is applied.
+For larger open apertures, the electrode separation needs to be larger, and hence also the voltages.</p>
+<p>For a Pockels cell with <em>longitudinal</em> electric field, the crystal length does not matter, since e.g. a shorter length also increases the electric field strength for a given voltage.
+Larger apertures are possible without increasing the half-wave voltage.</p>
+<p>Typical Pockels cell have half-wave voltages of hundreds or even thousands of volts, so that a high-voltage amplifier is required for large modulation depths.
+Relatively small half-wave voltages are possible for highly nonlinear crystal materials such as LiNbO<sub>3</sub>, and for <a href="integrated_optics.html" title="the technology dealing with the construction of photonic integrated circuits">integrated optical</a> modulators with a small electrode separation, but such devices have a limited power handling capability.</p>
+</div>
+<h2 class="togglediv">Example for Intensity Modulation with a Pockels Cell</h2>
+<div>
+<p>As an example, consider a simple <a href="intensity_modulators.html" title="devices which can be used to modulate the intensity (power) of a light beam">intensity modulator</a> based on a Pockels cell, where the input beam has its linear polarization at an angle of 45&deg; against the optical axis of the nonlinear crystal.
+We assume that the crystal has no birefringence without an applied electric field, and that it has a given half-wave voltage <span class="eqn_il"><i>U</i><sub><span class="greek_small">&pi;</span></sub></span>.
+Behind the crystal, we have a <a href="polarizers.html" title="optical filters where the light transmission depends strongly on the direction of polarization">polarizer</a> which is aligned such that we obtain 100&thinsp;&#37; transmission (disregarding some parasitic losses) without an applied voltage.
+In that situation, we can consider the transmitted field to be a superposition of two in-phase field components of equal strength.
+With an applied electric field, those field components acquire a phase difference of <span class="eqn_il"><span class="greek">&Delta;</span><span class="greek">&phi;</span>&thinsp;=&thinsp;<span class="greek">&pi;</span>&thinsp;<i>U</i>&thinsp;/&thinsp;<i>U</i><sub><span class="greek_small">&pi;</span></sub></span>.
+The total transmitted amplitude is then proportional to <span class="eqn_il">0.5&thinsp;&middot;&thinsp;(1&thinsp;+&thinsp;exp&thinsp;<i>i<span class="greek">&Delta;</span><span class="greek">&phi;</span></i>)</span>, and we obtain the following result for the power transmission:</p>
+<div class="eqn"><img src="eqn/t_pc.gif" width="264" height="50" alt="transmission of intensity modulator"></div>
+<p>If the polarizer is rotated such that we get zero transmission for zero voltage, the formula contains sin instead of cos.</p>
+<p>The calculation demonstrates that in order to switch the transmission of an identity modulator between zero and 100&#37;, one needs to modify the applied voltage just by one half-wave voltage.
+Typically, one would vary the voltage between zero and the half-wave voltage, although in principle one may also vary it between <span class="eqn_il">&minus;<i>U</i><sub><span class="greek_small">&pi;</span></sub>&thinsp;/&thinsp;2</span> and <span class="eqn_il">+<i>U</i><sub><span class="greek_small">&pi;</span></sub>&thinsp;/&thinsp;2</span>.</p>
+</div>
+<h2 class="togglediv">Modulation Bandwidth</h2>
+<div>
+<p>The possible modulation bandwidth with a Pockels cell can be very high &ndash; many megahertz, possibly even multiple gigahertz.
+It is essentially limited only by the speed with which the electric field strength in the electro-optic crystal can be modified.
+As such, it is essentially limited by the used Pockels cell driver electronics, and possibly by the cable connection between the driver and the cell.
+However, Pockels cells with a high electrical capacitance make it more difficult for the driver to achieve a high bandwidth.
+Therefore, it is beneficial to use crystal materials with a low dielectric susceptibility <span class="eqn_il"><span class="greek">&epsilon;</span><sub>r</sub></span>.
+Besides, the chosen electrode geometry can play a role, and that may also be influenced e.g. by requirements concerning the open aperture.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_pockels_cells.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 34 suppliers for Pockels cells. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.eksmaoptics.com/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="Pockels cells" rel="nofollow" class="bg externallink" title="Visit the website of EKSMA OPTICS"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a><a href="https://www.eksmaoptics.com/pockels-cells-and-drivers/pockels-cells/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="Pockels cells" rel="nofollow" class="bg externallink" title="Visit the website of EKSMA OPTICS"><img src="./bg/products/eksma_optics/pockels_cells.jpg" alt="Pockels cells" class="product"></a><h3><a href="./bg/profiles/eksma_optics.html" title="See the profile of EKSMA OPTICS">EKSMA OPTICS</a></h3><p>We produce <a href="https://www.eksmaoptics.com/pockels-cells-and-drivers/pockels-cells/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="Pockels cells" rel="nofollow" class="externallink bg">KTP, KD<sup>*</sup>P and BBO Pockels cells</a> for applications like Q-switching of lasers, pulse picking, laser cavity dumping and coupling laser pulses into and from regenerative amplifiers. Our Pockels cells can be supplied with <a href="https://www.eksmaoptics.com/pockels-cells-and-drivers/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="Pockels cells" rel="nofollow" class="externallink bg">mounting stages, drivers, power supplies</a> and electronics for pulse picking.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.artifex-engineering.com/" data-supplier="Artifex Engineering" data-location="product-enc" data-keyword="Pockels cells" rel="nofollow" class="bg externallink" title="Visit the website of Artifex Engineering"><img src="./bg/logos/artifex_engineering.png" alt="Artifex Engineering" class="supplierlogo"></a><a href="https://www.artifex-engineering.com/optics/pockels-cells/" data-supplier="Artifex Engineering" data-location="product-enc" data-keyword="Pockels cells" rel="nofollow" class="bg externallink" title="Visit the website of Artifex Engineering"><img src="./bg/products/artifex_engineering/pockels_cells.jpg" alt="Pockels cells" class="product"></a><h3><a href="./bg/profiles/artifex_engineering.html" title="See the profile of Artifex Engineering">Artifex Engineering</a></h3><p>Artifex Engineering offers <a href="https://www.artifex-engineering.com/optics/pockels-cells/" data-supplier="Artifex Engineering" data-location="product-enc" data-keyword="Pockels cells" rel="nofollow" class="externallink bg">customised Pockels cells</a>, available as DKDP (KD*P), MgO:LiNbO₃ and BBO. Our Pockels cells feature low insertion loss, high damage threshold. These are cost effective units at OEM prices. We also offer a range of standard Pockels cells with an aperture of 6&nbsp;mm to 12&nbsp;mm diameter. Visit our product page for more information. We look forward to your inquiry.</p></aside>
+<aside class="bg_vendoritem"><a href="https://gandh.com/" data-supplier="G&H" data-location="product-enc" data-keyword="Pockels cells" rel="nofollow" class="bg externallink" title="Visit the website of G&amp;H"><img src="./bg/logos/g_h.png" alt="G&H" class="supplierlogo"></a><a href="https://gandh.com/product-categories/pockels-cells/" data-supplier="G&H" data-location="product-enc" data-keyword="Pockels cells" rel="nofollow" class="bg externallink" title="Visit the website of G&amp;H"><img src="./bg/products/g_h/pockels_cells.jpg" alt="Pockels cells" class="product"></a><h3><a href="./bg/profiles/g_h.html" title="See the profile of G&H">G&H</a></h3><p>G&amp;H are a leading crystal grower with decades of electro-optic device design experience. We manufacture a comprehensive range of <a href="https://gandh.com/product-categories/pockels-cells/" data-supplier="G&H" data-location="product-enc" data-keyword="Pockels cells" rel="nofollow" class="externallink bg">Pockels cells</a> for applications in wavelengths from the UV to the IR. Factors such as average power, repetition rate and the design configuration determine the recommended type of device.</p><p>Utilizing proprietary crystal growth, fabrication, and polishing techniques, we manufacture both longitudinal and transverse electrode configuration Pockels cells in beta barium oxide (BBO), cadmium telluride (CdTe), potassium dihydrogen phosphate (KDP) and potassium dideuterium phosphate (KD*P).</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="pockels_cells.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="pockels_effect.html" title="the phenomenon that the refractive index of a medium exhibits a modification which is proportional to the strength of an applied electric field (<em>linear electro-optic effect</em>)">Pockels effect</a>, <a href="electro_optic_modulators.html" title="optical modulators based on the electro-optic effect">electro-optic modulators</a>, <a href="phase_modulators.html" title="devices for manipulating the phase of a laser beam">phase modulators</a>, <a href="intensity_modulators.html" title="devices which can be used to modulate the intensity (power) of a light beam">intensity modulators</a>, <a href="nonlinear_crystal_materials.html" title="crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal materials</a>, <a href="q_switching.html" title="a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q switching</a><br>and other articles in the category <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/pockels_cells.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fpockels_cells.html&text=RP+Photonics+Encyclopedia+-+Pockels+cells%2C+electro-optic+modulator%2C+Q+switch%2C+BBO%2C+KDP%2C+KTP%2C+LiNbO3%2C+LiTaO3%2C+ADP%2C+half-wave+voltage%2C+intensity+modulator" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fpockels_cells.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fpockels_cells.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/pockels_cells.html"&gt;<br>Article on Pockels Cells&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/pockels_cells.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/pockels_cells.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/pockels_cells.html<br>article on 'Pockels Cells' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Corona Virus Crisis</h2>
+<p>It is interesting and instructive to realize certain analogies between the spread of an epidemic and elementary processes in lasers. In particular, one can <b>learn about the power of expnential growth</b> and the <b>threshold behavior</b>.</p>
+<p style="font-size:130%; margin:20px 0;">Read the article: <br> "<a href="./spotlight_2020_03_16.html?banner=Corona">Laser Physics Helps to Understand the Corona Virus Crisis</a>"!</p>
+<p>Comments are welcome &ndash; see the input form below the article.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="SfHyapegpqURUiE+hH1CFg==">shownbanner = "Corona";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Shortages of rare earth materials &ndash; a problem for photonics?</h2>
+<p>Photonics heavily depends on the supply of rare earth materials in various areas &ndash; think of <a href="./laser_crystals.html?banner=rare_earth_shortage">laser crystals</a>, <a href="./rare_earth_doped_fibers.html?banner=rare_earth_shortage">active fibers</a> and <a href="./light_emitting_diodes.html?banner=rare_earth_shortage">LEDs</a>, for example.
+It is hard to see how such things could be done without rare earth materials.
+And those have recently been subject to enormous price increases and were even involved in a trade war.</p>
+<p>Is that now a reason for serious concerns in the area of photonics?
+Do we need to undertake serious recycling efforts?
+Our <a href="./spotlight_2014_06_27.html?banner=rare_earth_shortage">Photonics Spotlight article</a> analyzes the situation.</p>
+<p>Receiving the <a href="./spotlight.html?banner=rare_earth_shortage">Photonics Spotlight</a> via our <a href="./newsletters.html?banner=rare_earth_shortage">newsletter</a> might be a good idea &hellip;</p>
+
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="SfHyapegpqURUiE+hH1CFg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/pockels_cells.html"
+    },
+    "headline": "Pockels Cells",
+    "image": "https://www.rp-photonics.com/previews/pockels_cells.png",
+    "datePublished": "2008-05-18",
+    "dateModified": "2020-04-21",
+    "description": "Pockels cells are electro-optic devices, used for building modulators. They can be used for Q switching of lasers, for regenerate if amplifiers and in various other devices.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter P",
+      "item": "https://www.rp-photonics.com/encyclopedia_p.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Pockels cells",
+      "item": "https://www.rp-photonics.com/pockels_cells.html"
+    }]}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-FXmR/iGUdpqL0/cq7N5p+w=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - solitons, solitary pulse, soliton self-frequency shift</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/solitons.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-06-25">
+<meta name="description" content="Solitons are pulses with a certain balance of nonlinear and dispersive effects. They can be obtained in optical fibers, for example.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="solitons, solitary pulse, soliton self-frequency shift">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Solitons">
+<meta property="og:description" content="Solitons are pulses with a certain balance of nonlinear and dispersive effects. They can be obtained in optical fibers, for example.">
+<meta property="og:url" content="https://www.rp-photonics.com/solitons.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/solitons.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Solitons are pulses with a certain balance of nonlinear and dispersive effects. They can be obtained in optical fibers, for example.">
+<meta name="twitter:title" content="Solitons">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/solitons.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="FXmR/iGUdpqL0/cq7N5p+w==">
+page="solitons.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="FXmR/iGUdpqL0/cq7N5p+w==">shownsponsors="EKSMA OPTICS"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_s.html">letter S</a> &gt; <a href="solitons.html">solitons</a></p>
+<h1>Solitons</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="boxadvertisement">
+<h2>Simulation of Soliton Pulse Propagation</h2>
+<p>The software <a href="fiberpower.html"><b>RP Fiber Power</b></a> can be used for analyzing soliton effects in pulse propagation; see the demo cases for <a href="fiberpower_ho_solitons.html"><b>higher-order solitons</b></a> and the <a href="fiberpower_solitonshift.html"><b>soliton self-frequency shift</b></a>.</p>
+<figure>
+<a href="fiberpower_ho_solitons.html"><img src="img/fiberpower_ho_solitons1s.png" alt="tapered fiber"></a>
+</figure>
+<p>One could also include Raman scattering, investigate soliton effects in mode-locked fiber lasers, etc.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: pulses with a certain balance of nonlinear and dispersive effects</p>
+<p>More general term: light <a href="pulses.html" title="flashes of light">pulses</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Solitonen</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#nonlinear_optics" title="other articles on nonlinear optics">nonlinear optics</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<p><a href="encyclopedia_cite.html?article=solitons">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>In general, the temporal and spectral shape of a short optical <a href="pulses.html" title="flashes of light">pulse</a> changes during propagation in a transparent medium due to <a href="self_phase_modulation.html" title="nonlinear phase modulation of a beam, caused by its own intensity via the Kerr effect">self-phase modulation</a> (resulting from the <a href="kerr_effect.html" title="a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization">Kerr effect</a>) and <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>.
+Under certain circumstances, however, the effects of Kerr nonlinearity and dispersion can exactly cancel each other, apart from a constant <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">phase</a> delay per unit propagation distance, so that the temporal and spectral shape of the pulses is preserved even over long propagation distances [1,&thinsp;3].
+This kind of phenomenon was first observed in the context of water waves [1], but later also for light propagating in optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a> [4].</p>
+<p>The conditions for (fundamental) soliton pulse propagation in a lossless medium are:</p>
+<ul>
+<li>For a positive value of the nonlinear coefficient <span class="eqn_il"><i>n</i><sub>2</sub></span> (as occur for most media), the <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> needs to be anomalous.</li>
+<li>The temporal shape of the pulse has to be that of an <a href="chirp.html" title="time dependence of the instantaneous frequency of an optical pulse">unchirped</a> <a href="sech2_shaped_pulses.html" title="pulses with a temporal intensity profile which has the shape of a sech<sup>2</sup> function">sech<sup>2</sup> pulse</a> (assuming that the group delay dispersion is constant, i.e. there is no higher-order dispersion):</li>
+</ul>
+<div class="eqn"><img src="eqn/soliton_p.gif" width="248" height="49" alt="soliton pulse shape"></div>
+<ul>
+<li>The pulse energy <span class="eqn_il"><i>E</i><sub>p</sub></span> and soliton pulse duration <span class="eqn_il"><span class="greek">&tau;</span></span> have to meet the following condition:</li>
+</ul>
+<div class="eqn"><img src="eqn/soliton_e.gif" width="74" height="50" alt="soliton energy"></div>
+<p>Here, the full-width at half-maximum (FWHM) <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a> is &asymp;&thinsp;<span class="eqn_il">1.7627&thinsp;&times;&thinsp;<span class="greek">&tau;</span></span>, <span class="eqn_il"><span class="greek">&gamma;</span></span> is the <a href="self_phase_modulation.html" title="nonlinear phase modulation of a beam, caused by its own intensity via the Kerr effect">SPM</a> coefficient in rad&thinsp;/&thinsp;(W&thinsp;m), and <span class="eqn_il"><span class="greek">&beta;</span><sub>2</sub></span> is the <a href="group_velocity_dispersion.html" title="the frequency dependence of the group velocity in a medium, or (quantitatively) the derivative of the inverse group velocity with respect to angular frequency">group velocity dispersion</a> defined as a derivative with respect to angular frequency, i.e. the <a href="group_delay_dispersion.html" title="the frequency dependency of the group delay, or (quantitatively) the corresponding derivative with respect to angular frequency">group delay dispersion</a> per unit length (in s<sup>2</sup>/m).</p>
+<form id="calculate_solitons" class="calculatorform">
+<h2>Calculator for Soliton Parameters</h2>
+<table>
+<tr>
+<td>Group velocity dispersion:</td><td></td><td></td>
+<td><input name="GVD" value="" class="cf_calculate_solitons"></td>
+<td></td><td>(1 fs<sup>2</sup> = 1e-30 s<sup>2</sup>)</td>
+</tr>
+<tr>
+<td>Nonlinearity:</td><td></td><td></td>
+<td><input name="gamma" value="" class="cf_calculate_solitons"></td>
+<td></td><td>(phase shift per watt of peak power and meter of fiber)</td>
+</tr>
+<tr>
+<td>Pulse duration:</td><td></td><td></td>
+<td><input name="tau_p" value="" class="cf_calculate_solitons"></td>
+<td><span class="calcbutton" id="calc_tau_p">calc</span></td><td></td>
+</tr>
+<tr>
+<td>Pulse energy:</td><td></td><td></td>
+<td><input name="E_p" value="" class="cf_calculate_solitons"></td>
+<td><span class="calcbutton" id="calc_E_p">calc</span></td><td></td>
+</tr>
+<tr>
+<td>Peak power:</td><td></td><td></td>
+<td><input name="P_p" value="" class="cf_calculate_solitons" readonly></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Nonlinear phase shift:</td><td></td><td></td>
+<td><input name="phi_nl" value="" class="cf_calculate_solitons" readonly></td>
+<td></td><td></td>
+</tr>
+</table>
+<p class="comment">Enter input values with units, where appropriate. After you have modified some values, click a "calc" button to recalculate the field left of it.</p>
+<p class="comment"> For fibers, specify the dispersion and nonlinearity for one meter of fiber, for example.</p>
+<noscript>
+<p style="color:red">Attention: The buttons do not work, as Javascript is turned off in your browser!</p>
+</noscript>
+</form>
+<script type="text/javascript" src="calcform.js"></script>
+<script type="text/javascript" nonce="FXmR/iGUdpqL0/cq7N5p+w==">
+funits = new Array();
+funits["GVD"] = "s^2/m";
+funits["gamma"] = "rad/Wm";
+funits["tau_p"] = "s";
+function calc_tau_p() {
+  $("input[name=tau_p]").val("???");
+  GetFieldValues("tau_p","calculate_solitons");
+  tau_p = 1.7627*2*Math.abs(GVD)/(gamma*E_p);
+  $("input[name=tau_p]").val(format_u(tau_p, "s"));
+  calc_P_p();
+  calc_phi_nl();
+ }
+funits["E_p"] = "J";
+function calc_E_p() {
+  $("input[name=E_p]").val("???");
+  GetFieldValues("E_p","calculate_solitons");
+  E_p = 2 * Math.abs(GVD)/(gamma*(tau_p/1.7627));
+  $("input[name=E_p]").val(format_u(E_p, "J"));
+  calc_P_p();
+  calc_phi_nl();
+ }
+funits["P_p"] = "W";
+function calc_P_p() {
+  $("input[name=P_p]").val("???");
+  GetFieldValues("P_p","calculate_solitons");
+  P_p = 0.88*E_p/tau_p;
+  $("input[name=P_p]").val(format_u(P_p, "W"));
+  calc_phi_nl();
+ }
+funits["phi_nl"] = "rad";
+function calc_phi_nl() {
+  $("input[name=phi_nl]").val("???");
+  GetFieldValues("phi_nl","calculate_solitons");
+  phi_nl = gamma*0.88*E_p/tau_p;
+  $("input[name=phi_nl]").val(format_u(phi_nl, "rad"));
+ }
+$("input[name=GVD]").val("-10000 fs^2/m");
+$("input[name=gamma]").val("5e-3 rad/Wm");
+$("input[name=tau_p]").val("1 ps");
+calc_E_p();
+calc_P_p();
+calc_phi_nl();
+$(document).ready(function() {
+  $("span#calc_tau_p").click(function() { calc_tau_p() })
+  $("span#calc_E_p").click(function() { calc_E_p() })
+});
+</script>
+<p>Under the mentioned conditions, the pulse can propagate as a (fundamental) soliton (or solitary pulse) with constant temporal and spectral shape.
+It only acquires a phase shift which is just half the nonlinear phase shift which the peak of the pulse would experience if only the nonlinearity alone were to act on it.
+This soliton phase shift is constant over time or frequency, i.e., it does not lead to a <a href="chirp.html" title="time dependence of the instantaneous frequency of an optical pulse">chirp</a> or to spectral broadening.
+In most situations, it is therefore not relevant.</p>
+<figure>
+<img src="img/soliton.png" alt="soliton pulse shape and phase">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Blue curve: time-dependent nonlinear phase shift alone (without dispersion), which is proportional to the <a href="optical_intensity.html" title="optical power per unit area">optical intensity</a>.
+Red curve: overall phase shift, resulting from the combined action of nonlinearity and dispersion on a soliton.
+The constant phase shift does not modify the temporal or spectral shape of the pulse.
+</figcaption>
+</figure>
+<h2 class="togglediv">Example: Solitons in Standard Telecom Fiber</h2>
+<div>
+<p>As a quantitative example, solitons in standard <a href="telecom_fibers.html" title="optical fibers for use in optical fiber communications">telecom fibers</a> (<a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode fibers</a> for the 1.5-&mu;m spectral region) can be considered.
+Assuming the common SMF-28e fiber of Corning, the <a href="effective_mode_area.html" title="a quantitative measure of the area which a waveguide or fiber mode effectively covers in the transverse dimensions">effective mode area</a> is 85&nbsp;&mu;m<sup>2</sup> at 1550&nbsp;nm wavelength, resulting in a nonlinear coefficient of 1.43&nbsp;mrad/(W&thinsp;m).
+(The <a href="nonlinear_index.html" title="a parameter for quantifying the Kerr nonlinearity of a medium">nonlinear index</a> is assumed to be 3&thinsp;&times;&thinsp;10<sup>&minus;16</sup>&thinsp;cm<sup>2</sup>/W.)
+The <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> at 1550&nbsp;nm is +16.2&nbsp;ps/(nm&thinsp;km), corresponding to &minus;20&thinsp;660&nbsp;fs<sup>2</sup>/m.
+Using the above equation, we find that 1-ps solitons have to have a <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a> of 51&nbsp;pJ, corresponding to a <a href="peak_power.html" title="maximum optical power of a pulse">peak power</a> of 45&nbsp;W.</p>
+<p>For 10 times shorter solitons with a 100-fs duration, the pulse energy rises 10-fold to 510&nbsp;pJ, whereas the peak power becomes 100 times larger (4.5&nbsp;kW).</p>
+</div>
+<h2 class="togglediv">Stability of Solitons</h2>
+<div>
+<p>The most remarkable fact is actually not the possibility of the mentioned balance of dispersion and nonlinearity, but rather that soliton solutions of the nonlinear wave equation are very stable: even for substantial deviations of the initial pulse from the exact soliton solution, the pulse automatically &ldquo;finds&rdquo; the correct soliton shape while shedding some of its energy into a so-called <a href="dispersive_wave.html" title="a linearly propagating wave which is split off by a soliton wave under certain conditions">dispersive wave</a>, a weak background which has too little intensity to experience significant nonlinear effects and temporally broadens as a result of dispersion.
+Solitons are also very stable against changes of the properties of the medium, provided that these changes occur over distances which are long compared with the so-called <a href="soliton_period.html" title="the distance over which higher-order solitons reproduce their temporal and spectral shape"><em>soliton period</em></a> (defined as the propagation distance in which the constant phase delay is <span class="eqn_il"><span class="greek">&pi;</span></span>/4).
+This means that solitons can adiabatically adapt their shape to slowly varying parameters of the medium.
+Also, solitons can accommodate to some amount of higher-order dispersion; they then automatically adjust their shape to achieve the mentioned balance under the given conditions.</p>
+</div>
+<h2 class="togglediv">Higher-order Solitons</h2>
+<div>
+<p>If the pulse energy is the square of an integer number times the fundamental soliton energy, the pulse is a so-called <a href="higher_order_solitons.html" title="optical pulses in a nonlinear and dispersive medium which exhibit periodic oscillations of their temporal and spectral shape"><em>higher-order soliton</em></a>.
+Such pulses do not have a preserved shape, but their shape varies periodically, with the period being the above-mentioned soliton period.</p>
+<figure>
+<img src="img/soliton_spectrogram.gif" alt="animated spectrogram showing higher-order soliton evolution">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+This animated spectrogram shows how a third-order soliton evolves in a fiber. Solitons of higher orders exhibit even more complicated behavior. The image has been generated with the <a href="propulse.html">RP Propulse</a> software.
+</figcaption>
+</figure>
+<figure>
+<img src="img/soliton_params.png" alt="soliton parameters">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Relation between soliton pulse energy and pulse duration in a <a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode fiber</a>.
+The solid line applies to fundamental solitons and the dotted lines to <a href="higher_order_solitons.html" title="optical pulses in a nonlinear and dispersive medium which exhibit periodic oscillations of their temporal and spectral shape">higher-order solitons</a> (orders 2, 3, 4), where the duration is taken as the shortest duration in the oscillation cycle.
+</figcaption>
+</figure>
+<p>Higher-order solitons can break up into fundamental solitons under the influence of higher-order dispersion and other disturbing effects.
+They are by far not as stable as fundamental solitons.</p>
+</div>
+<h2 class="togglediv">Importance of Solitons</h2>
+<div>
+<p>Fundamental soliton pulses are technically very important, in particular for long-distance <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a> and in <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked lasers</a> (&rarr;&nbsp;<a href="soliton_mode_locking.html" title="a mechanism for laser mode locking based on soliton pulses"><em>soliton mode locking</em></a>).
+In the latter situation, soliton-like pulses can be formed when the typically lumped pieces of dispersion and nonlinearity in the laser cavity are sufficiently weak.
+Solitons are also applied in various techniques for <a href="pulse_compression.html" title="linear or nonlinear techniques for reducing the durations of optical pulses">pulse compression</a> using optical fibers; examples are <a href="adiabatic_soliton_compression.html" title="a pulse compression technique based on the adaptation of solitons to slowly varying propagation parameters">adiabatic soliton compression</a> and higher-order soliton compression.</p>
+</div>
+<h2 class="togglediv">Soliton Self-Frequency Shift</h2>
+<div>
+<p>When propagating in an optical fiber, soliton pulses are subject not only to the Kerr nonlinearity, but also to stimulated <a href="raman_scattering.html" title="a nonlinear scattering process involving optical phonons">Raman scattering</a>.
+For very short solitons (with durations of e.g. &lt;100&nbsp;fs), the <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a> becomes so broad that the longer-wavelength tail can experience Raman amplification at the expense of power in the shorter-wavelength tail.
+This causes an overall spectral shift of the soliton towards longer wavelengths, i.e., a <em>soliton self-frequency shift</em> [5,&thinsp;6,&thinsp;12,&thinsp;16,&thinsp;17].
+The strength of this effect depends strongly on the pulse duration, since shorter solitons exhibit a higher <a href="peak_power.html" title="maximum optical power of a pulse">peak power</a> and a broader optical spectrum.
+The latter is important because the Raman gain is weak for small frequency offsets.
+During propagation, the rate of the frequency shift often slows down, because the pulse energy is reduced and the pulse duration increased [17].</p>
+<p>The soliton self-frequency shift can be exploited for reaching spectral regions which are otherwise difficult to access.
+By adjusting the pulse energy in the fiber, it is possible to tune the output wavelength in a large range [10,&thinsp;11,&thinsp;13&ndash;15].</p>
+</div>
+<h2 class="togglediv">Simulation of Soliton Propagation</h2>
+<div>
+<p>Soliton propagation, possibly with additional disturbing effects, can be investigated with numerical simulations (&rarr;&nbsp;<a href="pulse_propagation_modeling.html" title="working with physical models describing the propagation of ultrashort pulses e.g. in lasers or optical fibers"><em>pulse propagation modeling</em></a>).
+There are also some analytical tools, e.g. <em>soliton perturbation theory</em>, involving dynamic equations for small deviations of pulse parameters from those of the ideal soliton.</p>
+</div>
+<h2 class="togglediv">Dissipative Solitons</h2>
+<div>
+<p>The solitons as discussed above arise in a situation where the pulse does not exchange energy with the fiber.
+These (ordinary) solitons are therefore called <em>conservative solitons</em>.
+A much wider range of phenomena is possible when dissipative effects also come into play.
+For example, so-called <em>dissipative solitons</em> may arise even for normal <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> in combination with a positive <a href="nonlinear_index.html" title="a parameter for quantifying the Kerr nonlinearity of a medium">nonlinear index</a>, if there is in addition a spectral bandpass filtering effect and also optical <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> (amplification) to compensate for the energy losses in the filter.
+Another possible dissipative effect is related to <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorption</a>.</p>
+<p>There is a similar phenomenon in the <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">resonator</a> of a passively <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked laser</a>, containing not only a fiber, but also other optical components such as a spectral bandpass filter and a saturable absorber.
+If each of the relevant effects is sufficiently weak within one resonator round trip, the resulting dynamics are similar as if all the effects would be occurred in a distributed fashion within the fiber.
+In that sense, one may describe the circulating pulse in certain <a href="mode_locked_fiber_lasers.html" title="ultrafast fiber lasers which are actively or passively mode-locked for generating ultrashort pulses">mode-locked fiber lasers</a> as dissipative solitons.</p>
+<p>Note that strictly speaking we can never have a conservative soliton in a passively mode-locked laser, because we always have some saturable absorption and laser gain.
+A consequence of that is that the <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a> and <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a> in the steady state are fixed, whereas solitons in a fiber could have a wide range of energies and durations, where only their product is fixed.
+These fixed parameters are actually characteristic for dispersive solitons.
+However, as the dominant pulse shaping effects are often the conservative ones (namely dispersion and nonlinearity), one nevertheless doesn't call these pulses dissipative solitons.</p>
+</div>
+<h2 class="togglediv">Spatial Solitons</h2>
+<div>
+<p>Apart from the <em>temporal solitons</em> as discussed above, there are also <em>spatial solitons</em>.
+In that case, a nonlinearity of the medium cancels the <a href="diffraction.html" title="wave phenomena which occur when light waves hit some structure with variable transmission or phase changes">diffraction</a>, so that a beam with constant beam radius can be formed even in a medium which would be homogeneous without the influence of the light beam.
+Temporally, the beam properties can be constant.
+The <a href="kerr_effect.html" title="a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization">Kerr effect</a> is far too weak to realize a spatial soliton with constant <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a> under practically achievable conditions, but photorefractive effects can be utilized. </p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="solitons.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno"><sup>&nbsp;</sup>[1]</td><td class="refs">J. S. Russell, &ldquo;Report on waves&rdquo;, in <i>Report of the 14<sup>th</sup> meeting of the British Association for the Advancement of Science</i>, p. 331 (1844)</td></tr>
+<tr><td class="refno">[2]</td><td class="refs">V. E. Zakharov and A. B. Shabat, &ldquo;Exact theory of two-dimensional self-focusing and one-dimensional self-modulation of waves in nonlinear media&rdquo;, <a href="http://www.jetp.ac.ru/cgi-bin/e/index/e/34/1/p62?a=list">Sov. Phys. JETP 34, 62 (1972)</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">A. Hasegawa and F. Tappert, &ldquo;Transmission of stationary nonlinear optical pulses in dispersive dielectric fibers. I. Anomalous dispersion&rdquo;, Appl. Phys. Lett. 23, 142 (1973), <a href="https://doi.org/10.1063/1.1654836">doi:10.1063/1.1654836</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">L. F. Mollenauer, R. H. Stolen, and J. P. Gordon, &ldquo;Experimental observation of picosecond pulse narrowing and solitons in optical fibers&rdquo;, Phys. Rev. Lett. 45 (13), 1095 (1980), <a href="https://doi.org/10.1103/PhysRevLett.45.1095">doi:10.1103/PhysRevLett.45.1095</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">F. M. Mitschke and L. F. Mollenauer, &ldquo;Discovery of the soliton self-frequency shift&rdquo;, Opt. Lett. 11 (10), 659 (1986), <a href="https://doi.org/10.1364/OL.11.000659">doi:10.1364/OL.11.000659</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">J. P. Gordon, &ldquo;Theory of the soliton self-frequency shift&rdquo;, Opt. Lett. 11 (10), 662 (1986), <a href="https://doi.org/10.1364/OL.11.000662">doi:10.1364/OL.11.000662</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">L. F. Mollenauer <i>et al.</i>, &ldquo;Soliton propagation in long fibers with periodically compensated loss&rdquo;, IEEE J. Quantum Electron. 22 (1), 157 (1986), <a href="https://doi.org/10.1109/JQE.1986.1072858">doi:10.1109/JQE.1986.1072858</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">N. N. Akhmediev <i>et al.</i>, &ldquo;Stable soliton pairs in optical transmission lines and fiber lasers&rdquo;, J. Opt. Soc. Am. B 15 (2), 515 (1998), <a href="https://doi.org/10.1364/JOSAB.15.000515">doi:10.1364/JOSAB.15.000515</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">V. N. Serkin and A. Hasegawa, &ldquo;Novel soliton solutions of the nonlinear Schrödinger equation model&rdquo;, Phys. Rev. Lett. 85 (21), 4502 (2000), <a href="https://doi.org/10.1103/PhysRevLett.85.4502">doi:10.1103/PhysRevLett.85.4502</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">X. Liu <i>et al.</i>, &ldquo;Soliton self-frequency shift in a short tapered air&ndash;silica microstructure fiber&rdquo;, Opt. Lett. 26 (6), 358 (2001), <a href="https://doi.org/10.1364/OL.26.000358">doi:10.1364/OL.26.000358</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">N. Nishizawa and T. Goto, &ldquo;Widely wavelength-tunable ultrashort pulse generation using polarization maintaining optical fibers&rdquo;, J. Sel. Top. Quantum Electron. 7 (4), 518 (2001), <a href="https://doi.org/10.1109/2944.974222">doi:10.1109/2944.974222</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">J. Santhanam and G. P. Agrawal, &ldquo;Raman-induced spectral shifts in optical fibers: general theory based on the moment method&rdquo;, Opt. Commun. 222, 413 (2003), <a href="https://doi.org/10.1016/S0030-4018(03)01561-X">doi:10.1016/S0030-4018(03)01561-X</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">K. S. Abedin and F. Kubota, &ldquo;Widely tunable femtosecond soliton pulse generation at a 10-GHz repetition rate by use of the soliton self-frequency shift in photonic crystal fiber&rdquo;, Opt. Lett. 28 (19), 1760 (2003), <a href="https://doi.org/10.1364/OL.28.001760">doi:10.1364/OL.28.001760</a></td></tr>
+<tr><td class="refno">[14]</td><td class="refs">E. R. Andresen <i>et al.</i>, &ldquo;Tunable light source for coherent anti-Stokes Raman scattering microspectroscopy based on the soliton self-frequency shift&rdquo;, Opt. Lett. 31 (9), 1328 (2006), <a href="https://doi.org/10.1364/OL.31.001328">doi:10.1364/OL.31.001328</a></td></tr>
+<tr><td class="refno">[15]</td><td class="refs">M.-C. Chan <i>et al.</i>, &ldquo;1.2- to 2.2-&mu;m tunable Raman soliton source based on a Cr:forsterite laser and a photonic-crystal fiber&rdquo;, IEEE Photon. Technol. Lett. 20 (11), 900 (2008), <a href="https://doi.org/10.1109/LPT.2008.922339">doi:10.1109/LPT.2008.922339</a></td></tr>
+<tr><td class="refno">[16]</td><td class="refs">J. H. Lee <i>et al.</i>, &ldquo;Soliton self-frequency shift: experimental demonstrations and applications&rdquo;, IEEE J. Quantum Electron. 14 (3), 713 (2008), <a href="https://doi.org/10.1109/JSTQE.2008.915526">doi:10.1109/JSTQE.2008.915526</a></td></tr>
+<tr><td class="refno">[17]</td><td class="refs">A. A. Voronin and A. M. Zheltikov, &ldquo;Soliton self-frequency shift decelerated by self-steepening&rdquo;, Opt. Lett. 33 (15), 1723 (2008), <a href="https://doi.org/10.1364/OL.33.001723">doi:10.1364/OL.33.001723</a></td></tr>
+<tr><td class="refno">[18]</td><td class="refs">P. Grelu and N. Akhmediev, &ldquo;Dissipative solitons for mode-locked lasers&rdquo;, Nature Photon. 6, 84 (2012), <a href="https://doi.org/10.1038/nphoton.2011.345">doi:10.1038/nphoton.2011.345</a></td></tr>
+<tr><td class="refno">[19]</td><td class="refs">F. Leo <i>et al.</i>, &ldquo;Dynamics of one-dimensional Kerr cavity solitons&rdquo;, Opt. Express 21 (7), 9180 (2013), <a href="https://doi.org/10.1364/OE.21.009180">doi:10.1364/OE.21.009180</a></td></tr>
+<tr><td class="refno">[20]</td><td class="refs">T. Herr <i>et al.</i>, &ldquo;Temporal solitons in optical microresonators&rdquo;, Nature Photon. 8, 145 (2014), <a href="https://doi.org/10.1038/nphoton.2013.343">doi:10.1038/nphoton.2013.343</a></td></tr>
+<tr><td class="refno">[21]</td><td class="refs">T. J. Kippenberg <i>et al.</i>, &ldquo;Dissipative Kerr solitons in optical microresonators&rdquo;, Science 10, 361 (6402) (2018), <a href="https://doi.org/10.1126/science.aan8083">doi:10.1126/science.aan8083</a></td></tr>
+<tr><td class="refno">[22]</td><td class="refs">R. Paschotta, <a href="fiberpower_ho_solitons.html">case study on higher-order solitons</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="kerr_effect.html" title="a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization">Kerr effect</a>, <a href="dispersion.html" title="the dependence of the phase velocity in a medium on the optical frequency or the propagation mode">dispersion</a>, <a href="soliton_period.html" title="the distance over which higher-order solitons reproduce their temporal and spectral shape">soliton period</a>, <a href="higher_order_solitons.html" title="optical pulses in a nonlinear and dispersive medium which exhibit periodic oscillations of their temporal and spectral shape">higher-order solitons</a>, <a href="adiabatic_soliton_compression.html" title="a pulse compression technique based on the adaptation of solitons to slowly varying propagation parameters">adiabatic soliton compression</a>, <a href="pulse_compression.html" title="linear or nonlinear techniques for reducing the durations of optical pulses">pulse compression</a>, <a href="gordon_haus_jitter.html" title="a timing jitter originating from fluctuations of the center frequency">Gordon&ndash;Haus jitter</a>, <a href="pulse_propagation_modeling.html" title="working with physical models describing the propagation of ultrashort pulses e.g. in lasers or optical fibers">pulse propagation modeling</a>, <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>, <a href="self_phase_modulation.html" title="nonlinear phase modulation of a beam, caused by its own intensity via the Kerr effect">self-phase modulation</a>, <a href="spotlight_2008_04_02.html">The Photonics Spotlight 2008-04-02</a><br>and other articles in the categories <a href="categories.html#nonlinear_optics" title="other articles on nonlinear optics">nonlinear optics</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/solitons.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fsolitons.html&text=RP+Photonics+Encyclopedia+-+solitons%2C+solitary+pulse%2C+soliton+self-frequency+shift" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fsolitons.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fsolitons.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/solitons.html"&gt;<br>Article on Solitons&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/solitons.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/solitons.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/solitons.html<br>article on 'Solitons' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Now is the Time for Training!</h2>
+<p>When your lab is closed, how to best utilize your time? With training, of course.</p>
+<p>Some suggestions:</p>
+<ul>
+<li>Use the RP Photonics website, reading <a href="./encyclopedia.html?banner=video_training">encyclopedia</a> articles, <a href="./tutorials.html?banner=video_training">tutorials</a>, <a href="./spotlight.html?banner=video_training">Photonics Spotlight</a> articles, etc. &ndash; all for free.</li>
+<li>Get a <a href="./training.html?banner=video_training">tailored training course</a> delivered through the internet &ndash; with every participant connected from home!</li>
+<li>Start with <a href="./software_modeling.html?banner=video_training">physical modeling</a> in order to fully understand your systems and devices, optimize performance, create new ideas&hellip;</li>
+</ul>
+<img src="./img/rp_photonics.png" alt="RP Photonics" style="margin-top:20px; width:225px;">
+<p>offers <a href="./training.html?banner=video_training">tailored training courses</a> and powerful <a href="./software.html?banner=video_training">simulation &amp; design software</a>, e.g. for <a href="./fiberpower.html?banner=video_training">active and passive fiber devices</a>, <a href="./resonator.html?banner=video_training">laser resonators</a> and <a href="./coating.html?banner=video_training">thin-film coatings</a>!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="FXmR/iGUdpqL0/cq7N5p+w==">shownbanner = "video training";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Shortages of rare earth materials &ndash; a problem for photonics?</h2>
+<p>Photonics heavily depends on the supply of rare earth materials in various areas &ndash; think of <a href="./laser_crystals.html?banner=rare_earth_shortage">laser crystals</a>, <a href="./rare_earth_doped_fibers.html?banner=rare_earth_shortage">active fibers</a> and <a href="./light_emitting_diodes.html?banner=rare_earth_shortage">LEDs</a>, for example.
+It is hard to see how such things could be done without rare earth materials.
+And those have recently been subject to enormous price increases and were even involved in a trade war.</p>
+<p>Is that now a reason for serious concerns in the area of photonics?
+Do we need to undertake serious recycling efforts?
+Our <a href="./spotlight_2014_06_27.html?banner=rare_earth_shortage">Photonics Spotlight article</a> analyzes the situation.</p>
+<p>Receiving the <a href="./spotlight.html?banner=rare_earth_shortage">Photonics Spotlight</a> via our <a href="./newsletters.html?banner=rare_earth_shortage">newsletter</a> might be a good idea &hellip;</p>
+
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="FXmR/iGUdpqL0/cq7N5p+w==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/solitons.html"
+    },
+    "headline": "Solitons",
+    "image": "https://www.rp-photonics.com/previews/solitons.png",
+    "datePublished": "2007-03-08",
+    "dateModified": "2020-06-25",
+    "description": "Solitons are pulses with a certain balance of nonlinear and dispersive effects. They can be obtained in optical fibers, for example.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter S",
+      "item": "https://www.rp-photonics.com/encyclopedia_s.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "solitons",
+      "item": "https://www.rp-photonics.com/solitons.html"
+    }]}
+}
+</script>
+</body>
+</html>

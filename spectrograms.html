@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-RmeTuVvz7v4aeNdI1uETxw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - spectrograms, Fourier transform, ultrashort pulses</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/spectrograms.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Spectrograms are a type of diagrams which visualize optical or other signals.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="spectrograms, Fourier transform, ultrashort pulses">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spectrograms">
+<meta property="og:description" content="Spectrograms are a type of diagrams which visualize optical or other signals.">
+<meta property="og:url" content="https://www.rp-photonics.com/spectrograms.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/spectrograms.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Spectrograms are a type of diagrams which visualize optical or other signals.">
+<meta name="twitter:title" content="Spectrograms">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/spectrograms.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="RmeTuVvz7v4aeNdI1uETxw==">
+page="spectrograms.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo sponsor"></a> <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> <a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="RmeTuVvz7v4aeNdI1uETxw==">shownsponsors="DataRay,eagleyard Photonics,EKSMA OPTICS,RPMC Lasers"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_s.html">letter S</a> &gt; <a href="spectrograms.html">spectrograms</a></p>
+<h1>Spectrograms</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="advicebox">
+<p>Spectrograms of simulated optical pulses can be made with the software <a href="fiberpower.html"><b>RP Fiber Power</b></a> or <a href="propulse.html"><b>RP ProPulse</b></a>.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a type of diagrams which visualize optical or other signals</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Spektrogramme</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<p><a href="encyclopedia_cite.html?article=spectrograms">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Spectrograms are common in acoustics, but are also sometimes used in optics, particularly in the context of <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a> (&rarr;&nbsp;<a href="ultrafast_optics.html" title="the part of optics dealing with ultrafast phenomena"><em>ultrafast optics</em></a>).
+The underlying idea is essentially to display a kind of time-dependent <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">spectrum</a>: a Fourier transform is applied to different temporal sections of the signal.
+Mathematically, this leads to a signal of the form</p>
+<div class="eqn"><img src="eqn/spectrogram.gif" width="256" height="57" alt="spectrogram"></div>
+<p>where <span class="eqn_il"><i>E</i>(<i>t</i>)</span> is the signal under investigation (e.g. the electric field of a pulse) and <span class="eqn_il"><i>g</i>(<i>t</i>)</span> is a <em>gate function</em>, which may e.g. have a Gaussian shape.
+The temporally narrower the gain function, the higher is the temporal resolution, but also the lower is the spectral resolution.
+Therefore, the choice of gate function (and particularly its width) has a substantial influence on the resulting spectrograms.</p>
+<p>It is common to use a horizontal time axis and a vertical frequency (or <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>) axis, and to encode the intensity for each combination of time and frequency with a gray scale or a color scale.
+The result is intuitive e.g. for an <a href="chirp.html" title="time dependence of the instantaneous frequency of an optical pulse">up-chirped</a> ultrashort pulse (see Figure&nbsp;1).</p>
+<p>The spectrogram shown in Figure&nbsp;1 is reminiscent of a graph showing the <a href="instantaneous_frequency.html" title="temporal derivative of the oscillation phase divided by 2&pi;">instantaneous frequency</a> as a function of time.
+However, a vertical slice of the spectrogram always has some finite width, whereas the instantaneous frequency at any temporal position is a sharply defined value.</p>
+<figure>
+<img src="img/sp_up_chirp.png" alt="spectrogram of an up-chirped optical pulse">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Spectrogram of an ultrashort pulse with a pronounced up-chirp, i.e., with a rising instantaneous frequency.
+</figcaption>
+</figure>
+<p>Figure&nbsp;2, an animated spectrogram, shows how a third-order soliton pulse evolves in a <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fiber</a>.
+The label (upper right side) indicates at which position in the fiber the pulse is currently displayed.
+One recognizes that both up- and down-chirps occur during the pulse evolution.</p>
+<figure>
+<img src="img/soliton_spectrogram.gif" alt="animated spectrogram showing higher-order soliton evolution">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+This animated spectrogram shows how a third-order soliton evolves in a fiber.
+Solitons of higher orders exhibit even more complicated behavior.
+</figcaption>
+</figure>
+<p>Figure&nbsp;3 shows the spectrogram of an ultrashort pulse after passage through a <a href="photonic_crystal_fibers.html" title="specialty optical fibers with a built-in microstructure, in most cases consisting of small air holes in glass">photonic crystal fiber</a>, in which <a href="supercontinuum_generation.html" title="a nonlinear process for strong spectral broadening of light">supercontinuum generation</a> occurred as a result of strong <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a>, with a strong influence of <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>.
+In order to span a wider range of spectral intensities, a logarithmic color scale has been chosen.
+The pulse has split up into several pulses (<em>soliton fission</em>), as the temporal trace (black trace at the bottom) shows.
+The lower part of the diagram shows various bright spots representing <a href="solitons.html" title="pulses with a certain balance of nonlinear and dispersive effects">soliton</a> pulses, which carry a significant part of the overall energy.</p>
+<figure>
+<img src="img/sc_spectrogram.png" alt="spectrogram of a supercontinuum">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Spectrogram of a supercontinuum, simulated with the software <a href="propulse.html">RP ProPulse</a>.
+A logarithmic color scale is used.
+</figcaption>
+</figure>
+<p>It is also apparent that there is some unconverted light from the wings of the initial pulse (horizontal line in the middle) and a weak background extending to high <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequencies</a>.
+That background is to some extent correlated with the above-mentioned solitons, because it is generated in a <a href="phase_matching.html" title="a group of techniques for achieving efficient nonlinear interactions in a medium">phase-matched</a> <a href="four_wave_mixing.html" title="an interaction of light waves based on a &chi;<sup>(3)</sup> nonlinearity">four-wave mixing</a> process.
+Both the lowest and the highest frequency components exhibit a larger time delay than the medium frequency components; this is due to the <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> of the <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fiber</a>, which has its <a href="zero_dispersion_wavelength.html" title="a wavelength where the group delay dispersion of a fiber or a material is zero">zero-dispersion wavelength</a> near 1&nbsp;&mu;m.</p>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="spectrograms.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="instantaneous_frequency.html" title="temporal derivative of the oscillation phase divided by 2&pi;">instantaneous frequency</a>, <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a>, <a href="pulse_characterization.html" title="the measurement of various properties of an optical pulse">pulse characterization</a>, <a href="supercontinuum_generation.html" title="a nonlinear process for strong spectral broadening of light">supercontinuum generation</a><br>and other articles in the category <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/spectrograms.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fspectrograms.html&text=RP+Photonics+Encyclopedia+-+spectrograms%2C+Fourier+transform%2C+ultrashort+pulses" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fspectrograms.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fspectrograms.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spectrograms.html"&gt;<br>Article on Spectrograms&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spectrograms.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/spectrograms.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/spectrograms.html<br>article on 'Spectrograms' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Buyer&#39;s Guide</h2>
+<p>On our website, you find not only the famous <a href="./encyclopedia.html?banner=buyers_guide">encyclopedia</a>, but also the <a href="./buyersguide.html?banner=buyers_guide">RP Photonics Buyer&#39;s Guide</a>:</p>
+<p style="text-align:center; margin:10px 0;"><a href="./buyersguide.html?banner=buyers_guide"><img src="./img/bg_products.png" alt="RP Photonics Buyer&#39;s Guide"></a></p>
+<ul>
+<li>Find suppliers for many hundreds of photonics products.</li>
+<li>Enjoy high-quality product information (checked listings) and the convenient user interface.</li>
+<li>Use high-quality technical information of the encyclopedia nearby.</li>
+</ul>
+<p>Is it actually surprising that you find <a href="./encyclopedia.html?banner=buyers_guide">the best buyer&#39;s guide</a> at the same place as the <a href="./encyclopedia.html?banner=buyers_guide">best photonics information source</a>?</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="RmeTuVvz7v4aeNdI1uETxw==">shownbanner = "buyers guide";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Sponsors of the Encyclopedia</h2>
+<p>We are grateful to the <a href="./encyclopedia_sponsoring.html?banner=sponsoring">sponsors</a> of our encyclopedia:</p>
+<div style="margin-top:10px; text-align:center;"><a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/nkt_photonics.html"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo"></a></div>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="RmeTuVvz7v4aeNdI1uETxw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/spectrograms.html"
+    },
+    "headline": "Spectrograms",
+    "image": "https://www.rp-photonics.com/previews/spectrograms.png",
+    "datePublished": "2007-10-26",
+    "dateModified": "2020-03-14",
+    "description": "Spectrograms are a type of diagrams which visualize optical or other signals.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter S",
+      "item": "https://www.rp-photonics.com/encyclopedia_s.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "spectrograms",
+      "item": "https://www.rp-photonics.com/spectrograms.html"
+    }]}
+}
+</script>
+</body>
+</html>

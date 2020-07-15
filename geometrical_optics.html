@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-1G70Ww9HsU8oobqeKlC4cA=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - geometrical optics, light rays, ray tracing, paraxial approximation, diffraction, interference</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/geometrical_optics.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Geometrical optics describes the propagation of light with rays, which are assumed to have no transverse extension. This concept is very useful for the analysis of optical systems, as long as tight confinement of light does not occur. In the area of fiber optics, for example, it largely loses its utility.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="geometrical optics, light rays, ray tracing, paraxial approximation, diffraction, interference">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Geometrical Optics">
+<meta property="og:description" content="Geometrical optics describes the propagation of light with rays, which are assumed to have no transverse extension. This concept is very useful for the analysis of optical systems, as long as tight confinement of light does not occur. In the area of fiber optics, for example, it largely loses its utility.">
+<meta property="og:url" content="https://www.rp-photonics.com/geometrical_optics.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/geometrical_optics.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Geometrical optics describes the propagation of light with rays, which are assumed to have no transverse extension. This concept is very useful for the analysis of optical systems, as long as tight confinement of light does not occur. In the area of fiber optics, for example, it largely loses its utility.">
+<meta name="twitter:title" content="Geometrical Optics">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/geometrical_optics.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="1G70Ww9HsU8oobqeKlC4cA==">
+page="geometrical_optics.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo sponsor"></a> <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="1G70Ww9HsU8oobqeKlC4cA==">shownsponsors="Knight Optical,TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_g.html">letter G</a> &gt; <a href="geometrical_optics.html">geometrical optics</a></p>
+<h1>Geometrical Optics</h1>
+<header style="margin-right:0;">
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a concept of optics which is based on the propagation of light rays, ignoring wave properties of light</p>
+<p>Alternative term: ray optics</p>
+<p>More general term: <a href="optics.html" title="the science and technology dealing with the properties and the propagation of light">optics</a></p>
+<p>Opposite term: <a href="wave_optics.html" title="the description of optical phenomena based on wave models">wave optics</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">geometrische Optik</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a></p>
+<p><a href="encyclopedia_cite.html?article=geometrical%20optics">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Geometrical optics is a widely used concept in <a href="optics.html" title="the science and technology dealing with the properties and the propagation of light">optics</a>, where the propagation of <a href="light.html" title="electromagnetic radiation in the visible spectral range, or sometimes in an extended spectral region">light</a> is described with geometric <em>light rays</em>.
+An equivalent term is <em>ray optics</em>.</p>
+<p>The following assumptions on light rays are made:</p>
+<ul>
+<li>They have no transverse extension, i.e., a zero thickness.</li>
+<li class="ta_left">In homogeneous <a href="optical_materials.html" title="materials used for optical components">optical materials</a> (e.g. <a href="optical_glasses.html" title="glasses of high quality, made for optical applications">optical glasses</a> or air), they are straight lines.</li>
+<li class="ta_left">They can be reflected or deflected (refracted) at smooth optical interfaces, with certain laws determining the outgoing ray directions.</li>
+<li class="ta_left">They can be stopped e.g. when hitting some <a href="optical_apertures.html" title="structures which limit the propagation of light">optical aperture</a>.</li>
+<li class="ta_left">Light rays can cross without influencing each other.</li>
+</ul>
+<p>Attempts for physical interpretations of light rays can be successful only to a quite limited extent.
+For example, rays were interpreted as the paths of some rapidly moving light particles, but this picture is not consistent with various observations.
+There are some similarities between geometrical light rays and real light beams, in particular with <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beams</a>; for example, a laser beam can at least be relatively narrow and propagate along a straight line in a homogeneous medium.
+However, real light beams always have a finite transverse extension and exhibit the phenomenon of <a href="diffraction.html" title="wave phenomena which occur when light waves hit some structure with variable transmission or phase changes">diffraction</a>.
+Therefore, geometrical rays are only a rather abstract representation of actual light rays.
+Their behavior can be derived from <a href="wave_optics.html" title="the description of optical phenomena based on wave models">wave optics</a> in the limiting case of vanishing optical <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>.</p>
+<h2 class="togglediv">Reflection of Light Rays</h2>
+<div>
+<p>On the surface of a flat <a href="mirrors.html" title="devices which reflect light">mirror</a>, a light ray is assumed to be reflected such that the output angle equals the input angle (both measured against the normal direction).
+For a curved mirror, one does that calculation based on a tangential flat plane.
+Figure&nbsp;1 shows an example with reflection on a curved mirror.</p>
+<figure>
+<img src="img/rays_at_curved_mirror.png" alt="light rays reflected at a spherically curved mirror">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Reflection of light rays at a spherically curved mirror.
+</figcaption>
+</figure>
+<p>Modified laws can be applied in case of <a href="diffraction_gratings.html" title="optical components containing a periodic structure which diffracts light">diffraction gratings</a>, where additional diffracted rays emerge at different angles.</p>
+</div>
+<h2 class="togglediv">Refraction of Light Rays</h2>
+<div>
+<p>When a ray hits an interface between two different transparent media, a portion is reflected, and another portion is transmitted; for the latter one, which is <a href="refraction.html" title="the change of the propagation direction when a wave comes from one medium into another one">refracted</a>, the propagation direction is generally modified according to the <a href="refraction.html" title="the change of the propagation direction when a wave comes from one medium into another one">Snellius law of refraction</a>.
+Figure&nbsp;2 shows an example case for a <a href="ball_lenses.html" title="lenses which have the geometric form of a sphere">ball lens</a>, where only the refracted rays (which are usually stronger) have been drawn.</p>
+<figure>
+<img src="img/rays_at_ball_lens.png" alt="rays at ball lens">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Focusing of light with a ball lens. While the paraxial rays have a focus position as indicated with the gray vertical line, the outer rays are more strongly refracted.
+</figcaption>
+</figure>
+</div>
+<h2 class="togglediv">Curved Rays</h2>
+<div>
+<p>In optically inhomogeneous media, light beams may propagate along curves instead of straight lines.
+In geometrical optics, one may correspondingly assume curved ray paths.
+An example is shown in Figure&nbsp;3, showing the focusing of light in a <a href="gradient_index_lenses.html" title="lenses which utilize a radial variation of refractive index">gradient-index lens</a>.
+The rays get deflected in the lens and may exactly meet in a <a href="focal_points_and_focal_planes.html" title="points to which parallel input rays are concentrated by an optical system, and the planes going through those points">focal point</a> if the lens is optimized.</p>
+<figure>
+<img src="img/grin_lens_rays.png" alt="ray path at GRIN lens">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Ray paths in and after a <a href="gradient_index_lenses.html" title="lenses which utilize a radial variation of refractive index">gradient-index lens</a>. Within the lens (the gray area), the rays are curved.
+</figcaption>
+</figure>
+<p>Figure&nbsp;4 shows how the <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a>, calculated with <a href="wave_optics.html" title="the description of optical phenomena based on wave models">wave optics</a>, evolves.
+Here, one can see that the beam radius in the focal point has a finite value related to <a href="diffraction.html" title="wave phenomena which occur when light waves hit some structure with variable transmission or phase changes">diffraction</a>.</p>
+<figure>
+<img src="img/grin_lens_w.png" alt="GRIN lens">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Evolution of beam radius for an originally collimated Gaussian beam going through a GRIN lens.
+</figcaption>
+</figure>
+</div>
+<h2 class="togglediv">Quantities Related to Light Rays</h2>
+<div>
+<p>In geometrical optics, and particularly in <a href="gaussian_optics.html" title="a framework for describing optical phenomena, which is based on geometrical optics and the paraxial approximation">Gaussian optics</a>, certain quantities are often related to light rays:</p>
+<ul>
+<li>Points to which some bundle of rays converges are called <a href="focal_points_and_focal_planes.html" title="points to which parallel input rays are concentrated by an optical system, and the planes going through those points"><em>focal points</em></a>.
+For variable directions of input beams, for example, the focal points may lie in a <a href="focal_points_and_focal_planes.html" title="points to which parallel input rays are concentrated by an optical system, and the planes going through those points"><em>focal plane</em></a>, or actually often on a curved surface.</li>
+<li><a href="principal_points_and_principal_planes.html" title="planes from which rays appear to be deflected in an optical system according to paraxial optics, and the intersections of those planes with the optical axis"><em>Principal planes</em></a> are defined based on the intersections of extrapolated rays in an optical system.</li>
+<li>A <a href="focal_length.html" title="a measure of how strongly an optical system focuses or defocuses light"><em>focal length</em></a> is often defined based on a distance from a focal point to a principal plane, or sometimes to a geometrical position of an optical device.</li>
+</ul>
+</div>
+<h2 class="togglediv">Special Rays</h2>
+<div>
+<p>Certain light rays have a special importance in geometrical optics:</p>
+<ul>
+<li>The <em>chief ray</em> of a ray bundle, which is limited by some <a href="optical_apertures.html" title="structures which limit the propagation of light">aperture</a>, is the one going through the center of that aperture.</li>
+<li><em>Marginal rays</em> of those passing at the edges of apertures.</li>
+</ul>
+</div>
+<h2 class="togglediv">Ray Tracing</h2>
+<div>
+<p>The propagation of light rays, as shown in the figures above, is calculated based on purely geometrical considerations.
+The used technique is called <em>ray tracing</em> and is usually applied with specialized optics software.
+The calculations can be geometrically exact, i.e., valid even for large incidence angles.
+Curved surface may have any geometrical shapes.
+Depending on the initial direction of a light ray, it may or may not hit a certain optical component.</p>
+<p>Rays may be split up into multiple rays, e.g. due to partial reflection and transmission that interfaces, or due to multiple diffraction orders at gratings.
+In the context of diffuse optical <a href="scattering.html" title="processes where light is sent in other directions, usually but not always in random directions">scattering</a>, one may employ stochastic methods for representing the scattered light with some limited number of rays.
+For multiple diffuse reflections, this may of course result in a very large number of rays to be treated.</p>
+<p>One may not only need to know the paths of multiple rays, but also derive various results from them.
+For example, ray tracing software may locate focal planes, calculate image <a href="magnification.html" title="the enlargements of images">magnification</a> or estimates resulting <a href="optical_intensity.html" title="optical power per unit area">optical intensities</a> and colors.</p>
+<p>Ray tracing can be used for many purposes, for example for studying the detailed properties of <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a> systems including their <a href="optical_aberrations.html" title="degradations of optical images caused in imaging instruments">optical aberrations</a> and effects of misalignment and imperfections from <a href="optical_fabrication.html" title="the fabrication of optical components like lenses, prisms and mirrors">optical fabrication</a>, or for the design of illumination systems.</p>
+</div>
+<h2 class="togglediv">Paraxial Optics</h2>
+<div>
+<p>In many situations, one can use simplified equations which describe the approximate propagation of rays which stay close to the optical axis in terms of lateral offset and direction.
+Any terms of second or higher order are ignored; for example, one may consider the deflection of a ray at a curved lens surface as occurring in the plane touching the surface, ignoring a longitudinal position error of second order in the lateral offset.</p>
+<p>Many useful relations can be derived based on such paraxial optics, which would otherwise be far more complicated or not analytically solvable at all.</p>
+<p>The paraxial approximation is widely used in <a href="gaussian_optics.html" title="a framework for describing optical phenomena, which is based on geometrical optics and the paraxial approximation">Gaussian optics</a>.</p>
+<p>The paraxial case is also often used as the reference case, for example for the study of <a href="optical_aberrations.html" title="degradations of optical images caused in imaging instruments">optical aberrations</a>.</p>
+</div>
+<h2 class="togglediv">Limitations of Geometrical Optics</h2>
+<div>
+<p>The main limitation of geometrical optics is that it ignores the wave properties of light, as described in <a href="wave_optics.html" title="the description of optical phenomena based on wave models">wave optics</a>.
+In particular, that means that the phenomena of <a href="diffraction.html" title="wave phenomena which occur when light waves hit some structure with variable transmission or phase changes">diffraction</a>, <a href="interference.html" title="a range of phenomena associated with the superposition of waves">interference</a> and <a href="polarization_of_light.html" title="direction of the electric field oscillation of a light beam">polarization</a> are not taken into account, at least not in the simplest realization.
+This is not a substantial problem in many practical cases, where such effects may be negligible or can be taken into account separately.
+For example, one can study the <a href="optical_aberrations.html" title="degradations of optical images caused in imaging instruments">optical aberrations</a> of an <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a> system with geometrical optics, being aware that even for perfect compensation of aberrations one will not obtain perfectly sharp images due to the diffraction limit.
+Anyway, aberrations often remain a more severe limitation than diffraction, which can thus often be safely ignored.</p>
+<aside class="callout blue">Diffraction is essential e.g. in fiber optics, and geometrical optics is of limited utility in such areas.</aside>
+<p>Ignoring diffraction becomes a serious problem when treating the propagation of light under conditions where it experiences tight confinement.
+For example, light propagation in <a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode fibers</a> can not be realistically described at all with geometrical optics.
+One may still define the <a href="numerical_aperture.html" title="sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a> of a fiber, for example, based on geometrical optics, but such a quantity then has only a limited meaning for the actual propagation of light in the fiber.
+Even for <a href="multimode_fibers.html" title="fibers supporting more than one guided mode per polarization direction">multimode fibers</a> with many <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a>, geometrical optics is only of quite limited utility.
+It can be completely misleading, for example, concerning <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">optical phase</a> delays of fiber modes [1].</p>
+<p>Similarly, light propagation in <a href="dielectric_coatings.html" title="thin-film coatings made of transparent dielectric materials, e.g. for laser mirrors or anti-reflection coatings">multilayer coatings</a> cannot be realistically analyzed with ray optics, because <a href="interference.html" title="a range of phenomena associated with the superposition of waves">interference</a> effects are essential.</p>
+<p>To some extent, the deficits of geometrical optics can be amended by adding additional properties to rays.
+For example, one may attribute some <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a> to each ray in a ray tracing simulation, taking into account power losses by <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorption</a>, incomplete reflection, etc.
+Similarly, one may add polarization properties and <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">optical phases</a>, for example for calculations on an <a href="interferometers.html" title="optical devices utilizing the phenomenon of interference">interferometer</a> setup.
+A simpler example is the calculation of different ray paths for different polarization directions, for example when analyzing a <a href="polarizers.html" title="optical filters where the light transmission depends strongly on the direction of polarization">polarizing</a> <a href="prisms.html" title="transparent optical devices which refract or reflect light">prism</a>.</p>
+<p>In some areas, one finds an interesting correspondence between quantities from geometrical optics and <a href="wave_optics.html" title="the description of optical phenomena based on wave models">wave optics</a>:</p>
+<ul>
+<li>The <a href="abcd_matrix.html" title="a 2-by-2 matrix describing the effect of an optical element on a laser beam">ABCD matrix</a> algorithm has been developed in geometrical optics, but the components of that matrix can also be used for <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beam</a> calculations.</li>
+<li><a href="optical_resonators.html" title="arrangements of optical components which allow a beam of light to circulate">Optical resonators</a> can be analyzed in terms of geometrical stability, and it turns out that the properties of resonator <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a> as calculated with wave optics have substantially different properties depending on whether or not a resonator is geometrically stable.</li>
+</ul>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="geometrical_optics.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">R. Paschotta, &ldquo;An apparent paradox concerning light beams in fibers&rdquo;, <a href="spotlight_2016_09_12.html">The Photonics Spotlight 2016-09-12</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="optics.html" title="the science and technology dealing with the properties and the propagation of light">optics</a>, <a href="gaussian_optics.html" title="a framework for describing optical phenomena, which is based on geometrical optics and the paraxial approximation">Gaussian optics</a>, <a href="paraxial_approximation.html" title="a frequently used approximation, essentially assuming small angular deviations of the propagation directions from some beam axis">paraxial approximation</a>, <a href="wave_optics.html" title="the description of optical phenomena based on wave models">wave optics</a><br>and other articles in the category <a href="categories.html#general_optics" title="other articles on general optics">general optics</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/geometrical_optics.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fgeometrical_optics.html&text=RP+Photonics+Encyclopedia+-+geometrical+optics%2C+light+rays%2C+ray+tracing%2C+paraxial+approximation%2C+diffraction%2C+interference" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fgeometrical_optics.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fgeometrical_optics.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/geometrical_optics.html"&gt;<br>Article on Geometrical Optics&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/geometrical_optics.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/geometrical_optics.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/geometrical_optics.html<br>article on 'Geometrical Optics' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2 style="font-size:20px;">Debugging Is Now Fun!</h2>
+<p>The software products which are supporting our <a href="./software_script_language.html?banner=Debugger">script language</a> (e.g. <a href="./fiberpower.html?banner=Debugger">RP Fiber Power</a> and <a href="./coating.html?banner=Debugger">RP Coating</a>) have now got a <a href="./software_news_2017_05_31.html?banner=Debugger">powerful debugger</a>!</p>
+<a href="./software_news_2017_05_31.html?banner=Debugger"><img src="./img/expression_debugger_small.png" alt="debugger" style="margin:10px 0;"></a>
+<p>It works even within expressions, not only after each command!</p>
+<p>The <a href="./software_news.html?banner=Debugger">RP Photonics Software News</a> keep you informed.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="1G70Ww9HsU8oobqeKlC4cA==">shownbanner = "Debugger";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Tutorial on Fiber Optics</h2>
+<p>See our <a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial">comprehensive fiber optics tutorial</a>:</p>
+<ul>
+<li>guiding light in single-mode and multimode fibers</li>
+<li>fiber ends and joints, propagation and coupling losses</li>
+<li>couplers and splitters</li>
+<li>polarization issues, chromatic dispersion, nonlinearities, pulse propagation</li>
+<li>fiber accessories and tools</li>
+</ul>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/fiber_core_small.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/mode_solver.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/pm_fibers_small.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/fiberpower_self_focusing4_small.png" alt="&nbsp;"></a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="1G70Ww9HsU8oobqeKlC4cA==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/geometrical_optics.html"
+    },
+    "headline": "Geometrical Optics",
+    "image": "https://www.rp-photonics.com/previews/geometrical_optics.png",
+    "datePublished": "2019-04-22",
+    "dateModified": "2020-03-14",
+    "description": "Geometrical optics describes the propagation of light with rays, which are assumed to have no transverse extension. This concept is very useful for the analysis of optical systems, as long as tight confinement of light does not occur. In the area of fiber optics, for example, it largely loses its utility.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter G",
+      "item": "https://www.rp-photonics.com/encyclopedia_g.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "geometrical optics",
+      "item": "https://www.rp-photonics.com/geometrical_optics.html"
+    }]}
+}
+</script>
+</body>
+</html>

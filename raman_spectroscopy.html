@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-EIrJnL5PLJvwBprzk9x+kg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Raman spectroscopy, operation principles, microscopy, comparison with absorption spectroscopy, Raman microscopy</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/raman_spectroscopy.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Raman spectroscopy is a wide class of spectroscopic methods based on Raman scattering. Conventional incoherent methods are discussed as well as coherent Raman spectroscopy.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="Raman spectroscopy, operation principles, microscopy, comparison with absorption spectroscopy, Raman microscopy">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Raman Spectroscopy">
+<meta property="og:description" content="Raman spectroscopy is a wide class of spectroscopic methods based on Raman scattering. Conventional incoherent methods are discussed as well as coherent Raman spectroscopy.">
+<meta property="og:url" content="https://www.rp-photonics.com/raman_spectroscopy.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/raman_spectroscopy.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Raman spectroscopy is a wide class of spectroscopic methods based on Raman scattering. Conventional incoherent methods are discussed as well as coherent Raman spectroscopy.">
+<meta name="twitter:title" content="Raman Spectroscopy">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/raman_spectroscopy.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="EIrJnL5PLJvwBprzk9x+kg==">
+page="raman_spectroscopy.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="EIrJnL5PLJvwBprzk9x+kg==">shownsponsors="EKSMA OPTICS"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_r.html">letter R</a> &gt; <a href="raman_spectroscopy.html">Raman spectroscopy</a></p>
+<h1>Raman Spectroscopy</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_raman_spectroscopy_equipment.html?s=vbox">47 suppliers for Raman spectroscopy equipment</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.laserquantum.com/applications/detail.cfm?id=9" data-supplier="Laser Quantum" data-location="product-enc" data-keyword="Raman spectroscopy equipment" rel="nofollow" class="bg externallink"><img src="./bg/logos/laser_quantum.png" alt="Laser Quantum" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.rpmclasers.com/application/raman-spectroscopy-lasers/" data-supplier="RPMC Lasers" data-location="product-enc" data-keyword="Raman spectroscopy equipment" rel="nofollow" class="bg externallink"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.toptica.com/applications/industrial-manufacturing/raman-spectroscopy/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="Raman spectroscopy equipment" rel="nofollow" class="bg externallink"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="http://www.ape-berlin.de/en/cars-srs/" data-supplier="APE" data-location="product-enc" data-keyword="Raman spectroscopy equipment" rel="nofollow" class="bg externallink"><img src="./bg/logos/ape.png" alt="APE" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_raman_spectroscopy_equipment.html?s=vbox">List of suppliers for<br>Raman spectroscopy equipment</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: optical spectroscopy based on spontaneous or stimulated Raman scattering</p>
+<p>More general terms: optical <a href="spectroscopy.html" title="methods where the interaction of light with matter is utilized, e.g. for detecting substances or measuring concentrations">spectroscopy</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Raman-Spektroskopie</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<p><a href="encyclopedia_cite.html?article=Raman%20spectroscopy">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Raman spectroscopy is a wide class of methods of <a href="spectroscopy.html" title="methods where the interaction of light with matter is utilized, e.g. for detecting substances or measuring concentrations">spectroscopy</a> which are based on either spontaneous or stimulated <a href="raman_scattering.html" title="a nonlinear scattering process involving optical phonons">Raman scattering</a>, a kind of <em>inelastic light scattering</em>.
+It is named after Sir Chandrashekhara Venkata Raman, who first experimentally demonstrated Raman scattering.</p>
+<p>Raman spectroscopy is used for many different purposes (see below the section on applications), and variants of it depend on different operation principles.
+They also involve quite different instrumentation, e.g. concerning the types of <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">lasers</a> used.</p>
+<h2 class="togglediv">Spontaneous Raman Scattering</h2>
+<div>
+<h3 class="togglediv">Operation Principle</h3>
+<div>
+<p>In most cases, spontaneous Raman scattering induced by a single light source is utilized.
+The sample under investigation is irradiated with an intense light beam (usually a <a href="continuous_wave_operation.html" title="operation mode of a laser with continuous light emission">continuous-wave</a> <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a>) with a sufficiently narrow optical <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>.
+Scattered light is generated mainly by <a href="rayleigh_scattering.html" title="scattering of light at scattering centers which are much smaller than the wavelength">Rayleigh scattering</a>, but to a smaller part also by <a href="raman_scattering.html" title="a nonlinear scattering process involving optical phonons">Raman scattering</a>.
+While Rayleigh scattering leads to light with unchanged <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequency</a> (except for a possible Doppler effect, which is usually quite weak), Raman scattering produces scattered components with substantially modified optical frequencies and <a href="wavelength.html" title="the spatial period of a plane wave">wavelengths</a>.
+Those frequency-shifted components must be analyzed with a suitable kind of Raman <a href="spectrometers.html" title="devices for separating spectral components">spectrometer</a>.</p>
+<p>The mentioned change of optical frequency arises from inelastic interactions of light with the investigated medium.
+For example, the laser light may hit a molecule in a gas which is initially in its ground state.
+When spontaneous Raman scattering occurs, the molecule is excited to a higher vibrational/rotational state, and the energy of the scattered <a href="photons.html" title="quanta of light energy">photon</a> is lowered by that excitation energy.
+It may also happen that a molecule is initially in an excited state and is deexcited by the laser beam, leading to an anti-Stokes shift, i.e., to an increased optical frequency of the scattered light.
+By measuring the <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a> of the scattered light, one can therefore acquire information on the excitation states of materials in the investigated sample.
+There are often clearly defined &ldquo;Raman lines&rdquo; inside spectra, corresponding e.g. to the energies of certain vibration modes of the material.
+Patterns of such lines often form clear &ldquo;spectroscopic fingerprints&rdquo; for certain substances.</p>
+<p>The used Raman spectrometer may be based on a tunable <a href="monochromators.html" title="optical devices which transmit only light in an adjustable small range of optical wavelengths">monochromator</a> combined with a sensitive <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a>.
+Faster data acquisition is possible with other types of spectrometers, e.g. containing photodetector arrays, or based on <a href="fourier_transform_spectroscopy.html" title="a method for spectroscopy rare an optical spectrum is computed from raw data with a Fourier transform">Fourier transform spectroscopy</a>.</p>
+<p>Typically studied excitations are molecular vibrations or lattice <a href="phonons.html" title="quantized microscopic vibrations in solid media">phonons</a> with frequencies of the order of 1&nbsp;THz to 100&nbsp;THz.
+The used optical frequencies are in most cases substantially higher (hundreds of THz).</p>
+<p>The obtained Raman spectra are usually not shown with absolute optical frequencies on the horizontal axis, but rather with differences of <a href="wavenumber.html" title="the phase delay per unit length, or that quantity divided by 2&pi;">wavenumber</a> (understood as inverse <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>) in units of cm<sup>&minus;1</sup>.
+Those differences are proportional to the difference in optical frequency or photon energy.
+For example, a difference of 1&nbsp;cm<sup>&minus;1</sup> corresponds to a frequency difference of &approx;30&nbsp;GHz.</p>
+<figure>
+<img src="img/raman_spectrum_sio2.png" alt="Raman spectrum of silica">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+The Raman spectrum of fused silica (data from [2]). In contrast to single molecules, which deliver very sharp Raman lines, one obtains a rather broad distribution due to the huge number of different <a href="phonons.html" title="quantized microscopic vibrations in solid media">phonon</a> modes.
+</figcaption>
+</figure>
+<p>Vibration modes of molecules are often dominantly associated with vibrations of certain chemical bonds, and then have vibration frequencies which are characteristic for those bonds.
+For example, C-H bonds typically correspond to waive numbers around 2800 to 3200&nbsp;cm<sup>&minus;1</sup>, while C-O double bonds are at roughly 1700&nbsp;cm<sup>&minus;1</sup>.
+Phonon spectra of solids (see e.g. Figure&nbsp;1) exhibit much broader features due to the huge number of different phonon modes.</p>
+<p>Raman spectra may show regions with positive and negative changes of photon energy, i.e., contributions from Stokes and anti-Stokes lines.
+In other cases, only the Stokes region is shown.</p>
+</div>
+<h3 class="togglediv">Comparison with Absorption Spectroscopy</h3>
+<div>
+<p>Excitation states of substances can also be studied with <a href="laser_absorption_spectroscopy.html" title="methods of absorption spectroscopy using laser light">laser absorption spectroscopy</a>.
+Compared with that, Raman spectroscopy is different in some respects:</p>
+<p>The used photon energy is typically far higher than the energy related to the studied excitations.
+It is usually <em>not</em> tuned to an electronic transition of the medium (except in matters of <em>resonant Raman spectroscopy</em>), so that the probe light does not experience substantial absorption, and little <a href="fluorescence.html" title="luminescence arising from irradiation with light">fluorescence</a> is induced.
+(Illustrations of the effect often involve certain &ldquo;virtual energy states&rdquo;, which however are not real excitation states of investigated substances, but only imagined states.)</p>
+<p>As a consequence, one can usually use a <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a> source with a constant optical frequency rather than a <a href="tunable_lasers.html" title="lasers the output wavelengths of which can be tuned">tunable laser</a>.
+Typically, one uses laser light in the visible or ultraviolet spectral region, or in the infrared.
+For absorption spectroscopy to work on similar excitation features, one would typically need a tunable <a href="mid_infrared_laser_sources.html" title="light sources emitting mid-infrared radiation in the form of a laser-like beam">mid-infrared laser source</a>.
+Also, a kind of <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a> can be used for Raman spectroscopy which operates with much shorter wavelengths; this is advantageous because long-wavelength <a href="infrared_detectors.html" title="detectors for infrared light">infrared detectors</a> tend to offer a quite limited <a href="signal_to_noise_ratio.html" title="the ratio of signal power to noise power in a detector">signal-to-noise ratio</a> and/or require cryogenic operation.
+It can also be advantageous that the used light can be easily transmitted e.g. through glass cuvettes, while infrared absorption spectroscopy requires more special <a href="optical_windows.html" title="flat transparent plates with optical quality, used for protection against the environment">optical windows</a>.</p>
+<p>Further, e.g. in the context of biological and medical studies Raman spectroscopy it is advantageous that water hardly affects the measurements.
+It exhibits only weak Raman scattering, while, infrared absorption spectroscopy can be heavily affected by absorption of infrared light in water.</p>
+</div>
+<h3 class="togglediv">Strength of Raman Lines</h3>
+<div>
+<p>Note that the strength of a Raman line does not only depend on the concentration of a certain substance in the sample, but also on the strength of coupling of the mentioned mode with the light field.
+Essentially, that coupling is related to changes of polarizability e.g. of a molecule.
+The resulting selection rules can result in substantially different line strengths for Raman scattering, compared with infrared absorption: excitations which are hardly visible in <a href="laser_absorption_spectroscopy.html" title="methods of absorption spectroscopy using laser light">laser absorption spectroscopy</a> may produce intense Raman lines, while prominent lines in absorption spectra may correspond to only weak or even completely missing Raman lines.
+(Certain vibrational transitions are not <em>Raman active</em>.)
+In that sense, information obtained with both spectroscopic techniques can be regarded as complementary.</p>
+</div>
+<h3 class="togglediv">Suppressing Light from Rayleigh Scattering</h3>
+<div>
+<p>Spontaneous Raman scattering is a relatively weak process; for example, only one out of a million photons sent to a sample may be scattered that way, and only a small fraction of the scattered photons will typically get to the detector, because we have omnidirectional scattering.
+Typically, much more light is scattered via Rayleigh scattering (elastic scattering, without change of optical frequency).
+Therefore, a substantial technical challenge is to suppress the disturbing effect of the far stronger Rayleigh-scattered light.
+In an ordinary <a href="spectrometers.html" title="devices for separating spectral components">spectrometer</a>, Rayleigh-scattered light may not be sufficiently suppressed e.g. due to light scattering within the spectrometer setup.
+Therefore, one often uses an additional <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical filter</a> (e.g. a notch filter) for strongly attenuating Rayleigh-scattered light before entering the spectrometer.</p>
+</div>
+<h3 class="togglediv">Influences on Raman Lines</h3>
+<div>
+<p>The height of a recorded Raman line obviously depends on the concentration of the corresponding substance.
+Furthermore, its precise horizontal position (frequency shift) may be modified by certain influences on the substance, e.g. mechanical stress.
+Also, it is possible that a Raman line is broadened due to inhomogeneities, leading to slightly different peak positions for different molecules.
+Besides, the heights of Raman lines can be temperature-dependent.
+Various applications (see below) utilize such influences on Raman lines for measuring certain quantities.</p>
+</div>
+<h3 class="togglediv">Lasers for Spontaneous Raman Scattering</h3>
+<div>
+<p>In the early days of Raman spectroscopy, it was difficult to generate sufficiently intense <a href="monochromatic_light.html" title="light with a single optical frequency">quasi-monochromatic</a> light without having lasers.
+Since the introduction of lasers in the 1960s, lasers are essentially always used as light sources for Raman spectroscopy.</p>
+<p>For studying inorganic samples, one will usually prefer to use a laser source with a relatively short wavelength, since Raman scattering (in this sense similar to Rayleigh scattering) becomes much stronger at short optical wavelengths.
+One may, for example, use some kind of <a href="green_lasers.html" title="lasers emitting in the green spectral region">green laser</a> or even an <a href="ultraviolet_lasers.html" title="lasers (or other laser-based light sources) generating ultraviolet light">ultraviolet laser</a> (or <a href="frequency_doubling.html" title="the phenomenon that an input wave in a nonlinear material can generate a wave with twice the optical frequency">frequency-doubled</a> laser).</p>
+<p>However, biological samples would often rapidly be damaged under the influence of ultraviolet or even intense visible light.
+Therefore, lasers with longer wavelengths need to be used in such cases &ndash; e.g. light at 1064&nbsp;nm from a <a href="yag_lasers.html" title="lasers based on YAG (yttrium aluminum garnet) crystals, usually Nd:YAG or Yb:YAG">YAG laser</a>.</p>
+<p>In any case, the <a href="linewidth.html" title="width of the spectrum of a light beam or an absorption feature">linewidth</a> of the laser source should be well below the linewidth of the expected Raman lines.
+It is often necessary to use a <a href="narrow_linewidth_lasers.html" title="single-frequency lasers with a narrow optical emission spectrum">narrow-linewidth laser</a>, perhaps even a <a href="single_frequency_lasers.html" title="lasers emitting radiation in a single resonator mode">single-frequency laser</a>, for investigating e.g. molecular gases or liquids containing many different substances (e.g. petroleum).</p>
+</div>
+</div>
+<h2 class="togglediv">Refinements and Other Operation Principles of Raman Spectroscopy</h2>
+<div>
+<h3 class="togglediv">Polarized Raman Spectroscopy</h3>
+<div>
+<p>Usually, the light of the probe laser is linearly <a href="polarization_of_light.html" title="direction of the electric field oscillation of a light beam">polarized</a>.
+One can retrieve additional information on a sample by acquiring optical spectra of Raman-scattered light both for the polarization direction of the laser beam and for the orthogonal direction.
+Molecules with isotropic polarizability produced polarized scattered light, while others cause a partial depolarization.</p>
+<p>There are also techniques for measuring Raman optical activity, involving circularly polarized light.</p>
+</div>
+<h3 class="togglediv">Surface-enhanced Raman Spectroscopy (SERS)</h3>
+<div>
+<p>Dramatic enhancements of Raman signals are possible by adding a silver or gold colloid (containing nanoparticles) to a sample.
+The laser light then excites surface plasmons on the nanoparticles, and those can have substantially enhanced field intensities in their immediate neighborhood, where the molecules of interest may then interact with the light.</p>
+</div>
+<h3 class="togglediv">Tip-enhanced Raman Spectroscopy (TERS)</h3>
+<div>
+<p>This method is somewhat similar to surface-enhanced Raman spectroscopy.
+Instead of nanoparticles, while uses a very sharp tip, which also exhibits strong local enhancements of the light field.
+The obtained Raman signal may be largely coming from a very small volume with a diameter of a few tens of nanometers around the tip.
+This is obviously attractive for realizing a type of Raman microscopy with very high (sub-wavelength) spatial resolution.</p>
+</div>
+<h3 class="togglediv">Resonance Raman Spectroscopy</h3>
+<div>
+<p>While Raman spectroscopy is usually performed with probe light at frequencies far from electronic resonances, there are techniques of <em>resonant</em> Raman spectroscopy where the probe light is tuned close to such electronic resonances.
+That can lead to substantial increases in signal intensity.
+Furthermore, since the change in electron density caused by an electronic excitation can be more or less confined to a part of a larger molecule, such increases may be much stronger for certain molecular vibrations than for others.
+This may provide further valuable spectroscopic information.</p>
+<p>Resonance Raman spectroscopy is mainly applied to large biomolecules containing chromophores.
+The method can also be combined with service-enhanced Raman spectroscopy (see above).</p>
+</div>
+<h3 class="togglediv">Stimulated Raman Spectroscopy</h3>
+<div>
+<p>While spontaneous Raman scattering is used in most cases, there are methods of stimulated Raman spectroscopy where one obtains stronger signals by using two different laser sources.
+For example, one can be a fixed-frequency high-power pump laser, while the other one (the probe laser) is a <a href="tunable_lasers.html" title="lasers the output wavelengths of which can be tuned">tunable laser</a> with lower power, the wavelength of which can be tuned around that of the pump beam.
+One detects changes of the transmitted power of the probe beam.
+Note that the scattering is not only stronger with such a technique, but also obtained in the form of a directed beam, which is much easier to detect than light scattered in all directions.</p>
+<p>Such methods of <em>coherent Raman spectroscopy</em> typically have much higher sensitivities, but the required instrumentation (including a tunable laser) is more complex.</p>
+</div>
+<h3 class="togglediv">Coherent Anti-Stokes Raman Spectroscopy</h3>
+<div>
+<p>Coherent anti-Stokes Raman spectroscopy (CARS) is another type of coherent Raman spectroscopy.
+It employs a third-order nonlinear optical process which involves three different laser beams: a pulsed pump beam, a pulsed Stokes beam at a variable and somewhat lower frequency, and a probe beam at another fixed (higher) frequency.
+The interaction of those beams with the sample produces light at the anti-Stokes frequency (i.e., higher than the probe frequency).
+The signal is resonantly enhanced when the frequency difference between the pump and Stokes beams matches the frequency of a Raman line.</p>
+<p>An important aspect is that contributions from different molecules to the CARS signal can coherently add up along the path of the probe beam, and that results in the fact that the signal power is proportional to the <em>square</em> of the path length and the concentration.
+The resulting directed signal beam is easier to detect than light from omnidirectional incoherent scattering.
+However, the demands on the used lasers are of course far higher than for ordinary incoherent Raman spectroscopy.</p>
+</div>
+<h3 class="togglediv">Hyper Raman scattering</h3>
+<div>
+<p>Hyper Raman scattering means that the scattered light occurs at frequencies somewhat lower than <em>twice</em> the frequency of the pump light.
+This means that two pump <a href="photons.html" title="quanta of light energy">photons</a> are converted into one photon of Raman-scattered light and one phonon (or other excitation quantum).
+This effect is usually fairly weak, but it has aspects which make it interesting for Raman spectroscopy.
+In particular, hyper-Raman spectra can provide information on otherwise non Raman-active modes.</p>
+</div>
+<h3 class="togglediv">Raman Microscopy</h3>
+<div>
+<p>Raman spectroscopy can also be combined with microscopy.
+The result may be called <em>Raman microspectroscopy</em>.</p>
+<p>For example, one may use a scanning <a href="laser_microscopy.html" title="a technique for generating microscopic images by scanning objects with a laser">laser microscope</a>, where a tight laser focus is scanned through a certain volume of a sample, and Raman-shifted light sent back towards the laser is analyzed.
+Using the principle of <a href="confocal_scanning_microscopes.html" title="optical microscopes with enhanced depth resolution based on the confocal measurement principle">confocal microscopy</a>, one can achieve a particularly high spatial resolution, often somewhat below 1&nbsp;&mu;m.
+For each position, one can acquire a full Raman spectrum (<em>hyperspectral Raman imaging</em>) rather than only an intensity value.</p>
+<p>Another technique &ndash; tip-enhanced Raman spectroscopy (TERS) &ndash; has already been mentioned above.</p>
+</div>
+</div>
+<h2 class="togglediv">Applications of Raman Spectroscopy</h2>
+<div>
+<p>There is a very wide field of applications of Raman spectroscopy.
+Some examples are:</p>
+<ul>
+<li>scientific research in biology and medicine</li>
+<li class="ta_left">monitoring of pharmaceuticals</li>
+<li class="ta_left">non-destructive identification of substances and chemical compositions, e.g. in industry and for the analysis of historic artworks</li>
+<li class="ta_left">identification of polymorphism of substances</li>
+<li class="ta_left">tracking changes of substances in certain process, e.g. polymerization or thermal degradation</li>
+<li class="ta_left">detection of explosives</li>
+<li class="ta_left">measuring tensile and compressive <a href="optical_strain_sensors.html" title="sensors for mechanical strain based on optical technology, e.g. with fiber Bragg gratings">strain</a> via shifts of Raman lines</li>
+<li class="ta_left">temperature measurements, e.g. distributed temperature sensing in optical fibers</li>
+</ul>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_raman_spectroscopy_equipment.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 47 suppliers for Raman spectroscopy equipment. Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.laserquantum.com/" data-supplier="Laser Quantum" data-location="product-enc" data-keyword="Raman spectroscopy equipment" rel="nofollow" class="bg externallink" title="Visit the website of Laser Quantum"><img src="./bg/logos/laser_quantum.png" alt="Laser Quantum" class="supplierlogo"></a><h3><a href="./bg/profiles/laser_quantum.html" title="See the profile of Laser Quantum">Laser Quantum</a></h3><p>Laser Quantum manufacturers suitable <a href="http://www.laserquantum.com/applications/detail.cfm?id=9" data-supplier="Laser Quantum" data-location="product-enc" data-keyword="Raman spectroscopy equipment" rel="nofollow" class="externallink bg">lasers for Raman spectroscopy</a>, including 473, 532, 660 &amp; 671&nbsp;nm wavelengths. The <strong>gem</strong> family is ideal for OEM integration, whilst <strong>ventus</strong> lasers are better suited to scientific and research applications. For higher resolution requirements, the <strong>ventus solo</strong> and <strong>torus</strong> lasers provide narrowed bandwidths and high stability mode-locking respectively.</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.ape-berlin.de/" data-supplier="APE" data-location="product-enc" data-keyword="Raman spectroscopy equipment" rel="nofollow" class="bg externallink" title="Visit the website of APE"><img src="./bg/logos/ape.png" alt="APE" class="supplierlogo"></a><a href="http://www.ape-berlin.de/en/cars-srs/" data-supplier="APE" data-location="product-enc" data-keyword="Raman spectroscopy equipment" rel="nofollow" class="bg externallink" title="Visit the website of APE"><img src="./bg/products/ape/raman_spectroscopy.png" alt="Raman spectroscopy equipment" class="product"></a><h3><a href="./bg/profiles/ape.html" title="See the profile of APE">APE</a></h3><p>The <a href="http://www.ape-berlin.de/en/tunable-picosecond-laser/" data-supplier="APE" data-location="product-enc" data-keyword="Raman spectroscopy equipment" rel="nofollow" class="externallink bg">picoEmerald system</a> facilitates <a href="http://www.ape-berlin.de/en/cars-srs/" data-supplier="APE" data-location="product-enc" data-keyword="Raman spectroscopy equipment" rel="nofollow" class="externallink bg">Stimulated Raman Scattering (SRS) microscopy</a> for non-invasive label-free imaging. SRS microscopy provides almost background-free imaging contrast. It allows simple spectroscopic identification of the samples’ fingerprint region based on Raman spectra databases. Imaging at high video rates is possible due to very short integration times of the SRS detection module (lock-in amplifier). Switching over to SRS microscopy is relatively straightforward for researchers who already have CARS experience.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.rpmclasers.com/" data-supplier="RPMC Lasers" data-location="product-enc" data-keyword="Raman spectroscopy equipment" rel="nofollow" class="bg externallink" title="Visit the website of RPMC Lasers"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a><h3><a href="./bg/profiles/rpmc_lasers.html" title="See the profile of RPMC Lasers">RPMC Lasers</a></h3><p>RPMC Lasers offers a wide range of wavelength stabilized and singe frequency <a href="https://www.rpmclasers.com/application/raman-spectroscopy-lasers/" data-supplier="RPMC Lasers" data-location="product-enc" data-keyword="Raman spectroscopy equipment" rel="nofollow" class="externallink bg">laser sources for Raman spectroscopy</a>. Additionally, a wide range of pulsed laser sources are available for coherent Raman spectroscopy such as SRS and CARS.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.toptica.com/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="Raman spectroscopy equipment" rel="nofollow" class="bg externallink" title="Visit the website of TOPTICA Photonics"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a><h3><a href="./bg/profiles/toptica_photonics.html" title="See the profile of TOPTICA Photonics">TOPTICA Photonics</a></h3><p>For <a href="https://www.toptica.com/applications/industrial-manufacturing/raman-spectroscopy/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="Raman spectroscopy equipment" rel="nofollow" class="externallink bg">Raman spectroscopy</a>, a wavelength of 532&nbsp;nm is regularly used, as well as 785&nbsp;nm (to reduce autofluorescence of the sample). For semiconductor inspection shorter wavelengths of 405&nbsp;nm, 266&nbsp;nm, or even 213&nbsp;nm are commonly used.</p><p>Most recent, upcoming time-resolved Raman spectroscopy and microscopy applications (i.e measurements on airplane engine exhausts to optimize the combustion process and reduce fuel consumption) trigger the need for pulsed laser sources operating in the femto- and picosecond  regime. This demand is covered by the <a href="https://www.toptica.com/products/psfs-fiber-lasers/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="Raman spectroscopy equipment" rel="nofollow" class="externallink bg">FemtoFiber laser</a> family, which have already proven its outstanding performance and suitability in various broadband CARS and SRS applications.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="raman_spectroscopy.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">P. J. Hendra and P. M. Stratton, &ldquo;Laser-Raman spectroscopy&rdquo;, Chem. Rev. 69 (3), 325 (1969), <a href="https://doi.org/10.1021/cr60259a003">doi:10.1021/cr60259a003</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">D. Hollenbeck and C. D. Cantrell, &ldquo;Multiple-vibrational-mode model for fiber-optic Raman gain spectrum and response function&rdquo;, J. Opt. Soc. Am. B 19 (12), 2886 (2002), <a href="https://doi.org/10.1364/JOSAB.19.002886">doi:10.1364/JOSAB.19.002886</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">C. L. Haynes <i>et al.</i>, &ldquo;Surface-enhanced Raman spectroscopy&rdquo;, Anal. Chem. 77 (17), 338 (2005), <a href="https://doi.org/10.1021/ac053456d">doi:10.1021/ac053456d</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">S. Laing <i>et al.</i>, &ldquo;Surface-enhanced Raman spectroscopy for in vivo biosensing&rdquo;, Nature Rev. Chem. 1, 0060 (2017), <a href="https://doi.org/10.1038/s41570-017-0060">doi:10.1038/s41570-017-0060</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs"><a href="https://onlinelibrary.wiley.com/journal/10974555">Journal of Raman Spectroscopy</a> by Wiley</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="laser_spectroscopy.html" title="methods where the interaction of laser light with matter is utilized">laser spectroscopy</a>, <a href="raman_scattering.html" title="a nonlinear scattering process involving optical phonons">Raman scattering</a><br>and other articles in the category <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/raman_spectroscopy.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Framan_spectroscopy.html&text=RP+Photonics+Encyclopedia+-+Raman+spectroscopy%2C+operation+principles%2C+microscopy%2C+comparison+with+absorption+spectroscopy%2C+Raman+microscopy" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Framan_spectroscopy.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Framan_spectroscopy.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/raman_spectroscopy.html"&gt;<br>Article on Raman Spectroscopy&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/raman_spectroscopy.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/raman_spectroscopy.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/raman_spectroscopy.html<br>article on 'Raman Spectroscopy' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Promote Your White Papers and Videos</h2>
+<p>White papers and videos are great instruments for creating an interest in your technology and demonstrating the capabilities of a company. But <b>how to publicize them</b>, reaching the right audience?</p>
+<p><img class="whitepaper" style="padding:30px 5px; width:70%; height:70%;" src="./img/white_paper_example.png" alt="example for white paper"></p>
+<p>Our suggestion: <a href="./marketing_promotions.html?banner=white_papers">place a preview in a suitable encyclopedia article!</a>
+For example, the paper preview shown above would well fit into our articles on <a href="./laser_diodes.html?banner=white_papers">laser diodes</a> and <a href="./diode_bars.html?banner=white_papers">diode bars</a>.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="EIrJnL5PLJvwBprzk9x+kg==">shownbanner = "white papers";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Shortages of rare earth materials &ndash; a problem for photonics?</h2>
+<p>Photonics heavily depends on the supply of rare earth materials in various areas &ndash; think of <a href="./laser_crystals.html?banner=rare_earth_shortage">laser crystals</a>, <a href="./rare_earth_doped_fibers.html?banner=rare_earth_shortage">active fibers</a> and <a href="./light_emitting_diodes.html?banner=rare_earth_shortage">LEDs</a>, for example.
+It is hard to see how such things could be done without rare earth materials.
+And those have recently been subject to enormous price increases and were even involved in a trade war.</p>
+<p>Is that now a reason for serious concerns in the area of photonics?
+Do we need to undertake serious recycling efforts?
+Our <a href="./spotlight_2014_06_27.html?banner=rare_earth_shortage">Photonics Spotlight article</a> analyzes the situation.</p>
+<p>Receiving the <a href="./spotlight.html?banner=rare_earth_shortage">Photonics Spotlight</a> via our <a href="./newsletters.html?banner=rare_earth_shortage">newsletter</a> might be a good idea &hellip;</p>
+
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="EIrJnL5PLJvwBprzk9x+kg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/raman_spectroscopy.html"
+    },
+    "headline": "Raman Spectroscopy",
+    "image": "https://www.rp-photonics.com/previews/raman_spectroscopy.png",
+    "datePublished": "2019-03-18",
+    "dateModified": "2020-03-14",
+    "description": "Raman spectroscopy is a wide class of spectroscopic methods based on Raman scattering. Conventional incoherent methods are discussed as well as coherent Raman spectroscopy.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter R",
+      "item": "https://www.rp-photonics.com/encyclopedia_r.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Raman spectroscopy",
+      "item": "https://www.rp-photonics.com/raman_spectroscopy.html"
+    }]}
+}
+</script>
+</body>
+</html>

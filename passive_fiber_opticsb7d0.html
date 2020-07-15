@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-3sFAA4nxIrIVxhYO8mGQxA=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Tutorial &ldquo;Passive Fiber Optics&rdquo;: optical fibers, cables, guiding light, fiber modes, single-mode fibers, multimode fibers, fiber ends and joints, couplers, polarization issues, chromatic dispersion, nonlinearities, pulses, tools and accessories</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/passive_fiber_optics.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-04-05">
+<meta name="description" content="A comprehensive physics-based tutorial on passive fiber optics, provided by RP Photonics Consulting GmbH.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="tutorial, fiber optics, optical fibers, optical fibers, cables, guiding light, fiber modes, single-mode fibers, multimode fibers, fiber ends and joints, couplers, polarization issues, chromatic dispersion, nonlinearities, pulses, tools and accessories">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RP Photonics Encyclopedia - Tutorial &ldquo;Passive Fiber Optics&rdquo;: optical fibers, cables, guiding light, fiber modes, single-mode fibers, multimode fibers, fiber ends and joints, couplers, polarization issues, chromatic dispersion, nonlinearities, pulses, tools and accessories">
+<meta property="og:description" content="A comprehensive physics-based tutorial on passive fiber optics, provided by RP Photonics Consulting GmbH.">
+<meta property="og:url" content="https://www.rp-photonics.com/passive_fiber_optics.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/passive_fiber_optics.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="A comprehensive physics-based tutorial on passive fiber optics, provided by RP Photonics Consulting GmbH.">
+<meta name="twitter:title" content="RP Photonics Encyclopedia - Tutorial &ldquo;Passive Fiber Optics&rdquo;: optical fibers, cables, guiding light, fiber modes, single-mode fibers, multimode fibers, fiber ends and joints, couplers, polarization issues, chromatic dispersion, nonlinearities, pulses, tools and accessories">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/passive_fiber_optics.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="3sFAA4nxIrIVxhYO8mGQxA==">
+page="passive_fiber_optics.html?banner=fiber_optics_tutorial"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/encyclopedia_search.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo sponsor"></a> <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="3sFAA4nxIrIVxhYO8mGQxA==">shownsponsors="RPMC Lasers,TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials" class="selected"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_tutorials.html">Tutorials</a> &gt; <a href="passive_fiber_optics.html">Passive fiber optics</a></p>
+<h1>Passive Fiber Optics</h1>
+<p>Author: <a href="paschotta.html">Dr. Paschotta</a></p>
+<figure class="right" style="width:100px;">
+<img src="img/fiberpower_logo.png" alt="fiber optics">
+</figure>
+<p>This tutorial can serve as an introduction to fiber optics, i.e., for learning basic of fiber optics, but it also helps to improve the understanding for people who already have a substantial experience with optical fibers.
+The focus is on the physics of wave propagation and its technical consequences.
+We do not go into mathematical details, but rather try to create an intuitive understanding of the operation principles &ndash; often by demonstrating certain effects with numerical simulations.
+The simulation and design software <a href="fiberpower.html"><b>RP Fiber Power</b></a> of RP Photonics is an excellent tool for such purposes and has been extensively used for this tutorial.</p>
+<aside class="textbox tb_right redmargin" style=" width:240px;">
+<p>New: the free fiber optics software <a href="rp_fiber_calculator.html"><b>RP Fiber Calculator</b></a>!
+With that, you can try out yourself many things explained in this tutorial.</p>
+</aside>
+<p>This resource focuses on <a href="passive_fibers.html" title="optical fibers without laser-active dopants in the fiber core"><em>passive fibers</em></a> &ndash; in contrast to <a href="active_fibers.html" title="optical fibers containing laser-active dopants in the fiber core">active fibers</a>, having an additional laser-active dopant (see our <a href="tutorial_fiber_amplifiers.html"><b>tutorial on fiber amplifiers</b></a>).
+Passive fiber optics have a very wide range of applications, including areas like <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a> (sending data through <a href="fiber_optic_links.html" title="optical communication links where the signal light is transported in fibers">fiber-optic links</a> and <a href="fiber_optic_networks.html" title="communication systems consisting of fiber-optic links">networks</a>), illumination (fiber-optic lighting) and <a href="fiber_optic_sensors.html" title="optical sensors based on fiber devices">fiber-optic sensors</a>.
+The core component is always the optical fiber, which may be packaged into a <a href="fiber_cables.html" title="cables containing one or several optical fibers">fiber-optic cable</a>, or sometimes a fiber bundle.
+<a href="fiber_patch_cables.html" title="a protected and connectorized fiber-optic cable">Fiber patch cables</a> are often equipped with <a href="fiber_connectors.html" title="connectors used as terminations of optical fiber cables">fiber connectors</a>, and there are various other kinds of fiber tools and accessories such as strippers, <a href="fiber_cleavers.html" title="instruments for preparing fiber ends with clean optical surfaces">cleavers</a> and <a href="fusion_splicing_of_fibers.html" title="a technique of making low-loss fiber joints by fusing fiber ends together">splicers</a>.</p>
+<p>Click on the headings to get to the following parts of the tutorial:</p>
+<div class="tutorialpart">
+<table><tr><td class="part_number">1</td><td>
+<h3><a href="passive_fiber_optics1.html"><b>Part 1: Guiding Light in a Glass Fiber</b></a></h3>
+<figure class="right" style="width:250px;">
+<img src="img/fiber_with_cladding_small.png" alt="glass fiber with a cladding">
+</figure>
+<p>How can light be guided in a fiber, using some refractive index contrast? How can we describe this in a ray or wave picture?</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">2</td><td>
+<h3><a href="passive_fiber_optics2.html"><b>Part 2: Fiber Modes</b></a></h3>
+<figure class="right" style="width:200px;">
+<img src="img/mode_solver.png" alt="fiber modes">
+</figure>
+<p>What are fiber modes? What determines the number of guided modes? What are core and <a href="cladding_modes.html" title="modes in optical fibers (or other waveguides) which are not restricted to the region around the core">cladding modes</a>, and what are their basic properties? How and when can we calculate light propagation based on modes, and what are the limitations of the mode decomposition technique?</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">3</td><td>
+<h3><a href="passive_fiber_optics3.html"><b>Part 3: Single-mode Fibers</b></a></h3>
+<figure class="right" style="width:250px;">
+<img src="img/sm_and_mm_fiber1_small.png" alt="single-mode propagation">
+</figure>
+<p>What is the criterion for single-mode guidance?
+How does light in a single-mode fiber behave?
+How does the mode size depend on the core size and numerical aperture? How can we calculate the efficiency of launching light into a single-mode fiber?</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">4</td><td>
+<h3><a href="passive_fiber_optics4.html"><b>Part 4: Multimode Fibers</b></a></h3>
+<figure class="right" style="width:180px;">
+<img src="img/fiber_core_small.png" alt="multimode fiber">
+</figure>
+<p>What determines the number of guided modes of a multimode fiber? What are step-index and graded-index fibers, and how do they differ in terms of intermodal dispersion? Why does the output beam profile sensitively depend on launch conditions and the state of the fiber? Can we use a multimode fiber for single-mode transmission?</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">5</td><td>
+<h3><a href="passive_fiber_optics5.html"><b>Part 5: Fiber Ends</b></a></h3>
+<figure class="right" style="width:200px;">
+<img src="img/angle_cleaved_fiber_small.png" alt="single-mode propagation">
+</figure>
+<p>How to strip, cleave and polish fiber ends? How large does the cleave angle have to be in order to suppress back-reflections?</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">6</td><td>
+<h3><a href="passive_fiber_optics6.html"><b>Part 6: Fiber Joints</b></a></h3>
+<figure class="right" style="width:200px;">
+<img src="img/fiber_joint_with_angle_small.png" alt="fiber joint">
+</figure>
+<p>How can fibers be spliced together or mated with connectors? What coupling losses arise from non-perfect alignment?</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">7</td><td>
+<h3><a href="passive_fiber_optics7.html"><b>Part 7: Propagation Losses</b></a></h3>
+<figure class="right" style="width:200px;">
+<img src="img/fiberpower_bend_loss1_small.png" alt="bend loss">
+</figure>
+<p>What are the origins of propagation losses (attenuation) in optical fibers?
+Where is the loss optimum of silica fibers?
+Why do single-mode fibers typically exhibit lower losses?
+What are bend losses, and which design details determine the critical bend radius?</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">8</td><td>
+<h3><a href="passive_fiber_optics8.html"><b>Part 8: Fiber Couplers and Splitters</b></a></h3>
+<figure class="right" style="width:200px;">
+<img src="img/fiberpower_coupler4_small.png" alt="fiber coupler">
+</figure>
+<p>How does a directional fiber coupler work?
+Which parameters are most essential for its performance?
+What are the typical applications of fiber couplers and splitters?
+Why does the splitting ratio strongly depend on the wavelength?
+In which wavelength range does such a coupler work?</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">9</td><td>
+<h3><a href="passive_fiber_optics9.html"><b>Part 9: Polarization Issues</b></a></h3>
+<figure class="right" style="width:200px;">
+<img src="img/pm_fibers_small.png" alt="polarization-maintaining fibers">
+</figure>
+<p>What are the origins of birefringence in fibers? How do fiber polarization controllers and polarization-maintaining fibers work? How to make polarization-insensitive fiber devices?</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">10</td><td>
+<h3><a href="passive_fiber_optics10.html"><b>Part 10: Chromatic Dispersion of Fibers</b></a></h3>
+<figure class="right" style="width:200px;">
+<img src="img/germanosilicate_fiber2_small.png" alt="dispersion">
+</figure>
+<p>What is chromatic dispersion? How can we understand waveguide dispersion?
+How does the dispersion change near the cut-off of a fiber mode?
+What is intermodal dispersion, and how does chromatic dispersion affect fiber-optic links?</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">11</td><td>
+<h3><a href="passive_fiber_optics11.html"><b>Part 11: Nonlinearities of Fibers</b></a></h3>
+<figure class="right" style="width:200px;">
+<img src="img/fiberpower_self_focusing4_small.png" alt="self-focusing">
+</figure>
+<p>What kind of nonlinear effects occur in fibers? Why can nonlinear self-focusing not be avoided by larger mode areas, in contrast to self-phase modulation, stimulated Brillouin and Raman scattering, and other nonlinear effects?
+What happens to higher-order modes under conditions of very high optical intensities?</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">12</td><td>
+<h3><a href="passive_fiber_optics12.html"><b>Part 12: Ultrashort Pulses and Signals in Fibers</b></a></h3>
+<figure class="right" style="width:200px;">
+<img src="img/intermodal_dispersion1_small.png" alt="intermodal dispersion">
+</figure>
+<p>How do dispersive and nonlinear effects work together for ultrashort pulses in fibers? How can a fiber temporally separate different spatial components of a pulsed input? How can soliton pulses be formed? What is supercontinuum generation?</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">13</td><td>
+<h3><a href="passive_fiber_optics13.html"><b>Part 13: Fiber Accessories and Tools</b></a></h3>
+<p>What types of tools can be used for stripping, cleaving and splicing of fibers? How to inspect fiber ends? What can be used to connectorize fibers, or to collimate their output?</p>
+</td></tr>
+</table>
+</div>
+<p>By the way, on this website we have a lot of other materials on fiber optics &ndash; not only the other <a href="tutorials.html">tutorials</a>, but also a lot of <a href="categories.html#fiber_optics_and_waveguides">encyclopedia articles on fiber optics</a> and various articles of the <a href="spotlight.html">Photonics Spotlight</a> (for example, those of <a href="spotlight_2016_09_12.html">2016-09-12</a>, <a href="spotlight_2016_08_11.html">2016-08-11</a>, <a href="spotlight_2016_05_12.html">2016-05-12</a>, <a href="spotlight_2015_03_11.html">2015-03-11</a>, <a href="spotlight_2014_07_28.html">2014-07-28</a>, <a href="spotlight_2013_07_08.html">2013-07-08</a> and <a href="spotlight_2011_02_10.html">2011-02-10</a>).</p>
+<hr>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="passive_fiber_optics.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><table style="border-spacing:0"><tr>
+<td style="width:60%; vertical-align:middle;">
+<img src="previews/passive_fiber_optics.png" alt="preview" class="article_preview"></td>
+<td style="vertical-align:middle;">
+<div id="socialbox_article">
+<p style="font-size:90%">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fpassive_fiber_optics.html&text=RP+Photonics+Encyclopedia+-+Tutorial+%26ldquo%3BPassive+Fiber+Optics%26rdquo%3B%3A+optical+fibers%2C+cables%2C+guiding+light%2C+fiber+modes%2C+single-mode+fibers%2C+multimode+fibers%2C+fiber+ends+and+joints%2C+couplers%2C+polarization+issues%2C+chromatic+dispersion%2C+nonlinearities%2C+pulses%2C+tools+and+accessories" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fpassive_fiber_optics.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fpassive_fiber_optics.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td>
+</tr></table>
+</main></div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Corona Virus Crisis</h2>
+<p>It is interesting and instructive to realize certain analogies between the spread of an epidemic and elementary processes in lasers. In particular, one can <b>learn about the power of expnential growth</b> and the <b>threshold behavior</b>.</p>
+<p style="font-size:130%; margin:20px 0;">Read the article: <br> "<a href="./spotlight_2020_03_16.html?banner=Corona">Laser Physics Helps to Understand the Corona Virus Crisis</a>"!</p>
+<p>Comments are welcome &ndash; see the input form below the article.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="3sFAA4nxIrIVxhYO8mGQxA==">shownbanner = "Corona";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Tutorial on Fiber Optics</h2>
+<p>See our <a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial">comprehensive fiber optics tutorial</a>:</p>
+<ul>
+<li>guiding light in single-mode and multimode fibers</li>
+<li>fiber ends and joints, propagation and coupling losses</li>
+<li>couplers and splitters</li>
+<li>polarization issues, chromatic dispersion, nonlinearities, pulse propagation</li>
+<li>fiber accessories and tools</li>
+</ul>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/fiber_core_small.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/mode_solver.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/pm_fibers_small.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/fiberpower_self_focusing4_small.png" alt="&nbsp;"></a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="3sFAA4nxIrIVxhYO8mGQxA==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/passive_fiber_optics.html"
+    },
+    "headline": "Passive Fiber Optics",
+    "image": "https://www.rp-photonics.com/previews/passive_fiber_optics.png",
+    "datePublished": "2013-09-25",
+    "description": "A comprehensive physics-based tutorial on passive fiber optics, provided by RP Photonics Consulting GmbH.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tutorials",
+      "item": "https://www.rp-photonics.com/encyclopedia_tutorials.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Passive fiber optics",
+      "item": "https://www.rp-photonics.com/passive_fiber_optics.html"
+    }]}
+}
+</script>
+</body>
+</html>

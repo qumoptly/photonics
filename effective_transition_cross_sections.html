@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-VOdkwEfB7pAJfdQWCQOfMA=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - effective transition cross sections, Stark level manifolds, rate equation modeling</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/effective_transition_cross_sections.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Effective cross sections are a modified type of transition cross sections which apply to optical transitions between Stark level manifolds. They are temperature-dependent.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="effective transition cross sections, Stark level manifolds, rate equation modeling">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Effective Transition Cross Sections">
+<meta property="og:description" content="Effective cross sections are a modified type of transition cross sections which apply to optical transitions between Stark level manifolds. They are temperature-dependent.">
+<meta property="og:url" content="https://www.rp-photonics.com/effective_transition_cross_sections.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/effective_transition_cross_sections.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Effective cross sections are a modified type of transition cross sections which apply to optical transitions between Stark level manifolds. They are temperature-dependent.">
+<meta name="twitter:title" content="Effective Transition Cross Sections">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/effective_transition_cross_sections.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="VOdkwEfB7pAJfdQWCQOfMA==">
+page="effective_transition_cross_sections.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo sponsor"></a> <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="VOdkwEfB7pAJfdQWCQOfMA==">shownsponsors="DataRay,eagleyard Photonics,El.En."</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_e.html">letter E</a> &gt; <a href="effective_transition_cross_sections.html">effective transition cross sections</a></p>
+<h1>Effective Transition Cross Sections</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="advicebox">
+<p><a href="index.html">RP Photonics</a> has a deep expertise on laser gain media, including the fundamental physics and their optimized application in lasers and amplifiers.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a modified type of transition cross sections which apply to optical transitions between Stark level manifolds</p>
+<p>More general term: <a href="transition_cross_sections.html" title="material parameters for quantifying the likelihood or rate of optical transition events">transition cross sections</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">effektive Wirkungsquerschnitte</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<p>Formula symbol: <span class="eqn_il"><span class="greek">&sigma;</span><sub>eff</sub></span></p>
+<p>Units: m</p>
+<p><a href="encyclopedia_cite.html?article=effective%20transition%20cross%20sections">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<figure class="left" style="width:174px;">
+<img src="img/yb_yag_levels.png" alt="energy levels of ytterbium ions in Yb:YAG">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Energy levels of Yb<sup>3+</sup> ions in Yb:YAG, and the usual pump and laser transitions. The optical transitions take place between the <sup>2</sup>F<sub>7/2</sub> and the <sup>2</sup>F<sub>5/2</sub> Stark level manifolds.
+</figcaption>
+</figure>
+<p>Optical <a href="transition_cross_sections.html" title="material parameters for quantifying the likelihood or rate of optical transition events">transition cross sections</a> are defined so that the rate of optical transitions (per active ion) starting from a certain electronic level is the transition cross section <span class="eqn_il"><span class="greek">&sigma;</span></span> times the photon flux (i.e., the optical intensity divided by the <a href="photons.html" title="quanta of light energy">photon</a> energy).
+This concept often cannot be directly applied to optical transitions, e.g. in solid-state laser <a href="gain_media.html" title="media for laser amplification">gain media</a> (e.g. <a href="rare_earth_doped_gain_media.html" title="laser gain media which are doped with rare earth ions">rare-earth-doped</a> <a href="laser_crystals.html" title="transparent crystals with laser-active dopants, used as laser gain media">laser crystals</a> and <a href="active_fibers.html" title="optical fibers containing laser-active dopants in the fiber core">active fibers</a>), because such media exhibit <em>Stark level manifolds</em> containing multiple electronic sublevels with slightly different energies.
+Here, optical transitions can occur between different combinations of sublevels in the two involved Stark level manifolds.
+A frequently encountered difficulty is that neither the exact energetic positions of the sublevels are known, nor the transition cross sections for all the combinations of different sublevels.
+These quantities can be difficult to measure, essentially because the different optical transitions are spectrally broadened by phonon-induced transitions within the Stark level manifolds, so that their contributions to the <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorption</a> and emission spectra overlap.
+Particularly in glass materials, the spectral broadening hides essentially all information on the different sublevels, whereas in some crystals (such as Yb:YAG) the absorption and emission spectra reveal clearly the contributions from different sublevels.</p>
+<p>The concept of <em>effective transition cross sections</em> is very useful, particularly for media with strong spectral broadening.
+Effective cross sections incorporate both the occupation probabilities for different sublevels of both involved Stark level manifolds and the transition cross sections for all pairs of sublevels.
+Their use is simple: the rate of optical transitions starting from a certain Stark level manifold is the effective transition cross section <span class="eqn_il"><span class="greek">&sigma;</span></span> times the photon flux (i.e., the optical intensity divided by the <a href="photons.html" title="quanta of light energy">photon</a> energy).
+Effective cross sections are usually directly obtained from absorption and emission measurements, and the knowledge of sublevel positions and cross sections for the contributing transitions is not required.
+For example, the measured absorption spectrum of an electronically non-excited sample reveals the effective absorption cross sections for transitions from the ground-state manifold to higher-lying Stark level manifolds.</p>
+<figure>
+<img src="img/yb_fiber_cs.png" alt="effective transition cross sections of Yb-doped glass">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Effective absorption and emission cross sections of ytterbium-doped germanosilicate glass, as used in the <a href="fiber_core.html" title="the region in an optical fiber which guides light">cores</a> of ytterbium-doped <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>, at room temperature. (Data from spectroscopic measurements by R. Paschotta)
+</figcaption>
+</figure>
+<p>As an example, Figure&nbsp;2 shows effective cross sections of an <a href="ytterbium_doped_gain_media.html" title="laser gain media containing laser-active ytterbium ions">ytterbium-doped</a> <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fiber</a>.
+Here, the strongest transition is that between the lowest-lying energy levels in both manifolds; it is seen as the &ldquo;zero-phonon line&rdquo; at &asymp;&thinsp;975&nbsp;nm.
+The (weaker) absorption at shorter wavelengths (e.g. 920&nbsp;nm) is due to transitions to higher-lying sublevel in the upper manifold, which involves the emission of one or several <a href="phonons.html" title="quantized microscopic vibrations in solid media">phonons</a> during subsequent thermalization.
+Similarly, the emission at longer wavelength (e.g. 1040&nbsp;nm) is related to transitions to higher-lying levels of the ground-state manifold, and involves phonon emission during thermalization in the ground-state manifold.</p>
+<p>Although effective transition cross sections are in principle very simple to use, some important aspects must be considered:</p>
+<ul>
+<li>Effective cross sections are intrinsically temperature-dependent: temperature changes can affect not only the electronic sublevel positions, but also the relative occupation probabilities within the sublevels.
+The latter effect is often dominant.
+The lower the temperature, the more are the level populations concentrated on the lowest-lying sublevels.
+Higher temperatures allow for absorption at longer wavelengths (starting from higher-lying sublevels of the lower manifold) and for emission at shorter wavelength (starting from higher-lying sublevels of the higher manifold).
+In the example of Figure&nbsp;2, higher temperatures would increase the absorption tail around 1000&ndash;1050&nbsp;nm as well as the emission tail at 900&ndash;950&nbsp;nm, while somewhat reducing the height of the main peak at 975&nbsp;nm.</li>
+<li>Einstein found that the transition cross section for some absorption process should be the same as that for <a href="stimulated_emission.html" title="a quantum effect, where photon emission is triggered by other photons">stimulated emission</a> on the same transition.
+That rule does <em>not</em> apply to effective cross sections in Stark level manifolds.
+There is a modified and more complicated rule resulting from <a href="mccumber_theory.html" title="a theory applied to absorption and emission properties of laser gain media, in particular to solid-state media">McCumber theory</a>.</li>
+<li>Effective cross sections can be used only when the level population within each Stark level manifold can be assumed to be in thermal equilibrium.
+In solid-state media, thermalization is provided by <a href="phonons.html" title="quantized microscopic vibrations in solid media">phonons</a> on a time scale of picoseconds, so that this condition is in most practical cases very well fulfilled.
+Deviations can occur e.g. in <a href="regenerative_amplifiers.html" title="optical amplifiers with a resonator in which a light pulse can do multiple round trips before being coupled out">regenerative amplifiers</a> for <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a>, where an intense pulse can extract a significant amount of energy from the gain medium in a time which is too short to allow for thermalization within the pulse duration.</li>
+</ul>
+<p>Effective transition cross sections are often used for <a href="rate_equation_modeling.html" title="a method of modeling the dynamics of laser gain media">rate equation modeling</a>.
+The dynamic variables are then the population densities of the different Stark level manifolds, not distinguishing the sublevels.</p>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="effective_transition_cross_sections.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="transition_cross_sections.html" title="material parameters for quantifying the likelihood or rate of optical transition events">transition cross sections</a>, <a href="rate_equation_modeling.html" title="a method of modeling the dynamics of laser gain media">rate equation modeling</a><br>and other articles in the categories <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/effective_transition_cross_sections.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Feffective_transition_cross_sections.html&text=RP+Photonics+Encyclopedia+-+effective+transition+cross+sections%2C+Stark+level+manifolds%2C+rate+equation+modeling" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Feffective_transition_cross_sections.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Feffective_transition_cross_sections.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/effective_transition_cross_sections.html"&gt;<br>Article on Effective Transition Cross Sections&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/effective_transition_cross_sections.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/effective_transition_cross_sections.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/effective_transition_cross_sections.html<br>article on 'Effective Transition Cross Sections' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="./fiberpower_self_focusing.html?banner=RP_Fiber_Power_4"><img src="./img/fiberpower_self_focusing4b.png" alt="self-focusing in a fiber" style="margin-bottom:8px"></a>
+<p>Intensity distribution in a fiber at megawatt power levels. The Kerr nonlinearity destabilizes the initially launched LP<sub>11</sub> mode.</p>
+<p>This diagram has been made with the <a href="./fiberpower.html?banner=RP_Fiber_Power_4"><b>RP Fiber Power</b></a> software.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="VOdkwEfB7pAJfdQWCQOfMA==">shownbanner = "RP Fiber Power 4";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Fighting Fraud in Science</h2>
+<p>We occasionally read about scientific fraud &ndash; things like fabricated measurement results &ndash; which is utterly unfair and also undermines the trust of the public in science and its results.</p>
+<p>How to fight that problem?</p>
+<ul>
+<li>Do we need to tell young scientists more clearly that fraud is evil?</li>
+<li>Do supervisors have to stop trusting the results of their coworkers?</li>
+<li>Does the pressure to produce results inevitably favor fraud?</li>
+<li>Where exactly lies the responsibility, if something goes wrong?</li>
+</ul>
+<p>Our <a href="./spotlight_2009_10_19.html?banner=science_fraud">Photonics Spotlight article on science fraud</a> analyzes that carefully.
+It suggests that <b>the risk of fraud is close to zero where supervisors do a responsible job</b>.
+Relations to a more widespread problem &ndash; <b>corrupt authorship practices</b> &ndash; are also identified.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="VOdkwEfB7pAJfdQWCQOfMA==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/effective_transition_cross_sections.html"
+    },
+    "headline": "Effective Transition Cross Sections",
+    "image": "https://www.rp-photonics.com/previews/effective_transition_cross_sections.png",
+    "datePublished": "2008-04-07",
+    "dateModified": "2020-03-14",
+    "description": "Effective cross sections are a modified type of transition cross sections which apply to optical transitions between Stark level manifolds. They are temperature-dependent.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter E",
+      "item": "https://www.rp-photonics.com/encyclopedia_e.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "effective transition cross sections",
+      "item": "https://www.rp-photonics.com/effective_transition_cross_sections.html"
+    }]}
+}
+</script>
+</body>
+</html>

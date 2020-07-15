@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-wNvXmS0IwTBi4XSSOvL0QQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Tutorial &ldquo;Passive Fiber Optics&rdquo;: optical fibers, cables, guiding light, waveguide, total internal reflection, numerical aperture, refractive index profile</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/passive_fiber_optics1.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-04-05">
+<meta name="description" content="Tutorial on passive fiber optics. The first part explains how light can be guided in a fiber. Total internal reflection can be considered, but the wave nature of light must be considered in some cases.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="tutorial, fiber optics, optical fibers, guiding light, waveguide, total internal reflection, numerical aperture, refractive index profile">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="wNvXmS0IwTBi4XSSOvL0QQ==">
+page="passive_fiber_optics1.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/encyclopedia_w.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="wNvXmS0IwTBi4XSSOvL0QQ==">shownsponsors="DataRay"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials" class="selected"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_tutorials.html">Tutorials</a> &gt; <a href="passive_fiber_optics.html">Passive fiber optics</a> &gt; <a href="passive_fiber_optics1.html">Part 1</a></p>
+<h1>Passive Fiber Optics</h1>
+<p>This is part 1 of a <a href="passive_fiber_optics.html">tutorial on passive fiber optics</a> from <a href="paschotta.html">Dr. Paschotta</a>. The tutorial has the following parts:</p>
+<div class="article_parts"><span style='float:left; margin:5px 25px 5px 10px; font-size:60px; color:#888; font-weight:bold; line-height:100%;'>1</span>
+<p>1:&nbsp;<span style="text-decoration:underline;">Guiding light in a glass fiber</span>, 2:&nbsp;<a href="passive_fiber_optics2.html">Fiber modes</a>, 3:&nbsp;<a href="passive_fiber_optics3.html">Single-mode fibers</a>, 4:&nbsp;<a href="passive_fiber_optics4.html">Multimode fibers</a>, 5:&nbsp;<a href="passive_fiber_optics5.html">Fiber ends</a>, 6:&nbsp;<a href="passive_fiber_optics6.html">Fiber joints</a>, 7:&nbsp;<a href="passive_fiber_optics7.html">Propagation losses</a>, 8:&nbsp;<a href="passive_fiber_optics8.html">Fiber couplers and splitters</a>, 9:&nbsp;<a href="passive_fiber_optics9.html">Polarization issues</a>, 10:&nbsp;<a href="passive_fiber_optics10.html">Chromatic dispersion of fibers</a>, 11:&nbsp;<a href="passive_fiber_optics11.html">Nonlinearities of fibers</a>, 12:&nbsp;<a href="passive_fiber_optics12.html">Ultrashort pulses and signals in fibers</a>, 13:&nbsp;<a href="passive_fiber_optics13.html">Accessories and tools</a>
+</p>
+</div>
+<h2 class="togglediv">Part 1: Guiding Light in a Glass Fiber</h2>
+<div>
+<p>The basic function of any <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">optical fiber</a> is to guide light, i.e., to act as a dielectric <a href="waveguides.html" title="spatially inhomogeneous transparent structures for guiding light">waveguide</a>: light injected into one end should stay guided in the fiber.
+In other words, it must be prevented from getting lost e.g. by reaching the outer surface and escaping there.
+We explain this here for glass fibers, but the operation principle of <a href="plastic_optical_fibers.html" title="optical fibers made of polymer materials">plastic optical fibers</a> is the same.</p>
+<p>In principle, the simplest solution for guiding light would be a homogeneous glass rod.
+(If it is thin enough, it can also be bent to some degree.)
+The outer surface can reflect light via <a href="total_internal_reflection.html" title="the phenomenon that light incident on the boundary between two transparent media is fully reflected if the light is coming from the optical more dense medium and the angle of incidence is sufficiently large">total internal reflection</a>.
+Due to the large <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> contrast, this works for a considerable range of input beam angles, and in principle there don't need to be any power losses.</p>
+<figure>
+<img src="img/homogeneous_fiber.png" alt="homogeneous glass fiber with total internal reflection">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Total internal reflection can be used to guide light in a homogeneous fiber. Note that only partial reflection occurs at the end faces, where the angle of incidence is smaller.
+</figcaption>
+</figure>
+<p>However, this simple solution has some crucial disadvantages:</p>
+<ul>
+<li>Due to the high index contrast, even tiny scratches of the glass on the outer surface could lead to substantial optical losses by scattering.
+Therefore, the outer surface would have to be made with high optical quality and well protected against damage and dirt.
+This problem can be mitigated only to some extent with some suitable buffer coating around the fiber; such coatings, not being highly homogeneous, can hardly provide very low optical losses.</li>
+<li>Even if the fiber were pretty thin (e.g., with a diameter of 0.1&nbsp;mm), it would support a huge number of <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a> (see <a href="passive_fiber_optics2.html">part 2</a>), which is bad e.g. when preserving a high <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a> is important.</li>
+</ul>
+<p>One can, however, modify the idea of a very clean coating: use another glass region, having a slightly smaller refractive index than the core glass, as a <a href="fiber_cladding.html" title="the area(s) around the core of an optical fiber">cladding</a>:</p>
+<figure>
+<img src="img/fiber_with_cladding.png" alt="glass fiber with a cladding">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+A multimode glass fiber with a cladding, made of glass with a slightly lower refractive index.
+Total internal reflection can occur at the glass/glass interface, but the incidence angles need to be larger.
+</figcaption>
+</figure>
+<p>That gives us several advantages:</p>
+<ul>
+<li>Glass can be much more clean and homogeneous than a plastic buffer coating.
+That already reduces the losses.</li>
+<li>Due to the reduced index contrast at the reflection points, small irregularities of the interface do not cause as serious optical losses as for a glass/air interface.
+Irregularities at the outer interface do not matter any more, as the light cannot &ldquo;see&rdquo; them.</li>
+<li>The guiding region &ndash; called the <a href="fiber_core.html" title="the region in an optical fiber which guides light">fiber core</a> &ndash; can now be made much smaller than the total fiber, if this is wanted.
+One can adapt the core size e.g. to the size of some small light emitter.</li>
+<li>With a combination of small core size and weak index contrast one can even obtain single-mode guidance (see below).</li>
+</ul>
+<p>Note, however, that smaller index contrasts imply a smaller acceptance angle: <a href="total_internal_reflection.html" title="the phenomenon that light incident on the boundary between two transparent media is fully reflected if the light is coming from the optical more dense medium and the angle of incidence is sufficiently large">total internal reflection</a> can only occur if the incidence angle is above the critical angle.
+The maximum angle of incidence at the input face of the fiber is then determined by the <a href="numerical_aperture.html" title="sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a> (NA):</p>
+<div class="eqn"><img src="eqn/na_def.gif" width="105" height="24" alt="numerical aperture"></div>
+<p>The NA is the sine of the maximum angle of incidence at the input face.
+In the equation, <span class="eqn_il"><i>n</i><sub>0</sub></span> is the refractive index of the medium around the fiber, which is close to 1 in case of air.</p>
+</div>
+<h2 class="togglediv">Considering the Wave Nature of Light</h2>
+<div>
+<p>The preceding considerations were based on a simple geometrical ray picture.
+Particularly in the domain of small cores and weak index contrasts, that simple picture does no more represent an accurate model for light propagation, as it ignores the wave nature of light.
+So let us now consider the wave nature.</p>
+<p>First, we imagine at a <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beam</a> in a homogeneous medium (e.g., some glass).
+Even if such a beam has flat wavefronts initially, within one <a href="rayleigh_length.html" title="the distance from a beam waist where the mode radius increased by a factor square root of 2">Rayleigh length</a> it will start diverging significantly:</p>
+<figure>
+<img src="img/bp_in_fiber1.png" alt="Gaussian beam">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+A Gaussian beam with 1.5&nbsp;&mu;m vacuum wavelength in a homogeneous glass. It initially propagates in a nearly parallel fashion, but eventually diverges.
+</figcaption>
+</figure>
+<p>The divergence is intimately related to a curvature of the wavefronts.
+Apparently, the wavefronts on the beam axis progress faster in <span class="eqn_il"><i>z</i></span> direction than those at higher or lower positions.
+That observation can trigger an idea: couldn't we work against that bending of wavefronts by somewhat slowing down the light near the beam axis?
+That could be done by using an inhomogeneous structure, with a somewhat increased refractive index in the central region.
+Indeed, this works quite well if we simply increase the core index by 0.014 within a radius of 3&nbsp;&mu;m:</p>
+<figure>
+<img src="img/bp_in_fiber2.png" alt="Gaussian beam">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+A Gaussian beam injected into a <a href="step_index_fibers.html" title="optical fibers with a step-index refractive index profile">step-index fiber</a> structure.
+The two horizontal gray lines indicate the position of the core/cladding interface.
+The beam propagation has been simulated with the <a href="fiberpower.html"><b>RP Fiber Power</b></a> software.
+</figcaption>
+</figure>
+<p>The numerical aperture is then 0.3.
+Nearly all light of the injected Gaussian beam is guided.
+An even lower index contrast would be sufficient for that purpose if we make the initial beam radius and the core region larger.</p>
+<p>Note that the guiding of light works even if the fiber is not perfectly straight, but somewhat bent.
+If the bending is not too strong, <a href="bend_losses.html" title="propagation losses in an optical fiber (or other waveguide) caused by bending">bend losses</a> (i.e., power losses induced by bending) are negligibly small.</p>
+<p>Go to <a href="passive_fiber_optics2.html">Part 2: Fiber Modes</a> or back to the <a href="passive_fiber_optics.html">start page</a>.</p>
+</div>
+<hr>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="passive_fiber_optics1.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fpassive_fiber_optics1.html&text=RP+Photonics+Encyclopedia+-+Tutorial+%26ldquo%3BPassive+Fiber+Optics%26rdquo%3B%3A+optical+fibers%2C+cables%2C+guiding+light%2C+waveguide%2C+total+internal+reflection%2C+numerical+aperture%2C+refractive+index+profile" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fpassive_fiber_optics1.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fpassive_fiber_optics1.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></main></div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Thin-film Optics Software</h2>
+<p><a href="./coating.html?banner=RP_Coating">RP Coating</a> is a most versatile software for thin-film design.
+Analyze and optimize a wide range of devices:</p>
+<ul>
+<li>dielectric mirrors, including <a href="./coating_demo_dichroic.html?banner=RP_Coating">dichroic</a> and <a href="./coating_demo_gti.html?banner=RP_Coating">dispersive mirrors</a></li>
+<li><a href="./coating_demo_ar.html?banner=RP_Coating">AR coatings</a></li>
+<li>filters (including <a href="./coating_demo_rugate.html?banner=RP_Coating">rugate filters</a>)</li>
+<li><a href="./coating_demo_polarizer.html?banner=RP_Coating">thin-film polarizers</a></li>
+<li>VECSELs</li>
+</ul>
+<p style="text-align:center;"><a href="./coating.html?banner=RP_Coating"><img src="./img/rp_coating_220.png" alt="coating design"></a></p>
+<p>Further features:</p>
+<ul>
+<li>extreme flexibility due to <a href="./software_script_language.html?banner=RP_Coating">scripting</a>: arbitrary parametrization e.g. of chirped layer structures, definition of arbitrary figure of merits for numerical optimization, generation of arbitrary plots</li>
+<li>comprehensive documentation (PDF and online)</li>
+<li>competent <a href="./software_support.html?banner=RP_Coating">technical support</a></li>
+</ul>
+<p>Use <a href="./coating.html?banner=RP_Coating"><b>RP Coating</b></a> to quickly become a thin-film expert!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="wNvXmS0IwTBi4XSSOvL0QQ==">shownbanner = "RP Coating";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Company News</h2>
+<p>Suppliers having an <a href="./bg_entries.html?banner=company_news">ad package</a> in the <a href="./buyersguide.html?banner=company_news">RP Photonics Buyer&#39;s Guide</a> can publish their <a href="./company_news.html?banner=company_news">company news</a>. For example, they may announce mergers and acquisitions, new product lines, or new cooperrations with distributors.</p>
+<p>Currently we have news from the following companies:</p>
+<ul>
+<li><a href="./bg/profiles/laser_quantum
+.html">Laser Quantum
+</a>: High power in a compact platform at key wavelengths
+</li>
+</ul>
+
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="wNvXmS0IwTBi4XSSOvL0QQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tutorials",
+      "item": "https://www.rp-photonics.com/encyclopedia_tutorials.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Passive fiber optics",
+      "item": "https://www.rp-photonics.com/passive_fiber_optics.html"
+    },{
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Part 1",
+      "item": "https://www.rp-photonics.com/passive_fiber_optics1.html"
+    }]}
+}
+</script>
+</body>
+</html>

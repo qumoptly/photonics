@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-HNaNl/NP3eyhaLqHEhm+Bw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - alignment sensitivity of optical resonators, misalignment, resonator design, cavity</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/alignment_sensitivity_of_optical_resonators.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Lasers, optical resonators and various other optical devices exhibit some sensitivity to misalignment, e.g. in the form of small tilts of laser mirrors.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="alignment sensitivity of optical resonators, misalignment, resonator design, cavity">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Alignment Sensitivity of Optical Resonators">
+<meta property="og:description" content="Lasers, optical resonators and various other optical devices exhibit some sensitivity to misalignment, e.g. in the form of small tilts of laser mirrors.">
+<meta property="og:url" content="https://www.rp-photonics.com/alignment_sensitivity_of_optical_resonators.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/alignment_sensitivity_of_optical_resonators.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Lasers, optical resonators and various other optical devices exhibit some sensitivity to misalignment, e.g. in the form of small tilts of laser mirrors.">
+<meta name="twitter:title" content="Alignment Sensitivity of Optical Resonators">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/alignment_sensitivity_of_optical_resonators.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="HNaNl/NP3eyhaLqHEhm+Bw==">
+page="alignment_sensitivity_of_optical_resonators.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="HNaNl/NP3eyhaLqHEhm+Bw==">shownsponsors="Optikexpertisen"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_a.html">letter A</a> &gt; <a href="alignment_sensitivity_of_optical_resonators.html">alignment sensitivity of optical resonators</a></p>
+<h1>Alignment Sensitivity of Optical Resonators</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="boxadvertisement">
+<h2>Analyzing the Alignment Sensitivity of Laser Resonators</h2>
+<p>The software <a href="resonator.html"><b>RP Resonator</b></a> can be used to calculate and minimize the alignment sensitivity of laser resonators.
+You can find out how the beam path moves for a certain misalignment of one or several resonator mirrors.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: the sensitivity of a laser, an optical resonator or some other device with respect to misalignment</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Justageempfindlichkeit</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#optical_resonators" title="other articles on optical resonators">optical resonators</a>, <a href="categories.html#lasers" title="other articles on lasers">lasers</a></p>
+<p><a href="encyclopedia_cite.html?article=alignment%20sensitivity%20of%20optical%20resonators">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>The performance of a <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a> often deteriorates seriously when one of its components is misaligned.
+Typical effects are a drop of output power, a deteriorated <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a>, and increased <a href="laser_noise.html" title="fluctuations of various parameters of laser light, such as the optical power and phase">laser noise</a>, apart from a modified output beam position and/or direction which can affect applications.</p>
+<p>Misalignment may be caused not only by touching an optical element, but also by mechanical stress applied to the laser housing or by thermal effects.
+The latter can arise from temperature changes in the laboratory or from heating caused by parts of the laser itself.
+In <a href="high_power_lasers.html" title="lasers emitting very high optical powers">high-power lasers</a>, it may be sufficient that some small fraction of the light as transmitted by a highly reflective <a href="laser_mirrors.html" title="high-quality mirrors used in laser resonators and other optical setups">laser mirror</a> hits another mirror mount, and the resulting heating causes some bending through thermal expansion.
+This can degrade the laser performance within a few minutes of operation.</p>
+<p>In <a href="solid_state_lasers.html" title="lasers based on solid-state gain media (usually ion-doped crystals or glasses)">solid-state</a> <a href="bulk_lasers.html" title="lasers based on bulk crystals as gain media">bulk lasers</a>, the effect of misalignment is often strongly related to a shift of the beam position in the <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a>.
+This beam position can be affected by the angular position of any optical element, in particular by tilting of mirrors.
+Further, an effective misalignment can also result from a change in the pump beam position because this can cause some asymmetry of the <a href="thermal_lensing.html" title="a lensing effect induced by temperature gradients">thermal lens</a>.
+Such an asymmetry can cause the intracavity laser beam to be deflected.
+The beam can also be affected by <a href="gain_guiding.html" title="guiding of light based on spatially inhomogeneous optical gain">gain guiding</a> if the <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> is high.</p>
+<figure>
+<img src="img/alignment_sensitivity.png" alt="stability zones of a laser resonator, also showing the alignment sensitivity">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Stability zones of a laser resonator for variation of the thermal lens focusing power (which is proportional to the pump power). The solid lines show the beam radius at various locations, and the dashed curve shows the horizontal offset of the beam at the <a href="laser_crystals.html" title="transparent crystals with laser-active dopants, used as laser gain media">laser crystal</a> when the output coupler is tilted by 1&nbsp;mrad. The alignment sensitivity diverges at the left stability edge, and is much smaller in stability zone&nbsp;I (which is the right one in that case).
+</figcaption>
+</figure>
+<p>The straightforward (but not necessarily the most effective) way to reduce misalignment effects is to use very precise mechanics for alignment and a very stable mechanical laser setup, including a rigid base plate which is ideally somewhat decoupled from the laser housing.
+It is also important, however, to know that the sensitivity of a <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a> against misalignment can depend strongly on the detailed <a href="resonator_design.html" title="the description of the optical components from which an optical resonator is made, and their exact arrangement">resonator design</a>.
+In particular, for a stable resonator it depends on which <a href="stability_zones_of_optical_resonators.html" title="parameter regions of an optical resonator where the resonator is geometrically stable">stability zone</a> is chosen: zone&nbsp;I according to the nomenclature of Magni [2] can be an order of magnitude better than zone&nbsp;II (see Figure&nbsp;1).
+The alignment sensitivity does even diverge at one of the edges of zone&nbsp;II.
+Obviously, it is not advisable to operate a laser close to such a point, but this does happen since many laser resonators are designed without being aware of such issues.
+Finally, a painfully sensitive alignment can result from operating a poorly designed TEM<sub>00</sub> laser in a situation where slight misalignment can cause the excitation of <a href="higher_order_modes.html" title="transverse modes of a resonator or waveguide, excluding the fundamental (axial) modes">higher-order modes</a>.
+Apart from good resonator design, carefully checking the pump intensity profile at an early stage can be a crucial measure.</p>
+<p>Resonators with a large fundamental mode area are often particularly sensitive to misalignment.
+In that regime, a solution with a so-called <a href="unstable_resonators.html" title="optical resonators which are dynamically unstable with respect to transverse beam offsets">unstable resonator</a> can be substantially more robust.</p>
+<p>Misalignment also has a dynamic aspect: mechanical vibrations of resonator mirrors can translate into <a href="beam_pointing_fluctuations.html" title="fluctuations of the propagation direction of a laser beam">beam pointing fluctuations</a> of the output beam, and the resonator design determines how large this influence is.
+Therefore, design optimization for low alignment sensitivity can also contribute good beam pointing stability.</p>
+<p>There are a number of trade-offs in resonator design, e.g. between large mode sizes and low alignment sensitivity, or between zone-I operation and certain other properties.
+Therefore, a good resonator design requires a comprehensive treatment of all requirements in order to find a good combination of resonator properties.
+Although this can be a complicated task, it can be very worthwhile to engage in it because it can make a huge difference in performance.
+The change from a type&nbsp;II to a type&nbsp;I resonator can make the alignment much easier and allow more output power to be obtained with better stability, even if the mode size in the gain medium is not modified.
+It is also possible to shorten the required warm-up time of a laser by optimizing the design.</p>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="alignment_sensitivity_of_optical_resonators.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">J. A. Arnaud, &ldquo;Degenerate optical cavities. II: Effect of misalignments&rdquo;, Appl. Opt. 8 (9), 1909 (1969), <a href="https://doi.org/10.1364/AO.8.001909">doi:10.1364/AO.8.001909</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">V. Magni, &ldquo;Multielement stable resonators containing a variable lens&rdquo;, J. Opt. Soc. Am.A 4 (10), 1962 (1987), <a href="https://doi.org/10.1364/JOSAA.4.001962">doi:10.1364/JOSAA.4.001962</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="sensitivity.html" title="(different meanings, depending on the context)">sensitivity</a>, <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">lasers</a>, <a href="resonator_design.html" title="the description of the optical components from which an optical resonator is made, and their exact arrangement">resonator design</a>, <a href="optical_resonators.html" title="arrangements of optical components which allow a beam of light to circulate">optical resonators</a>, <a href="stability_zones_of_optical_resonators.html" title="parameter regions of an optical resonator where the resonator is geometrically stable">stability zones of optical resonators</a>, <a href="beam_pointing_fluctuations.html" title="fluctuations of the propagation direction of a laser beam">beam pointing fluctuations</a>, <a href="alignment_lasers.html" title="lasers used for alignment purposes">alignment lasers</a>, <a href="spotlight_2011_06_10.html">The Photonics Spotlight 2011-06-10</a>, <a href="software_news_2017_04_26.html">RP Software News 2017-04-26</a><br>and other articles in the categories <a href="categories.html#optical_resonators" title="other articles on optical resonators">optical resonators</a>, <a href="categories.html#lasers" title="other articles on lasers">lasers</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/alignment_sensitivity_of_optical_resonators.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Falignment_sensitivity_of_optical_resonators.html&text=RP+Photonics+Encyclopedia+-+alignment+sensitivity+of+optical+resonators%2C+misalignment%2C+resonator+design%2C+cavity" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Falignment_sensitivity_of_optical_resonators.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Falignment_sensitivity_of_optical_resonators.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/alignment_sensitivity_of_optical_resonators.html"&gt;<br>Article on Alignment Sensitivity of Optical Resonators&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/alignment_sensitivity_of_optical_resonators.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/alignment_sensitivity_of_optical_resonators.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/alignment_sensitivity_of_optical_resonators.html<br>article on 'Alignment Sensitivity of Optical Resonators' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Resonator Design Software</h2>
+<p><a href="./resonator.html?banner=RP_Resonator">RP Resonator</a> &ndash; an extremely flexible resonator design software:</p>
+<ul>
+<li>script-based definition of resonator structures: arbitrary parametrization</li>
+<li>calculate all mode properties of interest</li>
+<li>analyze alignment sensitivities</li>
+<li>automatic optimization with user-defined figure of merit</li>
+<li>generation of arbitrary plots</li>
+</ul>
+<a href="./resonator.html?banner=RP_Resonator"><img src="./img/rp_resonator_220.png" alt="laser resonator design"></a>
+<p>Further features:</p>
+<ul>
+<li>comprehensive documentation (PDF and online)</li>
+<li>competent <a href="./software_support.html?banner=RP_Resonator">technical support</a></li>
+</ul>
+<p style="text-align:center;"><a href="./resonator_tisa.html?banner=RP_Resonator"><img src="./img/rp_resonator_plot.png" alt="RP Resonator plot"></a></p>
+<p>Use <a href="./resonator.html?banner=RP_Resonator"><b>RP Resonator</b></a> to drive your resonator design capabilities to perfection!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="HNaNl/NP3eyhaLqHEhm+Bw==">shownbanner = "RP Resonator";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Field Guide on Lasers</h2>
+<p>Enjoy a compact introduction to laser technology:</p>
+<ul>
+<li>basic principles</li>
+<li>laser beams</li>
+<li>laser resonators</li>
+<li>various types of lasers</li>
+<li>Q switching and mode locking</li>
+<li>frequency conversion</li>
+<li>laser safety</li>
+</ul>
+<p style="text-align:center;"><a href="http://spie.org/x648.html?product_id=767474"><img src="./img/fg_lasers.png" alt="FG Lasers"></a></p>
+<p>This book soon became a bestseller among the SPIE Field Guides.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="HNaNl/NP3eyhaLqHEhm+Bw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/alignment_sensitivity_of_optical_resonators.html"
+    },
+    "headline": "Alignment Sensitivity of Optical Resonators",
+    "image": "https://www.rp-photonics.com/previews/alignment_sensitivity_of_optical_resonators.png",
+    "datePublished": "2006-10-12",
+    "dateModified": "2020-03-14",
+    "description": "Lasers, optical resonators and various other optical devices exhibit some sensitivity to misalignment, e.g. in the form of small tilts of laser mirrors.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter A",
+      "item": "https://www.rp-photonics.com/encyclopedia_a.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "alignment sensitivity of optical resonators",
+      "item": "https://www.rp-photonics.com/alignment_sensitivity_of_optical_resonators.html"
+    }]}
+}
+</script>
+</body>
+</html>

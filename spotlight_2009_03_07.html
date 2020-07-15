@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-8god76+c02O0mNYNta9hXQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>The Photonics Spotlight - Complicated Pulse Shapes from Q-switched Fiber Lasers</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/spotlight_2009_03_07.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2009-03-07">
+<meta name="description" content="The output of Q-switched fiber lasers often exhibits complicated temporal features such as multiple short spikes. The article shows how can these be understood and simulated with a dynamic fiber laser model.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="photonics, spotlight, news, publications, blog, RSS feed, encyclopedia, laser physics, technology">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Photonics Spotlight - Complicated Pulse Shapes from Q-switched Fiber Lasers">
+<meta property="og:description" content="The output of Q-switched fiber lasers often exhibits complicated temporal features such as multiple short spikes. The article shows how can these be understood and simulated with a dynamic fiber laser model.">
+<meta property="og:url" content="https://www.rp-photonics.com/spotlight_2009_03_07.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/spotlight_2009_03_07.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="The output of Q-switched fiber lasers often exhibits complicated temporal features such as multiple short spikes. The article shows how can these be understood and simulated with a dynamic fiber laser model.">
+<meta name="twitter:title" content="The Photonics Spotlight - Complicated Pulse Shapes from Q-switched Fiber Lasers">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/spotlight_2009_03_07.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="8god76+c02O0mNYNta9hXQ==">
+page="spotlight_2009_03_07.html"; cat="P"; shownbanner=""; ref="http://www.rp-photonics.com/spotlight.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="8god76+c02O0mNYNta9hXQ==">shownsponsors="RPMC Lasers"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight" class="selected"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="spotlight.html">The Photonics Spotlight</a> &gt; <a href="spotlight_2009_03_07.html">2009-03-07</a></p>
+<h1 class="posting">Complicated Pulse Shapes from Q-switched Fiber Lasers</h1>
+<div class="posting_details">
+<p>Posted on 2009-03-07 as a part of the <a href="spotlight.html">Photonics Spotlight (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="spotlight_2009_03_07.html" class="url">https://www.rp-photonics.com/spotlight_2009_03_07.html</a></p>
+<p>Author: <a href="https://www.rp-photonics.com/paschotta.html" rel="author">Dr. Rüdiger Paschotta</a>, <a href="https://www.rp-photonics.com/">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: The output of Q-switched fiber lasers often exhibits complicated temporal features such as multiple short spikes. The article shows how can these be understood and simulated with a dynamic fiber laser model.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p class="ref">Ref.: Y. Wang and C.-Q. Xu, Opt. Lett. 29 (10), 1060 (2004); encyclopedia articles on <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber lasers</a>, <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched lasers</a>, <a href="laser_dynamics.html" title="the temporal evolution of quantities such as the optical power and gain in a laser">laser dynamics</a></p>
+<p>When a <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber laser</a> is <a href="q_switching.html" title="a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q-switched</a>, one often does not obtain a clean pulse shape as for most Q-switched <a href="bulk_lasers.html" title="lasers based on bulk crystals as gain media">bulk lasers</a>, but rather a complicated shape with multiple peaks.
+A variety of explanations for such phenomena have been presented in various research papers, partially involving nonlinear effects.
+Even without any <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a> (apart from the effect of <a href="gain_saturation.html" title="the phenomenon that the gain of an amplifier is reduced for high input signal powers">gain saturation</a>), such effects can arise, as it has been explained in the paper cited above, although perhaps not with the desirable degree of clarity.</p>
+<p>What is needed to understand this is a <a href="laser_modeling.html" title="the investigation of phenomena and quantitative relations in lasers, using theoretical models and computational methods">laser model</a> which takes into account the spatial distribution of optical powers and the excitation of the laser dopant in the active fiber.
+I have simulated such phenomena with my software <a href="fiberpower.html"><b>RP Fiber Power</b></a>, which can spatially resolve the excitations in the fiber in the longitudinal and transverse dimension (although the latter is not essential in this context) and (since version 2) is also suitable for dynamic simulations.
+The figure below shows with a logarithmic scale how the power of a Q-switched fiber laser evolves with time after opening the Q-switch.
+The (very fast) Q-switch is located on the left side of the fiber, whereas the output coupler (a <a href="fiber_bragg_gratings.html" title="reflective structures in the core of an optical fiber with a periodic or aperiodic perturbation of the effective refractive index">fiber Bragg grating</a>) is on the right side.</p>
+<figure>
+<img src="img/qs_fl_time_log.png" alt="laser output versus time">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Output power and ytterbium excitation in a Q-switched fiber laser versus time.
+</figcaption>
+</figure>
+<p>Before opening the Q-switch, there is already some small output power due to <a href="amplified_spontaneous_emission.html" title="a process where spontaneously emitted radiation (luminescence) is amplified">amplified spontaneous emission</a> (ASE).
+After opening the Q-switch, it takes half a resonator round-trip time to see a change of output power.
+Then, however, the output power immediately goes to a very high level, as the initial single-pass gain is very high: &asymp;40&thinsp;dB.
+That power multiplied with the round-trip time is already of the order of the <a href="saturation_energy.html" title="a measure of the incident optical pulse energy required for achieving significant saturation of an absorber or a gain medium">saturation energy</a>, such that substantial energy is extracted with one round-trip time.
+Therefore, the gain drops quickly, and there is some decay of output power.
+After another round trip, the remaining (already partially saturated) gain is sufficient to drive the power still higher, but only for a short moment of time, as the gain is now saturated very quickly.
+During subsequent round trips, that spike pattern decays more and more.
+The power drops well below the initial ASE level, as the gain is now close to zero.</p>
+<p>Such behavior is not found in most Q-switched <a href="bulk_lasers.html" title="lasers based on bulk crystals as gain media">bulk lasers</a>, as these have a much lower gain.
+In that case, it takes a significant number of round trips for the power to reach its maximum, and such pronounced temporal structures do not occur.
+However, there can be beating noise when multiple longitudinal modes are lasing.</p>
+<p>Of course, nonlinear effects (which are neglected in this simulation) may modify some details of the results, but they would hardly change the general behavior.
+Note also that a slower switching speed of the Q-switch can substantially modify the results.</p>
+<p>We learn from such simulations that the pulse generation in Q-switched fiber lasers is substantially more complicated than in bulk lasers, at least when the gain is high.
+(For <a href="mode_locked_fiber_lasers.html" title="ultrafast fiber lasers which are actively or passively mode-locked for generating ultrashort pulses">mode-locked fiber lasers</a>, the pulse generation is also more complicated than in bulk lasers, although for entirely different reasons.)
+Certainly, one should be aware of such effects, and ideally be able to simulate them, when developing a Q-switched fiber laser.</p>
+<hr>
+<p style="font-size:90%; margin-bottom:10px;">This article is a posting of the <a href="spotlight.html">Photonics Spotlight</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page and cite it, because its location is permanent.
+See also the <a href="encyclopedia.html">RP Photonics Encyclopedia</a>.</p>
+<p>Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="https://www.rp-photonics.com/spotlight.rss">RSS feed</a>.</p>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="spotlight_2009_03_07.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/spotlight_2009_03_07.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2009_03_07.html&text=The+Photonics+Spotlight+-+Complicated+Pulse+Shapes+from+Q-switched+Fiber+Lasers" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2009_03_07.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2009_03_07.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2009_03_07.html"&gt;<br>Article on The Photonics Spotlight - Complicated Pulse Shapes from Q-switched Fiber Lasers&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2009_03_07.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/spotlight_2009_03_07.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Paschotta</a>, RP Photonics Consulting GmbH. All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./marketing_contact.html">contact</a>, <a href="./privacy.html">data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Traffic on this Website</h2>
+<p>This website is enormously popular. The page views of the <span style="color:#B20B28; font-weight:bold;">encyclopedia</span> and the <span style="color:#4820DD; font-weight:bold;">buyer's guide</span> in the last 12 months:</p>
+<table class="traffictable">
+<tr><th>Month&nbsp;&nbsp;</th><th colspan="2">Page views</th></tr>
+<tr><td>2019-07</td><td style="width:30px; text-align:right;">207,953&nbsp;</td><td><div style="width:74px; background-color:#B20B28; float:left;"></div><div style="width:9px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2019-08</td><td style="width:30px; text-align:right;">199,700&nbsp;</td><td><div style="width:71px; background-color:#B20B28; float:left;"></div><div style="width:8px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2019-09</td><td style="width:30px; text-align:right;">232,582&nbsp;</td><td><div style="width:84px; background-color:#B20B28; float:left;"></div><div style="width:9px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2019-10</td><td style="width:30px; text-align:right;">269,144&nbsp;</td><td><div style="width:97px; background-color:#B20B28; float:left;"></div><div style="width:10px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2019-11</td><td style="width:30px; text-align:right;">282,278&nbsp;</td><td><div style="width:104px; background-color:#B20B28; float:left;"></div><div style="width:9px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2019-12</td><td style="width:30px; text-align:right;">237,826&nbsp;</td><td><div style="width:86px; background-color:#B20B28; float:left;"></div><div style="width:9px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2020-01</td><td style="width:30px; text-align:right;">222,178&nbsp;</td><td><div style="width:79px; background-color:#B20B28; float:left;"></div><div style="width:10px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2020-02</td><td style="width:30px; text-align:right;">225,389&nbsp;</td><td><div style="width:80px; background-color:#B20B28; float:left;"></div><div style="width:10px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2020-03</td><td style="width:30px; text-align:right;">222,647&nbsp;</td><td><div style="width:80px; background-color:#B20B28; float:left;"></div><div style="width:9px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2020-04</td><td style="width:30px; text-align:right;">239,946&nbsp;</td><td><div style="width:87px; background-color:#B20B28; float:left;"></div><div style="width:9px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2020-05</td><td style="width:30px; text-align:right;">236,587&nbsp;</td><td><div style="width:85px; background-color:#B20B28; float:left;"></div><div style="width:10px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2020-06</td><td style="width:30px; text-align:right;">219,899&nbsp;</td><td><div style="width:78px; background-color:#B20B28; float:left;"></div><div style="width:10px; background-color:#4820DD; float:left;"></div></td></tr>
+</table>
+<p>Total: <b>2,796,129 page views</b> within 12 months.</p>
+<p>See also our <a href="./website_statistics.html?banner=web_traffic">detailed published data</a>. They are no surprise in the light of the <a href="./website_search_engines.html?banner=web_traffic">extraordinary Google ranking</a>.</p>
+<p>Obviously, it would be a good idea to <a href="./marketing.html?banner=web_traffic">advertise your photonics products</a> on this site &ndash; with <a href="./bg_entries.html?banner=web_traffic">enhanced entries in the buyer's guide</a> and with <a href="./marketing_banners.html?banner=web_traffic">banners</a> at this place here.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="8god76+c02O0mNYNta9hXQ==">shownbanner = "web traffic";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Sponsors of the Encyclopedia</h2>
+<p>We are grateful to the <a href="./encyclopedia_sponsoring.html?banner=sponsoring">sponsors</a> of our encyclopedia:</p>
+<div style="margin-top:10px; text-align:center;"><a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/nkt_photonics.html"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo"></a></div>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="8god76+c02O0mNYNta9hXQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/spotlight_2009_03_07.html"
+    },
+    "headline": "Complicated Pulse Shapes from Q-switched Fiber Lasers",
+    "image": "https://www.rp-photonics.com/previews/spotlight_2009_03_07.png",
+    "datePublished": "2009-03-07",
+    "description": "The output of Q-switched fiber lasers often exhibits complicated temporal features such as multiple short spikes. The article shows how can these be understood and simulated with a dynamic fiber laser model.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "The Photonics Spotlight",
+      "item": "https://www.rp-photonics.com/spotlight.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "2009-03-07",
+      "item": "https://www.rp-photonics.com/spotlight_2009_03_07.html"
+    }]}
+}
+</script>
+</body>
+</html>

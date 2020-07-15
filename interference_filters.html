@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-SxoQNKpQnknAbbsJSOtrDA=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - interference filters, dielectric mirrors, multilayer, operation principle, Fabry-Perot interferometers, general properties</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/interference_filters.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Interference filters are optical filters which are based on exploiting optical interference effects.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="interference filters, dielectric mirrors, multilayer, operation principle, general properties">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Interference Filters">
+<meta property="og:description" content="Interference filters are optical filters which are based on exploiting optical interference effects.">
+<meta property="og:url" content="https://www.rp-photonics.com/interference_filters.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/interference_filters.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Interference filters are optical filters which are based on exploiting optical interference effects.">
+<meta name="twitter:title" content="Interference Filters">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/interference_filters.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="SxoQNKpQnknAbbsJSOtrDA==">
+page="interference_filters.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo sponsor"></a> <a href="./sponsors/nkt_photonics.html"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="SxoQNKpQnknAbbsJSOtrDA==">shownsponsors="El.En.,NKT Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_interference_filters.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_i.html">letter I</a> &gt; <a href="interference_filters.html">interference filters</a></p>
+<h1>Interference Filters</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_interference_filters.html?s=vbox">21 suppliers for interference filters</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.dynasil.com/product-category/optical-filters/bandpass-filters/?utm_source=rpp&utm_medium=prodlist&utm_campaign=rpp&utm_term=bandpass-fltr--url" data-supplier="Dynasil" data-location="product-enc" data-keyword="interference filters" rel="nofollow" class="bg externallink"><img src="./bg/logos/dynasil.png" alt="Dynasil" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="http://www.laseroptik.de/en/coatings/for-special-applications" data-supplier="Laseroptik" data-location="product-enc" data-keyword="interference filters" rel="nofollow" class="bg externallink"><img src="./bg/logos/laseroptik.png" alt="Laseroptik" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.artifex-engineering.com/optics/filters/" data-supplier="Artifex Engineering" data-location="product-enc" data-keyword="interference filters" rel="nofollow" class="bg externallink"><img src="./bg/logos/artifex_engineering.png" alt="Artifex Engineering" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="http://visimaxtechnologies.com/optical-coating-products/visimax-processtm-light-filters/" data-supplier="VisiMax Technologies" data-location="product-enc" data-keyword="interference filters" rel="nofollow" class="bg externallink"><img src="./bg/logos/visimax_technologies.png" alt="VisiMax Technologies" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_interference_filters.html?s=vbox">List of suppliers for<br>interference filters</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: optical filters based on interference effects</p>
+<p>More general term: <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical filters</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Interferenzfilter</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a></p>
+<p><a href="encyclopedia_cite.html?article=interference%20filters">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Interference filters are <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical filters</a> which are based on exploiting optical <a href="interference.html" title="a range of phenomena associated with the superposition of waves">interference</a> effects &ndash; in contrast to absorbing filters, which utilize wavelength-dependent <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorption</a>.</p>
+<p>Most interference filters are <a href="dielectric_mirrors.html" title="mirrors consisting of multiple thin layers of different transparent optical materials">dielectric multilayer mirrors</a>, where the total reflected light arises from the interference of reflections at several or even many optical surfaces between different thin layers; the same holds for the transmitted light.
+See the article on <a href="dielectric_mirrors.html" title="mirrors consisting of multiple thin layers of different transparent optical materials">dielectric mirrors</a> for more details on fabrication and the operation principle.</p>
+<p>There are also multilayer filters containing both dielectric and metal films.
+With that technology, one can work with fewer layers (e.g. just two metal films with a dielectric film in between), still obtaining substantial reflections, but the absorption losses are substantially higher than for purely dielectric mirrors.</p>
+<p>Some interference filters exploit the principle of <a href="fabry_perot_interferometers.html" title="interferometers consisting of two highly reflecting mirrors, forming a standing-wave resonator">Fabry&ndash;P&eacute;rot interferometers</a>.
+This is possible with monolithic dielectric or metal/dielectric mirror structures, but also with composite structures, involving two separate mirror devices, which are in most cases rigidly fixed to each other such that the spacing, which is essential for interference effect, is accurately maintained.</p>
+<p>The function of an interference filter can be that of a bandpass filter, notch filter, high-pass or low-pass filter, for example, depending on the used design type.
+For example, Fabry&ndash;P&eacute;rot designs naturally lead to bandpass characteristics in transmission and notch filter characteristics in reflection.
+High- and low-pass filters can be designed as somewhat modified <a href="bragg_mirrors.html" title="mirror structures based on Bragg reflection at a period structure">Bragg mirrors</a>.
+The optimization of interference filter designs often involves numerical multilayer thin-film software.</p>
+<p>See the article on <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical filters</a> for further details.</p>
+<h2 class="togglediv">General Properties</h2>
+<div>
+<p>Some general properties of interference filters are briefly summarized in the following:</p>
+<ul>
+<li>Through their design, one may realize a wide range of properties.
+As a substantial number of layer pairs are usually used, there are many degrees of freedom.</li>
+<li>In contrast to absorbing filters, interference filters can usually be operated with relatively high optical <a href="optical_intensity.html" title="optical power per unit area">intensities</a> without being damaged.</li>
+<li>There can be a significant temperature dependence on the detailed optical properties, since the temperature affects the <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive indices</a>.</li>
+<li>Because longer propagation lengths provide larger <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">phase</a> differences even for small differences in optical <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>, tentatively thicker devices are required for improved wavelength resolution.
+However, resonance effects can substantially improve resolution without using a large thickness.</li>
+<li>The filter characteristics substantially depend on the angle of incidence of the input light, because that influences the optical phase differences between reflections from different interfaces.
+Generally, larger angles of incidence lead to smaller phase differences, although the opposite may be expected [1].
+As a result, spectral features tend to move to shorter wavelengths as the angle of incidence is increased (see Figure&nbsp;1).</li>
+</ul>
+<figure>
+<img src="img/bragg_mirror_incidence.png" alt="Bragg mirror reflectivity vs. incidence angle">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+The reflectivity spectrum of a <a href="bragg_mirrors.html" title="mirror structures based on Bragg reflection at a period structure">Bragg mirror</a> for different incidence angles from normal incidence (red) up to 60&deg; (blue) in steps of 10&deg;. For larger incidence angles, the spectral features move towards shorter wavelengths. The diagram has been produced with the <a href="coating.html">RP Coating</a> software.
+</figcaption>
+</figure>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_interference_filters.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 21 suppliers for interference filters. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.dynasil.com/" data-supplier="Dynasil" data-location="product-enc" data-keyword="interference filters" rel="nofollow" class="bg externallink" title="Visit the website of Dynasil"><img src="./bg/logos/dynasil.png" alt="Dynasil" class="supplierlogo"></a><a href="https://www.dynasil.com/product-category/optical-filters/bandpass-filters/?utm_source=rpp&utm_medium=prodlist&utm_campaign=rpp&utm_term=bandpass-fltr--url" data-supplier="Dynasil" data-location="product-enc" data-keyword="interference filters" rel="nofollow" class="bg externallink" title="Visit the website of Dynasil"><img src="./bg/products/dynasil/interference_filters.jpg" alt="interference filters" class="product"></a><h3><a href="./bg/profiles/dynasil.html" title="See the profile of Dynasil">Dynasil</a></h3><p>Optometrics, a Dynasil company, carries a large inventory of <a href="https://www.dynasil.com/product-category/optical-filters/bandpass-filters/?utm_source=rpp&utm_medium=prodlist&utm_campaign=rpp&utm_term=bandpass-fltr" data-supplier="Dynasil" data-location="product-enc" data-keyword="interference filters" rel="nofollow" class="externallink bg">bandpass filters</a> for a variety of wavelengths. These interference filters find applications in spectral analysis, particularly those in clinical chemistry, spectral radiometry, environmental testing, laser line separation, flame photometry and color separation where the required wavelengths are well known. Custom bandpass filters are offered to instrument manufacturers worldwide. Please <a href="https://www.dynasil.com/contact/request-a-quote/?utm_source=rpp&utm_medium=prodlist&utm_campaign=rpp&utm_term=bandpass-fltr-rfq" data-supplier="Dynasil" data-location="product-enc" data-keyword="interference filters" rel="nofollow" class="externallink bg">request a quote</a>.</p></aside>
+<aside class="bg_vendoritem"><a href="http://visimaxtechnologies.com/" data-supplier="VisiMax Technologies" data-location="product-enc" data-keyword="interference filters" rel="nofollow" class="bg externallink" title="Visit the website of VisiMax Technologies"><img src="./bg/logos/visimax_technologies.png" alt="VisiMax Technologies" class="supplierlogo"></a><a href="http://visimaxtechnologies.com/optical-coating-products/visimax-processtm-light-filters/" data-supplier="VisiMax Technologies" data-location="product-enc" data-keyword="interference filters" rel="nofollow" class="bg externallink" title="Visit the website of VisiMax Technologies"><img src="./bg/products/visimax_technologies/optical_filters.jpg" alt="interference filters" class="product"></a><h3><a href="./bg/profiles/visimax_technologies.html" title="See the profile of VisiMax Technologies">VisiMax Technologies</a></h3><p><a href="http://visimaxtechnologies.com/optical-coating-products/visimax-processtm-light-filters/" data-supplier="VisiMax Technologies" data-location="product-enc" data-keyword="interference filters" rel="nofollow" class="externallink bg">VisiMax process color filters</a> selectively and accurately pass light of a small range of colors while reflecting other colors. Our heat-resistant dichroic filter coating technology produces durable interference filters that render light with precise spectral control.</p><p>Accelerate your project by choosing a standard VisiMax color filter, or utilize the expertise of our skilled design team to create a custom filter to meet your specific spectral requirements.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.artifex-engineering.com/" data-supplier="Artifex Engineering" data-location="product-enc" data-keyword="interference filters" rel="nofollow" class="bg externallink" title="Visit the website of Artifex Engineering"><img src="./bg/logos/artifex_engineering.png" alt="Artifex Engineering" class="supplierlogo"></a><a href="https://www.artifex-engineering.com/optics/filters/" data-supplier="Artifex Engineering" data-location="product-enc" data-keyword="interference filters" rel="nofollow" class="bg externallink" title="Visit the website of Artifex Engineering"><img src="./bg/products/artifex_engineering/interference_filters.jpg" alt="interference filters" class="product"></a><h3><a href="./bg/profiles/artifex_engineering.html" title="See the profile of Artifex Engineering">Artifex Engineering</a></h3><p>Artifex Engineering offers <a href="https://www.artifex-engineering.com/optics/filters/" data-supplier="Artifex Engineering" data-location="product-enc" data-keyword="interference filters" rel="nofollow" class="externallink bg">custom interference filters</a> for use in the UV, VIS and IR. Bandpass filters, notch filters, highpass or lowpass filters are available and can be cut to any shape. To reduce the number of layers, absorption filters (color filters) can be combined with a dielectric coating. Black anodized aluminium rings may be provided for ease of mounting. Visit our product page for more information. We look forward to your inquiry.</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.laseroptik.de/" data-supplier="Laseroptik" data-location="product-enc" data-keyword="interference filters" rel="nofollow" class="bg externallink" title="Visit the website of Laseroptik"><img src="./bg/logos/laseroptik.png" alt="Laseroptik" class="supplierlogo"></a><h3><a href="./bg/profiles/laseroptik.html" title="See the profile of Laseroptik">Laseroptik</a></h3><p>LASEROPTIK can design and fabricate a wide range of interference filters for standard and <a href="http://www.laseroptik.de/en/coatings/for-special-applications" data-supplier="Laseroptik" data-location="product-enc" data-keyword="interference filters" rel="nofollow" class="externallink bg">special applications</a>.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="interference_filters.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">R. Paschotta, &ldquo;Reflection spectrum of tilted dielectric mirror&rdquo;, <a href="spotlight_2006_11_02.html">The Photonics Spotlight 2006-11-02</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="interference.html" title="a range of phenomena associated with the superposition of waves">interference</a>, <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical filters</a>, <a href="dielectric_mirrors.html" title="mirrors consisting of multiple thin layers of different transparent optical materials">dielectric mirrors</a>, <a href="fabry_perot_interferometers.html" title="interferometers consisting of two highly reflecting mirrors, forming a standing-wave resonator">Fabry&ndash;P&eacute;rot interferometers</a><br>and other articles in the category <a href="categories.html#general_optics" title="other articles on general optics">general optics</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/interference_filters.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Finterference_filters.html&text=RP+Photonics+Encyclopedia+-+interference+filters%2C+dielectric+mirrors%2C+multilayer%2C+operation+principle%2C+Fabry-Perot+interferometers%2C+general+properties" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Finterference_filters.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Finterference_filters.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/interference_filters.html"&gt;<br>Article on Interference Filters&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/interference_filters.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/interference_filters.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/interference_filters.html<br>article on 'Interference Filters' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Corona Virus Crisis</h2>
+<p>It is interesting and instructive to realize certain analogies between the spread of an epidemic and elementary processes in lasers. In particular, one can <b>learn about the power of expnential growth</b> and the <b>threshold behavior</b>.</p>
+<p style="font-size:130%; margin:20px 0;">Read the article: <br> "<a href="./spotlight_2020_03_16.html?banner=Corona">Laser Physics Helps to Understand the Corona Virus Crisis</a>"!</p>
+<p>Comments are welcome &ndash; see the input form below the article.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="SxoQNKpQnknAbbsJSOtrDA==">shownbanner = "Corona";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Tutorial on Fiber Optics</h2>
+<p>See our <a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial">comprehensive fiber optics tutorial</a>:</p>
+<ul>
+<li>guiding light in single-mode and multimode fibers</li>
+<li>fiber ends and joints, propagation and coupling losses</li>
+<li>couplers and splitters</li>
+<li>polarization issues, chromatic dispersion, nonlinearities, pulse propagation</li>
+<li>fiber accessories and tools</li>
+</ul>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/fiber_core_small.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/mode_solver.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/pm_fibers_small.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/fiberpower_self_focusing4_small.png" alt="&nbsp;"></a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="SxoQNKpQnknAbbsJSOtrDA==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/interference_filters.html"
+    },
+    "headline": "Interference Filters",
+    "image": "https://www.rp-photonics.com/previews/interference_filters.png",
+    "datePublished": "2019-12-05",
+    "dateModified": "2020-03-14",
+    "description": "Interference filters are optical filters which are based on exploiting optical interference effects.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter I",
+      "item": "https://www.rp-photonics.com/encyclopedia_i.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "interference filters",
+      "item": "https://www.rp-photonics.com/interference_filters.html"
+    }]}
+}
+</script>
+</body>
+</html>

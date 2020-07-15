@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-+tJI+iw5o9YU/Ss2X3uq6w=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - interferometers, types, operation principle, Mach-Zehnder, Michelson, Fabry-Perot</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/interferometers.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Interferometers are devices utilizing the phenomenon of interference, for example for high precision measurements. Optical interferometers of many different types are used.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="interferometers, types, operation principle, Mach-Zehnder, Michelson, Fabry-Perot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Interferometers">
+<meta property="og:description" content="Interferometers are devices utilizing the phenomenon of interference, for example for high precision measurements. Optical interferometers of many different types are used.">
+<meta property="og:url" content="https://www.rp-photonics.com/interferometers.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/interferometers.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Interferometers are devices utilizing the phenomenon of interference, for example for high precision measurements. Optical interferometers of many different types are used.">
+<meta name="twitter:title" content="Interferometers">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/interferometers.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="+tJI+iw5o9YU/Ss2X3uq6w==">
+page="interferometers.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="+tJI+iw5o9YU/Ss2X3uq6w==">shownsponsors="EKSMA OPTICS"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_interferometers.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_i.html">letter I</a> &gt; <a href="interferometers.html">interferometers</a></p>
+<h1>Interferometers</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_interferometers.html?s=vbox">50 suppliers for interferometers</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.lightmachinery.com/optics/custom-optics/michelson-interferometers/" data-supplier="LightMachinery" data-location="product-enc" data-keyword="interferometers" rel="nofollow" class="bg externallink"><img src="./bg/logos/lightmachinery.png" alt="LightMachinery" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.teemphotonics.com/integrated-optics/picomove-interferometers/" data-supplier="Teem Photonics" data-location="product-enc" data-keyword="interferometers" rel="nofollow" class="bg externallink"><img src="./bg/logos/teem_photonics.png" alt="Teem Photonics" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_interferometers.html?s=vbox">List of suppliers for<br>interferometers</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="advicebox">
+<p>Ask <a href="index.html">RP Photonics</a> for advice on various types of interferometers, designs, etc.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: optical devices utilizing the phenomenon of interference</p>
+<p>More specific terms: <a href="common_path_interferometers.html" title="interferometers where the sensitivity to mechanical noise is reduced by largely using a common optical path for the interfering light beams">common-path interferometers</a>, <a href="fabry_perot_interferometers.html" title="interferometers consisting of two highly reflecting mirrors, forming a standing-wave resonator">Fabry&ndash;Perot interferometers</a>, <a href="fizeau_interferometers.html" title="interferometers for investigating optical surfaces">Fizeau interferometers</a>, <a href="gires_tournois_interferometers.html" title="linear optical resonators used for introducing chromatic dispersion">Gires&ndash;Tournois interferometers</a>, Mach&ndash;Zehnder interferometers, <a href="michelson_interferometers.html" title="an interferometer with two separate arms and a single beam splitter">Michelson interferometers</a>, <a href="twyman_green_interferometers.html" title="an interferometer similar to a Michelson interferometer, but with expanded beams">Twyman&ndash;Green interferometers</a>, <a href="white_light_interferometers.html" title="interferometers using broadband light inputs">white light interferometers</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Interferometer</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a></p>
+<p><a href="encyclopedia_cite.html?article=interferometers">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>An interferometer is an optical device which utilizes the effect of <a href="interference.html" title="a range of phenomena associated with the superposition of waves">interference</a>.
+Typically, it is based on the following operation principle: it starts with some input beam, splits it into two separate beams with some kind of <a href="beam_splitters.html" title="devices for splitting a laser beam into two or more beams">beam splitter</a> (a partially transmissive mirror), possibly exposes some of these beams to some external influences (e.g. some length changes or <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> changes in a transparent medium), and recombines the beams on another beam splitter.
+The power or the spatial shape of the resulting beam can then be used e.g. for a measurement.</p>
+<p>Interferometers frequently need to be made from high quality optical elements.
+For example, one often uses <a href="optical_flats.html" title="plates with one or two surfaces of very high optical quality and flatness">optical flats</a> with a high degree of surface flatness.</p>
+<h2 class="togglediv">Types of Interferometers</h2>
+<div>
+<h3 class="togglediv">Mach&ndash;Zehnder Interferometer</h3>
+<div>
+<figure class="right" style="width:234px;">
+<img src="img/mach_zehnder_interferometer.png" alt="Mach&ndash;Zehnder interferometer">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Mach&ndash;Zehnder interferometer.
+</figcaption>
+</figure>
+<p>The Mach&ndash;Zehnder interferometer was developed by the physicists Ludwig Mach and Ludwig Zehnder.
+As shown in Figure&nbsp;1, it uses two separate <a href="beam_splitters.html" title="devices for splitting a laser beam into two or more beams">beam splitters</a> (BS) to split and recombine the beams, and has two outputs, which can e.g. be sent to <a href="photodetectors.html" title="devices used for the detection of light">photodetectors</a>.
+The optical path lengths in the two arms may be nearly identical (as in the figure), or may be different (e.g. with an extra <a href="optical_delay_lines.html" title="an optical setup which is used to introduce a time delay for a light beam">delay line</a>).
+The distribution of <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical powers</a> at the two outputs depends on the precise difference in optical arm lengths and on the <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a> (or <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequency</a>).</p>
+<p>If the interferometer is well aligned, the path length difference can be adjusted (e.g. by slightly moving one of the mirrors) so that for a particular optical frequency the total power goes into one of the outputs.
+For misaligned beams (e.g. with one mirror being slightly tilted), there will be some fringe patterns in both outputs, and variations of the path length difference affect mainly the shapes of these interference patterns, whereas the distribution of total powers on the outputs may not change very much.</p>
+</div>
+<h3 class="togglediv">Michelson Interferometer</h3>
+<div>
+<figure class="right" style="width:234px;">
+<img src="img/michelson_interferometer.png" alt="Michelson interferometer">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Michelson interferometers.
+</figcaption>
+</figure>
+<p>A <a href="michelson_interferometers.html" title="an interferometer with two separate arms and a single beam splitter">Michelson interferometer</a>, as invented by Albert Abraham Michelson, uses a single beam splitter for separating and recombining the beams.
+If the two mirrors are aligned for exact perpendicular incidence (see the upper figure), only one output is accessible, and the light of the other output goes back to the light source.
+If that optical feedback is unwanted (as is often the case with a <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a>, which might be destabilized), and/or access to the second output is required, the recombination of beams can occur at a somewhat different location on the beam splitter.
+One possibility is to use <a href="retroreflectors.html" title="optical devices which reflect light in a direction which is parallel to the incident beam">retroreflectors</a>, as shown in the lower figure; this also has the advantage that the interferometer is fairly insensitive to slight misalignment of the retroreflectors.
+Alternatively, simple mirrors at slightly non-normal incidence can be used.</p>
+<p>If the path length difference is non-zero, as shown in both parts of the figure, constructive or destructive interference e.g. for the downward-directed output can be achieved only within a finite optical bandwidth.
+Michelson originally used a broadband light source in the famous Michelson&ndash;Morley experiment, so that he had to build an interferometer with close to zero arm length difference.</p>
+<p>There are many variations of the Michelson interferometer.
+For example, a <a href="twyman_green_interferometers.html" title="an interferometer similar to a Michelson interferometer, but with expanded beams">Twyman&ndash;Green interferometer</a> is essentially a Michelson interferometer with expanded beams in its arms.
+It is used for characterizing optical elements.</p>
+<p>For more details, see the articles on <a href="michelson_interferometers.html" title="an interferometer with two separate arms and a single beam splitter">Michelson interferometers</a> and <a href="twyman_green_interferometers.html" title="an interferometer similar to a Michelson interferometer, but with expanded beams">Twyman&ndash;Green interferometers</a>.</p>
+</div>
+<h3 class="togglediv">Fabry&ndash;P&eacute;rot Interferometer</h3>
+<div>
+<figure class="right" style="width:234px;">
+<img src="img/fabry_perot_interferometer.png" alt="Fabry&ndash;P&eacute;rot interferometer">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Fabry&ndash;P&eacute;rot interferometer.
+</figcaption>
+</figure>
+<p>A <a href="fabry_perot_interferometers.html" title="interferometers consisting of two highly reflecting mirrors, forming a standing-wave resonator">Fabry&ndash;P&eacute;rot interferometer</a> (Figure&nbsp;3) consists of two parallel mirrors, allowing for multiple round trips of light.
+(A monolithic version of this can be a glass plate with reflective coatings on both sides.)
+For high mirror reflectivities, such a device can have very sharp resonances (a high <a href="finesse.html" title="the free spectral range divided by the FWHM width of the resonances of an optical resonator"><em>finesse</em></a>), i.e. exhibit a high transmission only for optical frequencies which closely match certain values.
+Based on these sharp features, distances (or changes of distances) can be measured with a resolution far better than the <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>.
+Similarly, resonance frequencies can be defined very precisely.</p>
+<p>A modified version is the <a href="fizeau_interferometers.html" title="interferometers for investigating optical surfaces">Fizeau interferometer</a>, which is used for characterizing optical surfaces.</p>
+<p>Another special kind of Fabry&ndash;P&eacute;rot interferometer, used for <a href="dispersion_compensation.html" title="the control of the overall chromatic dispersion of a system by adding optical elements with a suitable amount of dispersion">dispersion compensation</a>, is the <a href="gires_tournois_interferometers.html" title="linear optical resonators used for introducing chromatic dispersion">Gires&ndash;Tournois interferometer</a>.</p>
+<p>For more details, see the articles on <a href="fabry_perot_interferometers.html" title="interferometers consisting of two highly reflecting mirrors, forming a standing-wave resonator">Fabry&ndash;P&eacute;rot interferometers</a>.</p>
+</div>
+<h3 class="togglediv">Sagnac Interferometer</h3>
+<div>
+<figure class="right" style="width:234px;">
+<img src="img/sagnac_interferometer.png" alt="Sagnac interferometer">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Sagnac interferometer.
+</figcaption>
+</figure>
+<p>A Sagnac interferometer (named after the French physicist Georges Sagnac) uses counterpropagating beams in a ring path, realized e.g. with multiple mirrors (as in Figure&nbsp;4) or with an optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fiber</a>.
+If the whole interferometer is rotated e.g. around an axis which is perpendicular to the drawing plane, this introduces a relative <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">phase</a> shift of the counterpropagating beams (<em>Sagnac effect</em>).
+The sensitivity for rotations depends on the area covered by the ring, multiplied by the number of round trips (which can be large e.g. when using many turns in an optical fiber).
+It is possible e.g. to obtain a sensitivity which is sufficient for measuring the rotation of the Earth around its axis.</p>
+<p>Sagnac interferometers are used e.g. in inertial guidance systems.</p>
+</div>
+<h3 class="togglediv">Common-path Interferometers</h3>
+<div>
+<p><a href="common_path_interferometers.html" title="interferometers where the sensitivity to mechanical noise is reduced by largely using a common optical path for the interfering light beams">Common-path interferometers</a> use a common beam path but e.g. different <a href="polarization_of_light.html" title="direction of the electric field oscillation of a light beam">polarization states</a> for the two beams.
+This has the advantage that fluctuations of the geometric path length do not affect the interferometer output, whereas the interferometer can be a sensitive detector for <a href="birefringence.html" title="the polarization dependence of the refractive index of a medium">birefringence</a>.
+The Sagnac interferometer (see above) is another example; here, the interfering beams have opposite propagation directions.</p>
+</div>
+<h3 class="togglediv">Fiber Interferometers</h3>
+<div>
+<p>All the interferometer types discussed above can also be implemented with optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>.
+Instead of beam splitters, one then uses <a href="fiber_couplers.html" title="fiber devices for coupling light from one or several input fibers to one or several output fibers, or from free space into a fiber">fiber couplers</a>.</p>
+<p>A potential difficulty is that the polarization state of light may change during propagation in the fiber.
+This often requires one to include a fiber polarization controller (which may occasionally have to be readjusted) or to use <a href="polarization_maintaining_fibers.html" title="specialty optical fibers with strong built-in birefringence, preserving the properly oriented linear polarization of an input beam">polarization-maintaining fibers</a>.</p>
+<p>Also note that temperature changes in the fibers (as well as bending) can affect the <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">optical phase</a> shifts.
+This can be a problem if different fibers belong to different interferometer arms.
+However, there are also fiber interferometers where one fiber serves for both arms, e.g. using two different polarization directions in the same fiber.</p>
+</div>
+</div>
+<h2 class="togglediv">Physical Principles of Interferometers</h2>
+<div>
+<p>There are also substantially different principles of using interferometers.
+For example, Michelson interferometers are used in very different ways, using different types of light sources and <a href="photodetectors.html" title="devices used for the detection of light">photodetectors</a>:</p>
+<ul>
+<li>When a light source with low optical <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a> is used (perhaps even a <a href="single_frequency_lasers.html" title="lasers emitting radiation in a single resonator mode">single-frequency laser</a>), the detector signal varies periodically when the difference in arm lengths is changed.
+Such a signal makes it possible to do measurements with a depth resolution well below the wavelength, but there is an ambiguity.
+For example, a monotonic increase or decrease of the arm length difference leads to the same variation of the detected signal.
+This problem may be solved by modulating the arm length difference e.g. with a vibrating mirror (or with an <a href="optical_modulators.html" title="devices allowing one to manipulate properties of light beams, such as the optical power or phase">optical modulator</a>) and by monitoring the resulting modulation on the detector in addition to the average signal power.
+Simultaneous operation of an interferometer with two wavelengths is another way of removing the ambiguity.</li>
+<li>If the detector is a kind of <a href="cameras.html" title="optical instruments for recording still or moving images">camera</a> (e.g. a CCD chip) and the surfaces monitored are fairly smooth, the phase profile (and thus the profile of optical path length) can be reconstructed by recording several images with different overall phase shifts (<em>phase-shifting interferometry</em>).
+A phase-unwrapping algorithm can be used to retrieve unambiguously surface maps extending over more than a wavelength.
+However, such methods may not work for rough surfaces or for surfaces with steep steps.</li>
+<li>A <a href="white_light_interferometers.html" title="interferometers using broadband light inputs">white light interferometer</a> uses a broadband light source (e.g., a <a href="superluminescent_diodes.html" title="broadband semiconductor light sources based on superluminescence">superluminescent diode</a>), so that interference fringes are observed only in a narrow range around the point of zero arm length difference.
+In that way, the above-mentioned ambiguity is effectively removed.</li>
+<li>A <a href="tunable_lasers.html" title="lasers the output wavelengths of which can be tuned">wavelength-tunable laser</a> can be used to record the detector signal for different optical frequencies.
+From such signals, the arm length difference can be unambiguously retrieved.
+This works also with two-dimensional detectors (e.g. CCD cameras).</li>
+<li>If one of the mirrors is intentionally tilted, an interference fringe pattern is obtained.
+Any change in arm length difference will then move the fringe pattern.
+This method makes it possible to measure phase changes sensitively and also to measure position-dependent phase changes, e.g. in some optical element.</li>
+</ul>
+<p>Another class of interferometric methods is named <a href="spectral_phase_interferometry.html" title="a class of interferometric methods for pulse characterization, where interference in the frequency domain is exploited"><em>spectral phase interferometry</em></a>.
+Here, interference in the spectral domain is exploited.
+The spectral modulation period is essentially determined by a time delay.</p>
+</div>
+<h2 class="togglediv">Applications</h2>
+<div>
+<p>Interferometers can be used for many different purposes &ndash; by far not only for length measurements.
+Some examples are:</p>
+<aside class="callout blue">In 2016 it has been announced that a large interferometer operated at LIGO Hanford has detected gravitational waves resulting from the inspiral of two large black holes. An extraordinarily high detection sensitivity had to be achieved for that.</aside>
+<ul>
+<li>for the <a href="distance_measurements_with_lasers.html" title="measurements of distances using laser light">measurement of a distance</a> (or changes of a distance or a position, i.e., a displacement) with an accuracy of better than an optical wavelength (in extreme cases, e.g. for gravitational wave detection, with a sensitivity many orders of magnitude below the wavelength)</li>
+<li>for measuring the wavelength e.g. of a <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a> (&rarr;&nbsp;<a href="wavemeters.html" title="devices for precise measurements of laser wavelengths"><em>wavemeter</em></a>), or for analyzing a beam in terms of wavelength components</li>
+<li>for monitoring slight changes in an optical wavelength or frequency (typically using the transmission curve of a <a href="fabry_perot_interferometers.html" title="interferometers consisting of two highly reflecting mirrors, forming a standing-wave resonator">Fabry&ndash;P&eacute;rot interferometer</a>) (<em>frequency discriminators</em>)</li>
+<li>for measuring rotations (with a Sagnac interferometer)</li>
+<li>for measuring slight deviations of an optical surface from perfect flatness (or from some other shape)</li>
+<li>for measuring the <a href="linewidth.html" title="width of the spectrum of a light beam or an absorption feature">linewidth</a> of a laser (&rarr;&nbsp;<a href="self_heterodyne_linewidth_measurement.html" title="a technique for laser linewidth measurements, based on a beat note between the beam and a delayed version of itself"><em>self-heterodyne linewidth measurement</em></a>, <em>frequency discriminator</em>)</li>
+<li>for revealing tiny <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> variations or induced index changes in a transparent medium</li>
+<li>for modulating the power or phase of a <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a>, e.g. with a Mach&ndash;Zehnder modulator in an <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communication</a> system</li>
+<li>for measurements of the <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> of optical components</li>
+<li>as an <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical filter</a></li>
+<li>for the full characterization of <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a> via <a href="spectral_phase_interferometry.html" title="a class of interferometric methods for pulse characterization, where interference in the frequency domain is exploited">spectral phase interferometry</a></li>
+</ul>
+<p>Depending on the application, the demands on the light source in an interferometer can be very different.
+In many cases, a spectrally very pure source, e.g. a <a href="single_frequency_lasers.html" title="lasers emitting radiation in a single resonator mode">single-frequency laser</a> is required.
+Sometimes, the laser has to be <a href="wavelength_tuning.html" title="the manipulation of the output wavelength of an optical device such as a laser or an optical parametric oscillator">wavelength-tunable</a>.
+In other cases (e.g. for dispersion measurements with <a href="white_light_interferometers.html" title="interferometers using broadband light inputs">white light interferometers</a>), a light source with a very broad and smooth <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a> is required.</p>
+</div>
+<h2 class="togglediv">Noise Influences</h2>
+<div>
+<p>Interferometric measurements can be subject to <a href="laser_noise.html" title="fluctuations of various parameters of laser light, such as the optical power and phase">laser noise</a>, but often also from <a href="quantum_noise.html" title="noise arising from quantum fluctuations">quantum noise</a> influences.
+Typically, <a href="vacuum_noise.html" title="quantum noise of the vacuum state, or quantum noise introduced into an optical system via a vacuum input">vacuum noise</a> entering the open input port at a beamsplitter defines the <a href="standard_quantum_limit.html" title="a limit for noise levels set by quantum mechanics">standard quantum limit</a> (<a href="shot_noise.html" title="quantum-limited intensity noise">shot noise</a> limit) for the sensitivity [2,&thinsp;5].
+A noise level below that limit can be achieved by injecting <a href="squeezed_states_of_light.html" title="nonclassical states of light with noise below the standard quantum limit in one quadrature component">squeezed states of light</a> into an interferometer [2,&thinsp;4,&thinsp;12].</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_interferometers.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 50 suppliers for interferometers. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.teemphotonics.com/" data-supplier="Teem Photonics" data-location="product-enc" data-keyword="interferometers" rel="nofollow" class="bg externallink" title="Visit the website of Teem Photonics"><img src="./bg/logos/teem_photonics.png" alt="Teem Photonics" class="supplierlogo"></a><a href="https://www.teemphotonics.com/integrated-optics/picomove-interferometers/" data-supplier="Teem Photonics" data-location="product-enc" data-keyword="interferometers" rel="nofollow" class="bg externallink" title="Visit the website of Teem Photonics"><img src="./bg/products/teem_photonics/interferometers.jpg" alt="interferometers" class="product"></a><h3><a href="./bg/profiles/teem_photonics.html" title="See the profile of Teem Photonics">Teem Photonics</a></h3><p>Teem Photonics has developed and offers the <a href="https://www.teemphotonics.com/integrated-optics/picomove-interferometers/" data-supplier="Teem Photonics" data-location="product-enc" data-keyword="interferometers" rel="nofollow" class="externallink bg">PicoMove interferometers</a> &ndash; a new line of compact, stable and high performance interferometers for the measurement of picometer-scale displacements and vibrations.</p><p>These interferometers are based on single-chip integration of a high stability architecture which results in measurements with an intrinsic ultra-low noise.</p><p>The eye-safe operating wavelength of 1.55&nbsp;µm provides compatibility with commercial telecom sources.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.lightmachinery.com/" data-supplier="LightMachinery" data-location="product-enc" data-keyword="interferometers" rel="nofollow" class="bg externallink" title="Visit the website of LightMachinery"><img src="./bg/logos/lightmachinery.png" alt="LightMachinery" class="supplierlogo"></a><a href="https://www.lightmachinery.com/optics/custom-optics/michelson-interferometers/" data-supplier="LightMachinery" data-location="product-enc" data-keyword="interferometers" rel="nofollow" class="bg externallink" title="Visit the website of LightMachinery"><img src="./bg/products/lightmachinery/interferometers.jpg" alt="interferometers" class="product"></a><h3><a href="./bg/profiles/lightmachinery.html" title="See the profile of LightMachinery">LightMachinery</a></h3><p>LightMachinery has a great breadth of expertise for manufacturing space qualified, wide-field <a href="https://www.lightmachinery.com/optics/custom-optics/michelson-interferometers/" data-supplier="LightMachinery" data-location="product-enc" data-keyword="interferometers" rel="nofollow" class="externallink bg">Michelson interferometers</a>.</p><p>Polarizing, non-polarizing, cemented, optically contacted (epoxy free bonded), hexagonal, square, small (1&nbsp;mm), large (45&nbsp;mm), UV, visible, IR. Material selection, coating design, modeling of phase &amp; polarization, mechanical design, process development, quality planning, glass shaping and polishing, optical contacting, cementing and finally testing, testing and testing. Of course that&#39;s what makes it so interesting and challenging to work on these projects.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="interferometers.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">A. Labeyrie, &ldquo;Stellar interferometry methods&rdquo;, Am. Rev. Astrom. Astrophys. 16, 77 (1978), <a href="https://doi.org/10.1146/annurev.aa.16.090178.000453">doi:10.1146/annurev.aa.16.090178.000453</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">C. M. Caves, &ldquo;Quantum-mechanical noise in an interferometer&rdquo;, Phys. Rev. D 23 (8), 1693 (1981), <a href="https://doi.org/10.1103/PhysRevD.23.1693">doi:10.1103/PhysRevD.23.1693</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">K. Creath, &ldquo;Phase-shifting speckle interferometry&rdquo;, Appl. Opt. 24 (18), 3053 (1985), <a href="https://doi.org/10.1364/AO.24.003053">doi:10.1364/AO.24.003053</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">M. Xiao <i>et al.</i>, &ldquo;Precision measurement beyond the shot-noise limit&rdquo;, Phys. Rev. Lett. 59 (3), 278 (1987), <a href="https://doi.org/10.1103/PhysRevLett.59.278">doi:10.1103/PhysRevLett.59.278</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">M. T. Jaekel and S. Reynaud, &ldquo;Quantum limits in interferometric measurements&rdquo;, Europhys. Lett. 13, 301 (1990), <a href="https://doi.org/10.1209/0295-5075/13/4/003">doi:10.1209/0295-5075/13/4/003</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">D. Shoemaker <i>et al.</i>, &ldquo;Prototype Michelson interferometer with Fabry-Perot cavities&rdquo;, Appl. Opt. 30 (22), 3133 (1991), <a href="https://doi.org/10.1364/AO.30.003133">doi:10.1364/AO.30.003133</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">P. Fritschel <i>et al.</i>, &ldquo;Demonstration of light recycling in a Michelson interferometer with Fabry-Perot cavities&rdquo;, Appl. Opt. 31 (10), 1412 (1992), <a href="https://doi.org/10.1364/AO.31.001412">doi:10.1364/AO.31.001412</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">S. Diddams and J.-C. Diels, &ldquo;Dispersion measurements with white-light interferometry&rdquo;, J. Opt. Soc. Am. B 13 (6), 1120 (1996), <a href="https://doi.org/10.1364/JOSAB.13.001120">doi:10.1364/JOSAB.13.001120</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">R. Dandliker <i>et al.</i>, &ldquo;Distance measurement by multiple-wavelength interferometry&rdquo;, J. Opt. 29 (3), 105 (1998), <a href="https://doi.org/10.1088/0150-536X/29/3/002">doi:10.1088/0150-536X/29/3/002</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">J. M. Schmitt, &ldquo;Optical coherence tomography (OCT): a review&rdquo;, J. Sel. Top. Quantum Electron. 5 (4), 1205 (1999), <a href="https://doi.org/10.1109/2944.796348">doi:10.1109/2944.796348</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">J. D. Monnier, &ldquo;Optical interferometry in astronomy&rdquo;, Rep. Prog. Phys. 66 (5), 789 (2003), <a href="https://doi.org/10.1088/0034-4885/66/5/203">doi:10.1088/0034-4885/66/5/203</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">A. Thüring <i>et al.</i>, &ldquo;Broadband squeezing of quantum noise in a Michelson interferometer with Twin-Signal-Recycling&rdquo;, Opt. Lett. 34 (6), 824 (2009), <a href="https://doi.org/10.1364/OL.34.000824">doi:10.1364/OL.34.000824</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">J. Biophoton. 2 (6-7) (2009): special issue on optical coherence tomography</td></tr>
+<tr><td class="refno">[14]</td><td class="refs">B. P. Abbott <i>et al.</i>, &ldquo;Observation of gravitational waves from a binary black hole merger&rdquo;, Phys. Rev. Lett. 116 (6), 061102 (2016), <a href="https://doi.org/10.1103/PhysRevLett.116.061102">doi:10.1103/PhysRevLett.116.061102</a></td></tr>
+<tr><td class="refno">[15]</td><td class="refs">C. Hilweg <i>et al.</i>, &ldquo;Gravitationally induced phase shift on a single photon&rdquo;, New J. Phys. 19, 033028 (2017), <a href="https://doi.org/10.1088/1367-2630/aa638f">doi:10.1088/1367-2630/aa638f</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="interference.html" title="a range of phenomena associated with the superposition of waves">interference</a>, <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">optical phase</a>, <a href="spectral_phase_interferometry.html" title="a class of interferometric methods for pulse characterization, where interference in the frequency domain is exploited">spectral phase interferometry</a>, <a href="michelson_interferometers.html" title="an interferometer with two separate arms and a single beam splitter">Michelson interferometers</a>, <a href="twyman_green_interferometers.html" title="an interferometer similar to a Michelson interferometer, but with expanded beams">Twyman&ndash;Green interferometers</a>, <a href="gires_tournois_interferometers.html" title="linear optical resonators used for introducing chromatic dispersion">Gires&ndash;Tournois interferometers</a>, <a href="fabry_perot_interferometers.html" title="interferometers consisting of two highly reflecting mirrors, forming a standing-wave resonator">Fabry&ndash;P&eacute;rot interferometers</a>, <a href="fizeau_interferometers.html" title="interferometers for investigating optical surfaces">Fizeau interferometers</a>, <a href="white_light_interferometers.html" title="interferometers using broadband light inputs">white light interferometers</a>, <a href="optical_metrology.html" title="the science and technology of performing measurements with light">optical metrology</a>, <a href="distance_measurements_with_lasers.html" title="measurements of distances using laser light">distance measurements with lasers</a>, <a href="optical_heterodyne_detection.html" title="a sensitive method of photodetection, reaching the standard quantum limit even for weak signal powers">optical heterodyne detection</a>, <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a><br>and other articles in the categories <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a></p>
+<hr style="margin-top:16px; margin-bottom:12px;">
+<a href="paschotta.html"><img src="img/paschotta3_small.jpg" alt="Dr. R. Paschotta" style="float:left; margin:0px 16px 20px 18px;" width="80" height="97"></a>
+<div style="margin-bottom:12px;">
+<p style="font-size:90%; line-height:20px; padding-right:20px;">This encyclopedia is authored by <a href="paschotta.html" class="redlink">Dr. Rüdiger Paschotta</a>, the founder and executive of <a href="index.html" class="redlink">RP Photonics Consulting GmbH</a>.
+How about a <a href="training.html" class="redlink">tailored training course</a> from this distinguished expert at your location?
+<a href="contact.html" class="redlink">Contact</a> RP Photonics to find out how his <a href="./services.html" class="redlink">technical consulting services</a> (e.g. product designs, problem solving, independent evaluations, training) and <a href="software.html" class="redlink">software</a> could become very valuable for your business!</p>
+</div>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/interferometers.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Finterferometers.html&text=RP+Photonics+Encyclopedia+-+interferometers%2C+types%2C+operation+principle%2C+Mach-Zehnder%2C+Michelson%2C+Fabry-Perot" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Finterferometers.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Finterferometers.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/interferometers.html"&gt;<br>Article on Interferometers&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/interferometers.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/interferometers.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/interferometers.html<br>article on 'Interferometers' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Website Tours</h2>
+<p>You can explore our website with the following tours:</p>
+<ul>
+<li><a href="./encyclopedia.html?tour=Encyclopedia">The RP Photonics Encyclopedia</a></li>
+<li><a href="./encyclopedia.html?tour=New_Encyclopedia_Articles">The latest encyclopedia articles</a></li>
+<li><a href="./buyersguide.html?tour=Using_the_Buyers_Guide">Using the Buyer's Guide</a></li>
+<li><a href="./buyersguide.html?tour=Advertising_in_the_Buyers_Guide">Advertising in the Buyer's Guide</a></li>
+</ul>
+<img src="./img/tour_bus.png" style="width:90%; margin:15px 0;" alt="&nbsp;">
+<p>You will be lead through a couple of pages, obtaining explanations on every one.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="+tJI+iw5o9YU/Ss2X3uq6w==">shownbanner = "tours";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Sponsors of the Encyclopedia</h2>
+<p>We are grateful to the <a href="./encyclopedia_sponsoring.html?banner=sponsoring">sponsors</a> of our encyclopedia:</p>
+<div style="margin-top:10px; text-align:center;"><a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/nkt_photonics.html"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo"></a></div>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="+tJI+iw5o9YU/Ss2X3uq6w==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/interferometers.html"
+    },
+    "headline": "Interferometers",
+    "image": "https://www.rp-photonics.com/previews/interferometers.png",
+    "datePublished": "2005-02-11",
+    "dateModified": "2020-03-14",
+    "description": "Interferometers are devices utilizing the phenomenon of interference, for example for high precision measurements. Optical interferometers of many different types are used.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter I",
+      "item": "https://www.rp-photonics.com/encyclopedia_i.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "interferometers",
+      "item": "https://www.rp-photonics.com/interferometers.html"
+    }]}
+}
+</script>
+</body>
+</html>

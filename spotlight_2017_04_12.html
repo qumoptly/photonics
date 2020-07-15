@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-BNv/qx3x45J+rjhStei/Fg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>The Photonics Spotlight - Does a Saturable Absorber in a Laser Lead to Passive Q switching or Mode Locking?</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/spotlight_2017_04_12.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2017-04-12">
+<meta name="description" content="It is interesting to consider what conditions are required for obtaining passive Q switching or mode locking of a laser. It turns out that the requirements for those two operation regimes are extremely different.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="photonics, spotlight, news, publications, blog, RSS feed, encyclopedia, laser physics, technology">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Photonics Spotlight - Does a Saturable Absorber in a Laser Lead to Passive Q switching or Mode Locking?">
+<meta property="og:description" content="It is interesting to consider what conditions are required for obtaining passive Q switching or mode locking of a laser. It turns out that the requirements for those two operation regimes are extremely different.">
+<meta property="og:url" content="https://www.rp-photonics.com/spotlight_2017_04_12.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/spotlight_2017_04_12.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="It is interesting to consider what conditions are required for obtaining passive Q switching or mode locking of a laser. It turns out that the requirements for those two operation regimes are extremely different.">
+<meta name="twitter:title" content="The Photonics Spotlight - Does a Saturable Absorber in a Laser Lead to Passive Q switching or Mode Locking?">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/spotlight_2017_04_12.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="BNv/qx3x45J+rjhStei/Fg==">
+page="spotlight_2017_04_12.html"; cat="P"; shownbanner=""; ref="http://www.rp-photonics.com/spotlight.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo sponsor"></a> <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="BNv/qx3x45J+rjhStei/Fg==">shownsponsors="DataRay,eagleyard Photonics,Optikexpertisen"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight" class="selected"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="spotlight.html">The Photonics Spotlight</a> &gt; <a href="spotlight_2017_04_12.html">2017-04-12</a></p>
+<h1 class="posting">Does a Saturable Absorber in a Laser Lead to Passive Q switching or Mode Locking?</h1>
+<div class="posting_details">
+<p>Posted on 2017-04-12 as a part of the <a href="spotlight.html">Photonics Spotlight (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="spotlight_2017_04_12.html" class="url">https://www.rp-photonics.com/spotlight_2017_04_12.html</a></p>
+<p>Author: <a href="https://www.rp-photonics.com/paschotta.html" rel="author">Dr. Rüdiger Paschotta</a>, <a href="https://www.rp-photonics.com/">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: It is interesting to consider what conditions are required for obtaining passive Q switching or mode locking of a laser. It turns out that the requirements for those two operation regimes are extremely different.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p>It is well known that a <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorber</a> incorporated into a <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a> can cause <a href="passive_mode_locking.html" title="a technique of mode locking, based on a saturable absorber inside the laser resonator">passive mode locking</a> or <a href="q_switching.html" title="a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q switching</a>.
+That raises the question what operation mode we get in a particular case: mode locking, Q-switching, or even both at the same time?
+Or perhaps something else, e.g. some chaotic operation regime?</p>
+<p>There can unfortunately not be totally simple answers to this question &ndash; <a href="laser_physics.html" title="the field of physics dealing with phenomena in lasers">laser physics</a> is a complicated matter.
+However, I hope that the following discussion will be useful.</p>
+<h2 class="togglediv">Passive Mode Locking</h2>
+<div>
+<p>Clearly, <a href="passive_mode_locking.html" title="a technique of mode locking, based on a saturable absorber inside the laser resonator">passive mode locking</a> is possible only if the recovery time of the saturable absorber is relatively short &ndash; usually far below the round-trip time of the laser resonator.
+Otherwise, the absorber could not possibly favor a circulating <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulse</a> over longer pulses or even a continuous-wave background.
+With &ldquo;favor&rdquo; I mean to make sure that the circulating pulse has a higher net round-trip gain than any competing radiation.</p>
+<aside class="callout red">Passive mode locking is a complicated matter &ndash; don't expect to fully understand that based on a simple analysis!</aside>
+<p>The mentioned condition on the recovery time is necessary, but by far not sufficient for mode locking, and particularly not for <em>stable</em> mode locking.
+There can be all sorts of instabilities, arising from very different complications, so that the possibility of stable mode locking can depend on many factors &ndash; for example, on the intracavity <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>, <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a>, spectral and other properties of the laser <a href="gain.html" title="a measure of the strength of optical amplification">gain</a>, and on further details of the saturable absorber.
+This is a rather complicated matter; it takes a lot of specialized know-how to understand and optimize passively mode-locked lasers.
+Note that stable passive mode locking implies that we have an intracavity field configuration, representing an ultrashort pulse (or sometimes <a href="harmonic_mode_locking.html" title="mode locking of a laser where multiple pulses are circulating in the laser resonator with equal temporal spacing">multiple pulses</a>) which is exactly reproduced after each full resonator round-trip, despite all influences of laser gain (with limited gain bandwidth), frequency-dependent losses, saturable absorption, chromatic dispersion and nonlinearities.
+Furthermore, that configuration must be a stable attractor, i.e., the system will evolve towards that stable state been being kicked somewhat away from it, e.g. by the influence of noise.
+One could hardly expect that there are simple criteria for fully managing such complicated nonlinear dynamics.</p>
+<p>An easily understood and important aspect is that it must be possible by a single circulating pulse to substantially saturate the absorber.
+(Note that the absorber must be saturated again in every resonator round trip.)
+For that, the <a href="saturation_energy.html" title="a measure of the incident optical pulse energy required for achieving significant saturation of an absorber or a gain medium">saturation energy</a> of the absorber usually needs to be several times below the <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a>, which is typically quite small &ndash; by far smaller than the typical pulse energy for Q switching.
+In a <a href="bulk_lasers.html" title="lasers based on bulk crystals as gain media">bulk laser</a>, mode-locked with a <a href="semiconductor_saturable_absorber_mirrors.html" title="saturable semiconductor absorber devices acting as nonlinear mirrors">semiconductor saturable absorber mirror</a> (SESAM), the saturation energy is essentially the saturation fluence times the beam area: it can be reduced by focusing the intracavity laser beam more strongly on the absorber.</p>
+</div>
+<h2 class="togglediv">Q switching</h2>
+<div>
+<p>The mechanism of pulse generation by passive Q switching is completely different from that of mode locking, and it requires completely different parameter values.
+Here, an essential requirement is that during some pulse build-up time we have a situation where the interaction of the intracavity energy with the laser gain medium and the saturable absorber leads to a rising net round-trip gain.
+This means that the loss reduction by saturation of the absorber needs to be stronger than the gain reduction due to <a href="gain_saturation.html" title="the phenomenon that the gain of an amplifier is reduced for high input signal powers">gain saturation</a>.
+More quantitatively, it means that the <a href="saturation_energy.html" title="a measure of the incident optical pulse energy required for achieving significant saturation of an absorber or a gain medium">saturation energy</a> of the absorber should be well below the saturation energy of the gain medium.
+It should also be well below the generated pulse energy, which is normally of the same order of magnitude as the gain saturation energy.</p>
+<p>During the leading part of the pulse, the absorber is quite strongly saturated, so that the loss reduction cannot be increased much further; at the same time, the gain gets more and more saturated.</p>
+<p>Fast recovery of the saturable absorber does not help the pulse generation process; in fact, it is better if the recovery time is at least several times the pulse duration.
+Otherwise, more energy would be consumed to keep the absorber saturated during the pulse.
+Therefore, the absorber recovery time should normally be many times longer than the resonator round-trip time.
+In other words, it should be by orders of magnitude longer than for mode locking.</p>
+</div>
+<h2 class="togglediv">Q-switched Mode Locking</h2>
+<div>
+<p>In some cases, one obtains <a href="q_switched_mode_locking.html" title="an operation regime of mode-locked lasers with strong fluctuations of the pulse energy">Q-switched mode locking</a>, i.e., Q switching and mode locking at the same time.
+This means that the laser emits ultrashort pulses, where the pulse energy is not constant, but modulated according to a Q-switching envelope.
+So one gets bunches of such pulses, where each bunch may e.g. lasts for some nanoseconds, and the repetition rate of the pulses within each bunch is determined by the round-trip time.</p>
+<p>One might think that one should actually always get that mode of operation, since the saturation energy of the absorber, as required for passive mode locking, is always far below the gain saturation energy.
+This is not true, however; in many cases, it is quite easy to obtain stable mode locking without any Q-switching instabilities &ndash; except perhaps for operation only slightly above the laser threshold.
+Curiously, this means that you might kill your absorber by operating the laser with <em>reduced</em> pump power: the maximum pulse energy and a bunch can then be far higher than the average pulse energy.</p>
+<p>The theoretical analysis of the stability of the pulse energy (deciding between stable mode locking and Q-switched mode locking) is not particularly difficult.
+Essentially, one considers that one obtains an effective loss on the absorber which depends on the pulse energy.
+That pulse energy can be divided by the round-trip time to obtain an effective average power.
+One can now set up coupled differential equations for the evolution of that average power and the laser gain, obtaining quite similar equations as usually used for the analysis of simple Q switching.
+(Note that there is no dynamical equation for the excitation of the absorber, because that is already determined by the average power or pulse energy!)
+If you are interested in the details, read the following paper: C. Hönninger et al., &ldquo;Q-switching stability limits of cw passive mode locking&rdquo;, JOSA B 16 (1), 46 (1999).</p>
+</div>
+<h2 class="togglediv">Success Requires Understanding</h2>
+<div>
+<p>Of course, carefully analyzing such issues in laser physics is not just interesting, but also an indispensable task for efficient <a href="laser_development.html" title="the process of developing a laser device">laser development</a>.
+When trying to develop a passively Q-switched or even mode-locked laser without such understanding, you may have a very frustrating time, because it is very difficult then to learn anything useful from failures of experiments.
+For example, you might find unstable operation but no hint how to fix that.
+Having wrong ideas about the suspected cause of the problem, you may try all sorts of remedies which have no chance to help you.
+And the parameter space is clearly too large to just try out every possible parameter combination.</p>
+</div>
+<hr>
+<p style="font-size:90%; margin-bottom:10px;">This article is a posting of the <a href="spotlight.html">Photonics Spotlight</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page and cite it, because its location is permanent.
+See also the <a href="encyclopedia.html">RP Photonics Encyclopedia</a>.</p>
+<p>Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="https://www.rp-photonics.com/spotlight.rss">RSS feed</a>.</p>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="spotlight_2017_04_12.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/spotlight_2017_04_12.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2017_04_12.html&text=The+Photonics+Spotlight+-+Does+a+Saturable+Absorber+in+a+Laser+Lead+to+Passive+Q+switching+or+Mode+Locking%3F" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2017_04_12.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2017_04_12.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2017_04_12.html"&gt;<br>Article on The Photonics Spotlight - Does a Saturable Absorber in a Laser Lead to Passive Q switching or Mode Locking?&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2017_04_12.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/spotlight_2017_04_12.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Paschotta</a>, RP Photonics Consulting GmbH. All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./marketing_contact.html">contact</a>, <a href="./privacy.html">data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2 style="font-size:20px;">Debugging Is Now Fun!</h2>
+<p>The software products which are supporting our <a href="./software_script_language.html?banner=Debugger">script language</a> (e.g. <a href="./fiberpower.html?banner=Debugger">RP Fiber Power</a> and <a href="./coating.html?banner=Debugger">RP Coating</a>) have now got a <a href="./software_news_2017_05_31.html?banner=Debugger">powerful debugger</a>!</p>
+<a href="./software_news_2017_05_31.html?banner=Debugger"><img src="./img/expression_debugger_small.png" alt="debugger" style="margin:10px 0;"></a>
+<p>It works even within expressions, not only after each command!</p>
+<p>The <a href="./software_news.html?banner=Debugger">RP Photonics Software News</a> keep you informed.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="BNv/qx3x45J+rjhStei/Fg==">shownbanner = "Debugger";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>How PhD Students Should Get Supported by Supervisors</h2>
+<p>A recent <a href="./spotlight_2014_12_17.html?banner=supervisors">article in the Photonics Spotlight</a> discusses the responsibilities of supervisors (professors and senior research assistance).</p>
+<p>Some key statements:</p>
+<ul>
+<li>Even if PhD students can carry out most of the work in a research project, vital inputs are needed from supervisors particularly in the planning phase and when a crisis occurs.</li>
+<li>A helpful supervisor does not only benefit the supported students, but contributes to the effectiveness of the whole research team.</li>
+<li>If serious engagement were the condition of authorship of supervisors, supervisors would be more likely to do their job.</li>
+<li>A substantial risk for science fraud arises only in a serious crisis &ndash; and is in that case strongly dependent on how the supervisor performs!</li>
+</ul>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="BNv/qx3x45J+rjhStei/Fg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/spotlight_2017_04_12.html"
+    },
+    "headline": "Does a Saturable Absorber in a Laser Lead to Passive Q switching or Mode Locking?",
+    "image": "https://www.rp-photonics.com/previews/spotlight_2017_04_12.png",
+    "datePublished": "2017-04-12",
+    "description": "It is interesting to consider what conditions are required for obtaining passive Q switching or mode locking of a laser. It turns out that the requirements for those two operation regimes are extremely different.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "The Photonics Spotlight",
+      "item": "https://www.rp-photonics.com/spotlight.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "2017-04-12",
+      "item": "https://www.rp-photonics.com/spotlight_2017_04_12.html"
+    }]}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-oONOmOU9s7KWMdj1QYRjUg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - resonator design, cavity design, mode sizes, stability regions, alignment sensitivity</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/resonator_design.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="A resonator design is the comprehensive description of the optical components from which an optical resonator is made, and their exact arrangement.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="resonator design, cavity design, mode sizes, stability regions, alignment sensitivity">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Resonator Design">
+<meta property="og:description" content="A resonator design is the comprehensive description of the optical components from which an optical resonator is made, and their exact arrangement.">
+<meta property="og:url" content="https://www.rp-photonics.com/resonator_design.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/resonator_design.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="A resonator design is the comprehensive description of the optical components from which an optical resonator is made, and their exact arrangement.">
+<meta name="twitter:title" content="Resonator Design">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/resonator_design.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="oONOmOU9s7KWMdj1QYRjUg==">
+page="resonator_design.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> <a href="./sponsors/nkt_photonics.html"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="oONOmOU9s7KWMdj1QYRjUg==">shownsponsors="EKSMA OPTICS,NKT Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_r.html">letter R</a> &gt; <a href="resonator_design.html">resonator design</a></p>
+<h1>Resonator Design</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_resonator_design_software.html?s=vbox">10 suppliers for resonator design software</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.raab-photonik.com/en/competences/diode-laser/" data-supplier="Optikexpertisen" data-location="product-enc" data-keyword="resonator design software" rel="nofollow" class="bg externallink"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.rp-photonics.com/resonator.html" data-supplier="RP Photonics" data-location="product-enc" data-keyword="resonator design software" rel="nofollow" class="bg externallink"><img src="./bg/logos/rp_photonics.png" alt="RP Photonics" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_resonator_design_software.html?s=vbox">List of suppliers for<br>resonator design software</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="boxadvertisement">
+<h2>Analyzing and Optimizing Laser Resonators</h2>
+<p>The software <a href="resonator.html"><b>RP Resonator</b></a> is a particularly flexible tool for analyzing and optimizing laser resonators.
+For example, it can be used to calculate and minimize the alignment sensitivity of laser resonators.</p>
+<p><a href="index.html">RP Photonics</a> also offers competent resonator design services, leading to state-of-the art designs.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: the description of the optical components from which an optical resonator is made, and their exact arrangement</p>
+<p>Alternative term: cavity design</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Resonatordesign</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#optical_resonators" title="other articles on optical resonators">optical resonators</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<p><a href="encyclopedia_cite.html?article=resonator%20design">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>The term <em>resonator design</em> (or <em>cavity design</em>) is most often used in the context of <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonators</a> for <a href="solid_state_lasers.html" title="lasers based on solid-state gain media (usually ion-doped crystals or glasses)">solid-state</a> <a href="bulk_lasers.html" title="lasers based on bulk crystals as gain media">bulk lasers</a>, but sometimes also for simpler resonators, e.g. for use in high resolution <a href="spectrometers.html" title="devices for separating spectral components">spectrometers</a>.
+The design of an <a href="optical_resonators.html" title="arrangements of optical components which allow a beam of light to circulate">optical resonator</a> basically means to define the arrangement of optical elements (e.g. <a href="laser_mirrors.html" title="high-quality mirrors used in laser resonators and other optical setups">laser mirrors</a>) including their exact distances, so that the <a href="resonator_modes.html" title="modes of an optical or microwave resonator">resonator modes</a> have the desired properties.
+The mechanical design can also be an important aspect.</p>
+<p>In simple cases, the basic design of a resonator is clear from start (for example: a two mirror resonator), and one only needs to adjust certain design parameters such as mirror curvature radii or distances between elements.
+In other cases, one will also have to decide about the principal resonator architecture &ndash; for example:</p>
+<ul>
+<li>Should it be a linear or a <a href="ring_resonators.html" title="optical resonators where light can independently circulate in two different directions">ring resonator</a>?</li>
+<li>Should the <a href="laser_crystals.html" title="transparent crystals with laser-active dopants, used as laser gain media">laser crystal</a> be placed close to an end mirror, or better somewhere between two focusing mirrors?</li>
+<li>Where should a <a href="wavelength_tuning.html" title="the manipulation of the output wavelength of an optical device such as a laser or an optical parametric oscillator">wavelength tuning</a> element or a saturable absorber be placed?</li>
+<li>Is it helpful to insert a curved folding mirror somewhere?</li>
+</ul>
+<p>It is not always possible to answer such questions in the beginning of a design process.
+One may start with a certain resonator architecture but have to change it later on when recognizing certain fundamental limitations.</p>
+<figure>
+<img src="img/laser_resonators.png" alt="linear and ring laser resonator">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Two simple laser resonators with a <a href="laser_crystals.html" title="transparent crystals with laser-active dopants, used as laser gain media">laser crystal</a> as gain medium. Output beams are generated where resonator mirrors are partially transmissive.
+</figcaption>
+</figure>
+<h2 class="togglediv">Important Resonator Properties</h2>
+<div>
+<p>The design goals for resonators, particularly for <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonators</a>, can include a large number of aspects which can affect various performance details:</p>
+<ul>
+<li>A frequently encountered requirement is that of suitable mode sizes in or at certain optical components such as the <a href="gain_media.html" title="media for laser amplification">gain medium</a> (in a <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a>), a <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorber</a> (in a <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked laser</a>), or a mirror.</li>
+<li>In many cases, it is important to avoid an excessive sensitivity of mode sizes to mechanical tolerances (length deviations or <a href="alignment_sensitivity_of_optical_resonators.html" title="the sensitivity of a laser, an optical resonator or some other device with respect to misalignment">misalignment</a>), and also to <a href="thermal_lensing.html" title="a lensing effect induced by temperature gradients">thermal lensing</a> effects (including <a href="optical_aberrations.html" title="degradations of optical images caused in imaging instruments">optical aberrations</a>).
+For a <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a>, this can help to achieve a good <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a> over a wide range of pump powers.</li>
+<li>The <a href="stability_zones_of_optical_resonators.html" title="parameter regions of an optical resonator where the resonator is geometrically stable">stability zones</a> with respect to the <a href="dioptric_power.html" title="the inverse of the focal length">dioptric power</a> of the <a href="thermal_lensing.html" title="a lensing effect induced by temperature gradients">thermal lens</a> in the <a href="gain_media.html" title="media for laser amplification">gain medium</a> should be as wide as possible, but this property is connected to the minimum mode size e.g. in the laser gain medium.</li>
+<li>The resonator should have an appropriate length, e.g. a short length for generating short <a href="pulses.html" title="flashes of light">pulses</a> with <a href="q_switching.html" title="a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q switching</a> or for easy <a href="single_frequency_operation.html" title="an operation mode of a laser where only a single resonator mode acquires a significant power">single-frequency operation</a>, or a certain length for a suitable <a href="pulse_repetition_rate.html" title="the number of pulses emitted per second e.g. by a mode-locked or Q-switched laser">pulse repetition rate</a> of a <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked laser</a>.
+In some cases, a resonator needs to have the potential to be operated with a variable resonator length, e.g. for obtaining a tunable <a href="pulse_repetition_rate.html" title="the number of pulses emitted per second e.g. by a mode-locked or Q-switched laser">pulse repetition rate</a>.</li>
+<li>In many cases, the round-trip losses should be minimized, e.g. for a low <a href="threshold_pump_power.html" title="the pump power at which the laser threshold is reached">threshold pump power</a> and low <a href="laser_noise.html" title="fluctuations of various parameters of laser light, such as the optical power and phase">laser noise</a>.</li>
+<li>A minimum number of optical components is often desirable.</li>
+<li>The overall size may be optimized, also the mechanical stability, and the ease of manufacturing.</li>
+</ul>
+<p>The importance of these criteria should not be underestimated.
+There are cases where very significant improvements of performance of a laser and also greatly reduced alignment sensitivity can be achieved with an optimized resonator.</p>
+</div>
+<h2 class="togglediv">The Role of Resonator Modes</h2>
+<div>
+<p>Note that most of the important resonator properties as discussed above refer to properties of resonator <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a>.
+Therefore, a resonator design process is usually done in two distinct steps:</p>
+<ul>
+<li>First, one needs to identify which mode properties are essential for the performance, and which values they should have.</li>
+<li>Thereafter, one can try to find a resonator design having modes with those properties.</li>
+</ul>
+<p>The first step should often be based on some <a href="laser_physics.html" title="the field of physics dealing with phenomena in lasers">laser physics</a> calculations.
+For example, one may have to design a resonator for an appropriate ratio of optical intensity to the <a href="saturation_power.html" title="a measure of the incident optical power required for achieving significant saturation of an absorber or a gain medium">saturation intensity</a> of the gain medium.</p>
+<p>For the second step, one will often require some numerical resonator design software.</p>
+<p>Without the concept of resonator <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a>, resonator properties and their optimization would be far more difficult to understand.</p>
+</div>
+<h2 class="togglediv">Example: Single-transverse Mode Laser</h2>
+<div>
+<p>A simple example is that of an end-pumped <a href="continuous_wave_operation.html" title="operation mode of a laser with continuous light emission">continuous-wave</a> <a href="solid_state_lasers.html" title="lasers based on solid-state gain media (usually ion-doped crystals or glasses)">solid-state laser</a>, which is required to have a high (diffraction-limited) <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a>.
+Here, the <a href="mode_radius.html" title="a measure of the transverse extent of a laser mode or laser beam">mode radius</a> in the <a href="laser_crystals.html" title="transparent crystals with laser-active dopants, used as laser gain media">laser crystal</a> should approximately match the pump beam radius, because that leads to an optimized energy conversion efficiency.
+Also, that leads to the suppression of lasing on <a href="higher_order_modes.html" title="transverse modes of a resonator or waveguide, excluding the fundamental (axial) modes">higher-order transverse modes</a>, which then have a lower <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> compared with the fundamental (<a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian</a>) modes because of their lower spatial overlap.</p>
+<aside class="callout blue">Appropriate pump and laser beam radii should be calculated from the desired laser threshold.</aside>
+<p>The pump beam radius and mode radius should usually be chosen such that with the intended pump power level the laser will operate several times above the <a href="laser_threshold.html" title="an operation condition of a laser where laser emission just starts to occur">laser threshold</a>.
+For a <a href="four_level_and_three_level_gain_media.html" title="laser gain media without/with reabsorption from the lower laser level">four-level gain medium</a>, that implies that the intracavity laser <a href="optical_intensity.html" title="optical power per unit area">intensity</a> should be a few times the <a href="saturation_power.html" title="a measure of the incident optical power required for achieving significant saturation of an absorber or a gain medium">saturation intensity</a> of the laser gain.
+(For <a href="four_level_and_three_level_gain_media.html" title="laser gain media without/with reabsorption from the lower laser level">quasi-three-level gain media</a>, the calculation is a bit more difficult.)
+A certain amount of pump beam quality will then be required for maintaining the appropriate pump beam radius throughout the crystal.</p>
+<aside class="callout red">One would usually avoid operation close to the edge of a stability zone of the resonator!</aside>
+<p>Note that the mode radii will generally depend on the strength of the <a href="thermal_lensing.html" title="a lensing effect induced by temperature gradients">thermal lens</a>.
+Particularly for <a href="high_power_lasers.html" title="lasers emitting very high optical powers">high-power lasers</a>, it is thus necessary to estimate the strength (<a href="dioptric_power.html" title="the inverse of the focal length">dioptric power</a>) of the thermal lens, and to design the resonator such that it works well within a certain range of that value.
+For example, the mode radii within the laser crystal and at the laser output should not vary too much, and nowhere should the mode radius get small enough to lead to optical damage or other problems related to excessive optical intensities.
+That is typically achieved by designing the resonator such that for the expected dioptric power of the thermal lens one will operate well within a <a href="stability_zones_of_optical_resonators.html" title="parameter regions of an optical resonator where the resonator is geometrically stable">stability zone</a>, i.e., not close to an edge of a stabilize zone, where mode radii can diverge or go towards zero.</p>
+<aside class="callout red">Do not overlook the issue of alignment sensitivity!</aside>
+<p>The <a href="alignment_sensitivity_of_optical_resonators.html" title="the sensitivity of a laser, an optical resonator or some other device with respect to misalignment">alignment sensitivity</a> should also be checked.
+Note that resonator designs with similar mode radii in the laser crystal can differ very much in terms of alignment sensitivity, and that can make some designs very hard to work with in practice.
+Note that the alignment sensitivity diverges at one of the four edges of the two stability regions of a <a href="standing_wave_resonators.html" title="optical resonators with two end mirrors">linear resonator</a>.</p>
+<aside class="callout blue">Sometimes, it is better to sacrifice beam quality for wider stability ranges and lower alignment sensitivity.</aside>
+<p>The width of a stability zone with respect to the dioptric power of the thermal lens is inversely proportional to the minimum mode radius &ndash; which indicates problems for high-power lasers, requiring large modes.
+Also, the alignment sensitivity will then typically be higher.
+Therefore, one sometimes designs resonators for substantially smaller modes, such that stability ranges are much wider and the alignment is less sensitive, although when then sacrifices beam quality: the full pumped area in the laser crystal can then be covered only with some combination of transverse modes.
+(The resulting beam quality can then be estimated from the ratio of pumped area and fundamental resonator mode area.)
+The achieved power conversion efficiency of such a multimode laser is often somewhat higher than with a resonator enforcing single transverse mode of operation, essentially because the laser intensity profile can then more flexibly adjust itself to the available gain.</p>
+</div>
+<h2 class="togglediv">Additional Constraints in Pulsed Lasers</h2>
+<div>
+<p>In an actively <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched laser</a>, one requires some kind of <a href="optical_modulators.html" title="devices allowing one to manipulate properties of light beams, such as the optical power or phase">optical modulator</a>.
+The resonator design therefore needs to provide some space for that, and it should have an appropriate mode radius at that location, so that one will neither get clipping of the beam at the aperture of the modulator not too strong beam focusing, which may lead to damage.</p>
+<p>Similarly, a passive <a href="q_switches.html" title="optical switches which are typically used for generating nanosecond pulses in lasers">Q-switch</a> (a <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorber</a>) must be operated with an appropriate beam radius, such that one obtains an appropriate degree of absorber saturation.
+Otherwise, the absorber may either be damaged or cause excessive power losses.</p>
+<p>Similar considerations apply to <a href="passive_mode_locking.html" title="a technique of mode locking, based on a saturable absorber inside the laser resonator">passively mode-locked</a> lasers.
+An additional aspect is that one might obtain <a href="q_switching_instabilities.html" title="instabilities of passively mode-locked lasers where the pulse energy is unstable">Q-switching instabilities</a> if the absorber saturation is too weak.
+Also note that stable single-transverse-mode operation is a vital condition for mode locking, making correct mode sizes particularly important.
+Another issue can be <a href="dispersion_compensation.html" title="the control of the overall chromatic dispersion of a system by adding optical elements with a suitable amount of dispersion">dispersion compensation</a>, for which one may have to integrate a <a href="prism_pairs.html" title="combinations of two prisms, mostly used for dispersion compensation">prism pair</a> and/or some <a href="dispersive_mirrors.html" title="mirrors which provide some amount of chromatic dispersion for the reflected beam">dispersive mirrors</a> in the design.</p>
+<p>The overall resonator length, determining the round-trip time for light in the resonator, is also an important figure in a pulsed laser.
+For a Q-switched laser, it has an important influence on the obtained <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a>, while in case of mode locking it determines the <a href="pulse_repetition_rate.html" title="the number of pulses emitted per second e.g. by a mode-locked or Q-switched laser">pulse repetition rate</a>.</p>
+</div>
+<h2 class="togglediv">Intracavity Frequency Doubling</h2>
+<div>
+<p>In case of <a href="intracavity_frequency_doubling.html" title="frequency doubling with a nonlinear crystal within the laser resonator">intracavity frequency doubling</a>, the resonator must of course provide some space and appropriate beam radius for the <a href="nonlinear_crystal_materials.html" title="crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal</a>, such that a reasonable amount of single-pass conversion (e.g. a few percent) is achieved.
+Besides, one needs to couple out the frequency-doubled light at a suitable location &ndash; preferably such that one obtains a single output beam while utilizing the nonlinear conversion in both directions.
+One typically chooses to do the output coupling at a folding mirror, not an end mirror.</p>
+</div>
+<h2 class="togglediv">Transverse Mode Frequencies</h2>
+<div>
+<p>In some cases, the <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequencies</a> of transverse modes should also be taken into account.
+For example, this can be essential for a passive resonator used as a frequency filter, when perfect mode matching to the fundamental mode cannot be guaranteed.
+There are also cases where <a href="mode_coupling.html" title="a concept for describing and calculating light propagation in certain situations, e.g. involving nonlinear interactions">mode coupling</a> to higher-order modes in a laser resonator must be avoided by ensuring that those modes, to which a substantial coupling is possible based on the spatial mode properties, have optical frequencies which substantially differ from those of the fundamental modes [5].</p>
+</div>
+<h2 class="togglediv">Typical Trade-offs in Resonator Design</h2>
+<div>
+<p>It is often not possible to ideally satisfy all demands on a resonator design, because there are certain fundamental limitations or one does not have sufficiently many free parameters in a design.
+Therefore, the optimization of a resonator can involve various trade-offs:</p>
+<ul>
+<li>A particularly compact resonator design may not be ideal in terms of beam quality or alignment sensitivity.</li>
+<li>Operation in <a href="stability_zones_of_optical_resonators.html" title="parameter regions of an optical resonator where the resonator is geometrically stable">stability zone</a>&nbsp;I can strongly reduce the alignment sensitivity, but this may require a longer resonator and/or smaller spot sizes on the resonator mirrors, which can cause problems e.g. in the case of <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched lasers</a>.</li>
+<li>A high-power laser may be designed for diffraction-limited beam quality, but then have a lower tolerance for misalignment.</li>
+</ul>
+<p>Therefore, successful optimization is possible only on the basis of a solid understanding of the specific requirements, the relevant physical effects, and the trade-offs involved.</p>
+</div>
+<h2 class="togglediv">The Design Problem</h2>
+<div>
+<aside class="callout blue">Finding a good design is often much more difficult than analyzing a design.</aside>
+<p>Whereas it is normally not very difficult to evaluate the mode properties of a given resonator, it can be much more challenging to find a resonator design which has the required mode properties &ndash; particularly in cases where multiple conditions have to be fulfilled simultaneously.
+Note also that any design change, e.g. aimed at improving one resonator property, may at the same time also affect all other properties.
+Therefore, the resonator design process can usually not work such that one solves different problems step by step.
+Generally, a <a href="laser_design.html" title="the design of a laser device, or the process of working out such a design">laser design</a> in process where one realizes various problems only step by step is prone to be time-consuming and inefficient.</p>
+<p>Sometimes, certain design goals are not exactly known in advance, e.g. because the strength of the thermal lens is not exactly known yet.
+It can then be good to have a design which can be adjusted accordingly.</p>
+<aside class="callout blue">A preliminary test resonator may be used e.g. to accurately measure the strength of the thermal lens.</aside>
+<p>There are also cases where one may first need to design and construct a test resonator, which allows one to accurately measure the strength of the thermal lens, before implementing the actual laser resonator for optimal performance.
+A useful test resonator may e.g. have a well defined stability edge, where e.g. the mode radii rise rapidly (rather than gradually) when a certain dioptric power is reached.</p>
+<p>In many cases, finding a good solution requires</p>
+<ul>
+<li>a deep understanding of resonator physics</li>
+<li class="ta_left">a flexible <a href="resonator.html">resonator design software</a> with the option for numerical optimization with an arbitrarily defined figure of merit (see below)</li>
+<li class="ta_left">significant experience with different kinds of resonator designs and their performance (not just with the handling of some software)</li>
+</ul>
+<p>A powerful numerical method for resonator design is to define a <em>figure of merit</em>, calculated as the sum of &ldquo;penalties&rdquo; for all non-ideal properties, and to minimize that with numerical techniques by varying resonator arm lengths and possibly mirror curvatures.
+Because the figure of merit often has a huge number of local extrema, a Monte-Carlo method is sometimes used for finding the global optimum or at least a good solution.
+Note that the procedure starts with some basic resonator structure, which may have to be varied if no good solution can be found.</p>
+<p>Particularly challenging resonator design tasks arise in the context of <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked lasers</a>, with combinations of various mode sizes, resonator length constraints, and other complications.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_resonator_design_software.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 10 suppliers for resonator design software. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://raab-photonik.com/en/competences/" data-supplier="Optikexpertisen" data-location="product-enc" data-keyword="resonator design software" rel="nofollow" class="bg externallink" title="Visit the website of Optikexpertisen"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo"></a><h3><a href="./bg/profiles/optikexpertisen.html" title="See the profile of Optikexpertisen">Optikexpertisen</a></h3><p>We offer to design, simulate, and experimentally test laser systems to your requirements, preferably around <a href="http://www.raab-photonik.com/en/competences/diode-laser/" data-supplier="Optikexpertisen" data-location="product-enc" data-keyword="resonator design software" rel="nofollow" class="externallink bg">diode lasers</a>. They can be based on our previous &ndash; partially patented &ndash; designs or on your specific needs. <a href="http://www.raab-photonik.com/en/interactive/contact-form/" data-supplier="Optikexpertisen" data-location="product-enc" data-keyword="resonator design software" rel="nofollow" class="externallink bg">Ask us</a> for a free-of-charge first feasibility estimate.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.rp-photonics.com/" data-supplier="RP Photonics" data-location="product-enc" data-keyword="resonator design software" rel="nofollow" class="bg externallink" title="Visit the website of RP Photonics"><img src="./bg/logos/rp_photonics.png" alt="RP Photonics" class="supplierlogo"></a><a href="https://www.rp-photonics.com/resonator.html" data-supplier="RP Photonics" data-location="product-enc" data-keyword="resonator design software" rel="nofollow" class="bg externallink" title="Visit the website of RP Photonics"><img src="./bg/products/rp_photonics/resonator_design.png" alt="resonator design software" class="product"></a><h3><a href="./bg/profiles/rp_photonics.html" title="See the profile of RP Photonics">RP Photonics</a></h3><p>Our <a href="https://www.rp-photonics.com/resonator.html" data-supplier="RP Photonics" data-location="product-enc" data-keyword="resonator design software" rel="nofollow" class="externallink bg"><b>RP Resonator</b> software</a> is a particularly flexible tool for sophisticated resonator design analysis and optimization &ndash; including the sensitivity to misalignment and intracavity beam aberrations.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="resonator_design.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">D. Metcalf <i>et al.</i>, &ldquo;Laser resonators containing self-focusing elements&rdquo;, Appl. Opt. 26 (21), 4508 (1987), <a href="https://doi.org/10.1364/AO.26.004508">doi:10.1364/AO.26.004508</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">A. E. Siegman, &ldquo;New developments in laser resonators&rdquo;, Proc. SPIE 1224, 2 (1990), <a href="https://doi.org/10.1117/12.18425">doi:10.1117/12.18425</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">V. Magni <i>et al.</i>, &ldquo;Recent developments in laser resonator design&rdquo;, Opt. Quantum Electron. 23, 1105 (1991), <a href="https://doi.org/10.1007/BF00619980">doi:10.1007/BF00619980</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">G. Cerullo <i>et al.</i>, &ldquo;Resonators for Kerr-lens mode-locked femtosecond Ti:sapphire lasers&rdquo;, Opt. Lett. 19 (11), 807 (1994), <a href="https://doi.org/10.1364/OL.19.000807">doi:10.1364/OL.19.000807</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">R. Paschotta, &ldquo;Beam quality deterioration of lasers caused by intracavity beam distortions&rdquo;, Opt. Express 14 (13), 6069 (2006), <a href="https://doi.org/10.1364/OE.14.006069">doi:10.1364/OE.14.006069</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">S. Yefet and A. Pe'er, &ldquo;A review of cavity design for Kerr lens mode-locked solid-state lasers&rdquo;, Appl. Sci. 3 (4), 694 (2013), <a href="https://doi.org/10.3390/app3040694">doi:10.3390/app3040694</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">For German readers: R. Paschotta, &ldquo;Resonatordesign &ndash; unterschätztes Potenzial für bessere Laser&rdquo;, <a href="http://www3.interscience.wiley.com/cgi-bin/fulltext/116313857/PDFSTART" class="url">http://www3.interscience.wiley.com/cgi-bin/fulltext/116313857/PDFSTART</a>, Laser Technik Journal 4 (4), p. 50 (2007)</td></tr>
+<tr><td class="refno">[8]</td><td class="refs">A. E. Siegman, <i>Lasers</i>, University Science Books, Mill Valley, CA (1986)</td></tr>
+<tr><td class="refno">[9]</td><td class="refs">N. Hodgson and H. Weber, <i>Laser Resonators and Beam Propagation</i>, 2nd edn., Springer, Berlin (2005)</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="optical_resonators.html" title="arrangements of optical components which allow a beam of light to circulate">optical resonators</a>, <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">lasers</a>, <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonators</a>, <a href="enhancement_cavities.html" title="optical cavities for exploiting the resonant enhancement of the power of circulating light">enhancement cavities</a>, <a href="stability_zones_of_optical_resonators.html" title="parameter regions of an optical resonator where the resonator is geometrically stable">stability zones of optical resonators</a>, <a href="alignment_sensitivity_of_optical_resonators.html" title="the sensitivity of a laser, an optical resonator or some other device with respect to misalignment">alignment sensitivity of optical resonators</a>, <a href="laser_design.html" title="the design of a laser device, or the process of working out such a design">laser design</a>, <a href="spotlight_2011_06_10.html">The Photonics Spotlight 2011-06-10</a><br>and other articles in the categories <a href="categories.html#optical_resonators" title="other articles on optical resonators">optical resonators</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<hr style="margin-top:16px; margin-bottom:12px;">
+<a href="paschotta.html"><img src="img/paschotta3_small.jpg" alt="Dr. R. Paschotta" style="float:left; margin:0px 16px 20px 18px;" width="80" height="97"></a>
+<div style="margin-bottom:12px;">
+<p style="font-size:90%; line-height:20px; padding-right:20px;">This encyclopedia is authored by <a href="paschotta.html" class="redlink">Dr. Rüdiger Paschotta</a>, the founder and executive of <a href="index.html" class="redlink">RP Photonics Consulting GmbH</a>.
+How about a <a href="training.html" class="redlink">tailored training course</a> from this distinguished expert at your location?
+<a href="contact.html" class="redlink">Contact</a> RP Photonics to find out how his <a href="./services.html" class="redlink">technical consulting services</a> (e.g. product designs, problem solving, independent evaluations, training) and <a href="software.html" class="redlink">software</a> could become very valuable for your business!</p>
+</div>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/resonator_design.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fresonator_design.html&text=RP+Photonics+Encyclopedia+-+resonator+design%2C+cavity+design%2C+mode+sizes%2C+stability+regions%2C+alignment+sensitivity" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fresonator_design.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fresonator_design.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/resonator_design.html"&gt;<br>Article on Resonator Design&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/resonator_design.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/resonator_design.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/resonator_design.html<br>article on 'Resonator Design' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="https://www.toptica.com/products/laser-rack-systems/" data-supplier="TOPTICA Photonics" data-location="banner" rel="nofollow" class="bg externallink"><img src="./bg/banners/toptica_photonics.jpg" alt="TOPTICA Photonics"></a>
+</div>
+</aside>
+<script type="text/javascript" nonce="oONOmOU9s7KWMdj1QYRjUg==">shownbanner = "TOPTICA Photonics";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Sponsors of the Encyclopedia</h2>
+<p>We are grateful to the <a href="./encyclopedia_sponsoring.html?banner=sponsoring">sponsors</a> of our encyclopedia:</p>
+<div style="margin-top:10px; text-align:center;"><a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/nkt_photonics.html"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a></div>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="oONOmOU9s7KWMdj1QYRjUg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/resonator_design.html"
+    },
+    "headline": "Resonator Design",
+    "image": "https://www.rp-photonics.com/previews/resonator_design.png",
+    "datePublished": "2006-12-30",
+    "dateModified": "2020-03-14",
+    "description": "A resonator design is the comprehensive description of the optical components from which an optical resonator is made, and their exact arrangement.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter R",
+      "item": "https://www.rp-photonics.com/encyclopedia_r.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "resonator design",
+      "item": "https://www.rp-photonics.com/resonator_design.html"
+    }]}
+}
+</script>
+</body>
+</html>

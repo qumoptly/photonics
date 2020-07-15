@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-8dVFl5WZQYUEKhB8gf9T7A=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Tutorial &ldquo;Modeling of Fiber Amplifiers and Lasers&rdquo;, Part 7: Ultrashort pulses, field envelope amplitudes, temporal grid, resolution, Fourier techniques, propagation equations, software</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/tutorial_modeling7.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-04-05">
+<meta name="description" content="Tutorial on modeling of fiber amplifiers and lasers. This part explains how ultrashort pulses can be handled in a numerical model. It discusses the numerical representation of pulses, the propagation equations and Fourier algorithms for solving them.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="tutorial, modeling, fiber amplifiers, fiber lasers, ultrashort pulses, field envelope amplitudes, temporal grid, resolution, Fourier techniques, propagation equations, software">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="8dVFl5WZQYUEKhB8gf9T7A==">
+page="tutorial_modeling7.html?banner=modeling_tutorial"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/quiz.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="8dVFl5WZQYUEKhB8gf9T7A==">shownsponsors="TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials" class="selected"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_tutorials.html">Tutorials</a> &gt; <a href="tutorial_modeling.html">Modeling</a> &gt; <a href="tutorial_modeling7.html">Part 7</a></p>
+<h1>Modeling of Fiber Amplifiers and Lasers</h1>
+<p>This is part 7 of a <a href="tutorial_modeling.html">tutorial on modeling of fiber amplifiers and lasers</a> from <a href="paschotta.html">Dr. Paschotta</a>. The tutorial has the following parts:</p>
+<div class="article_parts"><span style='float:left; margin:0 25px 5px 10px; font-size:60px; color:#888; font-weight:bold; line-height:100%;'>7</span>
+<p>1:&nbsp;<a href="tutorial_modeling1.html">Introduction</a>, 2:&nbsp;<a href="tutorial_modeling2.html">Optical channels</a>, 3:&nbsp;<a href="tutorial_modeling3.html">Power propagation or field propagation</a>, 4:&nbsp;<a href="tutorial_modeling4.html">The laser-active ions</a>, 5:&nbsp;<a href="tutorial_modeling5.html">Continuous-wave operation of amplifiers and lasers</a>, 6:&nbsp;<a href="tutorial_modeling6.html">Amplifying and generating short pulses</a>, 7:&nbsp;<span style="text-decoration:underline;">Ultrashort pulses</span>, 8:&nbsp;<a href="tutorial_modeling8.html">Using home-made software or a commercial product?</a>
+</p>
+</div>
+<h2 class="togglediv">Part 7: Ultrashort Pulses</h2>
+<div>
+<p>For pulse durations in the picosecond or even femtosecond regime, additional physical effects come into play.
+One of these is <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>, i.e., the wavelength dependence of the <a href="effective_refractive_index.html" title="a number quantifying the phase delay per unit length in a waveguide, relative to the phase delay in vacuum">effective refractive index</a> of the fiber.
+(Note that we normally need to take into account <a href="waveguide_dispersion.html" title="chromatic dispersion arising from waveguiding effects">waveguide dispersion</a>, except for some <a href="large_mode_area_fibers.html" title="optical fibers with relatively large mode areas and a single transverse mode or only a few modes">large mode area fibers</a>.)
+Also, fiber <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a> can have strong effects.
+One may have to consider not only the Kerr nonlinearity, but also the delayed nonlinear response which results in stimulated <a href="raman_scattering.html" title="a nonlinear scattering process involving optical phonons">Raman scattering</a>.
+These aspects are discussed in <a href="tutorial_fiber_amplifiers8.html">part 8</a> of our <a href="tutorial_fiber_amplifiers.html">fiber amplifier tutorial</a>.</p>
+<p>The combination of numerical beam propagation with ultrashort pulses would be quite demanding in terms of computation time and memory.
+Fortunately, in most cases one will deal with situations where the transverse spatial effects are not of interest; we can assume fixed transverse intensity profiles (see <a href="tutorial_modeling3.html">section 3</a>).</p>
+<h3 class="togglediv">How to Represent Ultrashort Pulses</h3>
+<div>
+<aside class="callout blue">An ultrashort pulse needs to be represented by an array of complex amplitudes in the time domain or frequency domain.</aside>
+<p>For each <span class="eqn_il"><i>z</i></span> position in the fiber, we now need to consider the time-dependent complex field amplitude.
+Some details:</p>
+<ul>
+<li>One usually uses field envelope amplitudes <span class="eqn_il"><i>A</i>(<i>t</i>)</span>.
+The electric field strength is proportional to <span class="eqn_il">Re(<i>A</i>(<i>t</i>)&thinsp;exp(&minus;<i>i&thinsp;<span class="greek">&omega;</span></i><sub>0</sub>&thinsp;<i>t</i>))</span> where <span class="eqn_il"><span class="greek">&omega;</span><sub>0</sub></span> is the mean angular frequency.
+The complex field amplitudes may be normalized such that their squared modulus corresponds to the optical powers.</li>
+<li>The amplitudes need to be stored within a temporal range which is sufficiently large to span e.g. somewhat more than the considered optical pulse.
+Numerically, one needs an array of amplitudes with a temporal spacing which is fine enough to properly sample the pulses at all times.
+Normally, the number of components of that field should be a power of 2 in order to facilitate the use of Fourier techniques (see below).</li>
+<li>One usually uses a &ldquo;moving time frame&rdquo;, where an injected pulse remains centered around <span class="eqn_il"><i>t</i>&thinsp;=&thinsp;0</span> as long as nonlinear and dispersive effects do not shift the pulse maximum.</li>
+</ul>
+<p>The appropriate choice of parameters for the temporal grid (width of time range, temporal resolution, number of points) is not always obvious.
+During the simulations, one may have to monitor whether the chosen grid parameters are sufficient for a reasonable numerical accuracy.
+For calculations on mode-locked lasers, 256 grid points are sometimes already sufficient, whereas simulations involving strongly chirp pulses or even <a href="supercontinuum_generation.html" title="a nonlinear process for strong spectral broadening of light">supercontinuum generation</a> require far more.</p>
+</div>
+<h3 class="togglediv">Propagation Equations</h3>
+<div>
+<p>The required propagation equations can become substantially more complicated than for longer pulses.
+As an example, the following equation for the complex amplitude <span class="eqn_il"><i>A</i>(<i>z</i>,<i>t</i>)</span> describes the propagation of a single optical channel under the effects of amplifier gain, background losses, chromatic dispersion of second and third order, and nonlinear effects including a delayed nonlinear response (<a href="kerr_effect.html" title="a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization">Kerr effect</a> and stimulated <a href="raman_scattering.html" title="a nonlinear scattering process involving optical phonons">Raman scattering</a>).
+The nonlinear response function <span class="eqn_il"><i>R</i>(<span class="greek">&tau;</span>)</span> is related to the Fourier-transformed Raman gain spectrum.</p>
+<div class="eqn"><img src="eqn/dadz.gif" width="346" height="104" alt="propagation equation for ultrashort pulses"></div>
+<p>When multiple optical channels propagate together, there are additional nonlinear coupling terms, making things even more complicated.</p>
+</div>
+<h3 class="togglediv">Solving the Equations with Fourier Methods</h3>
+<div>
+<p>Effects like chromatic dispersion and wavelength-dependent gain and losses are usually treated in the frequency domain.
+This means that one has to apply a Fourier transform algorithm (usually a Fast Fourier Transform = FFT) to the above-mentioned temporal trace in order to obtain an array of complex amplitudes in the frequency domain.
+There, one can easily apply frequency-dependent phase changes and/or amplitude changes.
+(For example, the second time derivative corresponding to second-order dispersion corresponds to a simple multiplication factor <span class="eqn_il">&minus;<span class="greek">&omega;</span><sup>2</sup></span> in the frequency domain.)
+With a reverse Fourier transform, one gets back to the time domain.</p>
+<p>One usually uses a kind of <b>split-step Fourier algorithm</b>.
+Efficient computations often require an automatic step size control, because a much smaller numerical step size may be required at locations in the fiber where a pulse acquires a high peak power due to amplification and/or dispersive compression.
+Correctly handling the terms for a delayed nonlinear response (Raman scattering) is particularly difficult; additional Fourier transforms are needed for an efficient solution.</p>
+</div>
+<h3 class="togglediv">Software Helps</h3>
+<div>
+<aside class="callout blue">Solving such equations is rather difficult, but just using a well-designed simulation software is not a big deal!</aside>
+<p>Even though the technical details for ultrashort pulse propagation are rather complicated, a powerful simulation software makes it relatively simple for the user to calculate and simulate such things.
+The software must be provided with suitable fiber data concerning dispersion and nonlinearities, and also the user must usually determine the numerical parameters for representing the pulses &ndash; for example, the width of the temporal traces, the number of sampling points and the center wavelength.
+These together determine the frequency (or wavelength) range which can be numerically represented.</p>
+<p>A good software tool cannot only do such calculations reliably and quickly, but also conveniently display the calculated results.
+As an example, Figure&nbsp;5 shows the interactive pulse display window of the <a href="fiberpower.html"><b>RP Fiber Power</b></a> software, which makes it easy to inspect pulses at any point within the fiber.
+However, interactive window should not be the only way to access the data; one should also have scripting capabilities for efficient control and data processing.</p>
+<figure>
+<img src="img/pulse_window.png" alt="interactive pulse display window">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+The software <a href="fiberpower.html"><b>RP Fiber Power</b></a> has an interactive window for displaying a pulse in the time domain (upper graph) and frequency domain (lower graph). With the control at the bottom, one can get the pulse at any position in the fiber. The small vertical lines at the top edges of the two diagrams indicate the numerical grid.
+</figcaption>
+</figure>
+</div>
+<h3 class="togglediv">Requirements for Some Example Cases</h3>
+<div>
+<p>Different simulation scenarios can be relevant for practical work:</p>
+<ul>
+<li>Simple cases require only single-pass propagation, e.g. of signal pulses through a fiber amplifier.
+One may then want to inspect the resulting pulses not only at the output end, but at any location within the fiber.</li>
+<li>One may also have to deal with a sequence of different fibers and possibly other optical elements influencing the pulses.
+For example, input pulses may be sent through a <a href="pulse_stretchers.html" title="devices for temporally stretching ultrashort light pulses">pulse stretcher</a>, then through the active fiber and finally through a pulse compressor in order to exploit the principle of <a href="chirped_pulse_amplification.html" title="a technique for amplifying pulses to very high optical intensities while avoiding excessive nonlinear pulse distortions or optical damage">chirped-pulse amplification</a>.
+It is then highly desirable that the software is sufficiently flexible e.g. to allow the generation of diagrams where any parameters of the resulting pulses are plotted as functions of any parameters of the system.</li>
+<li>When studying <a href="mode_locked_fiber_lasers.html" title="ultrafast fiber lasers which are actively or passively mode-locked for generating ultrashort pulses">mode-locked fiber lasers</a>, one may need not only to investigate a single round-trip in the laser resonator (which can comprise multiple optical elements including active and passive fibers, modulators, optical filters, <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorbers</a>, etc.), but rather the evolution in multiple round-trips.
+One may even want to automatically propagate the pulse until it reaches the steady state (if that exists), and do this for a certain range of parameters.
+(Of course, the software should be able to automatically determine when the steady state has been approximately reached.)
+One may, for example, plot the achieved pulse duration (possibly after an automatically adjusted pulse compressor) as a function of the amount of chromatic dispersion in the laser resonator.</li>
+</ul>
+<p>A simple simulation software may offer single-pass simulations with all relevant details, but may not be usable for more sophisticated studies e.g. on mode-locked lasers.
+For example, if one would always have to manually transfer a pulse from one fiber to the next one, or manually perform subsequent round-trips until pulse parameters do not change significantly any more, the procedure could simply become far too tedious.
+Powerful scripting support for automating such procedures, as offered by <a href="fiberpower.html"><b>RP Fiber Power</b></a>, can be indispensable.</p>
+<p>We have published a <a href="fiberpower_ml_fl.html">case study for a mode-locked fiber laser</a> which serves as a nice example.
+It is an all-normal-dispersion laser, which exhibits relatively complicated pulse formation dynamics.
+Figure&nbsp;2 is taken from that case study; it shows how the optical spectrum of the circulating pulse converges to the steady state, leading to a nearly rectangular spectral shape.</p>
+<figure>
+<img src="img/fiberpower_ml_fl2.png" alt="pulses in frequency domain">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Pulse spectra in an all-normal-dispersion fiber laser for the first 100 round trips.
+</figcaption>
+</figure>
+<p>Figure&nbsp;3 shows how the pulse parameters approach the steady state.
+These parameters are always taken for the pulse as it occurs directly before it hits the output coupler.
+One could now change various parameters of the laser resonator in order to check how these affect the convergence to the steady state.</p>
+<figure>
+<img src="img/fiberpower_ml_fl4.png" alt="evolution of pulse parameters">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Evolution of the pulse parameters during the first 100 round trips.
+</figcaption>
+</figure>
+<p>Figure&nbsp;4 shows how the pulse parameters vary within the resonator (in the steady state).
+One sees that when going from left to right, the pulse duration rises substantially, while the pulse bandwidth rises only slightly.
+Both parameters are reset by a bandpass filter in the resonator.</p>
+<figure>
+<img src="img/fiberpower_ml_fl5.png" alt="evolution of pulse parameters">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Pulse parameters within the passive and active fibers. The active part is shown in red.
+</figcaption>
+</figure>
+</div>
+<h3 class="togglediv">Flexibility is Crucial</h3>
+<div>
+<p>From such examples one can see that the high flexibility of a well made simulation tool is not just nice, but rather is essential for real work.
+It is not sufficient to be able to simulate a round trip in the laser resonator; one also needs to generate various kinds of plots in order to gain a clear understanding of what is happening in such lasers.
+Also, one needs a flexible interactive tool for inspecting pulses anywhere in the resonator, particularly if one has not yet found suitable parameters for stable pulse formation.
+Once the crucial factors for pulse stability have been identified, one could also make a color plot, for example, which indicates the pulse stability as a function of two different parameters.</p>
+<p>Note that the powerful <a href="software_script_language.html"><b>script language</b></a>, as our software offers it, gives you the maximum degree of flexibility.
+Even if the designer of a software without that feature would have predefined a huge number of different diagrams, you may well find that what you need in practice is outside that selection.
+Therefore, you want to be able to control any details of diagrams, sequences of fibers and other optical elements, optimization strategies, etc.</p>
+<p>Go to <a href="tutorial_modeling8.html">Part 8: Using home-made software or a commercial product?</a>, or back to the <a href="tutorial_modeling.html">start page</a>.</p>
+</div>
+</div>
+<hr>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="tutorial_modeling7.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Ftutorial_modeling7.html&text=RP+Photonics+Encyclopedia+-+Tutorial+%26ldquo%3BModeling+of+Fiber+Amplifiers+and+Lasers%26rdquo%3B%2C+Part+7%3A+Ultrashort+pulses%2C+field+envelope+amplitudes%2C+temporal+grid%2C+resolution%2C+Fourier+techniques%2C+propagation+equations%2C+software" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Ftutorial_modeling7.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Ftutorial_modeling7.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></main></div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Recent Articles of the Photonics Spotlight:</h2>
+<ul><li>2020-07-08: <a href="spotlight_2020_07_08.html">Time to Start Digital Marketing with RP Photonics &ndash; with a Discount</a></li>
+<li>2020-05-11: <a href="spotlight_2020_05_11.html">Digital and Interactive Methods of Supporting the Photonics Industry</a></li>
+<li>2020-04-01: <a href="spotlight_2020_04_01.html">Photonics Marketing in Times of the Coronavirus Crisis</a></li>
+<li>2020-03-16: <a href="spotlight_2020_03_16.html">Laser Physics Helps to Understand the Corona Virus Crisis</a></li>
+<li>2020-01-20: <a href="spotlight_2020_01_20.html">News on the RP Photonics Website</a></li>
+<li>2019-11-19: <a href="spotlight_2019_11_19.html">Why Are Large Mode Areas Problematic?</a></li>
+<li>2019-08-26: <a href="spotlight_2019_08_26.html">Can Monochromatic Light be Unpolarized?</a></li>
+<li>2019-03-01: <a href="spotlight_2019_03_01.html">New Articles in the RP Photonics Encyclopedia</a></li>
+</ul>
+<p>You can receive such articles by subscribing to our <a href="./newsletters.html?banner=Recent_Spotlight_Articles">Newsletters</a>!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="8dVFl5WZQYUEKhB8gf9T7A==">shownbanner = "Recent Spotlight Articles";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Free Tutorial: Modeling of Fiber Amplifiers and Lasers</h2>
+<p>We have published a new <a href="./tutorial_modeling.html?banner=modeling_tutorial">tutorial</a> which discusses the modeling of fiber amplifiers and lasers.
+It addresses many questions:</p>
+<ul>
+<li>What is a <a href="./tutorial_modeling1.html?banner=modeling_tutorial">model</a>?</li>
+<li>Should one use <a href="./tutorial_modeling3.html?banner=modeling_tutorial">power propagation or field propagation</a>?</li>
+<li>How to simulate the behavior of <a href="./tutorial_modeling4.html?banner=modeling_tutorial">laser-active ions</a>?</li>
+<li>How to calculate <a href="./tutorial_modeling5.html?banner=modeling_tutorial">steady-state solutions</a>?</li>
+<li>How to simulate <a href="./tutorial_modeling6.html?banner=modeling_tutorial">dynamical behavior</a> and <a href="./tutorial_modeling7.html?banner=modeling_tutorial">ultrashort pulse propagation</a>?</li>
+<li>What aspects are important for the <a href="./tutorial_modeling8.html?banner=modeling_tutorial">decision</a> whether to develop own modeling software or use commercial software?</li>
+</ul>
+<p><a href="./tutorial_modeling.html?banner=modeling_tutorial">Read the tutorial!</a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="8dVFl5WZQYUEKhB8gf9T7A==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tutorials",
+      "item": "https://www.rp-photonics.com/encyclopedia_tutorials.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Modeling",
+      "item": "https://www.rp-photonics.com/tutorial_modeling.html"
+    },{
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Part 7",
+      "item": "https://www.rp-photonics.com/tutorial_modeling7.html"
+    }]}
+}
+</script>
+</body>
+</html>

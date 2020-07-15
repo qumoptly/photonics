@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-lJdQiHzw/zJHXt/Xar2dHw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Q-switched mode locking, QML, instability, threshold, saturable absorber</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/q_switched_mode_locking.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-06-25">
+<meta name="description" content="Q-switched mode locking is an (often unwanted) operation regime of mode-locked lasers with strong fluctuations of the pulse energy. It can be avoided with a suitable choice of laser parameters.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="Q-switched mode locking, QML, instability, threshold, saturable absorber">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Q-switched Mode Locking">
+<meta property="og:description" content="Q-switched mode locking is an (often unwanted) operation regime of mode-locked lasers with strong fluctuations of the pulse energy. It can be avoided with a suitable choice of laser parameters.">
+<meta property="og:url" content="https://www.rp-photonics.com/q_switched_mode_locking.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/q_switched_mode_locking.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Q-switched mode locking is an (often unwanted) operation regime of mode-locked lasers with strong fluctuations of the pulse energy. It can be avoided with a suitable choice of laser parameters.">
+<meta name="twitter:title" content="Q-switched Mode Locking">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/q_switched_mode_locking.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="lJdQiHzw/zJHXt/Xar2dHw==">
+page="q_switched_mode_locking.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo sponsor"></a> <a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo sponsor"></a> <a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="lJdQiHzw/zJHXt/Xar2dHw==">shownsponsors="El.En.,Knight Optical,RPMC Lasers"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_q.html">letter Q</a> &gt; <a href="q_switched_mode_locking.html">Q-switched mode locking</a></p>
+<h1>Q-switched Mode Locking</h1>
+<header style="margin-right:0;">
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: an operation regime of mode-locked lasers with strong fluctuations of the pulse energy</p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<p><a href="encyclopedia_cite.html?article=Q-switched%20mode%20locking">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Q-switched mode locking is an operation regime of a <a href="mode_locking.html" title="a group of techniques for generating ultrashort pulses in lasers">passively mode-locked laser</a> where the intracavity <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a> undergoes large oscillations, related to a dynamic instability (undamped <a href="relaxation_oscillations.html" title="small mutually coupled oscillations of the laser power and laser gain around their steady-state values">relaxation oscillations</a>).
+The pulse energy may even become extremely small for a number of subsequent pulses, before the next <em>bunch</em> of pulses is generated.</p>
+<figure>
+<img src="img/qml.png" alt="Q-switched mode locking">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Evolution of the optical power in a passively Q-switched laser under conditions of Q-switched mode locking (red), where bunches of <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a> are generated, and regular mode locking with constant pulse energy (blue).
+</figcaption>
+</figure>
+<p>The <a href="laser_dynamics.html" title="the temporal evolution of quantities such as the optical power and gain in a laser">laser dynamics</a> can be investigated using relatively simple <a href="laser_modeling.html" title="the investigation of phenomena and quantitative relations in lasers, using theoretical models and computational methods">dynamic models</a>.
+With certain approximations, it is possible to derive a criterion for stable mode locking (i.e. without Q-switched mode locking or <a href="q_switching_instabilities.html" title="instabilities of passively mode-locked lasers where the pulse energy is unstable">Q-switching instabilities</a>) above a certain <em>Q-switched mode locking threshold</em> [3]:</p>
+<div class="eqn"><img src="eqn/qml_e.gif" width="128" height="28" alt="QML suppression criterion"></div>
+<p>where <span class="eqn_il"><i>E</i><sub>p</sub></span> is the intracavity pulse energy, <span class="eqn_il"><i>E</i><sub>sat,g</sub></span> is the saturation energy of the gain medium, <span class="eqn_il"><i>E</i><sub>sat,a</sub></span> is the saturation energy of the saturable absorber, and <span class="eqn_il"><span class="greek">&Delta;</span><i>R</i></span> is the modulation depth of the absorber.</p>
+<form id="calculate_QML" class="calculatorform">
+<h2>Threshold Energy for Q-switching Instabilities</h2>
+<table>
+<tr>
+<td>Saturation energy of gain medium:</td><td></td><td></td>
+<td><input name="E_sat_g" value="" class="cf_calculate_QML"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Modulation depth of absorber:</td><td></td><td></td>
+<td><input name="dR" value="" class="cf_calculate_QML"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Saturation parameter of absorber:</td><td></td><td></td>
+<td><input name="S" value="" class="cf_calculate_QML"></td>
+<td></td><td>(should be &gt; 3)</td>
+</tr>
+<tr>
+<td>Threshold pulse energy:</td><td></td><td></td>
+<td><input name="E_p_th" value="" class="cf_calculate_QML"></td>
+<td><span class="calcbutton" id="calc_E_p_th">calc</span></td><td>(intracavity)</td>
+</tr>
+</table>
+<p class="comment">Enter input values with units, where appropriate. After you have modified some inputs, click the "calc" button to recalculate the output.</p>
+<p class="comment"> The saturation parameter <i>S</i> is the ratio of intracavity pulse energy to the saturation energy of the saturable absorber. The equation is accurate only if <i>S</i> &gt; 3 and if the absorber exhibits the saturation behavior as in a simple physical model.</p>
+<noscript>
+<p style="color:red">Attention: The buttons do not work, as Javascript is turned off in your browser!</p>
+</noscript>
+</form>
+<script type="text/javascript" src="calcform.js"></script>
+<script type="text/javascript" nonce="lJdQiHzw/zJHXt/Xar2dHw==">
+funits = new Array();
+funits["E_sat_g"] = "J";
+funits["dR"] = "&%";
+funits["S"] = "";
+funits["E_p_th"] = "J";
+function calc_E_p_th() {
+  $("input[name=E_p_th]").val("???");
+  GetFieldValues("E_p_th","calculate_QML");
+  E_p_th = E_sat_g*dR/S;
+  $("input[name=E_p_th]").val(format_u(E_p_th, "J"));
+ }
+$("input[name=E_sat_g]").val("100 uJ");
+$("input[name=dR]").val("1 %");
+$("input[name=S]").val("4");
+calc_E_p_th();
+$(document).ready(function() {
+  $("span#calc_E_p_th").click(function() { calc_E_p_th() })
+});
+</script>
+<p>The origin of Q-switching instabilities is that the saturable absorber typically &ldquo;rewards&rdquo; higher pulse energies with lower resonator losses, so that the damping of the <a href="relaxation_oscillations.html" title="small mutually coupled oscillations of the laser power and laser gain around their steady-state values">relaxation oscillations</a> is reduced.
+Whether or not this leads to QML depends on other factors; depending on various parameters, <a href="gain_saturation.html" title="the phenomenon that the gain of an amplifier is reduced for high input signal powers">gain saturation</a> may be sufficient for stabilizing the pulse energy.</p>
+<p>The regime of Q-switched mode locking is in some cases fairly stable (i.e., leads to bunches of pulses with reproducible properties), in others very unstable (exhibiting strong fluctuations of parameters such as maximum <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a>, <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a>, and <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">optical phase</a>).
+Particularly in the latter case, the term <a href="q_switching_instabilities.html" title="instabilities of passively mode-locked lasers where the pulse energy is unstable"><em>Q-switching instabilities</em></a> is often used.
+Usually, the stability is good in cases where the pulses do not become too weak between the bunches.
+Otherwise, the pulses in each bunch are basically created from noise (particularly from <a href="spontaneous_emission.html" title="a quantum effect, causing the spontaneous decay of excited states of atoms or ions">spontaneous emission</a>), and the pulse parameters cannot reach a steady state.
+This means that particularly in those situations where Q-switched mode locking leads to large maximum pulse energies, the operation is typically noisy.
+Therefore, Q-switched mode locking is not widely used in applications, but normally considered an unwanted phenomenon.
+It can be suppressed</p>
+<ul>
+<li>by choosing a <a href="gain_media.html" title="media for laser amplification">gain medium</a> with high laser <a href="transition_cross_sections.html" title="material parameters for quantifying the likelihood or rate of optical transition events">cross sections</a></li>
+<li>by using a <a href="resonator_design.html" title="the description of the optical components from which an optical resonator is made, and their exact arrangement">resonator design</a> with small mode areas</li>
+<li>by using a long resonator with low losses and high intracavity power</li>
+<li>by inserting a power-limiting element in the resonator</li>
+<li>via optimization of the <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorber</a> (e.g. exploiting a roll-over of the saturation curve, as can be caused by <a href="two_photon_absorption.html" title="a nonlinear absorption process where two photons are simultaneously absorbed">two-photon absorption</a>)</li>
+<li>with electronic feedback techniques</li>
+</ul>
+<p>For lasers operating in extreme parameter regions (e.g. very high output powers or very high pulse repetition rates), the suppression of Q-switching instabilities may require compromises, such as accepting longer pulse durations, lower laser efficiencies, or a high thermal load on the saturable absorber.</p>
+<p>Note that contrary to a common belief, the QML threshold normally does not depend on the <a href="upper_state_lifetime.html" title="the lifetime of the population of the upper laser level">upper-state lifetime</a>, but only on the laser <a href="transition_cross_sections.html" title="material parameters for quantifying the likelihood or rate of optical transition events">cross sections</a> (via the <a href="saturation_energy.html" title="a measure of the incident optical pulse energy required for achieving significant saturation of an absorber or a gain medium">saturation energy</a>): e.g., <a href="quenching.html" title="the reduction or limitation of an excited-state population, mostly by unwanted effects">quenching</a> effects can reduce the upper-state lifetime without affecting the QML threshold.</p>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="q_switched_mode_locking.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">H. Haus, &ldquo;Parameter ranges for CW passive mode locking&rdquo;, IEEE J. Quantum Electron. 12 (3), 169 (1976), <a href="https://doi.org/10.1109/JQE.1976.1069112">doi:10.1109/JQE.1976.1069112</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">F. X. Kärtner <i>et al.</i>, &ldquo;Control of solid-state laser dynamics by semiconductor devices&rdquo;, Opt. Eng. 34, 2024 (1995), <a href="https://doi.org/10.1117/12.204794">doi:10.1117/12.204794</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">C. Hönninger <i>et al.</i>, &ldquo;Q-switching stability limits of cw passive mode locking&rdquo;, J. Opt. Soc. Am. B 16 (1), 46 (1999), <a href="https://doi.org/10.1364/JOSAB.16.000046">doi:10.1364/JOSAB.16.000046</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">T. R. Schibli <i>et al.</i>, &ldquo;Suppression of Q-switched mode locking and breakup into multiple pulses by inverse saturable absorption&rdquo;, Appl. Phys. B 70, 41 (2000), <a href="https://doi.org/10.1007/s003400000331">doi:10.1007/s003400000331</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">A. Schlatter <i>et al.</i>, &ldquo;Pulse energy dynamics of passively mode-locked solid-state lasers above the Q-switching threshold&rdquo;, J. Opt. Soc. Am. B 21 (8), 1469 (2004), <a href="https://doi.org/10.1364/JOSAB.21.001469">doi:10.1364/JOSAB.21.001469</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="q_switching_instabilities.html" title="instabilities of passively mode-locked lasers where the pulse energy is unstable">Q-switching instabilities</a>, <a href="laser_dynamics.html" title="the temporal evolution of quantities such as the optical power and gain in a laser">laser dynamics</a>, <a href="relaxation_oscillations.html" title="small mutually coupled oscillations of the laser power and laser gain around their steady-state values">relaxation oscillations</a>, <a href="mode_locking.html" title="a group of techniques for generating ultrashort pulses in lasers">mode locking</a>, <a href="modes_of_laser_operation.html" title="a mode of operation such as continuous-wave operation, Q-switched or mode-locked operation">modes of laser operation</a><br>and other articles in the categories <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/q_switched_mode_locking.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fq_switched_mode_locking.html&text=RP+Photonics+Encyclopedia+-+Q-switched+mode+locking%2C+QML%2C+instability%2C+threshold%2C+saturable+absorber" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fq_switched_mode_locking.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fq_switched_mode_locking.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/q_switched_mode_locking.html"&gt;<br>Article on Q-switched Mode Locking&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/q_switched_mode_locking.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/q_switched_mode_locking.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/q_switched_mode_locking.html<br>article on 'Q-switched Mode Locking' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Fiber Optics Software</h2>
+<a href="./rp_fiber_calculator.html?banner=RP_Fiber_Calculator" style="float:right; margin-left:3px"><img src="./img/fiberpower_logo.png" alt="RP Fiber Calculator software"></a>
+<p><a href="./rp_fiber_calculator.html?banner=RP_Fiber_Calculator">RP Fiber Calculator</a> &ndash; a convenient tool for calculations on optical fibers:</p>
+<ul>
+<li>Define <a href="./rp_fiber_calculator_docu.html?banner=RP_Fiber_Calculator">index or doping profiles</a> with the graphical user interface.</li>
+<li>Calculate the <a href="./rp_fiber_calculator_gm.html?banner=RP_Fiber_Calculator">guided modes</a> and all their properties.</li>
+</ul>
+<p style="text-align:center;"><a href="./rp_fiber_calculator_gm.html?banner=RP_Fiber_Calculator"><img src="./img/mode_solver.png" alt="mode profiles"></a></p>
+<ul>
+<li>Calculate how much power of a <a href="./rp_fiber_calculator_la.html?banner=RP_Fiber_Calculator">laser beam is launched</a> into the modes.</li>
+<li>Simulate <a href="./rp_fiber_calculator_pr.html?banner=RP_Fiber_Calculator">light propagation</a> within the fiber and <a href="./rp_fiber_calculator_co.html?banner=RP_Fiber_Calculator">coupling of light from one fiber to another</a>.</li>
+</ul>
+<a href="./rp_fiber_calculator.html?banner=RP_Fiber_Calculator"><img src="./img/rp_fiber_calculator_screenshot_small.png" alt="screen shot"></a>
+<p>The basic version of this software is offered <a href="./rp_fiber_calculator_download.html?banner=RP_Fiber_Calculator">for free</a>!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="lJdQiHzw/zJHXt/Xar2dHw==">shownbanner = "RP Fiber Calculator";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Photonics Newsletters &ndash; <br>get high quality information, not the usual advertisements!</h2>
+<ul>
+<li>The <a href="./spotlight.html?banner=newsletters">Photonics Spotlight</a> presents high-quality information on technical and scientific aspects of photonics.</li>
+<li>The <a href="./software_news.html?banner=newsletters">RP Photonics Software News</a> present news and useful hints on software &ndash; for example, about how to use our software products, new features, updates and upgrades, and on algorithms.</li>
+</ul>
+<p style="text-align:center; margin:8px 8px;"><img src="./img/mail.png" alt="e-mail"></p>
+<h3>We won't flood you with e-mails!</h3>
+<p>Our newsletters appear only about once per month, and they carry valuable information.
+You will not regret to <a href="./newsletters.html?banner=newsletters">register</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="lJdQiHzw/zJHXt/Xar2dHw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/q_switched_mode_locking.html"
+    },
+    "headline": "Q-switched Mode Locking",
+    "image": "https://www.rp-photonics.com/previews/q_switched_mode_locking.png",
+    "datePublished": "2007-03-24",
+    "dateModified": "2020-06-25",
+    "description": "Q-switched mode locking is an (often unwanted) operation regime of mode-locked lasers with strong fluctuations of the pulse energy. It can be avoided with a suitable choice of laser parameters.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter Q",
+      "item": "https://www.rp-photonics.com/encyclopedia_q.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Q-switched mode locking",
+      "item": "https://www.rp-photonics.com/q_switched_mode_locking.html"
+    }]}
+}
+</script>
+</body>
+</html>

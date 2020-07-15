@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-Grz/ZbtynqggKGgjpYwUpQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - autocorrelators, pulse duration, measurement</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/autocorrelators.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Autocorrelators are devices for measuring the intensity or field autocorrelation function of light, mostly used for determining the duration of ultrashort pulses.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="autocorrelators, pulse duration, measurement">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Autocorrelators">
+<meta property="og:description" content="Autocorrelators are devices for measuring the intensity or field autocorrelation function of light, mostly used for determining the duration of ultrashort pulses.">
+<meta property="og:url" content="https://www.rp-photonics.com/autocorrelators.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/autocorrelators.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Autocorrelators are devices for measuring the intensity or field autocorrelation function of light, mostly used for determining the duration of ultrashort pulses.">
+<meta name="twitter:title" content="Autocorrelators">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/autocorrelators.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="Grz/ZbtynqggKGgjpYwUpQ==">
+page="autocorrelators.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="Grz/ZbtynqggKGgjpYwUpQ==">shownsponsors="TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_autocorrelators.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_a.html">letter A</a> &gt; <a href="autocorrelators.html">autocorrelators</a></p>
+<h1>Autocorrelators</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_autocorrelators.html?s=vbox">19 suppliers for autocorrelators</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.lightcon.com/Product/GECO.html" data-supplier="Light Conversion" data-location="product-enc" data-keyword="autocorrelators" rel="nofollow" class="bg externallink"><img src="./bg/logos/light_conversion.png" alt="Light Conversion" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://goo.gl/fi8sVN" data-supplier="APE" data-location="product-enc" data-keyword="autocorrelators" rel="nofollow" class="bg externallink"><img src="./bg/logos/ape.png" alt="APE" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="http://www.edmundoptics.com/f/compact-tpa-ultrafast-autocorrelator/39533/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="autocorrelators" rel="nofollow" class="bg externallink"><img src="./bg/logos/edmund_optics.png" alt="Edmund Optics" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_autocorrelators.html?s=vbox">List of suppliers for<br>autocorrelators</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: devices for measuring the intensity or field autocorrelation function of light, mostly used for determining the duration of ultrashort pulses</p>
+<p>More general terms: <a href="optical_metrology.html" title="the science and technology of performing measurements with light">optical metrology</a> instruments, <a href="pulse_characterization.html" title="the measurement of various properties of an optical pulse">pulse characterization</a> instruments</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Autokorrelatoren</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<p><a href="encyclopedia_cite.html?article=autocorrelators">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Optical autocorrelators are used for various purposes, in particular for the detailed analysis of <a href="light.html" title="electromagnetic radiation in the visible spectral range, or sometimes in an extended spectral region">light</a>, in particular for the measurement of the <a href="pulse_duration.html" title="the duration of an optical pulse">duration</a> of <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a> with picosecond or femtosecond durations, where an electronic apparatus (based on, e.g., a <a href="photodiodes.html" title="semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiode</a>) would be too slow.</p>
+<p>The basic principle of operation of an autocorrelator for a <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a> measurement is to check the correlation of the temporal pulse trace with itself; it is explained in the following.
+A <a href="beam_splitters.html" title="devices for splitting a laser beam into two or more beams">beam splitter</a> creates two copies of the incoming pulses.
+These copies are superimposed in a nonlinear medium, where they interact on the basis of some <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearity</a>, provided that they overlap temporarily.</p>
+<p>This article does <em>not</em> treat devices with an <a href="interferometers.html" title="optical devices utilizing the phenomenon of interference">interferometer</a> but no nonlinear crystal, as can be used to measure the <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a> of a source; for such things, see the article on <a href="fourier_transform_spectroscopy.html" title="a method for spectroscopy rare an optical spectrum is computed from raw data with a Fourier transform">Fourier transform spectroscopy</a>.
+In that context, one uses autocorrelations of optical amplitudes, rather than of powers.</p>
+<p>Autocorrelators should not be confused with <a href="autocollimators.html" title="optical instruments for precisely measuring angular alignments">autocollimators</a>, which have a completely different purpose.</p>
+<h2 class="togglediv">Intensity Autocorrelators</h2>
+<div>
+<figure class="right" style="width:282px;">
+<img src="img/int_autocorrelator.png" alt="intensity autocorrelator">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Setup of an intensity autocorrelator. BS = beam splitter.
+</figcaption>
+</figure>
+<p>In an <em>intensity autocorrelator</em> as shown in Figure&nbsp;1, a beam splitter splits an incoming pulse into two pulses, which are then focused and sent into a <a href="nonlinear_crystal_materials.html" title="crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">crystal</a> with a <span class="eqn_il"><span class="greek">&chi;</span><sup>(2)</sup></span> nonlinearity.
+The arm length difference and thus the relative timing of the pulses can be mechanically adjusted via the variable <a href="optical_delay_lines.html" title="an optical setup which is used to introduce a time delay for a light beam">optical delay line</a>.
+(Different kinds of delay lines are used, e.g. using rotating glass blocks or mirrors mounted on loudspeakers.)
+If the arm length difference is made small, so that the pulses meet in the nonlinear crystal, the process of <a href="sum_and_difference_frequency_generation.html" title="nonlinear processes generating beams with the sum or difference of the frequencies of the input beams">sum frequency generation</a> occurs, leading to an output with a shorter <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>.
+If the relative time delay is increased, so that the overlap of the two pulses in the crystal is reduced, the mixing product becomes weaker.
+Obviously, that overlap is lost sooner if the pulses are rather short.</p>
+<p>For measuring the pulse duration, the power of the mixing product is recorded as a function of the arm length difference.
+This can be done under computer control, using a motorized translation stage to move the delay line, or simply a loudspeaker moving a <a href="corner_cube_prisms.html" title="prisms with three reflecting surfaces which act as retroreflectors">corner cube prism</a>.
+The dependence of the autocorrelation signal on the temporal delay is given by</p>
+<div class="eqn"><img src="eqn/ac_i.gif" width="164" height="29" alt="intensity autocorrelation"></div>
+<p>Figure&nbsp;2 shows the autocorrelation signal for <a href="sech2_shaped_pulses.html" title="pulses with a temporal intensity profile which has the shape of a sech<sup>2</sup> function">sech<sup>2</sup>-shaped pulses</a>.
+The horizontal axis shows the time delay as calculated from the arm length difference.</p>
+<figure>
+<img src="img/int_ac.png" alt="interferometric autocorrelation">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Intensity autocorrelation of a sech<sup>2</sup>-shaped pulse with a duration of 150&nbsp;fs. A shift of the delay line by 15&nbsp;&mu;m corresponds to a change in the time delay by 100&nbsp;fs.
+</figcaption>
+</figure>
+<p>For sech<sup>2</sup>-shaped pulses, the pulse duration is &asymp;&thinsp;0.65 times the width of the autocorrelation signal, but this conversion factor depends on the pulse shape.
+A rough evaluation is often based on some assumption concerning the pulse shape.
+Fitting the recorded autocorrelation with a theoretical curve for that assumed pulse shape provides a kind of sanity check, but not a strict one.
+In this context, note that the autocorrelation is e.g. always symmetric with respect to its center, even for asymmetric pulse shapes.
+However, asymmetric autocorrelation shapes can be obtained from misaligned autocorrelators.</p>
+<aside class="callout blue">A relatively slow photodetector is sufficient even for characterizing ultrashort pulses.</aside>
+<p>Note that very short pulse durations can be measured without requiring a fast <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a>: the detector only has to measure an average power (assuming that a regular pulse train is sent into the autocorrelator), rather than resolving the power variations of the pulses.</p>
+<aside class="callout blue">Difficulties can arise for very short pulses.</aside>
+<p>For very short pulse durations (e.g. &lt;&thinsp;20&nbsp;fs), various difficulties arise: the beam splitter may have a limited <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>, and its substrate and the other optical elements introduce <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>.
+Furthermore, a geometric smearing effect leads to a too long measured pulse duration, if the beam angles are too steep, and <a href="group_velocity_mismatch.html" title="the phenomenon that pulses become temporally separated in a medium due to different group velocities, or (quantitatively) the difference of inverse group velocities">group velocity mismatch</a> can restrict the <a href="phase_matching_bandwidth.html" title="the width of an optical frequency range in which some process (e.g. a nonlinear interaction) can be efficient due to more or less precise phase matching">phase-matching bandwidth</a>.
+Very thin nonlinear crystals are used in that domain, sometimes with a thickness less than 10&nbsp;&mu;m.</p>
+<p>A collinear setup for intensity autocorrelation measurements can exploit type&nbsp;II <a href="phase_matching.html" title="a group of techniques for achieving efficient nonlinear interactions in a medium">phase matching</a> in the crystal.
+The two pulse copies then have different polarization directions, rather than different propagation directions.
+In that way, the mentioned geometric smearing effect is avoided.</p>
+<p>The intensity autocorrelation is called <em>background-free</em>, since the signal vanishes for large time delays.
+This is different for interferometric autocorrelators, as discussed below.</p>
+<p>In most cases, an autocorrelation trace requires many different pulses from a regular pulse trains, since at least one pulse is required for every time delay setting.
+However, it is also possible to measure a whole autocorrelation trace with a single pulse, if this has a sufficiently high <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a>.
+In a <em>single-shot autocorrelator</em>, the focusing into the nonlinear crystal is done with a cylindrical (rather than spherical) <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lens</a>, and the converted signal is recorded with a <a href="cameras.html" title="optical instruments for recording still or moving images">camera</a>.
+Different spatial positions in the crystal then correspond to different time delays.</p>
+</div>
+<h2 class="togglediv">Interferometric Autocorrelators</h2>
+<div>
+<figure class="right" style="width:254px;">
+<img src="img/if_autocorrelator.png" alt="interferometric autocorrelator">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Setup of an interferometric autocorrelator. BS = beam splitter.
+</figcaption>
+</figure>
+<p>The setup of an interferometric autocorrelator (Figure&nbsp;3) contains a <a href="interferometers.html" title="optical devices utilizing the phenomenon of interference">Michelson interferometer</a> with a variable arm length difference.
+The superimposed copies of the pulse are collinearly propagating into the nonlinear crystal (after focusing with a lens or curved <a href="laser_mirrors.html" title="high-quality mirrors used in laser resonators and other optical setups">laser mirror</a>) and have the same polarization.</p>
+<p>An interferometric autocorrelation is obtained by recording the average power of the frequency-doubled signal:</p>
+<div class="eqn"><img src="eqn/ac_int.gif" width="198" height="32" alt="interferometric autocorrelation"></div>
+<p>where the integration is over the temporal range corresponding to one pulse.
+This kind of autocorrelation trace exhibits a fast oscillation with a period of half the optical wavelength.
+The maximum signal (Figure&nbsp;4) is obtained when the two pulses after the beam splitter undergo perfect constructive interference, leading to twice the amplitude compared with a single pulse, and thus four times the intensity, and after frequency doubling 16 times the intensity.
+For a large arm length difference, the pulses do not overlap in the nonlinear crystal, and the intensity is only twice that generated by a single pulse.
+Hence the peak signal is always eight times higher than the background, provided that the interferometer is properly aligned.</p>
+<figure>
+<img src="img/i_ac.png" alt="interferometric autocorrelation">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Interferometric autocorrelation of a sech<sup>2</sup>-shaped unchirped pulse with a duration of 15&nbsp;fs.
+</figcaption>
+</figure>
+<p>The interferometric autocorrelation is sensitive to <a href="chirp.html" title="time dependence of the instantaneous frequency of an optical pulse">chirps</a> and thus in principle makes it possible to extract more information on the pulses.
+However, the pulse duration of a chirped pulse is underestimated if one simply uses the width of the autocorrelation signal (see Figure&nbsp;5).
+An improved method called <em>modified-spectrum autointerferometric correlation</em> (MOSAIC) [15] is based on an interferometric autocorrelation, which is numerically post-processed such that the resulting trace makes it much easier to diagnose a chirp.</p>
+<figure>
+<img src="img/i_ac_chirped.png" alt="interferometric autocorrelation">
+<figcaption><span class="start">Figure&nbsp;5:</span> 
+Interferometric autocorrelation of a sech<sup>2</sup>-shaped <em>chirped</em> pulse with a duration of 15&nbsp;fs. Even though the pulse duration is the same as in Figure&nbsp;4, the signal has a smaller width.
+</figcaption>
+</figure>
+<p>For relatively long pulses, the many oscillations of the interferometric autocorrelation trace can be averaged out.
+In that case, the peak signal is three times the background (not four times, due to the non-sinusoidal oscillation).</p>
+<p>Owing to its simpler setup, interferometric autocorrelators are more suitable than intensity autocorrelators for measuring very small (few-femtosecond) pulse durations.
+In particular, the above-mentioned geometric effect is avoided.
+However, other methods of <a href="pulse_characterization.html" title="the measurement of various properties of an optical pulse">pulse characterization</a> (e.g. <a href="frequency_resolved_optical_gating.html" title="a technique for the complete characterization of ultrashort optical pulses">FROG</a> or <a href="spectral_phase_interferometry.html" title="a class of interferometric methods for pulse characterization, where interference in the frequency domain is exploited">SPIDER</a>) are more precise in the regime below 10&nbsp;fs.</p>
+</div>
+<h2 class="togglediv">Choice of Nonlinear Crystal and Phase Matching</h2>
+<div>
+<p>The choice of a suitable <a href="nonlinear_crystal_materials.html" title="crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal</a> and the crystal thickness involves various considerations e.g. concerning <a href="phase_matching.html" title="a group of techniques for achieving efficient nonlinear interactions in a medium">phase matching</a>.
+In the femtosecond regime, the <a href="group_velocity_mismatch.html" title="the phenomenon that pulses become temporally separated in a medium due to different group velocities, or (quantitatively) the difference of inverse group velocities">group velocity mismatch</a> is also particularly important, potentially limiting the temporal resolution.
+Thin KDP crystals are a good choice for pulse durations down to a few femtoseconds.
+Lithium iodate (LiIO<sub>3</sub>) is also often used due to its particularly wide <a href="phase_matching_bandwidth.html" title="the width of an optical frequency range in which some process (e.g. a nonlinear interaction) can be efficient due to more or less precise phase matching">phase-matching bandwidth</a>.</p>
+<p>It can be advantageous to use a crystal with type-II phase matching, because it is then easier to achieve a high dynamic range (see below).</p>
+</div>
+<h2 class="togglediv">Autocorrelators Based on Two-photon Absorption</h2>
+<div>
+<p>Particularly compact and simple autocorrelators can be constructed using <a href="photodiodes.html" title="semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiodes</a> with large <a href="band_gap.html" title="a range of energies for which there are no states of carriers in a medium">band gap</a> materials, where only <a href="two_photon_absorption.html" title="a nonlinear absorption process where two photons are simultaneously absorbed">two-photon absorption</a> in the photodiode contributes to the <a href="photocurrent.html" title="an electric current which is induced by incident light in a photodetector">photocurrent</a>, whereas there is no linear response due to the too small <a href="photons.html" title="quanta of light energy">photon</a> energy.
+Such two-photon detectors sometimes allow for a very wide optical measurement <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>.</p>
+</div>
+<h2 class="togglediv">Autocorrelators with High Dynamic Range</h2>
+<div>
+<p>In some cases, it is desirable to measure autocorrelations with a particularly high dynamic range, so that one can detect even rather weak pedestals of a pulse, or side peaks which may e.g. be caused by parasitic reflections.
+(<a href="mode_locked_fiber_lasers.html" title="ultrafast fiber lasers which are actively or passively mode-locked for generating ultrashort pulses">Mode-locked fiber lasers</a> have a particular tendency to produce such features.)
+For that purpose, special high dynamic range autocorrelators have been developed.
+One may, for example, use a background-free intensity autocorrelator based on a type-II phase-matched crystal, where there is no upconverted signal outside the region of temporal overlap.
+Also, one may use a setup where the two input beams to the nonlinear crystal are modulated with a two-frequency <a href="optical_choppers.html" title="devices for periodically interrupting light beams">optical chopper</a>.
+The autocorrelation signal then has frequency components at the sum and the difference of the two modulation frequencies, and can be processed with a lock-in amplifier [8].</p>
+<p>Another possibility is to use a third-order autocorrelator, using <a href="sum_and_difference_frequency_generation.html" title="nonlinear processes generating beams with the sum or difference of the frequencies of the input beams">sum frequency generation</a> of the laser light with a frequency-doubled component [7,&thinsp;18].
+Such a device can also reveal asymmetric features, such as pedestals of different height before and after the pulse.</p>
+<p>The detectors are often <a href="photomultipliers.html" title="photodetection devices based on the photoelectric effect and charge multiplication by secondary emission of electrons">photomultipliers</a> because of their particularly low <a href="noise_equivalent_power.html" title="the input power to a detector which produces the same signal output power as the internal noise of the device">noise equivalent power</a>.</p>
+<p>For sufficiently high pulse energies, the dynamic range achieved with such techniques can be 80&thinsp;dB or even 100&nbsp;dB, although oft not in combination with highest temporal resolution.
+(Longer nonlinear crystals provide stronger signals and thus a higher dynamic range, but also limit the temporal resolution by introducing a <a href="group_velocity_mismatch.html" title="the phenomenon that pulses become temporally separated in a medium due to different group velocities, or (quantitatively) the difference of inverse group velocities">group velocity mismatch</a>.)
+Some mode-locked lasers exhibit no pedestals even in that large range, while others have substantial pedestals which are then easily seen.</p>
+</div>
+<h2 class="togglediv">Limitations of the Autocorrelation Method; The Coherent Artifact</h2>
+<div>
+<p>From a measured autocorrelation trace, one can well retrieve the <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a> if the pulse shape is known, and also check whether the autocorrelation trace is consistent with a given pulse shape.
+However, one can not uniquely measure the pulse shape with an autocorrelation trace alone.
+The primary reason is that the autocorrelation trace is always symmetric, even for asymmetric pulse shapes.
+Further problems arise if pulse trains are subject to noise; autocorrelation traces can then be quite misleading.</p>
+<p>Further, the frequently used intensity autocorrelation technique cannot provide information on the <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">phase</a> profile; the obtained autocorrelation traces depend only on the temporal variation of <a href="optical_intensity.html" title="optical power per unit area">optical intensity</a> or <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">power</a>.</p>
+<p>For very short pulses, e.g. with durations below 10&nbsp;fs, accurate autocorrelation measurements are difficult to perform.
+One challenge is the limited <a href="phase_matching_bandwidth.html" title="the width of an optical frequency range in which some process (e.g. a nonlinear interaction) can be efficient due to more or less precise phase matching">phase-matching bandwidth</a> of the nonlinear crystal, even if that is made very thin.
+<a href="frequency_resolved_optical_gating.html" title="a technique for the complete characterization of ultrashort optical pulses">Frequency-resolved optical gating</a> (FROG) and <a href="spectral_phase_interferometry.html" title="a class of interferometric methods for pulse characterization, where interference in the frequency domain is exploited">spectral phase interferometry</a> (SPIDER) have found to be more accurate in that domain, while also providing valuable phase information.</p>
+<p>For pulses exhibiting strongly distorted temporal shapes, as can occur e.g. for a not properly working <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked laser</a>, one can obtain an autocorrelation trace which exhibits a narrow feature &ndash; called a <em>coherent artifact</em> on top of a much broader structure.
+In such situations, it is wrong just to take the coherent artifact as a measure for the pulse duration and ignore the broad background [2].
+In fact, the autocorrelation trace then coveys little information on the actual pulse shape.
+More comprehensive <a href="pulse_characterization.html" title="the measurement of various properties of an optical pulse">pulse characterization</a> can then be achieved with <a href="frequency_resolved_optical_gating.html" title="a technique for the complete characterization of ultrashort optical pulses">frequency-resolved optical gating</a>.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_autocorrelators.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 19 suppliers for autocorrelators. Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.lightcon.com/" data-supplier="Light Conversion" data-location="product-enc" data-keyword="autocorrelators" rel="nofollow" class="bg externallink" title="Visit the website of Light Conversion"><img src="./bg/logos/light_conversion.png" alt="Light Conversion" class="supplierlogo"></a><a href="http://www.lightcon.com/Product/GECO.html" data-supplier="Light Conversion" data-location="product-enc" data-keyword="autocorrelators" rel="nofollow" class="bg externallink" title="Visit the website of Light Conversion"><img src="./bg/products/light_conversion/geco.jpg" alt="autocorrelators" class="product"></a><h3><a href="./bg/profiles/light_conversion.html" title="See the profile of Light Conversion">Light Conversion</a></h3><p>Light Conversion has the <a href="http://www.lightcon.com/Product/GECO.html" data-supplier="Light Conversion" data-location="product-enc" data-keyword="autocorrelators" rel="nofollow" class="externallink bg">GECO scanning autocorrelator</a>:</p><p>- measures pulse duration in 10 fs – 20 ps range</p><p>- single set of optics for 500 – 2000 nm range</p><p>- high‑resolution voice coil driven delay line</p><p>- non‑collinear intensity and collinear interferometric autocorrelation traces</p><p>- onboard pulse‑analysis software for pulse duration measurements</p><p>- integrated controller and computer</p><p>- non‑dispersive polarization control</p><p>- FROG ready</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.ape-berlin.de/" data-supplier="APE" data-location="product-enc" data-keyword="autocorrelators" rel="nofollow" class="bg externallink" title="Visit the website of APE"><img src="./bg/logos/ape.png" alt="APE" class="supplierlogo"></a><a href="https://goo.gl/fi8sVN" data-supplier="APE" data-location="product-enc" data-keyword="autocorrelators" rel="nofollow" class="bg externallink" title="Visit the website of APE"><img src="./bg/products/ape/autocorrelators.png" alt="autocorrelators" class="product"></a><h3><a href="./bg/profiles/ape.html" title="See the profile of APE">APE</a></h3><p>APE <a href="https://goo.gl/fi8sVN" data-supplier="APE" data-location="product-enc" data-keyword="autocorrelators" rel="nofollow" class="externallink bg">autocorrelators</a> are used to measure the pulse duration of femtosecond and picosecond laser systems. The technology is based on either second harmonic generation (SHG) detection or two-photon absorption (TPA) detection principle.</p><p><a href="https://goo.gl/fi8sVN" data-supplier="APE" data-location="product-enc" data-keyword="autocorrelators" rel="nofollow" class="externallink bg">APE Autocorrelator Models</a>:</p><p>- <a href="https://goo.gl/vMa2jh" data-supplier="APE" data-location="product-enc" data-keyword="autocorrelators" rel="nofollow" class="externallink bg">pulseCheck</a>: multitalent for any task</p><p>- <a href="http://www.ape-berlin.de/en/products/autocorrelator?utm_source=RP-Photonics&utm_medium=Ad_Link&utm_content=Mini+TPA" data-supplier="APE" data-location="product-enc" data-keyword="autocorrelators" rel="nofollow" class="externallink bg">Mini TPA</a>: compact and tuning-free</p><p>- <a href="http://www.ape-berlin.de/en/products/autocorrelator?utm_source=RP-Photonics&utm_medium=Ad_Link&utm_content=Mini+PD" data-supplier="APE" data-location="product-enc" data-keyword="autocorrelators" rel="nofollow" class="externallink bg">Mini PD</a>: routine tasks with a fixed wavelength range</p><p>- <a href="https://goo.gl/Ut6FbP" data-supplier="APE" data-location="product-enc" data-keyword="autocorrelators" rel="nofollow" class="externallink bg">Carpe</a>: first choice for multiphoton microscopy</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.edmundoptics.com/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="autocorrelators" rel="nofollow" class="bg externallink" title="Visit the website of Edmund Optics"><img src="./bg/logos/edmund_optics.png" alt="Edmund Optics" class="supplierlogo"></a><a href="http://www.edmundoptics.com/f/compact-tpa-ultrafast-autocorrelator/39533/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="autocorrelators" rel="nofollow" class="bg externallink" title="Visit the website of Edmund Optics"><img src="./bg/products/edmund_optics/autocorrelators.jpg" alt="autocorrelators" class="product"></a><h3><a href="./bg/profiles/edmund_optics.html" title="See the profile of Edmund Optics">Edmund Optics</a></h3><p>Our <a href="http://www.edmundoptics.com/f/compact-tpa-ultrafast-autocorrelator/39533/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="autocorrelators" rel="nofollow" class="externallink bg">compact ultrafast autocorrelator</a> is used to characterize ultrafast laser pulses originating from Ti:sapphire and Yb:doped lasers. Featuring a built-in two-photon absorption (TPA) detector, this autocorrelator is ideal for measuring ultrafast femtosecond and picosecond laser pulses at wavelengths from 700 to 1100&nbsp;nm. The highly sensitive TPA detector allows for measurements of ultrafast laser pulses with high sensitivity by eliminating the need for angle tuning of the SHG nonlinear crystal.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="autocorrelators.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">J. A. Armstrong, &ldquo;Measurement of picosecond laser pulse widths&rdquo;, Appl. Phys. Lett. 10 (1), 16 (1967), <a href="https://doi.org/10.1063/1.1754787">doi:10.1063/1.1754787</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">R. A. Fisher and J. A. Fleck Jr, “On the phase characteristics and compression of picosecond pulses”, Appl. Phys. Lett. 15, 287 (1969), <a href="https://doi.org/10.1063/1.1653002">doi:10.1063/1.1653002</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">K. Sala <i>et al.</i>, &ldquo;CW autocorrelation measurements of picosecond laser pulses&rdquo;, IEEE J. Quantum Electron.16 (9), 990 (1980), <a href="https://doi.org/10.1109/JQE.1980.1070606">doi:10.1109/JQE.1980.1070606</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">R. K. Jain <i>et al.</i>, &ldquo;Simple distortion-free real-time optical pulse correlator&rdquo;, Appl. Opt. 21 (22), 4073 (1982), <a href="https://doi.org/10.1364/AO.21.004073">doi:10.1364/AO.21.004073</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">A. M. Weiner, &ldquo;Effect of group velocity mismatch on the measurement of ultrashort optical pulses via second harmonic generation&rdquo;, IEEE J. Quantum Electron.19 (8), 1276 (1983), <a href="https://doi.org/10.1109/JQE.1983.1072036">doi:10.1109/JQE.1983.1072036</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">G. Xinan <i>et al.</i>, &ldquo;Fast-scanning autocorrelator with 1-ns scanning range for characterization of mode-locked ion lasers&rdquo;, Rev. Sci. Instrum. 59 (9), 2088 (1988), <a href="https://doi.org/10.1063/1.1140032">doi:10.1063/1.1140032</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">S. Luan <i>et al.</i>, &ldquo;High dynamic range third-order correlation measurement of picosecond laser pulse shapes&rdquo;, <a href="https://iopscience.iop.org/article/10.1088/0957-0233/4/12/018">Meas. Sci. Technol. 4, 1426 (1993)</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">A. Braun <i>et al.</i>, &ldquo;Characterization of short-pulse oscillators by means of a high-dynamic-range autocorrelation measurement&rdquo;, Opt. Lett. 20 (5), 1889 (1995), <a href="https://doi.org/10.1364/OL.20.001889">doi:10.1364/OL.20.001889</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">B. M. van Oerle and G. J. Ernst, &ldquo;Autocorrelation measurements of bursts of picosecond pulses&rdquo;, Appl. Opt. 35 (25), 5177 (1996), <a href="https://doi.org/10.1364/AO.35.005177">doi:10.1364/AO.35.005177</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">L. P. Barry <i>et al.</i>, &ldquo;Autocorrelation of ultrashort pulses at 1.5&nbsp;&mu;m based on nonlinear response of silicon photodiodes&rdquo;, Electron. Lett. 32 (20), 1922 (1996), <a href="https://doi.org/10.1049/el:19961251">doi:10.1049/el:19961251</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">I. D. Jung <i>et al.</i>, &ldquo;High-dynamic-range characterization of ultrashort pulses&rdquo;, Appl. Phys. B 65, 307 (1997), <a href="https://doi.org/10.1007/s003400050277">doi:10.1007/s003400050277</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">D. T. Reid <i>et al.</i>, &ldquo;Light-emitting diodes as measurement devices for femtosecond laser pulses&rdquo;, Opt. Lett. 22 (4), 233 (1997), <a href="https://doi.org/10.1364/OL.22.000233">doi:10.1364/OL.22.000233</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">D. M. Riffe and A. J. Sabbah, &ldquo;A compact rotating-mirror autocorrelator design for femtosecond and picosecond laser pulses&rdquo;, Rev. Sci. Instrum. 69 (9), 3099 (1998), <a href="https://doi.org/10.1063/1.1149065">doi:10.1063/1.1149065</a></td></tr>
+<tr><td class="refno">[14]</td><td class="refs">A. Gutierrez <i>et al.</i>, &ldquo;Autocorrelation measurement of femtosecond laser pulses by use of a ZnSe two-photon detector array&rdquo;, Opt. Lett. 24 (16), 1175 (1999), <a href="https://doi.org/10.1364/OL.24.001175">doi:10.1364/OL.24.001175</a></td></tr>
+<tr><td class="refno">[15]</td><td class="refs">T. Hirayama and M. Sheik-Bahae, &ldquo;Real-time chirp diagnostic for ultrashort laser pulses&rdquo;, Opt. Lett. 27 (10), 860 (2002), <a href="https://doi.org/10.1364/OL.27.000860">doi:10.1364/OL.27.000860</a></td></tr>
+<tr><td class="refno">[16]</td><td class="refs">E. Power <i>et al.</i>, &ldquo;All-reflective high fringe contrast autocorrelator for measurement of ultrabroadband optical pulses&rdquo;, Opt. Lett. 31 (23), 3514 (2006), <a href="https://doi.org/10.1364/OL.31.003514">doi:10.1364/OL.31.003514</a></td></tr>
+<tr><td class="refno">[17]</td><td class="refs">F. Quercioli, &ldquo;Autocorrelator designs for nonlinear optical microscopy&rdquo;, Opt. Eng. 45 (6), 064303 (2006), <a href="https://doi.org/10.1117/1.2215379">doi:10.1117/1.2215379</a></td></tr>
+<tr><td class="refno">[18]</td><td class="refs">N. Stuart <i>et al.</i>, &ldquo;Comparative study on the temporal contrast of femtosecond mode-locked laser oscillators&rdquo;, Opt. Lett. 41 (14), 3221 (2016), <a href="https://doi.org/10.1364/OL.41.003221">doi:10.1364/OL.41.003221</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="pulses.html" title="flashes of light">pulses</a>, <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a>, <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a>, <a href="pulse_characterization.html" title="the measurement of various properties of an optical pulse">pulse characterization</a><br>and other articles in the categories <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/autocorrelators.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fautocorrelators.html&text=RP+Photonics+Encyclopedia+-+autocorrelators%2C+pulse+duration%2C+measurement" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fautocorrelators.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fautocorrelators.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/autocorrelators.html"&gt;<br>Article on Autocorrelators&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/autocorrelators.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/autocorrelators.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/autocorrelators.html<br>article on 'Autocorrelators' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="./coating_demo_etalon.html?banner=RP_Coating_4"><img src="./img/coating_demo_etalon6b.png" alt="etalon" style="margin-bottom:8px"></a>
+<p>Color-coded field penetration in an etalon structure as a function of wavelength.</p>
+<p>This diagram has been made with the <a href="./coating.html?banner=RP_Coating_4"><b>RP Coating</b></a> software.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="Grz/ZbtynqggKGgjpYwUpQ==">shownbanner = "RP Coating 4";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Latest Encyclopedia Articles</h2>
+<p>Here are the latest encyclopedia articles:</p>
+<ul>
+<li class="tight"><a href="./variable_reflectivity_mirrors.html">variable reflectivity mirrors</a></li>
+<li class="tight"><a href="./color_centers.html">color centers</a></li>
+<li class="tight"><a href="./excimer_lamps.html">excimer lamps</a></li>
+<li class="tight"><a href="./multimode_beams.html">multimode beams</a></li>
+<li class="tight"><a href="./channel_waveguides.html">channel waveguides</a></li>
+<li class="tight"><a href="./optical_crystals.html">optical crystals</a></li>
+<li class="tight"><a href="./standing_wave_resonators.html">standing-wave resonators</a></li>
+<li class="tight"><a href="./nonlinear_absorption.html">nonlinear absorption</a></li>
+<li class="tight"><a href="./passive_fibers.html">passive fibers</a></li>
+<li class="tight"><a href="./active_fibers.html">active fibers</a></li>
+<li class="tight"><a href="./oem_laser_modules.html">OEM laser modules</a></li>
+<li class="tight"><a href="./industrial_lasers.html">industrial lasers</a></li>
+<li class="tight"><a href="./scientific_lasers.html">scientific lasers</a></li>
+<li class="tight"><a href="./flint_glasses.html">flint glasses</a></li>
+<li class="tight"><a href="./crown_glasses.html">crown glasses</a></li>
+<li class="tight"><a href="./sodium_vapor_lamps.html">sodium vapor lamps</a></li>
+<li class="tight"><a href="./metal_vapor_lamps.html">metal vapor lamps</a></li>
+<li class="tight"><a href="./mercury_vapor_lamps.html">mercury vapor lamps</a></li>
+<li class="tight"><a href="./white_light.html">white light</a></li>
+<li class="tight"><a href="./cie_standard_illuminants.html">CIE standard illuminants</a></li>
+</ul>
+
+<p>The encyclopedia already contains 948 articles.</p>
+<p>See also the regularly appearing articles of the <a href="./spotlight.html?banner=new_articles">The Photonics Spotlight</a> and the <a href="./software_news.html?banner=new_articles">RP Photonics Software News</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="Grz/ZbtynqggKGgjpYwUpQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/autocorrelators.html"
+    },
+    "headline": "Autocorrelators",
+    "image": "https://www.rp-photonics.com/previews/autocorrelators.png",
+    "datePublished": "2005-05-28",
+    "dateModified": "2020-03-14",
+    "description": "Autocorrelators are devices for measuring the intensity or field autocorrelation function of light, mostly used for determining the duration of ultrashort pulses.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter A",
+      "item": "https://www.rp-photonics.com/encyclopedia_a.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "autocorrelators",
+      "item": "https://www.rp-photonics.com/autocorrelators.html"
+    }]}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-J+rBhFgMBxlDeWImF/otRg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>Optimization of an achromatic lens with the software RP Resonator</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/resonator_achromatic_lens.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-05-22">
+<meta name="description" content="A ring resonator with bow-tie geometry is modeled with the software RP Resonator.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="achromat, achromatic lens, RP Resonator, modeling, software">
+<script type="text/javascript" src="./jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" nonce="J+rBhFgMBxlDeWImF/otRg==">
+page="resonator_achromatic_lens.html"; cat="S"; shownbanner=""; ref="http://www.rp-photonics.com/encyclopedia_tutorials.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td class="selected"><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="resonator_achromatic_lens_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software_start" href="software.html">Introduction</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<p>Products:</p>
+<a id="Overview" href="software_overview.html">Overview</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html" class="sel">RP Resonator</a>
+<a href="resonator_purpose.html" class="sub">Purpose</a>
+<a href="resonator_model.html" class="sub">Model</a>
+<a href="resonator_interface.html" class="sub">Interface</a>
+<a href="resonator_demos.html" class="sub sel">Demos</a>
+<a href="resonator_versions.html" class="sub">Versions</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<p>Various aspects:</p>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<p>Take action:</p>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main"><main>
+<div class="softwarelogo">
+<p class="fig" style="margin-top:12px"><img src="img/resonator_logo.png" width="73" height="73" alt="RP Fiber Power logo"></p>
+</div>
+<p class="breadcrumbs"><a href="software.html">Software</a> &gt; <a href="resonator.html">RP Resonator</a> &gt; <a href="resonator_demos.html">Demos</a> &gt; <a href="resonator_achromatic_lens.html">Achromatic lens</a></p>
+<h1>RP Resonator &ndash; Advanced Software for Laser Resonator Design and Optimization</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="resonator.html">Overview</a></td>
+<td class="sub_nav"><a class="sub_n" href="resonator_purpose.html">Purpose</a></td>
+<td class="sub_nav"><a class="sub_n" href="resonator_model.html">Model</a></td>
+<td class="sub_nav"><a class="sub_n" href="resonator_interface.html">Interface</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="resonator_demos.html">Demos</a></td>
+<td class="sub_nav"><a class="sub_n" href="resonator_versions.html">Versions</a></td>
+</tr>
+</table>
+<h2>Example Case: Achromatic Lens</h2>
+<p>We optimize an achromatic lens doublet for a given <a href="focal_length.html" title="a measure of how strongly an optical system focuses or defocuses light">focal length</a> over some wavelength range.
+We assume that BK7 <a href="crown_glasses.html" title="optical glasses with low chromatic dispersion and tentatively a low refractive index">crown glass</a> and SF2 <a href="flint_glasses.html" title="optical glasses with strong chromatic dispersion (low Abbe number) and tentatively a high refractive index">flint glass</a> is used.
+The basic idea behind such designs is to realize an overall focusing lens by combining a strongly focusing and a less strongly defocusing lens, where the latter exhibits stronger chromatic dispersion.
+Although the defocusing effect of the second lens is weaker than the focusing effect on the first one, its chromatic aberrations can compensate those of the other lens.</p>
+<p>In RP Resonator, we first define the doublet lens as a sequence of two &ldquo;prisms&rdquo; with curved interfaces, plus some air space for propagation through air, where we can find the focal point:</p>
+<pre class="codedisplay">
+resonator: single pass, z = 0, w = w0, d_t = 10 um
+* prism (lens1): l = d1, n(l) = n_BK7(l), R1 = R1, R2 = R2
+* prism (lens2): l = d2, n(l) = n_SF2(l), R1 = -R2, R2 = R3
+* air: d = b, "b"
+resonator end
+</pre>
+<p>We define a function for locating the focal point and calculating the focal length, based on geometrical ray propagation:</p>
+<pre class="codedisplay">
+z0 := 0.5 * (d1 + d2) { reference position for focal length }
+f_lens(l) :=
+  { focal length for wavelength l }
+  begin
+    global allow all;
+    var z, z_f;
+    z := f_wanted / 2;
+    z_f := z - d_t(z, l) / da_t(z, l);
+    z_f - z0;
+  end
+</pre>
+<p>For the numerical optimization, we first define a figure of merit which “punishes” deviations from the wanted focal length in the relevant wavelength range:</p>
+<pre class="codedisplay">
+FOM() :=
+  { figure of merit: 0 in ideal case }
+  sum(l := 400 nm to 800 nm step 50 nm,
+    (f_lens(l) / f_wanted - 1)^2)
+</pre>
+<p>Then we let the script adjust the curvature radii R2 and R3 such that the figure-of-merit function becomes as small as possible, and display the obtained values:</p>
+<pre class="codedisplay">
+vary
+  R2 in [10 mm, 200 mm],
+  R3 in [10 mm, 200 mm],
+  for minimum of (Init(0); FOM()),
+  ytol = 1e-6
+&nbsp;
+show "R1:      ", R1:d3:"m"
+show "R2:      ", R2:d3:"m"
+show "R3:      ", R3:d3:"m"
+</pre>
+<p>Finally, the success is monitored with two diagrams, showing the beam radius versus position for different wavelengths, and the focal length versus wavelength:</p>
+<figure>
+<img src="img/achromatic_lens3.png" alt="foci at different wavelengths">
+</figure>
+<figure>
+<img src="img/achromatic_lens4.png" alt="focal length vs. wavelengths">
+</figure>
+<p>You can see that the software is very flexible concerning the definition of compound optical elements and merit functions, for example.
+It would be easy to extend that for lens triplets in order to realize apochromat lenses with further improved properties over a wide wavelength range.</p>
+<p>(<a href="resonator_demos.html">back to the list of example cases</a>)</p>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</main></div>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="J+rBhFgMBxlDeWImF/otRg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Software",
+      "item": "https://www.rp-photonics.com/software.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "RP Resonator",
+      "item": "https://www.rp-photonics.com/resonator.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Demos",
+      "item": "https://www.rp-photonics.com/resonator_demos.html"
+    },{
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Achromatic lens",
+      "item": "https://www.rp-photonics.com/resonator_achromatic_lens.html"
+    }]}
+}
+</script>
+</body>
+</html>

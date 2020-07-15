@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-aV3vi1mMYzYWBltWI+3UXQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Tutorial &ldquo;Fiber Amplifiers&rdquo;, Part 6: high-power fiber amplifiers with double-clad fibers, cladding pumping, ASE, pump absorption</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/tutorial_fiber_amplifiers6.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-05-05">
+<meta name="description" content="Tutorial on fiber amplifiers. The sixth part discusses high-power fiber amplifiers with double-clad fibers. It shows that with double-clad devices one encounters various additional difficulties, e.g. related to reduced pump absorption and increased ASE problems.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="tutorial, fiber amplifiers, high power, double-clad fiber, cladding pumping, ASE, pump absorption">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="aV3vi1mMYzYWBltWI+3UXQ==">
+page="tutorial_fiber_amplifiers6.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/encyclopedia_c.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="aV3vi1mMYzYWBltWI+3UXQ==">shownsponsors="TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials" class="selected"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_tutorials.html">Tutorials</a> &gt; <a href="tutorial_fiber_amplifiers.html">Fiber amplifiers</a> &gt; <a href="tutorial_fiber_amplifiers6.html">Part 6</a></p>
+<h1>Fiber Amplifiers</h1>
+<p>This is part 6 of a <a href="tutorial_fiber_amplifiers.html">tutorial on fiber amplifiers</a> from <a href="paschotta.html">Dr. Paschotta</a>. The tutorial has the following parts:</p>
+<div class="article_parts"><span style='float:left; margin:5px 25px 5px 10px; font-size:60px; color:#888; font-weight:bold; line-height:100%;'>6</span>
+<p>1:&nbsp;<a href="tutorial_fiber_amplifiers1.html">Rare earth ions in fibers</a>, 2:&nbsp;<a href="tutorial_fiber_amplifiers2.html">Gain and pump absorption</a>, 3:&nbsp;<a href="tutorial_fiber_amplifiers3.html">Self-consistent solutions for the steady state</a>, 4:&nbsp;<a href="tutorial_fiber_amplifiers4.html">Amplified spontaneous emission</a>, 5:&nbsp;<a href="tutorial_fiber_amplifiers5.html">Forward and backward pumping</a>, 6:&nbsp;<span style="text-decoration:underline;">Double-clad fibers for high-power operation</span>, 7:&nbsp;<a href="tutorial_fiber_amplifiers7.html">Fiber amplifiers for nanosecond pulses</a>, 8:&nbsp;<a href="tutorial_fiber_amplifiers8.html">Fiber amplifiers for ultrashort pulses</a>, 9:&nbsp;<a href="tutorial_fiber_amplifiers9.html">Noise of fiber amplifiers</a>, 10:&nbsp;<a href="tutorial_fiber_amplifiers10.html">Multi-stage fiber amplifiers</a>
+</p>
+</div>
+<h2 class="togglediv">Part 6: High-power Fiber Amplifiers with Double-clad Fibers</h2>
+<div>
+<p>Fiber amplifiers based on <a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode fibers</a> are quite limited in output power, since it is hard to inject a high pump power into such a fiber.
+This has two reasons:</p>
+<ul>
+<li>The <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a> of high-power <a href="laser_diodes.html" title="semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diodes</a> is usually quite poor &ndash; insufficient for efficient launching into a single-mode core.</li>
+<li>Even if one had a high-power single-mode pump source, it would be a quite delicate issue to get that pump light injected.
+The high pump intensity in the fiber core would not be the main problem: after all, high-power fiber amplifiers can also cope with similarly high signal output powers.
+However, as the launch efficiency is never 100&#37;, even with a high-quality pump beam, substantial power would be launched into the cladding and could then destroy the fiber by overheating, e.g. due to absorption at the coating (even if the fiber ends are stripped over some significant length).</li>
+</ul>
+<p>That problem can be solved by using <a href="double_clad_fibers.html" title="optical fibers with different waveguide structures for pump and signal light">double-clad fibers</a>.
+These have a <em>pump cladding</em> around the <a href="fiber_core.html" title="the region in an optical fiber which guides light">fiber core</a>, which is itself surrounded by an outer cladding of even lower <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a>.
+The pump cladding, often having a substantially larger diameter than the fiber core and also a higher <a href="numerical_aperture.html" title="sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a>, constitutes a <a href="multimode_fibers.html" title="fibers supporting more than one guided mode per polarization direction">multimode</a> <a href="waveguides.html" title="spatially inhomogeneous transparent structures for guiding light">waveguide</a> into which high-power pump light can be launched easily and efficiently, even if the pump beam quality is not that great.
+The refractive index of the core is still higher than that of the pump cladding, so that it supports a single guided mode, or sometimes a few modes.</p>
+<p>Light launched into the pump cladding also gets into the fiber core, where it can be absorbed by laser-active ions.
+(Note that the pump cladding is undoped, so there is no pump absorption there.)
+Only, the overlap of pump light with the doped core is reduced, as much of the pump power travels in the undoped pump cladding.</p>
+<p>Figure&nbsp;1 shows how pump light is injected into the inner cladding (pump cladding), while signal light is injected into the fiber core and remains there.</p>
+<figure>
+<img src="img/dcf.png" alt="cladding-pumped fiber amplifier">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Cladding-pumped fiber amplifier based on a double-clad fiber.
+The signal light is launched into the doped core, while the pump light is launched into the inner cladding.
+The core is D-shaped for more efficient <a href="pump_absorption.html" title="the absorption of pump light, e.g. in a laser or a laser amplifier">pump absorption</a>.
+</figcaption>
+</figure>
+</div>
+<h2 class="togglediv">Optimizing the Pump Absorption</h2>
+<div>
+<p>The mentioned reduced absorption of pump light injected into the pump cladding (instead of directly into the core) can lead to disadvantages, as are discussed in more detail below.
+Therefore, it is often beneficial to maximize the pump absorption in a double-clad fiber.</p>
+<p>A straight-forward method is to make the pump cladding cladding as small as possible.
+This, of course, increases the constraints on the pump beam quality.
+The higher the <a href="numerical_aperture.html" title="sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a> (i.e., the index contrast between pump cladding and outer cladding), the less severe is that problem.</p>
+<p>Another method is to make the doped fiber core as large as possible, so that the area ratio between pump cladding and core is reduced.
+The limits are often set by the need to have robust <a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode</a> signal propagation, which is more difficult for large cores (see the encyclopedia article on <a href="large_mode_area_fibers.html" title="optical fibers with relatively large mode areas and a single transverse mode or only a few modes">large mode area fibers</a>).
+Sometimes, one accepts having a several guided modes, although that makes it more difficult to obtain a high beam quality of the signal output, and can also lead to certain mode instabilities at high power levels.</p>
+<p>Next, one can maximize the <a href="doping_concentration.html" title="the concentration of some dopant, e.g. of laser-active ions in a laser gain medium">doping concentration</a> of the fiber core.
+However, there are limits to that; at high doping concentrations, detrimental <a href="quenching.html" title="the reduction or limitation of an excited-state population, mostly by unwanted effects">quenching</a> effects become too strong, and for high-power operation one might get a too higher power dissipation per meter of fiber.</p>
+<figure>
+<img src="img/fiberpower_dcf1.png" alt="amplitude distribution along the fiber">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Amplitude distribution of pump light along a double-clad fiber with a circular pump cladding.
+This <a href="fiberpower_dcf.html">numerical simulation</a>, done with the software <a href="fiberpower.html"><b>RP Fiber Power</b></a>, shows that the pump intensity distribution develops a &ldquo;hole&rdquo; in the core region.
+The remaining pump light exhibits quite incomplete absorption.
+With a D-shaped core, for example, this effect can be mitigated.
+</figcaption>
+</figure>
+<p>A nasty problem with some double-clad fibers is that the pump absorption is even substantially worse than one would expect simply by considering the above mentioned area ratio.
+This is because the overlap with the core is quite different for different <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a> of the pump cladding.
+Some of these have very little overlap with the core and thus exhibit only very weak pump absorption.
+After some length of fiber, substantial pump power may be left only in these modes, and it doesn't help much to make the fiber longer (see Figure&nbsp;2).
+It also doesn't help that some of the pump cladding modes are absorbed much better than the average, since more than 100&#37; absorption is anyway not possible.</p>
+<p>There are various possible countermeasures, such as strong coiling of the fiber (which leads to mode scrambling) and using a less symmetric fiber design, which has no pump cladding modes with very low core overlap.
+Figure&nbsp;3 shows different designs.
+The simplest kind of design with a circular pump cladding and a centered core, as simulated in Figure&nbsp;2, is quite poor in terms of pump absorption, and the others are all better.</p>
+<figure>
+<img src="img/dcf_designs.png" alt="double-clad fiber designs">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Various designs of <a href="double_clad_fibers.html" title="optical fibers with different waveguide structures for pump and signal light">double-clad fibers</a>. The fiber core is shown in blue, the inner cladding in light gray, and the outer cladding in dark gray. An additional polymer coating, as often used, is not shown.
+</figcaption>
+</figure>
+<p>Double-clad fibers can also be made as <a href="photonic_crystal_fibers.html" title="specialty optical fibers with a built-in microstructure, in most cases consisting of small air holes in glass">photonic crystal fibers</a> as shown in Figure&nbsp;4.
+Here, the multimode pump core is suspended by very thin struts in the air cladding, through which the pump light cannot escape.
+Such a structure can have a very high numerical aperture for the pump light, which reduces the requirements concerning the pump beam quality.
+The guidance of the core is achieved as in other <a href="photonic_crystal_fibers.html" title="specialty optical fibers with a built-in microstructure, in most cases consisting of small air holes in glass">photonic crystal fibers</a>.</p>
+<figure>
+<img src="img/dc_pcf.png" alt="air-clad photonic crystal fiber">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Structure of a photonic crystal fiber with an air cladding.
+</figcaption>
+</figure>
+<h3 class="togglediv">Limitations of Cladding Pumping</h3>
+<div>
+<p>It would be quite wrong to expect that double-clad fibers allow essentially the same performance of fiber amplifiers, only at a higher power level.
+There are various issues, which we discuss in the following.</p>
+<p>A first problem is a direct consequence of the reduced pump absorption: we need a substantially longer length of fiber, which can have various detrimental effects:</p>
+<ul>
+<li>The influence of parasitic propagation losses becomes stronger.
+That, however, is usually not a big problem.
+Typical losses of the order of 0.01&nbsp;dB/m, for example, for ytterbium-doped double-clad fibers, amount only to 0.2&nbsp;dB in 20&nbsp;m, for example.
+That corresponds to a moderate power loss of 4.5&#37;.</li>
+<li><a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">Nonlinear effects</a> become stronger.
+This is often an issue in the context of pulse amplification (see <a href="tutorial_fiber_amplifiers7.html">part 7</a>).</li>
+<li>Compared with a core-pumped fiber, one has overall substantial more of the laser-active dopant in the core.
+As the interaction of the signal wave with the dopant is <em>not</em> reduced, this can have detrimental consequences (see the example case discussed below).</li>
+<li>Another issue can be that the pump intensity is relatively low in a double-clad fiber.
+That can be a problem if a high excitation density is required, e.g. in order to realize operation at relatively short wavelengths.</li>
+</ul>
+<p>On the other hand, a certain fiber length is required to avoid overheating.
+At least, a much reduced fiber length would require aggressive cooling during high-power operation.
+Still, it would often be useful &ndash; particularly for pulse amplification &ndash; if the pump absorption could be improved further.
+That is particularly the case for erbium-doped fibers, as erbium ions have lower absorption cross-sections and a higher tendency for clustering effects, setting lower limits for the <a href="doping_concentration.html" title="the concentration of some dopant, e.g. of laser-active ions in a laser gain medium">doping concentration</a>.</p>
+</div>
+<h3 class="togglediv">Example: Ytterbium-doped Double-clad Fiber Amplifier</h3>
+<div>
+<p>As an example, we consider an ytterbium-doped fiber which has the same core as in the previous examples, but pumping is done into a pump cladding around it with a 10 times larger diameter.
+The pump power at 940&nbsp;nm is increased from 500&nbsp;mW to 20&nbsp;W, and the signal input power at 1030&nbsp;nm from 1&nbsp;mW to 40&nbsp;mW.
+So both are 40 times higher than before, while the pump area is 100 times larger.
+The fiber is made 50&nbsp;m long in order to provide good enough pump absorption.
+For simplicity, we assume perfect mode mixing in the fiber, so that the above explained problem of incomplete pump absorption does not occur; this is somewhat optimistic.</p>
+<p>One might then hope to get the same nice performance as before, just with 40 times higher powers.
+That is not the case, however, as can be seen in Figure&nbsp;5: after &asymp;60&#37; of the pump power have been converted to signal power, the signal power begins to drop.
+So a longer fiber length would not help, even though the pump absorption is not yet perfectly efficient.</p>
+<figure>
+<img src="img/fiber_amplifier_dcf1.png" alt="evolution of powers in a double-clad fiber amplifier">
+<figcaption><span class="start">Figure&nbsp;5:</span> 
+Evolution of optical powers in an ytterbium-doped double-clad fiber amplifier.
+</figcaption>
+</figure>
+<p>The main reason for that is that ASE comes up at somewhat longer wavelengths:</p>
+<figure>
+<img src="img/fiber_amplifier_dcf2.png" alt="ASE from double-clad fiber amplifier">
+<figcaption><span class="start">Figure&nbsp;6:</span> 
+ASE spectra for an ytterbium-doped double-clad fiber amplifier.
+The ASE maximum has shifted to longer wavelengths, because the ytterbium excitation is now lower.
+</figcaption>
+</figure>
+<p>ASE can be largely suppressed by providing 10 times more signal input power, i.e., by operating the amplifier with a lower gain.
+Even then, however, the power conversion efficiency is limited to 73&#37;.
+And if we use a slightly overlong fiber with 60&nbsp;m, we again get a higher ASE-related power loss, and the conversion efficiency drops to 54&#37;.</p>
+<p>The amplifier would work better with a longer signal wavelength of 1080&nbsp;nm, for example, as the signal wavelength is then closer to the wavelength of maximum gain.
+Indeed, one can find that high-power double-clad amplifiers and lasers are often operated at substantially longer wavelengths than core-pumped devices, even though this of course increases the <a href="quantum_defect.html" title="energy difference between pump and laser photons">quantum defect</a>, which is particularly bad for high-power operation.</p>
+</div>
+<h3 class="togglediv">Example: Ytterbium-doped Double-clad Fiber Amplifier for 975&nbsp;nm</h3>
+<div>
+<p>As another example, we try to modify our amplifier such that it can amplify signals at 975&nbsp;nm.
+As this is the wavelength where we got a lot of ASE in an example case of <a href="tutorial_fiber_amplifiers4.html">part 4</a>, one could expect to easily get a lot of gain there when pumping at 940&nbsp;nm.
+However, that doesn't work at all, as one can see in Figure&nbsp;7:</p>
+<figure>
+<img src="img/fiber_amplifier_dcf5.png" alt="evolution of powers in a double-clad fiber amplifier">
+<figcaption><span class="start">Figure&nbsp;7:</span> 
+Distribution of optical powers in an ytterbium-doped double-clad fiber amplifier.
+</figcaption>
+</figure>
+<p>We produce a lot of forward and backward ASE, which peaks at 1075&nbsp;nm in forward direction and at 1035&nbsp;nm in backward direction (see Figure&nbsp;8).
+At 975&nbsp;nm, there is a huge absorption of nearly 5500&nbsp;dB.
+(The absorption coefficient at 975&nbsp;nm is rather high, and we have a lot of ytterbium in the fiber.)
+Stronger pumping would not help; we would only produce more long-wavelength ASE.</p>
+<p>The problem is that if the average Yb excitation rises, we get a lot of gain in the long-wavelength region (generating strong ASE) long before we have 50&#37; excitation, where the positive gain at 975&nbsp;nm starts.
+That huge long-wavelength gain essentially results from the fact that we have a large amount of Yb in our fiber.
+In principle, a much shorter fiber would help: with 3&nbsp;m instead of 50&nbsp;m, we could get 33&nbsp;dB gain at 975&nbsp;nm for 20&nbsp;W of pump power.
+However,  the pump absorption is then very inefficient, so we could convert only a small part of the pump power into signal power at 975&nbsp;nm.</p>
+<figure>
+<img src="img/fiber_amplifier_dcf6.png" alt="ASE from double-clad fiber amplifier">
+<figcaption><span class="start">Figure&nbsp;8:</span> 
+ASE spectra for an ytterbium-doped double-clad fiber amplifier without signal input.
+Strong ASE at long wavelengths is generated, 
+</figcaption>
+</figure>
+<p>The problem can be summarized as follows:</p>
+<ul>
+<li>Good pump absorption despite the limited pump overlap with the core requires that we put a lot of laser-active dopant into the fiber core.</li>
+<li>With so much dopant, a small average excitation density is sufficient to create a large long-wavelength gain, while it is by far not sufficient to provide gain at shorter wavelengths.</li>
+</ul>
+<p>There is actually a solution to that: using a ring-doped fiber (J. Nilsson et al., Opt. Lett. 22 (14), 1092 (1997)).
+That reduces the coupling of the dopant to the ASE and signal waves, but not to the pump light.
+In effect, one can have higher excitation densities, allowing for gain at shorter wavelengths.</p>
+</div>
+<h3 class="togglediv">Some Conclusions</h3>
+<div>
+<p>We have seen that it is not always easy to get the same kind of performance of an amplifier at much higher power levels simply be using double-clad fibers.
+One can run into trouble with unwanted ASE and/or incomplete pump absorption, for example.
+The findings are often surprising.
+Clearly, a trial-and-error approach in the lab, which is not based on a thorough understanding as obtained with numerical simulation, would be fishing in the dark: test devices would not work, and it would not be obvious in the lab why not.</p>
+<p>So far, we consider only continuous-wave operation.
+Next we will look at the amplification of pulses.</p>
+<p>Go to <a href="tutorial_fiber_amplifiers7.html">Part 7: Fiber Amplifiers for Nanosecond Pulses</a> or back to the <a href="tutorial_fiber_amplifiers.html">start page</a>.</p>
+</div>
+</div>
+<hr>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="tutorial_fiber_amplifiers6.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Ftutorial_fiber_amplifiers6.html&text=RP+Photonics+Encyclopedia+-+Tutorial+%26ldquo%3BFiber+Amplifiers%26rdquo%3B%2C+Part+6%3A+high-power+fiber+amplifiers+with+double-clad+fibers%2C+cladding+pumping%2C+ASE%2C+pump+absorption" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Ftutorial_fiber_amplifiers6.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Ftutorial_fiber_amplifiers6.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></main></div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2 style="font-size:20px;">Debugging Is Now Fun!</h2>
+<p>The software products which are supporting our <a href="./software_script_language.html?banner=Debugger">script language</a> (e.g. <a href="./fiberpower.html?banner=Debugger">RP Fiber Power</a> and <a href="./coating.html?banner=Debugger">RP Coating</a>) have now got a <a href="./software_news_2017_05_31.html?banner=Debugger">powerful debugger</a>!</p>
+<a href="./software_news_2017_05_31.html?banner=Debugger"><img src="./img/expression_debugger_small.png" alt="debugger" style="margin:10px 0;"></a>
+<p>It works even within expressions, not only after each command!</p>
+<p>The <a href="./software_news.html?banner=Debugger">RP Photonics Software News</a> keep you informed.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="aV3vi1mMYzYWBltWI+3UXQ==">shownbanner = "Debugger";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2 style="font-size:150%">Tutorial on<br>Fiber Amplifiers</h2>
+<p>See our <a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial">comprehensive tutorial on fiber amplifiers</a>:</p>
+<ul>
+<li>laser-active dopants, gain and pump absorption</li>
+<li>double-clad fibers, pulse amplification</li>
+<li>ASE, noise issues, multi-stage amplifiers</li>
+</ul>
+<p style="margin-left:10px;"><a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial"><img src="./img/fiber_amplifier_small.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial"><img src="./img/dcf_designs_part.png" style="width:100%" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial"><img src="./img/yb_gain_small.png" alt="&nbsp;"></a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="aV3vi1mMYzYWBltWI+3UXQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tutorials",
+      "item": "https://www.rp-photonics.com/encyclopedia_tutorials.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Fiber amplifiers",
+      "item": "https://www.rp-photonics.com/tutorial_fiber_amplifiers.html"
+    },{
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Part 6",
+      "item": "https://www.rp-photonics.com/tutorial_fiber_amplifiers6.html"
+    }]}
+}
+</script>
+</body>
+</html>

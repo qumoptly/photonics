@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-KgEDwZRiOFn0/dAP5hXYYg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - acousto-optic modulators, AOM, Bragg cells, diffraction efficiency, traveling wave, sound, RF driver, applications</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/acousto_optic_modulators.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-04-15">
+<meta name="description" content="Acousto-optic modulators are intensity modulators based on the acousto-optic effect in some crystal or glass.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="acousto-optic modulators, AOM, Bragg cells, diffraction efficiency, sound, RF driver, applications">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Acousto-optic Modulators">
+<meta property="og:description" content="Acousto-optic modulators are intensity modulators based on the acousto-optic effect in some crystal or glass.">
+<meta property="og:url" content="https://www.rp-photonics.com/acousto_optic_modulators.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/acousto_optic_modulators.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Acousto-optic modulators are intensity modulators based on the acousto-optic effect in some crystal or glass.">
+<meta name="twitter:title" content="Acousto-optic Modulators">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/acousto_optic_modulators.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="KgEDwZRiOFn0/dAP5hXYYg==">
+page="acousto_optic_modulators.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> <a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="KgEDwZRiOFn0/dAP5hXYYg==">shownsponsors="EKSMA OPTICS,El.En."</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_acousto_optic_modulators.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_a.html">letter A</a> &gt; <a href="acousto_optic_modulators.html">acousto-optic modulators</a></p>
+<h1>Acousto-optic Modulators</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_acousto_optic_modulators.html?s=vbox">26 suppliers for acousto-optic modulators</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://gandh.com/product-categories/acousto-optic-modulators/" data-supplier="G&H" data-location="product-enc" data-keyword="acousto-optic modulators" rel="nofollow" class="bg externallink"><img src="./bg/logos/g_h.png" alt="G&H" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_acousto_optic_modulators.html?s=vbox">List of suppliers for<br>acousto-optic modulators</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p>Acronym: AOM</p>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: optical modulators based on the acousto-optic effect</p>
+<p>More general terms: <a href="optical_modulators.html" title="devices allowing one to manipulate properties of light beams, such as the optical power or phase">optical modulators</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">akustooptische Modulatoren</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a></p>
+<p><a href="encyclopedia_cite.html?article=acousto-optic%20modulators">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>An acousto-optic modulator (AOM) is a device which can be used for controlling the power of a <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a> with an electrical drive signal.
+It is based on the acousto-optic effect, i.e. the modification of the <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> of some crystal or glass material by the oscillating mechanical strain of a sound wave (<em>photoelastic effect</em>).</p>
+<p>Usually, an AOM is understood to be an <a href="intensity_modulators.html" title="devices which can be used to modulate the intensity (power) of a light beam">intensity modulator</a>; other acousto-optic devices are suitable for shifting the  <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequency</a> (&rarr;&nbsp;<a href="acousto_optic_frequency_shifters.html" title="acousto-optic devices for shifting the optical frequency of a laser beam"><em>acousto-optic frequency shifter</em></a>) or the spatial direction (<a href="acousto_optic_deflectors.html" title="acousto-optic devices for deflecting and scanning laser beams"><em>acousto-optic deflectors</em></a>).</p>
+<p>The key element of an AOM is a transparent crystal (or piece of glass) through which the <a href="light.html" title="electromagnetic radiation in the visible spectral range, or sometimes in an extended spectral region">light</a> propagates.
+A piezoelectric transducer attached to the crystal obtains a strong oscillating electrical signal from an RF driver (often via an impedance matching device) and is used to excite a sound wave with a frequency of the order of 100&nbsp;MHz and with an acoustic wavelength which is typically between 10&nbsp;&mu;m and 100&nbsp;&mu;m.
+The sound wave generates a traveling strain wave in the material.
+Through the photo-elastic effect, that leads to a traveling refractive index grating, at which light can experience <a href="diffraction.html" title="wave phenomena which occur when light waves hit some structure with variable transmission or phase changes">Bragg diffraction</a>; therefore, AOMs are sometimes called <em>Bragg cells</em>.</p>
+<figure>
+<img src="img/aom.png" alt="acousto-optic modulator">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Schematic setup of a non-resonant acousto-optic modulator.
+A transducer generates a sound wave, at which a light beam is partially diffracted.
+The diffraction angle is exaggerated; it is normally only of the order of 1&deg;.
+</figcaption>
+</figure>
+<p>For a very short interaction length in the modulator, one would operate in the Raman&ndash;Nath regime, where multiple diffraction orders are obtained.
+However, most AOMs operate in the Bragg regime, where there is a substantial diffraction efficiency for the first diffraction order and hardly any <a href="scattering.html" title="processes where light is sent in other directions, usually but not always in random directions">scattering</a> into other orders.</p>
+<p>The <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequency</a> of the diffracted beam is increased or decreased by the frequency of the sound wave (depending on the propagation direction of the acoustic wave relative to the beam) and propagates in a slightly different direction.
+(The change in direction is smaller than shown in Figure&nbsp;1, because the <a href="wavenumber.html" title="the phase delay per unit length, or that quantity divided by 2&pi;">wavenumber</a> of the sound wave is very small compared with that of the light beam.)
+The frequency and direction of the scattered beam depend on the frequency of the sound wave, whereas the acoustic power is the control for the diffracted <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a>.
+For most applications, the slight change of optical frequency is irrelevant.</p>
+<p>The diffraction process may or may not be polarization-dependent, depending on the device designs (use of longitudinal or shear waves, isotropic or anisotropic material etc.).
+Further, the output polarization is the same as the input polarization for devices with an isotropic interaction, while for anisotropic modulators it is different, and these devices then work only for the correct input polarization.
+For AOMs, the use of longitudinal (compression) waves is most common, where the diffraction efficiency is strongly polarization-dependent.
+Polarization-independent operation can be obtained when using acoustic shear waves (with the acoustic movement in the direction of the laser beam).</p>
+<p>Typically, an AOM is placed in a small box, having two holes or <a href="optical_windows.html" title="flat transparent plates with optical quality, used for protection against the environment">optical windows</a> on opposite sides for the laser beam going through, and a connector for the RF driver.
+Sometimes that box is placed on a rotating table for precise rotational adjustment.</p>
+<h2 class="togglediv">Diffraction Efficiency and Contrast Ratio</h2>
+<div>
+<p>For small acoustic powers, the diffraction efficiency is proportional to the acoustic power; for higher powers, it saturates.
+For sufficiently high acoustic power, more than 50&#37; of the optical power can be diffracted &ndash; in extreme cases, even more than 95&#37; diffraction efficiency is achieved.
+High diffraction efficiencies are easier to achieve for short optical wavelengths.</p>
+<p>The <em>contrast ratio</em> is defined as the ratio of maximum and minimum transmitted power.
+The latter may be limited by <a href="scattering.html" title="processes where light is sent in other directions, usually but not always in random directions">scattering</a>.
+For the diffracted beam, the contrast ratio can be quite high (order of 1000), but the maximum transmission is then limited by the diffraction efficiency.
+A high maximum throughput is obtained for the non-diffracted (zero-order) beam, but in that case the contrast ratio is much lower.</p>
+</div>
+<h2 class="togglediv">Traveling-wave and Resonant Designs</h2>
+<div>
+<p>The acoustic wave may be absorbed at the other end of the crystal (which is often cut at some angle to avoid standing-wave effects due to residual reflections).
+Such a <em>traveling-wave geometry</em> makes it possible to achieve a broad modulation <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a> of many megahertz; it is ultimately limited by the single-pass propagation time of the acoustic wave through the region of the light beam.
+Other devices are resonant for the sound wave, exploiting the strong reflection of the acoustic wave at the other end of the crystal.
+The resonant enhancement can greatly increase the modulation strength (or decrease the required acoustic power), but reduces the modulation <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>.</p>
+</div>
+<h2 class="togglediv">Used Acousto-optic Materials</h2>
+<div>
+<p>Common materials for acousto-optic devices are tellurium dioxide (TeO<sub>2</sub>), crystalline quartz, and fused silica; one also uses chalcogenide glasses (often <a href="flint_glasses.html" title="optical glasses with strong chromatic dispersion (low Abbe number) and tentatively a high refractive index">flint glasses</a>), indium phosphide and germanium &ndash; the latter two for <a href="infrared_light.html" title="invisible light with wavelengths roughly between 750&thinsp;&thinsp;nm and 1&thinsp;&thinsp;mm">infrared</a> applications.
+For high frequency signal processing devices, materials like lithium niobate and gallium phosphide can be used.
+There are manifold criteria for the choice of the material, including the elasto-optic coefficients (there are actually different acousto-optic figure-of-merit values), the acoustic attenuation coefficient, the sound velocity, the transparency range, the <a href="laser_induced_damage.html" title="damage of optical components induced by laser radiation">optical damage threshold</a>, and the required size.</p>
+</div>
+<h2 class="togglediv">Fiber-coupled and Integrated-optical AOMs</h2>
+<div>
+<p>Although most AOMs are bulk devices, there are also compact <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fiber</a>-coupled versions (<em>fiber-pigtailed AOMs</em>).
+Light from the input fiber is first <a href="collimated_beams.html" title="laser beams with weak divergence">collimated</a>, then sent through the modulator crystal and finally focused into the output fiber.
+The <a href="insertion_loss.html" title="power losses due to insertion of a device">insertion loss</a> is typically around 3&nbsp;dB.</p>
+<p>There are also <a href="integrated_optics.html" title="the technology dealing with the construction of photonic integrated circuits">integrated-optical devices</a> containing one or more acousto-optic modulators on a chip.
+This is possible, e.g., with integrated optics on lithium niobate (LiNbO<sub>3</sub>), as this material is piezoelectric, so that a surface-acoustic wave can be generated via metallic electrodes on the chip surface.
+Such devices can be used in many ways, e.g. as tunable <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical filters</a> or optical switches.</p>
+</div>
+<h2 class="togglediv">RF Drivers for AOMs</h2>
+<div>
+<p>If an acousto-optic modulator is used as an amplitude modulator or an active <a href="q_switches.html" title="optical switches which are typically used for generating nanosecond pulses in lasers">Q-switch</a>, the used electronic driver is usually a device operating with a fixed modulation frequency but a variable amplitude.
+The amplitude is often controlled with a analog input voltage or with a digital input signal (for on/off modulation).</p>
+<p>The required RF drive power is substantial (sometimes several watts), and particularly for long optical wavelengths often not high enough to achieve a high diffraction efficiency.</p>
+</div>
+<h2 class="togglediv">Important Properties of Acousto-optic Modulators</h2>
+<div>
+<p>Various aspects can be essential for the selection of an acousto-optic modulator for some application:</p>
+<ul>
+<li>The material should have a high <em>transparency</em> at the relevant wavelengths, and parasitic reflections should be minimized e.g. with <a href="anti_reflection_coatings.html" title="optical thin-film coatings for reducing reflections from surfaces">anti-reflection coatings</a>.</li>
+<li>In many cases, a high <em>diffraction efficiency</em> is important.
+For example, this matters when using the AOM as a <a href="q_switches.html" title="optical switches which are typically used for generating nanosecond pulses in lasers">Q switch</a> in a high-<a href="gain.html" title="a measure of the strength of optical amplification">gain</a> laser, and even more so for <a href="cavity_dumping.html" title="a method for extracting intense short or ultrashort pulses from a laser, using an optical switch in the laser resonator">cavity dumping</a>.
+The required <em>RF power</em> influences both the electric power demands and cooling issues.
+It is lower for acousto-optic materials with high elasto-optic coefficients.</li>
+<li>Depending on the device design, the diffraction efficiency can be polarization dependent.</li>
+<li>For intracavity laser applications like <a href="q_switching.html" title="a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q switching</a> and <a href="mode_locking.html" title="a group of techniques for generating ultrashort pulses in lasers">mode locking</a>, and particularly for high-power applications, AOMs with low parasitic absorption are required, possibly also a high <a href="laser_induced_damage.html" title="damage of optical components induced by laser radiation">damage threshold</a> for laser <a href="pulses.html" title="flashes of light">pulses</a>.
+Large <a href="optical_apertures.html" title="structures which limit the propagation of light">aperture</a> are often required for high power levels.
+For applications concerning <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a>, <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> and optical <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a> can be important.</li>
+<li>The input aperture size limited the usable <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a>.
+AOMs for large beams are more expensive (because more of the expensive crystal material is required), and tentatively they are slower (see below) and need more RF power.</li>
+<li>The <em>switching time</em> is critical for some applications (e.g. Q switching and particularly <a href="cavity_dumping.html" title="a method for extracting intense short or ultrashort pulses from a laser, using an optical switch in the laser resonator">cavity dumping</a>).
+It is limited by the finite velocity of sound in the acousto-optic medium.
+This implies that an AOM switching a laser beam with large diameter is necessarily slow.
+One may operate such a modulator with a focused laser beam of reduced diameter, but the diffraction efficiency may decrease due to the increased <a href="beam_divergence.html" title="a measure for how fast a laser beam expands far from its focus">beam divergence</a>.</li>
+</ul>
+<p>Note that the diffraction efficiency depends nonlinearly on the acoustic drive power.
+For an effectively linear response, a suitable pre-distortion of the drive signal is required.</p>
+<p>For <a href="acousto_optic_frequency_shifters.html" title="acousto-optic devices for shifting the optical frequency of a laser beam">acousto-optic frequency shifters</a> and <a href="acousto_optic_deflectors.html" title="acousto-optic devices for deflecting and scanning laser beams">acousto-optic deflectors</a>, other aspects can come into play.
+For example, a low velocity of sound is advantageous for achieving a wide range of beam angles.</p>
+<p>Due to various trade-offs, quite different materials and operation parameters are used in different applications.
+For example, the materials with highest diffraction efficiencies are not those with the highest optical damage threshold.
+A large mode area can increase the power handling capability, but requires the use of a larger crystal or glass piece and a higher drive power, and also increases the switching time, which is limited by the acoustic transit time.
+For fast acousto-optic beam scanners, a large mode area is required for achieving a high pixel resolution, whereas a smaller mode area is required for a high scanning speed.</p>
+</div>
+<h2 class="togglediv">Applications of AOMs</h2>
+<div>
+<p>Acousto-optic modulators find many applications:</p>
+<ul>
+<li>They are used for <a href="q_switching.html" title="a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q switching</a> of <a href="solid_state_lasers.html" title="lasers based on solid-state gain media (usually ion-doped crystals or glasses)">solid-state lasers</a>.
+The AOM, called <a href="q_switches.html" title="optical switches which are typically used for generating nanosecond pulses in lasers">Q switch</a>, then serves to block the <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a> before the <a href="pulses.html" title="flashes of light">pulse</a> is generated.
+In most cases, the zero-order (not diffracted) beam is used under lasing conditions, and the AOM is turned on when lasing should be prohibited.
+This requires that the caused diffraction losses (possibly for two passes per resonator round trip) are higher than the laser <a href="gain.html" title="a measure of the strength of optical amplification">gain</a>.
+For more details, see the article on <a href="acousto_optic_q_switches.html" title="acousto-optic modulators used for Q switching of lasers">acousto-optic Q switches</a>.</li>
+<li>AOMs can also be used for <a href="cavity_dumping.html" title="a method for extracting intense short or ultrashort pulses from a laser, using an optical switch in the laser resonator">cavity dumping</a> of solid-state lasers, generating either nanosecond or ultrashort pulses.
+In the latter case, the speed of an AOM is sufficient only in the case of a relatively long laser resonator; an <a href="electro_optic_modulators.html" title="optical modulators based on the electro-optic effect">electro-optic modulator</a> may otherwise be required.</li>
+<li><a href="active_mode_locking.html" title="a technique of mode locking, based on active modulation of the intracavity losses or the round-trip phase change">Active mode locking</a> is often performed with an AOM for modulating the resonator losses at the round-trip frequency or a multiple thereof.</li>
+<li>An AOM can be used as a <a href="pulse_pickers.html" title="electrically controlled optical switches used for extracting single pulses from a pulse train">pulse picker</a> for reducing the <a href="pulse_repetition_rate.html" title="the number of pulses emitted per second e.g. by a mode-locked or Q-switched laser">pulse repetition rate</a> of a pulse train, e.g. in order to allow for subsequent amplification of pulses to high <a href="pulse_energy.html" title="energy of an optical pulse">pulse energies</a>.</li>
+<li>In laser printers and other devices, an AOM can be used for <a href="optical_modulators.html" title="devices allowing one to manipulate properties of light beams, such as the optical power or phase">modulating</a> the power of a laser beam.
+The modulation may be continuous or digital (on/off).</li>
+<li>In a <a href="noise_eaters.html" title="devices for reducing the intensity noise of an optical beam by automatically adjusting the degree of power attenuation">noise eater</a> device, the diffraction losses may be controlled with a feedback circuit such that the transmitted power has induced <a href="intensity_noise.html" title="noise of the optical intensity or power of a laser beam">intensity noise</a>.</li>
+<li>AOMs can be used as external modulators in certain laser communications systems.</li>
+</ul>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_acousto_optic_modulators.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 26 suppliers for acousto-optic modulators. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://gandh.com/" data-supplier="G&H" data-location="product-enc" data-keyword="acousto-optic modulators" rel="nofollow" class="bg externallink" title="Visit the website of G&amp;H"><img src="./bg/logos/g_h.png" alt="G&H" class="supplierlogo"></a><a href="https://gandh.com/product-categories/acousto-optic-modulators/" data-supplier="G&H" data-location="product-enc" data-keyword="acousto-optic modulators" rel="nofollow" class="bg externallink" title="Visit the website of G&amp;H"><img src="./bg/products/g_h/acousto_optic_modulators.jpg" alt="acousto-optic modulators" class="product"></a><h3><a href="./bg/profiles/g_h.html" title="See the profile of G&H">G&H</a></h3><p>Our <a href="https://gandh.com/product-categories/acousto-optic-modulators/" data-supplier="G&H" data-location="product-enc" data-keyword="acousto-optic modulators" rel="nofollow" class="externallink bg">acousto-optic modulators</a> are optimized for low scatter and high laser damage threshold. Rise time, modulation rate, beam diameter, and power handling needs of the application need to be understood in order to identify the best acousto-optic modulator and RF driver solution.</p><p>We also offer <a href="https://gandh.com/product-categories/fiber-coupled-modulators/" data-supplier="G&H" data-location="product-enc" data-keyword="acousto-optic modulators" rel="nofollow" class="externallink bg">fiber-coupled acousto-optic modulators</a>.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="acousto_optic_modulators.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="q_switches.html" title="optical switches which are typically used for generating nanosecond pulses in lasers">Q switches</a>, <a href="optical_modulators.html" title="devices allowing one to manipulate properties of light beams, such as the optical power or phase">optical modulators</a>, <a href="acousto_optic_q_switches.html" title="acousto-optic modulators used for Q switching of lasers">acousto-optic Q switches</a>, <a href="acousto_optic_deflectors.html" title="acousto-optic devices for deflecting and scanning laser beams">acousto-optic deflectors</a>, <a href="intensity_modulators.html" title="devices which can be used to modulate the intensity (power) of a light beam">intensity modulators</a>, <a href="pulse_pickers.html" title="electrically controlled optical switches used for extracting single pulses from a pulse train">pulse pickers</a>, <a href="electro_optic_modulators.html" title="optical modulators based on the electro-optic effect">electro-optic modulators</a>, <a href="q_switching.html" title="a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q switching</a>, <a href="cavity_dumping.html" title="a method for extracting intense short or ultrashort pulses from a laser, using an optical switch in the laser resonator">cavity dumping</a>, <a href="active_mode_locking.html" title="a technique of mode locking, based on active modulation of the intracavity losses or the round-trip phase change">active mode locking</a><br>and other articles in the category <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/acousto_optic_modulators.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Facousto_optic_modulators.html&text=RP+Photonics+Encyclopedia+-+acousto-optic+modulators%2C+AOM%2C+Bragg+cells%2C+diffraction+efficiency%2C+traveling+wave%2C+sound%2C+RF+driver%2C+applications" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Facousto_optic_modulators.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Facousto_optic_modulators.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/acousto_optic_modulators.html"&gt;<br>Article on Acousto-optic Modulators&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/acousto_optic_modulators.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/acousto_optic_modulators.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/acousto_optic_modulators.html<br>article on 'Acousto-optic Modulators' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Promote Your White Papers and Videos</h2>
+<p>White papers and videos are great instruments for creating an interest in your technology and demonstrating the capabilities of a company. But <b>how to publicize them</b>, reaching the right audience?</p>
+<p><img class="whitepaper" style="padding:30px 5px; width:70%; height:70%;" src="./img/white_paper_example.png" alt="example for white paper"></p>
+<p>Our suggestion: <a href="./marketing_promotions.html?banner=white_papers">place a preview in a suitable encyclopedia article!</a>
+For example, the paper preview shown above would well fit into our articles on <a href="./laser_diodes.html?banner=white_papers">laser diodes</a> and <a href="./diode_bars.html?banner=white_papers">diode bars</a>.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="KgEDwZRiOFn0/dAP5hXYYg==">shownbanner = "white papers";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Free Tutorial: Modeling of Fiber Amplifiers and Lasers</h2>
+<p>We have published a new <a href="./tutorial_modeling.html?banner=modeling_tutorial">tutorial</a> which discusses the modeling of fiber amplifiers and lasers.
+It addresses many questions:</p>
+<ul>
+<li>What is a <a href="./tutorial_modeling1.html?banner=modeling_tutorial">model</a>?</li>
+<li>Should one use <a href="./tutorial_modeling3.html?banner=modeling_tutorial">power propagation or field propagation</a>?</li>
+<li>How to simulate the behavior of <a href="./tutorial_modeling4.html?banner=modeling_tutorial">laser-active ions</a>?</li>
+<li>How to calculate <a href="./tutorial_modeling5.html?banner=modeling_tutorial">steady-state solutions</a>?</li>
+<li>How to simulate <a href="./tutorial_modeling6.html?banner=modeling_tutorial">dynamical behavior</a> and <a href="./tutorial_modeling7.html?banner=modeling_tutorial">ultrashort pulse propagation</a>?</li>
+<li>What aspects are important for the <a href="./tutorial_modeling8.html?banner=modeling_tutorial">decision</a> whether to develop own modeling software or use commercial software?</li>
+</ul>
+<p><a href="./tutorial_modeling.html?banner=modeling_tutorial">Read the tutorial!</a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="KgEDwZRiOFn0/dAP5hXYYg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/acousto_optic_modulators.html"
+    },
+    "headline": "Acousto-optic Modulators",
+    "image": "https://www.rp-photonics.com/previews/acousto_optic_modulators.png",
+    "datePublished": "2005-05-27",
+    "dateModified": "2020-04-15",
+    "description": "Acousto-optic modulators are intensity modulators based on the acousto-optic effect in some crystal or glass.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter A",
+      "item": "https://www.rp-photonics.com/encyclopedia_a.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "acousto-optic modulators",
+      "item": "https://www.rp-photonics.com/acousto_optic_modulators.html"
+    }]}
+}
+</script>
+</body>
+</html>

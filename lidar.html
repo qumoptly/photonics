@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-d/nuboJohUe7+kuODryuHQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - LIDAR, light detection and ranging, laser radar, 3D images, operation principles, laser safety, applications</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/lidar.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-07-10">
+<meta name="description" content="LIDAR can be based on a wide range of operation principles in order to acquire 3D images, often with substantial additional information. The article also discusses a number of applications.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="LIDAR, light detection and ranging, laser radar, 3D images, operation principles, laser safety, applications">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LIDAR">
+<meta property="og:description" content="LIDAR can be based on a wide range of operation principles in order to acquire 3D images, often with substantial additional information. The article also discusses a number of applications.">
+<meta property="og:url" content="https://www.rp-photonics.com/lidar.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/lidar.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="LIDAR can be based on a wide range of operation principles in order to acquire 3D images, often with substantial additional information. The article also discusses a number of applications.">
+<meta name="twitter:title" content="LIDAR">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/lidar.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="d/nuboJohUe7+kuODryuHQ==">
+page="lidar.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo sponsor"></a> <a href="./sponsors/nkt_photonics.html"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="d/nuboJohUe7+kuODryuHQ==">shownsponsors="El.En.,NKT Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_l.html">letter L</a> &gt; <a href="lidar.html">LIDAR</a></p>
+<h1>LIDAR</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_lidar_equipment.html?s=vbox">21 suppliers for LIDAR equipment</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.rpmclasers.com/application/lidar-lasers/" data-supplier="RPMC Lasers" data-location="product-enc" data-keyword="LIDAR equipment" rel="nofollow" class="bg externallink"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.toptica.com/applications/astronomy-geology/lidar-seeding/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="LIDAR equipment" rel="nofollow" class="bg externallink"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.quantel-laser.com/en/products/cat/compact-pulsed-nd-yag-lasers.html" data-supplier="Lumibird" data-location="product-enc" data-keyword="LIDAR equipment" rel="nofollow" class="bg externallink"><img src="./bg/logos/lumibird.png" alt="Lumibird" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_lidar_equipment.html?s=vbox">List of suppliers for<br>LIDAR equipment</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p>Acronym: LIDAR = light detection and ranging</p>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a technique for acquiring 3D images with laser pulses</p>
+<p>Alternative term: lidar</p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<p><a href="encyclopedia_cite.html?article=LIDAR">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>LIDAR was originally understood as <em>laser radar</em>, but is nowadays taken as an acronym meaning <em>light detection and ranging</em>, which is somewhat more general.
+It can be used for the creation of three-dimensional images based on <a href="distance_measurements_with_lasers.html" title="measurements of distances using laser light">distance measurements</a>, e.g. with the <a href="time_of_flight_measurements.html" title="distance measurements based on measuring the time of flight of a light pulse">time-of-flight method</a>.
+In other cases, one measures other quantities such as the concentration of substances in air or wind velocities.</p>
+<p>The capitalization of the term LIDAR is not consistent in the literature.
+Many authors simply write <em>lidar</em> (just like <em>radar</em>), although for acronyms full capitalization is more common.</p>
+<h2 class="togglediv">Basic Operation Principles of LIDAR</h2>
+<div>
+<h3 class="togglediv">Time-of-flight LIDAR</h3>
+<div>
+<p>The fundamental operation principle of time-of-flight LIDAR is based on the following two ideas:</p>
+<ul>
+<li>If laser <a href="pulses.html" title="flashes of light">pulses</a> are sent in a certain direction in the form of a <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a>, and these pulses eventually hit some target which reflects or scatters light back towards the source, the detected time delay of that light can be used to determine the distance of the object (<a href="time_of_flight_measurements.html" title="distance measurements based on measuring the time of flight of a light pulse"><em>time-of-flight method</em></a>).</li>
+<li>By doing many such measurements while <a href="laser_scanners.html" title="devices for scanning the direction of a laser beam">scanning</a> the direction of the beam, one can acquire information for 3D images (<em>3D laser scanning</em>).
+The image data can be collected with some kind of computer (e.g. realized with a microprocessor), which can then display them on a screen.</li>
+</ul>
+<p>For time-of-flight LIDAR, one obviously requires a laser source emitting short <a href="pulses.html" title="flashes of light">pulses</a>, often with <a href="pulse_duration.html" title="the duration of an optical pulse">pulse durations</a> of the order of a few nanoseconds or sometimes &lt;1&nbsp;ns.
+The <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a> must be high enough to provide sufficiently intense return signals; it may be limited by eye safety considerations (see below).
+Detailed spectral properties of the sent-out light are usually not important.</p>
+<p>The used <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a> for such a LIDAR receiver usually must be highly sensitive and at the same time very fast.
+For example, one may use a Geiger-mode <a href="avalanche_photodiodes.html" title="photodiodes with internal signal amplification through an avalanche process">avalanche photodiode</a>, or sometimes a whole focal plane array of such detectors, with which in principle one could record a whole two-dimensional image with one laser shot (<em>flash LIDAR</em>); however, one often needs to average such images over some substantial number of shots.</p>
+</div>
+<h3 class="togglediv">Coherent LIDAR</h3>
+<div>
+<p>Coherent LIDAR is based on <a href="optical_heterodyne_detection.html" title="a sensitive method of photodetection, reaching the standard quantum limit even for weak signal powers">optical heterodyne detection</a>.
+Here, the weak returned light is mixed with a &ldquo;local oscillator&rdquo; based on light from the laser used for sending out light.
+The heterodyne principle can greatly improve the sensitivity, so that relatively common <a href="photodiodes.html" title="semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiodes</a> are sufficient for achieving a larger detection range than a direct detection LIDAR.</p>
+<p>The sent-out light is frequently a <a href="single_frequency_operation.html" title="an operation mode of a laser where only a single resonator mode acquires a significant power">single-frequency</a> signal with a linear up-<a href="chirp.html" title="time dependence of the instantaneous frequency of an optical pulse">chirp</a> during some time interval.
+Since the frequency difference between the returning light and the light emitted at the same time grows with the propagation time, a measurement of the beat note frequency allows one to measure the distance from which the reflection originated &ndash; without using short laser pulses.
+Of course, the <a href="instantaneous_frequency.html" title="temporal derivative of the oscillation phase divided by 2&pi;">instantaneous frequency</a> of the laser light cannot grow forever, but needs to be regularly reset.
+A range ambiguity results which depends on the frequency sweep period.
+A low period of range ambiguity may be achieved with a slow sweep, which however may reduce the range accuracy.
+A coherent LIDAR the wires they alternatively use different sweep periods for obtaining the combination of best range accuracy with low ambiguity.</p>
+<p>The recorded beat frequency is also modified by longitudinal motion of the target, or more precisely the relative velocity between LIDAR device and detected object.
+Devices which utilize the Doppler effect for velocity measurements are called <em>coherent Doppler LIDAR</em>.</p>
+<p>Due to the principle of optical heterodyne detection, coherent LIDAR can be substantially more sensitive and can therefore offer a larger measurement range and/or enable the use of lower laser powers.
+Particularly when using <a href="semiconductor_lasers.html" title="lasers based on semiconductor gain media">semiconductor lasers</a>, the much lower required peak power is advantageous.
+On the other hand, there is the requirement of carefully controlled single-frequency sweeps; in that respect, the demands on the laser are higher.</p>
+<p>For coherent LIDAR, one usually uses a single detector in conjunction with a scanning apparatus for the transverse direction.
+Using a focal plane array for collecting 3D information more directly is difficult, because for each pixel one would require an AC amplifier and detection electronics, unless one would operate only one pixel at a time.</p>
+</div>
+<h3 class="togglediv">Additional Aspects</h3>
+<div>
+<p>In addition, the following aspects may be relevant for applications:</p>
+<aside class="callout blue">Various physical process can cause light scattering in air.</aside>
+<ul>
+<li>Light may be scattered not only by solid objects, but also for example by tiny particles in the atmosphere (Rayleigh or Mie <a href="scattering.html" title="processes where light is sent in other directions, usually but not always in random directions">scattering</a>), or even in clean air at density fluctuations (<a href="rayleigh_scattering.html" title="scattering of light at scattering centers which are much smaller than the wavelength">Rayleigh scattering</a>).
+In some cases, <a href="raman_scattering.html" title="a nonlinear scattering process involving optical phonons">Raman scattering</a> is used.</li>
+<li>The laser light may not only be scattered, but may induce <a href="fluorescence.html" title="luminescence arising from irradiation with light">fluorescence</a> which can then be detected.</li>
+<li>In atmospheric LIDAR, one may utilize ground reflections for measuring light <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorption</a> in the atmosphere (see also the article on <a href="laser_absorption_spectroscopy.html" title="methods of absorption spectroscopy using laser light">laser absorption spectroscopy</a>).
+Differential absorption LIDAR (DIAL) utilizes differences in absorption at different wavelengths.</li>
+</ul>
+<aside class="callout blue">Doppler shifts can provide substantial additional information.</aside>
+<ul>
+<li>It is possible to measure concentrations of substances and temperatures via <a href="raman_spectroscopy.html" title="optical spectroscopy based on spontaneous or stimulated Raman scattering">Raman spectroscopy</a> (<em>Raman LIDAR</em>).</li>
+</ul>
+<p>In some cases, data acquired with LIDAR are complemented with data from other sources such as color <a href="cameras.html" title="optical instruments for recording still or moving images">cameras</a> and radar.</p>
+<p>LIDAR can be seen as a whole class of methods for <em>remote sensing</em>; see below for concrete applications.</p>
+<p>LIDAR apparatuses can operate in different spectral regions between the <a href="infrared_light.html" title="invisible light with wavelengths roughly between 750&thinsp;&thinsp;nm and 1&thinsp;&thinsp;mm">infrared</a> and the <a href="ultraviolet_light.html" title="invisible light with wavelengths shorter than &asymp;&thinsp;400&thinsp;&thinsp;nm">ultraviolet</a>.
+The used optical <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a> can have various implications:</p>
+<aside class="callout blue">See more on laser safety further below.</aside>
+<ul>
+<li><a href="laser_safety.html" title="safety of the use of laser devices">Laser safety</a>: the risk of affecting eyes heavily depends on the wavelength.
+There are devices based on <a href="eye_safe_lasers.html" title="lasers emitting in a wavelength region with relatively low hazards for the human eye">eye-safe lasers</a>, e.g. in the 1.5-&mu;m spectral region, but it is more challenging to achieve a high laser performance in this region, and the choice of <a href="photodetectors.html" title="devices used for the detection of light">photodetectors</a> is also more limited.</li>
+<li>Short wavelengths may be required for obtaining laser-induced <a href="fluorescence.html" title="luminescence arising from irradiation with light">fluorescence</a> in certain substances or to cause Raman scattering.
+Also, in principle they allow for highest transverse spatial resolution.</li>
+<li>Long-distance transmission through the atmosphere works best in certain infrared spectral regions.</li>
+</ul>
+<p>Some LIDAR apparatuses use laser light at different wavelengths &ndash; for example, 1064&nbsp;nm, 532&nbsp;nm and 355&nbsp;nm, as obtained from a <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched</a> <a href="yag_lasers.html" title="lasers based on YAG (yttrium aluminum garnet) crystals, usually Nd:YAG or Yb:YAG">YAG laser</a> with <a href="frequency_doubling.html" title="the phenomenon that an input wave in a nonlinear material can generate a wave with twice the optical frequency">frequency doubling</a> and <a href="frequency_tripling.html" title="the phenomenon that an input laser beam generates a beam with three times the optical frequency">frequency tripling</a>.
+They may then apply different kinds of detection:</p>
+<ul>
+<li>elastic backscattering at all three wavelengths</li>
+<li class="ta_left">Raman-shifted light from nitrogen (the most abundant substance in air) at 387&nbsp;nm and 607&nbsp;nm and water vapor (407&nbsp;nm)</li>
+<li class="ta_left">parallel- and cross-polarized light components for measuring depolarization ratios</li>
+</ul>
+<p>Because so different operation principles can be used, and this under very different circumstances (see below for typical applications), the technical details of LIDAR apparatuses vary substantially.</p>
+</div>
+</div>
+<h2 class="togglediv">Laser and Photonics Technology for LIDAR</h2>
+<div>
+<p>Different kinds of <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a> sources are used for LIDAR, because not only basic properties like <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a>, <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a> and optical <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a> may be relevant.
+For example, for coherent LIDAR one usually requires frequency-swept <a href="single_frequency_lasers.html" title="lasers emitting radiation in a single resonator mode">single-frequency lasers</a>, and for some applications one requires a <a href="tunable_lasers.html" title="lasers the output wavelengths of which can be tuned">tunable laser</a>; one such constraint alone can easily force one to use a different kind of laser technology.
+For incoherent time-of-flight LIDAR, one also uses specialized optimized pulsed high-power <a href="laser_diodes.html" title="semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diodes</a>, producing e.g. infrared pulses with peak powers of hundreds of watts (when driven with intense current pulses) and pulse durations of the order of 10&nbsp;ns.</p>
+<p>For some LIDAR applications, one does not directly use a laser, but instead an <a href="optical_parametric_oscillators.html" title="coherent light sources based on parametric amplification within an optical resonator">optical parametric oscillator</a> which is pumped with a <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched laser</a>.</p>
+<p>For directing the laser light and also for collecting the returned light, one generally requires an optical <a href="telescopes.html" title="optical instruments for viewing distant objects, or sometimes more generally afocal systems">telescope</a>, or possibly two separate telescopes.</p>
+<aside class="callout blue">LIDAR detectors need to be both sensitive and fast.</aside>
+<p>Typically, one also needs <a href="photodetectors.html" title="devices used for the detection of light">photodetectors</a> which are highly <a href="sensitivity.html" title="(different meanings, depending on the context)">sensitive</a> (for a sufficiently high <a href="signal_to_noise_ratio.html" title="the ratio of signal power to noise power in a detector">signal-to-noise ratio</a>) and at the same time rather fast.
+In some cases, <a href="photon_counting.html" title="photodetection at low light levels where single photon absorption events are counted">photon counting</a> with <a href="photomultipliers.html" title="photodetection devices based on the photoelectric effect and charge multiplication by secondary emission of electrons">photomultipliers</a> or <a href="avalanche_photodiodes.html" title="photodiodes with internal signal amplification through an avalanche process">avalanche photodiodes</a> is needed, while in other cases sensitive <a href="photodiodes.html" title="semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiodes</a> are sufficient.
+For <a href="optical_heterodyne_detection.html" title="a sensitive method of photodetection, reaching the standard quantum limit even for weak signal powers">optical heterodyne detection</a>, the returning light needs to be superimposed with a local oscillator signal from the laser.</p>
+</div>
+<h2 class="togglediv">Applications of LIDAR</h2>
+<div>
+<ul>
+<li>LIDAR instruments can be used on airplanes for detecting turbulences in the atmosphere over substantial distances, so that the flight path may be adapted or passengers can be warned.</li>
+<li>Similarly, wind energy turbines can use LIDAR for optimizing their operation and/or for switching off to avoid damage.</li>
+<li>Atmospheric LIDAR is used for environmental monitoring and research.
+One may e.g. detect concentrations of gases (including some trace gases and pollutants), small particles, aerosols, temperatures, wind and turbulences.</li>
+<li>Airborne LIDAR can also be used for security surveillance.</li>
+</ul>
+<aside class="callout green">Is LIDAR competitive for autonomous vehicles?</aside>
+<ul>
+<li>In autonomous (self-driving) cars, LIDAR may be used for monitoring the surroundings, e.g. other vehicles, pedestrians, lane markings, road features, etc.
+Especially for long distances, LIDAR has a substantial advantages over radar and ultrasound devices, for example.
+It can provide relatively high spatial resolution in all directions and can be made relatively immune to disturbing influences.
+Even before totally autonomous vehicles are realized, LIDAR may be used for adaptive cruise control, detecting hazards and emergency breaking.
+However, it is challenging to realize this at a reasonable cost.</li>
+<li>Robotics can use LIDAR for various purposes, such as detecting obstacles.</li>
+<li>Compact LIDAR speed guns can be used by the police to monitor velocities of vehicles.</li>
+<li>Geodesy can be done with LIDAR instruments on satellites surrounding Earth or on airplanes.
+Similar surveying and topographic mapping applications are in geography, forestry, agriculture and archeology.
+For example, one may detect certain properties of vegetation for optimizing agricultural measures.
+Laser altimetry has even been applied on spacecrafts to planets and moons.</li>
+<li>LIDAR is also used for military purposes such as reconnaissance and missile navigation.</li>
+</ul>
+</div>
+<h2 class="togglediv">Laser Safety</h2>
+<div>
+<p><a href="laser_safety.html" title="safety of the use of laser devices">Laser safety</a> issues can be severely limiting factors for certain applications, such as autonomous cars.
+Cost constraints may inhibit the use of <a href="eye_safe_lasers.html" title="lasers emitting in a wavelength region with relatively low hazards for the human eye">eye-safe lasers</a> and corresponding photodetectors.
+The resulting severe limitations of applicable laser intensities can then seriously limit the possible performance.</p>
+<p>On airplanes and satellites, laser safety is much less of an issue.
+One may, for example, automatically deactivate the LIDAR apparatus on an airplane for low flight altitudes, thus ensuring that no person can be close enough to be endangered.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_lidar_equipment.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 21 suppliers for LIDAR equipment. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.lumibird.com/en" data-supplier="Lumibird" data-location="product-enc" data-keyword="LIDAR equipment" rel="nofollow" class="bg externallink" title="Visit the website of Lumibird"><img src="./bg/logos/lumibird.png" alt="Lumibird" class="supplierlogo"></a><a href="https://www.quantel-laser.com/en/products/cat/compact-pulsed-nd-yag-lasers.html" data-supplier="Lumibird" data-location="product-enc" data-keyword="LIDAR equipment" rel="nofollow" class="bg externallink" title="Visit the website of Lumibird"><img src="./bg/products/lumibird/lidar.jpg" alt="LIDAR equipment" class="product"></a><h3><a href="./bg/profiles/lumibird.html" title="See the profile of Lumibird">Lumibird</a></h3><p>Lumibird offering in lasers for LiDAR is large, thanks to its expertise in several key laser technologies: <a href="https://www.quantel-laser.com/en/products.html?category=55" data-supplier="Lumibird" data-location="product-enc" data-keyword="LIDAR equipment" rel="nofollow" class="externallink bg">diodes</a> for ADAS, <a href="https://www.quantel-laser.com/en/products/cat/compact-pulsed-nd-yag-lasers.html" data-supplier="Lumibird" data-location="product-enc" data-keyword="LIDAR equipment" rel="nofollow" class="externallink bg">diode-pumped or flashlamp-pumped pulsed Nd:YAG lasers</a> for atmospheric LiDAR, <a href="https://www.keopsys.com/lidar/" data-supplier="Lumibird" data-location="product-enc" data-keyword="LIDAR equipment" rel="nofollow" class="externallink bg">pulsed fiber lasers</a> in turnkey benchtops or in OEM modules for wind LiDAR, 3D scanning or ADAS. Lumibird lasers are designed for use in harsh environment and are easy to integrate into systems.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.toptica.com/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="LIDAR equipment" rel="nofollow" class="bg externallink" title="Visit the website of TOPTICA Photonics"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a><a href="https://www.toptica.com/applications/astronomy-geology/lidar-seeding/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="LIDAR equipment" rel="nofollow" class="bg externallink" title="Visit the website of TOPTICA Photonics"><img src="./bg/products/toptica_photonics/lidar.jpg" alt="LIDAR equipment" class="product"></a><h3><a href="./bg/profiles/toptica_photonics.html" title="See the profile of TOPTICA Photonics">TOPTICA Photonics</a></h3><p>TOPTICA’s added value for LIDAR systems is in providing best cw seeding lasers and external references. With their extremely narrow linewidth, high frequency stability and unmatched wavelength availability, TOPTICA&#39;s scientific lasers are ideal seeders for the high power pulsed lasers employed for LIDAR. Fiber coupling with the ultrastable <a href="https://www.toptica.com/products/optical-isolators-photonicals/photonicals/fiberdock/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="LIDAR equipment" rel="nofollow" class="externallink bg">FiberDock</a> allows for straight forward implementation of our lasers. We also offer the most accurate and most stable wavelength meters, Fabry&ndash;Perot interferometers (FPI 100) and spectroscopy cells or spectroscopy modules as well as electronic locking modules which are needed to stabilize a cw diode laser to an external reference.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.rpmclasers.com/" data-supplier="RPMC Lasers" data-location="product-enc" data-keyword="LIDAR equipment" rel="nofollow" class="bg externallink" title="Visit the website of RPMC Lasers"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a><a href="https://www.rpmclasers.com/application/lidar-lasers/" data-supplier="RPMC Lasers" data-location="product-enc" data-keyword="LIDAR equipment" rel="nofollow" class="bg externallink" title="Visit the website of RPMC Lasers"><img src="./bg/products/rpmc_lasers/lidar.jpg" alt="LIDAR equipment" class="product"></a><h3><a href="./bg/profiles/rpmc_lasers.html" title="See the profile of RPMC Lasers">RPMC Lasers</a></h3><p>RPMC Lasers offers a wide range of pulsed and CW lasers for <a href="https://www.rpmclasers.com/" data-supplier="RPMC Lasers" data-location="product-enc" data-keyword="LIDAR equipment" rel="nofollow" class="externallink bg">LIDAR applications</a>. This includes single frequency CW fiber lasers at 1.5 microns are ideal for Doppler LIDAR and Q-switched lasers are for time-of-flight LIDAR.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="lidar.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">R. T. H. Collis, &ldquo;Lidar&rdquo;, Appl. Opt. 9 (8), 1782 (1970), <a href="https://doi.org/10.1364/AO.9.001782">doi:10.1364/AO.9.001782</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">L. R. Bissonnette, &ldquo;Sensitivity analysis of lidar inversion algorithms&rdquo;, Appl. Opt. 25 (13), 2122 (1986), <a href="https://doi.org/10.1364/AO.25.002122">doi:10.1364/AO.25.002122</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">J. Bösenberg, &ldquo;Ground-based differential absorption lidar for water-vapor and temperature profiling: methodology&rdquo;, Appl. Opt. 37 (18), 3845 (1998), <a href="https://doi.org/10.1364/AO.37.003845">doi:10.1364/AO.37.003845</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">V. Wulfmeyer and C. Walther, &ldquo;Future performance of ground-based and airborne water-vapor differential absorption lidar. I. Overview and theory&rdquo;, Appl. Opt. 40 (30), 5304 (2001), <a href="https://doi.org/10.1364/AO.40.005304">doi:10.1364/AO.40.005304</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">V. Wulfmeyer and C. Walther, &ldquo;Future performance of ground-based and airborne water-vapor differential absorption lidar. II. Simulations of the precision of a near-infrared, high-power system&rdquo;, Appl. Opt. 40 (30), 5321 (2001), <a href="https://doi.org/10.1364/AO.40.005321">doi:10.1364/AO.40.005321</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">W. B. Grant <i>et al.</i>, &ldquo;CO<sub>2</sub> DIAL measurements of water vapor&rdquo;, Appl. Opt. 26 (15), 3033 (1987), <a href="https://doi.org/10.1364/AO.26.003033">doi:10.1364/AO.26.003033</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">Z. Liu <i>et al.</i>, &ldquo;Estimating random errors due to shot noise in backscatter lidar observations&rdquo;, Appl. Opt. 45 (18), 4437 (2006), <a href="https://doi.org/10.1364/AO.45.004437">doi:10.1364/AO.45.004437</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">C. V. Poulton <i>et al.</i>, &ldquo;Coherent solid-state LIDAR with silicon photonic optical phased arrays&rdquo;, Opt. Lett. 42 (20), 4091 (2017), <a href="https://doi.org/10.1364/OL.42.004091">doi:10.1364/OL.42.004091</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="laser_rangefinders.html" title="devices for measuring distances to objects, using lasers">laser rangefinders</a>, <a href="time_of_flight_measurements.html" title="distance measurements based on measuring the time of flight of a light pulse">time-of-flight measurements</a>, <a href="raman_spectroscopy.html" title="optical spectroscopy based on spontaneous or stimulated Raman scattering">Raman spectroscopy</a>, <a href="distance_measurements_with_lasers.html" title="measurements of distances using laser light">distance measurements with lasers</a>, <a href="laser_safety.html" title="safety of the use of laser devices">laser safety</a><br>and other articles in the categories <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/lidar.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Flidar.html&text=RP+Photonics+Encyclopedia+-+LIDAR%2C+light+detection+and+ranging%2C+laser+radar%2C+3D+images%2C+operation+principles%2C+laser+safety%2C+applications" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Flidar.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Flidar.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/lidar.html"&gt;<br>Article on LIDAR&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/lidar.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/lidar.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/lidar.html<br>article on 'LIDAR' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="./fiberpower_sc.html?banner=RP_Fiber_Power_2"><img src="./img/fiberpower_sc5b.png" alt="supercontinuum generation" style="margin-bottom:8px"></a>
+<p>Evolution of the spectrum of an ultrashort pulse in a fiber.
+The spectrum becomes very wide at the right end; this is called supercontinuum generation.</p>
+<p>This diagram has been made with the <a href="./fiberpower.html?banner=RP_Fiber_Power_2"><b>RP Fiber Power</b></a> software.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="d/nuboJohUe7+kuODryuHQ==">shownbanner = "RP Fiber Power 2";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Field Guide on Lasers</h2>
+<p>Enjoy a compact introduction to laser technology:</p>
+<ul>
+<li>basic principles</li>
+<li>laser beams</li>
+<li>laser resonators</li>
+<li>various types of lasers</li>
+<li>Q switching and mode locking</li>
+<li>frequency conversion</li>
+<li>laser safety</li>
+</ul>
+<p style="text-align:center;"><a href="http://spie.org/x648.html?product_id=767474"><img src="./img/fg_lasers.png" alt="FG Lasers"></a></p>
+<p>This book soon became a bestseller among the SPIE Field Guides.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="d/nuboJohUe7+kuODryuHQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/lidar.html"
+    },
+    "headline": "LIDAR",
+    "image": "https://www.rp-photonics.com/previews/lidar.png",
+    "datePublished": "2019-03-13",
+    "dateModified": "2020-07-10",
+    "description": "LIDAR can be based on a wide range of operation principles in order to acquire 3D images, often with substantial additional information. The article also discusses a number of applications.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter L",
+      "item": "https://www.rp-photonics.com/encyclopedia_l.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "LIDAR",
+      "item": "https://www.rp-photonics.com/lidar.html"
+    }]}
+}
+</script>
+</body>
+</html>

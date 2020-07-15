@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-3CwJW2R+2vN9TMjRJBQmOw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - fiber simulation software, mode solver, beam propagation, mode properties, amplification, laser-active ions, amplifier model, dynamic simulations, ultrashort pulses</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/fiber_simulation_software.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Fiber simulation software is software for numerical simulations on fiber devices. It may for example simulate the operation of fiber amplifiers and lasers.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="fiber simulation software, mode solver, beam propagation, mode properties, amplification, laser-active ions, amplifier model, dynamic simulations, ultrashort pulses">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fiber Simulation Software">
+<meta property="og:description" content="Fiber simulation software is software for numerical simulations on fiber devices. It may for example simulate the operation of fiber amplifiers and lasers.">
+<meta property="og:url" content="https://www.rp-photonics.com/fiber_simulation_software.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/fiber_simulation_software.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Fiber simulation software is software for numerical simulations on fiber devices. It may for example simulate the operation of fiber amplifiers and lasers.">
+<meta name="twitter:title" content="Fiber Simulation Software">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/fiber_simulation_software.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="3CwJW2R+2vN9TMjRJBQmOw==">
+page="fiber_simulation_software.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="3CwJW2R+2vN9TMjRJBQmOw==">shownsponsors="DataRay"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_fiber_simulation_software.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_f.html">letter F</a> &gt; <a href="fiber_simulation_software.html">fiber simulation software</a></p>
+<h1>Fiber Simulation Software</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_fiber_simulation_software.html?s=vbox">11 suppliers for fiber simulation software</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.rp-photonics.com/fiberpower.html" data-supplier="RP Photonics" data-location="product-enc" data-keyword="fiber simulation software" rel="nofollow" class="bg externallink"><img src="./bg/logos/rp_photonics.png" alt="RP Photonics" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_fiber_simulation_software.html?s=vbox">List of suppliers for<br>fiber simulation software</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: software for numerical simulations on fiber devices</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Faser-Simulationssoftware</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#fiber_optics_and_waveguides" title="other articles on fiber optics and waveguides">fiber optics and waveguides</a>, <a href="categories.html#optical_amplifiers" title="other articles on optical amplifiers">optical amplifiers</a>, <a href="categories.html#methods" title="other articles on methods">methods</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<p><a href="encyclopedia_cite.html?article=fiber%20simulation%20software">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Many aspects of the operation of passive and active <a href="fiber_optics.html" title="optics based on optical fibers">fiber-optic</a> devices are relatively complex.
+Therefore, numerical tools are required for analyzing various physical details.
+The resulting understanding can be used for the optimization both of the design of fiber components and of their use.
+In the following, an overview on different aspects is given which are often relevant for the development of <a href="active_fibers.html" title="optical fibers containing laser-active dopants in the fiber core">active</a> and <a href="passive_fibers.html" title="optical fibers without laser-active dopants in the fiber core">passive fiber</a> devices.</p>
+<h2 class="togglediv">Calculation of Fiber Modes</h2>
+<div>
+<p>Of the many <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a> of fibers, the guided modes are of particular interest, as they are important e.g. for coupling light into a fiber and for the <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a> of the output.
+The mode properties are determined by the <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> profile of the fiber.
+Properties of interest can be, for example,</p>
+<ul>
+<li>the shapes of the amplitude or intensity distribution of modes</li>
+<li class="ta_left"><a href="mode_radius.html" title="a measure of the transverse extent of a laser mode or laser beam">mode radii</a> and <a href="effective_mode_area.html" title="a quantitative measure of the area which a waveguide or fiber mode effectively covers in the transverse dimensions">effective mode areas</a></li>
+<li class="ta_left">the overlap with the doped <a href="fiber_core.html" title="the region in an optical fiber which guides light">core</a> in a <a href="rare_earth_doped_fibers.html" title="optical glass fibers which are doped with rare earth ions">rare-earth-doped fiber</a></li>
+<li class="ta_left"><a href="effective_refractive_index.html" title="a number quantifying the phase delay per unit length in a waveguide, relative to the phase delay in vacuum">effective refractive indices</a></li>
+<li class="ta_left"><a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>, e.g. the <a href="group_velocity_dispersion.html" title="the frequency dependence of the group velocity in a medium, or (quantitatively) the derivative of the inverse group velocity with respect to angular frequency">group velocity dispersion</a> versus <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a> (calculated by differentiation of the frequency-dependent phase delay)</li>
+<li class="ta_left"><a href="bend_losses.html" title="propagation losses in an optical fiber (or other waveguide) caused by bending">bend losses</a> versus bend radius</li>
+</ul>
+<aside class="callout blue">The complexity and computation time of a mode solver depends critically on the type of index profile.</aside>
+<p>Most all-glass fibers have a radially symmetric refractive index profile and also exhibit only weak index contrasts, so that approximations for weakly guiding waveguides can be used.
+Under these circumstances, the <a href="lp_modes.html" title="linearly polarized modes of optical fibers with radially symmetric index profiles in the approximation of weak guidance">LP modes</a> of the fiber can be calculated with a <em>mode solver</em> based on relatively simple numerical methods.
+This also means that the calculation can be rather fast &ndash; the complete guided mode properties can be calculated within a second on an ordinary PC, even if there are many such modes.</p>
+<p>Figure&nbsp;1 shows an example for a <a href="few_mode_fibers.html" title="fibers supporting only few guided modes">few-mode fiber</a>, where the wavelength is varied.
+While for the shortest wavelength (750&nbsp;nm) the fiber has modes with 6 different intensity profiles, more and more modes disappear for longer wavelengths, until the fiber is <a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode</a>.</p>
+<figure>
+<img src="img/fiberpower_modes5.gif" alt="fiber mode profiles">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Amplitude profiles of all guided fiber modes for a variable wavelength.
+The diagram has been made with the software <a href="fiberpower.html"><b>RP Fiber Power</b></a>.
+</figcaption>
+</figure>
+<p>Mode solvers based on substantially more sophisticated algorithms are required for other cases, such as <a href="polarization_maintaining_fibers.html" title="specialty optical fibers with strong built-in birefringence, preserving the properly oriented linear polarization of an input beam">polarization-maintaining fibers</a> lacking radial symmetry, and in particular for <a href="photonic_crystal_fibers.html" title="specialty optical fibers with a built-in microstructure, in most cases consisting of small air holes in glass">photonic crystal fibers</a>.
+The latter also exhibit very strong index contrasts, i.e., the weakly guiding approximation can not be applied.
+There are various numerical techniques, and generally the computation time is much longer than for the simple methods as normally used for all-glass fibers.</p>
+</div>
+<h2 class="togglediv">Numerical Beam Propagation</h2>
+<div>
+<p>Not in all situations, the calculation of fiber modes is both feasible and helpful.
+For example, the mode calculation is very difficult and rather time-consuming for the pump claddings of some <a href="double_clad_fibers.html" title="optical fibers with different waveguide structures for pump and signal light">double-clad fibers</a> with irregular profile.
+It also gives more detailed information than required (hundreds or thousands of detailed mode intensity profiles), while still not fully taking into account the effects of irregular fiber bends.
+Another example is the behavior of fused <a href="fiber_couplers.html" title="fiber devices for coupling light from one or several input fibers to one or several output fibers, or from free space into a fiber">fiber couplers</a>, where the modes strongly depend on the local conditions.
+In such cases, it is often more suitable to numerical simulate the beam propagation.</p>
+<p>As a first example, Figure&nbsp;2 shows how pump light gets absorbed in a double-clad fiber with a simple geometry: a circular core in the middle of a circular pump cladding.
+Here, <a href="pump_absorption.html" title="the absorption of pump light, e.g. in a laser or a laser amplifier">pump absorption</a> is quite incomplete as some modes have very poor overlap with the doped core.
+Such a beam propagation model can be easily applied to other geometries, e.g. with an off-centered core, a D-shaped or octagonal core, or with strong bending, which may even be variable along the fiber length.</p>
+<figure>
+<img src="img/fiberpower_dcf1.png" alt="amplitude distribution along the fiber">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Amplitude distribution of pump light along a double-clad fiber with a circular pump cladding.
+This <a href="fiberpower_dcf.html">numerical simulation</a>, done with the software <a href="fiberpower.html"><b>RP Fiber Power</b></a>, shows that the pump intensity distribution develops a &ldquo;hole&rdquo; in the core region.
+The remaining pump light exhibits quite incomplete absorption.
+</figcaption>
+</figure>
+<p>Another example is a fused fiber coupler, where two cores come close together over some distance.
+Their evanescent fields then touch each other, so that light can couple over.
+The detailed behavior depends strongly on the gap size, the coupling distance, and the wavelength.
+Figure&nbsp;3 shows a typical simulation.</p>
+<figure>
+<img src="img/fiberpower_coupler2.png" alt="amplitude distribution in the fiber coupler">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Amplitude distribution in the fiber coupler, simulated with the software <a href="fiberpower.html"><b>RP Fiber Power</b></a>.
+</figcaption>
+</figure>
+</div>
+<h2 class="togglediv">Optical Amplification in Fibers</h2>
+<div>
+<p>Optical amplification occurs in <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber lasers</a> and <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">amplifiers</a>, which are usually based on <a href="rare_earth_doped_fibers.html" title="optical glass fibers which are doped with rare earth ions">rare-earth-doped fibers</a>.
+The dopant is usually restricted to the <a href="fiber_core.html" title="the region in an optical fiber which guides light">fiber core</a>, but there are also modified designs for special applications e.g. with ring doping around the core.</p>
+<h3 class="togglediv">Behavior of the Laser-active Ions</h3>
+<div>
+<aside class="callout blue">Simple gain models are sufficient for many cases, but more sophisticated models are required in other situations.</aside>
+<p>The interaction of the laser-active ions with the light field can usually be described with <a href="rate_equation_modeling.html" title="a method of modeling the dynamics of laser gain media">rate equation modeling</a>.
+Differential equations describe the temporal evolution of the excitations of different levels for given optical intensities, and can also be used for calculating steady-state level populations.
+In many cases (e.g., ytterbium-doped lasers and amplifiers), a simplified gain model, considering only a single metastable state and the ground state, is sufficient for an accurate description.
+In other cases, however, a more sophisticated gain model needs to be set up, which may take into account multiple metastable levels and various processes which can shuffle ions between the different levels.
+For example, there can be <a href="excited_state_absorption.html" title="absorption of light by ions or atoms in an excited electronic state, rather than in the electronic ground state">excited-state absorption</a>, <a href="quenching.html" title="the reduction or limitation of an excited-state population, mostly by unwanted effects">quenching</a> by <a href="upconversion.html" title="a process where light can be emitted with photon energies higher than those of the light generating the excitation">upconversion</a> processes or <a href="energy_transfer.html" title="the phenomenon that dopant ions in laser-active media can exchange excitation energy among each other">energy transfers</a>, possibly even between different types of ions (e.g. in Er/Yb-doped fibers).
+Ideally, a software allows the user to define arbitrary level schemes and all the relevant processes.</p>
+<p>Various spectroscopic data are required for such modeling: effective <a href="transition_cross_sections.html" title="material parameters for quantifying the likelihood or rate of optical transition events">transition cross sections</a> (for ground-state absorption, excited-state absorption, emission), <a href="upper_state_lifetime.html" title="the lifetime of the population of the upper laser level">upper-state lifetimes</a>, <a href="quenching.html" title="the reduction or limitation of an excited-state population, mostly by unwanted effects">quenching</a> or <a href="upconversion.html" title="a process where light can be emitted with photon energies higher than those of the light generating the excitation">upconversion</a> parameters, etc.
+On the other hand, a computer model can be an essential tool for extracting such data from results of measurements.</p>
+</div>
+<h3 class="togglediv">Laser or Amplifier Gain</h3>
+<div>
+<aside class="callout blue">The laser gain in a fiber also depends on mode properties.</aside>
+<p>The resulting laser <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> depends on the excitation density of the laser-active ions, but also on the overlap of the fiber <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a> with the dopant.
+Therefore, the gain does not only depend on the wavelength, but can also be different for different modes.
+Fiber designs can be optimized such that higher-order modes experience a lower gain than the favored fundamental mode.</p>
+<p>Note that the gain may be <a href="gain_saturation.html" title="the phenomenon that the gain of an amplifier is reduced for high input signal powers">saturated</a> not only by an amplified signal, but also by <a href="amplified_spontaneous_emission.html" title="a process where spontaneously emitted radiation (luminescence) is amplified">amplified spontaneous emission</a> (ASE).
+Therefore, ASE has to be calculated as well, at least if the gain is relatively high.
+(In models for fiber <em>lasers</em>, it can often be neglected.)</p>
+</div>
+<h3 class="togglediv">Self-consistency in Fiber Lasers and Amplifiers</h3>
+<div>
+<aside class="callout blue">Self-consistent steady-state solutions are sometimes very hard to find efficiently. A reliable and efficient algorithm is not easy to develop.</aside>
+<p>For calculating the steady state of a <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber laser</a>, but also of a <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifier</a> with counterpropagating pump and signal, one needs to find a self-consistent solution for both the excitation densities and the <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical powers</a>.
+These quantities depend on each other, and neither one is originally known.
+While relatively simple methods such as the shooting method can be used in simple cases, the task becomes numerically quite demanding in more complicated cases, e.g. when there is also strong <a href="amplified_spontaneous_emission.html" title="a process where spontaneously emitted radiation (luminescence) is amplified">amplified spontaneous emission</a> (ASE).
+Non-optimized algorithms can have serious problems with convergence and computation time when applied to difficult cases.</p>
+<p>As an example, Figure&nbsp;4 shows the optical powers and the excitation density in an ytterbium-doped fiber amplifier.
+Although this example is relatively simple, the behavior of the device would be hard to predict without numerical simulations, as substantial saturation effects from ASE arise, and the distribution of ASE powers depends in complicated ways on the ytterbium excitation profile.</p>
+<figure>
+<img src="img/fiber_amplifier3.png" alt="ASE in fiber amplifier">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Optical powers and excitation density along the fiber of an ytterbium-doped fiber amplifier, pumped at 940&nbsp;nm.
+The simulation has been done with the software <a href="fiberpower.html"><b>RP Fiber Power</b></a>.
+</figcaption>
+</figure>
+</div>
+</div>
+<h2 class="togglediv">Dynamic Simulations</h2>
+<div>
+<p>In various cases, not the steady state is of interest, but rather the temporal evolution for time-dependent power inputs.
+As an example, one may consider a <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifier</a> which is first pumped for some time, so that some energy is stored in the fiber, and then serves to amplify an injected nanosecond pulse.
+During the pumping phase, the gain raises while the pump absorption decreases; the transmitted residual pump power may increase with time.
+When the signal pulse is injected, it will saturate the gain, so that the temporal shape of the output pulse can become quite distorted.</p>
+<p>Figure&nbsp;5 shows an example, where a signal input pulse with super-Gaussian temporal shape extracts much of the energy stored in an ytterbium-doped amplifier.
+The dot-dashed curve shows how the output would evolve without <a href="gain_saturation.html" title="the phenomenon that the gain of an amplifier is reduced for high input signal powers">gain saturation</a>.
+Due to gain saturation, however, the gain drops during the amplification, and the output power gets lower.</p>
+<figure>
+<img src="img/pulsed_amplifier.png" alt="pulse amplification in a fiber amplifier">
+<figcaption><span class="start">Figure&nbsp;5:</span> 
+Output power and ytterbium excitation versus time in a pulsed fiber amplifier.
+The diagram has been made with the software <a href="fiberpower.html"><b>RP Fiber Power</b></a>.
+</figcaption>
+</figure>
+<aside class="callout blue">Propagation times of pulses are relevant in some cases &ndash; for example, in Q-switched fiber lasers.</aside>
+<p>Another example is a <a href="q_switching.html" title="a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q-switched</a> fiber laser.
+Here, it is essential to take into account propagation times (which can often be neglected in amplifier models).
+Lasing begins with ASE, which can be spatially quite variable due to the high gain which fiber devices typically have.
+As a result, the generated output can exhibit complicated peak structures, which are not observed for Q-switched <a href="bulk_lasers.html" title="lasers based on bulk crystals as gain media">bulk lasers</a>.
+Figure&nbsp;6 shows an example case, where a very fast Q-switch has been assumed.
+For slower switching, one can obtain quite different pulse shapes.</p>
+<figure>
+<img src="img/qs_fl_time.png" alt="laser output versus time">
+<figcaption><span class="start">Figure&nbsp;6:</span> 
+Output power and ytterbium excitation versus time in an actively Q-switched fiber laser, <a href="fiberpower_pamp.html">simulated</a> with the <a href="fiberpower.html"><b>RP Fiber Power</b></a> software.
+</figcaption>
+</figure>
+<p>Note that rather different time scales can be involved in a simulation.
+Pumping can usually be simulated with rather course numerical time steps, whereas the generation of a Q-switched pulse requires much finer steps.
+A software which can work only with a fixed step size would then be extremely time-consuming.</p>
+</div>
+<h2 class="togglediv">Ultrashort Pulse Propagation</h2>
+<div>
+<aside class="callout blue">Single-pass pulse propagation is not sufficient for many applications &ndash; one also needs multiple round trips, influences of other components, flexible inspection options, export of pulse details, etc.</aside>
+<p><a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">Ultrashort pulses</a> can be amplified in a <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifier</a> or generated in a <a href="mode_locked_fiber_lasers.html" title="ultrafast fiber lasers which are actively or passively mode-locked for generating ultrashort pulses">mode-locked fiber laser</a>.
+Also, one may want to investigate pulse propagation in passive fibers, as used e.g. for delivery to an application.
+For pulse propagation in the fiber, additional effects need to be taken into account &ndash; in particular, the <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> and the fiber's <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a> (possibly including stimulated <a href="raman_scattering.html" title="a nonlinear scattering process involving optical phonons">Raman scattering</a>).
+In addition, it may be necessary to treat multiple fibers with different properties in a model and also effects of additional components, such as a <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorber</a> for <a href="mode_locking.html" title="a group of techniques for generating ultrashort pulses in lasers">mode locking</a>, an <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical filter</a> or an <a href="output_couplers.html" title="partially transparent laser mirrors, used for extracting output beams from laser resonators">output coupler</a>.
+(With such features, a fiber simulation software also becomes usable for many bulk-optical devices.)</p>
+<p>As an example, Figure&nbsp;7 shows how the optical spectrum of the output pulse of a similariton-type mode-locked fiber laser converges to a nearly rectangular shape within 100 resonator round-trips.
+One also obtains the <a href="spectral_phase.html" title="the phase of the electric field in the frequency domain">spectral phase</a>, which is close to parabolic in the relevant region, so that dispersive <a href="pulse_compression.html" title="linear or nonlinear techniques for reducing the durations of optical pulses">pulse compression</a> is not difficult to do.</p>
+<figure>
+<img src="img/fiberpower_ml_fl2.png" alt="pulses in frequency domain">
+<figcaption><span class="start">Figure&nbsp;7:</span> 
+Pulses from a similariton-type mode-locked fiber laser for the first 100 round trips in the frequency domain.
+</figcaption>
+</figure>
+<p>Generally, ultrashort pulse propagation is substantially more time-consuming to simulate, compared with simple propagation of powers for continuous-wave cases.
+For finding the steady state e.g. for the amplification of high-repetition rate pulse trains, it is therefore much more efficient to first do a steady-state calculation and then refine the solution as required with ultrashort pulse propagation.</p>
+<p>As the resulting processes can be rather complex, it is very desirable to have flexible tools both for arranging different model situations and for inspecting the results.
+For example, it is useful to inspect the pulses at any location and after any number of round trips in the time and frequency domain, and to store pulses at specified locations for later analysis.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_fiber_simulation_software.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 11 suppliers for fiber simulation software. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.rp-photonics.com/" data-supplier="RP Photonics" data-location="product-enc" data-keyword="fiber simulation software" rel="nofollow" class="bg externallink" title="Visit the website of RP Photonics"><img src="./bg/logos/rp_photonics.png" alt="RP Photonics" class="supplierlogo"></a><a href="https://www.rp-photonics.com/fiberpower.html" data-supplier="RP Photonics" data-location="product-enc" data-keyword="fiber simulation software" rel="nofollow" class="bg externallink" title="Visit the website of RP Photonics"><img src="./bg/products/rp_photonics/fiber simulation software.png" alt="fiber simulation software" class="product"></a><h3><a href="./bg/profiles/rp_photonics.html" title="See the profile of RP Photonics">RP Photonics</a></h3><p><a href="https://www.rp-photonics.com/fiberpower.html" data-supplier="RP Photonics" data-location="product-enc" data-keyword="fiber simulation software" rel="nofollow" class="externallink bg">RP Fiber Power simulation software</a> for designing fiber devices: fiber amplifiers, fiber lasers, ASE sources, fiber-optic data links, and passive devices such as multi-core fibers, tapered fibers and fiber couplers. For simpler purposes, there is the free fiber optics software <a href="https://www.rp-photonics.com/rp_fiber_calculator.html" data-supplier="RP Photonics" data-location="product-enc" data-keyword="fiber simulation software" rel="nofollow" class="externallink bg">RP Fiber Calculator</a>.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="fiber_simulation_software.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>, <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a>, <a href="fiber_optics.html" title="optics based on optical fibers">fiber optics</a>, <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber lasers</a>, <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifiers</a>, <a href="erbium_doped_fiber_amplifiers.html" title="fiber amplifiers based on erbium-doped optical fibers">erbium-doped fiber amplifiers</a>, <a href="gain.html" title="a measure of the strength of optical amplification">gain</a>, <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a>, <a href="laser_modeling.html" title="the investigation of phenomena and quantitative relations in lasers, using theoretical models and computational methods">laser modeling</a><br>and other articles in the categories <a href="categories.html#fiber_optics_and_waveguides" title="other articles on fiber optics and waveguides">fiber optics and waveguides</a>, <a href="categories.html#optical_amplifiers" title="other articles on optical amplifiers">optical amplifiers</a>, <a href="categories.html#methods" title="other articles on methods">methods</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/fiber_simulation_software.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Ffiber_simulation_software.html&text=RP+Photonics+Encyclopedia+-+fiber+simulation+software%2C+mode+solver%2C+beam+propagation%2C+mode+properties%2C+amplification%2C+laser-active+ions%2C+amplifier+model%2C+dynamic+simulations%2C+ultrashort+pulses" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Ffiber_simulation_software.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Ffiber_simulation_software.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/fiber_simulation_software.html"&gt;<br>Article on Fiber Simulation Software&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/fiber_simulation_software.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/fiber_simulation_software.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/fiber_simulation_software.html<br>article on 'Fiber Simulation Software' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Your Lab is Closed due to the Corona Virus Crisis?</h2>
+<p>Time to think how to best utilize your time!</p>
+<p>Here is a suggestion: <br> <b>Consider to start with physical modeling!</b></p>
+<ul>
+<li>Build models for your existing or planned lasers and amplifiers, resonators, etc.</li>
+<li>Utilize such models in order to <b>improve your qualitative and quantitative understanding</b>, solve problems, optimize device performance and <b>develop new ideas</b>.</li>
+<li>Power up your home office instead of wasting your time!</li>
+<li>When getting back to the lab, restart with fresh plans and full power.</li>
+</ul>
+<img src="./img/rp_photonics.png" alt="RP Photonics" style="margin-top:20px; width:225px;">
+<p>offers powerful <a href="./software.html?banner=lab_closed">simulation &amp; design software</a>, e.g. for <a href="./fiberpower.html?banner=lab_closed">active and passive fiber devices</a>, <a href="./resonator.html?banner=lab_closed">laser resonators</a> and <a href="./coating.html?banner=lab_closed">thin-film coatings</a>!</p>
+<p>Getting helpful <a href="./software_support.html?banner=lab_closed">support</a> from RP also benefits your projects.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="3CwJW2R+2vN9TMjRJBQmOw==">shownbanner = "lab closed";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2 style="font-size:150%">Tutorial on<br>Fiber Amplifiers</h2>
+<p>See our <a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial">comprehensive tutorial on fiber amplifiers</a>:</p>
+<ul>
+<li>laser-active dopants, gain and pump absorption</li>
+<li>double-clad fibers, pulse amplification</li>
+<li>ASE, noise issues, multi-stage amplifiers</li>
+</ul>
+<p style="margin-left:10px;"><a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial"><img src="./img/fiber_amplifier_small.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial"><img src="./img/dcf_designs_part.png" style="width:100%" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial"><img src="./img/yb_gain_small.png" alt="&nbsp;"></a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="3CwJW2R+2vN9TMjRJBQmOw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/fiber_simulation_software.html"
+    },
+    "headline": "Fiber Simulation Software",
+    "image": "https://www.rp-photonics.com/previews/fiber_simulation_software.png",
+    "datePublished": "2013-04-17",
+    "dateModified": "2020-03-14",
+    "description": "Fiber simulation software is software for numerical simulations on fiber devices. It may for example simulate the operation of fiber amplifiers and lasers.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter F",
+      "item": "https://www.rp-photonics.com/encyclopedia_f.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "fiber simulation software",
+      "item": "https://www.rp-photonics.com/fiber_simulation_software.html"
+    }]}
+}
+</script>
+</body>
+</html>

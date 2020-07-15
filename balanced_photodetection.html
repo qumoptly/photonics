@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-qAt1LM0IGmtMrWgcX5i0mg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - balanced photodetection, common mode rejection, matched photodiodes, auto-balanced photodetectors, signal-to-noise ratio</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/balanced_photodetection.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Balanced photo detection can be employed to sensitively measure small differences in optical powers between two beams, e.g. in laser absorption spectroscopy, optical heterodyne detection and pump-probe measurements.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="balanced photodetection, common mode rejection, matched photodiodes, auto-balanced photodetectors, signal-to-noise ratio">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Balanced Photodetection">
+<meta property="og:description" content="Balanced photo detection can be employed to sensitively measure small differences in optical powers between two beams, e.g. in laser absorption spectroscopy, optical heterodyne detection and pump-probe measurements.">
+<meta property="og:url" content="https://www.rp-photonics.com/balanced_photodetection.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/balanced_photodetection.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Balanced photo detection can be employed to sensitively measure small differences in optical powers between two beams, e.g. in laser absorption spectroscopy, optical heterodyne detection and pump-probe measurements.">
+<meta name="twitter:title" content="Balanced Photodetection">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/balanced_photodetection.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="qAt1LM0IGmtMrWgcX5i0mg==">
+page="balanced_photodetection.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo sponsor"></a> <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="qAt1LM0IGmtMrWgcX5i0mg==">shownsponsors="RPMC Lasers,TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_b.html">letter B</a> &gt; <a href="balanced_photodetection.html">balanced photodetection</a></p>
+<h1>Balanced Photodetection</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_balanced_photodetectors.html?s=vbox">9 suppliers for balanced photodetectors</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_balanced_photodetectors.html?s=vbox">List of suppliers for<br>balanced photodetectors</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a method of photodetection which is sensitive to differences in optical powers but not to common noise</p>
+<p>Alternative term: differential photodetection</p>
+<p>More general term: <a href="photodetectors.html" title="devices used for the detection of light">photodetectors</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">symmetrische Photodetektion</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a>, <a href="categories.html#fluctuations_and_noise" title="other articles on fluctuations and noise">fluctuations and noise</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<p><a href="encyclopedia_cite.html?article=balanced%20photodetection">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>The method of <em>balanced photodetection</em> (or <em>differential photodetection</em>) has been developed for detecting small differences in <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a> between two optical input signals while largely suppressing any common fluctuations of the inputs.</p>
+<figure class="right" style="width:284px;">
+<img src="img/balanced_detection.png" alt="balanced detection">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+A simple electronics circuit for balanced photodetection.
+</figcaption>
+</figure>
+<p>In its simplest form, one uses two <a href="photodiodes.html" title="semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiodes</a> connected in series, so that their <a href="photocurrent.html" title="an electric current which is induced by incident light in a photodetector">photocurrents</a> cancel each other when they are equal (see Figure&nbsp;1).
+The difference in photocurrents is sent to a transimpedance amplifier, which produces an output voltage proportional to that difference.</p>
+<p>As an example for an application, we can consider the measurement of weak <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorption</a> features in <a href="spectroscopy.html" title="methods where the interaction of light with matter is utilized, e.g. for detecting substances or measuring concentrations">spectroscopy</a>.
+Here, one photodetector is used for light which is transmitted through a spectroscopic sample, while the other photodetector is illuminated with light from the same source but which has not gone through the sample.
+(The two light beams are obtained with a <a href="beam_splitters.html" title="devices for splitting a laser beam into two or more beams">beam splitter</a> between the light source and the sample.)
+Any <a href="intensity_noise.html" title="noise of the optical intensity or power of a laser beam">intensity noise</a> of the used light source is largely canceled out with that balanced detection scheme, so that measurements with an improved <a href="signal_to_noise_ratio.html" title="the ratio of signal power to noise power in a detector">signal-to-noise ratio</a> can be done.</p>
+<p>The mentioned cancellation is called <em>common mode rejection</em> and can be quantified in <a href="decibel.html" title="a logarithmic measure for power ratios, applied e.g. to optical powers or to noise powers">decibels</a>.
+One often achieves 50&nbsp;dB or more.</p>
+<p>Although a balanced detection setup can be assembled from single components, it can be helpful to use a prefabricated complete assembly, containing matched photodiodes (see below) and the required electronics.</p>
+<h2 class="togglediv">Optimizing Common Mode Rejection</h2>
+<div>
+<p>Perfect cancellation would require a perfect match between the two detectors including the optical paths.
+There are different approaches to optimize a setup in that respect:</p>
+<ul>
+<li>One may use <em>matched photodiodes</em>, having very similar properties.
+They may be made on the same semiconductor chip in the same process.
+However, this approach does of course not help against optical asymmetries.</li>
+<li>One can use an <em>adjustable</em> <a href="optical_attenuators.html" title="devices which can reduce the optical power e.g. of a light beam"><em>optical attenuator</em></a> for one of the beams, which may also compensate for any difference in <a href="responsivity.html" title="photocurrent per unit optical power incident on a photodetector">responsivity</a> between the two detectors.</li>
+<li>There are <em>auto-balanced photodetectors</em>, where an electronic circuit automatically cancels asymmetries to some extent.
+For example, one may use a electronically controlled current splitter for one of the photodiodes and a feedback circuit with a limited bandwidth for controlling that current splitter.
+The actual measurement can then be done only for frequencies above that feedback bandwidth.</li>
+</ul>
+<figure class="right" style="width:500px;">
+<img src="img/wieser_labs_balanced_photodetector.jpg" alt="balanced photodetector">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+A fiber-coupled high-speed balanced InGaAs detector as used in OCT systems. Source: <a href="https://www.wieserlabs.com/products/photodetectors/WL-BPD1GA" rel="nofollow">Wieserlabs Electronics</a>
+</figcaption>
+</figure>
+<p>Note that problems can arise e.g. when a free-space input beam extends to the edges of the light-sensitive region on a detector: small changes of beam position may then translate into significant photocurrent changes which affect the difference signal.
+Deviations from perfect uniformity of the detector <a href="responsivity.html" title="photocurrent per unit optical power incident on a photodetector">responsivity</a> may cause similar problems in conjunction with changes of beam position.
+Such problems cannot occur for fiber-coupled photodiodes with <a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode fibers</a>, except when free-space light needs to be coupled into such fibers.
+All-fiber setups, particularly when made with <a href="polarization_maintaining_fibers.html" title="specialty optical fibers with strong built-in birefringence, preserving the properly oriented linear polarization of an input beam">polarization-maintaining</a> <a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode fibers</a>, can be optimized for particularly high common mode rejection.</p>
+<p>Of course, any asymmetries in the electronics should also be avoided.
+Particularly for high-frequency detection, it is also important to have precisely matched cable lengths, since otherwise one would introduce frequency-dependent phase shifts.</p>
+<p>Some balanced detectors have an additional low-frequency monitor output which can be used to check the balance of photocurrents.</p>
+</div>
+<h2 class="togglediv">Shot Noise</h2>
+<div>
+<aside class="callout blue">Shot noise is a limiting factor for the signal-to-noise ratio.</aside>
+<p>In some respects, the behavior of <a href="quantum_noise.html" title="noise arising from quantum fluctuations">quantum noise</a> differs from that of classical intensity noise.
+Even when using a perfect 50:50 beam splitter, the optical power fluctuations in the two output ports of such a device are not fully correlated with each other.
+Therefore, even a perfect a balanced detector would produce some output fluctuations which are related to <a href="shot_noise.html" title="quantum-limited intensity noise">shot noise</a>.
+That quantum noise limit is at least much lower than the noise level which one could achieve in many cases without balanced detection.</p>
+<p>The <a href="relative_intensity_noise.html" title="noise of the optical intensity (or actually power), normalized to its average value">relative intensity noise</a> at the shot noise level increases as the optical power is reduced.
+Therefore, one will often try to operate the photodetectors with power levels as high as possible, limited either by the available optical powers or by the power handling capability of the detectors.</p>
+</div>
+<h2 class="togglediv">Applications of Balanced Photodetection</h2>
+<div>
+<h3 class="togglediv">Absorption Spectroscopy</h3>
+<div>
+<p>As already mentioned above, one may apply balanced detection in <a href="laser_absorption_spectroscopy.html" title="methods of absorption spectroscopy using laser light">laser absorption spectroscopy</a>.
+The problem with direct detection (using a single photodetector) would be that the detector cannot distinguish between fluctuations due to <a href="laser_noise.html" title="fluctuations of various parameters of laser light, such as the optical power and phase">laser noise</a> and those caused by absorption features.
+A balanced photodetector can largely suppress the influence of laser noise, which is a common input for both ports &ndash; particularly if the setup is well balanced.</p>
+<p>Balanced detection can also be applied in conjunction with frequency modulation spectroscopy, where absorption features cause slight changes of amplitude and phase of a laser beam, which can be revealed by comparison with a reference beam in a balanced detector.
+Of course, the detector should be able to temporally resolve the modulation.</p>
+<p>Similar methods can also be applied for <a href="pump_probe_measurements.html" title="techniques for investigating ultrafast phenomena, where a pump pulse excites a sample and a probe pulse is used for probing the sample after an adjustable delay time">pump&ndash;probe measurements</a>.
+The inputs to the balanced detectors are of course not pump and probe beam, but rather the probe beam and a reference beam derived from it, which is not affected by the investigated sample.</p>
+</div>
+<h3 class="togglediv">Homodyne Detection</h3>
+<div>
+<p>In some cases, one uses balanced photodetectors after a 50:50 beam splitter for measuring <a href="intensity_noise.html" title="noise of the optical intensity or power of a laser beam">intensity noise</a> of a <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a>, for example.
+With suitable electronic circuits, one obtains the sum and the difference of the photocurrents and feeds both to an electronic spectrum analyzer.
+While the sum signal reflects the laser intensity noise, just as would be obtained with a single photodetector, the difference signal indicates the shot noise level.
+Therefore, one can easily compare the laser noise with the shot noise level.
+In case of <a href="amplitude_squeezed_light.html" title="light with an intensity noise below the shot noise level">amplitude-squeezed light</a>, one can accurately detect sub-shot noise performance.</p>
+</div>
+<h3 class="togglediv">Interferometric Detection</h3>
+<div>
+<p>In various kinds of <a href="interferometers.html" title="optical devices utilizing the phenomenon of interference">interferometers</a> &ndash; for example, those used for <a href="optical_coherence_tomography.html" title="an optical imaging technique where longitudinal resolution is achieved based on interference effects with low-coherence light">optical coherence tomography</a> &ndash; one can substantially improve the noise performance with balanced detection.
+The two balanced photodetectors receive light from the two outputs of the beam splitter where the signal beam is superimposed with the reference beam.
+The difference of the photocurrents delivers the wanted interferometric signal while suppressing intensity noise of the light source.</p>
+<p>Such techniques are also used for <a href="optical_heterodyne_detection.html" title="a sensitive method of photodetection, reaching the standard quantum limit even for weak signal powers">optical heterodyne detection</a> in various other applications.</p>
+</div>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_balanced_photodetectors.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 9 suppliers for balanced photodetectors.</p>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="balanced_photodetection.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="optical_heterodyne_detection.html" title="a sensitive method of photodetection, reaching the standard quantum limit even for weak signal powers">optical heterodyne detection</a>, <a href="photodetectors.html" title="devices used for the detection of light">photodetectors</a>, <a href="shot_noise.html" title="quantum-limited intensity noise">shot noise</a>, <a href="signal_to_noise_ratio.html" title="the ratio of signal power to noise power in a detector">signal-to-noise ratio</a><br>and other articles in the categories <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a>, <a href="categories.html#fluctuations_and_noise" title="other articles on fluctuations and noise">fluctuations and noise</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/balanced_photodetection.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fbalanced_photodetection.html&text=RP+Photonics+Encyclopedia+-+balanced+photodetection%2C+common+mode+rejection%2C+matched+photodiodes%2C+auto-balanced+photodetectors%2C+signal-to-noise+ratio" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fbalanced_photodetection.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fbalanced_photodetection.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/balanced_photodetection.html"&gt;<br>Article on Balanced Photodetection&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/balanced_photodetection.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/balanced_photodetection.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/balanced_photodetection.html<br>article on 'Balanced Photodetection' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Promote Your White Papers and Videos</h2>
+<p>White papers and videos are great instruments for creating an interest in your technology and demonstrating the capabilities of a company. But <b>how to publicize them</b>, reaching the right audience?</p>
+<p><img class="whitepaper" style="padding:30px 5px; width:70%; height:70%;" src="./img/white_paper_example.png" alt="example for white paper"></p>
+<p>Our suggestion: <a href="./marketing_promotions.html?banner=white_papers">place a preview in a suitable encyclopedia article!</a>
+For example, the paper preview shown above would well fit into our articles on <a href="./laser_diodes.html?banner=white_papers">laser diodes</a> and <a href="./diode_bars.html?banner=white_papers">diode bars</a>.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="qAt1LM0IGmtMrWgcX5i0mg==">shownbanner = "white papers";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Field Guide on Lasers</h2>
+<p>Enjoy a compact introduction to laser technology:</p>
+<ul>
+<li>basic principles</li>
+<li>laser beams</li>
+<li>laser resonators</li>
+<li>various types of lasers</li>
+<li>Q switching and mode locking</li>
+<li>frequency conversion</li>
+<li>laser safety</li>
+</ul>
+<p style="text-align:center;"><a href="http://spie.org/x648.html?product_id=767474"><img src="./img/fg_lasers.png" alt="FG Lasers"></a></p>
+<p>This book soon became a bestseller among the SPIE Field Guides.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="qAt1LM0IGmtMrWgcX5i0mg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/balanced_photodetection.html"
+    },
+    "headline": "Balanced Photodetection",
+    "image": "https://www.rp-photonics.com/previews/balanced_photodetection.png",
+    "datePublished": "2019-05-03",
+    "dateModified": "2020-03-14",
+    "description": "Balanced photo detection can be employed to sensitively measure small differences in optical powers between two beams, e.g. in laser absorption spectroscopy, optical heterodyne detection and pump-probe measurements.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter B",
+      "item": "https://www.rp-photonics.com/encyclopedia_b.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "balanced photodetection",
+      "item": "https://www.rp-photonics.com/balanced_photodetection.html"
+    }]}
+}
+</script>
+</body>
+</html>

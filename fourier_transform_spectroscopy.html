@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-0avqAHUhL2Yl8xd0P1ovgw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Fourier transform spectroscopy, operation principle, Michelson interferometer, spectral range, resolution, beam splitter, calibration, applications</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/fourier_transform_spectroscopy.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Fourier transform spectroscopy is a method where one computes optical spectra from raw data by applying a Fourier transform algorithm. It is mostly used in infrared spectroscopy.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="Fourier transform spectroscopy, operation principle, Michelson interferometer, resolution, beam splitter, calibration, applications">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fourier Transform Spectroscopy">
+<meta property="og:description" content="Fourier transform spectroscopy is a method where one computes optical spectra from raw data by applying a Fourier transform algorithm. It is mostly used in infrared spectroscopy.">
+<meta property="og:url" content="https://www.rp-photonics.com/fourier_transform_spectroscopy.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/fourier_transform_spectroscopy.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Fourier transform spectroscopy is a method where one computes optical spectra from raw data by applying a Fourier transform algorithm. It is mostly used in infrared spectroscopy.">
+<meta name="twitter:title" content="Fourier Transform Spectroscopy">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/fourier_transform_spectroscopy.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="0avqAHUhL2Yl8xd0P1ovgw==">
+page="fourier_transform_spectroscopy.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="0avqAHUhL2Yl8xd0P1ovgw==">shownsponsors="TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_f.html">letter F</a> &gt; <a href="fourier_transform_spectroscopy.html">Fourier transform spectroscopy</a></p>
+<h1>Fourier Transform Spectroscopy</h1>
+<header style="margin-right:0;">
+<p>Acronym: FTS</p>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a method for spectroscopy rare an optical spectrum is computed from raw data with a Fourier transform</p>
+<p>Alternative term: time domain spectroscopy</p>
+<p>More general terms: optical <a href="spectroscopy.html" title="methods where the interaction of light with matter is utilized, e.g. for detecting substances or measuring concentrations">spectroscopy</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Fourier-Transform-Spectroskopie</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<p><a href="encyclopedia_cite.html?article=Fourier%20transform%20spectroscopy">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Fourier transform spectroscopy is a method where one computes an <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a> from raw data by applying a Fourier transform algorithm.
+The method is applied in various techniques for <a href="spectroscopy.html" title="methods where the interaction of light with matter is utilized, e.g. for detecting substances or measuring concentrations">spectroscopy</a> &ndash; most often in the context of infrared spectroscopy.</p>
+<p>The term <em>time domain spectroscopy</em> is also common, because the measured interference signal is measured in the time domain e.g. in the sense that an optical time delay is varied.</p>
+<h2 class="togglediv">Operation Principle</h2>
+<div>
+<p>The operation principle of Fourier transform spectroscopy in its most common form is fairly simple to understand.
+The investigated electromagnetic radiation (most frequently, <a href="infrared_light.html" title="invisible light with wavelengths roughly between 750&thinsp;&thinsp;nm and 1&thinsp;&thinsp;mm">infrared light</a>) is sent to an <a href="interferometers.html" title="optical devices utilizing the phenomenon of interference">interferometer</a>, normally in the form of a <a href="michelson_interferometers.html" title="an interferometer with two separate arms and a single beam splitter">Michelson interferometer</a>.
+One then measures the <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a> at the output of the interferometer as a function of the arm length difference, using some <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a>.
+That arm length difference is usually manipulated by mechanically moving a <a href="mirrors.html" title="devices which reflect light">mirror</a> (or more conveniently a <a href="retroreflectors.html" title="optical devices which reflect light in a direction which is parallel to the incident beam">retroreflector</a>) over some distance.</p>
+<figure>
+<img src="img/ftir_spectrometer.png" alt="FTIR spectrometer">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Optical setup of a Fourier transform spectrometer.
+</figcaption>
+</figure>
+<p>If the optical input to the interferometer were <a href="monochromatic_light.html" title="light with a single optical frequency">monochromatic</a>, one would obtain a sinusoidal oscillation of the detected power as a function of arm length difference, and the period of that oscillation would be the optical <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>.
+If the light is <a href="polychromatic_light.html" title="light with multiple optical frequencies">polychromatic</a>, the recorded interferogram will be a superposition of contributions from the different wavelength components.
+Therefore, it is clear that by applying a Fourier transform to those data one can retrieve the <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a> &ndash; more precisely, the <a href="power_spectral_density.html" title="optical power or noise power per unit frequency interval">power spectral density</a> as a function of <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequency</a> or <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>.
+Information on the <a href="spectral_phase.html" title="the phase of the electric field in the frequency domain">spectral phase</a> is not obtained.
+Some corrections need to be applied to the obtained spectrum, as explained below.</p>
+<p>For a mathematically founded understanding, consider that the interferogram signal, resulting from the superposition of two optical electric fields with a certain time delay can be expressed as follows:</p>
+<div class="eqn"><img src="eqn/fts_signal.gif" width="165" height="34" alt="FTS signal"></div>
+<p>where <span class="eqn_il"><i>I</i>(<span class="greek">&tau;</span>)</span> can be the intensity of the interference signal or alternatively a <a href="photocurrent.html" title="an electric current which is induced by incident light in a photodetector">photocurrent</a>.
+That signal can be decomposed into a constant and a <span class="eqn_il"><span class="greek">&tau;</span></span>-dependent part; the latter is:</p>
+<div class="eqn"><img src="eqn/fts_signal_ac.gif" width="154" height="26" alt="AC part of FTS signal"></div>
+<p>This is essentially just the autocorrelation of the electric field.
+According to the Wiener&ndash;Kinchine theorem, the Fourier transform of that is the intensity spectrum of the electric field, i.e., the <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a>.</p>
+<p>The explained operation principle can easily be adapted for absorption spectroscopy.
+One can record an optical spectrum with and without a specimen inserted into the beam path &ndash; before or after the interferometer &ndash; and compare the computed spectral intensities to obtain the absorption of the sample in a wide range of wavelengths.
+More precisely, one obtains the loss of spectral intensity caused by the sample, which may not only be caused by <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorption</a> of the specimen but also by surface reflections, for example.</p>
+<p>Note that there are also other, less common forms of Fourier transform spectroscopy.
+For example, <a href="terahertz_radiation.html" title="electromagnetic radiation with frequencies around 0.1 THz to 10 THz">terahertz</a> waveforms can be recorded in the time domain with an <a href="optical_sampling.html" title="a technique of sampling signals using laser light, often in the form of ultrashort pulses">optical sampling</a> technique based on a photoconductive antenna (see the article on <a href="terahertz_detectors.html" title="detectors for terahertz radiation">terahertz detectors</a>).
+One can then apply a Fourier transform to obtain the optical spectrum of a terahertz pulse, in that case also obtaining the spectral phase.</p>
+</div>
+<h2 class="togglediv">Various Practical Aspects</h2>
+<div>
+<h3 class="togglediv">Required Spatial Range and Resolution</h3>
+<div>
+<p>The obtained spectral resolution is limited by the maximum optical path length difference.
+This is easy to see considering the properties of discrete Fourier transforms, or simply recognizing that the range of path length differences determines the number of oscillation cycles which can be counted.
+Quantitatively, the resolution in terms of spectroscopic <a href="wavenumber.html" title="the phase delay per unit length, or that quantity divided by 2&pi;">wavenumber</a> is the inverse of the maximum optical path length difference.
+Simple instruments may work with only a few centimeters of path length difference, achieving spectral resolutions of somewhat better than 1&nbsp;cm<sup>&minus;1</sup>, while high precision spectrometers work with much longer path length differences, e.g. several meters.</p>
+<p>On the other hand, the maximum wavenumber is half the inverse spatial resolution of the measured path length difference.
+Therefore, a not particularly high spatial resolution is required for instruments working only with relatively long optical wavelengths, while UV instruments are more demanding in that respect.
+The spatial <em>accuracy</em>, however, should be much higher &ndash; see below.</p>
+<p>For calculations, note that the variation of pass length difference in a Michelson interferometer is <em>twice</em> the amount of movement of a retroreflector.</p>
+</div>
+<h3 class="togglediv">Light Source</h3>
+<div>
+<p>For spectrometers as used in infrared spectroscopy, often uses a very broadband light source for measuring optical properties of samples in a wide wavelength region.
+The light source should of course have a sufficiently high spectral flux and emit continuously with stable optical properties throughout the interferometer scan.
+For the near infrared, <a href="incandescent_lamps.html" title="light sources which produce thermal radiation from an electrically heated filament">incandescent lamps</a> are suitable, but there emission is limited to wavelengths below roughly 5&nbsp;&mu;m by the transmissivity of the bulb glass.
+For longer wavelength regions, and therefore uses for millimeters not requiring a glass bulb &ndash; for example, Nernst glowers based on an electrically heated rod made of zirconium/yttrium ceramics.
+Silicon carbide rods can even be used up to about 40&nbsp;&mu;m.
+Also there are <a href="mercury_vapor_lamps.html" title="metal vapor lamps based on light emission from mercury (Hg) atoms">mercury vapor lamps</a>.</p>
+</div>
+<h3 class="togglediv">Beam Preparation</h3>
+<div>
+<p>For the interferometer to work properly, one requires a light beam with high enough spatial <a href="coherence.html" title="a fixed phase relationship between the electric field values at different locations or at different times">coherence</a>.
+This is because different spatial components of a beam can produce different contributions to the interferogram, effectively washing out the pattern.</p>
+<p>Ideally, one would have a <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beam</a> from a <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a> source.
+In practice, however, one often deals with incoherent sources, where the light has to be spatially filtered, accepting some loss of optical power.
+However, the possible power throughput is still substantially better than for a grating <a href="monochromators.html" title="optical devices which transmit only light in an adjustable small range of optical wavelengths">monochromator</a> as used in other forms of spectroscopy, where light needs to be fed through a narrow <a href="optical_slits.html" title="narrow openings through which light can be transmitted">optical slit</a>.
+This is called the <em>Jacquinot advantage</em>, named after Pierre Jacquinot who identified it.</p>
+</div>
+<h3 class="togglediv">The Beam Splitter</h3>
+<div>
+<p>The optical components of the interferometer should of course properly work over the full spectral region of interest.
+The most substantial challenge arises from the <a href="beam_splitters.html" title="devices for splitting a laser beam into two or more beams">beam splitter</a>, which would ideally exhibit a 50:50 splitting ratio for all relevant wavelengths.
+That is not strictly required, but it should at least not lead to highly asymmetric splitting or introduce high power losses e.g. by absorption in a substrate.
+In infrared spectroscopy, one often uses beam splitters with calcium fluoride (CaF<sub>2</sub>) substrates for wavelengths up to 8&nbsp;&mu;m.
+KBr-based beam splitters with a germanium-based coating can be used up to 25&nbsp;&mu;m wavelength, but that material is hygroscopic and must therefore be carefully protected against moisture.
+For the far infrared, one often uses polymer films.</p>
+<p>Broadband <a href="mirrors.html" title="devices which reflect light">mirrors</a> are more easily obtained; one often uses <a href="metal_coated_mirrors.html" title="mirrors where the reflection is obtained from a metal coating">metal-coated</a> <a href="first_surface_mirrors.html" title="metal-coated mirrors reality metallic mineral coating is on the front surface of the mirror substrate">first surface mirrors</a>, because <a href="dielectric_mirrors.html" title="mirrors consisting of multiple thin layers of different transparent optical materials">dielectric mirrors</a> could hardly provide the required reflection <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>.</p>
+</div>
+<h3 class="togglediv">Calibration of Arm Length Variations</h3>
+<div>
+<p>The interferometer arm length difference is usually varied with a motorized drive, which can normally not be trusted to provide sufficiently accurate variations of the position.
+Therefore, one often simultaneously records a second interferogram, using light from a <a href="narrow_linewidth_lasers.html" title="single-frequency lasers with a narrow optical emission spectrum">narrow-linewidth laser</a> with sufficiently stable wavelength.
+One can then computationally correct the data for any deviations of the movement from a perfectly linear movement.</p>
+<p>Note that it is not sufficient only to have a positional accuracy which allows one to clearly resolve the oscillations of an interferogram.
+This is because random position errors also limit the <a href="signal_to_noise_ratio.html" title="the ratio of signal power to noise power in a detector">signal-to-noise ratio</a> of the obtained spectra.
+Therefore, it is essential to realize Fourier transform spectrometers with highly accurate <a href="opto_mechanics.html" title="mechanical elements used in optics">opto-mechanics</a> and an accurate reference interferometer.
+That also provides a very high wavelength accuracy &ndash; better than in dispersive instruments.</p>
+</div>
+<h3 class="togglediv">Calibration of Spectral Power Density</h3>
+<div>
+<p>A simple Fourier transform applied to the raw data will generally not deliver a calibrated optical spectrum, mostly because the <a href="responsivity.html" title="photocurrent per unit optical power incident on a photodetector">responsivity</a> of the used <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a> and the reflectivity of the <a href="beam_splitters.html" title="devices for splitting a laser beam into two or more beams">beam splitter</a> are wavelength-dependent; further influences can come from other optical elements of the setup.
+Such influences do not matter in absorption spectroscopy, because one only compares spectra with and without an absorbing sample, and the obtained intensity ratios are not affected; one only requires sufficiently strong signals for all relevant wavelengths.</p>
+<p>When measuring optical spectra of sources, however, one needs to apply a calibration.
+It may be done, for example, by comparing with the recorded spectrum of a light source with known spectral shape.
+In the infrared, one often uses <a href="thermal_radiation.html" title="electromagnetic radiation which results from thermal emission">black body radiation</a> for that calibration.</p>
+<p>In some cases, one may even calibrate a spectrometer for obtaining absolute values of the power spectral density.
+This is often not easy, however, for example because of influences of the required spatial filtering of the input beam (see above).</p>
+</div>
+<h3 class="togglediv">Fourier Transform</h3>
+<div>
+<p>Discrete Fourier transforms can quite easily and efficiently be computed, using a Fast Fourier Transform (FFT) algorithm.
+In the simplest form, such an algorithm works with a number of data points which is a power of 2.
+Even on a relatively simple microprocessor, the FFT computation usually takes much less time than the acquisition of the raw data.</p>
+<p><a href="interference.html" title="a range of phenomena associated with the superposition of waves">Interference</a>-based methods of spectroscopy have been used already in the early days of <a href="optics.html" title="the science and technology dealing with the properties and the propagation of light">optics</a>, for example by Hippolyte Fizeau, who resolved the doublet of the yellow sodium <a href="fluorescence.html" title="luminescence arising from irradiation with light">fluorescence</a> line in the 19<sup>t</sup>h} century (&rarr;&nbsp;<a href="fizeau_interferometers.html" title="interferometers for investigating optical surfaces"><em>Fizeau interferometers</em></a>).
+However, computations of optical spectra based on Fast Fourier transform have been implemented only from the middle of the 20<sup>th</sup> century on, when computers became available; first commercial devices appeared in the 1960s.</p>
+</div>
+<h3 class="togglediv">Reducing the Sensitivity to Mechanical Noise</h3>
+<div>
+<p>For the kind of interferometer as explained above, the sensitivity to mechanical noise (vibrations and shocks or inaccuracies of an <a href="optical_delay_lines.html" title="an optical setup which is used to introduce a time delay for a light beam">optical delay line</a>) is quite high.
+That sensitivity can be massively reduced by using a <a href="common_path_interferometers.html" title="interferometers where the sensitivity to mechanical noise is reduced by largely using a common optical path for the interfering light beams">common-path interferometer</a> based on <a href="birefringence.html" title="the polarization dependence of the refractive index of a medium">birefringence</a>.
+This can be realized, for example, with a simple optical beam path where two polarization components finally interfere at a <a href="polarizers.html" title="optical filters where the light transmission depends strongly on the direction of polarization">polarizer</a>.
+The optical delay between the two polarization components can be adjusted by moving a wedged birefringent crystal [7].
+Because that does not only greatly reduce the sensitivity to vibrations, but also allows very accurate scanning of the delay range, it is particularly suitable for Fourier transform spectroscopy in relatively short wavelength regions.</p>
+</div>
+</div>
+<h2 class="togglediv">Applications of Fourier Transform Spectroscopy</h2>
+<div>
+<p>The method of Fourier transform spectroscopy is most frequently used in conjunction with <a href="infrared_light.html" title="invisible light with wavelengths roughly between 750&thinsp;&thinsp;nm and 1&thinsp;&thinsp;mm">infrared</a> light &ndash; for the following reasons:</p>
+<ul>
+<li>Particularly in the far infrared, it is difficult to realize <a href="focal_plane_arrays.html" title="arrays of light detectors placed in the focal plane of an imaging system">focal plane arrays</a> as required for conventional <a href="spectrographs.html" title="instruments for spectrally analyzing light">spectrographs</a>, for example.
+It is thus preferable to use a method where only a simple photodetector is required.</li>
+<li>Due to the limited <a href="sensitivity.html" title="(different meanings, depending on the context)">sensitivity</a> of <a href="infrared_detectors.html" title="detectors for infrared light">infrared detectors</a> (particularly at very long wavelengths), it is important to use the light efficiently.
+It is thus beneficial to avoid excessive power losses at the input <a href="optical_slits.html" title="narrow openings through which light can be transmitted">slit</a> of a <a href="monochromators.html" title="optical devices which transmit only light in an adjustable small range of optical wavelengths">monochromator</a> (<em>Jacquinot advantage</em>, see above).
+Besides, one also enjoys the <em>Fellgett advantage</em> (named after a Peter Berners Fellgett, the pioneer of the method): if the measurement noise is dominated by detector noise (e.g. thermal electronic noise) rather than by <a href="shot_noise.html" title="quantum-limited intensity noise">shot noise</a>, the achievable <a href="signal_to_noise_ratio.html" title="the ratio of signal power to noise power in a detector">signal-to-noise ratio</a> is substantially better for the Fourier transform method than for scanning the spectrum with a tunable monochromator, where only a tiny part of the optical spectrum is utilized at any time.
+This is particularly true in cases where a high spectral resolution is required.</li>
+<li>The Fourier transform method is even somewhat simpler to implement in the infrared, because the required spatial resolution is lower than for visible and <a href="ultraviolet_light.html" title="invisible light with wavelengths shorter than &asymp;&thinsp;400&thinsp;&thinsp;nm">ultraviolet</a> light.</li>
+</ul>
+<p>The main application of the method is in devices for measuring either optical spectra of light sources or wavelength-dependent properties of materials, such as the <a href="transmissivity.html" title="the ratio of transmitted optical power to the incident optical power at a surface">transmissivity</a> (e.g. reduced by <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorption</a> lines) or the <a href="reflectivity.html" title="the ratio of reflected optical power to the incident optical power at a surface">reflectivity</a>.</p>
+<p>The principle of Fourier transform spectroscopy is also applied in <a href="wavemeters.html" title="devices for precise measurements of laser wavelengths">wavemeters</a>, although those usually deliver only the peak wavelength rather than the full optical spectrum.</p>
+<p>There are also applications of the principal in technical fields outside photonics, for example in the context of nuclear magnetic resonance imaging and mass spectroscopy</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="fourier_transform_spectroscopy.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">P. B. Fellgett, &ldquo;Theory of infra-red sensitivities and its application to investigations of stellar radiation in the near infra-red&rdquo; (PhD thesis, 1949)</td></tr>
+<tr><td class="refno">[2]</td><td class="refs">P. B. Fellgett, &ldquo;On the ultimate sensitivity and practical performance of radiation detectors&rdquo;, J. Opt. Soc. Am. 39 (11), 970 (1949), <a href="https://doi.org/10.1364/JOSA.39.000970">doi:10.1364/JOSA.39.000970</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">P. Jacquinot, &ldquo;New developments in interference spectroscopy&rdquo;, Rep. Prog. Phys. 23 (1), 267 (1960), <a href="https://doi.org/10.1088/0034-4885/23/1/305">doi:10.1088/0034-4885/23/1/305</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">L. Mertz, &ldquo;Astronomical photoelectric spectrometer&rdquo;, Astron. J. 71, 749 (1966)</td></tr>
+<tr><td class="refno">[5]</td><td class="refs">M. F. A’Hearn, F. J. Ahern and D. M. Zipoy, &ldquo;Polarization Fourier spectrometer for astronomy&rdquo;, Appl. Opt. 13 (5), 1147 (1974), <a href="https://doi.org/10.1364/AO.13.001147">doi:10.1364/AO.13.001147</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">F. Adler <i>et al.</i>, &ldquo;Mid-infrared Fourier transform spectroscopy with a broadband frequency comb&rdquo;, Opt. Express 18 (21), 21861 (2010), <a href="https://doi.org/10.1364/OE.18.021861">doi:10.1364/OE.18.021861</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">A. Oriana <i>et al.</i>, &ldquo;Scanning Fourier transform spectrometer in the visible range based on birefringent wedges&rdquo;, J. Opt. Soc. Am. A 33 (7), 1415 (2016), <a href="https://doi.org/10.1364/JOSAA.33.001415">doi:10.1364/JOSAA.33.001415</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">F. Johnston, &ldquo;In search of space: Fourier-spectroscopy&rdquo;, Chapter 7 of Shinn, Terry and Joerges, Bernward (Eds), <i>Instrumentation: Between Science, State and Industry</i>, Kluwer Academic (2000), available <a href="https://core.ac.uk/download/pdf/1393506.pdf">online</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">S. P. Davis, M. C. Abrams and J. W. Brault, <i>Fourier transform spectrometry</i>, Academic Press, ISBN-13: 978-0120425105 (2001)</td></tr>
+<tr><td class="refno">[10]</td><td class="refs">F. J. J. Clarke <i>et al.</i>, &ldquo;FTIR measurements &ndash; standards and accuracy&rdquo;, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0924203102000358">Vib. Spectrosc. 30 (1), 25 ( 2002)</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">J. Mandon <i>et al.</i>, &ldquo;Fourier transform spectroscopy with a frequency comb&rdquo;, Nature Photon. 3, 99 (2009), <a href="https://doi.org/10.1038/nphoton.2008.293">doi:10.1038/nphoton.2008.293</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="spectroscopy.html" title="methods where the interaction of light with matter is utilized, e.g. for detecting substances or measuring concentrations">spectroscopy</a>, <a href="michelson_interferometers.html" title="an interferometer with two separate arms and a single beam splitter">Michelson interferometers</a>, <a href="optical_coherence_tomography.html" title="an optical imaging technique where longitudinal resolution is achieved based on interference effects with low-coherence light">optical coherence tomography</a>, <a href="white_light_interferometers.html" title="interferometers using broadband light inputs">white light interferometers</a><br>and other articles in the categories <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/fourier_transform_spectroscopy.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Ffourier_transform_spectroscopy.html&text=RP+Photonics+Encyclopedia+-+Fourier+transform+spectroscopy%2C+operation+principle%2C+Michelson+interferometer%2C+spectral+range%2C+resolution%2C+beam+splitter%2C+calibration%2C+applications" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Ffourier_transform_spectroscopy.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Ffourier_transform_spectroscopy.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/fourier_transform_spectroscopy.html"&gt;<br>Article on Fourier Transform Spectroscopy&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/fourier_transform_spectroscopy.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/fourier_transform_spectroscopy.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/fourier_transform_spectroscopy.html<br>article on 'Fourier Transform Spectroscopy' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="https://www.knightoptical.com/" data-supplier="Knight Optical" data-location="banner" rel="nofollow" class="bg externallink"><img src="./bg/banners/knight_optical.gif" alt="Knight Optical"></a>
+</div>
+</aside>
+<script type="text/javascript" nonce="0avqAHUhL2Yl8xd0P1ovgw==">shownbanner = "Knight Optical";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Sponsors of the Encyclopedia</h2>
+<p>We are grateful to the <a href="./encyclopedia_sponsoring.html?banner=sponsoring">sponsors</a> of our encyclopedia:</p>
+<div style="margin-top:10px; text-align:center;"><a href="./sponsors/nkt_photonics.html"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a></div>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="0avqAHUhL2Yl8xd0P1ovgw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/fourier_transform_spectroscopy.html"
+    },
+    "headline": "Fourier Transform Spectroscopy",
+    "image": "https://www.rp-photonics.com/previews/fourier_transform_spectroscopy.png",
+    "datePublished": "2019-07-05",
+    "dateModified": "2020-03-14",
+    "description": "Fourier transform spectroscopy is a method where one computes optical spectra from raw data by applying a Fourier transform algorithm. It is mostly used in infrared spectroscopy.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter F",
+      "item": "https://www.rp-photonics.com/encyclopedia_f.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Fourier transform spectroscopy",
+      "item": "https://www.rp-photonics.com/fourier_transform_spectroscopy.html"
+    }]}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-qd7V/AD2vZtdpzrLlY5oDw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - photon counting, coincidences, quantum efficiency, dead time, count rate, photomultipliers, avalanche photodiodes, APD</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/photon_counting.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Single photon counting means highly sensitive photodetection at low light levels where single photon absorption events can be recorded.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="photon counting, coincidences, quantum efficiency, dead time, count rate, photomultipliers, avalanche photodiodes, APD">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Photon Counting">
+<meta property="og:description" content="Single photon counting means highly sensitive photodetection at low light levels where single photon absorption events can be recorded.">
+<meta property="og:url" content="https://www.rp-photonics.com/photon_counting.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/photon_counting.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Single photon counting means highly sensitive photodetection at low light levels where single photon absorption events can be recorded.">
+<meta name="twitter:title" content="Photon Counting">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/photon_counting.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="qd7V/AD2vZtdpzrLlY5oDw==">
+page="photon_counting.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="qd7V/AD2vZtdpzrLlY5oDw==">shownsponsors="El.En."</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_p.html">letter P</a> &gt; <a href="photon_counting.html">photon counting</a></p>
+<h1>Photon Counting</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_photon_counting_detectors.html?s=vbox">24 suppliers for photon counting detectors</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_photon_counting_detectors.html?s=vbox">List of suppliers for<br>photon counting detectors</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="advicebox">
+<p>Ask <a href="index.html">RP Photonics</a> for any advice in the context of photodetection. RP Photonics has extensive know-how e.g. on different detectors and their detection noise.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: photodetection at low light levels where single photon absorption events are counted</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Photonenzählung, Einzelphotonendetektion</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a>, <a href="categories.html#optoelectronics" title="other articles on optoelectronics">optoelectronics</a>, <a href="categories.html#quantum_optics" title="other articles on quantum optics">quantum optics</a></p>
+<p><a href="encyclopedia_cite.html?article=photon%20counting">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Some kinds of <a href="photodetectors.html" title="devices used for the detection of light">photodetectors</a> are so sensitive that they allow the detection of single <a href="photons.html" title="quanta of light energy">photons</a>.
+It is then possible to register single photon <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorption</a> events, rather than measuring an optical intensity or power.
+It is also possible to register coincidences between two or more detectors; this is very important for many experiments in <a href="quantum_optics.html" title="the part of optics which deals with quantum effects">quantum optics</a>.</p>
+<p>Photon counters often contain electronics which produce a digital output pulse (e.g. with TTL format) for each registered photon, rather than an analog signal with fluctuations.
+For that, they may use some kind of electronic discriminator, which e.g. produces an output pulse each time when a certain threshold is exceeded.</p>
+<h2 class="togglediv">Important Properties of Photon Counters</h2>
+<div>
+<p>Photon counting detectors have characteristic properties which are somewhat different from those of other photodetectors.
+The most important ones are the following:</p>
+<ul>
+<li>The <em>dark count rate</em> is the average rate of registered counts without any incident light.
+This determines the minimum count rate at which the signal is dominantly caused by real photons.
+The false detection events are mostly of thermal origin and can therefore be strongly suppressed by using a cooled type of detector.
+To some extent, it also helps to reduce the active area.</li>
+<li>The <em>dead time</em> is some length of time after the detection of a photon where no further detection is possible.
+That limits the <em>maximum count rate</em>.</li>
+<li>The <a href="quantum_efficiency.html" title="percentage of input photons which contribute to a desired effect"><em>quantum efficiency</em></a> is the fraction of incident photons which can be registered.
+Detection with a small quantum efficiency (i.e., missing out many photons) introduces noise which can be very disturbing particularly for the detection at the <a href="quantum_noise.html" title="noise arising from quantum fluctuations">quantum noise</a> level (see also: <a href="shot_noise.html" title="quantum-limited intensity noise">shot noise</a>).</li>
+<li>The <a href="timing_jitter.html" title="fluctuations of the temporal positions of pulses"><em>timing jitter</em></a> as a qualitative term is the uncertainty of the timing of the registered photon events.
+It is usually quantified with an r.m.s. (root-mean-square) value.</li>
+<li>Particularly for <a href="photomultipliers.html" title="photodetection devices based on the photoelectric effect and charge multiplication by secondary emission of electrons">photomultipliers</a>, there is also some fixed <em>time delay</em> between photon absorption and the output of an electrical pulse; this results from the transit time of electrons, which can be tens of nanoseconds.</li>
+</ul>
+</div>
+<h2 class="togglediv">Photodetectors for Photon Counting</h2>
+<div>
+<p>The classical way of photon detection is to use a <a href="photomultipliers.html" title="photodetection devices based on the photoelectric effect and charge multiplication by secondary emission of electrons">photomultiplier</a> tube.
+Particularly with a cooled <a href="photocathodes.html" title="an electrode where electrons can be released based on the photoelectric effect">photocathode</a>, such a device can have a very low dark count rate.
+The quantum efficiency can reach several tens of percent in the visible spectral region, whereas devices for <a href="infrared_light.html" title="invisible light with wavelengths roughly between 750&thinsp;&thinsp;nm and 1&thinsp;&thinsp;mm">infrared light</a> achieve quantum efficiencies of at most a few percent.</p>
+<p>Photon counting performance can also be implemented for <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a> devices by using <a href="image_intensifiers_and_image_converters.html" title="instruments which can intensify images acquired under faint light conditions, or convert images to other wavelengths">image intensifiers</a>, which are usually based on a <a href="microchannel_plates.html" title="electron amplifiers with many spatial channels">microchannel plate</a> behind a <a href="photocathodes.html" title="an electrode where electrons can be released based on the photoelectric effect">photocathode</a>.</p>
+<p><a href="avalanche_photodiodes.html" title="photodiodes with internal signal amplification through an avalanche process">Avalanche photodiodes</a> (APDs) can be operated in the <em>Geiger mode</em> for photon counting.
+They are then called <em>single photon avalanche diodes</em> (SPADs).
+Here, the applied reverse voltage is slightly above the avalanche breakdown voltage.
+An electron can then be triggered by a single photon, and must be stopped by lowering the voltage for a short time interval, which determines the dead time.
+Depending on the wavelength, the quantum efficiency can be well above 50&#37;.
+The dark count rate can be strongly reduced by cooling the diode, but this can increase the rate of after-pulses caused by trapped electrical carriers.
+Silicon-based APDs are used between roughly 350 and 1050&nbsp;nm and can reach dark count rates of only a few hertz.
+A typical r.m.s. timing jitter is some tens of picoseconds.
+For longer wavelengths in the near-infrared region, devices based on indium gallium arsenide (InGaAs) and indium phosphide (InP) or germanium (Ge) are used.
+Their quantum efficiency is lower than that of silicon devices in the visible spectrum, but higher than for IR photomultipliers.
+Count rates are typically limited to a few megahertz, or more for silicon APDs.</p>
+<p><em>Hybrid photomultipliers</em> (see the article on <a href="photomultipliers.html" title="photodetection devices based on the photoelectric effect and charge multiplication by secondary emission of electrons">photomultipliers</a>) are essentially consisting of a vacuum tube with an integrated avalanche diode; they offer the combination of some beneficial features of photomultipliers and avalanche diodes, in particular a high speed, a high pulse height resolution and a compact setup.</p>
+<p>For longer wavelengths, <a href="sum_and_difference_frequency_generation.html" title="nonlinear processes generating beams with the sum or difference of the frequencies of the input beams">sum frequency generation</a> in a <a href="nonlinear_crystal_materials.html" title="crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal</a> allows one to upconvert the photons to the visible spectral range, followed by detection with a silicon APD.
+A less common approach is to use a superconducting single photon detector.</p>
+</div>
+<h2 class="togglediv">Photon-counting Imaging Detectors</h2>
+<div>
+<p>Photon counting is also possible for some <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a> detectors.
+For example, there are SPAD arrays, containing many avalanche photodiodes on one silicon chip, combined with readout electronics.</p>
+<p>Besides, there are <a href="image_intensifiers_and_image_converters.html" title="instruments which can intensify images acquired under faint light conditions, or convert images to other wavelengths">image intensifiers</a> based on <a href="microchannel_plates.html" title="electron amplifiers with many spatial channels">microchannel plates</a>, which can register single photons and associate them with single pixels.</p>
+</div>
+<h2 class="togglediv">Applications</h2>
+<div>
+<p>Single photon counters are used in various areas of science and technology:</p>
+<ul>
+<li>Some fields of <a href="quantum_optics.html" title="the part of optics which deals with quantum effects">quantum optics</a>, in particular quantum information technology (e.g. <a href="quantum_cryptography.html" title="methods to encrypt information securely, relying on quantum-mechanical phenomena">quantum cryptography</a>), require single photon detection, often with a high quantum efficiency and with a precise timing for coincidence detection.</li>
+<li>Methods such as <a href="lidar.html" title="a technique for acquiring 3D images with laser pulses">LIDAR</a> (light detection and ranging) and OTDR (<a href="optical_time_domain_reflectometers.html" title=" instruments for measuring the spatially resolved reflectivities and losses in optical fibers">optical time-domain reflectometry</a>) have to work with very low light levels and can therefore profit from photon counting detectors.</li>
+</ul>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_photon_counting_detectors.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 24 suppliers for photon counting detectors.</p>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="photon_counting.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="photons.html" title="quanta of light energy">photons</a>, <a href="photodetectors.html" title="devices used for the detection of light">photodetectors</a>, <a href="avalanche_photodiodes.html" title="photodiodes with internal signal amplification through an avalanche process">avalanche photodiodes</a>, <a href="photomultipliers.html" title="photodetection devices based on the photoelectric effect and charge multiplication by secondary emission of electrons">photomultipliers</a>, <a href="quantum_efficiency.html" title="percentage of input photons which contribute to a desired effect">quantum efficiency</a><br>and other articles in the categories <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a>, <a href="categories.html#optoelectronics" title="other articles on optoelectronics">optoelectronics</a>, <a href="categories.html#quantum_optics" title="other articles on quantum optics">quantum optics</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/photon_counting.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fphoton_counting.html&text=RP+Photonics+Encyclopedia+-+photon+counting%2C+coincidences%2C+quantum+efficiency%2C+dead+time%2C+count+rate%2C+photomultipliers%2C+avalanche+photodiodes%2C+APD" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fphoton_counting.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fphoton_counting.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/photon_counting.html"&gt;<br>Article on Photon Counting&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/photon_counting.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/photon_counting.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/photon_counting.html<br>article on 'Photon Counting' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Resonator Design Software</h2>
+<p><a href="./resonator.html?banner=RP_Resonator">RP Resonator</a> &ndash; an extremely flexible resonator design software:</p>
+<ul>
+<li>script-based definition of resonator structures: arbitrary parametrization</li>
+<li>calculate all mode properties of interest</li>
+<li>analyze alignment sensitivities</li>
+<li>automatic optimization with user-defined figure of merit</li>
+<li>generation of arbitrary plots</li>
+</ul>
+<a href="./resonator.html?banner=RP_Resonator"><img src="./img/rp_resonator_220.png" alt="laser resonator design"></a>
+<p>Further features:</p>
+<ul>
+<li>comprehensive documentation (PDF and online)</li>
+<li>competent <a href="./software_support.html?banner=RP_Resonator">technical support</a></li>
+</ul>
+<p style="text-align:center;"><a href="./resonator_tisa.html?banner=RP_Resonator"><img src="./img/rp_resonator_plot.png" alt="RP Resonator plot"></a></p>
+<p>Use <a href="./resonator.html?banner=RP_Resonator"><b>RP Resonator</b></a> to drive your resonator design capabilities to perfection!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="qd7V/AD2vZtdpzrLlY5oDw==">shownbanner = "RP Resonator";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Latest Encyclopedia Articles</h2>
+<p>Here are the latest encyclopedia articles:</p>
+<ul>
+<li class="tight"><a href="./variable_reflectivity_mirrors.html">variable reflectivity mirrors</a></li>
+<li class="tight"><a href="./color_centers.html">color centers</a></li>
+<li class="tight"><a href="./excimer_lamps.html">excimer lamps</a></li>
+<li class="tight"><a href="./multimode_beams.html">multimode beams</a></li>
+<li class="tight"><a href="./channel_waveguides.html">channel waveguides</a></li>
+<li class="tight"><a href="./optical_crystals.html">optical crystals</a></li>
+<li class="tight"><a href="./standing_wave_resonators.html">standing-wave resonators</a></li>
+<li class="tight"><a href="./nonlinear_absorption.html">nonlinear absorption</a></li>
+<li class="tight"><a href="./passive_fibers.html">passive fibers</a></li>
+<li class="tight"><a href="./active_fibers.html">active fibers</a></li>
+<li class="tight"><a href="./oem_laser_modules.html">OEM laser modules</a></li>
+<li class="tight"><a href="./industrial_lasers.html">industrial lasers</a></li>
+<li class="tight"><a href="./scientific_lasers.html">scientific lasers</a></li>
+<li class="tight"><a href="./flint_glasses.html">flint glasses</a></li>
+<li class="tight"><a href="./crown_glasses.html">crown glasses</a></li>
+<li class="tight"><a href="./sodium_vapor_lamps.html">sodium vapor lamps</a></li>
+<li class="tight"><a href="./metal_vapor_lamps.html">metal vapor lamps</a></li>
+<li class="tight"><a href="./mercury_vapor_lamps.html">mercury vapor lamps</a></li>
+<li class="tight"><a href="./white_light.html">white light</a></li>
+<li class="tight"><a href="./cie_standard_illuminants.html">CIE standard illuminants</a></li>
+</ul>
+
+<p>The encyclopedia already contains 948 articles.</p>
+<p>See also the regularly appearing articles of the <a href="./spotlight.html?banner=new_articles">The Photonics Spotlight</a> and the <a href="./software_news.html?banner=new_articles">RP Photonics Software News</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="qd7V/AD2vZtdpzrLlY5oDw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/photon_counting.html"
+    },
+    "headline": "Photon Counting",
+    "image": "https://www.rp-photonics.com/previews/photon_counting.png",
+    "datePublished": "2007-03-29",
+    "dateModified": "2020-03-14",
+    "description": "Single photon counting means highly sensitive photodetection at low light levels where single photon absorption events can be recorded.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter P",
+      "item": "https://www.rp-photonics.com/encyclopedia_p.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "photon counting",
+      "item": "https://www.rp-photonics.com/photon_counting.html"
+    }]}
+}
+</script>
+</body>
+</html>

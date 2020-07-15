@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-nCFBA0UYLPRP5Q56vw1b9A=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - pinholes, pinhole wheels, arrays, applications</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/pinholes.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Optical pinholes are small circular holes for optical applications, e.g. for mode cleaners (spatial filters), in laser resonators and for pinhole cameras. There are also pinhole wheels and arrays, containing large numbers of pinholes.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="pinholes, pinhole wheels, arrays, applications">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pinholes">
+<meta property="og:description" content="Optical pinholes are small circular holes for optical applications, e.g. for mode cleaners (spatial filters), in laser resonators and for pinhole cameras. There are also pinhole wheels and arrays, containing large numbers of pinholes.">
+<meta property="og:url" content="https://www.rp-photonics.com/pinholes.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/pinholes.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Optical pinholes are small circular holes for optical applications, e.g. for mode cleaners (spatial filters), in laser resonators and for pinhole cameras. There are also pinhole wheels and arrays, containing large numbers of pinholes.">
+<meta name="twitter:title" content="Pinholes">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/pinholes.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="nCFBA0UYLPRP5Q56vw1b9A==">
+page="pinholes.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="nCFBA0UYLPRP5Q56vw1b9A==">shownsponsors="eagleyard Photonics,TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_pinholes.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_p.html">letter P</a> &gt; <a href="pinholes.html">pinholes</a></p>
+<h1>Pinholes</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_pinholes.html?s=vbox">8 suppliers for pinholes</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.knightoptical.com/stock/default/optomechanics-and-accessories/apertures/pinholes.html" data-supplier="Knight Optical" data-location="product-enc" data-keyword="pinholes" rel="nofollow" class="bg externallink"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_pinholes.html?s=vbox">List of suppliers for<br>pinholes</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: circular holes, typically with diameters well below one millimeter</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Lochblenden</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a></p>
+<p><a href="encyclopedia_cite.html?article=pinholes">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Optical pinholes are small circular holes through which light can be transmitted.
+The name of the term comes from the simple fabrication method of punching a thin metallic plate or foil with a pin.
+However, precision pinholes for optical applications are normally made by laser drilling.
+The hole diameter is typically well below 1&nbsp;mm, sometimes even down to a few micrometers.
+<a href="diaphragms.html" title="circular (or approximately circular) openings through which light can travel">Diaphragms</a> typically have larger openings.</p>
+<h2 class="togglediv">Applications of Pinholes</h2>
+<div>
+<p>A pinhole can be used as a kind of small <a href="optical_apertures.html" title="structures which limit the propagation of light">optical aperture</a>:</p>
+<ul>
+<li>A pinhole is the simplest possible optical element for <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a>; it can be used in a <em>pinhole camera</em> (<em>camera obscura</em>).</li>
+<li>A very small pinhole can be used for obtaining light with increased spatial <a href="coherence.html" title="a fixed phase relationship between the electric field values at different locations or at different times">coherence</a> from incoherent light.
+Early experiments with <a href="interferometers.html" title="optical devices utilizing the phenomenon of interference">interferometers</a> often made use of that technique.</li>
+<li>In a <a href="mode_cleaners.html" title="devices which can improve the beam quality of laser beams">mode cleaner</a> (spatial filter), a pinhole is placed in the Fourier plane of a <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lens</a> such that it can be used to suppress higher spatial frequency components.
+After a collimation lens, the beam profile is then more smooth.</li>
+<li>In a <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a>, a pinhole can cause substantial losses for higher-order resonator <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a>, while the losses for the fundamental mode may still be relatively small.
+The <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a> of the laser may therefore be improved.</li>
+</ul>
+<p>For some of the applications, the power handling capability is essential.
+Such high-power apertures are usually made in the form of reflecting pinholes, which absorb only a minor portion of the laser radiation.
+They can be made of relatively resistant metals like stainless steel, molybdenum and tungsten.
+Ultra-thin pinholes are also made from platinum iridium.
+Some pinholes are equipped with a gold coating for improved power handling.</p>
+<p>A relatively large thickness of the plate is beneficial in terms of heat conduction.
+However, the thickness may need to be reduced just around the hole in order to allow for operation with strongly divergent light.
+Note that even for <a href="diffraction_limited_beams.html" title="beams with a minimum possible beam divergence for a given waist radius">diffraction-limited beams</a>, the <a href="rayleigh_length.html" title="the distance from a beam waist where the mode radius increased by a factor square root of 2">Rayleigh length</a> becomes rather small in situations with tight focusing.</p>
+<p>Pinholes for low-power applications often have a <a href="black_coatings.html" title="coatings with strong light absorption">black coating</a> so that they mostly absorb the not transmitted part of the radiation.</p>
+</div>
+<h2 class="togglediv">Devices with Multiple Pinholes</h2>
+<div>
+<p>There are various kinds of devices containing multiple pinholes:</p>
+<figure class="right" style="width:250px;">
+<img src="img/pinhole_wheel.png" alt="pinhole wheel">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+A pinhole wheel.
+</figcaption>
+</figure>
+<ul>
+<li><em>Pinhole wheels</em> contain some number of pinholes of different sizes arranged along a circle, so that one can select one of the holes simply by rotating the wheel.</li>
+<li><em>Nipkow discs</em> are rotating discs with hundreds or thousands of pinholes of equal size.
+They are used in <a href="confocal_scanning_microscopes.html" title="optical microscopes with enhanced depth resolution based on the confocal measurement principle">confocal scanning microscopes</a>.</li>
+<li>Two-dimensional <em>pinhole arrays</em> can contain a large number of pinholes on a rectangular grid.
+They may be used as <em>Hartmann plates</em> for analyzing optical systems.</li>
+</ul>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_pinholes.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 8 suppliers for pinholes. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.knightoptical.com/" data-supplier="Knight Optical" data-location="product-enc" data-keyword="pinholes" rel="nofollow" class="bg externallink" title="Visit the website of Knight Optical"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo"></a><a href="https://www.knightoptical.com/stock/default/optomechanics-and-accessories/apertures/pinholes.html" data-supplier="Knight Optical" data-location="product-enc" data-keyword="pinholes" rel="nofollow" class="bg externallink" title="Visit the website of Knight Optical"><img src="./bg/products/knight_optical/pinholes.jpg" alt="pinholes" class="product"></a><h3><a href="./bg/profiles/knight_optical.html" title="See the profile of Knight Optical">Knight Optical</a></h3><p>Available in two categories, <a href="https://www.knightoptical.com/stock/default/optomechanics-and-accessories/apertures/pinholes.html" data-supplier="Knight Optical" data-location="product-enc" data-keyword="pinholes" rel="nofollow" class="externallink bg">high-powered</a> and <a href="https://www.knightoptical.com/stock/default/optomechanics-and-accessories/apertures/pinholes.html" data-supplier="Knight Optical" data-location="product-enc" data-keyword="pinholes" rel="nofollow" class="externallink bg">standard grade</a>, our high-quality pinholes provide optimum control over beam size. Our <a href="https://www.knightoptical.com/optomechanics-and-accessories/apertures/pinholes.html" data-supplier="Knight Optical" data-location="product-enc" data-keyword="pinholes" rel="nofollow" class="externallink bg">stock</a> laser-drilled apertures are ready for next-day dispatch, in options ranging from 0.5&nbsp;&mu;m to 1000&nbsp;&mu;m and in mounted and unmounted varieties. Alternatively, if you are searching for a more tailored approach to your specification, Knight Optical also provides <a href="https://www.knightoptical.com/custom/optical-components/uv-vis-nir-optics/apertures/pinholes" data-supplier="Knight Optical" data-location="product-enc" data-keyword="pinholes" rel="nofollow" class="externallink bg">custom-made pinholes</a> in a variety of materials, mounting options and sizes.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="pinholes.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">M. Young, &ldquo;Pinhole optics&rdquo;, Appl. Opt. 10 (12), 2763 (1971), <a href="https://doi.org/10.1364/AO.10.002763">doi:10.1364/AO.10.002763</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="diaphragms.html" title="circular (or approximately circular) openings through which light can travel">diaphragms</a>, <a href="optical_apertures.html" title="structures which limit the propagation of light">optical apertures</a>, <a href="optical_slits.html" title="narrow openings through which light can be transmitted">optical slits</a><br>and other articles in the category <a href="categories.html#general_optics" title="other articles on general optics">general optics</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/pinholes.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fpinholes.html&text=RP+Photonics+Encyclopedia+-+pinholes%2C+pinhole+wheels%2C+arrays%2C+applications" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fpinholes.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fpinholes.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/pinholes.html"&gt;<br>Article on Pinholes&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/pinholes.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/pinholes.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/pinholes.html<br>article on 'Pinholes' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Corona Virus Crisis</h2>
+<p>It is interesting and instructive to realize certain analogies between the spread of an epidemic and elementary processes in lasers. In particular, one can <b>learn about the power of expnential growth</b> and the <b>threshold behavior</b>.</p>
+<p style="font-size:130%; margin:20px 0;">Read the article: <br> "<a href="./spotlight_2020_03_16.html?banner=Corona">Laser Physics Helps to Understand the Corona Virus Crisis</a>"!</p>
+<p>Comments are welcome &ndash; see the input form below the article.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="nCFBA0UYLPRP5Q56vw1b9A==">shownbanner = "Corona";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Company News</h2>
+<p>Suppliers having an <a href="./bg_entries.html?banner=company_news">ad package</a> in the <a href="./buyersguide.html?banner=company_news">RP Photonics Buyer&#39;s Guide</a> can publish their <a href="./company_news.html?banner=company_news">company news</a>. For example, they may announce mergers and acquisitions, new product lines, or new cooperrations with distributors.</p>
+<p>Currently we have news from the following companies:</p>
+<ul>
+<li><a href="./bg/profiles/laser_quantum
+.html">Laser Quantum
+</a>: High power in a compact platform at key wavelengths
+</li>
+</ul>
+
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="nCFBA0UYLPRP5Q56vw1b9A==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/pinholes.html"
+    },
+    "headline": "Pinholes",
+    "image": "https://www.rp-photonics.com/previews/pinholes.png",
+    "datePublished": "2019-04-24",
+    "dateModified": "2020-03-14",
+    "description": "Optical pinholes are small circular holes for optical applications, e.g. for mode cleaners (spatial filters), in laser resonators and for pinhole cameras. There are also pinhole wheels and arrays, containing large numbers of pinholes.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter P",
+      "item": "https://www.rp-photonics.com/encyclopedia_p.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "pinholes",
+      "item": "https://www.rp-photonics.com/pinholes.html"
+    }]}
+}
+</script>
+</body>
+</html>

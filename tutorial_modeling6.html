@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-kAHpW6TADhpmqE+8WOwZsQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Tutorial &ldquo;Modeling of Fiber Amplifiers and Lasers&rdquo;, Part 6: Amplifying and generating short pulses, dynamic simulations, pulsed amplifiers, Q-switched fiber lasers</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/tutorial_modeling6.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-04-05">
+<meta name="description" content="Tutorial on modeling of fiber amplifiers and lasers. This part addresses dynamic simulations as needed for simulating pulse amplification or pulse generation in Q-switched fiber lasers.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="tutorial, modeling, fiber amplifiers, fiber lasers, dynamic simulations, pulsed amplifiers, Q-switched fiber lasers">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="kAHpW6TADhpmqE+8WOwZsQ==">
+page="tutorial_modeling6.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/tutorial_modeling.html?banner=modeling_tutorial"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="kAHpW6TADhpmqE+8WOwZsQ==">shownsponsors="eagleyard Photonics,El.En."</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials" class="selected"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_tutorials.html">Tutorials</a> &gt; <a href="tutorial_modeling.html">Modeling</a> &gt; <a href="tutorial_modeling6.html">Part 6</a></p>
+<h1>Modeling of Fiber Amplifiers and Lasers</h1>
+<p>This is part 6 of a <a href="tutorial_modeling.html">tutorial on modeling of fiber amplifiers and lasers</a> from <a href="paschotta.html">Dr. Paschotta</a>. The tutorial has the following parts:</p>
+<div class="article_parts"><span style='float:left; margin:0 25px 5px 10px; font-size:60px; color:#888; font-weight:bold; line-height:100%;'>6</span>
+<p>1:&nbsp;<a href="tutorial_modeling1.html">Introduction</a>, 2:&nbsp;<a href="tutorial_modeling2.html">Optical channels</a>, 3:&nbsp;<a href="tutorial_modeling3.html">Power propagation or field propagation</a>, 4:&nbsp;<a href="tutorial_modeling4.html">The laser-active ions</a>, 5:&nbsp;<a href="tutorial_modeling5.html">Continuous-wave operation of amplifiers and lasers</a>, 6:&nbsp;<span style="text-decoration:underline;">Amplifying and generating short pulses</span>, 7:&nbsp;<a href="tutorial_modeling7.html">Ultrashort pulses</a>, 8:&nbsp;<a href="tutorial_modeling8.html">Using home-made software or a commercial product?</a>
+</p>
+</div>
+<h2 class="togglediv">Part 6: Amplifying and Generating Short Pulses</h2>
+<div>
+<p>In the previous part of this tutorial, we assumed constant input powers of all channels.
+Now, we will consider <b>dynamic simulations</b>, where all input powers may be time-dependent.
+After all, fiber amplifiers and lasers are often operated with light pulses and/or with pulsed pump sources.</p>
+<p>As long as we are not getting into the domain of <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a>, which we will treat in the next section, one can often apply a straightforward generalization of the used equations and numerical methods:</p>
+<ul>
+<li>Any input powers (e.g. of pump and signal beams) may be time-dependent.
+A flexible software as our <a href="fiberpower.html"><b>RP Fiber Power</b></a> can handle arbitrary given functions or tabulated values for time-dependent input powers of all channels.</li>
+<li>The calculation of gain or loss values <span class="eqn_il"><i>g</i><sub><i>j</i></sub>(<i>z</i>)</span> cannot be done based on intensities only, but need to take into account dynamic saturation effects.
+In other words, the gain values do not simply depend on the current optical intensities, but on their values in the near past.
+Essentially, the software needs to introduce additional dynamical variables for the excitations of the laser-active ions.
+Their temporal evolution is calculated by numerically integrating the rate equations, which we have discussed in <a href="tutorial_modeling4.html">section 4</a>.
+That is in principle not difficult, even for rate equations involving nonlinear terms.</li>
+</ul>
+<p>For example, a fiber amplifier may first be pumped for some period of time, and thereafter a short signal pulse (e.g. of Gaussian or super-Gaussian temporal shape) is injected.
+During the pumping phase, the (not yet relevant) signal gain steadily rises.
+When the signal pulse is injected, it originally profits from a high gain, but then quickly saturates that gain.
+As a result, further parts of the pulse will experience a reduced gain and acquire correspondingly lower output powers.
+This can result in substantial distortions of the temporal pulse shape.
+Figure&nbsp;1 shows a numerical example, taken from a detailed <a href="fiberpower_pamp.html">case study</a>.</p>
+<figure>
+<img src="img/pulsed_amplifier.png" alt="pulse amplification in a fiber amplifier">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Output power and ytterbium excitation versus time for an ytterbium-doped fiber amplifier with pulsed pump and signal.
+</figcaption>
+</figure>
+<aside class="callout blue">Propagation times can often be ignored in pulsed amplifier systems.</aside>
+<p>Note that in such a case we can safely ignore the propagation times, i.e., the time delays arising from light propagation through the amplifier fiber.
+Even if pulse durations get shorter than the propagation time, it often does not matter that different parts of the fiber &ldquo;see&rdquo; the pulses at slightly different times.
+After all, typically level lifetimes are far longer.
+The temporal step size used in the numerical algorithm may be larger or smaller than the propagation time; it just needs to be small enough to properly sample all temporal features, including saturation effects.
+Note that the amplifier gain can drop very fast if it is saturated by a very high signal intensity.
+Therefore, the numerical step size may have to be far below the lifetimes of metastable levels.</p>
+<p>See also <a href="tutorial_fiber_amplifiers7.html">part 7</a> of our <a href="tutorial_fiber_amplifiers.html">fiber amplifier tutorial</a>, which discusses the behavior of fiber amplifiers for the amplification of nanosecond pulses.</p>
+<h3 class="togglediv">Q-switched Lasers</h3>
+<div>
+<p>When simulating <a href="q_switching.html" title="a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q-switched</a> fiber lasers, some new aspect comes into play.
+We now need to consider propagation times, because the round-trip time of the laser resonator now plays a crucial role.
+Therefore, we need to substantially extend the algorithm:</p>
+<aside class="callout blue">For modeling Q-switched lasers, it is essential to consider the propagation time of light in the resonator.</aside>
+<ul>
+<li>We need to use a temporal step size which is only a fraction of the resonator's round-trip time.
+Within one temporal step, the whole power distribution in the laser device is spatially shifted by a fraction of the device length and at the same time affected by gain or losses.</li>
+<li>There may also be time delays outside the active fiber, as the laser resonator may contain additional parts such as free-space regions containing a modulator (Q-switch).
+Therefore, at least for the laser light one needs some kind of numerical buffers for storing optical power values corresponding to locations outside the fiber.</li>
+</ul>
+<p>Neither the needed equations nor the algorithm are very complicated in principle.
+However, the implementation is a little tedious due to various &ldquo;bookkeeping&rdquo; requirements.</p>
+<p>As an example case, we can use a <a href="fiberpower_qs_laser.html">case study for a Q-switched fiber laser</a> which we have made with our software <a href="fiberpower.html"><b>RP Fiber Power</b></a>.</p>
+<figure>
+<img src="img/qs_fl_time.png" alt="laser output versus time">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Output power and ytterbium excitation versus time.
+</figcaption>
+</figure>
+<p>Figure&nbsp;2 shows the evolution of output power and excitation level during the first two pulse cycles after switching on that laser.
+The resulting pulse shapes may seem quite surprising; there is a strong variation of power within a single round-trip time, which would normally not occur in a Q-switched bulk laser.
+An important factor behind this phenomenon is the high gain of an active fiber.
+Before the Q-switch is opened (made transparent), ASE leads to a strongly inhomogeneous distribution of optical power (at a rather low level) within the active fiber.
+If the Q-switch is then opened very quickly, that inhomogeneous power distribution starts to travel around the resonator, producing that spike structure at the output.
+The details can be understood with careful thinking, but are definitely more complicated in these high-gain situations &ndash; making it more necessary, of course, to study this numerically.
+One can also study aspects like a finite switching time of the Q-switch.</p>
+<p>Go to <a href="tutorial_modeling7.html">Part 7: Ultrashort pulses</a>, or back to the <a href="tutorial_modeling.html">start page</a>.</p>
+</div>
+</div>
+<hr>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="tutorial_modeling6.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Ftutorial_modeling6.html&text=RP+Photonics+Encyclopedia+-+Tutorial+%26ldquo%3BModeling+of+Fiber+Amplifiers+and+Lasers%26rdquo%3B%2C+Part+6%3A+Amplifying+and+generating+short+pulses%2C+dynamic+simulations%2C+pulsed+amplifiers%2C+Q-switched+fiber+lasers" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Ftutorial_modeling6.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Ftutorial_modeling6.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></main></div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2 style="font-size:20px;">Debugging Is Now Fun!</h2>
+<p>The software products which are supporting our <a href="./software_script_language.html?banner=Debugger">script language</a> (e.g. <a href="./fiberpower.html?banner=Debugger">RP Fiber Power</a> and <a href="./coating.html?banner=Debugger">RP Coating</a>) have now got a <a href="./software_news_2017_05_31.html?banner=Debugger">powerful debugger</a>!</p>
+<a href="./software_news_2017_05_31.html?banner=Debugger"><img src="./img/expression_debugger_small.png" alt="debugger" style="margin:10px 0;"></a>
+<p>It works even within expressions, not only after each command!</p>
+<p>The <a href="./software_news.html?banner=Debugger">RP Photonics Software News</a> keep you informed.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="kAHpW6TADhpmqE+8WOwZsQ==">shownbanner = "Debugger";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Free Tutorial: Modeling of Fiber Amplifiers and Lasers</h2>
+<p>We have published a new <a href="./tutorial_modeling.html?banner=modeling_tutorial">tutorial</a> which discusses the modeling of fiber amplifiers and lasers.
+It addresses many questions:</p>
+<ul>
+<li>What is a <a href="./tutorial_modeling1.html?banner=modeling_tutorial">model</a>?</li>
+<li>Should one use <a href="./tutorial_modeling3.html?banner=modeling_tutorial">power propagation or field propagation</a>?</li>
+<li>How to simulate the behavior of <a href="./tutorial_modeling4.html?banner=modeling_tutorial">laser-active ions</a>?</li>
+<li>How to calculate <a href="./tutorial_modeling5.html?banner=modeling_tutorial">steady-state solutions</a>?</li>
+<li>How to simulate <a href="./tutorial_modeling6.html?banner=modeling_tutorial">dynamical behavior</a> and <a href="./tutorial_modeling7.html?banner=modeling_tutorial">ultrashort pulse propagation</a>?</li>
+<li>What aspects are important for the <a href="./tutorial_modeling8.html?banner=modeling_tutorial">decision</a> whether to develop own modeling software or use commercial software?</li>
+</ul>
+<p><a href="./tutorial_modeling.html?banner=modeling_tutorial">Read the tutorial!</a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="kAHpW6TADhpmqE+8WOwZsQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tutorials",
+      "item": "https://www.rp-photonics.com/encyclopedia_tutorials.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Modeling",
+      "item": "https://www.rp-photonics.com/tutorial_modeling.html"
+    },{
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Part 6",
+      "item": "https://www.rp-photonics.com/tutorial_modeling6.html"
+    }]}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-PBkH6vboV9G/X36v6iqVaQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - optical delay lines, variable, scanning, free-space, fiber delay lines, specifications, dispersion, applications</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/optical_delay_lines.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Optical delay lines, often for variable (tunable) time delays, are required for many applications e.g. involving interferometers, autocorrelators and optical sampling. They can be realized with free-space optics, but are also available as fiber delay lines.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="optical delay lines, variable, scanning, free-space, fiber delay lines, specifications, dispersion, applications">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Optical Delay Lines">
+<meta property="og:description" content="Optical delay lines, often for variable (tunable) time delays, are required for many applications e.g. involving interferometers, autocorrelators and optical sampling. They can be realized with free-space optics, but are also available as fiber delay lines.">
+<meta property="og:url" content="https://www.rp-photonics.com/optical_delay_lines.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/optical_delay_lines.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Optical delay lines, often for variable (tunable) time delays, are required for many applications e.g. involving interferometers, autocorrelators and optical sampling. They can be realized with free-space optics, but are also available as fiber delay lines.">
+<meta name="twitter:title" content="Optical Delay Lines">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/optical_delay_lines.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="PBkH6vboV9G/X36v6iqVaQ==">
+page="optical_delay_lines.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/encyclopedia.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="PBkH6vboV9G/X36v6iqVaQ==">shownsponsors="TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_optical_delay_lines.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_o.html">letter O</a> &gt; <a href="optical_delay_lines.html">optical delay lines</a></p>
+<h1>Optical Delay Lines</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_optical_delay_lines.html?s=vbox">18 suppliers for optical delay lines</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.fastlite.com/en/ar826330-823530-Delay-line-acousto-optic-module.html" data-supplier="Fastlite" data-location="product-enc" data-keyword="optical delay lines" rel="nofollow" class="bg externallink"><img src="./bg/logos/fastlite.png" alt="Fastlite" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://gandh.com/product-categories/fiber-optic-assemblies/" data-supplier="G&H" data-location="product-enc" data-keyword="optical delay lines" rel="nofollow" class="bg externallink"><img src="./bg/logos/g_h.png" alt="G&H" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="http://www.ape-berlin.de/en/optical-delay/" data-supplier="APE" data-location="product-enc" data-keyword="optical delay lines" rel="nofollow" class="bg externallink"><img src="./bg/logos/ape.png" alt="APE" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_optical_delay_lines.html?s=vbox">List of suppliers for<br>optical delay lines</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p>Acronym: ODL</p>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: an optical setup which is used to introduce a time delay for a light beam</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">optische Verzögerungsstrecken</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a></p>
+<p><a href="encyclopedia_cite.html?article=optical%20delay%20lines">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>There are many optical devices and applications where it is necessary to introduce a certain time delay for a light beam (typically, a <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a>):</p>
+<ul>
+<li>Various types of <a href="interferometers.html" title="optical devices utilizing the phenomenon of interference">interferometers</a> require a variable (tunable) delay line.
+In some cases, only an adjustment for the <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">optical phase</a> is required; this can be achieved with very small changes of propagation distance of the order of one optical <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>.
+Other interferometers, however, require substantially larger variable time delays &ndash; for example, <a href="wavemeters.html" title="devices for precise measurements of laser wavelengths">wavemeters</a>, <a href="optical_coherence_tomography.html" title="an optical imaging technique where longitudinal resolution is achieved based on interference effects with low-coherence light">optical coherence tomography</a> (OCT) and other devices involving <a href="white_light_interferometers.html" title="interferometers using broadband light inputs">white light interferometry</a>.</li>
+<li>In <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a>, variable delays are required for coherent receivers and in the context of <a href="time_division_multiplexing.html" title="a multiplexing technique operating in the time domain">time division multiplexing</a>.</li>
+<li>In an optical <a href="autocorrelators.html" title="devices for measuring the intensity or field autocorrelation function of light, mostly used for determining the duration of ultrashort pulses">autocorrelator</a>, one requires a variable time delay for controlling the relative timing between two <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a>.
+A detector signal is then measured as a function of that relative timing.
+<a href="frequency_resolved_optical_gating.html" title="a technique for the complete characterization of ultrashort optical pulses">Frequency-resolved optical gating</a> works similarly, only that a <a href="spectrographs.html" title="instruments for spectrally analyzing light">spectrograph</a> is used for detection.
+Optical cross-correlators require the same kinds of variable time delays.</li>
+<li>Similarly, devices for <a href="electro_optic_sampling.html" title="an optical sampling technique based on the electro-optic effect">electro-optic sampling</a> require variable time delays.</li>
+<li>In microwave photonics, one often requires time delays of the order of a microwave oscillation period.</li>
+<li>In <a href="pump_probe_measurements.html" title="techniques for investigating ultrafast phenomena, where a pump pulse excites a sample and a probe pulse is used for probing the sample after an adjustable delay time">pump&ndash;probe measurements</a>, one also requires a variable time delay for measuring some response to a pulse after a variable amount of time.</li>
+<li>When <a href="sum_and_difference_frequency_generation.html" title="nonlinear processes generating beams with the sum or difference of the frequencies of the input beams">sum or difference frequency generation</a> is done with ultrashort pulses, efficient conversion also requires that the pulses overlap well spatially and temporally in a <a href="nonlinear_crystal_materials.html" title="crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal</a>.
+Here, however, the time delay does not have to be modified during operation, only perhaps during first alignment or in the context of maintenance.</li>
+<li>Optical computing requires data buffers, which are essentially realized with time delays.</li>
+</ul>
+<p>In most of those cases, one requires some kind of <em>variable optical delay line</em>, while in a few cases a <em>fixed delay</em> is sufficient.
+Variable delays are often made as rapidly <em>scanning delay lines</em>, periodically scanning through some range of delays.
+The requirements in terms of delay range, precision, speed etc. depend very much on the application.
+Different kinds of delay lines are discussed in the following.</p>
+<h2 class="togglediv">Free-space Delay Lines</h2>
+<div>
+<p>Most optical delay lines work on the basis that the pulses are sent through an optical arrangement with a variable path length.
+Typically, path lengths in air are used, which implies a delay of &approx;3.34&nbsp;ps per millimeter, or &approx;1&nbsp;ns for 30&nbsp;cm.</p>
+<figure class="right" style="width:282px;">
+<img src="img/int_autocorrelator.png" alt="intensity autocorrelator">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Setup of an intensity autocorrelator. BS = beam splitter.
+</figcaption>
+</figure>
+<p>As an example, Figure&nbsp;1 shows the setup of an intensity <a href="autocorrelators.html" title="devices for measuring the intensity or field autocorrelation function of light, mostly used for determining the duration of ultrashort pulses">autocorrelator</a>, which contains a simple optical delay line on the left side.
+By moving two <a href="mirrors.html" title="devices which reflect light">mirrors</a>, which are together mounted on some movable part (forming a movable <a href="retroreflectors.html" title="optical devices which reflect light in a direction which is parallel to the incident beam">retroreflector</a>), the pulse timing can be controlled.
+Here, a movement by 1&nbsp;mm changes the pulse timing by <em>twice</em> 3.34&nbsp;ps, since two arm lengths are changed.
+For <a href="pulse_duration.html" title="the duration of an optical pulse">pulse durations</a> of 1&nbsp;ps, for example, one requires a delay range of the order of 1&nbsp;mm, corresponding to a travel range of 0.5&nbsp;mm.</p>
+<p>In some cases, the delay is adjusted manually, for example with a micrometer screw.
+High-quality <a href="opto_mechanics.html" title="mechanical elements used in optics">opto-mechanics</a> are desirable for reaching a high precision.</p>
+<p>In many cases, e.g. for autocorrelators and cross-correlators, the movements must be done with some kind of motorized translation stage.
+There are different technical options:</p>
+<ul>
+<li>For relatively small travel ranges (e.g. some tens of microns), a piezo transducer is sufficient.</li>
+</ul>
+<aside class="callout blue">Different kinds of motors can be used, depending on the required travel range, accuracy, speed, etc.</aside>
+<ul>
+<li>Other kinds of motors, for example piezoelectric motors in the form of slip-stick actuators or inchworm motors, or DC motors, can be used for larger travel ranges.</li>
+<li>In some cases, an electromagnetic shaker drive similar to that of a loudspeaker is used; the often substantial deviations from a linear movement with constant velocity may be compensated with various means, for example with software.</li>
+<li>Instead of a linear movement, one may use an arrangement with rotating parts, for example with a rotating glass block or a polygonal scanner.
+With such methods, the movement is often far from linear, but well defined and therefore well correctable e.g. with software.
+A disadvantage may be that the operation is interrupted regularly since not all rotational positions result in a usable beam.
+There are other designs based on rotating blades [7] which can provide linearly changing delays with minimum interruptions.</li>
+</ul>
+<p>For highest accuracy and repeatability, some devices are a equipped with an optical <a href="interferometers.html" title="optical devices utilizing the phenomenon of interference">interferometer</a>, with which the control electronics can accurately monitor the position of the drive and correct it with a feedback loop.</p>
+<p>For beam alignment purposes, some delay lines have removable irises for defining the correct beam positions.</p>
+<p>Usually, a free-space delay line should be operated with a <a href="collimated_beams.html" title="laser beams with weak divergence">collimated beam</a> having a <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a> which is large enough to obtain a <a href="rayleigh_length.html" title="the distance from a beam waist where the mode radius increased by a factor square root of 2">Rayleigh length</a> which is well above the path length, so that the beam radius does not undergo large changes during the passage through the device, and most importantly the beam radius and wavefront curvature of the output beam do not change substantially with changes of the delay.
+For example, a delay line for a 1550-nm beam with a maximum delay of 1&nbsp;ns, corresponding to &approx;300&nbsp;mm, the beam radius should be of the order of 1&nbsp;mm, which would result in a Rayleigh length of &approx;2&nbsp;m.</p>
+</div>
+<h2 class="togglediv">Fiber Delay Lines</h2>
+<div>
+<p>In <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a>, for example, delay lines with <a href="fiber_connectors.html" title="connectors used as terminations of optical fiber cables">fiber-optic connectors</a> are required.</p>
+<p>For a fixed time delay, such a device may simply contain some length of optical <a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode fiber</a> which is wound up to a coil and placed in a more or less compact housing.
+Since <a href="propagation_losses.html" title="losses of optical energy during propagation of light">propagation losses</a> in fibers can be rather low, particularly at the typical telecom wavelengths, even fiber lengths of multiple kilometers, corresponding to delay times of many microseconds, can be realized without excessive <a href="insertion_loss.html" title="power losses due to insertion of a device">insertion loss</a>.</p>
+<p>Note that the relevant delay time is usually the <a href="group_delay.html" title="a measure of the time delay experienced by narrow-band light pulses in an optical device">group delay</a>, which can be calculated as the fiber length times the <a href="group_index.html" title="the ratio of the vacuum velocity of light to the group velocity in a medium">group index</a> divided by the vacuum <a href="velocity_of_light.html" title="the velocity with which light propagates in a medium">velocity of light</a>: <span class="eqn_il"><i>T</i>&thinsp;=&thinsp;<i>L&thinsp;n</i><sub>g</sub>&thinsp;/&thinsp;<i>c</i></span>.
+The group index of a homogeneous optical medium is usually somewhat larger than the <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a>.
+Further, in an optical fiber it is modified by <a href="waveguide_dispersion.html" title="chromatic dispersion arising from waveguiding effects">waveguide dispersion</a>.
+The relevant quantity is then the group index of a fiber <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">mode</a>, which is typically the fundamental mode.</p>
+<p>Variable time delays can be achieved with a <em>fiber stretcher</em>, where some piece of fiber can be more or less stretched in a controlled way, using a piezo transducer.
+This method, however, is limited to a quite small time delays, typically below 1&nbsp;ps.
+Some are only used as <em>phase shifters</em>, providing a delay range of little more than one wavelength.</p>
+<figure>
+<img src="img/fiber_delay_line.png" alt="fiber delay line">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+A variable fiber delay line, containing two fiber collimators and a movable retroreflector.
+</figcaption>
+</figure>
+<p>For longer time delays (e.g. tens or hundreds of picoseconds), one has to resort to free-space solutions, which however can be interfaced with <a href="fiber_connectors.html" title="connectors used as terminations of optical fiber cables">fiber-optic connectors</a> and enclosed in sealed boxes, making them immune to dirt and dust.
+Typically, such a device contains two <a href="fiber_collimators.html" title="devices for collimating the light coming from a fiber, or for launching collimated light into the fiber">fiber collimators</a> around some bulk-optical free-space setup as described above.
+As an example, Figure&nbsp;2 shows a solution with two fiber collimators and a <a href="retroreflectors.html" title="optical devices which reflect light in a direction which is parallel to the incident beam">retroreflector</a> on a movable stage.
+A carefully made device design based on high-quality components is required for achieving low insertion loss with little dependence on the delay time.</p>
+<p>There are also <em>miniature delay lines</em>, i.e., quite compact devices with fiber connectors on opposite ends, where one can adjust a time delay with some adjustment knob, and there can be an additional lock nut for fixing the obtained delay value.
+Usually, delay times are adjustable only in a range of a few picoseconds or less.</p>
+</div>
+<h2 class="togglediv">Other Operation Principles</h2>
+<div>
+<p>Beyond the simple operation principles as explained above, one can realize optical delay lines in completely different ways.
+Some examples are given in the following.</p>
+<p>Very long time delays for light can be realized in situations where <em>slow light</em> is obtained, i.e., light with a strongly reduced <a href="group_velocity.html" title="the velocity with which the envelope of a weak narrow-band optical pulse propagates in a medium">group velocity</a> (usually in the vicinity of some narrow resonance).
+The time delay may then also be a tunable in a wide range.
+However, such delay lines usually work only within a very narrow optical <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>, except if very small structures are involved, e.g. in <a href="photonic_metamaterials.html" title="nanostructured materials with special optical properties">photonic metamaterials</a>.</p>
+<p>Some <a href="common_path_interferometers.html" title="interferometers where the sensitivity to mechanical noise is reduced by largely using a common optical path for the interfering light beams">common-path interferometers</a> are based on <a href="birefringence.html" title="the polarization dependence of the refractive index of a medium">birefringence</a>.
+Based on an adjustable amount of birefringence, obtained e.g. by moving a wedged birefringent crystal [4] more or less into a beam, one can realize a kind of optical delay line within a particularly stable interferometer setup.</p>
+<p>Switching between two different time delays as possible if the <a href="polarization_of_light.html" title="direction of the electric field oscillation of a light beam">polarization</a> direction of light propagating in a <a href="birefringence.html" title="the polarization dependence of the refractive index of a medium">birefringent</a> medium is manipulated.</p>
+<p>A tunable all-fiber delay line for applications in <a href="optical_coherence_tomography.html" title="an optical imaging technique where longitudinal resolution is achieved based on interference effects with low-coherence light">optical coherence tomography</a> has been realized based on chirped <a href="fiber_bragg_gratings.html" title="reflective structures in the core of an optical fiber with a periodic or aperiodic perturbation of the effective refractive index">fiber Bragg gratings</a> which are stretched with piezo transducers [2].</p>
+<p>One may also exploit optical <a href="optical_resonators.html" title="arrangements of optical components which allow a beam of light to circulate">resonance</a> effects.
+For example, there are the devices where low-loss microring resonators are coupled to a <a href="waveguides.html" title="spatially inhomogeneous transparent structures for guiding light">waveguide</a> and cause substantial modifications of the group delay [5].
+For small resonators as realized on <a href="photonic_integrated_circuits.html" title="integrated circuits with optical functions">photonic integrated circuits</a>, this can work in a substantial optical bandwidth.
+Tuning is possible through the device temperature, for example.</p>
+</div>
+<h2 class="togglediv">Performance Figures and Additional Features</h2>
+<div>
+<p>The performance of a variable optical delay line can essentially be characterized with specifications for the following aspects:</p>
+<ul>
+<li>accessible range in terms of path length or delay time</li>
+<li class="ta_left">resolution, accuracy and repeatability of position (sometimes greatly improved with a feedback loop)</li>
+<li class="ta_left">speed, e.g. maximum scanning frequency or maximum time to reach a new position</li>
+<li class="ta_left">usable wavelength range (often limited by <a href="dielectric_mirrors.html" title="mirrors consisting of multiple thin layers of different transparent optical materials">dielectric mirrors</a>)</li>
+<li class="ta_left"><a href="insertion_loss.html" title="power losses due to insertion of a device">insertion loss</a> (and its dependence on the set delay)</li>
+</ul>
+<p>Some of those quantities are relevant only for delay lines which can be arbitrarily set to different positions, rather than only continuously scanning.
+For fiber delay lines, other aspects may also be important, e.g. the <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> and fiber <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a> causing <a href="self_phase_modulation.html" title="nonlinear phase modulation of a beam, caused by its own intensity via the Kerr effect">self-phase modulation</a>, also possibly the preservation of <a href="polarization_of_light.html" title="direction of the electric field oscillation of a light beam">polarization</a>.</p>
+<p>Many delay lines are connected to some computer or other electronic control apparatus, usually with a digital bus system such as RS-232 or USB.
+They can often be entirely controlled through a computer, either manually e.g. with some Windows user interface or automatically.</p>
+<p>For devices where one can set arbitrary delay values, the current value may be displayed on the computer screen, and new values may be either entered numerically or changed in certain steps.
+There are also delay lines where a position display and possibly other features are located on the housing of the delay line itself.</p>
+</div>
+<h2 class="togglediv">Dispersive Delay Lines</h2>
+<div>
+<p>There are optical delay lines where one intentionally uses a large amount of <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> in order to obtain a substantial wavelength dependence of the delay time.
+For example, a long optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fiber</a> can be used as a dispersive delay line for <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a>; typical dispersion values are of the order of plus or minus some tens of picoseconds per nanometer and kilometer.
+For broadband pulses, e.g. with an optical <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a> of the order of 100&nbsp;nm, relative time delays of several nanoseconds within the optical spectrum are possible in a 1&nbsp;km long fiber.
+As a result, one obtains <a href="chirp.html" title="time dependence of the instantaneous frequency of an optical pulse">chirped pulses</a> with strongly increased pulse duration.
+That can be useful, for example, for <a href="pulse_stretchers.html" title="devices for temporally stretching ultrashort light pulses">pulse stretchers</a> as required for <a href="chirped_pulse_amplification.html" title="a technique for amplifying pulses to very high optical intensities while avoiding excessive nonlinear pulse distortions or optical damage">chirped-pulse amplification</a>.</p>
+<p>A very large amount of chromatic dispersion in a short propagation length can be realized with a chirped <a href="fiber_bragg_gratings.html" title="reflective structures in the core of an optical fiber with a periodic or aperiodic perturbation of the effective refractive index">fiber Bragg grating</a>.</p>
+<p>Dispersive optical delay lines can also be realized based on <a href="diffraction_gratings.html" title="optical components containing a periodic structure which diffracts light">diffraction gratings</a>, possibly complemented with additional optical elements such as <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lenses</a>.</p>
+<p>Besides pulse stretching, dispersive delay lines may be used in certain signal processing applications.</p>
+</div>
+<h2 class="togglediv">Optical Delay Lines for Microwave Applications</h2>
+<div>
+<p>Delay lines have long been used in microwave technology.
+In the modern field of microwave photonics, utilizing <a href="photonics.html" title="the science and technology of light">photonics</a> in combination with microwaves, one may utilize the superior properties of optical delay lines for effectively realizing delay lines for microwave devices.
+For that purpose, one can convert microwave signals to optical signals, send them through a fiber-optic delay line and finally convert them back to microwaves with a fast <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a>.</p>
+<p>One of the possible advantages of that approach is that very much longer time delays can be realized, since optical fibers provide low propagation losses and can be strongly curved to form compact coils.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_optical_delay_lines.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 18 suppliers for optical delay lines. Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.ape-berlin.de/" data-supplier="APE" data-location="product-enc" data-keyword="optical delay lines" rel="nofollow" class="bg externallink" title="Visit the website of APE"><img src="./bg/logos/ape.png" alt="APE" class="supplierlogo"></a><a href="http://www.ape-berlin.de/en/optical-delay/" data-supplier="APE" data-location="product-enc" data-keyword="optical delay lines" rel="nofollow" class="bg externallink" title="Visit the website of APE"><img src="./bg/products/ape/optical_delay_lines.jpg" alt="optical delay lines" class="product"></a><h3><a href="./bg/profiles/ape.html" title="See the profile of APE">APE</a></h3><p>The APE <a href="http://www.ape-berlin.de/en/optical-delay/" data-supplier="APE" data-location="product-enc" data-keyword="optical delay lines" rel="nofollow" class="externallink bg">ScanDelay</a> is a variable optical delay line, allowing the introduction of a well-defined time delay into an optical path &ndash; for example, for pump&ndash;probe measurements. The delay is periodically controlled by a fast scanning shaker at a frequency of up to 20&nbsp;Hz.</p><p>The heart of APE’s optical delay line series is a special linear translation stage that is supplied together with appropriate control and drive electronics. The linear drive has been designed especially for optical applications. It combines low moving mass with compactness, reaching a high speed, as well as high precision and resolution. The delay drive has frictionless movement, a large and precise travel range, and it allows for very small displacements without any stick-slip-effects.</p><p>The control electronic contains the motion driver and a quartz stabilized signal synthesizer. It can be synchronized with an external clock for a precise, phase-locked scanner movement.</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.fastlite.com/" data-supplier="Fastlite" data-location="product-enc" data-keyword="optical delay lines" rel="nofollow" class="bg externallink" title="Visit the website of Fastlite"><img src="./bg/logos/fastlite.png" alt="Fastlite" class="supplierlogo"></a><h3><a href="./bg/profiles/fastlite.html" title="See the profile of Fastlite">Fastlite</a></h3><p>With multi-MHz laser sources with pulse durations starting from 60&nbsp;fs, the Dazzler becomes an ultrastable and ultrafast <a href="http://www.fastlite.com/en/ar826330-823530-Delay-line-acousto-optic-module.html" data-supplier="Fastlite" data-location="product-enc" data-keyword="optical delay lines" rel="nofollow" class="externallink bg">delay line</a>. Multi-kHz scan rate within a compact crystal module. No moving parts, no hysteresis.</p><p>This low dispersion acousto-optic delay line opens the way to new kinds of time domain spectroscopy, frequency comb generation schemes, and high repetition rate pump&ndash;probe experiments.</p></aside>
+<aside class="bg_vendoritem"><a href="https://gandh.com/" data-supplier="G&H" data-location="product-enc" data-keyword="optical delay lines" rel="nofollow" class="bg externallink" title="Visit the website of G&amp;H"><img src="./bg/logos/g_h.png" alt="G&H" class="supplierlogo"></a><a href="https://gandh.com/product-categories/fiber-optic-assemblies/" data-supplier="G&H" data-location="product-enc" data-keyword="optical delay lines" rel="nofollow" class="bg externallink" title="Visit the website of G&amp;H"><img src="./bg/products/g_h/optical_delay_lines.jpg" alt="optical delay lines" class="product"></a><h3><a href="./bg/profiles/g_h.html" title="See the profile of G&H">G&H</a></h3><p>G&amp;H designs and manufactures custom modules &ndash; <a href="https://gandh.com/product-categories/fiber-optic-assemblies/" data-supplier="G&H" data-location="product-enc" data-keyword="optical delay lines" rel="nofollow" class="externallink bg">fiber assemblies</a> of passive and/or active optical components integrated to provide higher functionality in a compact footprint. Customers sourcing fiber optic assemblies stay focused on their core competence while reducing time to market and development costs. Our in-depth understanding of optical component performance, combined with the use of low loss G&amp;H products, ensures optimized designs. Advanced assembly techniques such as ribbon splicing and fiber recoating are used to provide robustness, reduce form factors, and minimize manufacturing costs.</p><p>At G&amp;H, we take a custom module designs from specification all the way through to a manufactured product. We are expert in mechanical design for optics, fiber optics, and fiber assemblies. Our fiber assemblies include pigtailed lasers, spectrometers, optical delay lines, telescopes, and fiber collimators. The most complex assemblies can include bulk optics, fiber optics, motion control, and electronics.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="optical_delay_lines.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">P.-L. Hsiung <i>et al.</i>, &ldquo;High-speed path-length scanning with a multiple-pass cavity delay line&rdquo;, Appl. Opt. 42 (4), 640 (2003), <a href="https://doi.org/10.1364/AO.42.000640">doi:10.1364/AO.42.000640</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">E. Choi <i>et al.</i>, &ldquo;All-fiber variable optical delay line for applications in optical coherence tomography: feasibility study for a novel delay line&rdquo;, Opt. Express 13 (4), 1334 (2005), <a href="https://doi.org/10.1364/OPEX.13.001334">doi:10.1364/OPEX.13.001334</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">G. Lamouche <i>et al.</i>, &ldquo;Optical delay line using rotating rhombic prisms&rdquo;, Proc. SPIE 6429, 64292G (2007), <a href="https://doi.org/10.1117/12.701047">doi:10.1117/12.701047</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">A. Oriana <i>et al.</i>, &ldquo;Scanning Fourier transform spectrometer in the visible range based on birefringent wedges&rdquo;, J. Opt. Soc. Am. A 33 (7), 1415 (2016), <a href="https://doi.org/10.1364/JOSAA.33.001415">doi:10.1364/JOSAA.33.001415</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">J. Cardenas <i>et al.</i>, &ldquo;Wide-bandwidth continuously tunable optical delay line using silicon microring resonators&rdquo;, Opt. Express 18 (25), 26525 (2010), <a href="https://doi.org/10.1364/OE.18.026525">doi:10.1364/OE.18.026525</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">S. Khan, M. A. Baghban, and S. Fathpour, &ldquo;Electronically tunable silicon photonic delay lines&rdquo;, Opt. Express 19 (12), 11780 (2011), <a href="https://doi.org/10.1364/OE.19.011780">doi:10.1364/OE.19.011780</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">M. Skorobogatiy, &ldquo;Linear rotary optical delay lines&rdquo;, Opt. Express 22 (10), 11812 (2014), <a href="https://doi.org/10.1364/OE.22.011812">doi:10.1364/OE.22.011812</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="autocorrelators.html" title="devices for measuring the intensity or field autocorrelation function of light, mostly used for determining the duration of ultrashort pulses">autocorrelators</a>, <a href="pump_probe_measurements.html" title="techniques for investigating ultrafast phenomena, where a pump pulse excites a sample and a probe pulse is used for probing the sample after an adjustable delay time">pump&ndash;probe measurements</a>, <a href="interferometers.html" title="optical devices utilizing the phenomenon of interference">interferometers</a><br>and other articles in the categories <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/optical_delay_lines.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Foptical_delay_lines.html&text=RP+Photonics+Encyclopedia+-+optical+delay+lines%2C+variable%2C+scanning%2C+free-space%2C+fiber+delay+lines%2C+specifications%2C+dispersion%2C+applications" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Foptical_delay_lines.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Foptical_delay_lines.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/optical_delay_lines.html"&gt;<br>Article on Optical Delay Lines&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/optical_delay_lines.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/optical_delay_lines.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/optical_delay_lines.html<br>article on 'Optical Delay Lines' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="https://www.iridian.ca/" data-supplier="Iridian Spectral Technologies" data-location="banner" rel="nofollow" class="bg externallink"><img src="./bg/banners/iridian_spectral_technologies.jpg" alt="Iridian Spectral Technologies"></a>
+</div>
+</aside>
+<script type="text/javascript" nonce="PBkH6vboV9G/X36v6iqVaQ==">shownbanner = "Iridian Spectral Technologies";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Sponsors of the Encyclopedia</h2>
+<p>We are grateful to the <a href="./encyclopedia_sponsoring.html?banner=sponsoring">sponsors</a> of our encyclopedia:</p>
+<div style="margin-top:10px; text-align:center;"><a href="./sponsors/nkt_photonics.html"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a></div>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="PBkH6vboV9G/X36v6iqVaQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/optical_delay_lines.html"
+    },
+    "headline": "Optical Delay Lines",
+    "image": "https://www.rp-photonics.com/previews/optical_delay_lines.png",
+    "datePublished": "2019-03-13",
+    "dateModified": "2020-03-14",
+    "description": "Optical delay lines, often for variable (tunable) time delays, are required for many applications e.g. involving interferometers, autocorrelators and optical sampling. They can be realized with free-space optics, but are also available as fiber delay lines.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter O",
+      "item": "https://www.rp-photonics.com/encyclopedia_o.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "optical delay lines",
+      "item": "https://www.rp-photonics.com/optical_delay_lines.html"
+    }]}
+}
+</script>
+</body>
+</html>

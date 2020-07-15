@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-Zm/JYM2MRUaNTLVAAdz9Gg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - mode locking devices, mode locker, intensity modulators, saturable absorbers, modulator drivers, regenerative feedback</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/mode_locking_devices.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-07-10">
+<meta name="description" content="Both electrically driven modulators and saturable absorbers can be used for mode locking of lasers. The article explains operation principles and the importance of certain device parameters.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="mode locking devices, mode locker, saturable absorbers, modulator drivers, regenerative feedback">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mode Locking Devices">
+<meta property="og:description" content="Both electrically driven modulators and saturable absorbers can be used for mode locking of lasers. The article explains operation principles and the importance of certain device parameters.">
+<meta property="og:url" content="https://www.rp-photonics.com/mode_locking_devices.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/mode_locking_devices.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Both electrically driven modulators and saturable absorbers can be used for mode locking of lasers. The article explains operation principles and the importance of certain device parameters.">
+<meta name="twitter:title" content="Mode Locking Devices">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/mode_locking_devices.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="Zm/JYM2MRUaNTLVAAdz9Gg==">
+page="mode_locking_devices.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="Zm/JYM2MRUaNTLVAAdz9Gg==">shownsponsors="DataRay"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_mode_locking_devices.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_m.html">letter M</a> &gt; <a href="mode_locking_devices.html">mode locking devices</a></p>
+<h1>Mode Locking Devices</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_mode_locking_devices.html?s=vbox">12 suppliers for mode locking devices</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_mode_locking_devices.html?s=vbox">List of suppliers for<br>mode locking devices</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: devices for achieving mode locking of a laser</p>
+<p>Alternative term: mode lockers</p>
+<p>More specific terms: <a href="optical_modulators.html" title="devices allowing one to manipulate properties of light beams, such as the optical power or phase">optical modulators</a>, <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorbers</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Modenkoppler, Komponenten für das Modenkoppeln von Lasern</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<p><a href="encyclopedia_cite.html?article=mode%20locking%20devices">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Using some kind of mode locking device (or <em>mode locker</em>), a <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a> can be forced into the operation regime of <a href="mode_locking.html" title="a group of techniques for generating ultrashort pulses in lasers">mode locking</a>, where it emits a regular train of <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a>.
+For <a href="active_mode_locking.html" title="a technique of mode locking, based on active modulation of the intracavity losses or the round-trip phase change">active mode locking</a>, one requires some kind of <a href="intensity_modulators.html" title="devices which can be used to modulate the intensity (power) of a light beam">intensity modulator</a> or <a href="phase_modulators.html" title="devices for manipulating the phase of a laser beam">phase modulator</a> which is inserted into the <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a>.
+For <a href="passive_mode_locking.html" title="a technique of mode locking, based on a saturable absorber inside the laser resonator">passive mode locking</a>, one uses a <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorber</a>.</p>
+<h2 class="togglediv">Modulators for Active Mode Locking</h2>
+<div>
+<p>In most cases, an <a href="intensity_modulators.html" title="devices which can be used to modulate the intensity (power) of a light beam">intensity modulator</a> is used, which is operated with a sinusoidal drive signal, the frequency of which matches the round-trip frequency of the <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a> and the <a href="pulse_repetition_rate.html" title="the number of pulses emitted per second e.g. by a mode-locked or Q-switched laser">pulse repetition rate</a> of the output.
+(In case of <a href="harmonic_mode_locking.html" title="mode locking of a laser where multiple pulses are circulating in the laser resonator with equal temporal spacing">harmonic mode locking</a>, the drive frequency is an integer multiple of the round-trip frequency.)
+Typically, one uses an <a href="electro_optic_modulators.html" title="optical modulators based on the electro-optic effect">electro-optic modulator</a>, but for <a href="mode_locked_diode_lasers.html" title="diode lasers which are actively, passively or hybrid mode-locked for generating ultrashort pulses">mode-locked diode lasers</a> <a href="electroabsorption_modulators.html" title="optical modulators based on the Franz&ndash;Keldysh effect">electroabsorption modulators</a> can also be a good choice.
+Another possibility is the use of an <a href="acousto_optic_modulators.html" title="optical modulators based on the acousto-optic effect">acousto-optic modulator</a> with a frequency-modulated drive.
+In a <a href="standing_wave_resonators.html" title="optical resonators with two end mirrors">linear resonator</a>, the modulator should be placed close to an end mirror.</p>
+<p>Essentially, the function of the active mode locker is the following (assuming the use of an intensity modulator):</p>
+<ul>
+<li>The circulating pulse passes the modulator at those times where it experiences minimum loss.
+Due to the sinusoidal loss modulation, the temporal wings of the pulses experience slightly higher losses.
+This leads to a slight temporal compression effect, which in the steady state of the laser can compensate for temporal broadening effects, for example from the limited <a href="gain_bandwidth.html" title="the width of the optical frequency range in which significant gain is available from an amplifier">gain bandwidth</a> of the <a href="gain_media.html" title="media for laser amplification">gain medium</a>.</li>
+<li>In case that there is a slight timing error of the circulating pulse, the modulator creates a &ldquo;restoring force&rdquo;, which tends to &ldquo;pull it back&rdquo;.</li>
+<li>The modulator suppresses any other light circulating in the resonator, because while the net round-trip gain for the circulating pulse is zero in the steady state (by <a href="gain_saturation.html" title="the phenomenon that the gain of an amplifier is reduced for high input signal powers">gain saturation</a>), the higher losses at other times lead to a negative net round-trip gain for other light.</li>
+</ul>
+<p>A higher modulation depth helps to obtain a shorter <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a>, but this influence is quite weak, as explained by <a href="kuizenga_siegman_theory.html" title="a theory predicting the durations of pulses from actively mode-locked lasers">Kuizenga&ndash;Siegman theory</a>.
+The tolerance for a resonator length mismatch is also somewhat increased with a higher modulation depth.</p>
+<p>It is also possible to use a <a href="phase_modulators.html" title="devices for manipulating the phase of a laser beam">phase modulator</a>, although it is somewhat more difficult to understand how that can induce mode locking.</p>
+<p>The modulator should not cause any parasitic reflections remaining in the beam path.
+Surfaces which are exactly perpendicular to the beam path should therefore be avoided.</p>
+<p>The <a href="insertion_loss.html" title="power losses due to insertion of a device">insertion loss</a> should of course be as small as possible in order to maintain a good power conversion efficiency of the laser.</p>
+</div>
+<h2 class="togglediv">Modulator Drivers</h2>
+<div>
+<p>Essentially, a modulator driver only needs to produce a sinusoidal drive signal with the correct frequency and an appropriate amplitude for connection to the modulator.
+However, one usually requires some kind of feedback loop to ensure long-term synchronism between the drive signal and the resonator's round-trip time.
+There are essentially two different possible realizations for that feedback loop:</p>
+<ul>
+<li>One may fine-tune the resonator length with piezo actuator, which is for example placed in the mount of a <a href="laser_mirrors.html" title="high-quality mirrors used in laser resonators and other optical setups">laser mirror</a>.
+The laser may then work with an externally given drive frequency, which however can usually be varied only within a small range.</li>
+<li>Instead, one may tune the drive frequency.
+Tuning of the repetition rate is then possible by modifying the resonator length.</li>
+</ul>
+<p>In any case, one needs to generate an error signal, telling the feedback electronics in which way to modify the resonator length of the drive frequency.
+That can be done based on a signal from a fast <a href="photodiodes.html" title="semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiode</a> exposed to some beam split from the output beam, or alternatively using some parasitic transmission of a highly reflecting resonator mirror.
+The method is called <em>regenerative feedback</em>.</p>
+</div>
+<h2 class="togglediv">Saturable Absorbers for Passive Mode Locking</h2>
+<div>
+<h3 class="togglediv">Real Absorbers</h3>
+<div>
+<p>For passive mode locking, one uses a <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorber</a> in the laser resonator, which is in most cases a reflective device inserted as an end mirror of the resonator.
+The essential functions of that absorber are the following:</p>
+<ul>
+<li>It needs to initiate the mode locking.
+Usually, immediately after turn-on the laser will be in <a href="continuous_wave_operation.html" title="operation mode of a laser with continuous light emission">continuous-wave operation</a> with some more or less substantial <a href="intensity_noise.html" title="noise of the optical intensity or power of a laser beam">intensity noise</a>.
+The saturable absorber will always favor the most intense part of the circulating radiation and eventually let only a single pulse &ldquo;survive&rdquo;, typically only after thousands of resonator round trips.</li>
+<li>In the simpler case of a &ldquo;fast&rdquo; absorber, having a recovery time well below the pulse duration, both the leading and trailing temporal wing of the pulse are attenuated, leading to a pulse shortening effect similar to that of an active modulator.
+However, the loss modulation is much faster, since it is driven by the pulse itself.
+Therefore, passive mode locking typically leads to much shorter <a href="pulse_duration.html" title="the duration of an optical pulse">pulse durations</a>.</li>
+<li>Mode locking can also work well with &ldquo;slow&rdquo; absorbers, where the recovery time may be more than 10 times longer than the pulse duration.
+One may expect stability problems due to positive net gain &ldquo;behind&rdquo; the circulating pulse, but in fact stability is given if the recovery time is not too long [7].</li>
+<li>An absorber also suppresses light circulating at other times, which (as long as it is weak enough) cannot saturate the <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorption</a> and therefore experiences higher power losses.</li>
+</ul>
+<p>In most cases, one uses a so-called <a href="semiconductor_saturable_absorber_mirrors.html" title="saturable semiconductor absorber devices acting as nonlinear mirrors">semiconductor saturable absorber mirror</a> (SESAM) [6] for passive mode locking.
+Such devices can be tailored for a wide range of operation parameters, and are therefore successfully used for a wide range of mode-locked lasers concerning pulse durations, pulse repetition rates, optical <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>, output power etc.
+SESAMs can be used both in solid-state <a href="bulk_lasers.html" title="lasers based on bulk crystals as gain media">bulk lasers</a> just as end mirrors, and in <a href="mode_locked_fiber_lasers.html" title="ultrafast fiber lasers which are actively or passively mode-locked for generating ultrashort pulses">mode-locked fiber lasers</a>.
+In the latter case, it is preferable to use a fiber-coupled SESAM, which may either contain a fiber which is simply butted to the semiconductor structure, or a <a href="fiber_collimators.html" title="devices for collimating the light coming from a fiber, or for launching collimated light into the fiber">fiber collimator</a> for operation with larger mode area.</p>
+<p>Essential parameters of a SESAM for mode locking are the following:</p>
+<ul>
+<li>Operation <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>: both the contained <a href="bragg_mirrors.html" title="mirror structures based on Bragg reflection at a period structure">Bragg mirror</a> and the absorber layer(s) must be suitable for the intended operation wavelengths, so that these devices usually work only within a wavelength range with a width of a few tens of nanometers.
+For operation in new wavelength regions, a substantial new device development may be necessary, involving new materials, adapted design parameters etc.</li>
+<li><a href="modulation_depth.html" title="a relative modulation amplitude, or (for a saturable absorber) the maximum change in absorption">Modulation depth</a>: This is the maximum change of reflectivity due to the absorber saturation.
+It should be large enough to safely initiate the mode locking and produce short pulses, but not too large, since otherwise one may obtain a reduced power efficiency, absorber damage or <a href="q_switching_instabilities.html" title="instabilities of passively mode-locked lasers where the pulse energy is unstable">Q-switching instabilities</a>.</li>
+<li>Recovery time: This is the time for the saturated absorption to recover to its normal state.
+Often, it is substantially longer than the pulse duration, but if it is too long, instabilities will result.
+The obtained <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a> will often have little dependence on the absorber recovery time.</li>
+<li><a href="saturation_energy.html" title="a measure of the incident optical pulse energy required for achieving significant saturation of an absorber or a gain medium">Saturation fluence</a>: this together with the beam area determines the <a href="saturation_energy.html" title="a measure of the incident optical pulse energy required for achieving significant saturation of an absorber or a gain medium">saturation energy</a>, which should usually be of the order of a quarter of the circulating pulse energy, or sometimes less.</li>
+</ul>
+<p>Some other types of saturable absorbers are also sometimes used for mode locking, e.g. absorbers based on carbon nanotubes [8,&thinsp;9,&thinsp;11] or graphene.</p>
+</div>
+<h3 class="togglediv">Artificial Saturable Absorbers</h3>
+<div>
+<p>There are also various kinds of <em>artificial saturable absorbers</em>.
+These are devices which exhibit decreasing optical losses for higher intensities, but not based on real light absorption.
+Such devices can be based on e.g.</p>
+<ul>
+<li class="ta_left"><a href="kerr_lens.html" title="a lensing effect arising from the Kerr nonlinearity">Kerr lensing</a> combined with some kind of <a href="optical_apertures.html" title="structures which limit the propagation of light">aperture</a> (&rarr;&nbsp;<a href="kerr_lens_mode_locking.html" title="a technique for mode locking a laser, exploiting nonlinear self-focusing"><em>Kerr lens mode locking</em></a>) [4]</li>
+<li class="ta_left">a nonlinear mirror device containing a <a href="frequency_doubling.html" title="the phenomenon that an input wave in a nonlinear material can generate a wave with twice the optical frequency">frequency-doubling</a> <a href="nonlinear_crystal_materials.html" title="crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">crystal</a>, as sometimes used for passive mode locking of <a href="solid_state_lasers.html" title="lasers based on solid-state gain media (usually ion-doped crystals or glasses)">solid-state</a> <a href="bulk_lasers.html" title="lasers based on bulk crystals as gain media">bulk lasers</a> [1,&thinsp;12]</li>
+<li class="ta_left">a nonlinear fiber within an auxiliary resonator (&rarr;&nbsp;<a href="additive_pulse_mode_locking.html" title="a technique for mode locking a laser, using a nonlinear interaction in an external resonator"><em>additive-pulse mode locking</em></a>) [2]</li>
+<li class="ta_left"><a href="nonlinear_polarization_rotation.html" title="the phenomenon that the change in the polarization direction of light in a fiber can depend on the optical intensity">nonlinear polarization rotation</a> in a <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fiber</a>, combined with a polarizing element, often used for <a href="passive_mode_locking.html" title="a technique of mode locking, based on a saturable absorber inside the laser resonator">passive mode locking</a> of <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber lasers</a> [5]</li>
+<li class="ta_left">a nonlinear <a href="fiber_loop_mirrors.html" title="fiber loops which act as mirrors">fiber loop mirror</a>, also used for mode locking of fiber lasers [3]</li>
+<li class="ta_left">an array of <a href="waveguides.html" title="spatially inhomogeneous transparent structures for guiding light">waveguides</a>, exhibiting nonlinear coupling [10]</li>
+</ul>
+</div>
+<h3 class="togglediv">Choice and Optimization of Saturable Absorbers</h3>
+<div>
+<p>The optimum parameters of a saturable absorber strongly depend on the type of laser and the intended operation regime.
+The choice of absorber parameters should be based on a comprehensive quantitative understanding of the system, because otherwise non-ideal performance parameters or even instabilities can result, in other cases premature absorber degradation or instant destruction.
+Ideally, one should study the intended operation based on a numerical <a href="pulse_propagation_modeling.html" title="working with physical models describing the propagation of ultrashort pulses e.g. in lasers or optical fibers">pulse propagation model</a>.</p>
+</div>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_mode_locking_devices.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 12 suppliers for mode locking devices.</p>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="mode_locking_devices.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">K. A. Stankov, &ldquo;A mirror with an intensity-dependent reflection coefficient&rdquo;, Appl. Phys. B 45, 191 (1988), <a href="https://doi.org/10.1007/BF00695290">doi:10.1007/BF00695290</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">J. Mark <i>et al.</i>, &ldquo;Femtosecond pulse generation in a laser with a nonlinear external resonator&rdquo;, Opt. Lett. 14 (1), 48 (1989), <a href="https://doi.org/10.1364/OL.14.000048">doi:10.1364/OL.14.000048</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">M. E. Fermann <i>et al.</i>, &ldquo;Nonlinear amplifying loop mirror&rdquo;, Opt. Lett. 15 (13), 752 (1990), <a href="https://doi.org/10.1364/OL.15.000752">doi:10.1364/OL.15.000752</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">T. Brabec <i>et al.</i>, &ldquo;Kerr lens mode locking&rdquo;, Opt. Lett. 17 (18), 1292 (1992), <a href="https://doi.org/10.1364/OL.17.001292">doi:10.1364/OL.17.001292</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">M. E. Fermann, &ldquo;Passive mode locking by using nonlinear polarization evolution in a polarization-maintaining erbium-doped fiber&rdquo;, Opt. Lett. 18 (11), 894 (1993), <a href="https://doi.org/10.1364/OL.18.000894">doi:10.1364/OL.18.000894</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">U. Keller <i>et al.</i>, &ldquo;Semiconductor saturable absorber mirrors (SESAMs) for femtosecond to nanosecond pulse generation in solid-state lasers&rdquo;, J. Sel. Top. Quantum Electron. 2, 435 (1996), <a href="https://doi.org/10.1109/2944.571743">doi:10.1109/2944.571743</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">R. Paschotta <i>et al.</i>, &ldquo;Passive mode locking with slow saturable absorbers&rdquo;, Appl. Phys. B 73 (7), 653 (2001), <a href="https://doi.org/10.1007/s003400100726">doi:10.1007/s003400100726</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">S. Y. Set <i>et al.</i>, &ldquo;Laser mode locking using a saturable absorber incorporating carbon nanotubes&rdquo;, J. Lightwave Technol. 22 (1), 51 (2004), <a href="https://doi.org/10.1109/JLT.2003.822205">doi:10.1109/JLT.2003.822205</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">A. Schmidt <i>et al.</i>, &ldquo;Passive mode locking of Yb:KLuW using a single-walled carbon nanotube saturable absorber&rdquo;, Opt. Lett. 33 (7), 729 (2008), <a href="https://doi.org/10.1364/OL.33.000729">doi:10.1364/OL.33.000729</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">D. D. Hudson <i>et al.</i>, &ldquo;Nonlinear femtosecond pulse reshaping in waveguide arrays&rdquo;, Opt. Lett. 33 (13), 1440 (2008), <a href="https://doi.org/10.1364/OL.33.001440">doi:10.1364/OL.33.001440</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">F. Shohda <i>et al.</i>, &ldquo;147&nbsp;fs, 51&nbsp;MHz soliton fiber laser at 1.56&nbsp;&mu;m with a fiber-connector-type SWNT/P3HT saturable absorber&rdquo;, Opt. Express 16 (25), 20943 (2008), <a href="https://doi.org/10.1364/OE.16.020943">doi:10.1364/OE.16.020943</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">I. J. Graumann <i>et al.</i>, &ldquo;Power-scaling of nonlinear-mirror modelocked thin-disk lasers&rdquo;, Opt. Express 27 (26), 37349 (2019), <a href="https://doi.org/10.1364/OE.27.037349">doi:10.1364/OE.27.037349</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="mode_locking.html" title="a group of techniques for generating ultrashort pulses in lasers">mode locking</a>, <a href="electro_optic_modulators.html" title="optical modulators based on the electro-optic effect">electro-optic modulators</a>, <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorbers</a><br>and other articles in the categories <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/mode_locking_devices.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fmode_locking_devices.html&text=RP+Photonics+Encyclopedia+-+mode+locking+devices%2C+mode+locker%2C+intensity+modulators%2C+saturable+absorbers%2C+modulator+drivers%2C+regenerative+feedback" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fmode_locking_devices.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fmode_locking_devices.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/mode_locking_devices.html"&gt;<br>Article on Mode Locking Devices&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/mode_locking_devices.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/mode_locking_devices.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/mode_locking_devices.html<br>article on 'Mode Locking Devices' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Corona Virus Crisis</h2>
+<p>It is interesting and instructive to realize certain analogies between the spread of an epidemic and elementary processes in lasers. In particular, one can <b>learn about the power of expnential growth</b> and the <b>threshold behavior</b>.</p>
+<p style="font-size:130%; margin:20px 0;">Read the article: <br> "<a href="./spotlight_2020_03_16.html?banner=Corona">Laser Physics Helps to Understand the Corona Virus Crisis</a>"!</p>
+<p>Comments are welcome &ndash; see the input form below the article.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="Zm/JYM2MRUaNTLVAAdz9Gg==">shownbanner = "Corona";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Sponsors of the Encyclopedia</h2>
+<p>We are grateful to the <a href="./encyclopedia_sponsoring.html?banner=sponsoring">sponsors</a> of our encyclopedia:</p>
+<div style="margin-top:10px; text-align:center;"><a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/nkt_photonics.html"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo"></a></div>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="Zm/JYM2MRUaNTLVAAdz9Gg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/mode_locking_devices.html"
+    },
+    "headline": "Mode Locking Devices",
+    "image": "https://www.rp-photonics.com/previews/mode_locking_devices.png",
+    "datePublished": "2019-03-27",
+    "dateModified": "2020-07-10",
+    "description": "Both electrically driven modulators and saturable absorbers can be used for mode locking of lasers. The article explains operation principles and the importance of certain device parameters.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter M",
+      "item": "https://www.rp-photonics.com/encyclopedia_m.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "mode locking devices",
+      "item": "https://www.rp-photonics.com/mode_locking_devices.html"
+    }]}
+}
+</script>
+</body>
+</html>

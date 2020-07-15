@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-xdBvBjrx/xZQfCSndJWJdA=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - beam combining, radiance, coherent, incoherent, spectral, high-power laser, power scaling, amplifiers</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/beam_combining.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="The term beam combining denotes a class of techniques for power scaling of laser sources by combining the outputs of multiple sources.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="beam combining, radiance, coherent, incoherent, spectral, high-power laser, power scaling, amplifiers">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Beam Combining">
+<meta property="og:description" content="The term beam combining denotes a class of techniques for power scaling of laser sources by combining the outputs of multiple sources.">
+<meta property="og:url" content="https://www.rp-photonics.com/beam_combining.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/beam_combining.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="The term beam combining denotes a class of techniques for power scaling of laser sources by combining the outputs of multiple sources.">
+<meta name="twitter:title" content="Beam Combining">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/beam_combining.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="xdBvBjrx/xZQfCSndJWJdA==">
+page="beam_combining.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="xdBvBjrx/xZQfCSndJWJdA==">shownsponsors="TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_b.html">letter B</a> &gt; <a href="beam_combining.html">beam combining</a></p>
+<h1>Beam Combining</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_beam_combining_optics.html?s=vbox">32 suppliers for beam combining optics</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.edmundoptics.com/f/dichroic-laser-beam-combiners-8f67c2b5/14451/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="beam combining optics" rel="nofollow" class="bg externallink"><img src="./bg/logos/edmund_optics.png" alt="Edmund Optics" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.eksmaoptics.com/optical-components/dielectric-mirrors/dichroic-mirrors/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="beam combining optics" rel="nofollow" class="bg externallink"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_beam_combining_optics.html?s=vbox">List of suppliers for<br>beam combining optics</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="advicebox">
+<p>Ask <a href="index.html">RP Photonics</a> for advice on high-power laser sources, e.g. concerning the comparison of different technologies, solutions for particular technical problems, etc.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a class of techniques for power scaling of laser sources by combining the outputs of multiple devices</p>
+<p>More specific terms: <a href="coherent_beam_combining.html" title="a class of methods for beam combining, requiring mutual coherence of the combined beams">coherent beam combining</a>, <a href="spectral_beam_combining.html" title="a class of methods for beam combining, based on wavelength-sensitive beam combiners">spectral beam combining</a>, <a href="polarization_beam_combining.html" title="a technique for combining two polarized laser beams">polarization beam combining</a></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<p><a href="encyclopedia_cite.html?article=beam%20combining">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Various laser architectures allow the development of <a href="high_power_lasers.html" title="lasers emitting very high optical powers">high-power laser</a> sources with high <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a>, i.e., high <a href="radiance.html" title="the optical power per unit area and solid angle">radiance</a> (<a href="brightness.html" title="a term mostly used in a qualitative way, related to the output power and beam quality of a laser; quantitatively: often used instead of radiance or luminance">brightness</a>).
+However, all of these approaches have their limitations, and some envisaged <a href="laser_applications.html" title="applications involving laser devices">laser applications</a> would require a higher laser power and brightness than appears to be feasible with any known laser technology.
+Another problem is that very high-power laser systems are developed and built only in small numbers, making the devices fairly expensive.</p>
+<p>A viable solution to these challenges could be the principle of <em>beam combining</em>, which essentially means combining the outputs of multiple laser sources (often in the form of laser arrays) so as to obtain a single output beam.
+The use of a scalable beam-combining technology leads to a <a href="power_scaling_of_lasers.html" title="a procedure for substantially increasing the output power of lasers">power-scalable</a> laser source, even if the single lasers are not scalable.</p>
+<p>The goal of beam combining is generally not only to multiply the output power, but also to preserve the <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a>, so that the radiance is increased (nearly) as much as the output power.
+Therefore, it is generally not sufficient, e.g., to combine mutually incoherent beams side by side, because this would increase the beam area while not decreasing the <a href="beam_divergence.html" title="a measure for how fast a laser beam expands far from its focus">beam divergence</a>, consequently increasing the <a href="beam_parameter_product.html" title="product of the beam radius in a focus and the far-field beam divergence">beam parameter product</a> and reducing the beam quality.</p>
+<p>There are many different approaches for beam combining with increased brightness, but these can all be grouped into one of two categories:</p>
+<ul>
+<li><a href="coherent_beam_combining.html" title="a class of methods for beam combining, requiring mutual coherence of the combined beams"><em>Coherent beam combining</em></a> works with beams which are mutually coherent.
+Coherent <a href="polarization_beam_combining.html" title="a technique for combining two polarized laser beams"><em>polarization beam combining</em></a> is one variant; other techniques are side-by-side combining and filled-aperture combining.
+In the conceptually simplest case, <a href="monochromatic_light.html" title="light with a single optical frequency">monochromatic</a> beams with the same optical frequency are combined.
+However, some schemes of coherent beam combination work with emission on multiple frequencies, with the emission spectra of all emitters being the same.
+That technique can also be applied to broadband <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a>.</li>
+<li><a href="spectral_beam_combining.html" title="a class of methods for beam combining, based on wavelength-sensitive beam combiners"><em>Spectral beam combining</em></a> (also called <em>wavelength beam combining</em> or <em>incoherent beam combining</em>) does not require mutual coherence, but rather uses emitters with non-overlapping optical spectra.
+The single beams are then fed into a wavelength-sensitive beam combiner, such as a <a href="prisms.html" title="transparent optical devices which refract or reflect light">prism</a>, a <a href="diffraction_gratings.html" title="optical components containing a periodic structure which diffracts light">diffraction grating</a>, a <a href="dichroic_mirrors.html" title="mirrors with significantly different reflection or transmission properties at two different wavelengths">dichroic mirror</a>, or a <a href="volume_bragg_gratings.html" title="Bragg gratings written into some bulk material">volume Bragg grating</a>.</li>
+</ul>
+<p>These techniques are discussed in more detail in the corresponding articles.
+They can be applied to various laser sources, e.g., based on <a href="laser_diodes.html" title="semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diodes</a> (particularly <a href="diode_bars.html" title="a type of semiconductor laser containing a one-dimensional array of broad-area emitters">diode bars</a>) and <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifiers</a>, but also to high-power <a href="solid_state_lasers.html" title="lasers based on solid-state gain media (usually ion-doped crystals or glasses)">solid-state</a> <a href="bulk_lasers.html" title="lasers based on bulk crystals as gain media">bulk lasers</a> and <a href="vertical_external_cavity_surface_emitting_lasers.html" title="surface-emitting semiconductor lasers with an external laser resonator">VECSELs</a>.</p>
+<h2 class="togglediv">Comparison of Coherent and Spectral Beam Combining</h2>
+<div>
+<p>Coherent and spectral beam combining techniques are substantially different in various respects:</p>
+<ul>
+<li>Spectral beam combining has the great advantage of not requiring mutual temporal coherence of the combined beams.
+This eliminates some important technical challenges and makes it much easier to obtain stable operation at high power levels.
+It may also be beneficial that a stable polarization is not required in principle, although e.g. the use of <a href="diffraction_gratings.html" title="optical components containing a periodic structure which diffracts light">diffraction gratings</a> often reintroduces this requirement.</li>
+<li>If <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifiers</a> are used, the requirement of <a href="single_frequency_operation.html" title="an operation mode of a laser where only a single resonator mode acquires a significant power">single-frequency operation</a>, which is associated with some techniques of coherent combining, makes it more difficult to reach high power levels, because it favors <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinear effects</a> such as stimulated <a href="brillouin_scattering.html" title="a nonlinear scattering effect involving acoustic phonons">Brillouin scattering</a>.</li>
+<li>Spectral beam combining inevitably generates output beams with several (or many) spectral components, thus spanning a significant optical <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>.
+This means that the <a href="spectral_brightness.html" title="brightness per unit optical bandwidth">spectral brightness</a> is even reduced compared with that of the single emitters.
+This does not matter for some applications while excluding others, where a narrow-<a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a> output is required.</li>
+<li>At least compared with tiled-aperture techniques of coherent beam combining, spectral beam combining makes it easier to combine the beams without any significant loss of beam quality.</li>
+<li>Spectral beam combining is also superior in terms of more <em>graceful degradation</em>, because the failure of one emitter simply reduces the output power accordingly, whereas in the case of tiled-aperture coherent beam combining it also affects the output beam quality and thus reduces the output brightness even more than the power.</li>
+</ul>
+<p>In conclusion, it is to be expected that methods of spectral beam combining will find more widespread application, although coherent methods will in some cases be required, e.g. due to constraints concerning the <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a>.</p>
+</div>
+<h2 class="togglediv">Applications</h2>
+<div>
+<p>It is expected that beam-combined laser systems will in the near future reach output power levels of tens to hundreds of kilowatts.
+Possible <a href="laser_applications.html" title="applications involving laser devices">applications</a> of such systems are often in the military sector, e.g., in the context of anti-missile and other directed energy laser weapons.
+There are also possibilities for long-distance <a href="free_space_optical_communications.html" title="optical data transmission through free space, usually through air or vacuum">free-space optical communications</a> [1] and laser-based manufacturing.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_beam_combining_optics.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 32 suppliers for beam combining optics. Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.edmundoptics.com/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="beam combining optics" rel="nofollow" class="bg externallink" title="Visit the website of Edmund Optics"><img src="./bg/logos/edmund_optics.png" alt="Edmund Optics" class="supplierlogo"></a><a href="http://www.edmundoptics.com/f/dichroic-laser-beam-combiners-8f67c2b5/14451/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="beam combining optics" rel="nofollow" class="bg externallink" title="Visit the website of Edmund Optics"><img src="./bg/products/edmund_optics/beam_combining_optics.jpg" alt="beam combining optics" class="product"></a><h3><a href="./bg/profiles/edmund_optics.html" title="See the profile of Edmund Optics">Edmund Optics</a></h3><p><a href="http://www.edmundoptics.com/f/dichroic-laser-beam-combiners-8f67c2b5/14451/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="beam combining optics" rel="nofollow" class="externallink bg">TECHSPEC&reg; dichroic laser beam combiners</a> are designed to efficiently combine or separate multiple laser beams at a 45° angle of incidence. They feature greater than 98% reflection and greater than 95% transmission at popular laser lines, yielding exceptionally low loss. Constructed from low autofluorescence substrates with hard sputtered coatings, our beam combiners are ideal for multi-laser fluorescence imaging and measurement applications, including laser microscopy and flow cytometry.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.eksmaoptics.com/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="beam combining optics" rel="nofollow" class="bg externallink" title="Visit the website of EKSMA OPTICS"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a><h3><a href="./bg/profiles/eksma_optics.html" title="See the profile of EKSMA OPTICS">EKSMA OPTICS</a></h3><p>Optical components for beam combining: <a href="https://www.eksmaoptics.com/optical-components/dielectric-mirrors/dichroic-mirrors/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="beam combining optics" rel="nofollow" class="externallink bg">dichroic mirrors</a>, <a href="https://www.eksmaoptics.com/optical-components/dielectric-mirrors/dichroic-mirrors-with-high-transmission/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="beam combining optics" rel="nofollow" class="externallink bg">high transmission dichroic mirrors</a> and laser harmonic separators <a href="https://www.eksmaoptics.com/nd-yag-laser-line-components/nd-yag-laser-mirrors/nd-yag-laser-harmonic-separators/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="beam combining optics" rel="nofollow" class="externallink bg">for Nd host lasers</a> as well as <a href="https://www.eksmaoptics.com/femtoline-components/femtoline-mirrors/femtoline-laser-harmonic-separators/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="beam combining optics" rel="nofollow" class="externallink bg">femtosecond Ti:sapphire or Yb:KGW/KYW lasers</a>.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="beam_combining.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">G. S. Mecherle, &ldquo;Laser diode combining for free space optical communication&rdquo;, Proc. SPIE 616, 281 (1986), <a href="https://doi.org/10.1117/12.961064">doi:10.1117/12.961064</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">T. Y. Fan, &ldquo;Laser beam combining for high-power, high-radiance sources&rdquo;, JSTQE 11 (3), 567 (2005), <a href="https://doi.org/10.1109/JSTQE.2005.850241">doi:10.1109/JSTQE.2005.850241</a> (review paper)</td></tr>
+<tr><td class="refno">[3]</td><td class="refs">Special issue on beam combining: IEEE Sel. Top. Quantum Electron. 15 (2) (2009)</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="coherent_beam_combining.html" title="a class of methods for beam combining, requiring mutual coherence of the combined beams">coherent beam combining</a>, <a href="spectral_beam_combining.html" title="a class of methods for beam combining, based on wavelength-sensitive beam combiners">spectral beam combining</a>, <a href="power_scaling_of_lasers.html" title="a procedure for substantially increasing the output power of lasers">power scaling of lasers</a>, <a href="high_power_lasers.html" title="lasers emitting very high optical powers">high-power lasers</a>, <a href="high_power_fiber_lasers_and_amplifiers.html" title="fiber lasers and fiber amplifiers with high output powers of e.g. &gt;&thinsp;10&thinsp;&thinsp;W">high-power fiber lasers and amplifiers</a>, <a href="coherence.html" title="a fixed phase relationship between the electric field values at different locations or at different times">coherence</a><br>and other articles in the categories <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/beam_combining.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fbeam_combining.html&text=RP+Photonics+Encyclopedia+-+beam+combining%2C+radiance%2C+coherent%2C+incoherent%2C+spectral%2C+high-power+laser%2C+power+scaling%2C+amplifiers" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fbeam_combining.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fbeam_combining.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/beam_combining.html"&gt;<br>Article on Beam Combining&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/beam_combining.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/beam_combining.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/beam_combining.html<br>article on 'Beam Combining' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2 style="font-size:20px;">Debugging Is Now Fun!</h2>
+<p>The software products which are supporting our <a href="./software_script_language.html?banner=Debugger">script language</a> (e.g. <a href="./fiberpower.html?banner=Debugger">RP Fiber Power</a> and <a href="./coating.html?banner=Debugger">RP Coating</a>) have now got a <a href="./software_news_2017_05_31.html?banner=Debugger">powerful debugger</a>!</p>
+<a href="./software_news_2017_05_31.html?banner=Debugger"><img src="./img/expression_debugger_small.png" alt="debugger" style="margin:10px 0;"></a>
+<p>It works even within expressions, not only after each command!</p>
+<p>The <a href="./software_news.html?banner=Debugger">RP Photonics Software News</a> keep you informed.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="xdBvBjrx/xZQfCSndJWJdA==">shownbanner = "Debugger";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Numerical Modeling</h2>
+<p>Developing devices or systems in photonics requires a <b>comprehensive quantitative understanding</b> &ndash; otherwise, it becomes inefficient, waisting time and money.</p>
+<p><a href="./laser_modeling.html?banner=numerical_modeling">Numerical modeling</a> is often the most efficient way towards results:</p>
+<ul>
+<li>understand <em>quantitatively</em> what is going on</li>
+<li>check the influence of design changes or possible detrimental effects</li>
+<li>understand strange experimental observations</li>
+<li>find optimized designs more reliably and faster</li>
+</ul>
+<p style="text-align:center; margin:10px 0;"><a href="./laser_modeling.html?banner=numerical_modeling"><img src="./img/modeling.png" width="234" height="91" alt="laser modeling"></a></p>
+<h3>How to Get Your Modeling Done?</h3>
+<p>We offer both <a href="./consulting.html?banner=numerical_modeling">technical consultancy</a> and powerful <a href="./software.html?banner=numerical_modeling">simulation software</a>.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="xdBvBjrx/xZQfCSndJWJdA==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/beam_combining.html"
+    },
+    "headline": "Beam Combining",
+    "image": "https://www.rp-photonics.com/previews/beam_combining.png",
+    "datePublished": "2007-03-01",
+    "dateModified": "2020-03-14",
+    "description": "The term beam combining denotes a class of techniques for power scaling of laser sources by combining the outputs of multiple sources.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter B",
+      "item": "https://www.rp-photonics.com/encyclopedia_b.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "beam combining",
+      "item": "https://www.rp-photonics.com/beam_combining.html"
+    }]}
+}
+</script>
+</body>
+</html>

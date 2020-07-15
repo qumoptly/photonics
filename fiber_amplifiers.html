@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-IOAYj+scZNaLyApmE2kT2w=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - fiber amplifiers, EDFA, YDFA, TDFA, amplifier modules, saturation, ASE, fiber optics</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/fiber_amplifiers.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-05-05">
+<meta name="description" content="Fiber amplifiers are optical amplifiers with doped fibers as gain media. Erbium-doped and ytterbium-doped fiber amplifiers are the most important types.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="fiber amplifiers, EDFA, YDFA, TDFA, amplifier modules, saturation, ASE, fiber optics">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fiber Amplifiers">
+<meta property="og:description" content="Fiber amplifiers are optical amplifiers with doped fibers as gain media. Erbium-doped and ytterbium-doped fiber amplifiers are the most important types.">
+<meta property="og:url" content="https://www.rp-photonics.com/fiber_amplifiers.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/fiber_amplifiers.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Fiber amplifiers are optical amplifiers with doped fibers as gain media. Erbium-doped and ytterbium-doped fiber amplifiers are the most important types.">
+<meta name="twitter:title" content="Fiber Amplifiers">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/fiber_amplifiers.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="IOAYj+scZNaLyApmE2kT2w==">
+page="fiber_amplifiers.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="IOAYj+scZNaLyApmE2kT2w==">shownsponsors="El.En."</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_fiber_amplifiers.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_f.html">letter F</a> &gt; <a href="fiber_amplifiers.html">fiber amplifiers</a></p>
+<h1>Fiber Amplifiers</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_fiber_amplifiers.html?s=vbox">50 suppliers for fiber amplifiers</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.keopsys.com/products-services-lasers-amplifiers/" data-supplier="Lumibird" data-location="product-enc" data-keyword="fiber amplifiers" rel="nofollow" class="bg externallink"><img src="./bg/logos/lumibird.png" alt="Lumibird" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.rpmclasers.com/amplifier-type/fiber-amplifiers/" data-supplier="RPMC Lasers" data-location="product-enc" data-keyword="fiber amplifiers" rel="nofollow" class="bg externallink"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_fiber_amplifiers.html?s=vbox">List of suppliers for<br>fiber amplifiers</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="boxadvertisement">
+<h2>Analyzing and Designing Fiber Amplifiers</h2>
+<p>The software <a href="fiberpower.html"><b>RP Fiber Power</b></a> can be used for analyzing and optimizing fiber amplifiers.</p>
+<figure>
+<img src="img/fiberpower_ase.png" alt="ASE in Yb-doped fiber amplifier">
+</figure>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: optical amplifiers with doped fibers as gain media</p>
+<p>More general term: <a href="optical_amplifiers.html" title="devices for amplifying the power of light beams">optical amplifiers</a></p>
+<p>More specific terms: <a href="erbium_doped_fiber_amplifiers.html" title="fiber amplifiers based on erbium-doped optical fibers">erbium-doped fiber amplifiers</a>, <a href="high_power_fiber_lasers_and_amplifiers.html" title="fiber lasers and fiber amplifiers with high output powers of e.g. &gt;&thinsp;10&thinsp;&thinsp;W">high-power fiber amplifiers</a>, <a href="optical_parametric_amplifiers.html" title="optical amplifiers based on parametric nonlinear interactions">fiber-optic parametric amplifiers</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Faserverstärker</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#fiber_optics_and_waveguides" title="other articles on fiber optics and waveguides">fiber optics and waveguides</a>, <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#optical_amplifiers" title="other articles on optical amplifiers">optical amplifiers</a>, <a href="categories.html#lightwave_communications" title="other articles on lightwave communications">lightwave communications</a></p>
+<p><a href="encyclopedia_cite.html?article=fiber%20amplifiers">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Fiber amplifiers are optical <a href="optical_amplifiers.html" title="devices for amplifying the power of light beams">amplifiers</a> based on optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a> as <a href="gain_media.html" title="media for laser amplification">gain media</a>.
+In most cases, the gain medium is a glass fiber <a href="rare_earth_doped_fibers.html" title="optical glass fibers which are doped with rare earth ions">doped with rare earth ions</a> such as <a href="erbium_doped_gain_media.html" title="laser gain media doped with erbium ions">erbium</a> (EDFA = <a href="erbium_doped_fiber_amplifiers.html" title="fiber amplifiers based on erbium-doped optical fibers"><em>erbium-doped fiber amplifier</em></a>), <a href="neodymium_doped_gain_media.html" title="laser gain media containing laser-active neodymium ions">neodymium</a>, <a href="ytterbium_doped_gain_media.html" title="laser gain media containing laser-active ytterbium ions">ytterbium</a> (<em>YDFA</em>), praseodymium, or thulium.
+This active dopant is <a href="optical_pumping.html" title="electronically exciting a medium with light, or specifically populating certain electronic levels">pumped</a> (provided with energy) with light from a <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a>, such as a <a href="fiber_coupled_diode_lasers.html" title="diode laser devices where the generated light is coupled into an optical fiber">fiber-coupled diode laser</a>; in almost all cases, the pump light propagates through the fiber core together with the signal to be amplified.
+A special type of fiber amplifiers are <a href="raman_amplifiers.html" title="optical amplifiers based on Raman gain">Raman amplifiers</a> (see below).</p>
+<p>The originally dominating application of fiber amplifiers was in <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a> over large distances, where signals need to be periodically amplified.
+Typically, one uses <a href="erbium_doped_fiber_amplifiers.html" title="fiber amplifiers based on erbium-doped optical fibers">erbium-doped fiber amplifiers</a> with signals of moderate <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a> in the 1.5-&mu;m spectral regions.
+Often, many different wavelength channels are simultaneously amplified in a single fiber amplifier (&rarr;&nbsp;<a href="wavelength_division_multiplexing.html" title="a multiplexing technique working in the wavelength domain"><em>wavelength division multiplexing</em></a>).</p>
+<p>Other important application areas of fiber amplifiers have been developed later.
+In particular, <a href="high_power_fiber_lasers_and_amplifiers.html" title="fiber lasers and fiber amplifiers with high output powers of e.g. &gt;&thinsp;10&thinsp;&thinsp;W">high-power fiber amplifiers</a> have been developed which can produce output powers of hundreds of watts or even many kilowatts.
+Such amplifier are now widely used in laser material processing, replacing <a href="solid_state_lasers.html" title="lasers based on solid-state gain media (usually ion-doped crystals or glasses)">solid-state</a> <a href="bulk_lasers.html" title="lasers based on bulk crystals as gain media">bulk lasers</a> and <a href="co2_lasers.html" title="infrared lasers based on a gas mixture in which light is amplified by carbon dioxide molecules">CO<sub>2</sub> lasers</a>, for example.
+Typically, they are based on <a href="ytterbium_doped_gain_media.html" title="laser gain media containing laser-active ytterbium ions">ytterbium-doped</a> <a href="double_clad_fibers.html" title="optical fibers with different waveguide structures for pump and signal light">double-clad fibers</a> for signals in the spectral region of 1.03&ndash;1.1&nbsp;&mu;m.</p>
+<p>It is often very convenient (e.g. in <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a>) that light from a fiber can easily be sent into a fiber amplifier, and the amplified light can be sent into further transmission fiber.
+Besides the active (amplifying) fiber, some additional components may be used, e.g. dichroic <a href="fiber_couplers.html" title="fiber devices for coupling light from one or several input fibers to one or several output fibers, or from free space into a fiber">fiber couplers</a> and <a href="faraday_isolators.html" title="optical isolators based on the Faraday effect">Faraday isolators</a> (see Figure&nbsp;1).</p>
+<figure>
+<img src="img/fiber_amplifier.png" alt="erbium-doped fiber amplifier">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Schematic setup of a simple <a href="erbium_doped_fiber_amplifiers.html" title="fiber amplifiers based on erbium-doped optical fibers">erbium-doped fiber amplifier</a>.
+Two laser diodes (LDs) provide the pump power for the erbium-doped fiber, allowing it to amplify light with wavelength around 1550&nbsp;nm.
+Two pig-tailed <a href="faraday_isolators.html" title="optical isolators based on the Faraday effect">Faraday isolators</a> strongly reduce the sensitivity of the device to back-reflections.
+</figcaption>
+</figure>
+<h2 class="togglediv">Gain and Output Power</h2>
+<div>
+<p>Due to the possible small mode area and long length of an optical fiber, a high <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> of tens of <a href="decibel.html" title="a logarithmic measure for power ratios, applied e.g. to optical powers or to noise powers">decibels</a> can be achieved with a moderate pump power, i.e., the <a href="gain_efficiency.html" title="small-signal gain of an optical amplifier per unit pump power or per unit stored energy">gain efficiency</a> can be very high (particularly for low-power devices).
+The gain achievable is often limited by ASE (see below).
+The high surface-to-volume ratio and the robust <a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode guidance</a> also allow for very high output powers with <a href="diffraction_limited_beams.html" title="beams with a minimum possible beam divergence for a given waist radius">diffraction-limited</a> <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a>, particularly when <a href="double_clad_fibers.html" title="optical fibers with different waveguide structures for pump and signal light">double-clad fibers</a> are used.
+However, <a href="high_power_fiber_lasers_and_amplifiers.html" title="fiber lasers and fiber amplifiers with high output powers of e.g. &gt;&thinsp;10&thinsp;&thinsp;W">high-power fiber amplifiers</a> usually have a moderate gain in the final stage, partly due to power efficiency issues; one then uses <a href="amplifier_chains.html" title="amplifiers consisting of several stages">amplifier chains</a> where the preamplifier provides most of the gain and a final stage the high output power.</p>
+</div>
+<h2 class="togglediv">Saturation Characteristics</h2>
+<div>
+<p>In terms of <a href="gain_saturation.html" title="the phenomenon that the gain of an amplifier is reduced for high input signal powers">gain saturation</a>, fiber amplifiers are very different from <a href="semiconductor_optical_amplifiers.html" title="optical amplifiers based on semiconductor gain media">semiconductor optical amplifiers</a> (SOAs).
+Due to the small <a href="transition_cross_sections.html" title="material parameters for quantifying the likelihood or rate of optical transition events">transition cross sections</a>, the <a href="saturation_energy.html" title="a measure of the incident optical pulse energy required for achieving significant saturation of an absorber or a gain medium">saturation energy</a> is fairly high, e.g. some tens of microjoules for a typical <a href="erbium_doped_gain_media.html" title="laser gain media doped with erbium ions">erbium-doped</a> telecom amplifier, or hundreds of microjoules for a <a href="large_mode_area_fibers.html" title="optical fibers with relatively large mode areas and a single transverse mode or only a few modes">large mode area</a> ytterbium-doped amplifier.
+As a result, significant energy (sometimes several millijoules) can be stored in a fiber amplifier, and can later be extracted e.g. by a single short <a href="pulses.html" title="flashes of light">pulse</a>.
+Only for output pulse energies above the saturation energy, <a href="nonlinear_pulse_distortion.html" title="distortion of the spatial, temporal or spectral characteristics of an optical pulse, resulting from optical nonlinearities">pulse distortions</a> through saturation become significant.
+For amplifying the output of a <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked laser</a>, the gain saturation is normally the same as for a continuous-wave laser with the same average power.</p>
+<p>These saturation characteristics are also important for <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a>, because they prevent any intersymbol interference as can occur with <a href="semiconductor_optical_amplifiers.html" title="optical amplifiers based on semiconductor gain media">semiconductor optical amplifiers</a>.</p>
+<p>Fiber amplifiers are often operated in the strongly saturated regime.
+This allows for the highest output power, and the effect of slight variations of pump power on the signal output power is substantially reduced.</p>
+</div>
+<h2 class="togglediv">ASE and Noise</h2>
+<div>
+<p>The gain achievable is often limited not by the available pump power, but by <a href="amplified_spontaneous_emission.html" title="a process where spontaneously emitted radiation (luminescence) is amplified">amplified spontaneous emission</a> (ASE).
+This can become relevant for gains roughly exceeding 40&nbsp;dB.
+High-gain amplifiers also need to be protected from any parasitic reflections, because these could lead to <a href="parasitic_lasing.html" title="unwanted laser operation in a laser or amplifier device">parasitic laser oscillation</a> or even to <a href="laser_induced_damage.html" title="damage of optical components induced by laser radiation">fiber damage</a>, and are therefore often equipped with optical isolators at the output and possibly also at the input.</p>
+<p>ASE also provides the fundamental limitation of the <a href="amplifier_noise.html" title="noise introduced to a signal in an amplifier device">amplifier noise</a> properties.
+While the excess noise of a loss-less <a href="four_level_and_three_level_gain_media.html" title="laser gain media without/with reabsorption from the lower laser level">four-level amplifier</a> can approach the theoretical limit, corresponding e.g. to a <a href="noise_figure.html" title="a measure of the excess noise added in an amplifier">noise figure</a> of 3&nbsp;dB in the case of high gain, the excess noise can be stronger for the usual <a href="four_level_and_three_level_gain_media.html" title="laser gain media without/with reabsorption from the lower laser level">quasi-three-level gain media</a> and in the presence of extra losses.
+Note that ASE and excess noise are often stronger in backward-pumped amplifiers.</p>
+<p>Noise introduced by the pump source may also be an issue.
+It can directly affect the gain and thus the signal output power, but not for noise frequencies substantially above the inverse <a href="upper_state_lifetime.html" title="the lifetime of the population of the upper laser level">upper-state lifetime</a>.
+(The laser-active ions represents an energy reservoir which can effectively reduce the effect of fast power fluctuations.)
+A variable pump power can also lead to temperature-dependent heating which translates into <a href="phase_noise.html" title="noise of the optical phase of a beam or of an electric signal">phase noise</a>.</p>
+<p>ASE itself may be utilized for <a href="superluminescent_sources.html" title="optical sources based on superluminescence">superluminescent sources</a> with very low temporal <a href="coherence.html" title="a fixed phase relationship between the electric field values at different locations or at different times">coherence</a>, as required e.g. for <a href="optical_coherence_tomography.html" title="an optical imaging technique where longitudinal resolution is achieved based on interference effects with low-coherence light">optical coherence tomography</a>.
+A superluminescent source has to contain little more than a high-gain fiber amplifier.</p>
+</div>
+<h2 class="togglediv">Amplifier Modeling</h2>
+<div>
+<p>It is possible to model (&rarr;&nbsp;<a href="laser_modeling.html" title="the investigation of phenomena and quantitative relations in lasers, using theoretical models and computational methods"><em>laser modeling</em></a>) the essential performance aspects of fiber amplifiers in various ways, normally using suitable <a href="fiber_simulation_software.html" title="software for numerical simulations on fiber devices">fiber simulation software</a>.
+Part of such a model is typically a set of <a href="rate_equation_modeling.html" title="a method of modeling the dynamics of laser gain media">rate equations</a>, with which the population densities for given signal and pump intensities can be calculated.
+Such a rate equation model may be incorporated in a more comprehensive model which then calculates the optical powers along the fiber.</p>
+<p>Applications of amplifier models are manifold.
+For example, it is possible to quantify various detrimental effects on the amplifier performance, and use such results for optimizing the fiber parameters or other aspects of the amplifier design.</p>
+<p>Although basic properties of a fiber amplifier can be calculated analytically, a full quantitative understanding is normally possible only with numerical simulations.
+These can take into account various details such as the <a href="four_level_and_three_level_gain_media.html" title="laser gain media without/with reabsorption from the lower laser level">quasi-three-level behavior</a>, strong <a href="gain_saturation.html" title="the phenomenon that the gain of an amplifier is reduced for high input signal powers">gain saturation</a> (with optical powers often being far higher than the <a href="saturation_power.html" title="a measure of the incident optical power required for achieving significant saturation of an absorber or a gain medium">saturation powers</a>), <a href="amplified_spontaneous_emission.html" title="a process where spontaneously emitted radiation (luminescence) is amplified">amplified spontaneous emission</a> (ASE) due to the high optical <a href="gain.html" title="a measure of the strength of optical amplification">gain</a>, and possibly <a href="energy_transfer.html" title="the phenomenon that dopant ions in laser-active media can exchange excitation energy among each other">energy transfer</a> process for sophisticated situations e.g. with erbium-ytterbium-doped fibers.</p>
+<p>Even in simple cases, relatively complex behavior can result.
+Figure&nbsp;2 shows an example, where a simple <a href="ytterbium_doped_gain_media.html" title="laser gain media containing laser-active ytterbium ions">ytterbium-doped</a> fiber amplifier is pumped at 940&nbsp;nm.
+The decay of pump power in the device is first quite fast, then slower, and finally faster again.
+This results from <a href="gain_saturation.html" title="the phenomenon that the gain of an amplifier is reduced for high input signal powers">gain saturation</a> by ASE.
+Forward ASE is partially reabsorbed before it reaches the right end.</p>
+<figure>
+<img src="img/fiber_amplifier1.png" alt="ASE in fiber amplifier">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+An ytterbium-doped fiber amplifier with a pump wave input only.
+ASE in forward and backward direction keep the ytterbium excitation lower at both ends.
+Therefore, the <a href="pump_absorption.html" title="the absorption of pump light, e.g. in a laser or a laser amplifier">pump absorption</a> varies substantially.
+The simulation has been done with the software <a href="fiberpower.html"><b>RP Fiber Power</b></a>.
+</figcaption>
+</figure>
+<p>Figure&nbsp;3 shows the ASE spectra for the forward and backward direction.
+One recognizes that the ASE in the 1030-nm region is quite similar in both directions, whereas strong 975-nm ASE occurs only in backward direction.
+That pronounced asymmetry is related to the fact that the right end of the fiber, being only weakly pumped, provides a seed for backward ASE by spontaneous emission, even though the gain at 975&nbsp;nm is substantially negative there.</p>
+<figure>
+<img src="img/fiber_amplifier2.png" alt="ASE in fiber amplifier">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Spectra of forward and backward ASE in the fiber amplifier as above.
+</figcaption>
+</figure>
+<p>If we now also inject a 1-mW input signal at 1030&nbsp;nm, gain saturation keeps the ASE at a lower level, and most of the power can be extracted with the signal (see Figure&nbsp;4).</p>
+<figure>
+<img src="img/fiber_amplifier3.png" alt="ASE in fiber amplifier">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+With a 1-mW signal input, ASE is kept down.
+</figcaption>
+</figure>
+<p>Even this simple example exhibits various sophisticated details, which can hardly be understood without numerical simulations.
+For cases with erbium-ytterbium energy transfers, <a href="double_clad_fibers.html" title="optical fibers with different waveguide structures for pump and signal light">double-clad fibers</a>, pulsed amplification, etc., this is even more the case.</p>
+</div>
+<h2 class="togglediv">Neodymium and Ytterbium Fiber Amplifiers</h2>
+<div>
+<p>Fiber amplifiers based on <a href="ytterbium_doped_gain_media.html" title="laser gain media containing laser-active ytterbium ions">ytterbium-</a> or <a href="neodymium_doped_gain_media.html" title="laser gain media containing laser-active neodymium ions">neodymium-doped</a> <a href="double_clad_fibers.html" title="optical fibers with different waveguide structures for pump and signal light">double-clad fibers</a> can be used to boost the output power of 1-&mu;m laser sources to very high levels of up to several kilowatts (&rarr;&nbsp;<a href="high_power_fiber_lasers_and_amplifiers.html" title="fiber lasers and fiber amplifiers with high output powers of e.g. &gt;&thinsp;10&thinsp;&thinsp;W"><em>high-power fiber lasers and amplifiers</em></a>).
+The broad <a href="gain_bandwidth.html" title="the width of the optical frequency range in which significant gain is available from an amplifier">gain bandwidth</a> is also suitable for the amplification of <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a> (&rarr;&nbsp;<a href="ultrafast_amplifiers.html" title="amplifiers for ultrashort (femtosecond or picosecond) optical pulses"><em>ultrafast amplifiers</em></a>); limitations arise from fiber <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a> such as the <a href="kerr_effect.html" title="a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization">Kerr effect</a> and <a href="raman_scattering.html" title="a nonlinear scattering process involving optical phonons">Raman effect</a> (see below).
+<a href="single_frequency_operation.html" title="an operation mode of a laser where only a single resonator mode acquires a significant power">Single-frequency</a> signals can also be amplified to high powers; in this case, stimulated <a href="brillouin_scattering.html" title="a nonlinear scattering effect involving acoustic phonons">Brillouin scattering</a> usually sets the limits.</p>
+<p>Neodymium-based amplifiers can also be used in the 1.3-&mu;m spectral region, but with less favorable performance figures [4].</p>
+</div>
+<h2 class="togglediv">Erbium Fiber Amplifiers</h2>
+<div>
+<p>Fiber amplifiers based on erbium-doped <a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode fibers</a> (EDFAs) are widely used in long-range <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communication</a> systems for compensating the loss of long fiber spans.
+See the article on <a href="erbium_doped_fiber_amplifiers.html" title="fiber amplifiers based on erbium-doped optical fibers">erbium-doped fiber amplifiers</a> for more details.</p>
+</div>
+<h2 class="togglediv">Thulium Fiber Amplifiers</h2>
+<div>
+<p>Thulium-doped <a href="fluoride_fibers.html" title="optical fibers based on fluoride glasses">fluoride fibers</a> (<em>TDFA = thulium-doped amplifier</em>) pumped around 1047 or 1400&nbsp;nm can be used for amplification in the telecom <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">S band</a> around 1460&ndash;1530&nbsp;nm, or even around 1.65&nbsp;&mu;m.
+Combined thulium&ndash;erbium amplifiers can thus provide optical amplification in a very wide wavelength range.</p>
+<p>There are also thulium-doped amplifiers for the <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">first telecom window</a>, operating at &asymp;&thinsp;800&ndash;850&nbsp;nm.</p>
+</div>
+<h2 class="togglediv">Praseodymium Fiber Amplifiers</h2>
+<div>
+<p>Fiber amplifiers for the second <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">telecom window</a> around 1.3&nbsp;&mu;m are also available [7,&thinsp;9], but have a lower performance compared with that of erbium-doped amplifiers.
+They can be based on praseodymium-doped fluoride fibers (<em>PDFA = praseodymium-doped amplifier</em>), which are pumped around 1020&nbsp;nm (a relatively inconvenient pump wavelength) or at 1047&nbsp;nm (with a <a href="ylf_lasers.html" title="lasers based on YLF (yttrium lithium fluoride) crystals, usually Nd:YLF">YLF laser</a>).</p>
+</div>
+<h2 class="togglediv">Some Design Issues</h2>
+<div>
+<h3 class="togglediv">Forward and Backward Pumping</h3>
+<div>
+<p>Fiber amplifiers can be pumped in forward direction (i.e. with a pump wave copropagating with the signal wave), in the backward direction, or bidirectionally.
+The direction of the pump wave does not influence the small-signal gain, but the power efficiency of the saturated amplifier and also the <a href="amplifier_noise.html" title="noise introduced to a signal in an amplifier device">noise</a> characteristics.
+Bidirectional pumping can be a way not only to apply a high pump power, but also to achieve a low <a href="noise_figure.html" title="a measure of the excess noise added in an amplifier">noise figure</a> and a high power efficiency at the same time.</p>
+</div>
+<h3 class="togglediv">Quasi-three-level Gain Media</h3>
+<div>
+<p>Most fiber amplifiers (e.g. those based on erbium and ytterbium) operate on <a href="four_level_and_three_level_gain_media.html" title="laser gain media without/with reabsorption from the lower laser level">quasi-three-level transitions</a> (neodymium-doped amplifiers are a notable exception).
+This means that in the unpumped state such amplifiers exhibit some losses caused by the active ions; only when a certain excitation level is exceeded, does actual amplification take place.
+The quasi-three-level nature also has implications for <a href="amplifier_noise.html" title="noise introduced to a signal in an amplifier device">amplifier noise</a>, in particular an increased <a href="noise_figure.html" title="a measure of the excess noise added in an amplifier">noise figure</a>, which however can be minimized by certain design optimizations.</p>
+</div>
+<h3 class="togglediv">Optical Nonlinearities</h3>
+<div>
+<p>Optical <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a> such as the <a href="kerr_effect.html" title="a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization">Kerr effect</a> can be significant in fiber amplifiers, particularly for those amplifying <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a> (&rarr;&nbsp;<a href="ultrafast_amplifiers.html" title="amplifiers for ultrashort (femtosecond or picosecond) optical pulses"><em>ultrafast amplifiers</em></a>).
+This can lead to strong <a href="self_phase_modulation.html" title="nonlinear phase modulation of a beam, caused by its own intensity via the Kerr effect">self-phase modulation</a>, but also to excessive <a href="raman_gain.html" title="optical gain arising from stimulated Raman scattering">Raman gain</a> and thus to the generation of a strong first-order Stokes wave at a wavelength some tens of nanometers longer than that of the amplified signal.
+For <a href="single_frequency_operation.html" title="an operation mode of a laser where only a single resonator mode acquires a significant power">single-frequency operation</a>, stimulated <a href="brillouin_scattering.html" title="a nonlinear scattering effect involving acoustic phonons">Brillouin scattering</a> is the most important nonlinearity.</p>
+<p>The effect of the nonlinearity can be reduced e.g. by increasing the fiber <a href="effective_mode_area.html" title="a quantitative measure of the area which a waveguide or fiber mode effectively covers in the transverse dimensions">mode area</a> (but at the expense of a lower gain efficiency and possibly worse beam quality) or by decreasing the fiber length.
+The latter measure becomes possible when using a fiber with higher <a href="doping_concentration.html" title="the concentration of some dopant, e.g. of laser-active ions in a laser gain medium">doping concentration</a>, but this can lead to concentration <a href="quenching.html" title="the reduction or limitation of an excited-state population, mostly by unwanted effects">quenching</a>.</p>
+</div>
+<h3 class="togglediv">Chirped-pulse Amplification</h3>
+<div>
+<p>A technique for radically reducing nonlinear effects is <a href="chirped_pulse_amplification.html" title="a technique for amplifying pulses to very high optical intensities while avoiding excessive nonlinear pulse distortions or optical damage">chirped-pulse amplification</a>, where pulses are strongly dispersively <a href="pulse_stretchers.html" title="devices for temporally stretching ultrashort light pulses">stretched</a> before entering the amplifier and subsequently compressed again.
+All-fiber setups using that technique (with a <a href="fiber_bragg_gratings.html" title="reflective structures in the core of an optical fiber with a periodic or aperiodic perturbation of the effective refractive index">fiber Bragg grating</a> as the compressor) can generate femtosecond pulses only with energies well below 1&nbsp;&mu;J, leading to peak powers in the kilowatt region.
+Substantially higher peak powers of the order of 100&nbsp;MW are possible when using bulk-optical elements in addition to a fiber amplifier based on <a href="large_mode_area_fibers.html" title="optical fibers with relatively large mode areas and a single transverse mode or only a few modes">large mode area fiber</a>, but some characteristic advantages of fiber-optic systems are lost with that approach.
+Compared with fully bulk-optical systems, the use of amplifying fibers has the advantage that sufficient single-pass gain is achievable so that the principle of a <a href="regenerative_amplifiers.html" title="optical amplifiers with a resonator in which a light pulse can do multiple round trips before being coupled out">regenerative amplifier</a> does not need to be used.</p>
+</div>
+<h3 class="togglediv">Multi-stage Amplifiers</h3>
+<div>
+<p>In some cases, a multi-stage amplifier, i.e., an <a href="amplifier_chains.html" title="amplifiers consisting of several stages">amplifier chain</a>, needs to be realized.
+This allows e.g. <a href="amplified_spontaneous_emission.html" title="a process where spontaneously emitted radiation (luminescence) is amplified">ASE</a> suppression with <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">filters</a> or <a href="optical_modulators.html" title="devices allowing one to manipulate properties of light beams, such as the optical power or phase">modulators</a> between the stages, an optimized power efficiency and noise figure, and possibly a modular approach which increases the flexibility for further amplifier developments.</p>
+</div>
+<h3 class="togglediv">Polarization Issues</h3>
+<div>
+<p>Most fiber amplifiers are not made of <a href="polarization_maintaining_fibers.html" title="specialty optical fibers with strong built-in birefringence, preserving the properly oriented linear polarization of an input beam">polarization-maintaining fibers</a>, so they do not preserve the polarization state of the input.
+On the other hand, the amplification process itself is normally not polarization-dependent; this is an advantage over <a href="semiconductor_optical_amplifiers.html" title="optical amplifiers based on semiconductor gain media">semiconductor optical amplifiers</a> for use in <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">telecommunications</a>.
+In some cases, however, polarization hole burning can cause problems.</p>
+</div>
+</div>
+<h2 class="togglediv">Fiber Amplifier Modules</h2>
+<div>
+<p>Some companies offer OEM fiber amplifier modules which can be convenient for system integrators.
+Input and output are then often attached with the usual <a href="fiber_connectors.html" title="connectors used as terminations of optical fiber cables">fiber connectors</a>.
+A compact module contains not only the actual fiber amplifier(s), but also the control electronics for the pump diodes, and possibly extras such as an input and/or output <a href="optical_power_monitors.html" title="devices for monitoring optical powers in free-space light beams or in optical fibers">optical power monitor</a>, power stabilization, alarms, <a href="gain_equalization.html" title="a technique for making the gain spectrum of an optical amplifier device flatter over a certain optical frequency range">gain-flattening filters</a>, etc.
+Such amplifier modules are available based on <a href="erbium_doped_fiber_amplifiers.html" title="fiber amplifiers based on erbium-doped optical fibers">erbium-doped</a> fibers, ytterbium-doped fibers, and others, and for various power levels.</p>
+</div>
+<h2 class="togglediv">Raman Fiber Amplifiers</h2>
+<div>
+<p>Raman amplifiers are based not on a laser amplification process, but on <a href="raman_scattering.html" title="a nonlinear scattering process involving optical phonons">Raman scattering</a> in a fiber.
+They differ in various respects from rare-earth-doped amplifiers, and are discussed in the article on <a href="raman_amplifiers.html" title="optical amplifiers based on Raman gain">Raman amplifiers</a>.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_fiber_amplifiers.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 50 suppliers for fiber amplifiers. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.lumibird.com/en" data-supplier="Lumibird" data-location="product-enc" data-keyword="fiber amplifiers" rel="nofollow" class="bg externallink" title="Visit the website of Lumibird"><img src="./bg/logos/lumibird.png" alt="Lumibird" class="supplierlogo"></a><a href="https://www.keopsys.com/products-services-lasers-amplifiers/" data-supplier="Lumibird" data-location="product-enc" data-keyword="fiber amplifiers" rel="nofollow" class="bg externallink" title="Visit the website of Lumibird"><img src="./bg/products/lumibird/edfa.jpg" alt="fiber amplifiers" class="product"></a><h3><a href="./bg/profiles/lumibird.html" title="See the profile of Lumibird">Lumibird</a></h3><p>Lumibird manufactures an extensive range of mature and custom-designed <a href="https://www.keopsys.com/products-services-lasers-amplifiers/" data-supplier="Lumibird" data-location="product-enc" data-keyword="fiber amplifiers" rel="nofollow" class="externallink bg">optical fiber amplifiers and fiber lasers</a>. High output powers are achieved through the use of double cladding fibers pumped by broad stripe diodes. Several varieties of pumping techniques are used each optimized for specific applications. Lumibird also develops key components for producing unique and innovative light sources.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.rpmclasers.com/" data-supplier="RPMC Lasers" data-location="product-enc" data-keyword="fiber amplifiers" rel="nofollow" class="bg externallink" title="Visit the website of RPMC Lasers"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a><a href="https://www.rpmclasers.com/amplifier-type/fiber-amplifiers/" data-supplier="RPMC Lasers" data-location="product-enc" data-keyword="fiber amplifiers" rel="nofollow" class="bg externallink" title="Visit the website of RPMC Lasers"><img src="./bg/products/rpmc_lasers/fiber_amplifiers.jpg" alt="fiber amplifiers" class="product"></a><h3><a href="./bg/profiles/rpmc_lasers.html" title="See the profile of RPMC Lasers">RPMC Lasers</a></h3><p>RPMC Lasers offers a wide variety of <a href="https://www.rpmclasers.com/amplifier-type/fiber-amplifiers/" data-supplier="RPMC Lasers" data-location="product-enc" data-keyword="fiber amplifiers" rel="nofollow" class="externallink bg">fiber amplifiers</a> at 1.0&nbsp;&mu;m and 1.5&nbsp;&mu;m, with pulsed or CW capabilities. Our fiber amplifiers offer up to 40 dBm of output power and possess numerous features, such as low noise, compact package size, and digital control system.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="fiber_amplifiers.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">C. J. Koester and E. Snitzer, &ldquo;Amplification in a fiber laser&rdquo;, Appl. Opt. 3 (10), 1182 (1964), <a href="https://doi.org/10.1364/AO.3.001182">doi:10.1364/AO.3.001182</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">R. J. Mears, L. Reekie, I. M. Jauncey, and D. N.Payne, &ldquo;Low-noise erbium-doped fibre amplifier operating at 1.54&nbsp;&mu;m&rdquo;, Electron. Lett. 23, 1026 (1987), <a href="https://doi.org/10.1049/el:19870719">doi:10.1049/el:19870719</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">E. Desurvire, &ldquo;Design optimization for efficient erbium-doped fiber amplifiers&rdquo;, IEEE J. Lightwave Technol. 8 (11), 1730 (1990), <a href="https://doi.org/10.1109/50.60573">doi:10.1109/50.60573</a></td></tr>
+<tr><td class="refno"><sup>&nbsp;</sup>[4]</td><td class="refs">M. L. Dakss and W. J. Miniscalco, &ldquo;Fundamental limits on Nd<sup>3+</sup>-doped fiber amplifier performance at 1.3&nbsp;&mu;m&rdquo;, IEEE Photon. Technol. Lett. 2, 650 (1990), <a href="https://doi.org/10.1109/68.59339">doi:10.1109/68.59339</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">C. R. Giles and E. Desurvire, &ldquo;Modeling erbium-doped fiber amplifiers&rdquo;, IEEE J. Lightwave Technol. 9 (2), 271 (1991), <a href="https://doi.org/10.1109/50.65886">doi:10.1109/50.65886</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">M. &Oslash;bro <i>et al.</i>, &ldquo;Highly improved fibre amplifier for operation around 1300&nbsp;nm&rdquo;, Electron. Lett. 27, 470 (1991), <a href="https://doi.org/10.1049/el:19910296">doi:10.1049/el:19910296</a></td></tr>
+<tr><td class="refno"><sup>&nbsp;</sup>[7]</td><td class="refs">Y. Ohishi <i>et al.</i>, &ldquo;A high gain, high output saturation power Pr<sup>3+</sup>-doped fluoride fiber amplifier operating at 1.3&nbsp;&mu;m&rdquo;, IEEE Photon. Technol. Lett. 3, 715 (1991), <a href="https://doi.org/10.1109/68.84462">doi:10.1109/68.84462</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">T. Rasmussen <i>et al.</i>, &ldquo;Optimum design of Nd-doped fiber optical amplifiers&rdquo;, IEEE Photon. Technol. Lett. 4, 49 (1992), <a href="https://doi.org/10.1109/68.124873">doi:10.1109/68.124873</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">T. Whitely, &ldquo;A review of recent system demonstrations incorporating 1.3-&mu;m praseodymium-doped fluoride fiber amplifiers&rdquo;, IEEE J. Lightwave Technol. 13 (5), 744 (1995), <a href="https://doi.org/10.1109/50.387792">doi:10.1109/50.387792</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">T. Sakamoto <i>et al.</i>, &ldquo;35-dB gain Tm-doped ZBLYAN fiber amplifier operating at 1.65&mu;m&rdquo;, IEEE Photon. Technol. Lett. 8, 349 (1996), <a href="https://doi.org/10.1109/68.481113">doi:10.1109/68.481113</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">R. Paschotta <i>et al.</i>, &ldquo;Ytterbium-doped fiber amplifiers&rdquo;, IEEE J. Quantum Electron. 33 (7), 1049 (1997), <a href="https://doi.org/10.1109/3.594865">doi:10.1109/3.594865</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">G. C. Valley, &ldquo;Modeling cladding-pumped Er/Yb fiber amplifiers&rdquo;, Opt. Fiber Technol. 7, 21 (2001) (useful review on amplifier modeling), <a href="https://doi.org/10.1006/ofte.2000.0351">doi:10.1006/ofte.2000.0351</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">J. Limpert <i>et al.</i>, &ldquo;High-power femtosecond Yb-doped fiber amplifier&rdquo;, Opt. Express 10 (14), 628 (2002), <a href="https://doi.org/10.1364/OE.10.000628">doi:10.1364/OE.10.000628</a></td></tr>
+<tr><td class="refno">[14]</td><td class="refs">J. Limpert <i>et al.</i>, &ldquo;High-power ultrafast fiber laser systems&rdquo;, JSTQE 12 (2), 233 (2006), <a href="https://doi.org/10.1109/JSTQE.2006.872729">doi:10.1109/JSTQE.2006.872729</a></td></tr>
+<tr><td class="refno">[15]</td><td class="refs">J. Limpert <i>et al.</i>, &ldquo;High repetition rate gigawatt peak power fiber laser systems: challenges, design, and experiment&rdquo;, JSTQE 15 (1), 159 (2009), <a href="https://doi.org/10.1109/JSTQE.2008.2010244">doi:10.1109/JSTQE.2008.2010244</a></td></tr>
+<tr><td class="refno">[16]</td><td class="refs">G. D. Goodno <i>et al.</i>, &ldquo;Low-phase-noise, single-frequency, single-mode 608&nbsp;W thulium fiber amplifier&rdquo;, Opt. Lett. 34 (8), 1204 (2009), <a href="https://doi.org/10.1364/OL.34.001204">doi:10.1364/OL.34.001204</a></td></tr>
+<tr><td class="refno">[17]</td><td class="refs">R. Paschotta, &ldquo;Modeling of ultrashort pulse amplification with gain saturation&rdquo;, Opt. Express 25 (16), 19112 (2017), <a href="https://doi.org/10.1364/OE.25.019112">doi:10.1364/OE.25.019112</a></td></tr>
+<tr><td class="refno">[18]</td><td class="refs">E. Desurvire, <i>Erbium-Doped Fiber Amplifiers: Principles and Applications</i>, John Wiley &amp; Sons, New York (1994)</td></tr>
+<tr><td class="refno">[19]</td><td class="refs">M. J. F. Digonnet, <i>Rare-Earth-Doped Fiber Lasers and Amplifiers</i>, 2nd edn., CRC Press, Boca Raton, FL (2001)</td></tr>
+<tr><td class="refno">[20]</td><td class="refs">A. Galvanauskas, &ldquo;Ultrashort-pulse fiber amplifiers&rdquo;, in <i>Ultrafast Lasers: Technology and Applications</i> (eds. M. Fermann, A. Galvanauskas, G. Sucha), Marcel Dekker, New York (2002), Chapter 4, pp. 155-218</td></tr>
+<tr><td class="refno">[21]</td><td class="refs">R. Paschotta, <a href="http://spie.org/x648.html?product_id=853722"><i>Field Guide to Optical Fiber Technology</i></a>, SPIE Press, Bellingham, WA (2010)</td></tr>
+<tr><td class="refno">[22]</td><td class="refs">P. Urquhart (ed.), <a href="http://www.intechopen.com/books/show/title/advances-in-optical-amplifiers"><i>Advances in Optical Amplifiers</i></a> (open-access online edition available), InTech, Rijeka, Croatia (2011)</td></tr>
+<tr><td class="refno">[23]</td><td class="refs">ITU Standard G.661 (07/07), &ldquo;Definitions and test methods for the relevant generic parameters of optical amplifier devices and subsystems&rdquo;, <a href="https://www.itu.int/rec/T-REC-G.661/en">International Telecommunication Union (2007)</a></td></tr>
+<tr><td class="refno">[24]</td><td class="refs">ITU Standard G.662 (07/05), &ldquo;Generic characteristics of optical amplifier devices and subsystems&rdquo;, <a href="https://www.itu.int/rec/T-REC-G.662-200507-I/en">International Telecommunication Union (2005)</a></td></tr>
+<tr><td class="refno">[25]</td><td class="refs">ITU Standard G.663 (04/00), &ldquo;Application related aspects of optical amplifier devices and subsystems&rdquo;, <a href="https://www.itu.int/rec/T-REC-G.663/en">International Telecommunication Union (2000)</a></td></tr>
+<tr><td class="refno">[26]</td><td class="refs">R. Paschotta, &ldquo;Fiber amplifiers &ndash; a technology for many applications&rdquo;. <a href="article_fiber_amplifiers1.html">Part 1: introduction</a>, <a href="article_fiber_amplifiers2.html">Part 2: various technical issues</a>, <a href="article_fiber_amplifiers3.html">Part 3: examples for fiber amplifier designs</a></td></tr>
+<tr><td class="refno">[27]</td><td class="refs">R. Paschotta, <a href="fiberpower_edfa.html">case study on an erbium-doped fiber amplifier</a></td></tr>
+<tr><td class="refno">[28]</td><td class="refs">R. Paschotta, <a href="fiberpower_pamp.html">case study on a pulsed ytterbium-doped fiber amplifier</a></td></tr>
+<tr><td class="refno">[29]</td><td class="refs">R. Paschotta, tutorial on &quot;<a href="tutorial_fiber_amplifiers.html">Fiber Amplifiers</a>&quot;</td></tr>
+<tr><td class="refno">[30]</td><td class="refs">R. Paschotta, tutorial on &quot;<a href="tutorial_modeling.html">Modeling of Fiber Amplifiers and Lasers</a>&quot;</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="erbium_doped_fiber_amplifiers.html" title="fiber amplifiers based on erbium-doped optical fibers">erbium-doped fiber amplifiers</a>, <a href="high_power_fiber_lasers_and_amplifiers.html" title="fiber lasers and fiber amplifiers with high output powers of e.g. &gt;&thinsp;10&thinsp;&thinsp;W">high-power fiber lasers and amplifiers</a>, <a href="rare_earth_doped_fibers.html" title="optical glass fibers which are doped with rare earth ions">rare-earth-doped fibers</a>, <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>, <a href="double_clad_fibers.html" title="optical fibers with different waveguide structures for pump and signal light">double-clad fibers</a>, <a href="gain_equalization.html" title="a technique for making the gain spectrum of an optical amplifier device flatter over a certain optical frequency range">gain equalization</a>, <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber lasers</a>, <a href="optical_amplifiers.html" title="devices for amplifying the power of light beams">optical amplifiers</a>, <a href="ultrafast_amplifiers.html" title="amplifiers for ultrashort (femtosecond or picosecond) optical pulses">ultrafast amplifiers</a>, <a href="raman_amplifiers.html" title="optical amplifiers based on Raman gain">Raman amplifiers</a>, <a href="distributed_amplifiers.html" title="fiber amplifiers in fiber-optic data links, where the amplification occurs within a large length of transmission fiber">distributed amplifiers</a>, <a href="superluminescent_sources.html" title="optical sources based on superluminescence">superluminescent sources</a>, <a href="fiber_simulation_software.html" title="software for numerical simulations on fiber devices">fiber simulation software</a><br>and other articles in the categories <a href="categories.html#fiber_optics_and_waveguides" title="other articles on fiber optics and waveguides">fiber optics and waveguides</a>, <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#optical_amplifiers" title="other articles on optical amplifiers">optical amplifiers</a>, <a href="categories.html#lightwave_communications" title="other articles on lightwave communications">lightwave communications</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/fiber_amplifiers.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Ffiber_amplifiers.html&text=RP+Photonics+Encyclopedia+-+fiber+amplifiers%2C+EDFA%2C+YDFA%2C+TDFA%2C+amplifier+modules%2C+saturation%2C+ASE%2C+fiber+optics" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Ffiber_amplifiers.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Ffiber_amplifiers.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/fiber_amplifiers.html"&gt;<br>Article on Fiber Amplifiers&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/fiber_amplifiers.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/fiber_amplifiers.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/fiber_amplifiers.html<br>article on 'Fiber Amplifiers' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Fiber Optics Software</h2>
+<a href="./rp_fiber_calculator.html?banner=RP_Fiber_Calculator" style="float:right; margin-left:3px"><img src="./img/fiberpower_logo.png" alt="RP Fiber Calculator software"></a>
+<p><a href="./rp_fiber_calculator.html?banner=RP_Fiber_Calculator">RP Fiber Calculator</a> &ndash; a convenient tool for calculations on optical fibers:</p>
+<ul>
+<li>Define <a href="./rp_fiber_calculator_docu.html?banner=RP_Fiber_Calculator">index or doping profiles</a> with the graphical user interface.</li>
+<li>Calculate the <a href="./rp_fiber_calculator_gm.html?banner=RP_Fiber_Calculator">guided modes</a> and all their properties.</li>
+</ul>
+<p style="text-align:center;"><a href="./rp_fiber_calculator_gm.html?banner=RP_Fiber_Calculator"><img src="./img/mode_solver.png" alt="mode profiles"></a></p>
+<ul>
+<li>Calculate how much power of a <a href="./rp_fiber_calculator_la.html?banner=RP_Fiber_Calculator">laser beam is launched</a> into the modes.</li>
+<li>Simulate <a href="./rp_fiber_calculator_pr.html?banner=RP_Fiber_Calculator">light propagation</a> within the fiber and <a href="./rp_fiber_calculator_co.html?banner=RP_Fiber_Calculator">coupling of light from one fiber to another</a>.</li>
+</ul>
+<a href="./rp_fiber_calculator.html?banner=RP_Fiber_Calculator"><img src="./img/rp_fiber_calculator_screenshot_small.png" alt="screen shot"></a>
+<p>The basic version of this software is offered <a href="./rp_fiber_calculator_download.html?banner=RP_Fiber_Calculator">for free</a>!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="IOAYj+scZNaLyApmE2kT2w==">shownbanner = "RP Fiber Calculator";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Latest Encyclopedia Articles</h2>
+<p>Here are the latest encyclopedia articles:</p>
+<ul>
+<li class="tight"><a href="./variable_reflectivity_mirrors.html">variable reflectivity mirrors</a></li>
+<li class="tight"><a href="./color_centers.html">color centers</a></li>
+<li class="tight"><a href="./excimer_lamps.html">excimer lamps</a></li>
+<li class="tight"><a href="./multimode_beams.html">multimode beams</a></li>
+<li class="tight"><a href="./channel_waveguides.html">channel waveguides</a></li>
+<li class="tight"><a href="./optical_crystals.html">optical crystals</a></li>
+<li class="tight"><a href="./standing_wave_resonators.html">standing-wave resonators</a></li>
+<li class="tight"><a href="./nonlinear_absorption.html">nonlinear absorption</a></li>
+<li class="tight"><a href="./passive_fibers.html">passive fibers</a></li>
+<li class="tight"><a href="./active_fibers.html">active fibers</a></li>
+<li class="tight"><a href="./oem_laser_modules.html">OEM laser modules</a></li>
+<li class="tight"><a href="./industrial_lasers.html">industrial lasers</a></li>
+<li class="tight"><a href="./scientific_lasers.html">scientific lasers</a></li>
+<li class="tight"><a href="./flint_glasses.html">flint glasses</a></li>
+<li class="tight"><a href="./crown_glasses.html">crown glasses</a></li>
+<li class="tight"><a href="./sodium_vapor_lamps.html">sodium vapor lamps</a></li>
+<li class="tight"><a href="./metal_vapor_lamps.html">metal vapor lamps</a></li>
+<li class="tight"><a href="./mercury_vapor_lamps.html">mercury vapor lamps</a></li>
+<li class="tight"><a href="./white_light.html">white light</a></li>
+<li class="tight"><a href="./cie_standard_illuminants.html">CIE standard illuminants</a></li>
+</ul>
+
+<p>The encyclopedia already contains 948 articles.</p>
+<p>See also the regularly appearing articles of the <a href="./spotlight.html?banner=new_articles">The Photonics Spotlight</a> and the <a href="./software_news.html?banner=new_articles">RP Photonics Software News</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="IOAYj+scZNaLyApmE2kT2w==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/fiber_amplifiers.html"
+    },
+    "headline": "Fiber Amplifiers",
+    "image": "https://www.rp-photonics.com/previews/fiber_amplifiers.png",
+    "datePublished": "2006-08-15",
+    "dateModified": "2020-05-05",
+    "description": "Fiber amplifiers are optical amplifiers with doped fibers as gain media. Erbium-doped and ytterbium-doped fiber amplifiers are the most important types.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter F",
+      "item": "https://www.rp-photonics.com/encyclopedia_f.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "fiber amplifiers",
+      "item": "https://www.rp-photonics.com/fiber_amplifiers.html"
+    }]}
+}
+</script>
+</body>
+</html>

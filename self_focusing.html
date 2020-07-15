@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-VqUywf7NlvXo2jbcBi2pBg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - self-focusing, limit, focussing, Kerr lens, collapse, filamentation, optical damage</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/self_focusing.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-07-11">
+<meta name="description" content="Self-focusing means focusing of a beam in a transparent medium, caused by the beam itself through a nonlinear process in the medium.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="self-focusing, limit, focussing, Kerr lens, collapse, filamentation, optical damage">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Self-focusing">
+<meta property="og:description" content="Self-focusing means focusing of a beam in a transparent medium, caused by the beam itself through a nonlinear process in the medium.">
+<meta property="og:url" content="https://www.rp-photonics.com/self_focusing.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/self_focusing.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Self-focusing means focusing of a beam in a transparent medium, caused by the beam itself through a nonlinear process in the medium.">
+<meta name="twitter:title" content="Self-focusing">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/self_focusing.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="VqUywf7NlvXo2jbcBi2pBg==">
+page="self_focusing.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="VqUywf7NlvXo2jbcBi2pBg==">shownsponsors="TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_s.html">letter S</a> &gt; <a href="self_focusing.html">self-focusing</a></p>
+<h1>Self-focusing</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="boxadvertisement">
+<h2>Calculations on Nonlinear Self-focusing</h2>
+<p>The software <a href="fiberpower.html"><b>RP Fiber Power</b></a> can be used for calculating self-focusing as shown in the article.
+One may calculate the evolution of the beam profile (Figure&nbsp;2) or calculate fiber modes where the Kerr effect is taken into account (Figure&nbsp;1).</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: focusing of a beam in a transparent medium, caused by the beam itself through a nonlinear process in the medium</p>
+<p>More general term: <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinear</a> optical effects</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Selbstfokussierung</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#nonlinear_optics" title="other articles on nonlinear optics">nonlinear optics</a></p>
+<p><a href="encyclopedia_cite.html?article=self-focusing">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Due to a <a href="kerr_lens.html" title="a lensing effect arising from the Kerr nonlinearity">Kerr lens</a>, an intense optical pulse propagating in a nonlinear medium can experience nonlinear self-focusing (or self-focussing): the beam diameter is decreased compared with that of a weak pulse.
+The physical mechanism is based on a <a href="kerr_effect.html" title="a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization">Kerr nonlinearity</a> with positive <span class="eqn_il"><span class="greek">&chi;</span><sup>(3)</sup></span>.
+In this situation, the higher <a href="optical_intensity.html" title="optical power per unit area">optical intensities</a> on the beam axis, as compared with the wings of the spatial intensity distribution, cause an effectively increased <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> for the inner part of the beam.
+This modified refractive index distribution then acts like a focusing <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lens</a>.</p>
+<p>A related effect, occurring in the case of a <em>negative</em> <span class="eqn_il"><span class="greek">&chi;</span><sup>(3)</sup></span> nonlinearity, is <em>self-defocusing</em>, where the Kerr lens has a reduced refractive index on the beam axis.</p>
+<p>Self-focusing can also be caused by other effects, such as <a href="thermal_lensing.html" title="a lensing effect induced by temperature gradients">thermal lensing</a>.</p>
+<h2 class="togglediv">Consequences of Self-focusing</h2>
+<div>
+<p>As the decrease in the <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a> further increases the strength of the <a href="kerr_lens.html" title="a lensing effect arising from the Kerr nonlinearity">Kerr lens</a>, there may be total collapse of the beam: as the beam radius is reduced, the optical intensities become even higher, further increasing the self-focusing effect.
+This mechanism can lead to very high optical intensities which can easily destroy the optical medium (<a href="laser_induced_damage.html" title="damage of optical components induced by laser radiation"><em>optical damage</em></a>).
+Such a run-away effect can occur when the <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a> is above the critical power</p>
+<div class="eqn"><img src="eqn/p_sf.gif" width="109" height="48" alt="critical power for self-focusing"></div>
+<p>where <span class="eqn_il"><i>n</i><sub>2</sub></span> is the <a href="nonlinear_index.html" title="a parameter for quantifying the Kerr nonlinearity of a medium">nonlinear index</a>, <span class="eqn_il"><span class="greek">&lambda;</span></span> the vacuum wavelength, and <span class="eqn_il"><i>n</i></span> the <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a>.
+This holds for linearly polarized light.
+For circularly polarized light, the self-focusing behavior can be substantially different [7].</p>
+<p>Remarkably, the critical power does <em>not</em> depend on the original beam area.
+(A larger beam generates a weaker Kerr lens, but it is also more sensitive to lensing.)
+Only, an initially larger beam will require a longer propagation distance (for a given optical power) until it collapses.
+For silica (as used e.g. in <a href="silica_fibers.html" title="optical fibers based on fused silica or related materials">silica fibers</a>), the self-focusing limit in terms of <a href="peak_power.html" title="maximum optical power of a pulse">peak power</a> is of the order of 4&nbsp;MW in the 1-&mu;m wavelength region.</p>
+<form id="calculate_P_crit" class="calculatorform">
+<h2>Calculator for Self-focussing</h2>
+<table>
+<tr>
+<td>Wavelength:</td><td></td><td></td>
+<td><input name="lambda" value="" class="cf_calculate_P_crit"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Refractive index:</td><td></td><td></td>
+<td><input name="n" value="" class="cf_calculate_P_crit"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Nonlinear index:</td><td></td><td></td>
+<td><input name="n2" value="" class="cf_calculate_P_crit"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Critical power:</td><td></td><td></td>
+<td><input name="P_crit" value="" class="cf_calculate_P_crit"></td>
+<td><span class="calcbutton" id="calc_P_crit">calc</span></td><td></td>
+</tr>
+</table>
+<p class="comment">Enter input values with units, where appropriate. After you have modified some inputs, click the "calc" button to recalculate the output.</p>
+<noscript>
+<p style="color:red">Attention: The buttons do not work, as Javascript is turned off in your browser!</p>
+</noscript>
+</form>
+<script type="text/javascript" src="calcform.js"></script>
+<script type="text/javascript" nonce="VqUywf7NlvXo2jbcBi2pBg==">
+funits = new Array();
+funits["lambda"] = "m";
+funits["n"] = "";
+funits["n2"] = "m^2/W";
+funits["P_crit"] = "W";
+function calc_P_crit() {
+  $("input[name=P_crit]").val("???");
+  GetFieldValues("P_crit","calculate_P_crit");
+  P_crit = 0.148*sqr(lambda)/(n*n2);
+  $("input[name=P_crit]").val(format_u(P_crit, "W"));
+ }
+$("input[name=lambda]").val("1000 nm");
+$("input[name=n]").val("1.45");
+$("input[name=n2]").val("2.6e-20 m^2/W");
+calc_P_crit();
+$(document).ready(function() {
+  $("span#calc_P_crit").click(function() { calc_P_crit() })
+});
+</script>
+<p>Note that the value used for the <a href="nonlinear_index.html" title="a parameter for quantifying the Kerr nonlinearity of a medium">nonlinear index</a> depends on the <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a>.
+For shorter pulses, a somewhat lower value must be used, as there is not sufficient time for the effect of electrostriction and possibly for the delayed nonlinear response (&rarr;&nbsp;<a href="raman_scattering.html" title="a nonlinear scattering process involving optical phonons"><em>Raman scattering</em></a>).</p>
+<p>In an optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fiber</a>, the built-in <a href="waveguides.html" title="spatially inhomogeneous transparent structures for guiding light">waveguide</a> forms guided <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a>.
+Self-focusing then reduces the <a href="effective_mode_area.html" title="a quantitative measure of the area which a waveguide or fiber mode effectively covers in the transverse dimensions">effective mode area</a> (see Figure&nbsp;1).
+At the critical power (which is the same as for bulk material), the mode area approaches zero.</p>
+<figure>
+<img src="img/fiberpower_self_focusing2.png" alt="mode area vs. optical power">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Numerically calculated mode area of a <a href="silica_fibers.html" title="optical fibers based on fused silica or related materials">silica fiber</a> versus optical power.
+The nonlinear index was assumed to be 2.2 &middot; 10<sup>&minus;20</sup>&nbsp;m<sup>2</sup>/W.
+The red line indicates the critical power for catastrophic self-focusing.
+The figure has been taken from a <a href="fiberpower_self_focusing.html">demonstration</a> of the software <a href="fiberpower.html"><b>RP Fiber Power</b></a>.
+</figcaption>
+</figure>
+<p>A beam in a homogeneous medium (i.e., with no <a href="waveguides.html" title="spatially inhomogeneous transparent structures for guiding light">waveguide</a>) with a power exactly at the self-focusing limit could theoretically exhibit <em>self-trapping</em> [1], where the beam profile stays constant over a longer distance, because divergence is exactly compensated by the nonlinear focusing effect.
+That state, however, is unstable; small deviations from that state would grow rapidly.</p>
+<p>Higher-order modes also become unstable as a consequence of the nonlinear interaction.
+Figure&nbsp;2 shows an example, where a power of 4&nbsp;MW has been injected into the LP<sub>11</sub> mode of a fiber.
+After about 10&nbsp;mm of propagation distance, the light is transferred into a mixture of LP<sub>01</sub> and LP<sub>11</sub>.</p>
+<figure>
+<img src="img/fiberpower_self_focusing4.png" alt="numerical beam propagation with Kerr nonlinearity">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Amplitude profile in the x-z plane for injection of the LP<sub>11</sub> mode (as calculated without the nonlinearity).
+The <a href="fiberpower_self_focusing.html">numerical beam propagation simulation</a> has been done with the software <a href="fiberpower.html"><b>RP Fiber Power</b></a>.
+</figcaption>
+</figure>
+<p>For optical powers far above the self-focusing limit, <em>filamentation</em> can occur, where the beam breaks up into several beams with smaller powers.
+The resulting beam pattern can be random, but in some cases it has a fairly regular structure.</p>
+<p>Different dynamics (<em>transient self-focusing</em> [3]) occur for <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a> when the <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a> is not much longer than the characteristic time scale of the nonlinearity [3].</p>
+<p>The reduction in beam radius for high intensities (for peak powers below the self-focusing limit) can be used for <a href="kerr_lens_mode_locking.html" title="a technique for mode locking a laser, exploiting nonlinear self-focusing"><em>Kerr lens mode locking</em></a> of a laser, when it leads to a better overlap of laser and pump beam, or to reduced losses at some <a href="optical_apertures.html" title="structures which limit the propagation of light">aperture</a>.
+In both cases, it generates a kind of artificial <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorber</a>.</p>
+<p>Another application of self-focusing is the measurement of the magnitude of the Kerr nonlinearity (&rarr;&nbsp;<a href="z_scan_measurements.html" title="a technique for measuring the strength of the Kerr nonlinearity of a material, relying on self-focusing"><em>z-scan measurements</em></a>).</p>
+<p>Note that cascaded <span class="eqn_il"><span class="greek">&chi;</span><sup>(2)</sup></span> <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a> (essentially, <a href="frequency_doubling.html" title="the phenomenon that an input wave in a nonlinear material can generate a wave with twice the optical frequency">frequency doubling</a> with subsequent backconversion) can also lead to an effective <span class="eqn_il"><span class="greek">&chi;</span><sup>(3)</sup></span> nonlinearity, resulting either in self-focusing or (for negative effective <span class="eqn_il"><span class="greek">&chi;</span><sup>(3)</sup></span>) self-defocusing.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="self_focusing.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">R. Y. Chiao, E. Garmire, and C. H. Townes, &ldquo;Self-trapping of optical beams&rdquo;, Phys. Rev. Lett. 13 (15), 479 (1964), <a href="https://doi.org/10.1103/PhysRevLett.13.479">doi:10.1103/PhysRevLett.13.479</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">P. L. Kelley, &ldquo;Self-focusing of optical beams&rdquo;, Phys. Rev. Lett. 15 (26), 1005 (1965), <a href="https://doi.org/10.1103/PhysRevLett.15.1005">doi:10.1103/PhysRevLett.15.1005</a> (see also the erratum in Phys. Rev. Lett. 16, 384 (1966))</td></tr>
+<tr><td class="refno">[3]</td><td class="refs">Y. R. Shen, &ldquo;Self-focusing: experimental&rdquo;, Prog. Quantum Electron. 4, 1 (1975), <a href="https://doi.org/10.1016/0079-6727(75)90002-6">doi:10.1016/0079-6727(75)90002-6</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">J. H. Marburger, &ldquo;Self-focusing: theory&rdquo;, Prog. Quantum Electron. 4, 35 (1975), <a href="https://doi.org/10.1016/0079-6727(75)90003-8">doi:10.1016/0079-6727(75)90003-8</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">G. Cerullo <i>et al.</i>, &ldquo;Space-time coupling and collapse threshold for femtosecond pulses in dispersive nonlinear media&rdquo;, Opt. Lett. 21 (1), 65 (1996), <a href="https://doi.org/10.1364/OL.21.000065">doi:10.1364/OL.21.000065</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">G. Fibich and A. L. Gaeta, &ldquo;Critical power for self-focusing in bulk media and in hollow waveguides&rdquo;, Opt. Lett. 25 (5), 335 (2000), <a href="https://doi.org/10.1364/OL.25.000335">doi:10.1364/OL.25.000335</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">G. Fibich and B. Ilan, &ldquo;Self-focusing of circularly polarized beams&rdquo;, Phys. Rev. E 67 (3), 036622 (2003), <a href="https://doi.org/10.1103/PhysRevE.67.036622">doi:10.1103/PhysRevE.67.036622</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">R. L. Farrow <i>et al.</i>, &ldquo;Peak-power limits on fiber amplifiers imposed by self-focusing&rdquo;, Opt. Lett. 31 (23), 3423 (2006), <a href="https://doi.org/10.1364/OL.31.003423">doi:10.1364/OL.31.003423</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">L. Dong, &ldquo;Approximate treatment of the nonlinear waveguide equation in the regime of nonlinear self-focus&rdquo;, J. Lightwave Technol. 26 (20), 3476 (2008), <a href="https://doi.org/10.1109/JLT.2008.925685">doi:10.1109/JLT.2008.925685</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">A. V. Smith <i>et al.</i>, &ldquo;Optical damage limits to pulse energy from fibers&rdquo;, J. Sel. Top. Quantum Electron. 15 (1), 153 (2009), <a href="https://doi.org/10.1109/JSTQE.2008.2010331">doi:10.1109/JSTQE.2008.2010331</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">D. E. Laban <i>et al.</i>, &ldquo;Self-focusing in air with phase-stabilized few-cycle light pulses&rdquo;, Opt. Lett. 35 (10), 1653 (2010), <a href="https://doi.org/10.1364/OL.35.001653">doi:10.1364/OL.35.001653</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">P. Whalen <i>et al.</i>, &ldquo;Self-focusing collapse distance in ultrashort pulses and measurement of nonlinear index&rdquo;, Opt. Lett. 36 (13), 2542 (2011), <a href="https://doi.org/10.1364/OL.36.002542">doi:10.1364/OL.36.002542</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">S. A. Kozlov <i>et al.</i>, &ldquo;Suppression of self-focusing for few-cycle pulses&rdquo;, J. Opt. Soc. Am. B 36 (10), G68, <a href="https://doi.org/10.1364/JOSAB.36.000G68">doi:10.1364/JOSAB.36.000G68</a></td></tr>
+<tr><td class="refno">[14]</td><td class="refs">R. Paschotta, tutorial on &quot;<a href="passive_fiber_optics.html">Passive Fiber Optics</a>&quot;, <a href="passive_fiber_optics11.html">Part 11: Nonlinearities of Fibers</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="kerr_effect.html" title="a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization">Kerr effect</a>, <a href="kerr_lens_mode_locking.html" title="a technique for mode locking a laser, exploiting nonlinear self-focusing">Kerr lens mode locking</a>, <a href="z_scan_measurements.html" title="a technique for measuring the strength of the Kerr nonlinearity of a material, relying on self-focusing">z-scan measurements</a>, <a href="b_integral.html" title="a measure of the nonlinear phase shift of light, e.g. in an amplifier">B integral</a><br>and other articles in the category <a href="categories.html#nonlinear_optics" title="other articles on nonlinear optics">nonlinear optics</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/self_focusing.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fself_focusing.html&text=RP+Photonics+Encyclopedia+-+self-focusing%2C+limit%2C+focussing%2C+Kerr+lens%2C+collapse%2C+filamentation%2C+optical+damage" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fself_focusing.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fself_focusing.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/self_focusing.html"&gt;<br>Article on Self-focusing&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/self_focusing.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/self_focusing.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/self_focusing.html<br>article on 'Self-focusing' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Resonator Design Software</h2>
+<p><a href="./resonator.html?banner=RP_Resonator">RP Resonator</a> &ndash; an extremely flexible resonator design software:</p>
+<ul>
+<li>script-based definition of resonator structures: arbitrary parametrization</li>
+<li>calculate all mode properties of interest</li>
+<li>analyze alignment sensitivities</li>
+<li>automatic optimization with user-defined figure of merit</li>
+<li>generation of arbitrary plots</li>
+</ul>
+<a href="./resonator.html?banner=RP_Resonator"><img src="./img/rp_resonator_220.png" alt="laser resonator design"></a>
+<p>Further features:</p>
+<ul>
+<li>comprehensive documentation (PDF and online)</li>
+<li>competent <a href="./software_support.html?banner=RP_Resonator">technical support</a></li>
+</ul>
+<p style="text-align:center;"><a href="./resonator_tisa.html?banner=RP_Resonator"><img src="./img/rp_resonator_plot.png" alt="RP Resonator plot"></a></p>
+<p>Use <a href="./resonator.html?banner=RP_Resonator"><b>RP Resonator</b></a> to drive your resonator design capabilities to perfection!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="VqUywf7NlvXo2jbcBi2pBg==">shownbanner = "RP Resonator";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Fighting Fraud in Science</h2>
+<p>We occasionally read about scientific fraud &ndash; things like fabricated measurement results &ndash; which is utterly unfair and also undermines the trust of the public in science and its results.</p>
+<p>How to fight that problem?</p>
+<ul>
+<li>Do we need to tell young scientists more clearly that fraud is evil?</li>
+<li>Do supervisors have to stop trusting the results of their coworkers?</li>
+<li>Does the pressure to produce results inevitably favor fraud?</li>
+<li>Where exactly lies the responsibility, if something goes wrong?</li>
+</ul>
+<p>Our <a href="./spotlight_2009_10_19.html?banner=science_fraud">Photonics Spotlight article on science fraud</a> analyzes that carefully.
+It suggests that <b>the risk of fraud is close to zero where supervisors do a responsible job</b>.
+Relations to a more widespread problem &ndash; <b>corrupt authorship practices</b> &ndash; are also identified.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="VqUywf7NlvXo2jbcBi2pBg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/self_focusing.html"
+    },
+    "headline": "Self-focusing",
+    "image": "https://www.rp-photonics.com/previews/self_focusing.png",
+    "datePublished": "2005-01-14",
+    "dateModified": "2020-07-11",
+    "description": "Self-focusing means focusing of a beam in a transparent medium, caused by the beam itself through a nonlinear process in the medium.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter S",
+      "item": "https://www.rp-photonics.com/encyclopedia_s.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "self-focusing",
+      "item": "https://www.rp-photonics.com/self_focusing.html"
+    }]}
+}
+</script>
+</body>
+</html>

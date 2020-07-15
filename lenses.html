@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-K/gqOq+zBLQZoxRDr9/itw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - lenses, wavefront curvature, focusing lens, defocusing, focal length, lensmaker's equation, numerical aperture, biconvex, plano-convex, concave, meniscus, cylindrical, doublets, aspheric lenses, astigmatism, aberrations</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/lenses.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-06-25">
+<meta name="description" content="Lenses are transparent optical devices affecting the wavefront curvature of light, such that light is focused or defocused.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="lenses, wavefront curvature, focusing lens, defocusing, focal length, lensmaker's equation, numerical aperture, biconvex, plano-convex, concave, meniscus, cylindrical, doublets, aspheric lenses, astigmatism, aberrations">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lenses">
+<meta property="og:description" content="Lenses are transparent optical devices affecting the wavefront curvature of light, such that light is focused or defocused.">
+<meta property="og:url" content="https://www.rp-photonics.com/lenses.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/lenses.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Lenses are transparent optical devices affecting the wavefront curvature of light, such that light is focused or defocused.">
+<meta name="twitter:title" content="Lenses">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/lenses.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="K/gqOq+zBLQZoxRDr9/itw==">
+page="lenses.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> <a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="K/gqOq+zBLQZoxRDr9/itw==">shownsponsors="eagleyard Photonics,EKSMA OPTICS,Optikexpertisen"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_lenses.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_l.html">letter L</a> &gt; <a href="lenses.html">lenses</a></p>
+<h1>Lenses</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_lenses.html?s=vbox">201 suppliers for lenses</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.edmundoptics.com/c/optical-lenses/603/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="bg externallink"><img src="./bg/logos/edmund_optics.png" alt="Edmund Optics" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="http://www.dpmphotonics.com/precision_optics.php?type=4" data-supplier="DPM Photonics" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="bg externallink"><img src="./bg/logos/dpm_photonics.png" alt="DPM Photonics" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="http://www.intrinsiccrystal.com/cpzs.asp?sort_id=2&nsort_id=3" data-supplier="Intrinsic Crystal Technology" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="bg externallink"><img src="./bg/logos/intrinsic_crystal_technology.png" alt="Intrinsic Crystal Technology" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.knightoptical.com/stock/default/lenses.html" data-supplier="Knight Optical" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="bg externallink"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.eksmaoptics.com/optical-components/lenses/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="bg externallink"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.artifex-engineering.com/optics/lenses/" data-supplier="Artifex Engineering" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="bg externallink"><img src="./bg/logos/artifex_engineering.png" alt="Artifex Engineering" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.shanghai-optics.com/" data-supplier="Shanghai Optics" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="bg externallink"><img src="./bg/logos/shanghai_optics.png" alt="Shanghai Optics" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_lenses.html?s=vbox">List of suppliers for lenses</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: transparent optical devices affecting the wavefront curvature of light</p>
+<p>More specific terms: <a href="ball_lenses.html" title="lenses which have the geometric form of a sphere">ball lenses</a>, <a href="microlenses.html" title="optical lenses of particularly small diameter, e.g. below 1 mm">microlenses</a>, <a href="achromatic_optics.html" title="optical devices or setups with minimized chromatic aberrations">achromatic</a> lenses, <a href="aspheric_optics.html" title="optical elements with non-spherical surfaces">aspheric</a> aspheric, <a href="cylindrical_lenses.html" title="lenses which focus or defocus light only in one direction">cylindrical lenses</a>, <a href="rod_lenses.html" title="cylindrical lenses with the geometrical form of a cylinder">rod lenses</a>, <a href="diffractive_optics.html" title="optical elements with operation principles based on diffraction of light">diffractive</a> lenses, <a href="ocular_lenses.html" title="lenses or lens systems as used in telescopes and microscopes, for example, close to the observing eye">ocular lenses</a>, <a href="scanning_lenses.html" title="lens systems which are designed for use in laser scanners">scanning lenses</a>, f&ndash;theta lenses, <a href="telecentric_lenses.html" title="lenses or objectives having the entrance or exit pupil at infinity">telecentric lenses</a>, <a href="objectives.html" title="optical elements for collecting light from inspected objects, or for sending light to objects">objective lenses</a>, <a href="ocular_lenses.html" title="lenses or lens systems as used in telescopes and microscopes, for example, close to the observing eye">ocular lenses</a>, <a href="field_lenses.html" title="lenses in imaging instruments which affect the field of view">field lenses</a>, <a href="fresnel_lenses.html" title="lenses where the surface profile has annular steps">Fresnel lenses</a>, <a href="gradient_index_lenses.html" title="lenses which utilize a radial variation of refractive index">gradient-index lenses</a>, <a href="kerr_lens.html" title="a lensing effect arising from the Kerr nonlinearity">Kerr lens</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Linsen</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a></p>
+<p><a href="encyclopedia_cite.html?article=lenses">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>An optical lens consists of a transparent medium (in most case an <a href="optical_glasses.html" title="glasses of high quality, made for optical applications">optical glass</a> or <a href="plastic_optics.html" title="optical elements made of organic polymer materials">polymer</a>), where light enters on one side and exits on the opposite side.
+Often, but not always, it has at least one curved surface.
+Its purpose is to modify the <a href="wavefronts.html" title="surfaces connecting points with the same phase of a wave">wavefront</a> curvature of the light, which implies that light is focused or defocused.
+A focusing and defocusing lenses are also sometimes called to be <em>converging</em> or <em>diverging</em> lenses, respectively, although it seems more natural to use those adjectives for beams rather than lenses.</p>
+<p>Strictly speaking, a lens is always a single optical element, and this article treats mainly those.
+However, systems containing multiple lenses in a common housing are also often called lenses; we treat them in the article on <a href="objectives.html" title="optical elements for collecting light from inspected objects, or for sending light to objects"><em>objectives</em></a>, or more specifically e.g. under <a href="photographic_objectives.html" title="objective lenses used for photography">photographic objectives</a>.</p>
+<p>Some typical examples for using an optical lens:</p>
+<ul>
+<li>A <a href="collimated_beams.html" title="laser beams with weak divergence">collimated beam</a>, having approximately flat wavefronts, is converted into a beam where the wavefronts are curved such that the beam converges to a focus.
+The lens then acts as a <em>focusing lens</em> &ndash; see Figure&nbsp;1 (a).</li>
+<li>The same kind of lens can convert a diverging beam into a collimated beam; it then acts as a <em>collimating lens</em>.
+This can also be seen in Figure&nbsp;1 (a) if you consider the incident beam to come from the right side.</li>
+<li>Other lenses, having concave surfaces, can make a collimated or convergent beam divergent &ndash; see Figure&nbsp;1 (b).
+Such lenses could also be used to collimate a beam which is originally convergent.</li>
+<li>Frequently, a single lens or a combination of several lenses (an <a href="objectives.html" title="optical elements for collecting light from inspected objects, or for sending light to objects">objective</a>) is used for imaging purposes.
+For example, a camera objective is used for imaging a scene to a photographic film or an electronic <a href="image_sensors.html" title="optoelectronic sensors which can be used for imaging">image sensor</a>.
+Similarly, microscope objectives are used for imaging small objects.</li>
+</ul>
+<figure>
+<img src="img/focal_length.png" alt="lenses">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Focusing and defocusing lenses.
+</figcaption>
+</figure>
+<p>Although the change in <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a> is often regarded as a the actual function of a lens, its essential function is the change in wavefront curvature, which is the actual reason for changes in beam radius during propagation after the lens.
+(Note that the optical energy always propagates in a direction which is perpendicular to the wavefronts.)
+This is illustrated in Figure&nbsp;2: Between the lens and the beam focus, the light converges because of the wavefront curvature, and after the focus it diverges due to the wavefront curvature in the opposite direction.</p>
+<figure>
+<img src="img/focusing_lens.png" alt="focusing lens">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Change of wavefront curvature at a focusing lens.
+The red and blue colors visualize the strength and sign of the electric field in one moment of time.
+The assumed wavelength is much larger than in reality.
+</figcaption>
+</figure>
+<h2 class="togglediv">Physical Origin of Wavefront Changes</h2>
+<div>
+<p>For most lenses, the produced wavefront changes arise from the curvature of at least one of the surfaces.
+For the typical biconvex lens (i.e., a lens with two convex surfaces) as seen in Figure&nbsp;2, the <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">optical phase</a> delay for light getting through the lens near its center is larger than for light propagating further away from the center, where the lens is thinner.
+This is because the <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> of the lens <a href="optical_materials.html" title="materials used for optical components">material</a> is larger than that of the surrounding medium (normally air).
+The radially varying phase delay directly implies the change in curvature of the wavefronts.</p>
+<p>An alternative physical explanation is <a href="refraction.html" title="the change of the propagation direction when a wave comes from one medium into another one">refraction</a> at the lens surfaces.
+Particularly for thick lenses (see below), a detailed calculation based on refraction is more accurate than a calculation based on a radially varying phase delay, which ignores possible changes in beam size within the lens.</p>
+<p>There are also <a href="gradient_index_lenses.html" title="lenses which utilize a radial variation of refractive index"><em>gradient-index lenses</em></a> (<em>GRIN lenses</em>), where the <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> systematically varies within the lens material.
+For a focusing GRIN lens, the refractive index is highest near the center and lower outside; there should be an approximately parabolic change in refractive index with increasing radial position.
+The surfaces of a GRIN lens are normally flat, so that it looks like an ordinary plate or (more often) like a cylindrical rod.</p>
+</div>
+<h2 class="togglediv">The Focal Length</h2>
+<div>
+<p>The <a href="focal_length.html" title="a measure of how strongly an optical system focuses or defocuses light">focal length</a> <span class="eqn_il"><i>f</i></span> of a thin lens is the distance from the lens to a focus behind it, if the lens is hit by a <a href="collimated_beams.html" title="laser beams with weak divergence">collimated beam</a> (see Figure&nbsp;1 (a)).
+For a defocusing lens, the focal length is negative: it is minus the distance to the virtual focus (see Figure&nbsp;1 (b)).</p>
+<p>For a thick lens (see below), the situation is more complicated.
+It generally has two principle planes, and the focal length for each side is the distance between that point and the corresponding <a href="focal_points_and_focal_planes.html" title="points to which parallel input rays are concentrated by an optical system, and the planes going through those points">focal point</a>.
+If the medium surrounding the lens is the same on both sides, the two focal length values are identical.
+See the article on <a href="focal_length.html" title="a measure of how strongly an optical system focuses or defocuses light">focal length</a> for more details.</p>
+<p>The <a href="dioptric_power.html" title="the inverse of the focal length"><em>dioptric power</em></a> (or <em>focusing power</em>) of a lens is the inverse of the focal length, or the <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> of the surrounding medium divided by the focal length.</p>
+<p>Ordinary lenses as used in laser technology have focal lengths somewhere between 5&nbsp;mm and many meters.
+<a href="ball_lenses.html" title="lenses which have the geometric form of a sphere">Ball lenses</a> and tiny <a href="aspheric_optics.html" title="optical elements with non-spherical surfaces">aspheric</a> lenses (see below) can easily be smaller, sometimes even well below 1&nbsp;mm.</p>
+<p>An ideal lens with a given focal length <span class="eqn_il"><i>f</i></span> creates a radially varying <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">phase</a> delay for a <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a> according to the following equation:</p>
+<div class="eqn"><img src="eqn/dphi_lens.gif" width="109" height="44" alt="radial phase change at lens"></div>
+<p>This formula ignores the constant part of the phase change as well as aberrations.</p>
+<p>For more details, see the article on <a href="focal_length.html" title="a measure of how strongly an optical system focuses or defocuses light">focal length</a>.</p>
+<h3 class="togglediv">Lensmaker's Equation</h3>
+<div>
+<p>The following equation, called <em>lensmaker's equation</em>, allows one to calculate the <a href="focal_length.html" title="a measure of how strongly an optical system focuses or defocuses light">focal length</a> of lens made of a <a href="optical_materials.html" title="materials used for optical components">material</a> with <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> <span class="eqn_il"><i>n</i></span> and with curvature radii <span class="eqn_il"><i>R</i><sub>1</sub></span> and <span class="eqn_il"><i>R</i><sub>2</sub></span> on the two surfaces:</p>
+<div class="eqn"><img src="eqn/f_lens.gif" width="218" height="50" alt="focal length of a lens"></div>
+<p>The curvature radii are taken positive for convex surfaces and negative for concave surfaces.
+The last term is relevant only for thick lenses (see below) with substantial curvature on both sides.
+The equation holds for <a href="paraxial_approximation.html" title="a frequently used approximation, essentially assuming small angular deviations of the propagation directions from some beam axis">paraxial</a> rays, not too far from the symmetry axis, and assumes that the ambient medium has a refractive index close to 1 (as is the case for air).</p>
+<p>Note that different sign conventions are used in the literature.
+For example, a common convention takes the radius for the second interface as positive if the surface is concave.
+This is opposite to the convention used above.</p>
+</div>
+</div>
+<h2 class="togglediv">Thin and Thick Lenses</h2>
+<div>
+<p>In many practical cases, a lens is so thin that the beam radius does not change appreciably within the lens.
+This is often the case for lenses with weak surface curvatures (i.e., large curvature radii).
+The third term in lensmaker's equation (see above) is then negligible, and by dropping it one obtains the simplified thin lens equation.
+There are many other equations in optics where simplified versions are available for thin lenses, or which hold only for thin lenses.
+The criteria for a lens being thin can be different in such equations.</p>
+<p>Thick lenses are often encountered when a large focusing power is required, and for compound lenses.
+The thickness <span class="eqn_il"><i>d</i></span> (the distance between the lens surfaces as measured on the axis) then also has a significant influence on the focal length, as can be seen in lensmaker's equation.
+Note also that the exact definition of the position of a thick lens, and thus also of its focal length, is not obvious for a thick lens, at least when it is asymmetric.</p>
+</div>
+<h2 class="togglediv">The Lens Equation</h2>
+<div>
+<figure class="right" style="width:212px;">
+<img src="img/lens_equation_fig.png" alt="illustration for lens equation">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Illustration of the lens equation.
+</figcaption>
+</figure>
+<p>If a divergent (rather than collimated) beam hits a focusing lens, the distance <span class="eqn_il"><i>b</i></span> from the lens to the focus becomes larger than the focal length <span class="eqn_il"><i>f</i></span> (see Figure&nbsp;3).
+This can be calculated with the <em>lens equation</em></p>
+<div class="eqn"><img src="eqn/lens_equation.gif" width="69" height="41" alt="lens equation"></div>
+<p>where <span class="eqn_il"><i>a</i></span> is the distance from the original focus to the lens.
+This shows that <span class="eqn_il"><i>b&thinsp;&asymp;&thinsp;f</i></span> if <span class="eqn_il"><i>a&thinsp;&gt;&gt;&thinsp;f</i></span>, but <span class="eqn_il"><i>b&thinsp;&gt;&thinsp;f</i></span> otherwise.
+That relation can be intuitively understood: a focusing power <span class="eqn_il">1&thinsp;/&thinsp;<i>a</i></span> would be required to collimate the incident beam (i.e. to remove its <a href="beam_divergence.html" title="a measure for how fast a laser beam expands far from its focus">beam divergence</a>), so that only a focusing power <span class="eqn_il">1&thinsp;/&thinsp;<i>f&thinsp;&minus;</i>&thinsp;1&thinsp;/&thinsp;<i>a</i></span> is left for focusing.</p>
+<p>If <span class="eqn_il"><i>a&thinsp;&le;&thinsp;f</i></span>, the equation cannot be fulfilled: the lens can then not focus the beam.</p>
+<p>Note that the lens equation applies for rays, assuming that the <a href="paraxial_approximation.html" title="a frequently used approximation, essentially assuming small angular deviations of the propagation directions from some beam axis">paraxial approximation</a> is valid, i.e., all angles relative to the beam axis remain small.</p>
+</div>
+<h2 class="togglediv">Focusing a Collimated Beam</h2>
+<div>
+<p>If a <a href="collimated_beams.html" title="laser beams with weak divergence">collimated</a> <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beam</a> with <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a> <span class="eqn_il"><i>w</i><sub>0</sub></span> hits a focusing lens with focal length <span class="eqn_il"><i>f</i></span>, the beam radius of the <a href="beam_waist.html" title="location with minimum beam radius">beam waist</a> (focus) after the lens can be calculated with the equation</p>
+<div class="eqn"><img src="eqn/focus_size.gif" width="70" height="45" alt="beam radius of focus after a lens"></div>
+<p>where it is assumed that the beam radius at the focus is much smaller than the initial beam radius <span class="eqn_il"><i>w</i><sub>0</sub></span>.
+(This condition is violated for beams with a too small incident radius; the focus is then larger than according to the given equation.)
+Also, it is assumed that the beam radius is significantly larger than the wavelength <span class="eqn_il"><span class="greek">&lambda;</span></span>, so that the <a href="paraxial_approximation.html" title="a frequently used approximation, essentially assuming small angular deviations of the propagation directions from some beam axis">paraxial approximation</a> is valid.</p>
+<form id="calculate_waist_radius" class="calculatorform">
+<h2>Calculator for Beam Waist Radius</h2>
+<table>
+<tr>
+<td>Wavelength:</td><td></td><td></td>
+<td><input name="lambda" value="" class="cf_calculate_waist_radius"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Focal length:</td><td></td><td></td>
+<td><input name="f_m" value="" class="cf_calculate_waist_radius"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Initial beam radius:</td><td></td><td></td>
+<td><input name="w0" value="" class="cf_calculate_waist_radius"></td>
+<td></td><td>(collimated input beam)</td>
+</tr>
+<tr>
+<td>Beam quality factor:</td><td></td><td></td>
+<td><input name="M2" value="" class="cf_calculate_waist_radius"></td>
+<td></td><td>(1 for Gaussian beams)</td>
+</tr>
+<tr>
+<td>Waist radius:</td><td></td><td></td>
+<td><input name="w_f" value="" class="cf_calculate_waist_radius"></td>
+<td><span class="calcbutton" id="calc_w_f">calc</span></td><td></td>
+</tr>
+</table>
+<p class="comment">Enter input values with units, where appropriate. After you have modified some inputs, click the "calc" button to recalculate the output.</p>
+<noscript>
+<p style="color:red">Attention: The buttons do not work, as Javascript is turned off in your browser!</p>
+</noscript>
+</form>
+<script type="text/javascript" src="calcform.js"></script>
+<script type="text/javascript" nonce="K/gqOq+zBLQZoxRDr9/itw==">
+funits = new Array();
+funits["lambda"] = "m";
+funits["f_m"] = "m";
+funits["w0"] = "m";
+funits["M2"] = "";
+funits["w_f"] = "m";
+function calc_w_f() {
+  $("input[name=w_f]").val("???");
+  GetFieldValues("w_f","calculate_waist_radius");
+  w_f = M2*lambda*f_m/(Math.PI*w0);
+  $("input[name=w_f]").val(format_u(w_f, "m"));
+ }
+$("input[name=lambda]").val("1064 nm");
+$("input[name=f_m]").val("100 mm");
+$("input[name=w0]").val("500 µm");
+$("input[name=M2]").val("1");
+calc_w_f();
+$(document).ready(function() {
+  $("span#calc_w_f").click(function() { calc_w_f() })
+});
+</script>
+</div>
+<h2 class="togglediv">Numerical Aperture and f Number of a Lens</h2>
+<div>
+<p>The <a href="numerical_aperture.html" title="sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a> (NA) of a focusing or collimation lens is defined as the sine of the angle of the marginal ray coming from the focal point, multiplied with the <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> of the medium from which the input beam comes.
+The NA of a lens (and not its <a href="focal_length.html" title="a measure of how strongly an optical system focuses or defocuses light">focal length</a>) is what limits the size of a <a href="beam_waist.html" title="location with minimum beam radius">beam waist</a> which can be formed with that lens.
+Lenses with rather high NA (of the order of 0.5 to 0.9) are required e.g. for players and recorders of data storage media such as CDs, DVDs and Blu-ray Discs.
+In a <a href="microscopes.html" title="instruments for seeing very small objects">microscope</a>, the NA limits the image resolution obtainable.</p>
+<p>Note that the definition of numerical aperture is not based on the focal length for lenses or <a href="objectives.html" title="optical elements for collecting light from inspected objects, or for sending light to objects">objectives</a> which are designed for <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a> from some object plane to an <a href="image_planes.html" title="planes which are conjugate to an object plane, so that objects are imaged there">image plane</a>.
+Here, the angular opening is considered from a point in the object plane.
+See the article on <a href="numerical_aperture.html" title="sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a> for more details.</p>
+<p>High-NA lenses are also required for collimating <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beams</a> which originate from small apertures.
+For example, this is the case for low-power single-mode <a href="laser_diodes.html" title="semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diodes</a>.
+When a lens with too low NA is used, the resulting collimated beam can be distorted (aberrated) or even truncated.</p>
+<p>Obviously, a high-NA lens has to be relatively large if it has a large focal length.</p>
+<p>For camera lenses (<a href="photographic_objectives.html" title="objective lenses used for photography">photographic objectives</a>), a minimum <a href="f_number.html" title="a measure for the open aperture of a photographic objective"><em>f-number</em></a> (or range of f-numbers) is often specified.
+For example, a f/4 lens is one where the maximum open aperture (more precisely: the maximum <a href="entrance_and_exit_pupil.html" title="the apparent apertures of an optical system, seen from the object or image side">entrance pupil</a>) has a diameter of one quarter of the focal length.
+(Note that <span class="eqn_il"><i>f</i></span>, but not the <em>f-number</em> is the focal length!)
+This implies a numerical aperture of <span class="eqn_il">sin(1&thinsp;/&thinsp;4)</span> &asymp; 0.247, but the f-number specification is more common for photographic objectives.</p>
+</div>
+<h2 class="togglediv">Biconvex, Plano-convex, Biconcave, Plano-Concave and Meniscus Lenses</h2>
+<div>
+<p>The focusing lenses shown in the figures above are all biconvex, i.e., convex on both sides.
+Plano-convex lenses are plane on one side and convex on the other one.
+Also, it is possible to make biconvex lenses with different curvature radii on both sides.
+Similarly, defocusing lenses can be biconcave or plano-concave.</p>
+<figure>
+<img src="img/lens_types.png" alt="types of optical lenses">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Different types of optical lenses.
+</figcaption>
+</figure>
+<p>According to lensmaker's equation (see above), a certain dioptric power can be achieved with different lens designs.
+However, they differ in terms of aberrations (imaging errors, see below).
+For imaging a small spot to a spot of equal size, the symmetric biconvex lens is best suited.
+For an asymmetric application, such as focusing a collimating beam or collimating a strongly divergent beam, a plano-convex lens can be more appropriate.
+(The ideal solution would be an asymmetric lens with optimized curvature radii on both sides.)
+It should be oriented such that the curved surface is on the side of the collimated beam.
+Both lens surfaces then contribute to the focusing action.
+See Figure&nbsp;5 for examples of typically used configurations.
+The exactly optimum configuration may e.g. slightly deviate from a plano-convex lens in the case was beam focusing, but the plano-convex solution is usually close enough.</p>
+<figure>
+<img src="img/optimum_lens_types.png" alt="optimum lens types for refocusing and collimation">
+<figcaption><span class="start">Figure&nbsp;5:</span> 
+Recommended lens types for refocusing and collimation. The middle case for symmetric refocusing is better than the first one in terms of aberrations, but may have higher losses due to two additional optical surfaces.
+</figcaption>
+</figure>
+<p><em>Meniscus lenses</em> are convex&ndash;concave, i.e., convex on one side and concave on the other side.
+The contributions of both sides to the dioptric power cancel each other partially; overall the lens can be positive (focusing) or negative (defocusing).
+Meniscus lenses are often used as <em>corrective lenses</em> in <a href="objectives.html" title="optical elements for collecting light from inspected objects, or for sending light to objects">objectives</a>: their main function is to correct for image aberrations.
+They are also useful for <a href="condensers.html" title="lenses or lens systems for conditioning light from an illumination source">condensers</a> in illuminating systems.</p>
+<p><a href="ball_lenses.html" title="lenses which have the geometric form of a sphere">Ball lenses</a> have the shape of a sphere.
+Similarly, there are <a href="rod_lenses.html" title="cylindrical lenses with the geometrical form of a cylinder">rod lenses</a> with a cylinder shape.</p>
+<p><em>Doublet lenses</em> are made by bonding two lenses together, which consist of different <a href="optical_materials.html" title="materials used for optical components">optical materials</a>.
+Most common are <a href="achromatic_optics.html" title="optical devices or setups with minimized chromatic aberrations"><em>achromatic doublets</em></a> (see below).</p>
+<p>There are also <a href="fresnel_lenses.html" title="lenses where the surface profile has annular steps">Fresnel lenses</a>, which can be made much thinner, but can hardly provide high optical performance.</p>
+</div>
+<h2 class="togglediv">Aberrations Caused by Lenses</h2>
+<div>
+<p>Lenses cause various types of aberrations (image degradations):</p>
+<ul>
+<li>Most lenses have spherical surfaces, simply because these are the easiest to fabricate.
+However, a spherical surface more or less deviates from the ideal one, and this leads to image aberrations (particularly in peripheral regions) or to the deterioration of laser <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a>.
+These are called <a href="spherical_aberrations.html" title="optical aberrations resulting from spherical optical surfaces"><em>spherical aberrations</em></a>.
+Aspheric lenses (see below) can have strongly reduced spherical aberrations.
+There are types of lenses with surface shapes which are optimized for certain applications.
+See the article on <a href="spherical_aberrations.html" title="optical aberrations resulting from spherical optical surfaces">spherical aberrations</a> for more details.</li>
+<li>For incidence away from normal direction, one obtains <a href="astigmatism.html" title="a kind of optical aberrations; alternatively, a defect of optical lenses or a property of laser beams"><em>astigmatism</em></a> and <em>coma</em>.
+Also, lenses generally exhibit <em>field curvature</em>: focal points for incidence from different directions lie on a curve rather than a plane.</li>
+<li>Further, there are image distortions, e.g. in the form of barrel, pincushion or mustache distortions.</li>
+<li><a href="chromatic_aberrations.html" title="image distortions caused by wavelength-dependent optical effects"><em>Chromatic aberrations</em></a> arise from the <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> of the material from which the lens is made.
+A typical consequence is that the <a href="focal_length.html" title="a measure of how strongly an optical system focuses or defocuses light">focal length</a> is somewhat wavelength-dependent, so that <a href="white_light.html" title="light which creates a white color impression">white light</a> cannot be perfectly focused: different wavelength components have their focus at different points.
+Achromatic lenses (see below) exhibit strongly reduced chromatic aberrations.</li>
+<li>When a <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a> with too large <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a> hits a lens, its beam profile can be truncated at the edges.
+This can lead to substantial beam distortions.
+Such <em>aperture diffraction</em> also occurs in imaging applications; the finite size of a lens can limit the image resolution of an optical system.
+However, the image quality is not necessarily limited by diffraction, if the used optical components and the optical design are not of a very high quality.</li>
+</ul>
+<p>Such imaging errors can often be substantially reduced either by optimizing single lenses or by suitably combining several lenses.
+This is the reason why <a href="photographic_objectives.html" title="objective lenses used for photography">photographic objectives</a>, for example, usually consist of a substantial number of lenses.</p>
+</div>
+<h2 class="togglediv">Aspheric Lenses</h2>
+<div>
+<p>Although spherical aberrations can be largely compensated by suitably combining several lenses, it is sometimes preferable to use <a href="aspheric_optics.html" title="optical elements with non-spherical surfaces"><em>aspheric</em></a> <em>lenses</em>, where the surface shape deviates from a spherical one.
+It is then possible to obtain a good imaging quality (with low spherical aberrations) already with a single lens, or with fewer lenses in an <a href="objectives.html" title="optical elements for collecting light from inspected objects, or for sending light to objects">objective</a>.
+However, aspheric lenses are more difficult to fabricate and thus more expensive.</p>
+</div>
+<h2 class="togglediv">Achromatic Lenses</h2>
+<div>
+<p>The most common approach for obtaining an <a href="achromatic_optics.html" title="optical devices or setups with minimized chromatic aberrations"><em>achromatic lens</em></a>, i.e., a lens with strongly reduced <a href="chromatic_aberrations.html" title="image distortions caused by wavelength-dependent optical effects">chromatic aberrations</a> (see above), is to bond two lenses together, which consists of different materials (see the right side of Figure&nbsp;4).
+For example, one can combine a low-index <a href="crown_glasses.html" title="optical glasses with low chromatic dispersion and tentatively a low refractive index">crown glass</a> of biconvex shape with a high-index <a href="flint_glasses.html" title="optical glasses with strong chromatic dispersion (low Abbe number) and tentatively a high refractive index">flint glass</a> of plano-concave shape to obtain such an <em>achromatic doublet</em>.
+The curvature radii at the bonding interface are calculated for minimum chromatic dispersion, and must of course be precisely equal.</p>
+</div>
+<h2 class="togglediv">Cylindrical and Astigmatic Lenses</h2>
+<div>
+<p>It is possible to have the curvature of a lens surface only in the horizontal direction, for example, but not in the vertical direction.
+That <a href="cylindrical_lenses.html" title="lenses which focus or defocus light only in one direction"><em>cylindrical lens</em></a> will then focus or defocus only in the horizontal direction while not affecting the wavefront curvature in the vertical direction.</p>
+<p>Cylindrical lenses can be used to obtain a beam focus of elliptical form, or to generate or compensate <a href="astigmatism.html" title="a kind of optical aberrations; alternatively, a defect of optical lenses or a property of laser beams">astigmatism</a> of a beam or an optical system.</p>
+<p>If there is a curvature in both directions, but not of equal strength, one has an <em>astigmatic lens</em>.
+It can be used, for example, for vision correction.</p>
+</div>
+<h2 class="togglediv">Multiple Element Lenses</h2>
+<div>
+<p>In many situations, it is difficult to accomplish various goals concerning properties like minimized aberrations with a single lens.
+It can then be better to use multiple element lenses, i.e., combinations of lenses.
+One particularly often uses lens doublets (consisting of two lenses) and triplets (with three lenses), but there are devices containing even more lenses.
+Most of them can be called <a href="objectives.html" title="optical elements for collecting light from inspected objects, or for sending light to objects">objectives</a>, for example <a href="photographic_objectives.html" title="objective lenses used for photography">photographic objectives</a> or projection objectives.
+(In the previous paragraph, achromatic doublets have been mentioned already.)</p>
+<p>The single lenses can be either cemented together or mounted with some air space in between (<em>air-spaced lens systems</em>).
+In any case, the multiple element lens is used like a single optical element, e.g. as a <a href="photographic_objectives.html" title="objective lenses used for photography">photographic objective</a>.</p>
+</div>
+<h2 class="togglediv">Fabrication of Lenses</h2>
+<div>
+<p>Lenses are often <a href="optical_fabrication.html" title="the fabrication of optical components like lenses, prisms and mirrors">fabricated</a> from pre-fabricated <em>lens blanks</em> which are somewhat larger.
+With suitable grinding and polishing techniques, one removes part of the material to obtain the finally required shape and surface quality.
+Finally, one often applies an <a href="anti_reflection_coatings.html" title="optical thin-film coatings for reducing reflections from surfaces">anti-reflection coating</a>.</p>
+<p>After the process and frequently also during the fabrication process, sophisticated optical characterization techniques (e.g. involving <a href="interferometers.html" title="optical devices utilizing the phenomenon of interference">interferometers</a>) can be applied for monitoring fabrication errors which can e.g. result in wavefront errors.</p>
+</div>
+<h2 class="togglediv">Coatings for Lens Surfaces</h2>
+<div>
+<p>Many lenses have <a href="anti_reflection_coatings.html" title="optical thin-film coatings for reducing reflections from surfaces">anti-reflection coatings</a> on their surfaces, which substantially reduce the reflections caused by the <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> change at the surface.
+Note, however, that this works only in a limited wavelength range.
+There is a trade-off between a high suppression of reflections and a broad operation bandwidth.</p>
+<p>There are also <em>abrasion-resistant coatings</em>, making lenses more robust.</p>
+</div>
+<h2 class="togglediv">Lens Types According to Applications and Optical Functions</h2>
+<div>
+<p>Optical lenses and lens systems are also often named according to their optical function in an instrument.
+Some examples for such terms:</p>
+<ul>
+<li>Ophthalmic lenses are used for vision correction, compensating visual impairments like myopia, hyperopia and astigmatism.</li>
+<li>Focusing lenses are used for focusing <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beams</a>, for example.
+Particularly for large <a href="diffraction_limited_beams.html" title="beams with a minimum possible beam divergence for a given waist radius">diffraction-limited beams</a> focused with high-NA lenses, the achieved focal spot sizes can be very small (potentially with a <a href="beam_waist.html" title="location with minimum beam radius">beam waist</a> radius below 1&nbsp;&mu;m).</li>
+<li>Collimation lenses are used for <a href="collimated_beams.html" title="laser beams with weak divergence">collimating</a> light beams.</li>
+<li><a href="scanning_lenses.html" title="lens systems which are designed for use in laser scanners">Scanning lenses</a> (e.g. in the form of f&ndash;theta lenses and <a href="telecentric_lenses.html" title="lenses or objectives having the entrance or exit pupil at infinity">telecentric lenses</a>) are required for scanning beam directions e.g. in laser material processing and laser displays.</li>
+<li><a href="condensers.html" title="lenses or lens systems for conditioning light from an illumination source">Condensers</a> somehow condition illumination light, for example in a projector.</li>
+<li><a href="objectives.html" title="optical elements for collecting light from inspected objects, or for sending light to objects">Objectives</a> receive light from some object in an <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a> system.
+More specifically, they can be <a href="photographic_objectives.html" title="objective lenses used for photography">photographic objectives</a>, telescope objectives, microscope objectives etc.
+Some lenses are used in combination with photographic objectives, e.g. for turning an objective into a macro objective (Figure&nbsp;6).</li>
+<li><a href="field_lenses.html" title="lenses in imaging instruments which affect the field of view">Field lenses</a> are used to enlarge the <a href="field_of_view.html" title="the angular extent of the field which can be observed with an optical instruments or the eye">field of view</a> e.g. of <a href="telescopes.html" title="optical instruments for viewing distant objects, or sometimes more generally afocal systems">telescopes</a>.</li>
+<li>Lenses can also be used for <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">mode</a> formation in <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonators</a>, although curved mirrors are more common for that purpose.</li>
+</ul>
+<p>Disadvantages of lenses, when comparing with curved mirrors, are the reflection losses and <a href="chromatic_aberrations.html" title="image distortions caused by wavelength-dependent optical effects">chromatic aberrations</a>.
+On the other hand, they allow for tight focusing without <a href="astigmatism.html" title="a kind of optical aberrations; alternatively, a defect of optical lenses or a property of laser beams">astigmatism</a>.
+Such considerations are also relevant, for example, when using lenses (or mirrors) for focusing <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a> of light.</p>
+<figure class="right" style="width:350px;">
+<img src="img/nikon_macro_lens.jpg" alt="macro lens">
+<figcaption><span class="start">Figure&nbsp;6:</span> 
+A photographic macro lens for combination with a standard objective.
+</figcaption>
+</figure>
+</div>
+<h2 class="togglediv">Standard Lenses vs. Custom Lenses</h2>
+<div>
+<p>As lenses have only relatively few essential parameters (<a href="focal_length.html" title="a measure of how strongly an optical system focuses or defocuses light">focal length</a>, <a href="numerical_aperture.html" title="sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a>, suitable wavelength range), one frequently uses standard lenses, many of which are available from stock.
+However, one can also obtain <a href="custom_optics.html" title="optical elements made according to customer-specific specifications">custom lenses</a> fabricated according to given specifications.
+For example, that way one can obtain lenses not only with unusual optical performance figures (e.g. <a href="aspheric_optics.html" title="optical elements with non-spherical surfaces">aspheric lenses</a>), but also with special geometrical features, optical materials etc.</p>
+</div>
+<h2 class="togglediv">Specialty Lenses</h2>
+<div>
+<p>There are some kind of specialty lenses with unusual properties.
+For example, <a href="axicons.html" title="lenses with a conical surface">axicons</a>, having a surface with a conical shape, are sometimes considered as specialty lenses.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_lenses.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 201 suppliers for lenses. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.eksmaoptics.com/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="bg externallink" title="Visit the website of EKSMA OPTICS"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a><h3><a href="./bg/profiles/eksma_optics.html" title="See the profile of EKSMA OPTICS">EKSMA OPTICS</a></h3><p>Standard plano-convex, plano-concave, biconvex, biconcave, cylindrical <a href="https://www.eksmaoptics.com/optical-components/lenses/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="externallink bg">lenses and lens kits</a> made of BK7, UVFS or CaF<sub>2</sub> optical materials. Lenses of custom design can be produced in our CNC lens polishing facility and later coated for your application.</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.intrinsiccrystal.com/" data-supplier="Intrinsic Crystal Technology" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="bg externallink" title="Visit the website of Intrinsic Crystal Technology"><img src="./bg/logos/intrinsic_crystal_technology.png" alt="Intrinsic Crystal Technology" class="supplierlogo"></a><a href="http://www.intrinsiccrystal.com/cpzs.asp?sort_id=2&nsort_id=3" data-supplier="Intrinsic Crystal Technology" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="bg externallink" title="Visit the website of Intrinsic Crystal Technology"><img src="./bg/products/intrinsic_crystal_technology/lenses.jpg" alt="lenses" class="product"></a><h3><a href="./bg/profiles/intrinsic_crystal_technology.html" title="See the profile of Intrinsic Crystal Technology">Intrinsic Crystal Technology</a></h3><p>We sell spherical and cylindrical <a href="http://www.intrinsiccrystal.com/cpzs.asp?sort_id=2&nsort_id=3" data-supplier="Intrinsic Crystal Technology" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="externallink bg">lenses</a>, including plano-convec, bi-convex, bi-concave and meniscus lenses.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.knightoptical.com/" data-supplier="Knight Optical" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="bg externallink" title="Visit the website of Knight Optical"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo"></a><a href="https://www.knightoptical.com/stock/default/lenses.html" data-supplier="Knight Optical" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="bg externallink" title="Visit the website of Knight Optical"><img src="./bg/products/knight_optical/lenses.jpg" alt="lenses" class="product"></a><h3><a href="./bg/profiles/knight_optical.html" title="See the profile of Knight Optical">Knight Optical</a></h3><p>Whatever the application, we have a wide range of <a href="https://www.knightoptical.com/stock/default/lenses.html" data-supplier="Knight Optical" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="externallink bg">stock</a> and <a href="https://www.knightoptical.com/stock/default/lenses.html" data-supplier="Knight Optical" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="externallink bg">custom-made lenses</a> available for devices operating within ultraviolet (UV), visible, near-infrared (NIR) and infrared (IR) wavelengths. From <a href="https://www.knightoptical.com/stock/default/lenses/aspheric-lenses.html" data-supplier="Knight Optical" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="externallink bg">aspheric</a>, <a href="https://www.knightoptical.com/stock/default/lenses/ball-half-ball-lenses.html" data-supplier="Knight Optical" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="externallink bg">ball &amp; half ball</a> and <a href="https://www.knightoptical.com/custom/optical-components/uv-vis-nir-optics/lenses/drum-half-drum-lenses" data-supplier="Knight Optical" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="externallink bg">drum &amp; half drum</a> to <a href="https://www.knightoptical.com/stock/default/lenses/biconvex-lenses.html" data-supplier="Knight Optical" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="externallink bg">biconvex</a>, <a href="https://www.knightoptical.com/stock/default/lenses/planoconvex-lenses/condenser-lenses.html" data-supplier="Knight Optical" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="externallink bg">concave</a>, <a href="https://www.knightoptical.com/stock/default/lenses/planoconvex-lensesstock/default/lenses/cylindrical-lenses.html/" data-supplier="Knight Optical" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="externallink bg">cylindrical lenses">cylindrical lenses</a>, our <a href="https://www.knightoptical.com/stock/default/lenses.html" data-supplier="Knight Optical" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="externallink bg">lens</a> portfolio meets a range of project demands.</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.dpmphotonics.com/" data-supplier="DPM Photonics" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="bg externallink" title="Visit the website of DPM Photonics"><img src="./bg/logos/dpm_photonics.png" alt="DPM Photonics" class="supplierlogo"></a><a href="http://www.dpmphotonics.com/precision_optics.php?type=4" data-supplier="DPM Photonics" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="bg externallink" title="Visit the website of DPM Photonics"><img src="./bg/products/dpm_photonics/lenses.jpg" alt="lenses" class="product"></a><h3><a href="./bg/profiles/dpm_photonics.html" title="See the profile of DPM Photonics">DPM Photonics</a></h3><p>DPM Photonics offers precision lenses for <a href="http://www.dpmphotonics.com/precision_optics.php?type=4" data-supplier="DPM Photonics" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="externallink bg">collimating</a> the output of high power fiber devices. We also sell <a href="http://www.dpmphotonics.com/precision_optics.php?type=5" data-supplier="DPM Photonics" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="externallink bg">focusing objective lenses</a>.</p><p>The Model 02-014-1 is an air spaced, computer designed <a href="http://www.dpmphotonics.com/precision_optics.php?type=4" data-supplier="DPM Photonics" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="externallink bg">multi-element lens</a> that is diffaction-limited when used with fibers having core diameters as large as 1200 microns. Operational wavelength is 1064&nbsp;nm. The 02-014 reimages the emitting surface of the fiber with a 0.67&times; demagnification. Focused spot sizes are significantly smaller than those achievable with single-element lenses used in a similar collimating/focusing configuration. All optical elements are fabricated from high laser-damage resistant glasses and are anti-reflection coated to reduce reflectance per surface to 0.13%. The working distance between the lens and the target is sufficiently large to allow use of a gas nozzle to enhance the cutting or welding process and to prevent debris from depositing on the lens surface.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.artifex-engineering.com/" data-supplier="Artifex Engineering" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="bg externallink" title="Visit the website of Artifex Engineering"><img src="./bg/logos/artifex_engineering.png" alt="Artifex Engineering" class="supplierlogo"></a><a href="https://www.artifex-engineering.com/optics/lenses/" data-supplier="Artifex Engineering" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="bg externallink" title="Visit the website of Artifex Engineering"><img src="./bg/products/artifex_engineering/lenses.jpg" alt="lenses" class="product"></a><h3><a href="./bg/profiles/artifex_engineering.html" title="See the profile of Artifex Engineering">Artifex Engineering</a></h3><p>Artifex Engineering offers <a href="https://www.artifex-engineering.com/optics/lenses/" data-supplier="Artifex Engineering" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="externallink bg">customised optical lenses</a> such as <a href="https://www.artifex-engineering.com/optics/lenses/spherical-doublet-lenses-achromat/" data-supplier="Artifex Engineering" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="externallink bg">achromatic</a> or <a href="https://www.artifex-engineering.com/optics/lenses/cylindrical-lenses/" data-supplier="Artifex Engineering" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="externallink bg">cylindrical lenses</a> for almost any application in the UV to IR spectrum. Special requirements such as segmenting and black painted edges can be made on request. Visit our product page for more information. We look forward to your inquiry.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.shanghai-optics.com/" data-supplier="Shanghai Optics" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="bg externallink" title="Visit the website of Shanghai Optics"><img src="./bg/logos/shanghai_optics.png" alt="Shanghai Optics" class="supplierlogo"></a><a href="https://www.shanghai-optics.com/" data-supplier="Shanghai Optics" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="bg externallink" title="Visit the website of Shanghai Optics"><img src="./bg/products/shanghai_optics/lenses.jpg" alt="lenses" class="product"></a><h3><a href="./bg/profiles/shanghai_optics.html" title="See the profile of Shanghai Optics">Shanghai Optics</a></h3><p>Shanghai Optics specializes in <a href="https://www.shanghai-optics.com/" data-supplier="Shanghai Optics" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="externallink bg">custom lenses</a> for all applications, from prototype to volume production.</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.edmundoptics.com/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="bg externallink" title="Visit the website of Edmund Optics"><img src="./bg/logos/edmund_optics.png" alt="Edmund Optics" class="supplierlogo"></a><a href="http://www.edmundoptics.com/c/optical-lenses/603/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="bg externallink" title="Visit the website of Edmund Optics"><img src="./bg/products/edmund_optics/lenses.jpg" alt="lenses" class="product"></a><h3><a href="./bg/profiles/edmund_optics.html" title="See the profile of Edmund Optics">Edmund Optics</a></h3><p>Edmund Optics offers the world’s largest inventory of off-the-shelf optical components, which includes an extensive selection of stock optical lenses such as <a href="http://www.edmundoptics.com/c/achromatic-lenses/652/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="externallink bg">achromatic lenses</a> or <a href="http://www.edmundoptics.com/c/aspheric-lenses/653/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="lenses" rel="nofollow" class="externallink bg">aspheric lenses</a>. Many of Edmund Optics’ lenses are offered with a variety of coating options for the ultraviolet (UV), visible, or infrared (IR) spectrum.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="lenses.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="gradient_index_lenses.html" title="lenses which utilize a radial variation of refractive index">gradient-index lenses</a>, <a href="cylindrical_lenses.html" title="lenses which focus or defocus light only in one direction">cylindrical lenses</a>, <a href="scanning_lenses.html" title="lens systems which are designed for use in laser scanners">scanning lenses</a>, <a href="objectives.html" title="optical elements for collecting light from inspected objects, or for sending light to objects">objectives</a>, <a href="ball_lenses.html" title="lenses which have the geometric form of a sphere">ball lenses</a>, <a href="fresnel_lenses.html" title="lenses where the surface profile has annular steps">Fresnel lenses</a>, <a href="focal_length.html" title="a measure of how strongly an optical system focuses or defocuses light">focal length</a>, <a href="refraction.html" title="the change of the propagation direction when a wave comes from one medium into another one">refraction</a>, <a href="numerical_aperture.html" title="sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a>, <a href="custom_optics.html" title="optical elements made according to customer-specific specifications">custom optics</a>, <a href="anti_reflection_coatings.html" title="optical thin-film coatings for reducing reflections from surfaces">anti-reflection coatings</a>, <a href="astigmatism.html" title="a kind of optical aberrations; alternatively, a defect of optical lenses or a property of laser beams">astigmatism</a>, <a href="imaging_with_a_lens.html" title="creation of an optical image using a single lens">imaging with a lens</a>, <a href="chromatic_aberrations.html" title="image distortions caused by wavelength-dependent optical effects">chromatic aberrations</a>, <a href="achromatic_optics.html" title="optical devices or setups with minimized chromatic aberrations">achromatic optics</a>, <a href="spherical_aberrations.html" title="optical aberrations resulting from spherical optical surfaces">spherical aberrations</a>, <a href="aspheric_optics.html" title="optical elements with non-spherical surfaces">aspheric optics</a>, <a href="thermal_lensing.html" title="a lensing effect induced by temperature gradients">thermal lensing</a><br>and other articles in the categories <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/lenses.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Flenses.html&text=RP+Photonics+Encyclopedia+-+lenses%2C+wavefront+curvature%2C+focusing+lens%2C+defocusing%2C+focal+length%2C+lensmaker%27s+equation%2C+numerical+aperture%2C+biconvex%2C+plano-convex%2C+concave%2C+meniscus%2C+cylindrical%2C+doublets%2C+aspheric+lenses%2C+astigmatism%2C+aberrations" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Flenses.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Flenses.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/lenses.html"&gt;<br>Article on Lenses&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/lenses.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/lenses.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/lenses.html<br>article on 'Lenses' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Short-term Software Licenses Available</h2>
+<p>Do you need simulation software (such as our <a href="./fiberpower.html?banner=rented_software">RP Fiber Power</a>) only during a <b>short-term project</b>?</p>
+<p>Or do you want to <b>test such software very thoroughly</b> before fully committing to it?</p>
+<p>RP Photonics is now offering a solution: <a href="./software_licenses.html?banner=rented_software">software licenses</a> which are valid for a <b>limited time</b>.</p>
+<p>Our conditions are very fair:</p>
+<ul>
+<li>Pay only 5% of the amount for a permanent license for one month.</li>
+<li>When switching over to a permanent license directly thereafter, get the already paid money fully deducted!</li>
+<li>If you decide for that only later on, still get two thirds deducted.</li>
+</ul>
+<p>We are confident that you will like our software and finally decide for permanent licenses.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="K/gqOq+zBLQZoxRDr9/itw==">shownbanner = "rented software";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>More to Read</h2>
+ <p>Here are some randomly selected encyclopedia articles &ndash; just to make you curious:</p>
+  <ul>
+<li><a href="./nodal_points.html">nodal points</a></li><li><a href="./fresnel_reflections.html">Fresnel reflections</a></li><li><a href="./brewster_windows.html">Brewster windows</a></li><li><a href="./waveguides.html">waveguides</a></li><li><a href="./crown_glasses.html">crown glasses</a></li><li><a href="./eye_safe_lasers.html">eye-safe lasers</a></li><li><a href="./avalanche_photodiodes.html">avalanche photodiodes</a></li><li><a href="./shot_noise.html">shot noise</a></li><li><a href="./chromatic_dispersion.html">chromatic dispersion</a></li><li><a href="./direct_diode_lasers.html">direct diode lasers</a></li><li><a href="./thin_film_polarizers.html">thin-film polarizers</a></li><li><a href="./radiative_lifetime.html">radiative lifetime</a></li><li><a href="./cut_off_wavelength.html">cut-off wavelength</a></li><li><a href="./autocollimators.html">autocollimators</a></li><li><a href="./regenerative_amplifiers.html">regenerative amplifiers</a></li></ul>
+
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="K/gqOq+zBLQZoxRDr9/itw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/lenses.html"
+    },
+    "headline": "Lenses",
+    "image": "https://www.rp-photonics.com/previews/lenses.png",
+    "datePublished": "2012-10-03",
+    "dateModified": "2020-06-25",
+    "description": "Lenses are transparent optical devices affecting the wavefront curvature of light, such that light is focused or defocused.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter L",
+      "item": "https://www.rp-photonics.com/encyclopedia_l.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "lenses",
+      "item": "https://www.rp-photonics.com/lenses.html"
+    }]}
+}
+</script>
+</body>
+</html>

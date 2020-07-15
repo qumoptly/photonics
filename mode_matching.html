@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-vQ/gSX2GhbbhKkTeZv7zSQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - mode matching, cavity, resonator</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/mode_matching.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Mode matching is the precise spatial matching of the electric field distributions of laser beams and resonator modes or waveguide modes. It can be essential for efficient launching of light.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="mode matching, cavity, resonator">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mode Matching">
+<meta property="og:description" content="Mode matching is the precise spatial matching of the electric field distributions of laser beams and resonator modes or waveguide modes. It can be essential for efficient launching of light.">
+<meta property="og:url" content="https://www.rp-photonics.com/mode_matching.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/mode_matching.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Mode matching is the precise spatial matching of the electric field distributions of laser beams and resonator modes or waveguide modes. It can be essential for efficient launching of light.">
+<meta name="twitter:title" content="Mode Matching">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/mode_matching.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="vQ/gSX2GhbbhKkTeZv7zSQ==">
+page="mode_matching.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="vQ/gSX2GhbbhKkTeZv7zSQ==">shownsponsors="EKSMA OPTICS"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_m.html">letter M</a> &gt; <a href="mode_matching.html">mode matching</a></p>
+<h1>Mode Matching</h1>
+<header style="margin-right:0;">
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: the precise spatial matching of the electric field distributions of laser beams and resonator modes or waveguide modes</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Modenanpassung</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#optical_resonators" title="other articles on optical resonators">optical resonators</a></p>
+<p><a href="encyclopedia_cite.html?article=mode%20matching">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>In many situations, it is necessary to match a <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a> precisely to another beam or a <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">mode</a> in order to obtain some kind of efficient coupling.
+Examples are:</p>
+<ul>
+<li>A beam from a <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a> has to be coupled into an optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fiber</a>.</li>
+<li>A laser beam must be matched to a passive <a href="optical_resonators.html" title="arrangements of optical components which allow a beam of light to circulate">optical resonator</a> which should act, e.g., as a spatial and/or spectral <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">filter</a> (&rarr;&nbsp;<a href="mode_cleaner_cavities.html" title="optical cavities used as filters for improving the beam quality of laser beams"><em>mode cleaner cavities</em></a>).</li>
+<li>For <a href="injection_locking.html" title="a technique for enforcing operation of a laser on a certain optical frequency by injecting light with that frequency into the laser resonator">injection locking</a>, the mode of a master laser has to be matched to that of the slave laser.</li>
+</ul>
+<p>The necessary matching of <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a> means not only creating a good spatial overlap of the intensity profiles, but also matching the <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">optical phase</a> profiles.
+If the complex amplitude profiles of two beams are well matched in a certain plane, they will remain well matched during further propagation.
+Mode matching can be achieved by using suitable relay optics (typically some combination of curved mirrors or <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lenses</a>), provided that the <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a> of the initial beam is close to <a href="diffraction_limited_beams.html" title="beams with a minimum possible beam divergence for a given waist radius">diffraction-limited</a>.</p>
+<p>Mathematically, the quality of mode matching can be quantified with an overlap integral.
+The following formula, involving the square of such an overlap integral, calculates the coupling efficiency concerning optical powers:</p>
+<div class="eqn"><img src="eqn/mode_overlap.gif" width="157" height="66" alt="mode overlap integral"></div>
+<p>where <span class="eqn_il"><i>E</i><sub>1</sub></span> and <span class="eqn_il"><i>E</i><sub>2</sub></span> are the complex electric fields in a plane, referring e.g. to a <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a> and the field of a resonator or waveguide mode, and the integration spans the whole beam cross-section.
+That quantity is preserved during propagation in free space.</p>
+<p>Overlap integral can also be used for calculating complex mode <em>amplitudes</em>.</p>
+<p>If the beam from a frequency-tunable <a href="single_frequency_lasers.html" title="lasers emitting radiation in a single resonator mode">single-frequency laser</a> hits a symmetric <a href="fabry_perot_interferometers.html" title="interferometers consisting of two highly reflecting mirrors, forming a standing-wave resonator">Fabry&ndash;P&eacute;rot interferometer</a> and the laser frequency is tuned over the whole <a href="free_spectral_range.html" title="frequency spacing of the axial modes of an optical resonator">free spectral range</a> of the resonator, the transmitted light can be used to analyze the degree of mode matching.
+For perfect matching to a cavity mode (typically the fundamental Gaussian mode), complete transmission of the resonator can be observed when the resonance condition is met, whereas other resonances (corresponding to other resonator modes) can not be excited.</p>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="mode_matching.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a>, <a href="cavities.html" title="resonators for light (or for microwaves)">cavities</a>, <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beams</a>, <a href="diffraction_limited_beams.html" title="beams with a minimum possible beam divergence for a given waist radius">diffraction-limited beams</a><br>and other articles in the categories <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#optical_resonators" title="other articles on optical resonators">optical resonators</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/mode_matching.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fmode_matching.html&text=RP+Photonics+Encyclopedia+-+mode+matching%2C+cavity%2C+resonator" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fmode_matching.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fmode_matching.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/mode_matching.html"&gt;<br>Article on Mode Matching&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/mode_matching.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/mode_matching.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/mode_matching.html<br>article on 'Mode Matching' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Your Lab is Closed due to the Corona Virus Crisis?</h2>
+<p>Time to think how to best utilize your time!</p>
+<p>Here is a suggestion: <br> <b>Consider to start with physical modeling!</b></p>
+<ul>
+<li>Build models for your existing or planned lasers and amplifiers, resonators, etc.</li>
+<li>Utilize such models in order to <b>improve your qualitative and quantitative understanding</b>, solve problems, optimize device performance and <b>develop new ideas</b>.</li>
+<li>Power up your home office instead of wasting your time!</li>
+<li>When getting back to the lab, restart with fresh plans and full power.</li>
+</ul>
+<img src="./img/rp_photonics.png" alt="RP Photonics" style="margin-top:20px; width:225px;">
+<p>offers powerful <a href="./software.html?banner=lab_closed">simulation &amp; design software</a>, e.g. for <a href="./fiberpower.html?banner=lab_closed">active and passive fiber devices</a>, <a href="./resonator.html?banner=lab_closed">laser resonators</a> and <a href="./coating.html?banner=lab_closed">thin-film coatings</a>!</p>
+<p>Getting helpful <a href="./software_support.html?banner=lab_closed">support</a> from RP also benefits your projects.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="vQ/gSX2GhbbhKkTeZv7zSQ==">shownbanner = "lab closed";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Sponsors of the Encyclopedia</h2>
+<p>We are grateful to the <a href="./encyclopedia_sponsoring.html?banner=sponsoring">sponsors</a> of our encyclopedia:</p>
+<div style="margin-top:10px; text-align:center;"><a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/nkt_photonics.html"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo"></a></div>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="vQ/gSX2GhbbhKkTeZv7zSQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/mode_matching.html"
+    },
+    "headline": "Mode Matching",
+    "image": "https://www.rp-photonics.com/previews/mode_matching.png",
+    "datePublished": "2005-04-20",
+    "dateModified": "2020-03-14",
+    "description": "Mode matching is the precise spatial matching of the electric field distributions of laser beams and resonator modes or waveguide modes. It can be essential for efficient launching of light.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter M",
+      "item": "https://www.rp-photonics.com/encyclopedia_m.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "mode matching",
+      "item": "https://www.rp-photonics.com/mode_matching.html"
+    }]}
+}
+</script>
+</body>
+</html>

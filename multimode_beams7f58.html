@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-C1mA359nXCDbgYXwKggovQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - multimode beams, free space, waveguide, fiber, monochromatic, polychromatic, granular intensity profile, simulation, beam propagation, ray tracing</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/multimode_beams.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Multimode beams are light beams in free space or in transparent media which involve multiple (often many) modes. Frequently, they have highly random characteristics. While monochromatic multimode beams exhibit granular intensity patterns, polychromatic beams can have smooth profiles.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="multimode beams, free space, waveguide, fiber, monochromatic, polychromatic, simulation, beam propagation, ray tracing">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Multimode Beams">
+<meta property="og:description" content="Multimode beams are light beams in free space or in transparent media which involve multiple (often many) modes. Frequently, they have highly random characteristics. While monochromatic multimode beams exhibit granular intensity patterns, polychromatic beams can have smooth profiles.">
+<meta property="og:url" content="https://www.rp-photonics.com/multimode_beams.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/multimode_beams.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Multimode beams are light beams in free space or in transparent media which involve multiple (often many) modes. Frequently, they have highly random characteristics. While monochromatic multimode beams exhibit granular intensity patterns, polychromatic beams can have smooth profiles.">
+<meta name="twitter:title" content="Multimode Beams">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/multimode_beams.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="C1mA359nXCDbgYXwKggovQ==">
+page="multimode_beams.html?tour=The_Latest_Encyclopedia_Articles&amp;p=4"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/variable_reflectivity_mirrors.html?tour=The_Latest_Encyclopedia_Articles&p=1"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="C1mA359nXCDbgYXwKggovQ==">shownsponsors="EKSMA OPTICS"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_m.html">letter M</a> &gt; <a href="multimode_beams.html">multimode beams</a></p>
+<h1>Multimode Beams</h1>
+<header style="margin-right:0;">
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: light beams in free space or in transparent media which involve multiple (often many) modes, frequently with highly random characteristics</p>
+<p>More general terms: <a href="light.html" title="electromagnetic radiation in the visible spectral range, or sometimes in an extended spectral region">light</a> beams</p>
+<p>More specific term: multimode <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beams</a></p>
+<p>Opposite term: <a href="diffraction_limited_beams.html" title="beams with a minimum possible beam divergence for a given waist radius">diffraction-limited beams</a>, single-mode beams</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Multimode-Strahlen</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<p><a href="encyclopedia_cite.html?article=multimode%20beams">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Multimode beams are <a href="light.html" title="electromagnetic radiation in the visible spectral range, or sometimes in an extended spectral region">light</a> beams in free space or in transparent <a href="optical_materials.html" title="materials used for optical components">optical materials</a> which involve multiple spatial <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a>.
+The conceptually simplest situations are encountered in cases involving <a href="waveguides.html" title="spatially inhomogeneous transparent structures for guiding light">waveguide</a> structures such as <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">optical fibers</a>, where there is a well defined set of waveguide modes, and the total <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a> is spread over some (often large) number of such modes.
+In case of free-space light beams, one may choose a set of free-space propagation modes, e.g. TEM modes for a given <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a> of the fundamental Gaussian mode, but that choice is arbitrary.
+The number of involved modes is then dependent on that choice.</p>
+<p>Frequently, multimode beams have highly random characteristics, because a large number of modes is involved, where the distribution of powers and the <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">optical phases</a> of the particular modes are not known in detail, but are only statistically described.</p>
+<p>In principle, a <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a> with a single spatial mode but multiple frequency components may also be called multimode, but what is usually meant is a beam involving multiple <em>spatial</em> modes.</p>
+<h2 class="togglediv">Monochromatic Multimode Beams</h2>
+<div>
+<p>The simplest cases are (quasi-)<a href="monochromatic_light.html" title="light with a single optical frequency">monochromatic</a> multimode beams, i.e., those involving only a single <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequency</a>.
+Such a beam may arise, for example, by launching light from a <a href="single_frequency_lasers.html" title="lasers emitting radiation in a single resonator mode">single-frequency laser</a> into a <a href="multimode_fibers.html" title="fibers supporting more than one guided mode per polarization direction">multimode fiber</a>, where the input beam profile is not matched to one particular fiber mode.
+By using an <a href="diffusers.html" title="devices which scatter light such that its spatial coherence is substantially reduced">optical diffuser</a>, or alternatively by strong bending of a section of fiber, one may obtain a broader distribution of optical power over the fiber modes.</p>
+<p>As an example, Figure&nbsp;1 shows a simulated intensity profile of multimode radiation in a fiber, which is largely restricted to the area of the <a href="fiber_core.html" title="the region in an optical fiber which guides light">fiber core</a>.</p>
+<figure>
+<img src="img/create_multimode_profile.png" alt="multimode profile">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Intensity profile of monochromatic multimode radiation in a multimode fiber with a core diameter of 50&nbsp;&mu;m. (For details of its computation, see an <a href="software_news_2020_03_02.html">article on generating multimode beam profiles</a>.) After only a few micrometers of propagation, the details of the pattern are substantially modified.
+</figcaption>
+</figure>
+<p>It is characteristic for monochromatic multimode beams that the intensity profile exhibits a granular pattern as seen in Figure&nbsp;1.
+That arises from the <a href="interference.html" title="a range of phenomena associated with the superposition of waves">interference</a> of the many mode fields, most of which exhibit oscillating amplitude patterns.
+The more higher-order modes are involved, which exhibit a stronger <a href="beam_divergence.html" title="a measure for how fast a laser beam expands far from its focus">beam divergence</a>, the finer are the granular structures.</p>
+<p>The details of the intensity profile (e.g. the positions of intensity maxima) change during propagation along the fiber (often already within a couple of micrometers) as the relative <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">optical phases</a> of the modes change due to their different <a href="propagation_constant.html" title="a mode- and frequency-dependent quantity describing the propagation of light in a medium or waveguide">propagation constants</a>.</p>
+<p>Similar results would be obtained when a multimode free-space beam is generated, e.g. by sending a single-frequency laser beam first through an <a href="diffusers.html" title="devices which scatter light such that its spatial coherence is substantially reduced">optical diffuser</a> and then through an <a href="optical_apertures.html" title="structures which limit the propagation of light">aperture</a> which limits the <a href="beam_divergence.html" title="a measure for how fast a laser beam expands far from its focus">beam divergence</a>.
+Again, one would obtain a granular intensity pattern which changes during propagation.</p>
+<p>For numerical simulations of monochromatic multimode beam propagation, one generally uses some kind of beam propagation method.</p>
+</div>
+<h2 class="togglediv">Polychromatic Multimode Beams</h2>
+<div>
+<aside class="callout blue">Smooth intensity profiles result from averaging out different granular patterns.</aside>
+<p>Substantial new aspects come into play when considering <a href="polychromatic_light.html" title="light with multiple optical frequencies">polychromatic</a> multimode beams.
+Generally, the different frequency components of such a beam will exhibit different amplitude and intensity patterns &ndash; often with similar granular structures, but with the maxima and minima occurring at different locations.
+As a result, the total intensity profile is often quite smooth.</p>
+<p>Important details can substantially depend on how such a beam is generated.
+Some examples:</p>
+<ul>
+<li>Sources of <a href="thermal_radiation.html" title="electromagnetic radiation which results from thermal emission">thermal radiation</a>, e.g. torches based on <a href="incandescent_lamps.html" title="light sources which produce thermal radiation from an electrically heated filament">incandescent lamps</a>, generate beams with a broad and smooth <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a>.
+Here, one usually has a very smooth overall intensity profile due to the averaging out of a large number of intensity patterns of different frequency components.
+The contributions from different intensity components are statistically quite similar, i.e., with no significant correlation between spatial profile and optical frequency.
+Even when strongly restricting the optical bandwidth e.g. with a <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">bandpass filter</a>, one usually still obtains a smooth overall intensity profile.</li>
+<li>Profoundly different situations are often encountered with <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beams</a>, which are generated with <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">lasers</a> where multiple spatial <a href="resonator_modes.html" title="modes of an optical or microwave resonator">resonator modes</a> are involved.
+For example, a <a href="lamp_pumped_lasers.html" title="lasers which are pumped with flash lamps or arc lamps, or in rare cases with tungsten halogen lamps">lamp-pumped</a> <a href="solid_state_lasers.html" title="lasers based on solid-state gain media (usually ion-doped crystals or glasses)">solid-state laser</a> often generates light with a large number of spatial modes.
+In contrast to the situation of thermal radiation, however, there is a strong correlation between spatial patterns and optical frequencies, because each resonator mode has a well defined intensity pattern and also a relatively well defined optical frequency.
+Therefore, by sending such radiation through a bandpass filter, one could often retrieve the intensity pattern corresponding to a particular resonator mode, or at least a superposition of a small number of modes (due to mode degeneracies).</li>
+<li>Similar results as in the second example case are obtained for multimode <a href="laser_diodes.html" title="semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diodes</a>, e.g. <a href="diode_bars.html" title="a type of semiconductor laser containing a one-dimensional array of broad-area emitters">diode bars</a>, only that instead of free-space resonator modes one has <a href="waveguides.html" title="spatially inhomogeneous transparent structures for guiding light">waveguide</a> modes in such cases.</li>
+</ul>
+<p>Numerical simulations of the propagation of polychromatic multimode beams may again be based on numerical beam propagation.
+Here, a representative set of frequency components is selected, a monochromatic propagation is performed for each one, and the results are combined (e.g. by adding up the intensity profiles).
+Alternative numerical methods such as ray tracing are based on a statistical distribution of the light field, involving a limited set of parameters.
+Such methods can be computationally much more efficient, particularly in cases where a large number of frequency components and/or long propagation distances are involved.</p>
+</div>
+<h2 class="togglediv">Evolution of Free-space Intensity Profiles</h2>
+<div>
+<p>In contrast to <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beams</a>, for example, which maintain their Gaussian shape during propagation (with changes only of the <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a>), the shape of the transverse intensity profile for multimode beam will generally change during propagation.
+For example, the beam profile of a <a href="diode_bars.html" title="a type of semiconductor laser containing a one-dimensional array of broad-area emitters">diode bar</a> at a short distance after an applied <a href="beam_collimators.html" title="devices for collimating optical beams">fast axis collimator</a> has an approximately supergaussian intensity profile in the &ldquo;long&rdquo; direction.
+After longer propagation distance, however, the profile will be closer to Gaussian, reflecting the angular intensity distribution.
+The supergaussian profile may be obtained again when focusing the beam with a <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lens</a> &ndash; but only around the beam focus.</p>
+</div>
+<h2 class="togglediv">Limitations of Multimode Beams</h2>
+<div>
+<h3 class="togglediv">Beam Quality</h3>
+<div>
+<p>Multimode beams generally have a relatively poor <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a> (far from <a href="diffraction_limited_beams.html" title="beams with a minimum possible beam divergence for a given waist radius">diffraction-limited</a>), i.e., a low spatial <a href="coherence.html" title="a fixed phase relationship between the electric field values at different locations or at different times">coherence</a> &ndash; particularly when a large number of modes is involved.
+Typically, the beam quality is quantified with the <a href="beam_parameter_product.html" title="product of the beam radius in a focus and the far-field beam divergence">beam parameter product</a> or the <a href="m2_factor.html" title="a parameter for quantifying the beam quality of laser beams"><i>M</i><sup>2</sup> factor</a>.
+It can be measured with certain <a href="beam_profilers.html" title="devices for measuring the intensity profile of a laser beam">beam profilers</a>.</p>
+</div>
+<h3 class="togglediv">Smooth Intensity Profiles</h3>
+<div>
+<p>As explained above, a multimode beam can have a smooth intensity profile only if it is polychromatic.
+Therefore, single-mode beams are required when monochromatic radiation with a smooth intensity profile is required.
+For example, <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beams</a> are then often used.</p>
+</div>
+<h3 class="togglediv">Amplification and Transmission Through Optical Components</h3>
+<div>
+<p>Multimode beams cannot be transmitted through <a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode fibers</a>.
+Most <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifiers</a> can amplify only single-mode or few-mode light.
+One can also make fiber amplifiers for highly multimode radiation by using a large multimode <a href="fiber_core.html" title="the region in an optical fiber which guides light">fiber core</a>, but that leads to substantially reduced <a href="gain_efficiency.html" title="small-signal gain of an optical amplifier per unit pump power or per unit stored energy">gain efficiency</a> and mode-dependent gain.</p>
+<p>For efficiently launching a multimode beam into a <a href="multimode_fibers.html" title="fibers supporting more than one guided mode per polarization direction">multimode fiber</a>, the beam profile at the input facet of the fiber needs to be limited to the fiber core, and at the same time the <a href="beam_divergence.html" title="a measure for how fast a laser beam expands far from its focus">beam divergence</a> must not exceed the limit set by the <a href="numerical_aperture.html" title="sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a> of the fiber.</p>
+<p>Even various bulk-optical devices are more or less limited to working with single-mode beams only.
+For example, and <a href="acousto_optic_modulators.html" title="optical modulators based on the acousto-optic effect">acousto-optic modulator</a> may in principle work with multimode beams, but it may require substantial beam focusing while at the same time the <a href="beam_divergence.html" title="a measure for how fast a laser beam expands far from its focus">beam divergence</a> needs to be limited; optimal performance may thus be obtained only with single-mode beams.</p>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="multimode_beams.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beams</a>, <a href="diffraction_limited_beams.html" title="beams with a minimum possible beam divergence for a given waist radius">diffraction-limited beams</a>, <a href="coherence.html" title="a fixed phase relationship between the electric field values at different locations or at different times">coherence</a>, <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beams</a>, <a href="multimode_fibers.html" title="fibers supporting more than one guided mode per polarization direction">multimode fibers</a><br>and other articles in the categories <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/multimode_beams.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fmultimode_beams.html&text=RP+Photonics+Encyclopedia+-+multimode+beams%2C+free+space%2C+waveguide%2C+fiber%2C+monochromatic%2C+polychromatic%2C+granular+intensity+profile%2C+simulation%2C+beam+propagation%2C+ray+tracing" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fmultimode_beams.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fmultimode_beams.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/multimode_beams.html"&gt;<br>Article on Multimode Beams&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/multimode_beams.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/multimode_beams.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/multimode_beams.html<br>article on 'Multimode Beams' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent tour">
+<img src="./img/tour_bus.png" alt="&nbsp;" style="width:75%">
+<h2 style="color:#B20B28;">Tour: The Latest Encyclopedia Articles</h2>
+<a href="./excimer_lamps.html?tour=The_Latest_Encyclopedia_Articles&p=3"><div class="button action" style="margin-left:30px; margin-top:10px; font-size:140%;">&lt;</div></a><a href="./channel_waveguides.html?tour=The_Latest_Encyclopedia_Articles&p=5"><div class="button action" style="margin-left:10px; margin-top:10px; font-size:140%;">&gt;</div></a>
+<div><a href="./variable_reflectivity_mirrors.html?tour=The_Latest_Encyclopedia_Articles&p=1"><div class="tourpos" style="padding-left:6px;"></div></a>
+<a href="./color_centers.html?tour=The_Latest_Encyclopedia_Articles&p=2"><div class="tourpos" style="padding-left:6px;"></div></a>
+<a href="./excimer_lamps.html?tour=The_Latest_Encyclopedia_Articles&p=3"><div class="tourpos" style="padding-left:6px;"></div></a>
+<a href="./multimode_beams.html?tour=The_Latest_Encyclopedia_Articles&p=4"><div class="tourpos" style="padding-left:6px; background-color:#B2082B;"></div></a>
+<a href="./channel_waveguides.html?tour=The_Latest_Encyclopedia_Articles&p=5"><div class="tourpos" style="padding-left:6px;"></div></a>
+<a href="./optical_crystals.html?tour=The_Latest_Encyclopedia_Articles&p=6"><div class="tourpos" style="padding-left:6px;"></div></a>
+<a href="./standing_wave_resonators.html?tour=The_Latest_Encyclopedia_Articles&p=7"><div class="tourpos" style="padding-left:6px;"></div></a>
+<a href="./nonlinear_absorption.html?tour=The_Latest_Encyclopedia_Articles&p=8"><div class="tourpos" style="padding-left:6px;"></div></a>
+<a href="./passive_fibers.html?tour=The_Latest_Encyclopedia_Articles&p=9"><div class="tourpos" style="padding-left:6px;"></div></a>
+<a href="./active_fibers.html?tour=The_Latest_Encyclopedia_Articles&p=10"><div class="tourpos" style="padding-left:6px;"></div></a>
+<a href="./oem_laser_modules.html?tour=The_Latest_Encyclopedia_Articles&p=11"><div class="tourpos" style="padding-left:6px;"></div></a>
+<a href="./industrial_lasers.html?tour=The_Latest_Encyclopedia_Articles&p=12"><div class="tourpos" style="padding-left:6px;"></div></a>
+<a href="./scientific_lasers.html?tour=The_Latest_Encyclopedia_Articles&p=13"><div class="tourpos" style="padding-left:6px;"></div></a>
+<a href="./flint_glasses.html?tour=The_Latest_Encyclopedia_Articles&p=14"><div class="tourpos" style="padding-left:6px;"></div></a>
+<a href="./crown_glasses.html?tour=The_Latest_Encyclopedia_Articles&p=15"><div class="tourpos" style="padding-left:6px;"></div></a>
+<a href="./sodium_vapor_lamps.html?tour=The_Latest_Encyclopedia_Articles&p=16"><div class="tourpos" style="padding-left:6px;"></div></a>
+<a href="./metal_vapor_lamps.html?tour=The_Latest_Encyclopedia_Articles&p=17"><div class="tourpos" style="padding-left:6px;"></div></a>
+<a href="./mercury_vapor_lamps.html?tour=The_Latest_Encyclopedia_Articles&p=18"><div class="tourpos" style="padding-left:6px;"></div></a>
+<a href="./white_light.html?tour=The_Latest_Encyclopedia_Articles&p=19"><div class="tourpos" style="padding-left:6px;"></div></a>
+<a href="./cie_standard_illuminants.html?tour=The_Latest_Encyclopedia_Articles&p=20"><div class="tourpos" style="padding-left:6px;"></div></a>
+</div>
+<p style="margin-bottom:10px">Page 4 of 20:</p>
+<h2>Multimode Beams</h2>
+<p>Multimode beams are light beams in free space or in transparent media which involve multiple (often many) modes. Frequently, they have highly random characteristics. While monochromatic multimode beams exhibit granular intensity patterns, polychromatic beams can have smooth profiles.</p>
+<script type="text/javascript" nonce="C1mA359nXCDbgYXwKggovQ==">
+</script>
+</div>
+</aside>
+<script type="text/javascript" nonce="C1mA359nXCDbgYXwKggovQ==">shownbanner = "The Latest Encyclopedia Articles";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Interesting Articles</h2>
+<p>We offer a huge selection of interesting articles on laser technology and photonics. Some examples:</p>
+<ul>
+<li><a href="./spotlight_2018_09_28.html?banner=articles">Resonator modes in microchip lasers</a></li>
+<li><a href="./spotlight_2018_08_22.html?banner=articles">What is different for quasi-three-level lasers?</a></li>
+<li><a href="./spotlight_2018_06_08.html?banner=articles">Understanding intensity noise</a></li>
+<li><a href="./spotlight_2018_05_11.html?banner=articles">Gain saturation in solid-state lasers</a></li>
+<li><a href="./spotlight_2018_04_06.html?banner=articles">The essential roles of phonons in solid-state lasers</a></li>
+<li><a href="./spotlight_2018_01_08.html?banner=articles">Self-starting of passively mode-locked lasers</a></li>
+<li><a href="./spotlight_2017_12_04.html?banner=articles">Energy levels of solid-state gain media</a></li>
+<li><a href="./software_news_2018_08_02.html?banner=articles">Data grids for numerical beam propagation</a></li>
+<li><a href="./software_news_2018_05_22.html?banner=articles">Numerical representation of ultrashort pulses</a></li>
+</ul>
+<p>These articles belong to our newsletters, which appear about once per month.
+You will not regret to <a href="./newsletters.html?banner=articles">register</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="C1mA359nXCDbgYXwKggovQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/multimode_beams.html"
+    },
+    "headline": "Multimode Beams",
+    "image": "https://www.rp-photonics.com/previews/multimode_beams.png",
+    "datePublished": "2020-03-04",
+    "dateModified": "2020-03-14",
+    "description": "Multimode beams are light beams in free space or in transparent media which involve multiple (often many) modes. Frequently, they have highly random characteristics. While monochromatic multimode beams exhibit granular intensity patterns, polychromatic beams can have smooth profiles.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter M",
+      "item": "https://www.rp-photonics.com/encyclopedia_m.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "multimode beams",
+      "item": "https://www.rp-photonics.com/multimode_beams.html"
+    }]}
+}
+</script>
+</body>
+</html>

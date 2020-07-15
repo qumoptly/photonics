@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-Ik17UahxW2W5HkwDvXRA3A=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - laser dynamics, spiking, Q switching, coupled differential equations</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/laser_dynamics.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Laser dynamics denotes the temporal evolution of quantities such as the optical power and gain in a laser, e.g. a Q-switched laser.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="laser dynamics, spiking, Q switching, coupled differential equations">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Laser Dynamics">
+<meta property="og:description" content="Laser dynamics denotes the temporal evolution of quantities such as the optical power and gain in a laser, e.g. a Q-switched laser.">
+<meta property="og:url" content="https://www.rp-photonics.com/laser_dynamics.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/laser_dynamics.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Laser dynamics denotes the temporal evolution of quantities such as the optical power and gain in a laser, e.g. a Q-switched laser.">
+<meta name="twitter:title" content="Laser Dynamics">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/laser_dynamics.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="Ik17UahxW2W5HkwDvXRA3A==">
+page="laser_dynamics.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="Ik17UahxW2W5HkwDvXRA3A==">shownsponsors="eagleyard Photonics,EKSMA OPTICS"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_l.html">letter L</a> &gt; <a href="laser_dynamics.html">laser dynamics</a></p>
+<h1>Laser Dynamics</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="boxadvertisement">
+<h2>Simulations on Laser Dynamics</h2>
+<p>Many aspects of laser dynamics can be well investigated with numerical simulations, e.g. with the software <a href="fiberpower.html"><b>RP Fiber Power</b></a>.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: the temporal evolution of quantities such as the optical power and gain in a laser</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Laserdynamik</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#lasers" title="other articles on lasers">lasers</a></p>
+<p><a href="encyclopedia_cite.html?article=laser%20dynamics">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>The dynamic behavior of a laser is determined by the interaction of the intracavity light field with the <a href="gain_media.html" title="media for laser amplification">gain medium</a>.
+Essentially, the intracavity laser power can grow or decay exponentially according to the difference between gain and resonator losses, whereas the rate of change in the gain is determined by <a href="stimulated_emission.html" title="a quantum effect, where photon emission is triggered by other photons">stimulated</a> and <a href="spontaneous_emission.html" title="a quantum effect, causing the spontaneous decay of excited states of atoms or ions">spontaneous</a> emission (and possibly by other effects such as <a href="quenching.html" title="the reduction or limitation of an excited-state population, mostly by unwanted effects">quenching</a> and <a href="energy_transfer.html" title="the phenomenon that dopant ions in laser-active media can exchange excitation energy among each other">energy transfer</a>).</p>
+<p>With certain approximations, including a not too high laser <a href="gain.html" title="a measure of the strength of optical amplification">gain</a>, the dynamics of the intracavity <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a> <span class="eqn_il"><i>P</i></span> and the <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> coefficient <span class="eqn_il"><i>g</i></span> in a <a href="continuous_wave_operation.html" title="operation mode of a laser with continuous light emission">continuous-wave laser</a> can be described with the following coupled differential equations:</p>
+<div class="eqn"><img src="eqn/p_dyn.gif" width="89" height="45" alt="evolution of optical power"></div>
+<div class="eqn"><img src="eqn/g_dyn.gif" width="145" height="49" alt="evolution of gain"></div>
+<p>where <span class="eqn_il"><i>T</i><sub>R</sub></span> is the cavity round-trip time, <span class="eqn_il"><i>l</i></span> the cavity loss, <span class="eqn_il"><i>g</i><sub>ss</sub></span> the <a href="small_signal_gain.html" title="optical gain for small signal intensities, where no amplifier saturation occurs">small-signal gain</a> (for a given pump intensity), <span class="eqn_il"><span class="greek">&tau;</span><sub>g</sub></span> the gain relaxation time (often close to the <a href="upper_state_lifetime.html" title="the lifetime of the population of the upper laser level">upper-state lifetime</a>), and <span class="eqn_il"><i>E</i><sub>sat</sub></span> the <a href="saturation_energy.html" title="a measure of the incident optical pulse energy required for achieving significant saturation of an absorber or a gain medium">saturation energy</a> of the gain medium.</p>
+<p>Dynamic aspects of special interest in the case of a <a href="continuous_wave_operation.html" title="operation mode of a laser with continuous light emission">continuous-wave</a> laser are the switch-on behavior (often including <a href="spiking.html" title="the tendency of some lasers to emit spikes of output power, particularly after being switched on">spiking</a> of the output power) and its reaction to disturbances during operation (usually leading to <a href="relaxation_oscillations.html" title="small mutually coupled oscillations of the laser power and laser gain around their steady-state values">relaxation oscillations</a>).
+In these respects, different types of lasers exhibit a very different behavior.
+For example, doped-insulator lasers exhibit a strong tendency for spiking and relaxation oscillations, whereas for <a href="laser_diodes.html" title="semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diodes</a> this is not the case.
+Dynamic aspects are particularly important in <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched lasers</a>, where the energy stored in the gain medium undergoes a large change during pulse emission.
+Q-switched <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber lasers</a>, typically having a high laser gain, can exhibit additional dynamical phenomena.
+This can lead to a temporal sub-structure of the pulses, which cannot be explained with equations such as those given above.</p>
+<p>Similar equations can be used for <a href="mode_locking.html" title="a group of techniques for generating ultrashort pulses in lasers">passively mode-locked lasers</a> [1]; an additional term appears in the first equation, which describes the losses of the <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorber</a>.
+The effect of this is typically that the damping of the relaxation oscillations is reduced.
+The relaxation oscillations may even become undamped, so that the steady-state solution becomes unstable, and the laser exhibits <a href="q_switched_mode_locking.html" title="an operation regime of mode-locked lasers with strong fluctuations of the pulse energy">Q-switched mode locking</a> or other kinds of <a href="q_switching_instabilities.html" title="instabilities of passively mode-locked lasers where the pulse energy is unstable">Q-switching instabilities</a>.</p>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="laser_dynamics.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">A. Schlatter <i>et al.</i>, &ldquo;Pulse-energy dynamics of passively mode-locked solid-state lasers above the Q-switching threshold&rdquo;, J. Opt. Soc. Am. B 21 (8), 1469 (2004), <a href="https://doi.org/10.1364/JOSAB.21.001469">doi:10.1364/JOSAB.21.001469</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">O. Svelto, <i>Principles of Lasers</i>, Plenum Press, New York (1998)</td></tr>
+<tr><td class="refno">[3]</td><td class="refs">A. E. Siegman, <i>Lasers</i>, University Science Books, Mill Valley, CA (1986)</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="spiking.html" title="the tendency of some lasers to emit spikes of output power, particularly after being switched on">spiking</a>, <a href="relaxation_oscillations.html" title="small mutually coupled oscillations of the laser power and laser gain around their steady-state values">relaxation oscillations</a>, <a href="pulse_generation.html" title="the generation of light pulses (flashes)">pulse generation</a>, <a href="double_pulses.html" title="two closely spaced optical pulses">double pulses</a>, <a href="q_switching.html" title="a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q switching</a>, <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">lasers</a>, <a href="gain_saturation.html" title="the phenomenon that the gain of an amplifier is reduced for high input signal powers">gain saturation</a><br>and other articles in the category <a href="categories.html#lasers" title="other articles on lasers">lasers</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/laser_dynamics.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Flaser_dynamics.html&text=RP+Photonics+Encyclopedia+-+laser+dynamics%2C+spiking%2C+Q+switching%2C+coupled+differential+equations" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Flaser_dynamics.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Flaser_dynamics.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/laser_dynamics.html"&gt;<br>Article on Laser Dynamics&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/laser_dynamics.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/laser_dynamics.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/laser_dynamics.html<br>article on 'Laser Dynamics' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Articles on Imaging</h2>
+<p>A lot of new articles in the area of optical imaging have recently been added to the encyclopedia. For example:</p>
+<ul>
+<li><a href="./afocal_optical_systems.html?banner=imaging">afocal optical systems</a></li>
+<li><a href="./conjugate_planes.html?banner=imaging">conjugate planes</a></li>
+<li><a href="./diaphragms.html?banner=imaging">diaphragms</a></li>
+<li><a href="./entrance_and_exit_pupil.html?banner=imaging">entrance and exit pupil</a></li>
+<li><a href="./f_number.html?banner=imaging">f-number</a></li>
+<li><a href="./field_lenses.html?banner=imaging">field lenses</a></li>
+<li><a href="./field_of_view.html?banner=imaging">field of view</a></li>
+<li><a href="./field_stops.html?banner=imaging">field stops</a></li>
+<li><a href="./holography.html?banner=imaging">holography</a></li>
+<li><a href="./image_planes.html?banner=imaging">image planes</a></li>
+<li><a href="./image_sensors.html?banner=imaging">image sensors</a></li>
+<li><a href="./imaging_with_a_lens.html?banner=imaging">imaging with a lens</a></li>
+<li><a href="./infrared_cameras.html?banner=imaging">infrared cameras</a></li>
+<li><a href="./loupes.html?banner=imaging">loupes</a></li>
+<li><a href="./magnification.html?banner=imaging">magnification</a></li>
+<li><a href="./magnifying_glasses.html?banner=imaging">magnifying glasses</a></li>
+<li><a href="./microscope_objectives.html?banner=imaging">microscope objectives</a></li>
+<li><a href="./microscopes.html?banner=imaging">microscopes</a></li>
+<li><a href="./ocular_lenses.html?banner=imaging">ocular lenses</a></li>
+<li><a href="./optical_aberrations.html?banner=imaging">optical aberrations</a></li>
+<li><a href="./photo_cameras.html?banner=imaging">photo cameras</a></li>
+<li><a href="./photographic_objectives.html?banner=imaging">photographic objectives</a></li>
+<li><a href="./spherical_aberrations.html?banner=imaging">spherical aberrations</a></li>
+<li><a href="./vignetting.html?banner=imaging">vignetting</a></li>
+</ul>
+</div>
+</aside>
+<script type="text/javascript" nonce="Ik17UahxW2W5HkwDvXRA3A==">shownbanner = "imaging";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2 style="font-size:20px;">Stand up for Science!</h2>
+<p style="font-size:14px;">It is acceptable that some don't know much about photons, biological evolution or global warming.</p>
+<p style="font-size:16px; font-weight:bold; color:#B20B28;">But we don't want bigot ignorants to make political decisions and educate our children!</p>
+<p style="font-size:14px;">For example, <b>global warming</b> is not a matter of political opinion, but a fact. Ruthless profiteers are leading astray millions of uneducated people, seducing them to take utterly irresponsible positions. <span style="font-weight:bold; color:#B20B28;">But we cannot risk catastrophic climate changes!</span> Science tells us it is high time to act. Read, for example, the <a href="https://www.ipcc.ch/report/sixth-assessment-report-cycle/">IPCC Synthesis Report</a>.</p>
+<p style="font-size:14px; font-weight:bold;">Stand up for science (perhaps by joining a <a href="https://www.marchforscience.com/">March for Science</a>) &ndash; it's our future!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="Ik17UahxW2W5HkwDvXRA3A==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/laser_dynamics.html"
+    },
+    "headline": "Laser Dynamics",
+    "image": "https://www.rp-photonics.com/previews/laser_dynamics.png",
+    "datePublished": "2005-12-04",
+    "dateModified": "2020-03-14",
+    "description": "Laser dynamics denotes the temporal evolution of quantities such as the optical power and gain in a laser, e.g. a Q-switched laser.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter L",
+      "item": "https://www.rp-photonics.com/encyclopedia_l.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "laser dynamics",
+      "item": "https://www.rp-photonics.com/laser_dynamics.html"
+    }]}
+}
+</script>
+</body>
+</html>

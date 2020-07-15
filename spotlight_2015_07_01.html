@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-wNFqCghut1r5+U6g72qblA=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>The Photonics Spotlight - Self-phase Modulation Causes Spectral Broadening - Does it Really?</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/spotlight_2015_07_01.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2015-07-01">
+<meta name="description" content="It is well known that in many situations the nonlinear effect of self-phase modulation (SPM) leads to a broadening of the optical spectrum of an ultrashort pulse. However, this discussion shows that in other cases SPM does not change the spectral width or even reduced it. The created insight is relevant for pulse propagation in optical fibers and in mode-locked lasers, for example.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="photonics, spotlight, news, publications, blog, RSS feed, encyclopedia, laser physics, technology">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Photonics Spotlight - Self-phase Modulation Causes Spectral Broadening - Does it Really?">
+<meta property="og:description" content="It is well known that in many situations the nonlinear effect of self-phase modulation (SPM) leads to a broadening of the optical spectrum of an ultrashort pulse. However, this discussion shows that in other cases SPM does not change the spectral width or even reduced it. The created insight is relevant for pulse propagation in optical fibers and in mode-locked lasers, for example.">
+<meta property="og:url" content="https://www.rp-photonics.com/spotlight_2015_07_01.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/spotlight_2015_07_01.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="It is well known that in many situations the nonlinear effect of self-phase modulation (SPM) leads to a broadening of the optical spectrum of an ultrashort pulse. However, this discussion shows that in other cases SPM does not change the spectral width or even reduced it. The created insight is relevant for pulse propagation in optical fibers and in mode-locked lasers, for example.">
+<meta name="twitter:title" content="The Photonics Spotlight - Self-phase Modulation Causes Spectral Broadening - Does it Really?">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/spotlight_2015_07_01.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="wNFqCghut1r5+U6g72qblA==">
+page="spotlight_2015_07_01.html"; cat="P"; shownbanner=""; ref="http://www.rp-photonics.com/spotlight.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> <a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo sponsor"></a> <a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="wNFqCghut1r5+U6g72qblA==">shownsponsors="eagleyard Photonics,EKSMA OPTICS,El.En.,RPMC Lasers"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight" class="selected"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="spotlight.html">The Photonics Spotlight</a> &gt; <a href="spotlight_2015_07_01.html">2015-07-01</a></p>
+<h1 class="posting">Self-phase Modulation Causes Spectral Broadening &ndash; Does it Really?</h1>
+<div class="posting_details">
+<p>Posted on 2015-07-01 as a part of the <a href="spotlight.html">Photonics Spotlight (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="spotlight_2015_07_01.html" class="url">https://www.rp-photonics.com/spotlight_2015_07_01.html</a></p>
+<p>Author: <a href="https://www.rp-photonics.com/paschotta.html" rel="author">Dr. Rüdiger Paschotta</a>, <a href="https://www.rp-photonics.com/">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: It is well known that in many situations the nonlinear effect of self-phase modulation (SPM) leads to a broadening of the optical spectrum of an ultrashort pulse. However, this discussion shows that in other cases SPM does not change the spectral width or even reduced it. The created insight is relevant for pulse propagation in optical fibers and in mode-locked lasers, for example.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p>For many, it seems to be common wisdom that the effect of <a href="self_phase_modulation.html" title="nonlinear phase modulation of a beam, caused by its own intensity via the Kerr effect">self-phase modulation</a> (SPM), which results from the <a href="kerr_effect.html" title="a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization">Kerr nonlinearity</a>, always increases the optical <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a> of an <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulse</a>.
+After all, it creates a so-called <a href="chirp.html" title="time dependence of the instantaneous frequency of an optical pulse">chirp</a>, i.e., a temporal variation of the <a href="instantaneous_frequency.html" title="temporal derivative of the oscillation phase divided by 2&pi;">instantaneous frequency</a>, which then runs through a wider range of frequencies.
+This effect is utilized, for example, in a method of temporal <a href="pulse_compression.html" title="linear or nonlinear techniques for reducing the durations of optical pulses">pulse compression</a>, where one first broadens the bandwidth using SPM and then temporally compresses the pulse by applying an appropriate amount of <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> which removes the created chirp.</p>
+<p>However, it should then be irritating that various example cases quite clearly contradict the mentioned belief:</p>
+<ul>
+<li>When fundamental <a href="solitons.html" title="pulses with a certain balance of nonlinear and dispersive effects">soliton</a> pulses propagate through an optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fiber</a>, these continuously experience self-phase modulation.
+Nevertheless, their optical bandwidth does not change at all!
+Well, here we also have <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> acting on the pulse, but that linear effect is known not to affect the optical bandwidth.
+Therefore, how could the chromatic dispersion remove the bandwidth-broadening effect of the fiber nonlinearity?</li>
+<li>If one injects a higher-order soliton pulse into such a fiber, its optical bandwidth changes periodically, i.e., it regularly expands and contracts again.</li>
+<li>There are indeed cases where e.g. a broadband down-chirped pulse enters a fiber and leaves it with much reduced optical bandwidth and reduced chirp.</li>
+</ul>
+<p>All this can be resolved by considering more carefully the generation of additional frequency components by the Kerr nonlinearity.
+The essential point is to realize that the Kerr nonlinearity adds certain complex <em>amplitudes</em> to other frequency components.
+(The typically used differential equations for light propagation in fibers clearly show that.)
+How the <em>intensities</em> of these frequency components change, depends on the relative signs of existing and added complex amplitudes:</p>
+<ul>
+<li>If the pulse is unchirped (i.e., it has a constant <a href="instantaneous_frequency.html" title="temporal derivative of the oscillation phase divided by 2&pi;">instantaneous frequency</a>), the complex amplitudes added in the frequency domain are 90&deg; out of phase with the already existing frequency components.
+As a result, the magnitude of these frequency components does not change to first order.
+This explains, for example, how a fundamental soliton pulse can have a constant optical bandwidth: the chirp introduced by the nonlinearity is constantly removed by the (anomalous) chromatic dispersion, and unchirped pulses are effectively <em>not</em> broadened by SPM.</li>
+<li>Without chromatic dispersion, the situation is different: the pulse can acquire a growing chirp, and here the magnitude of the generated frequency components can indeed grow, so that the bandwidth increases.</li>
+<li>If, however, a pulse initially has a down-chirp, the outer frequency components are indeed reduced by SPM, because the added amplitudes are out of phase with the existing ones.
+In that situation, SPM leads to spectral compression rather than broadening.</li>
+</ul>
+<p>We see that the sign of the chirp of the pulse is essential for the nonlinear effects on the pulse spectrum, as is also illustrated in the following two diagrams:</p>
+<figure>
+<img src="img/spm_and_bandwidth1.png" alt="SPM on up-chirped pulse">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Evolution of the spectrum of an initially up-chirped pulse under the influence of SPM. (Subsequent spectra are more and more vertically displaced.) The pulse spectrum is increasingly broadened.
+</figcaption>
+</figure>
+<figure>
+<img src="img/spm_and_bandwidth2.png" alt="SPM on down-chirped pulse">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Evolution of the spectrum of an initially down-chirped pulse under the influence of SPM. The pulse spectrum is initially compressed.
+</figcaption>
+</figure>
+<p>It is also instructive to consider a <a href="soliton_mode_locking.html" title="a mechanism for laser mode locking based on soliton pulses">soliton mode-locked</a> laser where the pulse bandwidth is constantly reduced by the finite gain bandwidth (&rarr;&nbsp;<a href="gain_narrowing.html" title="the phenomenon that the bandwidth of light can be reduced during amplification in a medium with a limited gain bandwidth"><em>gain narrowing</em></a>). 
+In the steady state of the laser, there must be an effect to compensate for this.
+Apart from a modulator or a saturable absorber, SPM can take over that function.
+The pulse then must develop a positive chirp, as spectral broadening is possible only with that.
+Indeed one can observe in computer simulations that pulses in soliton mode-locked lasers exhibit a slight up-chirp, depending on the magnitude of bandwidth-reducing effects.</p>
+<p>The presented thoughts demonstrate that one can learn a lot by thinking about basic effects e.g. in <a href="ultrafast_optics.html" title="the part of optics dealing with ultrafast phenomena">ultrafast optics</a> or <a href="laser_physics.html" title="the field of physics dealing with phenomena in lasers">laser physics</a> a little more closely.
+Many people are too quickly satisfied with inaccurate descriptions of effects, which are in contradiction even with quite common observations.</p>
+<p>The probably most effective way for detecting and subsequently revising inaccurate beliefs is to deal with numerical models.
+Here, existing beliefs are continuously put to test.
+Seeing quite easily what exactly goes on in various systems (e.g., in a <a href="transparent_laser.html"><em>transparent laser</em></a> realized in the form of a computer model), one quite quickly realizes that certain thoughts cannot be correct.
+At the same time, this is one of the greatest opportunities to obtain new ideas.</p>
+<hr>
+<p style="font-size:90%; margin-bottom:10px;">This article is a posting of the <a href="spotlight.html">Photonics Spotlight</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page and cite it, because its location is permanent.
+See also the <a href="encyclopedia.html">RP Photonics Encyclopedia</a>.</p>
+<p>Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="https://www.rp-photonics.com/spotlight.rss">RSS feed</a>.</p>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="spotlight_2015_07_01.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/spotlight_2015_07_01.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2015_07_01.html&text=The+Photonics+Spotlight+-+Self-phase+Modulation+Causes+Spectral+Broadening+-+Does+it+Really%3F" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2015_07_01.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2015_07_01.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2015_07_01.html"&gt;<br>Article on The Photonics Spotlight - Self-phase Modulation Causes Spectral Broadening - Does it Really?&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2015_07_01.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/spotlight_2015_07_01.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Paschotta</a>, RP Photonics Consulting GmbH. All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./marketing_contact.html">contact</a>, <a href="./privacy.html">data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Buyer&#39;s Guide</h2>
+<p>On our website, you find not only the famous <a href="./encyclopedia.html?banner=buyers_guide">encyclopedia</a>, but also the <a href="./buyersguide.html?banner=buyers_guide">RP Photonics Buyer&#39;s Guide</a>:</p>
+<p style="text-align:center; margin:10px 0;"><a href="./buyersguide.html?banner=buyers_guide"><img src="./img/bg_products.png" alt="RP Photonics Buyer&#39;s Guide"></a></p>
+<ul>
+<li>Find suppliers for many hundreds of photonics products.</li>
+<li>Enjoy high-quality product information (checked listings) and the convenient user interface.</li>
+<li>Use high-quality technical information of the encyclopedia nearby.</li>
+</ul>
+<p>Is it actually surprising that you find <a href="./encyclopedia.html?banner=buyers_guide">the best buyer&#39;s guide</a> at the same place as the <a href="./encyclopedia.html?banner=buyers_guide">best photonics information source</a>?</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="wNFqCghut1r5+U6g72qblA==">shownbanner = "buyers guide";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>More to Read</h2>
+ <p>Here are some randomly selected encyclopedia articles &ndash; just to make you curious:</p>
+  <ul>
+<li><a href="./neutral_density_filters.html">neutral density filters</a></li><li><a href="./distributed_amplifiers.html">distributed amplifiers</a></li><li><a href="./single_frequency_operation.html">single-frequency operation</a></li><li><a href="./resonator_design.html">resonator design</a></li><li><a href="./cut_off_wavelength.html">cut-off wavelength</a></li><li><a href="./guided_waves.html">guided waves</a></li><li><a href="./metal_halide_lamps.html">metal halide lamps</a></li><li><a href="./mid_infrared_laser_sources.html">mid-infrared laser sources</a></li><li><a href="./pulse_propagation_modeling.html">pulse propagation modeling</a></li><li><a href="./stabilization_of_lasers.html">stabilization of lasers</a></li><li><a href="./sech2_shaped_pulses.html">sech<sup>2</sup>-shaped pulses</a></li><li><a href="./laser_resonators.html">laser resonators</a></li><li><a href="./polarization_mode_dispersion.html">polarization mode dispersion</a></li><li><a href="./fiber_collimators.html">fiber collimators</a></li><li><a href="./lambertian_emitters_and_scatterers.html">Lambertian emitters and scatterers</a></li></ul>
+
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="wNFqCghut1r5+U6g72qblA==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/spotlight_2015_07_01.html"
+    },
+    "headline": "Self-phase Modulation Causes Spectral Broadening - Does it Really?",
+    "image": "https://www.rp-photonics.com/previews/spotlight_2015_07_01.png",
+    "datePublished": "2015-07-01",
+    "description": "It is well known that in many situations the nonlinear effect of self-phase modulation (SPM) leads to a broadening of the optical spectrum of an ultrashort pulse. However, this discussion shows that in other cases SPM does not change the spectral width or even reduced it. The created insight is relevant for pulse propagation in optical fibers and in mode-locked lasers, for example.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "The Photonics Spotlight",
+      "item": "https://www.rp-photonics.com/spotlight.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "2015-07-01",
+      "item": "https://www.rp-photonics.com/spotlight_2015_07_01.html"
+    }]}
+}
+</script>
+</body>
+</html>

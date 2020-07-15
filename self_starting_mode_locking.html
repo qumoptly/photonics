@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-+epdZhhpEcO7XNfKfd+bRQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - self-starting mode locking, mode-locked lasers, passive mode locking</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/self_starting_mode_locking.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Self-starting mode locking is mode locking (pulse generation) which is quickly achieved after turning on a laser, without external intervention.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="self-starting mode locking, mode-locked lasers, passive mode locking">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Self-starting Mode Locking">
+<meta property="og:description" content="Self-starting mode locking is mode locking (pulse generation) which is quickly achieved after turning on a laser, without external intervention.">
+<meta property="og:url" content="https://www.rp-photonics.com/self_starting_mode_locking.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/self_starting_mode_locking.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Self-starting mode locking is mode locking (pulse generation) which is quickly achieved after turning on a laser, without external intervention.">
+<meta name="twitter:title" content="Self-starting Mode Locking">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/self_starting_mode_locking.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="+epdZhhpEcO7XNfKfd+bRQ==">
+page="self_starting_mode_locking.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/encyclopedia.html?tour=Encyclopedia"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="+epdZhhpEcO7XNfKfd+bRQ==">shownsponsors="eagleyard Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_s.html">letter S</a> &gt; <a href="self_starting_mode_locking.html">self-starting mode locking</a></p>
+<h1>Self-starting Mode Locking</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="advicebox">
+<p>Ask <a href="index.html">RP Photonics</a> on advice concerning any aspect of the design of mode-locked lasers.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: mode locking which is quickly achieved after turning on a laser, without external intervention</p>
+<p>More general term: <a href="mode_locking.html" title="a group of techniques for generating ultrashort pulses in lasers">mode locking</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">selbststartendes Modenkoppeln</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<p><a href="encyclopedia_cite.html?article=self-starting%20mode%20locking">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Some passively <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked lasers</a> exhibit difficulties with starting the <a href="passive_mode_locking.html" title="a technique of mode locking, based on a saturable absorber inside the laser resonator">mode-locking</a> process: after turning on the pump power, they often start in a (possibly noisy) <a href="continuous_wave_operation.html" title="operation mode of a laser with continuous light emission">continuous-wave mode</a>, and the generation of <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a> can be started only with an external intervention, e.g. by knocking on an optical component of the <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a> or vibrating a mirror (<em>moving mirror technique</em>).
+Mode-locked lasers which automatically start mode locking without such intervention are called <em>self-starting</em>.
+This property is obviously important for practical applications.</p>
+<h2 class="togglediv">Self-starting Bulk Lasers</h2>
+<div>
+<p>Self-starting mode locking is normally achieved when <a href="passive_mode_locking.html" title="a technique of mode locking, based on a saturable absorber inside the laser resonator">passive mode locking</a> of a <a href="bulk_lasers.html" title="lasers based on bulk crystals as gain media">bulk laser</a> is done with a <a href="semiconductor_saturable_absorber_mirrors.html" title="saturable semiconductor absorber devices acting as nonlinear mirrors">semiconductor saturable absorber mirror</a> (SESAM) or some other type of &ldquo;slow&rdquo; <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorber</a>.
+The finite recovery time of such a device is helpful for self-starting mode locking, since it reduces the <a href="saturation_power.html" title="a measure of the incident optical power required for achieving significant saturation of an absorber or a gain medium">saturation power</a> for long pulses, as occur during the start-up phase, and thus increases the saturation effect at that time.
+With a <a href="kerr_lens_mode_locking.html" title="a technique for mode locking a laser, exploiting nonlinear self-focusing">Kerr-lens mode-locked laser</a>, self-starting is significantly more difficult to achieve, because the Kerr lens provides a very fast absorber, the effect of which is weak for long pulses.
+Note that Kerr lens mode locking is sometimes called &ldquo;self mode-locking&rdquo; because it does not require a visible mode-locking device, but <em>not</em> in the sense one would achieved self-starting mode locking that way.</p>
+<p>Another factor inhibiting reliable self-starting is the presence of parasitic intracavity reflections.
+Even if the reflectivities involved are very small, they can be important, because coherent coupling can occur in many resonator round trips.
+Such reflections must therefore always be carefully suppressed in mode-locked lasers, e.g. by avoiding any optical surfaces (even <a href="anti_reflection_coatings.html" title="optical thin-film coatings for reducing reflections from surfaces">anti-reflection coated ones</a>) perpendicular to the beam.
+In <a href="ring_lasers.html" title="lasers with a ring resonator">ring lasers</a>, the effect of parasitic reflections tends to be weaker [7].</p>
+<p>An uneven spacing of the <a href="resonator_modes.html" title="modes of an optical or microwave resonator">resonator mode</a> frequencies can also inhibit self-starting.
+This can result from <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> and from mode pulling effects, which can arise from, e.g., <a href="spatial_hole_burning.html" title="a distortion of the gain shape in a laser medium (or the loss spectrum in a saturable absorber medium), caused by saturation effects of a standing wave">spatial hole burning</a>.</p>
+<p>Self-starting is generally more difficult to achieve in mode-locked lasers with long <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonators</a>, i.e. with a low <a href="pulse_repetition_rate.html" title="the number of pulses emitted per second e.g. by a mode-locked or Q-switched laser">pulse repetition rate</a>, and for lasers generating very short pulses.
+This results from the huge ratio of peak power (in the mode-locked state) to average power.
+The saturable absorber parameters must be adjusted to achieve reasonably strong (i.e. not too strong) absorber saturation under mode-locked conditions, which leads to only very weak effects for the first fluctuations occurring in a <a href="continuous_wave_operation.html" title="operation mode of a laser with continuous light emission">continuous-wave</a> state.</p>
+</div>
+<h2 class="togglediv">Fiber Lasers</h2>
+<div>
+<p>In <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber lasers</a>, parasitic reflections are generally more difficult to eliminate.
+This is particularly the case for setups which are made using bulk-optical elements, where e.g. reflections from fiber ends can cause problems.
+Angle-polished fiber ends are a way to suppress this effect, if the polishing angle is sufficiently large, but this technique implies additional handling and alignment efforts.
+Even within a fiber, <a href="rayleigh_scattering.html" title="scattering of light at scattering centers which are much smaller than the wavelength">Rayleigh scattering</a> leads to some level of back-reflections, particularly in <a href="rare_earth_doped_fibers.html" title="optical glass fibers which are doped with rare earth ions">rare-earth-doped fibers</a>.
+Other factors which makes self-starting more difficult are the use of fast (artificial) saturable absorbers, e.g. realized using <a href="nonlinear_polarization_rotation.html" title="the phenomenon that the change in the polarization direction of light in a fiber can depend on the optical intensity">nonlinear polarization rotation</a>, and the typically long <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonators</a>.</p>
+<p>For such reasons, <a href="mode_locked_fiber_lasers.html" title="ultrafast fiber lasers which are actively or passively mode-locked for generating ultrashort pulses">ultrafast fiber lasers</a> often exhibit non-self-starting mode locking.
+It can occur e.g. that after switching the laser on, the pump power first has to be set to a high level where mode locking starts, and then reduced to a level where stable high-quality pulses are generated.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="self_starting_mode_locking.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">E. P. Ippen, L. Y. Liu, and H. A. Haus, &ldquo;Self-starting condition for additive-pulse mode-locked lasers&rdquo;, Opt. Lett. 15 (3), 183 (1990), <a href="https://doi.org/10.1364/OL.15.000183">doi:10.1364/OL.15.000183</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">L. Y. Liu <i>et al.</i>, &ldquo;Self-starting additive-pulse mode locking of a Nd:YAG laser&rdquo;, Opt. Lett. 15 (10), 553 (1990), <a href="https://doi.org/10.1364/OL.15.000553">doi:10.1364/OL.15.000553</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">F. Krausz <i>et al.</i>, &ldquo;Self-starting passive mode locking&rdquo;, Opt. Lett. 16 (4), 235 (1991), <a href="https://doi.org/10.1364/OL.16.000235">doi:10.1364/OL.16.000235</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">H. A. Haus and E. P. Ippen, &ldquo;Self-starting of passively mode-locked lasers&rdquo;, Opt. Lett. 16 (17), 1331 (1991), <a href="https://doi.org/10.1364/OL.16.001331">doi:10.1364/OL.16.001331</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">S. Chen and J. Wang, &ldquo;Self-starting issues of passive self-focusing mode locking&rdquo;, Opt. Lett. 16 (21), 1689 (1991), <a href="https://doi.org/10.1364/OL.16.001689">doi:10.1364/OL.16.001689</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">J. Zehetner <i>et al.</i>, &ldquo;Passive mode locking of homogeneously and inhomogeneously broadened lasers&rdquo;, Opt. Lett. 17 (12), 871 (1992), <a href="https://doi.org/10.1364/OL.17.000871">doi:10.1364/OL.17.000871</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">K. Tamura <i>et al.</i>, &ldquo;Unidirectional ring resonators for self-starting passively mode-locked lasers&rdquo;, Opt. Lett. 18 (3), 220 (1993), <a href="https://doi.org/10.1364/OL.18.000220">doi:10.1364/OL.18.000220</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">F. Krausz and T. Brabec, &ldquo;Passive mode locking in standing-wave laser resonators&rdquo;, Opt. Lett. 18 (11), 888 (1993), <a href="https://doi.org/10.1364/OL.18.000888">doi:10.1364/OL.18.000888</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">Y. Chou <i>et al.</i>, &ldquo;Measurements of the self-starting threshold of Kerr-lens mode-locking lasers&rdquo;, Opt. Lett. 19 (8), 566 (1994), <a href="https://doi.org/10.1364/OL.19.000566">doi:10.1364/OL.19.000566</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">C. J. Chen <i>et al.</i>, &ldquo;Self-starting of passively mode-locked lasers with fast saturable absorbers&rdquo;, Opt. Lett. 20 (4), 350 (1995), <a href="https://doi.org/10.1364/OL.20.000350">doi:10.1364/OL.20.000350</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">A. Gordon <i>et al.</i>, &ldquo;Self-starting of passive mode locking&rdquo;, Opt. Express 14 (23), 11142 (2006), <a href="https://doi.org/10.1364/OE.14.011142">doi:10.1364/OE.14.011142</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="passive_mode_locking.html" title="a technique of mode locking, based on a saturable absorber inside the laser resonator">passive mode locking</a>, <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorbers</a>, <a href="kerr_lens_mode_locking.html" title="a technique for mode locking a laser, exploiting nonlinear self-focusing">Kerr lens mode locking</a>, <a href="semiconductor_saturable_absorber_mirrors.html" title="saturable semiconductor absorber devices acting as nonlinear mirrors">semiconductor saturable absorber mirrors</a>, <a href="spotlight_2008_05_13.html">The Photonics Spotlight 2008-05-13</a>, <a href="spotlight_2018_01_08.html">The Photonics Spotlight 2018-01-08</a><br>and other articles in the categories <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/self_starting_mode_locking.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fself_starting_mode_locking.html&text=RP+Photonics+Encyclopedia+-+self-starting+mode+locking%2C+mode-locked+lasers%2C+passive+mode+locking" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fself_starting_mode_locking.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fself_starting_mode_locking.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/self_starting_mode_locking.html"&gt;<br>Article on Self-starting Mode Locking&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/self_starting_mode_locking.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/self_starting_mode_locking.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/self_starting_mode_locking.html<br>article on 'Self-starting Mode Locking' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2 style="font-size:20px;">Debugging Is Now Fun!</h2>
+<p>The software products which are supporting our <a href="./software_script_language.html?banner=Debugger">script language</a> (e.g. <a href="./fiberpower.html?banner=Debugger">RP Fiber Power</a> and <a href="./coating.html?banner=Debugger">RP Coating</a>) have now got a <a href="./software_news_2017_05_31.html?banner=Debugger">powerful debugger</a>!</p>
+<a href="./software_news_2017_05_31.html?banner=Debugger"><img src="./img/expression_debugger_small.png" alt="debugger" style="margin:10px 0;"></a>
+<p>It works even within expressions, not only after each command!</p>
+<p>The <a href="./software_news.html?banner=Debugger">RP Photonics Software News</a> keep you informed.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="+epdZhhpEcO7XNfKfd+bRQ==">shownbanner = "Debugger";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>How PhD Students Should Get Supported by Supervisors</h2>
+<p>A recent <a href="./spotlight_2014_12_17.html?banner=supervisors">article in the Photonics Spotlight</a> discusses the responsibilities of supervisors (professors and senior research assistance).</p>
+<p>Some key statements:</p>
+<ul>
+<li>Even if PhD students can carry out most of the work in a research project, vital inputs are needed from supervisors particularly in the planning phase and when a crisis occurs.</li>
+<li>A helpful supervisor does not only benefit the supported students, but contributes to the effectiveness of the whole research team.</li>
+<li>If serious engagement were the condition of authorship of supervisors, supervisors would be more likely to do their job.</li>
+<li>A substantial risk for science fraud arises only in a serious crisis &ndash; and is in that case strongly dependent on how the supervisor performs!</li>
+</ul>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="+epdZhhpEcO7XNfKfd+bRQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/self_starting_mode_locking.html"
+    },
+    "headline": "Self-starting Mode Locking",
+    "image": "https://www.rp-photonics.com/previews/self_starting_mode_locking.png",
+    "datePublished": "2005-11-27",
+    "dateModified": "2020-03-14",
+    "description": "Self-starting mode locking is mode locking (pulse generation) which is quickly achieved after turning on a laser, without external intervention.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter S",
+      "item": "https://www.rp-photonics.com/encyclopedia_s.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "self-starting mode locking",
+      "item": "https://www.rp-photonics.com/self_starting_mode_locking.html"
+    }]}
+}
+</script>
+</body>
+</html>

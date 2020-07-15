@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-UJcN6lsXT2P3+fy7lXjHQw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - ultrafast amplifiers, ultrashort pulses, chirped-pulse amplification, nonlinearities</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/ultrafast_amplifiers.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Ultrafast amplifiers are amplifiers for ultrashort optical pulses. In many cases, they can produce very high optical peak powers.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="ultrafast amplifiers, ultrashort pulses, chirped-pulse amplification, nonlinearities">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ultrafast Amplifiers">
+<meta property="og:description" content="Ultrafast amplifiers are amplifiers for ultrashort optical pulses. In many cases, they can produce very high optical peak powers.">
+<meta property="og:url" content="https://www.rp-photonics.com/ultrafast_amplifiers.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/ultrafast_amplifiers.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Ultrafast amplifiers are amplifiers for ultrashort optical pulses. In many cases, they can produce very high optical peak powers.">
+<meta name="twitter:title" content="Ultrafast Amplifiers">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/ultrafast_amplifiers.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="UJcN6lsXT2P3+fy7lXjHQw==">
+page="ultrafast_amplifiers.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo sponsor"></a> <a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo sponsor"></a> <a href="./sponsors/nkt_photonics.html"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="UJcN6lsXT2P3+fy7lXjHQw==">shownsponsors="DataRay,Knight Optical,NKT Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_ultrafast_amplifiers.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_u.html">letter U</a> &gt; <a href="ultrafast_amplifiers.html">ultrafast amplifiers</a></p>
+<h1>Ultrafast Amplifiers</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_ultrafast_amplifiers.html?s=vbox">27 suppliers for ultrafast amplifiers</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.kmlabs.com/raea-ultrafast-amplifier" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="ultrafast amplifiers" rel="nofollow" class="bg externallink"><img src="./bg/logos/kapteyn_murnane_laboratories.png" alt="Kapteyn-Murnane Laboratories" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://fluence.technology/products/harmony/" data-supplier="Fluence" data-location="product-enc" data-keyword="ultrafast amplifiers" rel="nofollow" class="bg externallink"><img src="./bg/logos/fluence.png" alt="Fluence" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="http://www.ape-berlin.de/en/opa-optical-parametric-amplifier/" data-supplier="APE" data-location="product-enc" data-keyword="ultrafast amplifiers" rel="nofollow" class="bg externallink"><img src="./bg/logos/ape.png" alt="APE" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="http://www.laserquantum.com/products/category.cfm?id=11" data-supplier="Laser Quantum" data-location="product-enc" data-keyword="ultrafast amplifiers" rel="nofollow" class="bg externallink"><img src="./bg/logos/laser_quantum.png" alt="Laser Quantum" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="http://www.class5photonics.com/high-power-opcpa-systems.html" data-supplier="Class 5 Photonics" data-location="product-enc" data-keyword="ultrafast amplifiers" rel="nofollow" class="bg externallink"><img src="./bg/logos/class_5_photonics.png" alt="Class 5 Photonics" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_ultrafast_amplifiers.html?s=vbox">List of suppliers for<br>ultrafast amplifiers</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="advicebox">
+<p>Ask <a href="index.html">RP Photonics</a> for advice on any kind of ultrafast amplifier. Dr. Paschotta has very extensive experience with the generation and amplification of picosecond and femtosecond pulses, and has software tools for simulating many aspects of such processes.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: amplifiers for ultrashort (femtosecond or picosecond) optical pulses</p>
+<p>Alternative terms: ultrashort pulse amplifiers, femtosecond or picosecond amplifiers</p>
+<p>More specific terms: <a href="regenerative_amplifiers.html" title="optical amplifiers with a resonator in which a light pulse can do multiple round trips before being coupled out">regenerative amplifiers</a>, <a href="multipass_amplifiers.html" title="an amplifier with multiple passes through the gain medium">multipass amplifiers</a>, <a href="optical_parametric_amplifiers.html" title="optical amplifiers based on parametric nonlinear interactions">optical parametric amplifiers</a>, <a href="optical_parametric_chirped_pulse_amplification.html" title="parametric amplification of chirped ultrashort pulses">optical parametric chirped-pulse amplifiers</a>, <a href="chirped_pulse_amplification.html" title="a technique for amplifying pulses to very high optical intensities while avoiding excessive nonlinear pulse distortions or optical damage">chirped-pulse amplifiers</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Ultrakurzpulsverstärker</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#optical_amplifiers" title="other articles on optical amplifiers">optical amplifiers</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<p><a href="encyclopedia_cite.html?article=ultrafast%20amplifiers">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Ultrafast amplifiers are optical <a href="optical_amplifiers.html" title="devices for amplifying the power of light beams">amplifiers</a> which are applied to <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a>.
+Some of these devices are used for amplifying high <a href="pulse_repetition_rate.html" title="the number of pulses emitted per second e.g. by a mode-locked or Q-switched laser">repetition rate</a> pulse trains, leading to a high average power whereas the <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a> remains moderate.
+In other cases, a much higher gain is applied to pulses at lower repetition rates, leading to high pulse energies and correspondingly huge <a href="peak_power.html" title="maximum optical power of a pulse">peak powers</a>.
+Enormously high <a href="optical_intensity.html" title="optical power per unit area">optical intensities</a>, sometimes above 10<sup>16</sup>&thinsp;W/cm<sup>2</sup>, are achieved by focusing such intense pulses tightly on some target.</p>
+<p>The following kind of pulse generation devices may be involved:</p>
+<ul>
+<li>The <a href="seed_lasers.html" title="lasers which are used for generating some seed light into an amplifier or another laser">seed laser</a> may be an internal or external <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked laser</a>, or in some cases a <a href="gain_switching.html" title="a technique for generating short optical pulses in a laser by modulating the laser gain">gain-switched</a> <a href="laser_diodes.html" title="semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diode</a>.</li>
+<li>Particularly for pre-amplification with high gain, but moderate power levels, one may either use a <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifier</a> or a bulk <a href="regenerative_amplifiers.html" title="optical amplifiers with a resonator in which a light pulse can do multiple round trips before being coupled out">regenerative amplifier</a>.</li>
+<li>Further boosting of the output energy and peak power is possible with a single-pass or <a href="multipass_amplifiers.html" title="an amplifier with multiple passes through the gain medium">multipass amplifier</a>.</li>
+<li>There are also <a href="optical_parametric_amplifiers.html" title="optical amplifiers based on parametric nonlinear interactions">optical parametric amplifiers</a>, which can produce very high gain and substantial output energies, but require energetic pump pulses rather than a continuous or <a href="quasi_continuous_wave_operation.html" title="an operation mode of lasers (e.g. diode bars) where the pump power is switched on for short time intervals in order to limit thermal effects">quasi-continuous</a> pump source.</li>
+</ul>
+<p>Some examples for typical pulse energies and peak powers:</p>
+<ul>
+<li>A <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked laser</a> may generate 100-fs pulses with a repetition rate of 100&nbsp;MHz and an average power of 0.1&nbsp;W.
+The <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a> is then only 0.1&nbsp;W&thinsp;/&thinsp;100&nbsp;MHz = 1&nbsp;nJ; nevertheless, due to the short pulse duration the <a href="peak_power.html" title="maximum optical power of a pulse">peak power</a> is nearly 10&nbsp;kW (somewhat depending on the pulse shape).</li>
+<li>A high-power amplifier, applied to the full pulse repetition rate, may raise the average power by 20&nbsp;dB to 10&nbsp;W, thus increasing the pulse energy to 100&nbsp;nJ and the peak power to the order of 1&nbsp;MW.
+Further substantial increases of peak power are difficult, because the average power would become very high.</li>
+<li>A <a href="pulse_pickers.html" title="electrically controlled optical switches used for extracting single pulses from a pulse train">pulse picker</a> before the amplifier may be used to reduce the pulse repetition rate to 1&nbsp;kHz.
+If the high-power amplifier can still raise the average power to 10&nbsp;W, the pulse energy is now 10&nbsp;mJ, and the peak power nearly 100&nbsp;GW.
+The required <a href="gain.html" title="a measure of the strength of optical amplification">amplifier gain</a> is now as high as 70&nbsp;dB.</li>
+<li>Systems with pulse pickers may even be operated with much lower pulse repetition rates, e.g. of 10&nbsp;Hz.
+One may then reach even higher pulse energies and peak powers while keeping the average power level quite moderate.
+However, one then needs a huge amount of amplifier gain.</li>
+</ul>
+<h2 class="togglediv">Special Requirements for Ultrafast Amplifiers</h2>
+<div>
+<p>Beyond the general technical issues of optical <a href="optical_amplifiers.html" title="devices for amplifying the power of light beams">amplifiers</a>, ultrafast devices meet a number of additional challenges:</p>
+<ul>
+<li>Particularly for high-energy systems, the amplifier <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> must be huge.
+As shown in the examples discussed above, a gain of many tens of <a href="decibel.html" title="a logarithmic measure for power ratios, applied e.g. to optical powers or to noise powers">decibels</a> is often needed.
+As single-pass amplifiers are limited in terms of gain, <a href="multipass_amplifiers.html" title="an amplifier with multiple passes through the gain medium">multipass</a> arrangements are frequently used.
+Very high gain is possible with <a href="regenerative_amplifiers.html" title="optical amplifiers with a resonator in which a light pulse can do multiple round trips before being coupled out">regenerative amplifiers</a>.
+Also, it is common to use multiple amplifier stages (&rarr;&nbsp;<a href="amplifier_chains.html" title="amplifiers consisting of several stages"><em>amplifier chains</em></a>).
+For example, one may use a regenerative amplifier plus one or two <a href="multipass_amplifiers.html" title="an amplifier with multiple passes through the gain medium">multipass amplifiers</a>.
+The last stages are optimized for high pulse energies and efficient energy extraction.</li>
+</ul>
+<aside class="callout red">In many types of laser amplifiers, back-reflected light could also be strongly amplified!</aside>
+<ul>
+<li>A high gain also implies a high sensitivity against any back-reflected light (except for regenerative and parametric amplifiers).
+Therefore, one often requires <a href="faraday_isolators.html" title="optical isolators based on the Faraday effect">Faraday isolators</a> between the amplifier stages.
+In addition, it is often necessary to carefully avoid extensive optical feedback from the application into an amplifier device, because the use of a Faraday isolator after the last amplifier stage may not be feasible.</li>
+</ul>
+<aside class="callout blue">ASE suppression in high-gain amplifier systems often requires multiple measures.</aside>
+<ul>
+<li>The high gain also implies a strong tendency for <a href="amplified_spontaneous_emission.html" title="a process where spontaneously emitted radiation (luminescence) is amplified">amplified spontaneous emission</a> (ASE).
+To some extent, ASE in laser amplifiers can be suppressed with optical switches such as <a href="acousto_optic_modulators.html" title="optical modulators based on the acousto-optic effect">acousto-optic modulators</a> between the amplifier stages.
+These switches are opened only for short time intervals around the peaks of the amplified pulses.
+However, these time intervals are usually still long compared with the pulse duration, so that it is not possible to suppress some ASE background around the pulses.
+<a href="optical_parametric_amplifiers.html" title="optical amplifiers based on parametric nonlinear interactions">Optical parametric amplifiers</a> are better in this respect, as they provide gain only during the passage of the pump pulse.
+Also, there is no amplification for light propagating in the backward direction.</li>
+</ul>
+<aside class="callout blue">Broadband amplification is essential for keeping the pulses short.</aside>
+<ul>
+<li>Ultrashort pulses have some significant optical <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>, which can be reduced by the effect of <a href="gain_narrowing.html" title="the phenomenon that the bandwidth of light can be reduced during amplification in a medium with a limited gain bandwidth">gain narrowing</a> in an amplifier, so that the amplified pulses become longer.
+For pulse durations below a few tens of femtoseconds, ultrabroadband amplifiers are required.
+Note that gain narrowing is particularly important in high-gain systems.</li>
+</ul>
+<aside class="callout red">Optical nonlinearities are often a major challenge and limit the achievable performance of ultrafast amplifiers.</aside>
+<ul>
+<li>Particularly for systems with high pulse energies, various optical <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a> can <a href="nonlinear_pulse_distortion.html" title="distortion of the spatial, temporal or spectral characteristics of an optical pulse, resulting from optical nonlinearities">distort the temporal and spectral pulse shape</a>, or may even lead to <a href="laser_induced_damage.html" title="damage of optical components induced by laser radiation">laser-induced damage</a> of the amplifier via <a href="self_focusing.html" title="focusing of a beam in a transparent medium, caused by the beam itself through a nonlinear process in the medium">self-focusing</a>.
+An effective technique for mitigating such effects is <a href="chirped_pulse_amplification.html" title="a technique for amplifying pulses to very high optical intensities while avoiding excessive nonlinear pulse distortions or optical damage"><em>chirped-pulse amplification</em></a> (CPA), where the pulses are first <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">dispersively</a> <a href="pulse_stretchers.html" title="devices for temporally stretching ultrashort light pulses">stretched</a> to e.g. 1&nbsp;ns duration, then amplified, and finally dispersively recompressed.
+A novel and not yet common alternative is <a href="divided_pulse_amplification.html" title="a method of amplifying intense ultrashort pulse while avoiding excessive nonlinear effects"><em>divided-pulse amplification</em></a>.
+Another important measure is to increase the <a href="effective_mode_area.html" title="a quantitative measure of the area which a waveguide or fiber mode effectively covers in the transverse dimensions">mode areas</a> in the amplifiers so as to reduce the optical intensities.</li>
+</ul>
+<aside class="callout green">Efficient energy extraction without reaching the optical damage threshold?</aside>
+<ul>
+<li>For a single-pass amplifier, efficient energy extraction is possible only if the pulse duration is long enough to reach a pulse <a href="fluence.html" title="optical energy per unit area">fluence</a> of the order of the <a href="saturation_energy.html" title="a measure of the incident optical pulse energy required for achieving significant saturation of an absorber or a gain medium">saturation fluence</a> without causing strong nonlinear effects.</li>
+</ul>
+<aside class="callout red">The energy storage in laser amplifiers is a crucial feature for ultrafast amplifiers.</aside>
+<p>Ultrafast laser amplifiers are usually continuously pumped, except for very low pulse repetition rates below the inverse <a href="upper_state_lifetime.html" title="the lifetime of the population of the upper laser level">upper-state lifetime</a>.
+In any case, the required pump power is far lower than the output peak power.
+This is essentially because one can exploit the energy storage in the laser <a href="gain_media.html" title="media for laser amplification">gain medium</a>.</p>
+<p>For <a href="optical_parametric_amplifiers.html" title="optical amplifiers based on parametric nonlinear interactions">optical parametric amplifiers</a>, not offering energy storage, the pump pulse duration is often similar to the duration of the amplified pulses.
+In some cases, however, the pump pulses can be significantly longer, because one can exploit the <a href="group_velocity_mismatch.html" title="the phenomenon that pulses become temporally separated in a medium due to different group velocities, or (quantitatively) the difference of inverse group velocities">group velocity mismatch</a> in the nonlinear crystal.</p>
+</div>
+<h2 class="togglediv">Examples of Possible Performance Figures</h2>
+<div>
+<p>The requirements on ultrafast amplifiers in terms of pulse energy, pulse duration, repetition rate, mean wavelength, etc., are very diverse.
+Correspondingly, very different types of devices are used.
+The following list gives some typical examples of the performance reached by different types of systems:</p>
+<ul>
+<li>An <a href="ytterbium_doped_gain_media.html" title="laser gain media containing laser-active ytterbium ions">ytterbium-doped</a> <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifier</a> may amplify a 100-MHz train of 10-ps pulses to an average power of 10&nbsp;W.
+(A system with such output performance is sometimes called an <a href="mode_locked_fiber_lasers.html" title="ultrafast fiber lasers which are actively or passively mode-locked for generating ultrashort pulses">ultrafast fiber laser</a>, although it is actually a <a href="master_oscillator_power_amplifier.html" title="a laser system consisting of a seed laser and a laser amplifier for boosting the output power">master oscillator power amplifier</a> device.)
+The peak power of roughly 10&nbsp;kW can be relatively easily handled with a <a href="large_mode_area_fibers.html" title="optical fibers with relatively large mode areas and a single transverse mode or only a few modes">large mode area</a> amplifier fiber.
+For femtosecond pulses, however, such a system would exhibit severe nonlinear effects.
+Starting with femtosecond pulses and applying chirped-pulse amplification, several microjoules can easily be reached, or in extreme cases &gt;&thinsp;1&nbsp;mJ.
+An alternative is the amplification of <a href="parabolic_pulses.html" title="pulses with a parabolic intensity profile">parabolic pulses</a> in a fiber with normal dispersion, and subsequent dispersive compression.</li>
+<li>A <a href="multipass_amplifiers.html" title="an amplifier with multiple passes through the gain medium">multipass bulk amplifier</a>, based e.g. on <a href="titanium_sapphire_lasers.html" title="lasers based on a Ti:sapphire gain medium">Ti:sapphire</a> and realized with a large mode area, may provide an output energy of the order of 1&nbsp;J at a low repetition rate of e.g. 10&nbsp;Hz.
+Strong <a href="pulse_stretchers.html" title="devices for temporally stretching ultrashort light pulses">pulse stretching</a> to a duration of e.g. a few nanoseconds is necessary in order to limit nonlinear effects.
+After compression to e.g. 20&nbsp;fs, the peak power is tens of terawatts (TW); the most advanced large systems already reach peak powers above 1&nbsp;PW, i.e. in the petawatt domain.
+Smaller systems generate e.g. 1-mJ pulses at 10&nbsp;kHz.
+The gain of a <a href="multipass_amplifiers.html" title="an amplifier with multiple passes through the gain medium">multipass amplifier</a> is usually of the order of 10&nbsp;dB.</li>
+<li>A much higher gain of several tens of decibels is possible with a <a href="regenerative_amplifiers.html" title="optical amplifiers with a resonator in which a light pulse can do multiple round trips before being coupled out">regenerative amplifier</a>.
+Made with Ti:sapphire, e.g., such a device may amplify 1-nJ pulses to 1&nbsp;mJ.
+Again, chirped-pulse amplification has to be applied in order to limit nonlinear effects.</li>
+<li>Using a regenerative amplifier based on an Yb-doped <a href="thin_disk_lasers.html" title="solid-state bulk lasers having a very thin disk of laser-active material as the gain medium">thin-disk</a> <a href="laser_heads.html" title="assemblies containing a mounted gain medium and means for pumping and cooling, or the complete optical parts of a laser, or assemblies for directing a laser beam to a workpiece">laser head</a>, pulses with durations somewhat below 1&nbsp;ps can be amplified to hundreds of microjoules without applying CPA.</li>
+<li>An <a href="optical_parametric_amplifiers.html" title="optical amplifiers based on parametric nonlinear interactions">optical parametric amplifier</a>, pumped with nanosecond pulses from a <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched laser</a>, can amplify stretched pulses to energies of several millijoules.
+A high gain of tens of decibels can be achieved in a single pass.
+For special <a href="phase_matching.html" title="a group of techniques for achieving efficient nonlinear interactions in a medium">phase-matching</a> configurations, the <a href="gain_bandwidth.html" title="the width of the optical frequency range in which significant gain is available from an amplifier">gain bandwidth</a> can be very large, so that very short pulse durations are possible after dispersive compression.</li>
+</ul>
+<p>The performance figures of commercial ultrafast amplifier systems often greatly lag behind the best performance values achieved in scientific experiments.
+In many cases, a main reason is that experimental systems rely on techniques or components which cannot be used in commercial devices due to a lack of stability and robustness.
+For example, complex fiber-based systems have been demonstrated which contain multiple transitions between fibers and free-space optics.
+All-fiber amplifier systems can be made, but these do not reach the performance levels of systems containing bulk-optical elements.
+In other cases, optical components are operated close to their <a href="laser_induced_damage.html" title="damage of optical components induced by laser radiation">damage threshold</a>; for commercial devices, a larger safety margin is required.
+Another problem can be the use of very special parts, which are difficult to procure.</p>
+</div>
+<h2 class="togglediv">Applications</h2>
+<div>
+<p>Ultrafast amplifiers find diverse applications:</p>
+<ul>
+<li>Many devices are used in fundamental research.
+They can provide intense pulses for highly nonlinear processes such as <a href="high_harmonic_generation.html" title="the phenomenon that very high harmonics of an intense input laser beam are generated in a gas">high harmonic generation</a>, or for the acceleration of particles to high energies.</li>
+<li>Large ultrafast amplifiers are under consideration for the use in laser-induced nuclear fusion (<em>inertial confinement fusion</em>, <em>fast ignition</em>).</li>
+<li>Millijoule pulse energies in picosecond or femtosecond pulses are interesting for micromachining.
+Short pulse durations make it possible to achieve very precise cutting of thin metal sheets, for example.</li>
+</ul>
+<p>Industrial applications are often made difficult by the complexity and cost of ultrafast amplifier systems, sometimes also by a lack of robustness.
+Further technological progress may improve the situation.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_ultrafast_amplifiers.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 27 suppliers for ultrafast amplifiers. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.kmlabs.com/" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="ultrafast amplifiers" rel="nofollow" class="bg externallink" title="Visit the website of Kapteyn-Murnane Laboratories"><img src="./bg/logos/kapteyn_murnane_laboratories.png" alt="Kapteyn-Murnane Laboratories" class="supplierlogo"></a><a href="https://www.kmlabs.com/raea-ultrafast-amplifier" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="ultrafast amplifiers" rel="nofollow" class="bg externallink" title="Visit the website of Kapteyn-Murnane Laboratories"><img src="./bg/products/kapteyn_murnane_laboratories/raea.jpg" alt="ultrafast amplifiers" class="product"></a><h3><a href="./bg/profiles/kapteyn_murnane_laboratories.html" title="See the profile of Kapteyn-Murnane Laboratories">Kapteyn-Murnane Laboratories</a></h3><p>The <a href="https://www.kmlabs.com/raea-ultrafast-amplifier" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="ultrafast amplifiers" rel="nofollow" class="externallink bg">RAEA&trade;</a> Ti:sapphire amplifier builds on KMLabs&rsquo; 20-year tradition of leadership in ultrafast science, bringing the unmatched flexibility of previous amplifier systems into a single, hands-free platform. Engineered for high harmonic generation (HHG): now you can stop worrying about the pump. Beyond serving the multitude of applications for which Ti:sapphire lasers have become ubiquitous, RAEA is especially designed as an unparalleled source for producing short wavelength light via high harmonic generation. The award-winning RAEA has been engineered for the most challenging applications rather than the most common, and was specifically designed with the XUUS system in mind for high harmonic generation. From better beam quality and stability, to remote alignment and lower maintenance needs, RAEA serves as a repeatable and reliable source for any of your high harmonic generation needs.</p></aside>
+<aside class="bg_vendoritem"><a href="https://fluence.technology/" data-supplier="Fluence" data-location="product-enc" data-keyword="ultrafast amplifiers" rel="nofollow" class="bg externallink" title="Visit the website of Fluence"><img src="./bg/logos/fluence.png" alt="Fluence" class="supplierlogo"></a><a href="https://fluence.technology/products/harmony/" data-supplier="Fluence" data-location="product-enc" data-keyword="ultrafast amplifiers" rel="nofollow" class="bg externallink" title="Visit the website of Fluence"><img src="./bg/products/fluence/harmony.jpg" alt="ultrafast amplifiers" class="product"></a><h3><a href="./bg/profiles/fluence.html" title="See the profile of Fluence">Fluence</a></h3><p>Find harmony in four perfectly synchronised and precisely tunable wavelength outputs produced by the <a href="https://fluence.technology/products/harmony/" data-supplier="Fluence" data-location="product-enc" data-keyword="ultrafast amplifiers" rel="nofollow" class="externallink bg">Fluence Harmony Optical Parametric Amplifier (OPA)</a>.</p><p>Fluence Harmony is a device that precisely converts ultrafast pulses of one band (e.g. 1030-nm pulses coming from Fluence Jasper) into a set of pulsed laser beams tunable in an extremely broad spectrum of wavelengths, ranging from 210&nbsp;nm up to 2600&nbsp;nm. All automated, all software-controlled.</p><p>A growing number of ultrafast spectroscopy techniques has prompted the need for a robust and reliable, self-diagnostic device like Harmony. The optical parametric amplifier is fully compatible with all femtosecond lasers and provides automated tuning across the basic tuning range.</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.class5photonics.com/" data-supplier="Class 5 Photonics" data-location="product-enc" data-keyword="ultrafast amplifiers" rel="nofollow" class="bg externallink" title="Visit the website of Class 5 Photonics"><img src="./bg/logos/class_5_photonics.png" alt="Class 5 Photonics" class="supplierlogo"></a><a href="http://www.class5photonics.com/high-power-opcpa-systems.html" data-supplier="Class 5 Photonics" data-location="product-enc" data-keyword="ultrafast amplifiers" rel="nofollow" class="bg externallink" title="Visit the website of Class 5 Photonics"><img src="./bg/products/class_5_photonics/ultrafast_lasers.jpg" alt="ultrafast amplifiers" class="product"></a><h3><a href="./bg/profiles/class_5_photonics.html" title="See the profile of Class 5 Photonics">Class 5 Photonics</a></h3><p>Class 5 Photonics offer powerful and high-performance femtosecond lasers based on <a href="http://www.class5photonics.com/high-power-opcpa-systems.html" data-supplier="Class 5 Photonics" data-location="product-enc" data-keyword="ultrafast amplifiers" rel="nofollow" class="externallink bg">optical parametric chirped pulse amplification (OPCPA)</a>:</p><p><a href="http://www.class5photonics.com/high-power-opcpa-systems.html" data-supplier="Class 5 Photonics" data-location="product-enc" data-keyword="ultrafast amplifiers" rel="nofollow" class="externallink bg">WHITE DWARF OPCPA powered by Coherent</a> up to 5&nbsp;W:</p><p>- &lt; 9&nbsp;fs at 800&nbsp;nm @ 1&nbsp;MHz</p><p>- most compact few-cycle laser system</p><p>- stable and reliable</p><p>- CEP stability optional</p><p>- dual output for time-resolved measurements</p><p>- pumped by Coherent Monaco industrial femtosecond laser</p><p><a href="http://www.class5photonics.com/white-dwarf-he.html" data-supplier="Class 5 Photonics" data-location="product-enc" data-keyword="ultrafast amplifiers" rel="nofollow" class="externallink bg">WHITE DWARF HE OPCPA</a> up to 30&nbsp;W:</p><p>- high-performance OPCPA system</p><p>- pumped by Yb:Fiber or Yb:YAG laser up to 300&nbsp;W and 3&nbsp;mJ</p><p>- output power up to 30&nbsp;W</p><p>- pulse durations down to 9&nbsp;fs</p><p>- add-ons EUV to MID-IR</p><p>- pump-probe configuration available</p><p><a href="http://www.class5photonics.com/supernova.html" data-supplier="Class 5 Photonics" data-location="product-enc" data-keyword="ultrafast amplifiers" rel="nofollow" class="externallink bg">SUPERNOVA OPCPA</a> up to 100&nbsp;W &ndash; our flagship product:</p><p>- highest average power OPCPA for demanding applications</p><p>- pumped by kW-class Yb:YAG Innoslab amplifiers or thin-disk</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.laserquantum.com/" data-supplier="Laser Quantum" data-location="product-enc" data-keyword="ultrafast amplifiers" rel="nofollow" class="bg externallink" title="Visit the website of Laser Quantum"><img src="./bg/logos/laser_quantum.png" alt="Laser Quantum" class="supplierlogo"></a><a href="http://www.laserquantum.com/products/category.cfm?id=11" data-supplier="Laser Quantum" data-location="product-enc" data-keyword="ultrafast amplifiers" rel="nofollow" class="bg externallink" title="Visit the website of Laser Quantum"><img src="./bg/products/laser_quantum/ultrafast_amplifiers.jpg" alt="ultrafast amplifiers" class="product"></a><h3><a href="./bg/profiles/laser_quantum.html" title="See the profile of Laser Quantum">Laser Quantum</a></h3><p>Laser Quantum provides comprehensive solutions for the emerging market of OPCPA technology &ndash; the most direct approach for high-power, few-cycle femtosecond <a href="http://www.laserquantum.com/products/category.cfm?id=11" data-supplier="Laser Quantum" data-location="product-enc" data-keyword="ultrafast amplifiers" rel="nofollow" class="externallink bg">laser amplification</a>, in addition to <a href="http://www.laserquantum.com/products/detail.cfm?id=77" data-supplier="Laser Quantum" data-location="product-enc" data-keyword="ultrafast amplifiers" rel="nofollow" class="externallink bg">preamplifier modules</a> for laser systems.</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.ape-berlin.de/" data-supplier="APE" data-location="product-enc" data-keyword="ultrafast amplifiers" rel="nofollow" class="bg externallink" title="Visit the website of APE"><img src="./bg/logos/ape.png" alt="APE" class="supplierlogo"></a><a href="http://www.ape-berlin.de/en/opa-optical-parametric-amplifier/" data-supplier="APE" data-location="product-enc" data-keyword="ultrafast amplifiers" rel="nofollow" class="bg externallink" title="Visit the website of APE"><img src="./bg/products/ape/optical_parametric_amplifiers.png" alt="ultrafast amplifiers" class="product"></a><h3><a href="./bg/profiles/ape.html" title="See the profile of APE">APE</a></h3><p><a href="http://www.ape-berlin.de/en/opa-optical-parametric-amplifier/" data-supplier="APE" data-location="product-enc" data-keyword="ultrafast amplifiers" rel="nofollow" class="externallink bg">AVUS</a> is the very latest Optical Parametric Amplifier (OPA) providing widely tunable high-energy pulses. It is ideal for use with 1-&mu;m femtosecond lasers and opens doors for up to 50&nbsp;W pump power. The user-friendly and maintenance-free unit is air-cooled and constructed with a monolithic case design for long-term thermal stability, even at maximum pump power. Versions with pulse durations &lt;200&nbsp;fs or alternatively &lt;70&nbsp;fs are available.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="ultrafast_amplifiers.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">M. D. Perry <i>et al.</i>, &ldquo;Petawatt laser pulses&rdquo;, Opt. Lett. 24 (3), 160 (1999), <a href="https://doi.org/10.1364/OL.24.000160">doi:10.1364/OL.24.000160</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">J. Limpert <i>et al.</i>, &ldquo;High-power ultrafast fiber laser systems&rdquo;, J. Sel. Top. Quantum Electron. 12 (2), 233 (2006), <a href="https://doi.org/10.1109/JSTQE.2006.872729">doi:10.1109/JSTQE.2006.872729</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">P. Russbueldt <i>et al.</i>, &ldquo;Scalable 30??fs laser source with 530&nbsp;W average power&rdquo;, Opt. Lett. 44 (21), 5222 (2019), <a href="https://doi.org/10.1364/OL.44.005222">doi:10.1364/OL.44.005222</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">F. Salin, &ldquo;Ultrafast solid-state amplifiers&rdquo;, in <i>Ultrafast Lasers: Technology and Applications</i> (eds. M. Fermann, A. Galvanauskas, G. Sucha), Marcel Dekker, New York (2002), Chapter 2, p. 61&ndash;88</td></tr>
+<tr><td class="refno">[5]</td><td class="refs">A. Galvanauskas, &ldquo;Ultrashort-pulse fiber amplifiers&rdquo;, in <i>Ultrafast Lasers: Technology and Applications</i> (eds. M. Fermann, A. Galvanauskas, G. Sucha), Marcel Dekker, New York (2002), Chapter 4, p. 155&ndash;218</td></tr>
+<tr><td class="refno">[6]</td><td class="refs">G. Cerulla and C. Manzoni, &ldquo;Solid-state ultrafast optical parametric amplifiers&rdquo;, in <i>Solid-State Lasers and Applications</i> (ed. A. Sennaroglu), CRC Press, Boca Raton (2007), Chapter 11, pp. 437&ndash;472</td></tr>
+<tr><td class="refno">[7]</td><td class="refs">R. Paschotta, tutorial on &quot;<a href="tutorial_fiber_amplifiers.html">Fiber Amplifiers</a>&quot;, <a href="tutorial_fiber_amplifiers8.html">part 8 on ultrafast amplifiers</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">R. Paschotta, tutorial on &quot;<a href="tutorial_modeling.html">Modeling of Fiber Amplifiers and Lasers</a>&quot;</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="optical_amplifiers.html" title="devices for amplifying the power of light beams">optical amplifiers</a>, <a href="multipass_amplifiers.html" title="an amplifier with multiple passes through the gain medium">multipass amplifiers</a>, <a href="regenerative_amplifiers.html" title="optical amplifiers with a resonator in which a light pulse can do multiple round trips before being coupled out">regenerative amplifiers</a>, <a href="chirped_pulse_amplification.html" title="a technique for amplifying pulses to very high optical intensities while avoiding excessive nonlinear pulse distortions or optical damage">chirped-pulse amplification</a>, <a href="divided_pulse_amplification.html" title="a method of amplifying intense ultrashort pulse while avoiding excessive nonlinear effects">divided-pulse amplification</a>, <a href="ultrafast_lasers.html" title="lasers emitting ultrashort pulses">ultrafast lasers</a>, <a href="spotlight_2008_06_20.html">The Photonics Spotlight 2008-06-20</a><br>and other articles in the categories <a href="categories.html#optical_amplifiers" title="other articles on optical amplifiers">optical amplifiers</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/ultrafast_amplifiers.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fultrafast_amplifiers.html&text=RP+Photonics+Encyclopedia+-+ultrafast+amplifiers%2C+ultrashort+pulses%2C+chirped-pulse+amplification%2C+nonlinearities" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fultrafast_amplifiers.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fultrafast_amplifiers.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/ultrafast_amplifiers.html"&gt;<br>Article on Ultrafast Amplifiers&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/ultrafast_amplifiers.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/ultrafast_amplifiers.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/ultrafast_amplifiers.html<br>article on 'Ultrafast Amplifiers' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Now is the Time for Training!</h2>
+<p>When your lab is closed, how to best utilize your time? With training, of course.</p>
+<p>Some suggestions:</p>
+<ul>
+<li>Use the RP Photonics website, reading <a href="./encyclopedia.html?banner=video_training">encyclopedia</a> articles, <a href="./tutorials.html?banner=video_training">tutorials</a>, <a href="./spotlight.html?banner=video_training">Photonics Spotlight</a> articles, etc. &ndash; all for free.</li>
+<li>Get a <a href="./training.html?banner=video_training">tailored training course</a> delivered through the internet &ndash; with every participant connected from home!</li>
+<li>Start with <a href="./software_modeling.html?banner=video_training">physical modeling</a> in order to fully understand your systems and devices, optimize performance, create new ideas&hellip;</li>
+</ul>
+<img src="./img/rp_photonics.png" alt="RP Photonics" style="margin-top:20px; width:225px;">
+<p>offers <a href="./training.html?banner=video_training">tailored training courses</a> and powerful <a href="./software.html?banner=video_training">simulation &amp; design software</a>, e.g. for <a href="./fiberpower.html?banner=video_training">active and passive fiber devices</a>, <a href="./resonator.html?banner=video_training">laser resonators</a> and <a href="./coating.html?banner=video_training">thin-film coatings</a>!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="UJcN6lsXT2P3+fy7lXjHQw==">shownbanner = "video training";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Field Guide on Laser Pulse Generation</h2>
+<p>Learn a lot on pulse generation with lasers:</p>
+<ul>
+<li>basic on optical pulses</li>
+<li>Q switching</li>
+<li>cavity dumping</li>
+<li>gain switching</li>
+<li>mode locking</li>
+<li>amplification of ultrashort pulses</li>
+<li>pulse characterization</li>
+</ul>
+<p style="text-align:center;"><a href="http://spie.org/x648.xml?product_id=800629"><img src="./img/fg_laser_pulses.png" alt="FG Laser Pulse Generation"></a></p>
+<p>Enjoy a compact booklet, authored by a top expert on laser pulses.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="UJcN6lsXT2P3+fy7lXjHQw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/ultrafast_amplifiers.html"
+    },
+    "headline": "Ultrafast Amplifiers",
+    "image": "https://www.rp-photonics.com/previews/ultrafast_amplifiers.png",
+    "datePublished": "2008-05-29",
+    "dateModified": "2020-03-14",
+    "description": "Ultrafast amplifiers are amplifiers for ultrashort optical pulses. In many cases, they can produce very high optical peak powers.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter U",
+      "item": "https://www.rp-photonics.com/encyclopedia_u.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ultrafast amplifiers",
+      "item": "https://www.rp-photonics.com/ultrafast_amplifiers.html"
+    }]}
+}
+</script>
+</body>
+</html>

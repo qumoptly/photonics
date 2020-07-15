@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-GF2nGu0NH/j7nXp/xA9/Zg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>The Photonics Spotlight - Time To Market and the Economics of Laser Development - or How to Cause Great Financial Damage without Spending Money</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/spotlight_2007_03_16.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2007-03-16">
+<meta name="description" content="The article shows that while avoiding cost overruns in laser development is important, it is at least as important not to endanger the financial return by engaging in poorly planned projects. An example shows that large delays can be caused by such mistakes, and that the caused financial damage can often be dominated by the aspect of time to market, not even the lost money for salaries and infrastructure. The way to minimize such risks is to start with a decent plan in the form of a detailed design document, analyzing all important issues and identifying possible problems at an early stage.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="photonics, spotlight, news, publications, blog, RSS feed, encyclopedia, laser physics, technology">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Photonics Spotlight - Time To Market and the Economics of Laser Development - or How to Cause Great Financial Damage without Spending Money">
+<meta property="og:description" content="The article shows that while avoiding cost overruns in laser development is important, it is at least as important not to endanger the financial return by engaging in poorly planned projects. An example shows that large delays can be caused by such mistakes, and that the caused financial damage can often be dominated by the aspect of time to market, not even the lost money for salaries and infrastructure. The way to minimize such risks is to start with a decent plan in the form of a detailed design document, analyzing all important issues and identifying possible problems at an early stage.">
+<meta property="og:url" content="https://www.rp-photonics.com/spotlight_2007_03_16.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/spotlight_2007_03_16.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="The article shows that while avoiding cost overruns in laser development is important, it is at least as important not to endanger the financial return by engaging in poorly planned projects. An example shows that large delays can be caused by such mistakes, and that the caused financial damage can often be dominated by the aspect of time to market, not even the lost money for salaries and infrastructure. The way to minimize such risks is to start with a decent plan in the form of a detailed design document, analyzing all important issues and identifying possible problems at an early stage.">
+<meta name="twitter:title" content="The Photonics Spotlight - Time To Market and the Economics of Laser Development - or How to Cause Great Financial Damage without Spending Money">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/spotlight_2007_03_16.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="GF2nGu0NH/j7nXp/xA9/Zg==">
+page="spotlight_2007_03_16.html"; cat="P"; shownbanner=""; ref="http://www.rp-photonics.com/spotlight.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo sponsor"></a> <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="GF2nGu0NH/j7nXp/xA9/Zg==">shownsponsors="El.En.,TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight" class="selected"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="spotlight.html">The Photonics Spotlight</a> &gt; <a href="spotlight_2007_03_16.html">2007-03-16</a></p>
+<h1 class="posting">Time To Market and the Economics of Laser Development - or How to Cause Great Financial Damage without Spending Money</h1>
+<div class="posting_details">
+<p>Posted on 2007-03-16 (revised on 2009-06-29) as a part of the <a href="spotlight.html">Photonics Spotlight (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="spotlight_2007_03_16.html" class="url">https://www.rp-photonics.com/spotlight_2007_03_16.html</a></p>
+<p>Author: <a href="https://www.rp-photonics.com/paschotta.html" rel="author">Dr. Rüdiger Paschotta</a>, <a href="https://www.rp-photonics.com/">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: The article shows that while avoiding cost overruns in laser development is important, it is at least as important not to endanger the financial return by engaging in poorly planned projects. An example shows that large delays can be caused by such mistakes, and that the caused financial damage can often be dominated by the aspect of time to market, not even the lost money for salaries and infrastructure. The way to minimize such risks is to start with a decent plan in the form of a detailed design document, analyzing all important issues and identifying possible problems at an early stage.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p class="ref">Ref.: encyclopedia articles on <a href="laser_development.html" title="the process of developing a laser device">laser development</a> and <a href="laser_design.html" title="the design of a laser device, or the process of working out such a design">laser design</a>; web page on <a href="design.html">laser design</a></p>
+<p>As everything else, <a href="industrial_lasers.html" title="lasers used for industrial purposes, for example for laser material processing">industrial</a> <a href="laser_development.html" title="the process of developing a laser device">laser development</a> is subject to cost constraints, and not observing those may endanger the economical value of a project.
+The biggest mistake, however, is not to recognize the most important economical aspects.
+Here is one which according to my experience appears to be overlooked surprisingly often in the laser industry: <b>time to market</b> (TTM).</p>
+<h2 class="togglediv">Time to Market</h2>
+<div>
+<p>Observing development cost is one thing, but that can hardly be more important than the <em>financial return</em> of a project &ndash; both in terms of volume and time.
+So while it is important to limit unexpected cost overruns, it is at least as important to avoid any significant delay of the financial return:</p>
+<ul>
+<li>Delay as such is already financially painful; this aspect can be quantified with interest rates.</li>
+<li>Moreover, the delayed market launch of a laser product leaves the competitors the time to establish their products, and the potential customers to find other solutions.
+So apart from interest, the <em>volume</em> of return is also at risk.</li>
+</ul>
+<p>Another aspect, which is more difficult to measure, is the loss of trust experienced by customers who are waiting for the product.</p>
+</div>
+<h2 class="togglediv">Typical Delays in Laser Development</h2>
+<div>
+<p>In the context of <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">lasers</a>, large delays can be caused by problems during the development process.
+Imagine, for example, that the prototype of some <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched laser</a> exhibits certain nasty instabilities, and the team is not sure where these come from, let alone which measure could fix that.
+One month later, it is found that this problem resulted from a flaw in the used <a href="laser_design.html" title="the design of a laser device, or the process of working out such a design">laser design</a>.
+It takes another two months (to be optimistic) to get modified parts and solve the problem.</p>
+<p>What is now the resulting financial damage?</p>
+<p>The obvious cost is the salary of a certain number of people during that time.
+Next, the expensive technical infrastructure is occupied with these activities, and other infrastructure (including the building, administration, etc.) is poorly utilized; this may actually cost more than the salaries.
+It would be stupid enough to say &ldquo;Well, we would anyway have paid these salaries and maintained the infrastructure&rdquo; &ndash; after all, this additional cost has to be attributed to the project.
+But the clearly unacceptable failure would be not to realize the financial damage caused by the delayed financial return &ndash; which can easily be the largest financial factor, even if there will be no document with such a figure printed on it.</p>
+<p>Note that strictly speaking that financial damage is <em>not</em> caused by the experienced technical problem, but by the way of handling the project.</p>
+</div>
+<h2 class="togglediv">How to Minimize the Risk</h2>
+<div>
+<p>We have seen that development time must be kept under control as much as the cost.
+(In short: time is money!)
+What does this mean in the context of laser development?
+That it is not an acceptable practice to engage in poorly planned developments: running into the lab before having a carefully checked plan, just trying things which then turn out not to work (acting on the maxim &ldquo;Just do it!&rdquo;), etc.</p>
+<p>What is required before starting any lab work (and making promises to potential customers) is a <b>decent technical plan</b> in the form of a <a href="laser_design.html" title="the design of a laser device, or the process of working out such a design">design document</a> which</p>
+<ul>
+<li>defines the goals and the taken approach,</li>
+<li class="ta_left">explains why this root is taken (e.g. why it is superior over others),</li>
+<li class="ta_left">lists the required parts,</li>
+<li class="ta_left">identifies the steps to be taken,</li>
+<li class="ta_left">and of course analyzes in appropriate depth (not more, not less!) the technical key issues &ndash; e.g., will thermal effects be under control, will the optical intensities be well below damage thresholds, etc.</li>
+</ul>
+<p>Recognizing and solving problems at this stage &ndash; before parts are ordered and put together &ndash; is obviously much cheaper and faster than discovering, identifying and solving them in the prototype.
+What it takes is sufficient technical expertise, practical experience, and discipline.</p>
+<p>It is no excuse not to have staff with this expertise in house, not to have the time for careful preparations, or not to have anticipated the trouble.
+(Anyway, what you need are results, not excuses!)
+If required, an <a href="paschotta.html">experienced laser expert</a> can be found externally, and the team will then learn from this person, possibly in order to do the job themselves next time.
+The cost for that will in many cases be a tiny fraction of what it can easily cost to ignore the aspect of time to market.</p>
+<p>See also the earlier <a href="spotlight_2006_07_05.html">Spotlight article on laser development</a>, and a later article on <a href="spotlight_2009_06_29.html">Doing things properly</a>.</p>
+</div>
+<hr>
+<p style="font-size:90%; margin-bottom:10px;">This article is a posting of the <a href="spotlight.html">Photonics Spotlight</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page and cite it, because its location is permanent.
+See also the <a href="encyclopedia.html">RP Photonics Encyclopedia</a>.</p>
+<p>Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="https://www.rp-photonics.com/spotlight.rss">RSS feed</a>.</p>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="spotlight_2007_03_16.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/spotlight_2007_03_16.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2007_03_16.html&text=The+Photonics+Spotlight+-+Time+To+Market+and+the+Economics+of+Laser+Development+-+or+How+to+Cause+Great+Financial+Damage+without+Spending+Money" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2007_03_16.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2007_03_16.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2007_03_16.html"&gt;<br>Article on The Photonics Spotlight - Time To Market and the Economics of Laser Development - or How to Cause Great Financial Damage without Spending Money&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2007_03_16.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/spotlight_2007_03_16.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Paschotta</a>, RP Photonics Consulting GmbH. All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./marketing_contact.html">contact</a>, <a href="./privacy.html">data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="https://www.gentec-eo.com/?utm_source=Rp%20Photonics&utm_medium=banner&utm_campaign=buyers%20guide" data-supplier="Gentec Electro-Optics" data-location="banner" rel="nofollow" class="bg externallink"><img src="./bg/banners/gentec_electro_optics.jpg" alt="Gentec Electro-Optics"></a>
+</div>
+</aside>
+<script type="text/javascript" nonce="GF2nGu0NH/j7nXp/xA9/Zg==">shownbanner = "Gentec Electro-Optics";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Latest Encyclopedia Articles</h2>
+<p>Here are the latest encyclopedia articles:</p>
+<ul>
+<li class="tight"><a href="./variable_reflectivity_mirrors.html">variable reflectivity mirrors</a></li>
+<li class="tight"><a href="./color_centers.html">color centers</a></li>
+<li class="tight"><a href="./excimer_lamps.html">excimer lamps</a></li>
+<li class="tight"><a href="./multimode_beams.html">multimode beams</a></li>
+<li class="tight"><a href="./channel_waveguides.html">channel waveguides</a></li>
+<li class="tight"><a href="./optical_crystals.html">optical crystals</a></li>
+<li class="tight"><a href="./standing_wave_resonators.html">standing-wave resonators</a></li>
+<li class="tight"><a href="./nonlinear_absorption.html">nonlinear absorption</a></li>
+<li class="tight"><a href="./passive_fibers.html">passive fibers</a></li>
+<li class="tight"><a href="./active_fibers.html">active fibers</a></li>
+<li class="tight"><a href="./oem_laser_modules.html">OEM laser modules</a></li>
+<li class="tight"><a href="./industrial_lasers.html">industrial lasers</a></li>
+<li class="tight"><a href="./scientific_lasers.html">scientific lasers</a></li>
+<li class="tight"><a href="./flint_glasses.html">flint glasses</a></li>
+<li class="tight"><a href="./crown_glasses.html">crown glasses</a></li>
+<li class="tight"><a href="./sodium_vapor_lamps.html">sodium vapor lamps</a></li>
+<li class="tight"><a href="./metal_vapor_lamps.html">metal vapor lamps</a></li>
+<li class="tight"><a href="./mercury_vapor_lamps.html">mercury vapor lamps</a></li>
+<li class="tight"><a href="./white_light.html">white light</a></li>
+<li class="tight"><a href="./cie_standard_illuminants.html">CIE standard illuminants</a></li>
+</ul>
+
+<p>The encyclopedia already contains 948 articles.</p>
+<p>See also the regularly appearing articles of the <a href="./spotlight.html?banner=new_articles">The Photonics Spotlight</a> and the <a href="./software_news.html?banner=new_articles">RP Photonics Software News</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="GF2nGu0NH/j7nXp/xA9/Zg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/spotlight_2007_03_16.html"
+    },
+    "headline": "Time To Market and the Economics of Laser Development - or How to Cause Great Financial Damage without Spending Money",
+    "image": "https://www.rp-photonics.com/previews/spotlight_2007_03_16.png",
+    "datePublished": "2007-03-16",
+    "description": "The article shows that while avoiding cost overruns in laser development is important, it is at least as important not to endanger the financial return by engaging in poorly planned projects. An example shows that large delays can be caused by such mistakes, and that the caused financial damage can often be dominated by the aspect of time to market, not even the lost money for salaries and infrastructure. The way to minimize such risks is to start with a decent plan in the form of a detailed design document, analyzing all important issues and identifying possible problems at an early stage.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "The Photonics Spotlight",
+      "item": "https://www.rp-photonics.com/spotlight.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "2007-03-16",
+      "item": "https://www.rp-photonics.com/spotlight_2007_03_16.html"
+    }]}
+}
+</script>
+</body>
+</html>

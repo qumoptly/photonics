@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-OOFWdJ/ehln5ckkENYotxA=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>The software RP Fiber Power: modes and chromatic dispersion of a germanosilicate multimode fiber</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/fiberpower_gesi.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-05-22">
+<meta name="description" content="Modes of a germanosilicate fiber with super-Gaussian refractive index profile are calculated, including the chromatic dispersion properties.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="RP Fiber Power, simulation, design, software, fiber amplifiers, lasers, power, model, germanosilicate fiber, chromatic dispersion">
+<script type="text/javascript" src="./jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" nonce="OOFWdJ/ehln5ckkENYotxA==">
+page="fiberpower_gesi.html"; cat="S"; shownbanner=""; ref="http://www.rp-photonics.com/encyclopedia_f.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td class="selected"><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="fiberpower_gesi_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software_start" href="software.html">Introduction</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<p>Products:</p>
+<a id="Overview" href="software_overview.html">Overview</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html" class="sel">RP Fiber Power</a>
+<a href="fiberpower_features.html" class="sub">Features</a>
+<a href="fiberpower_speed.html" class="sub">Speed</a>
+<a href="fiberpower_model.html" class="sub">Model</a>
+<a href="fiberpower_data.html" class="sub">Data</a>
+<a href="fiberpower_interface.html" class="sub">Interface</a>
+<a href="fiberpower_case_studies.html" class="sub sel">Demos</a>
+<a href="fiberpower_versions.html" class="sub">Versions</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<p>Various aspects:</p>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<p>Take action:</p>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main"><main>
+<div class="softwarelogo">
+<p class="fig" style="margin-top:12px"><img src="img/fiberpower_logo.png" width="75" height="75" alt="RP Fiber Power logo"></p>
+</div>
+<p class="breadcrumbs"><a href="software.html">Software</a> &gt; <a href="fiberpower.html">RP Fiber Power</a> &gt; <a href="fiberpower_case_studies.html">Demos</a> &gt; <a href="fiberpower_gesi.html">Germanosilicate fiber</a></p>
+<h1>RP Fiber Power &ndash; Simulation and Design Software <br> for Fiber Optics, Amplifiers and Fiber Lasers</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower.html">Overview</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_features.html">Features</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_speed.html">Speed</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_model.html">Model</a></td>
+</tr><tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_data.html">Data</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_interface.html">Interface</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="fiberpower_case_studies.html">Demos</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_versions.html">Versions</a></td>
+</tr>
+</table>
+<h2>Example Case: Germanosilicate Multimode Fiber</h2>
+<h3>Description of the Model</h3>
+<p>Here, we model a germanosilicate <a href="multimode_fibers.html" title="fibers supporting more than one guided mode per polarization direction">multimode fiber</a>, where a supergaussian transverse profile of the germanium concentration is assumed.
+The refractive index is interpolated between that of silica and germania according to the local germania content:</p>
+<pre class="codedisplay">
+r_co := 8 um  { core radius }
+c_GeO2(r) := 
+  { doping profile: fraction of GeO2 at radius r }
+  if r &lt;= r_co
+  then 0.12 * exp(-(1.2 * r / r_co)^8)
+  else 0  { index must be exactly constant for r &gt; r_co }
+n_f(r,lambda) := sqrt(c_GeO2(r) * n_GeO2(lambda)^2 + (1 - c_GeO2(r)) * n_SiO2(lambda)^2)
+calc set_n_profile("n_f",r_co)
+  { This assigns the index function to the fiber. }
+</pre>
+<p>The refractive indices of silica and germania are calculated from <a href="sellmeier_formula.html" title="an equation for calculating the wavelength-dependent refractive index of a medium">Sellmeier formulas</a>.
+In that way, the wavelength dependence is included, which we need for calculating the <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>.</p>
+<p>From the wavelength-dependent refractive index profile, the mode solver can calculate all modes existing at any particular wavelength, including their <a href="optical_intensity.html" title="optical power per unit area">intensity</a> profiles, <a href="effective_refractive_index.html" title="a number quantifying the phase delay per unit length in a waveguide, relative to the phase delay in vacuum">effective refractive index</a>, <a href="group_velocity.html" title="the velocity with which the envelope of a weak narrow-band optical pulse propagates in a medium">group velocities</a>, and <a href="group_velocity_dispersion.html" title="the frequency dependence of the group velocity in a medium, or (quantitatively) the derivative of the inverse group velocity with respect to angular frequency">group velocity dispersion</a>.</p>
+<h3>Results</h3>
+<p>Figure&nbsp;1 shows the radial functions of all modes existing at a wavelength of 1000&nbsp;nm.
+In the lower part, it also shows the refractive index profile and the effective refractive indices of all modes.
+The colors are indicating the mode index <span class="eqn_il"><i>l</i></span>.</p>
+<figure>
+<img src="img/germanosilicate_fiber2.png" alt="radial profiles of fiber modes">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Radial profiles of mode function, index profile and effective indices.
+</figcaption>
+</figure>
+<p>Figure&nbsp;2 shows <a href="effective_refractive_index.html" title="a number quantifying the phase delay per unit length in a waveguide, relative to the phase delay in vacuum">effective refractive indices</a> of the modes as functions of the wavelength.
+These all lie between the refractive indices of the cladding and the on-axis index, as indicated with dashed gray lines.</p>
+<figure>
+<img src="img/germanosilicate_fiber5.png" alt="effective refractive index of fiber modes">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Effective refractive indices.
+</figcaption>
+</figure>
+<p>Figure&nbsp;3 shows <a href="group_index.html" title="the ratio of the vacuum velocity of light to the group velocity in a medium">group indices</a> of the modes as functions of the wavelength.
+Due to the influence of <a href="waveguide_dispersion.html" title="chromatic dispersion arising from waveguiding effects">waveguide dispersion</a>, these mostly lie above the group index on the fiber axis.
+Close to its <a href="cut_off_wavelength.html" title="a wavelength above which a guided mode of a waveguide ceases to exist">cut-off</a>, however, the group index of a mode drops substantially, because the mode becomes weakly guided, and the contribution of the waveguide dispersion becomes smaller.
+(The vertical lines indicate the cut-off wavelengths.)</p>
+<figure>
+<img src="img/germanosilicate_fiber6.png" alt="group index of fiber modes">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Group indices.
+</figcaption>
+</figure>
+<p>(<a href="fiberpower_case_studies.html">back to the list of example cases</a>)</p>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</main></div>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="OOFWdJ/ehln5ckkENYotxA==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Software",
+      "item": "https://www.rp-photonics.com/software.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "RP Fiber Power",
+      "item": "https://www.rp-photonics.com/fiberpower.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Demos",
+      "item": "https://www.rp-photonics.com/fiberpower_case_studies.html"
+    },{
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Germanosilicate fiber",
+      "item": "https://www.rp-photonics.com/fiberpower_gesi.html"
+    }]}
+}
+</script>
+</body>
+</html>

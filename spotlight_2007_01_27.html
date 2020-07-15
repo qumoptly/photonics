@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-TCoKsIAlSRMXqBymClXr0w=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>The Photonics Spotlight - Noise Figure of Amplifiers</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/spotlight_2007_01_27.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2007-01-27">
+<meta name="description" content="The article discusses what the noise figure of an amplifier really means, and uses the example of a chain of two high-gain amplifiers. It turns out that an important ingredient of the definition of the noise figure is often overlooked.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="photonics, spotlight, news, publications, blog, RSS feed, encyclopedia, laser physics, technology">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Photonics Spotlight - Noise Figure of Amplifiers">
+<meta property="og:description" content="The article discusses what the noise figure of an amplifier really means, and uses the example of a chain of two high-gain amplifiers. It turns out that an important ingredient of the definition of the noise figure is often overlooked.">
+<meta property="og:url" content="https://www.rp-photonics.com/spotlight_2007_01_27.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/spotlight_2007_01_27.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="The article discusses what the noise figure of an amplifier really means, and uses the example of a chain of two high-gain amplifiers. It turns out that an important ingredient of the definition of the noise figure is often overlooked.">
+<meta name="twitter:title" content="The Photonics Spotlight - Noise Figure of Amplifiers">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/spotlight_2007_01_27.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="TCoKsIAlSRMXqBymClXr0w==">
+page="spotlight_2007_01_27.html"; cat="P"; shownbanner=""; ref="http://www.rp-photonics.com/spotlight.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="TCoKsIAlSRMXqBymClXr0w==">shownsponsors="TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight" class="selected"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="spotlight.html">The Photonics Spotlight</a> &gt; <a href="spotlight_2007_01_27.html">2007-01-27</a></p>
+<h1 class="posting">Noise Figure of Amplifiers</h1>
+<div class="posting_details">
+<p>Posted on 2007-01-27 as a part of the <a href="spotlight.html">Photonics Spotlight (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="spotlight_2007_01_27.html" class="url">https://www.rp-photonics.com/spotlight_2007_01_27.html</a></p>
+<p>Author: <a href="https://www.rp-photonics.com/paschotta.html" rel="author">Dr. Rüdiger Paschotta</a>, <a href="https://www.rp-photonics.com/">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: The article discusses what the noise figure of an amplifier really means, and uses the example of a chain of two high-gain amplifiers. It turns out that an important ingredient of the definition of the noise figure is often overlooked.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p class="ref">Ref.: encyclopedia articles on <a href="noise_figure.html" title="a measure of the excess noise added in an amplifier">noise figure</a>, <a href="amplifier_noise.html" title="noise introduced to a signal in an amplifier device">amplifier noise</a>, <a href="optical_amplifiers.html" title="devices for amplifying the power of light beams">amplifiers</a></p>
+<p>The noise figure of an amplifier (e.g. a <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifier</a>) is often said to simply be the amount by which the signal-to-noise ratio of an input signal is degraded.
+Then, however, it is not understandable how the noise figure of an ideal high-<a href="gain.html" title="a measure of the strength of optical amplification">gain</a> <a href="four_level_and_three_level_gain_media.html" title="laser gain media without/with reabsorption from the lower laser level">four-level</a> amplifier can always be 3&nbsp;dB.
+In particular, how about two such amplifiers in series?
+If the signal-to-noise ratio is degraded twice, the noise figure should be 6&nbsp;dB.
+But considering the two amplifiers as a single amplifier (made as an <a href="amplifier_chains.html" title="amplifiers consisting of several stages">amplifier chain</a>), it should be 3&nbsp;dB.
+It is not conceivable why e.g. two fiber amplifiers in series should be worse concerning <a href="amplifier_noise.html" title="noise introduced to a signal in an amplifier device">amplifier noise</a> than a single longer amplifier.</p>
+<p>The confusion arises from the frequently encountered omission of an important condition: the noise figure is the amount by which the signal-to-noise ratio of an input signal is degraded, <em>if the input signal is <a href="shot_noise.html" title="quantum-limited intensity noise">shot-noise</a> limited</em>.
+In a chain made of two high-gain amplifiers, the first device may have a shot-noise limited input.
+Its output will then have strongly amplified quantum noise, plus some excess noise according to the noise figure.
+This means that the input of the second amplifier has strong excess noise (i.e., noise at a level high above the shot noise level), so that this amplifier won't degrade the noise performance further if it also has a noise figure of e.g. 3&nbsp;dB.</p>
+<p>The exact analog of this occurs with electronic amplifiers, only that <a href="quantum_noise.html" title="noise arising from quantum fluctuations">quantum noise</a> has to be replaced with thermal noise.
+Obviously, the apparent mystery as described above is not one of these quantum mysteries, and is relatively simple to resolve.
+And the understanding of such issues is obviously quite important when considering amplifier noise, e.g. in <a href="photodetectors.html" title="devices used for the detection of light">photodetection</a> and particularly in <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a>. </p>
+<hr>
+<p style="font-size:90%; margin-bottom:10px;">This article is a posting of the <a href="spotlight.html">Photonics Spotlight</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page and cite it, because its location is permanent.
+See also the <a href="encyclopedia.html">RP Photonics Encyclopedia</a>.</p>
+<p>Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="https://www.rp-photonics.com/spotlight.rss">RSS feed</a>.</p>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="spotlight_2007_01_27.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/spotlight_2007_01_27.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2007_01_27.html&text=The+Photonics+Spotlight+-+Noise+Figure+of+Amplifiers" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2007_01_27.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2007_01_27.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2007_01_27.html"&gt;<br>Article on The Photonics Spotlight - Noise Figure of Amplifiers&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2007_01_27.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/spotlight_2007_01_27.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Paschotta</a>, RP Photonics Consulting GmbH. All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./marketing_contact.html">contact</a>, <a href="./privacy.html">data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Evaluation of Technologies</h2>
+<p>In the laser and photonics industry, it is often essential to obtain competent evaluations of certain technologies:</p>
+<ul>
+<li>A CTO of a laser company needs to know whether some new technical idea is worthwhile pursuing. Maybe there are some hidden problems?</li>
+<li>A user of lasers is told about a great new laser architecture &ndash; but will it really serve her needs?</li>
+<li>Venture capital firms need to find out what the potentials and limitations of certain technologies are. We call that applying <em>due diligence</em>.</li>
+</ul>
+<h3>Get help!</h3>
+<p>Involving a top expert such as <a href="./paschotta.html?banner=technology_evaluation">Dr. Paschotta</a> into technology evaluations can have many advantages:</p>
+<ul>
+<li>He has a good overview on many technologies and their potentials and limitations.</li>
+<li>His analytic mind allows him to develop a balanced perspective, taking into account all relevant aspects.</li>
+<li>He is well trained in writing useful reports.</li>
+<li>He may bring in new perspectives and ideas.</li>
+</ul>
+<p>Just <a href="./contact.html?banner=technology_evaluation">contact RP Photonics</a> to find out what we can do for you!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="TCoKsIAlSRMXqBymClXr0w==">shownbanner = "technology evaluation";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Shortages of rare earth materials &ndash; a problem for photonics?</h2>
+<p>Photonics heavily depends on the supply of rare earth materials in various areas &ndash; think of <a href="./laser_crystals.html?banner=rare_earth_shortage">laser crystals</a>, <a href="./rare_earth_doped_fibers.html?banner=rare_earth_shortage">active fibers</a> and <a href="./light_emitting_diodes.html?banner=rare_earth_shortage">LEDs</a>, for example.
+It is hard to see how such things could be done without rare earth materials.
+And those have recently been subject to enormous price increases and were even involved in a trade war.</p>
+<p>Is that now a reason for serious concerns in the area of photonics?
+Do we need to undertake serious recycling efforts?
+Our <a href="./spotlight_2014_06_27.html?banner=rare_earth_shortage">Photonics Spotlight article</a> analyzes the situation.</p>
+<p>Receiving the <a href="./spotlight.html?banner=rare_earth_shortage">Photonics Spotlight</a> via our <a href="./newsletters.html?banner=rare_earth_shortage">newsletter</a> might be a good idea &hellip;</p>
+
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="TCoKsIAlSRMXqBymClXr0w==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/spotlight_2007_01_27.html"
+    },
+    "headline": "Noise Figure of Amplifiers",
+    "image": "https://www.rp-photonics.com/previews/spotlight_2007_01_27.png",
+    "datePublished": "2007-01-27",
+    "description": "The article discusses what the noise figure of an amplifier really means, and uses the example of a chain of two high-gain amplifiers. It turns out that an important ingredient of the definition of the noise figure is often overlooked.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "The Photonics Spotlight",
+      "item": "https://www.rp-photonics.com/spotlight.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "2007-01-27",
+      "item": "https://www.rp-photonics.com/spotlight_2007_01_27.html"
+    }]}
+}
+</script>
+</body>
+</html>

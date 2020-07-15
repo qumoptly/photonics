@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-TAaevDcoWj4/Ksw6VBMBNg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Shack-Hartmann wavefront sensors, operation principle, distortions, spot pattern, algorithm, applications</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/shack_hartmann_wavefront_sensors.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Hartmann-Shack wavefront sensors can measure wavefront shapes and even whole optical amplitude distributions e.g. of laser beams or star light. They are widely used in adaptive optics and in laser beam characterization.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="Shack-Hartmann wavefront sensors, operation principle, distortions, spot pattern, algorithm, applications">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Shack&ndash;Hartmann Wavefront Sensors">
+<meta property="og:description" content="Hartmann-Shack wavefront sensors can measure wavefront shapes and even whole optical amplitude distributions e.g. of laser beams or star light. They are widely used in adaptive optics and in laser beam characterization.">
+<meta property="og:url" content="https://www.rp-photonics.com/shack_hartmann_wavefront_sensors.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/shack_hartmann_wavefront_sensors.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Hartmann-Shack wavefront sensors can measure wavefront shapes and even whole optical amplitude distributions e.g. of laser beams or star light. They are widely used in adaptive optics and in laser beam characterization.">
+<meta name="twitter:title" content="Shack&ndash;Hartmann Wavefront Sensors">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/shack_hartmann_wavefront_sensors.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="TAaevDcoWj4/Ksw6VBMBNg==">
+page="shack_hartmann_wavefront_sensors.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo sponsor"></a> <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo sponsor"></a> <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="TAaevDcoWj4/Ksw6VBMBNg==">shownsponsors="DataRay,eagleyard Photonics,RPMC Lasers,TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_shack_hartmann_wavefront_sensors.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_s.html">letter S</a> &gt; <a href="shack_hartmann_wavefront_sensors.html">Shack&ndash;Hartmann wavefront sensors</a></p>
+<h1>Shack&ndash;Hartmann Wavefront Sensors</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_shack_hartmann_wavefront_sensors.html?s=vbox">11 suppliers for Shack&ndash;Hartmann wavefront sensors</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_shack_hartmann_wavefront_sensors.html?s=vbox">List of suppliers for<br>Shack--Hartmann wavefront sensors</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p>Acronym: SHWFS</p>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: wavefront sensors which are based on a microlens array</p>
+<p>Alternative term: Hartmann&ndash;Shack wavefront sensor</p>
+<p>More general term: wavefront sensors</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Shack&ndash;Hartmann-Wellenfrontsensor</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a></p>
+<p><a href="encyclopedia_cite.html?article=Shack--Hartmann%20wavefront%20sensors">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>The Shack&ndash;Hartmann (or sometimes Hartmann&ndash;Shack) wavefront sensor is the most common type of wavefront sensor, named after Johannes Franz Hartmann and Roland Shack.
+It can be used for measuring the wavefront shape of incident light, e.g. from an <a href="optical_attenuators.html" title="devices which can reduce the optical power e.g. of a light beam">attenuated</a> <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a> or from star light in an optical <a href="telescopes.html" title="optical instruments for viewing distant objects, or sometimes more generally afocal systems">telescope</a>.</p>
+<p>The article also explains the original Hartmann wavefront sensor, an earlier form without the further development of the technology by Shack and Platt.</p>
+<h2 class="togglediv">Operation Principle</h2>
+<div>
+<p>Essentially, the optical setup of the sensor consists of an array of <a href="microlenses.html" title="optical lenses of particularly small diameter, e.g. below 1 mm">microlenses</a> and an <a href="image_sensors.html" title="optoelectronic sensors which can be used for imaging">image sensor</a>, which is mounted in the <a href="focal_points_and_focal_planes.html" title="points to which parallel input rays are concentrated by an optical system, and the planes going through those points">focal plane</a> of the <a href="microlens_arrays.html" title="one- or two-dimensional arrays of microlenses, used e.g. in Shack-Hartmann wavefront sensors">microlens array</a> (and can be called a <a href="focal_plane_arrays.html" title="arrays of light detectors placed in the focal plane of an imaging system">focal plane array</a>).
+The original invention by Johannes Franz Hartmann employed a Hartmann mask, which is an array of <a href="pinholes.html" title="circular holes, typically with diameters well below one millimeter">pinholes</a> instead of the lenses; Roland Shack and Ben Platt introduced the use of lens arrays in the late 1960s, which substantially increased the sensitivity of those devices and thus allows wavefront sensing at much lower intensity levels, which is important e.g. for applications in astronomy.
+Partially, wave sensors with an Hartman mask (with holes) are still used; these are called <em>Hartmann wavefront sensors</em>.</p>
+<p>The operation principle of such a wavefront sensor is fairly simple.
+Each lenslet of the device focuses incoming radiation to a spot on the sensor (see Figure&nbsp;1), and the position of that spot indicates the orientation of the <a href="wavefronts.html" title="surfaces connecting points with the same phase of a wave">wavefronts</a>, averaged over the entrance area of the lenslet.</p>
+<figure>
+<img src="img/shack_hartmann_sensor.png" alt="Shack-Hartmann wavefront sensor">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Optical setup of a Shack&ndash;Hartmann wavefront sensor, showing one row of microlenses (lenslets) above the image sensor.
+</figcaption>
+</figure>
+<p>Some kind of computer is used to calculate the positions of the spots behind all lenslets (lens segments) based on the acquired image and estimates the wavefront distortions over the full entrance area of the sensor based on those data.</p>
+<figure>
+<img src="img/sh_pattern.png" alt="spot pattern of Shack-Hartmann wavefront sensor">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Simulated example for a spot pattern obtained in a situation where optical aberrations occur mainly on the upper right side of the image plane. The intersections of the horizontal and vertical gray lines indicate the point locations without any aberrations.
+</figcaption>
+</figure>
+</div>
+<h2 class="togglediv">Further Details</h2>
+<div>
+<h3 class="togglediv">Calculation of Spot Positions</h3>
+<div>
+<p>Due to the finite spatial resolution of the image sensor, one should not simply take the spot position to be corresponding to the pixel receiving the highest <a href="optical_intensity.html" title="optical power per unit area">optical intensity</a>.
+A better method would be to take the &ldquo;center of gravity&rdquo;, where the coordinates of that center are calculated as first moments of the intensity distribution.
+That way, the position resolution can be far better than the pixel spacing.
+More refined computational algorithms, which better suppress noise influences, can provide even more accurate data.
+Particularly in difficult measurement situations, for example with very large phase excursions or significant noise influences, the quality of the used numerical algorithm can be crucial.
+One may also try to eliminate or at least reduce any cross-talk, i.e., the influence of light from neighbored lenses.</p>
+<p>The operation principle can also be explained with <a href="fourier_optics.html" title="the description of light propagation based on transverse spatial Fourier transforms">Fourier optics</a>: each lens produces (in a somewhat simplified picture) an intensity profile in the focal plane which is related to the spatial Fourier transform of the complex amplitude distribution of the incident radiation.</p>
+<p>The incident radiation does not necessarily have to be <a href="monochromatic_light.html" title="light with a single optical frequency">monochromatic</a>, even though <a href="wavefronts.html" title="surfaces connecting points with the same phase of a wave">wavefronts</a> are strictly speaking well defined only then.
+For <a href="polychromatic_light.html" title="light with multiple optical frequencies">polychromatic light</a>, one simply obtains a kind of spectrally averaged wavefront orientation.
+In many practical cases, different spectral components will actually exhibit very similar wavefront orientations.</p>
+<p>The achieved spatial resolution is of course limited by the spacing of the lenslets, because each of one can provide only a single wavefront orientation in two dimensions.</p>
+</div>
+<h3 class="togglediv">Calculation of Wavefront Distortions</h3>
+<div>
+<p>The local wavefront orientation is simple to calculate: when the wavefronts are tilted with an angle <span class="eqn_il"><span class="greek">&theta;</span></span> against the horizontal direction, this causes a shift of the spot position by <span class="eqn_il"><i>d</i>&thinsp;tan&thinsp;<span class="greek">&theta;</span></span>, where <span class="eqn_il"><i>d</i></span> is the distance between the lenses and the sensor surface.
+So one simply has to divide the calculated spot offset by <span class="eqn_il"><i>d</i></span> to obtain the tangent of the wavefront orientation in the corresponding direction.
+The distance <span class="eqn_il"><i>d</i></span> will usually be approximately the <a href="focal_length.html" title="a measure of how strongly an optical system focuses or defocuses light">focal length</a> of the lenses, but it does not strictly have to coincide with that.
+It may even be advantageous to make the spacing slightly larger or smaller, e.g. if otherwise the spot size on the sensor would be below the pixel spacing, which would make it more difficult to accurately determine the positions.</p>
+<p>From the obtained orientations (spatial derivatives of the optical phase), which are defined on a rectangular grid, one may reconstruct the corresponding wavefront field by a kind of integration.
+Optimized algorithms can be used for minimum sensitivity to measurement noise.</p>
+</div>
+<h3 class="togglediv">Further Calculations</h3>
+<div>
+<p>The overall intensities in the spot pattern also provide information on the <a href="optical_intensity.html" title="optical power per unit area">optical intensity</a> profile of the incident light.
+That together with the wavefront orientations can be used to compute the whole complex amplitude profile.
+Further, from that one can calculate the <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a> of a <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a>, e.g. specified with the <a href="m2_factor.html" title="a parameter for quantifying the beam quality of laser beams"><i>M</i><sup>2</sup> factor</a>, or the Strehl ratio.
+Note that it is sufficient to measure the amplitude profile in one plane &ndash; in the beam focus or outside.</p>
+<p>Another possibility is to decompose measured <a href="optical_aberrations.html" title="degradations of optical images caused in imaging instruments">optical aberrations</a> according to Zernike polynomials, i.e., to calculate the Zernike coefficients, possibly in real time.</p>
+</div>
+<h3 class="togglediv">Considerations on Focal Length and Pixel Spacing</h3>
+<div>
+<p>A long focal length of the lenses is in principle beneficial for achieving a high resolution for the wavefront orientation.
+However, it also limits the acceptable angular range for the input light, since the spot offsets may then become too large, leading to cross-talk with neighbored sensor segments.
+Therefore, it may be better to use a smaller focal length and improve the resolution by using a sensor with smaller pixel spacing.</p>
+</div>
+<h3 class="togglediv">Possible Artifacts</h3>
+<div>
+<p>It has already been mentioned that a cross-talk between neighbored lens elements can occur for too large incidence angles.
+However, there may also be problems with light <a href="scattering.html" title="processes where light is sent in other directions, usually but not always in random directions">scattered</a> e.g. at the edges of the lenslets, or with parasitic reflections.
+High quality measurement results thus require a good optical quality of the microlens array; optimized data processing with suitable software algorithms can also help substantially.</p>
+</div>
+<h3 class="togglediv">Problems with Wavefront Steps</h3>
+<div>
+<p>A limitation of Shack&ndash;Hartmann sensors is that sudden changes of wavefront orientation (wavefront steps) cannot be detected.
+In the simplest case, one would have to plane wavefronts everywhere, but a step just at the boundary between sensor segments; such a step would have no influence on the observed spot pattern and could therefore not be detected.
+A step going through the area of a lens segment can have more complicated effects.</p>
+</div>
+<h3 class="togglediv">Spectral Response</h3>
+<div>
+<p>In many cases, the image sensor is a silicon-based CCD or CMOS chip, which has a substantial <a href="responsivity.html" title="photocurrent per unit optical power incident on a photodetector">responsivity</a> for visible and near-<a href="infrared_light.html" title="invisible light with wavelengths roughly between 750&thinsp;&thinsp;nm and 1&thinsp;&thinsp;mm">infrared</a> light.
+(Such sensor chips are very common for use in monochrome <a href="cameras.html" title="optical instruments for recording still or moving images">cameras</a>.)
+For laser light in the spectral region between 1&nbsp;&mu;m and 1.1&nbsp;&mu;m (e.g. Nd:YAG at the common 1064&nbsp;nm <a href="laser_lines.html" title="narrow spectral lines obtained from lasers">laser line</a>), the responsivity of a silicon detector is already substantially reduced, but usually there is no lack of laser power for obtaining sufficiently strong signals.
+On the other hand, the relatively higher sensitivity for ambient light can be detrimental, or require one to suppress that more strictly.</p>
+<p>Note that the performance of <a href="anti_reflection_coatings.html" title="optical thin-film coatings for reducing reflections from surfaces">anti-reflection coatings</a> on the microlens array may also limit the usable spectral range.
+Most devices are made with broadband coatings, so that they are useful in a substantial wavelength range.</p>
+<p>More special kinds of image sensors have to be used for other spectral regions, for example for the mid <a href="infrared_light.html" title="invisible light with wavelengths roughly between 750&thinsp;&thinsp;nm and 1&thinsp;&thinsp;mm">infrared</a>.</p>
+<p>Lens arrays are also difficult to realize for extreme spectral regions, for example for the extreme <a href="ultraviolet_light.html" title="invisible light with wavelengths shorter than &asymp;&thinsp;400&thinsp;&thinsp;nm">ultraviolet</a>.
+In such cases, one may have to go back to the original Hartman wavefront sensor, using an array of pinholes (a Hartmann plate) instead of the lens array.</p>
+</div>
+</div>
+<h2 class="togglediv">Specifications</h2>
+<div>
+<p>The most important specifications of wavefront sensors refer to the following aspects:</p>
+<ul>
+<li>Measurement area (aperture): this is typically a rectangular area, of which the width and height are specified.
+Typically, those are of the order of 5&nbsp;mm to 20&nbsp;mm, but much larger sensors are made e.g. for astronomical applications.</li>
+<li>Spatial resolution: this is determined by the pitch of the lenslets (not by the pixel pitch of the sensor).
+Typically, this is a few hundred micrometers.
+Therefore, it will usually be necessary to use some kind of <a href="beam_expanders.html" title="optical devices for modifying the beam radius of a collimated beam">beam expander</a> for a typical <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a>.
+One may only have e.g. 80 &times; 50 detector segments, even if the image sensor has more than 1500 &times; 1000 pixels.
+Higher numbers of detector segments are required for measuring higher-order Zernike coefficients.</li>
+<li>Angular range: this is essentially limited by the lenslet pitch divided by the focal length of the array.</li>
+<li>Dynamic range concerning the <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">optical phase</a>: this can be far larger than <span class="eqn_il">2<span class="greek">&pi;</span></span>, and much larger than with many <a href="interferometers.html" title="optical devices utilizing the phenomenon of interference">interferometers</a>.
+Note that the instrument does not measure absolute phase values, but derivatives of the phase with respect to transverse coordinates.
+By integration, one can obtain rather large phase excursions, as long as those are not too rapid.</li>
+<li>Dynamic range concerning the optical input power: note that a sensor should never be saturated, but also not be operated with too low optical input powers.
+(Ideally, the instrument displays during operation whether the peak intensities are indisputable range.)
+In practice, one may have to use a <a href="variable_optical_attenuators.html" title="optical attenuators with a variable degree of attenuation">variable optical attenuator</a> for adjusting the optical input power &ndash; but of course without introducing substantial additional wavefront distortions.
+Influences of ambient light can further reduce the effectively available dynamic range.</li>
+<li>The wavefront accuracy is often specified as a fraction of the optical <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>.
+It may be <span class="eqn_il"><span class="greek">&lambda;</span></span>/10 for simple devices or of the order of <span class="eqn_il"><span class="greek">&lambda;</span></span>/100 for particularly precise sensors.
+Note that the wavefront accuracy may not be as high as the wavefront sensitivity: one may be able to detect small wavefront changes without being able to accurately quantify the values.
+Also, the highest measurement accuracy may be achieved only with some averaging, which can reduce the achieved measurement speed in terms of measurements per second or (for rolling averages) just making the response to wavefront changes slower.</li>
+<li>The measurement speed is typically specified as the number of measurements per second; it is also called a frame rate and given with units of frames per second (fps).
+Note however, that the achieved frame rate may be significantly lower than the maximum frame rate of the used image sensor, because the computations may take some time.
+Fast wavefront sensors can provide thousands of wavefront shapes per second.
+Large measurement areas typically come together with lower frame rates.</li>
+</ul>
+<p>Further practical aspects of interest may be the geometrical dimensions of the measurement head, mounting options, the device used for data processing (e.g. internal electronics or a PC software), the flexibility of the used software, the electronic and/or software interfaces, and the requirements concerning calibration procedures.</p>
+<p>Some devices allow one to exchange the microlens array, so that one can do measurements with different lenslet pitches.
+For some measurements, one may e.g. prefer an array with a low pitch for high spatial resolution, even if that reduces the angular range and possibly the obtained wavefront accuracy.</p>
+</div>
+<h2 class="togglediv">Applications of Shack&ndash;Hartmann Wavefront Sensors</h2>
+<div>
+<h3 class="togglediv">Astronomical Telescopes</h3>
+<div>
+<p>Shack&ndash;Hartmann wavefront sensors are frequently used in the context of adaptive optics, in particular for astronomical <a href="telescopes.html" title="optical instruments for viewing distant objects, or sometimes more generally afocal systems">telescopes</a>.
+They are needed to measure the wavefront orientation e.g. of light from a distant star or a <a href="laser_guide_stars.html" title="small bright spots in the sky, generated with laser beams for use in astronomy with adaptive optics imaging">laser guide star</a>; the results are utilized for correcting the wavefront orientation with a <a href="deformable_mirrors.html" title="mirrors which can be deformed in a controlled manner, e.g. for wavefront correction in adaptive optics">deformable mirror</a>.</p>
+</div>
+<h3 class="togglediv">Characterization of Optics</h3>
+<div>
+<p>As an example, one may characterize the <a href="optical_aberrations.html" title="degradations of optical images caused in imaging instruments">optical aberrations</a> of <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lenses</a> or lens systems (<a href="objectives.html" title="optical elements for collecting light from inspected objects, or for sending light to objects">objectives</a>) in transmission.
+A test laser beam is sent through the lens under test under suitable conditions (e.g. with an incident <a href="collimated_beams.html" title="laser beams with weak divergence">collimated beam</a> or a strongly <a href="beam_divergence.html" title="a measure for how fast a laser beam expands far from its focus">divergent</a> beam), and the transmitted beam is sent to the wavefront sensor after being conveniently transformed with a few additional optical elements, such that approximately plane wavefronts would arise (in conjunction with a suitable <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a>) for a tested lens without aberrations.
+That way, one avoids excessive phase excursions at the sensor, which would be difficult to measure.</p>
+<p>Other setups work in reflection.
+For example, one sends a laser beam with approximately flat wavefronts to and approximately flat tested <a href="mirrors.html" title="devices which reflect light">mirror</a> surface and analyzes the wavefronts of the reflected light.
+One may also test a lens, placed on a flat mirror, and use an additional high quality lens which provides approximately flat wavefronts before going to the wavefront sensor.</p>
+<p>There are wavefront measurement systems which besides the wavefront sensor contain a light source (often a visible or near-infrared <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a>), various objects such as <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lenses</a> and <a href="beam_splitters.html" title="devices for splitting a laser beam into two or more beams">beam splitters</a>, a flexible mount for optical components to be tested, and a computer system for processing the data and displaying the results.</p>
+</div>
+<h3 class="togglediv">Ocular Diagnostics</h3>
+<div>
+<p>Another application is in ocular diagnostics concerning <a href="optical_aberrations.html" title="degradations of optical images caused in imaging instruments">optical aberrations</a> of the eye.
+For example, one may use a near-<a href="infrared_light.html" title="invisible light with wavelengths roughly between 750&thinsp;&thinsp;nm and 1&thinsp;&thinsp;mm">infrared</a> <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a> to produce a small illuminated spot on the retina and analyze the wavefront orientation of light which goes through the eye's lens to the wavefront sensor.
+That way, one can directly measure the aberrations, e.g. to find out the amount of <a href="astigmatism.html" title="a kind of optical aberrations; alternatively, a defect of optical lenses or a property of laser beams">astigmatism</a> which needs to be corrected with prescription glasses.
+Similarly, the shape of the cornea can be measured by using light which is reflected there.</p>
+<p>One can also use such wavefront sensors for ocular imaging, where one can obtain much improved image quality and spatial resolution by correcting measured wavefront distortions with a <a href="deformable_mirrors.html" title="mirrors which can be deformed in a controlled manner, e.g. for wavefront correction in adaptive optics">deformable mirror</a> or a <a href="liquid_crystal_modulators.html" title="optical modulators which are based on liquid crystals">liquid crystal modulator</a>.
+<a href="optical_coherence_tomography.html" title="an optical imaging technique where longitudinal resolution is achieved based on interference effects with low-coherence light">Optical coherence tomography</a> can also be combined with adaptive optics for improved lateral resolution.</p>
+</div>
+<h3 class="togglediv">Laser Beam Characterization</h3>
+<div>
+<p>Wavefront sensors can also be used for the characterization of <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beams</a>.
+In contrast to devices which only measure intensity profiles, for example to quantify the <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a> with the <a href="beam_parameter_product.html" title="product of the beam radius in a focus and the far-field beam divergence">beam parameter product</a> or <a href="m2_factor.html" title="a parameter for quantifying the beam quality of laser beams"><i>M</i><sup>2</sup> factor</a>, wavefront sensors can be used for obtaining the whole <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">optical phase</a> profile.
+When there's obtains more comprehensive information, which possibly helps one to identify the cause of possible beam quality deteriorations.</p>
+</div>
+</div>
+<h2 class="togglediv">Comparison with Other Technologies</h2>
+<div>
+<p>Various types of <a href="interferometers.html" title="optical devices utilizing the phenomenon of interference">interferometers</a>, for example <a href="twyman_green_interferometers.html" title="an interferometer similar to a Michelson interferometer, but with expanded beams">Twyman&ndash;Green interferometers</a>, are also often used to measure phase aberrations.
+They can also often provide higher transverse resolutions and work in wider ranges of areas.
+However, the possible range of phase excursions can typically be substantially higher with the Shack&ndash;Hartmann sensor.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_shack_hartmann_wavefront_sensors.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 11 suppliers for Shack--Hartmann wavefront sensors.</p>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="shack_hartmann_wavefront_sensors.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="wavefronts.html" title="surfaces connecting points with the same phase of a wave">wavefronts</a>, <a href="microlenses.html" title="optical lenses of particularly small diameter, e.g. below 1 mm">microlenses</a>, <a href="microlens_arrays.html" title="one- or two-dimensional arrays of microlenses, used e.g. in Shack-Hartmann wavefront sensors">microlens arrays</a><br>and other articles in the categories <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/shack_hartmann_wavefront_sensors.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fshack_hartmann_wavefront_sensors.html&text=RP+Photonics+Encyclopedia+-+Shack-Hartmann+wavefront+sensors%2C+operation+principle%2C+distortions%2C+spot+pattern%2C+algorithm%2C+applications" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fshack_hartmann_wavefront_sensors.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fshack_hartmann_wavefront_sensors.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/shack_hartmann_wavefront_sensors.html"&gt;<br>Article on Shack&amp;ndash;Hartmann Wavefront Sensors&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/shack_hartmann_wavefront_sensors.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/shack_hartmann_wavefront_sensors.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/shack_hartmann_wavefront_sensors.html<br>article on 'Shack&amp;ndash;Hartmann Wavefront Sensors' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="./fiberpower.html?banner=RP_Fiber_Power_6"><img src="./img/fiberpower_ro3b.png" alt="relaxation oscillations" style="margin-bottom:8px"></a>
+<p>Evolution of output power and gain when an Yb-doped fiber laser is switched on. One can see the relaxation oscillations, with convergence towards the steady state. Each red or gray segment corresponds to 0.2&nbsp;&mu;s.</p>
+<p>This diagram has been made with the <a href="./fiberpower.html?banner=RP_Fiber_Power_6"><b>RP Fiber Power</b></a> software.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="TAaevDcoWj4/Ksw6VBMBNg==">shownbanner = "RP Fiber Power 6";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Latest Encyclopedia Articles</h2>
+<p>Here are the latest encyclopedia articles:</p>
+<ul>
+<li class="tight"><a href="./variable_reflectivity_mirrors.html">variable reflectivity mirrors</a></li>
+<li class="tight"><a href="./color_centers.html">color centers</a></li>
+<li class="tight"><a href="./excimer_lamps.html">excimer lamps</a></li>
+<li class="tight"><a href="./multimode_beams.html">multimode beams</a></li>
+<li class="tight"><a href="./channel_waveguides.html">channel waveguides</a></li>
+<li class="tight"><a href="./optical_crystals.html">optical crystals</a></li>
+<li class="tight"><a href="./standing_wave_resonators.html">standing-wave resonators</a></li>
+<li class="tight"><a href="./nonlinear_absorption.html">nonlinear absorption</a></li>
+<li class="tight"><a href="./passive_fibers.html">passive fibers</a></li>
+<li class="tight"><a href="./active_fibers.html">active fibers</a></li>
+<li class="tight"><a href="./oem_laser_modules.html">OEM laser modules</a></li>
+<li class="tight"><a href="./industrial_lasers.html">industrial lasers</a></li>
+<li class="tight"><a href="./scientific_lasers.html">scientific lasers</a></li>
+<li class="tight"><a href="./flint_glasses.html">flint glasses</a></li>
+<li class="tight"><a href="./crown_glasses.html">crown glasses</a></li>
+<li class="tight"><a href="./sodium_vapor_lamps.html">sodium vapor lamps</a></li>
+<li class="tight"><a href="./metal_vapor_lamps.html">metal vapor lamps</a></li>
+<li class="tight"><a href="./mercury_vapor_lamps.html">mercury vapor lamps</a></li>
+<li class="tight"><a href="./white_light.html">white light</a></li>
+<li class="tight"><a href="./cie_standard_illuminants.html">CIE standard illuminants</a></li>
+</ul>
+
+<p>The encyclopedia already contains 948 articles.</p>
+<p>See also the regularly appearing articles of the <a href="./spotlight.html?banner=new_articles">The Photonics Spotlight</a> and the <a href="./software_news.html?banner=new_articles">RP Photonics Software News</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="TAaevDcoWj4/Ksw6VBMBNg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/shack_hartmann_wavefront_sensors.html"
+    },
+    "headline": "Shack&ndash;Hartmann Wavefront Sensors",
+    "image": "https://www.rp-photonics.com/previews/shack_hartmann_wavefront_sensors.png",
+    "datePublished": "2019-08-11",
+    "dateModified": "2020-03-14",
+    "description": "Hartmann&ndash;Shack wavefront sensors can measure wavefront shapes and even whole optical amplitude distributions e.g. of laser beams or star light. They are widely used in adaptive optics and in laser beam characterization.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter S",
+      "item": "https://www.rp-photonics.com/encyclopedia_s.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Shack&ndash;Hartmann wavefront sensors",
+      "item": "https://www.rp-photonics.com/shack_hartmann_wavefront_sensors.html"
+    }]}
+}
+</script>
+</body>
+</html>

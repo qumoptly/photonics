@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-MT3u6OQaJ8K25r5PdLQ1Tg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - metal halide lamps, operation principle, high intensity discharge (HID), mercury content, startup behavior, end of life, applications, lighting, projectors</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/metal_halide_lamps.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-07-10">
+<meta name="description" content="Metal halide lamps are continuous-wave gas discharge lamps (arc lamps) containing metal halides and generating bright white or sometimes colored light. They are used for high-power lighting and projection displays, for example.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="metal halide lamps, operation principle, high intensity discharge (HID), mercury content, startup behavior, end of life, applications, lighting, projectors">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Metal Halide Lamps">
+<meta property="og:description" content="Metal halide lamps are continuous-wave gas discharge lamps (arc lamps) containing metal halides and generating bright white or sometimes colored light. They are used for high-power lighting and projection displays, for example.">
+<meta property="og:url" content="https://www.rp-photonics.com/metal_halide_lamps.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/metal_halide_lamps.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Metal halide lamps are continuous-wave gas discharge lamps (arc lamps) containing metal halides and generating bright white or sometimes colored light. They are used for high-power lighting and projection displays, for example.">
+<meta name="twitter:title" content="Metal Halide Lamps">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/metal_halide_lamps.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="MT3u6OQaJ8K25r5PdLQ1Tg==">
+page="metal_halide_lamps.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo sponsor"></a> <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="MT3u6OQaJ8K25r5PdLQ1Tg==">shownsponsors="El.En.,TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_metal_halide_lamps.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_m.html">letter M</a> &gt; <a href="metal_halide_lamps.html">metal halide lamps</a></p>
+<h1>Metal Halide Lamps</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_metal_halide_lamps.html?s=vbox">6 suppliers for metal halide lamps</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_metal_halide_lamps.html?s=vbox">List of suppliers for<br>metal halide lamps</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: gas discharge lamps containing metal halides</p>
+<p>More general terms: <a href="metal_vapor_lamps.html" title="light sources which are based on an electrical discharge in a metal vapor">metal vapor lamps</a>, <a href="gas_discharge_lamps.html" title="light sources which are based on an electrical discharge in an ionized gas or metal vapor">gas discharge lamps</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Halogen-Metalldampflampen</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#non_laser_light_sources" title="other articles on non-laser light sources">non-laser light sources</a></p>
+<p><a href="encyclopedia_cite.html?article=metal%20halide%20lamps">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Metal halide lamps are high pressure <a href="arc_lamps.html" title="gas discharge lamps based on an electrical arc, or continuously operating gas discharge lamps">arc lamps</a> (continuous-wave <a href="gas_discharge_lamps.html" title="light sources which are based on an electrical discharge in an ionized gas or metal vapor">gas discharge lamps</a>) where some metal halides are used in addition to a gas filling of typically argon or xenon.
+One may mix a broad range of metals, and the used halogens are bromine or iodine.
+They can be considered as improved types of <a href="mercury_vapor_lamps.html" title="metal vapor lamps based on light emission from mercury (Hg) atoms">mercury vapor lamps</a>.</p>
+<h2 class="togglediv">Operation Principle of Metal Halide Lamps</h2>
+<div>
+<p>The basic operation principle of a metal halide lamp is that of a <a href="gas_discharge_lamps.html" title="light sources which are based on an electrical discharge in an ionized gas or metal vapor">gas discharge lamp</a>.
+Due to an electric discharge, one generates a plasma, which emits light in the form of <a href="spontaneous_emission.html" title="a quantum effect, causing the spontaneous decay of excited states of atoms or ions">spontaneous emission</a> after excitation of atoms or ions, e.g. by electron bombardment.
+There can also be a significant amount of <a href="thermal_radiation.html" title="electromagnetic radiation which results from thermal emission">thermal radiation</a>.</p>
+<p>The plasma also contains a metal vapor, which is formed by evaporation and dissociation of the added metal halides due to the high temperature of the arc.
+The metal atoms or ions bring specific contributions to the obtained <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a> and can also substantially increase the <a href="luminous_efficacy_and_efficiency.html" title="the luminous flux of a light source divided by its the radiant power or its electrical consumption (efficacy); the ratio of reached efficacy to the theoretically possible efficacy (luminous efficiency)">luminous efficacy</a> and thus the energy efficiency of the lamp.
+Further, the used metals have an influence on the lamp impedance; alkali metals like sodium or potassium are normally used for keeping that impedance low enough.</p>
+<aside class="callout blue">The halogens are used to prevent the metals from staying in solid form, particularly on the lamp envelope.</aside>
+<p>The halogen atoms contribute little to the light emission.
+Their function is essentially to enable the complete evaporation of the metals and to keep the lamp envelope clear (somewhat similar as in a <a href="halogen_lamps.html" title="incandescent lamps with a halogen filling, allowing for higher operation temperatures">halogen lamp</a>).
+If one would only add the metals, they would get deposited on the lamp envelope and could no more be evaporated, because the temperature of the glass could not be high enough for that.
+The halogens can chemically react with the metal at lower temperatures, which the glass can withstand, and thus bring them back to work in the discharge.</p>
+<p>The plasma pressure is typically at least several atmospheres, and sometimes even several tens of atmospheres.
+That leads to a high power density, and implies that the arc can be relatively short.
+These are the characteristics of <em>high intensity discharge (HID) lamps</em>.</p>
+<p>The glass envelope needs to be operated at a sufficiently high temperature.
+To facilitate that, particularly for low-power models one often uses an inner envelope containing the gas and metal halides, which is surrounded by an outer envelope providing some amount of thermal insulation.
+The outer envelope may have additional functions, such as protecting the inner envelope, and possibly filtering out <a href="ultraviolet_light.html" title="invisible light with wavelengths shorter than &asymp;&thinsp;400&thinsp;&thinsp;nm">ultraviolet light</a> by <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorption</a>.
+For the latter purpose, the envelope glass may be doped with some UV-absorbing species.
+The inner lamp envelope is usually made of fused silica, being very resistant to high temperatures, and in some cases of transparent ceramics (typically aluminum oxide).</p>
+<aside class="callout blue">Different metals can contribute different colors.</aside>
+<p>A suitable mixture of metals can be used to obtain the desired shape of the <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a> of the emitted light.
+In many cases, one desires to have broadband <a href="white_light.html" title="light which creates a white color impression">white light</a> emission with a certain <a href="color_temperature.html" title="the temperature of a blackbody radiator which leads to a color impression of the thermal light which matches most closely the light of a light source">color temperature</a> and a high <a href="color_rendering_index.html" title="a quantity which can be used for estimating how accurately colors can be perceived when using a specific light source">color rendering index</a>; in other cases, one aims at the emission of colored light, e.g. of red, orange, green or blue light.
+For example, lithium, potassium and rubidium contribute red light, sodium orange light, thallium green light and indium blue light.</p>
+<p>A noble gas &ndash; normally argon or xenon &ndash; is particularly important in the startup phase, where the metal halides do not yet substantially contribute to the plasma pressure.</p>
+<p>Metal halide lamps can be made only as <a href="arc_lamps.html" title="gas discharge lamps based on an electrical arc, or continuously operating gas discharge lamps">arc lamps</a>, not as <a href="flash_lamps.html" title="gas discharge lamps which are used for generating intense light pulses">flash lamps</a>, because the evaporation of the metal halide takes some time.</p>
+</div>
+<h2 class="togglediv">Characteristics of the Light Output</h2>
+<div>
+<p>The light generated by a metal halide lamp generally has the following characteristics:</p>
+<ul>
+<li>It can have a high <a href="luminous_flux.html" title="a measure of the perceived power of light, e.g. from a light source">luminous flux</a>.
+For example, a 100-watt lamp may produce an output of the order of 10,000 lumen.</li>
+<li>The <a href="luminous_efficacy_and_efficiency.html" title="the luminous flux of a light source divided by its the radiant power or its electrical consumption (efficacy); the ratio of reached efficacy to the theoretically possible efficacy (luminous efficiency)">luminous efficacy</a> of white light lamps can be comparatively high &ndash; typically around 80 to 100&nbsp;lm/W, sometimes more.
+The same time, the <a href="color_rendering_index.html" title="a quantity which can be used for estimating how accurately colors can be perceived when using a specific light source">color rendering index</a> can be very high, making those lamps suitable for applications where that aspect is critical (e.g. producing videos).</li>
+<li>The light is generated in a relatively small volume, which together with the high <a href="radiant_flux.html" title="radiant energy per unit time which is emitted, transmitted, reflected or received by an object">radiant flux</a> leads to a high <a href="radiance.html" title="the optical power per unit area and solid angle">radiance</a> (e.g. compared with a long-arc lamp).
+Therefore, it can be reasonably well sent to a certain direction (e.g. in a searchlight) or focused, although by far not as well as for a <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a> source.</li>
+</ul>
+</div>
+<h2 class="togglediv">UV Emission</h2>
+<div>
+<p>A significant part of the emitted light is in the <a href="ultraviolet_light.html" title="invisible light with wavelengths shorter than &asymp;&thinsp;400&thinsp;&thinsp;nm">ultraviolet</a> region.
+That the may be harmful not only to persons, but also lead to degradation e.g. of nearby plastic materials.</p>
+<p>Where UV emission is unwanted, it can be filtered out, e.g. by using a lamp envelope made of doped UV-absorbing glass or with an additional protection glass.</p>
+</div>
+<h2 class="togglediv">Mercury Content</h2>
+<div>
+<p>Metal halide lamps often also contain a significant amount of mercury, which constitutes a health and environmental hazard.
+Ideally, a lamp will be properly disposed after end of its life, i.e., its envelope is broken in a facility where the escaping mercury is contained.
+However, some of those lamps break or explode during operation, often releasing the mercury vapor next to persons, and even if the lamp envelope remains intact, proper disposal is unfortunately not always guaranteed.</p>
+<p>Therefore, manufacturers are more and more trying to at least minimize the mercury content; government regulations also more and more enforce such developments.
+Mercury minimization or elimination is particularly important for consumer lamps (e.g. for home video beamers), where the risk of inappropriate disposal due to a lack of knowledge is higher than in commercial applications.
+Automotive xenon headlamps, which are actually also metal halide lamps, can nowadays be completely mercury-free.
+Compared with many other metal halide lamps, they use only a small amount of halides (used mainly for lowering the <a href="color_temperature.html" title="the temperature of a blackbody radiator which leads to a color impression of the thermal light which matches most closely the light of a light source">color temperature</a>) and generate more light from xenon.</p>
+<p>Of course, mercury is not the only problematic material which may be used in a metal halide lamp; for example, thallium is also quite poisonous, but at least does not have such a high vapor pressure, leading to increased inhalation.</p>
+</div>
+<h2 class="togglediv">Startup Behavior</h2>
+<div>
+<p>After switching on a metal halide lamp, it needs some warm-up time (typically few minutes) until the full <a href="luminous_flux.html" title="a measure of the perceived power of light, e.g. from a light source">luminous flux</a> and the final color temperature are achieved.
+Directly after triggering the gas discharge, most of the metal halides is not yet in the gas (or plasma) phase; they need to be evaporated and associated by the high temperature of the arc, which initially occurs mainly in the noble gas (argon or xenon).
+The mercury, having a relatively low boiling point, evaporates first, followed by the other constituents.
+The plasma pressure rises significantly during the warm-up time.
+Due to the evolving lamp pressure and chemical composition, the color tone can change substantially during the startup phase.</p>
+<p>Many such lamps need some significant cool-down time after being switched off before they can be started again.
+This is because the trigger voltage is substantially higher when the pressure in the hot lamp is high.
+That behavior can be a problem in some applications, for example for automotive headlamps, but can be avoided or mitigated with design optimizations and suitable trigger circuits.</p>
+</div>
+<h2 class="togglediv">Lamp Power Supply</h2>
+<div>
+<p>As for various other types of gas discharge lamps, for a metal halide lamps one requires a special <a href="lamp_power_supplies.html" title="power supplies for lamps">lamp power supply</a>, providing a well stabilized DC current and the required triggering features.
+Alternatively, one may apply a high-frequency AC current, often with a rectangular voltage profile to avoid any interruptions of the discharge.</p>
+<p>Modern power supplies, based on high frequency switching electronics, can provide accurate current stabilization with low noise and optimized startup operation.
+That can contribute to a long lamp lifetime.
+They can also work with minimum power losses, thus allowing for an effective high luminous efficacy.
+Further, they can be substantially more compact than old-style solutions, involving large transformers and inductors.</p>
+</div>
+<h2 class="togglediv">Lamp Lifetime; End of Life</h2>
+<div>
+<p>In some relatively rare cases, the lamp life ends with an explosion of the lamp envelope, which may become brittle due to the harsh operation conditions, so that it can no longer withstand the high internal pressure.
+In other cases, the voltage for maintaining the arc becomes too high.
+That frequently leads to a cycling behavior: the lamp would initially start, but soon stops operating when the gas pressure gets too high.
+Rather than trying to start the lamp again and again, the power supply should &ldquo;give up&rdquo; after a few attempts.</p>
+<p>As explained above, such lamps should be properly disposed, at least if they contain mercury or other poisonous metals &ndash; which should be assumed in case of doubt.
+Also, they should be handled with care, avoiding to break them, which would allow mercury to escape.</p>
+<p>Under good conditions (infrequent switching, high-quality power supply, proper mounting without much mechanical stress, etc.), some high-quality lamps can reach quite long lifetimes of the order of 10,000 hours.
+However, much shorter lifetimes of e.g. only a few hundred hours are achieved for lamps which are optimized for particularly high power densities.</p>
+</div>
+<h2 class="togglediv">Applications of Metal Halide Lamps</h2>
+<div>
+<p>Due to the like characteristics as explained above, metal halide lamps are suitable for the following types of applications:</p>
+<ul>
+<li>They are widely used for high-power lighting (illumination), e.g. in sports arenas, theaters, parking spaces and for indoor plant growth.
+Here, the high luminous efficacy and the comparatively long lifetime are important.</li>
+<li>The high brightness and high color rendering index makes these lamps also quite suitable for color-critical applications like the illumination of arts and the generation of videos.</li>
+<li>Colored versions may be used in theaters, TV shows etc.</li>
+<li>Due to the small emitting volume, these lamps are suitable for generating directed light, e.g. for searchlights and for projection displays.
+They are widely used in cinema projectors, where they are often operated with many kilowatts of electrical power, but also in small home video beamers.</li>
+<li>Some high-value cars have &ldquo;xenon lamps&rdquo;, which are actually metal halide lamps (nowadays usually mercury-free).
+Such automotive headlamps offer superior road illumination, but also unfortunately to increase glaring effects for other drivers.</li>
+</ul>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_metal_halide_lamps.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 6 suppliers for metal halide lamps.</p>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="metal_halide_lamps.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="gas_discharge_lamps.html" title="light sources which are based on an electrical discharge in an ionized gas or metal vapor">gas discharge lamps</a>, <a href="mercury_vapor_lamps.html" title="metal vapor lamps based on light emission from mercury (Hg) atoms">mercury vapor lamps</a>, <a href="arc_lamps.html" title="gas discharge lamps based on an electrical arc, or continuously operating gas discharge lamps">arc lamps</a>, <a href="metal_vapor_lamps.html" title="light sources which are based on an electrical discharge in a metal vapor">metal vapor lamps</a>, <a href="high_intensity_discharge_lamps.html" title="gas discharge lamps operating with high power density">high intensity discharge lamps</a><br>and other articles in the category <a href="categories.html#non_laser_light_sources" title="other articles on non-laser light sources">non-laser light sources</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/metal_halide_lamps.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fmetal_halide_lamps.html&text=RP+Photonics+Encyclopedia+-+metal+halide+lamps%2C+operation+principle%2C+high+intensity+discharge+%28HID%29%2C+mercury+content%2C+startup+behavior%2C+end+of+life%2C+applications%2C+lighting%2C+projectors" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fmetal_halide_lamps.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fmetal_halide_lamps.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/metal_halide_lamps.html"&gt;<br>Article on Metal Halide Lamps&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/metal_halide_lamps.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/metal_halide_lamps.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/metal_halide_lamps.html<br>article on 'Metal Halide Lamps' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="https://www.goyalab.com/" data-supplier="GoyaLab" data-location="banner" rel="nofollow" class="bg externallink"><img src="./bg/banners/goyalab.jpg" alt="GoyaLab"></a>
+</div>
+</aside>
+<script type="text/javascript" nonce="MT3u6OQaJ8K25r5PdLQ1Tg==">shownbanner = "GoyaLab";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>A Quiz Question</h2>
+<p style="margin-top:15px">taken from the <a href="./quiz.html?banner=quiz">Photonics Quiz</a>:</p><form action="/quiz.html" method="get" style="margin-bottom:12px;">
+<p><input name="n" value="17" type="hidden"></p>
+<p style="text-align:left;">Large mode area single-mode fibers usually have a rather small numerical aperture,</p>
+<p style="margin-left:50px; text-indent:-50px; text-align:left;"><input type="checkbox" name="answer_a" value="y"> (a) because this is required for achieving single-mode guidance</p>
+<p style="margin-left:50px; text-indent:-50px; text-align:left;"><input type="checkbox" name="answer_b" value="y"> (b) because this helps to limit bend losses</p>
+<p style="margin-left:50px; text-indent:-50px; text-align:left;"><input type="checkbox" name="answer_c" value="y"> (c) because this makes it possible to attenuate higher-order modes via bending</p>
+<p style="margin-left:50px; text-indent:-50px; text-align:left;"><input type="checkbox" name="answer_d" value="y"> (d) because that makes them compatible with standard single-mode fibers</p>
+<p style="margin-top:15px;"><input type="submit" value="Get your answer checked" style="padding:3px 10px; font-size:14px;"></p>
+</form>
+<p>After selecting your answer(s) and pressing this button, find the explanations on the left side.</p>
+
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="MT3u6OQaJ8K25r5PdLQ1Tg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/metal_halide_lamps.html"
+    },
+    "headline": "Metal Halide Lamps",
+    "image": "https://www.rp-photonics.com/previews/metal_halide_lamps.png",
+    "datePublished": "2019-12-16",
+    "dateModified": "2020-07-10",
+    "description": "Metal halide lamps are continuous-wave gas discharge lamps (arc lamps) containing metal halides and generating bright white or sometimes colored light. They are used for high-power lighting and projection displays, for example.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter M",
+      "item": "https://www.rp-photonics.com/encyclopedia_m.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "metal halide lamps",
+      "item": "https://www.rp-photonics.com/metal_halide_lamps.html"
+    }]}
+}
+</script>
+</body>
+</html>

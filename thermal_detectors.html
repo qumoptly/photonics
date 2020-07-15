@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-pG9ylQ3b6PenpNdAVB3+Iw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - thermal detectors, operation principle, sensitivity, bandwidth, noise, bolometers, thermocouples, calorimeters, pyroelectric</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/thermal_detectors.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-04-14">
+<meta name="description" content="Thermal detectors are light detectors which are based on measuring light-induced temperature rises. While they are not particularly fast, they are suitable for wide wavelength regions and particularly often used in the long-wavelength infrared spectral region. Different types of thermal detectors are discussed, in particular bolometer-based and pyroelectric detectors.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="thermal detectors, operation principle, sensitivity, bandwidth, noise, bolometers, thermocouples, calorimeters, pyroelectric">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Thermal Detectors">
+<meta property="og:description" content="Thermal detectors are light detectors which are based on measuring light-induced temperature rises. While they are not particularly fast, they are suitable for wide wavelength regions and particularly often used in the long-wavelength infrared spectral region. Different types of thermal detectors are discussed, in particular bolometer-based and pyroelectric detectors.">
+<meta property="og:url" content="https://www.rp-photonics.com/thermal_detectors.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/thermal_detectors.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Thermal detectors are light detectors which are based on measuring light-induced temperature rises. While they are not particularly fast, they are suitable for wide wavelength regions and particularly often used in the long-wavelength infrared spectral region. Different types of thermal detectors are discussed, in particular bolometer-based and pyroelectric detectors.">
+<meta name="twitter:title" content="Thermal Detectors">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/thermal_detectors.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="pG9ylQ3b6PenpNdAVB3+Iw==">
+page="thermal_detectors.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="pG9ylQ3b6PenpNdAVB3+Iw==">shownsponsors="eagleyard Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_t.html">letter T</a> &gt; <a href="thermal_detectors.html">thermal detectors</a></p>
+<h1>Thermal Detectors</h1>
+<header style="margin-right:0;">
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: light detectors which are based on measuring light-induced temperature rises</p>
+<p>Opposite term: <a href="photodetectors.html" title="devices used for the detection of light">photodetectors</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">thermische Detektoren</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a></p>
+<p><a href="encyclopedia_cite.html?article=thermal%20detectors">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>There are various kinds of light detectors, which are based on measuring temperature rises which result from the <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorption</a> of light.
+This is in contrast to <a href="photodetectors.html" title="devices used for the detection of light"><em>photodetectors</em></a>, which are affected by <a href="photons.html" title="quanta of light energy">photons</a> in other ways &ndash; not through the generation of heat, but usually through light-induced transitions of electrical carriers.</p>
+<p>Thermal detectors are frequently used in spectral regions which are difficult to access with photon detectors &ndash; in particular, for long-wavelength <a href="infrared_light.html" title="invisible light with wavelengths roughly between 750&thinsp;&thinsp;nm and 1&thinsp;&thinsp;mm">infrared light</a>.
+Also, they are used where their low speed, moderate sensitivity and low dynamic range is no serious problem &ndash; for example, as optical <a href="optical_power_meters.html" title="instruments for optical power measurements, based e.g. on heating of an absorber structure or a photodiode">power meters</a> for <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">lasers</a>.</p>
+<aside class="callout blue">The broad <a href="spectral_response_of_a_photodetector.html" title="the range of optical wavelengths for which a photodetector is sensitive">spectral response</a> is the most striking quality of thermal detectors.</aside>
+<p>The most substantial advantage of thermal detectors over photodetectors is that they can be sensitive in very wide spectral regions, and exhibit a nearly constant <a href="responsivity.html" title="photocurrent per unit optical power incident on a photodetector">responsivity</a> over wide wavelength regions.
+This is because it is not overly difficult to make <a href="black_coatings.html" title="coatings with strong light absorption">black coatings</a> with very broadband absorption.</p>
+<p>Many thermal detectors can be operated at or near room temperature &ndash; sometimes with temperature stabilization of the sensor.
+For particularly sensitive thermal detection, however, operation at low temperatures is often required &ndash; with thermoelectric cooling (Peltier cooling) for temperature reductions of some tens of kelvins, Stirling coolers for substantially lower temperatures of e.g. 100&nbsp;K, and in some cases even liquid helium cooling for operation at 4&nbsp;K.</p>
+<p>Many thermal detectors measure the total <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a> of an input beam (e.g. in a laser <a href="optical_power_meters.html" title="instruments for optical power measurements, based e.g. on heating of an absorber structure or a photodiode">power meter</a>), but there are also <a href="image_sensors.html" title="optoelectronic sensors which can be used for imaging">image sensors</a> based on thermal detectors, e.g. microbolometers.</p>
+<h2 class="togglediv">Basic Operation Principle</h2>
+<div>
+<p>Generally, a thermal detector contains the following:</p>
+<ul>
+<li>There is a light <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorber</a>, which is thermally more or less insulated against the environment, so that its temperature can rise when incident light is absorbed.</li>
+<li>There is also some temperature sensor, which either measures the absolute temperature of the absorber or the temperature difference between absorber and heat sink.
+In the former case, one either needs to keep the heat sink temperature constant or to measure it separately.</li>
+</ul>
+<p>In addition, there are some parts for mounting the sensor, possibly also a cooling system and integrated electronics for signal amplification and digitization.</p>
+</div>
+<h2 class="togglediv">Absorbers</h2>
+<div>
+<p>The <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorption</a> of light should be strong in order to obtain the maximum temperature rise for highest <a href="sensitivity.html" title="(different meanings, depending on the context)">sensitivity</a> of the detector.
+One often uses relatively thin surface absorbers, having a rather small <a href="absorption_length.html" title="the length of which absorption reduces the optical intensity to 1/e of its initial value">absorption length</a> for the light.
+That minimizes the heat capacitance and thus optimizes the speed of response.
+However, the most robust absorbers are <em>volume absorbers</em> with a longer absorption length; these can tolerate high optical intensities, e.g. for operation with energetic laser pulses.</p>
+<p>For operation at high input power levels (for example, laser <a href="optical_power_meters.html" title="instruments for optical power measurements, based e.g. on heating of an absorber structure or a photodiode">power meters</a> for <a href="high_power_lasers.html" title="lasers emitting very high optical powers">high-power lasers</a>), the heat sink, into which much of the generated heat flows, needs to be actively cooled with a fan or even with flowing water.</p>
+<p>When an absorber is operated with too high optical power over sufficiently long time, or with too strong focusing of a <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a>, it may be damaged.
+However, many thermal detectors can often tolerate a substantial overload e.g. during a couple of seconds.</p>
+</div>
+<h2 class="togglediv">Trade-off Between Sensitivity and Bandwidth</h2>
+<div>
+<p>Thermal detectors are subject to a fundamental trade-off between sensitivity and measurement <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a> (speed).
+For a high sensitivity, one should maximize the thermal resistance between the absorber and the heat sink, so that one obtains larger temperature rises.
+That, however, increases the thermal time constant and thus reduces the possible measurement bandwidth.
+In a simple thermal model, the thermal time constant is the thermal capacitance (in units of J/K) divided by the thermal conductivity (in W/K).</p>
+<p>For a shorter thermal time constant, one can also try to reduce the thermal capacity.
+For that, the area and thickness of the absorber are made as small as possible; that may lead to a reduced active area, but also to an enhanced sensitivity.</p>
+<p>Note that the temperature sensor also contributes to the thermal capacity, and in some cases it also sets a limit to the achievable thermal impedance.</p>
+<p>While the thermal conductance could in principle be strongly reduced, e.g. by suspension of the sensor element with very thin wires, there is also an exchange of energy of the sensor area with the environment (the heat sink and even the outside world) through <a href="thermal_radiation.html" title="electromagnetic radiation which results from thermal emission">thermal radiation</a>.
+That exchange is unavoidable, since the <a href="emissivity.html" title="a measure for how strongly an object emits and absorbs thermal radiation">emissivity</a> of the absorber material is determined by its absorption, which must be substantial for a light sensor.</p>
+</div>
+<h2 class="togglediv">Temperature Fluctuations</h2>
+<div>
+<p>A fundamental limitation to the <a href="noise_equivalent_power.html" title="the input power to a detector which produces the same signal output power as the internal noise of the device">noise-equivalent power</a> of a thermal detector comes from temperature fluctuations.
+With a simple thermal model, one can show that the standard deviation of the temperature of the absorber is proportional to the temperature and inversely proportional to the square root of the thermal capacitance.</p>
+<p>Temperature fluctuations are most relevant for miniaturized absorbers, as used in microbolometers, and for operation at high temperatures.
+However, detectors may in practice still be limited by other noise sources, e.g. thermal electrical noise in the temperature sensor.</p>
+</div>
+<h2 class="togglediv">Influence of External Heat Sources</h2>
+<div>
+<p>As thermal detectors need to sensitively detect small temperature increases, they are also more or less sensitive to heat from external sources.
+For example, a thermal <a href="optical_power_meters.html" title="instruments for optical power measurements, based e.g. on heating of an absorber structure or a photodiode">power meter</a> often shows some signal without any incident light when one touches its housing with fingers.
+Note that one cannot thermally insulate such a detector from the environment, since some substantial thermal power may have to be released to the environment during operation.
+Therefore, one should avoid external influences like touching during operation, laser beams etc.</p>
+</div>
+<h2 class="togglediv">Types of Thermal Detectors</h2>
+<div>
+<h3 class="togglediv">Detectors with Bolometers</h3>
+<div>
+<p>A bolometer is based on measuring a temperature-dependent electrical resistance.
+It can essentially consist of an absorber layer and a resistive thermometer layer, plus some additional means for suspending the device with proper thermal insulation and providing two electrical contacts.
+For example, thermal insulation may be provided by an air gap in conjunction with a reflective layer, which suppresses energy exchange via thermal radiation.
+The sensor can be suspended with its electrical wires.</p>
+<p>Deviating from that operation principle, there are also <em>antenna-coupled microbolometers</em>, where incident infrared radiation is received by a small antenna, and the generated electrical power is dissipated in an impedance-matched resistive thermometer layer.</p>
+<p>An important figure of merit for the thermometer layer material is the <em>temperature coefficient of resistance</em> (TCR) <span class="eqn_il"><span class="greek">&alpha;</span></span>, which is defined as the temperature derivative of the resistance, divided by the resistance; the units are K<sup>&minus;1</sup>.</p>
+<p>For a high sensitivity of the measurements, one of course prefers materials with a high temperature coefficient of the resistance.
+Some frequently used bolometer sensor types are the following:</p>
+<aside class="callout blue">Semiconductor-based bolometers are most common.</aside>
+<ul>
+<li>There are thin films of semiconductor materials such as vanadium oxide (VOX), gallium- and indium-doped germanium and amorphous silicon (a-Si).
+Also, there are sintered powders of metal oxides, acting as semiconductor resistors.
+The TCR of such materials is negative, and its magnitude typically scales inversely to the square of the absolute temperature.</li>
+<li>At very low temperatures, one also sometimes uses resistive metal wires.</li>
+</ul>
+<aside class="callout blue">Superconducting bolometer detectors can be highly sensitive.</aside>
+<ul>
+<li>There are bolometers based on a superconducting material, which is operated close to its transition temperature; that results in a very high sensitivity, but also requires very precise temperature stabilization.
+Superconducting bolometers are not common, but only used for special applications, for example in fundamental physics experiments.</li>
+<li>Carbon resistors have also been used for a while, but have largely been replaced with germanium sensors.</li>
+</ul>
+<p>Temperature-dependent resistors are generally called <em>thermistors</em>.
+Semiconductor resistors are negative temperature coefficient thermistors (NTCs), for example, because their resistance decreases with increasing temperature.</p>
+<p>The <em>noise-equivalent temperature difference</em> (NETD) does not only depend on the temperature coefficient of resistance, but also on thermal noise &ndash; the strength of which essentially depends on the temperature.
+The highest detector sensitivities, or quantitatively the lowest noise-equivalent temperature differences, are clearly obtained for low-temperature operation.</p>
+<p>Bolometers are used in different types of infrared detectors.
+There are laboratory instruments, which can reach a very high sensitivity, typically with operation at very low temperatures.
+Also, there are <a href="image_sensors.html" title="optoelectronic sensors which can be used for imaging">image sensors</a> based on microbolometers (one for each pixel), which are used e.g. in <a href="thermal_imaging.html" title="imaging based on thermal radiation">thermal imaging</a> cameras.
+They are often operated at or near room temperature.</p>
+</div>
+<h3 class="togglediv">Detectors with Thermocouples and Thermopiles</h3>
+<div>
+<p>A thermocouple is essentially obtained by connecting a metallic wire on both sides with metallic wires consisting of a different material.
+If a temperature difference occurs between the two wire connections, a thermoelectric voltage occurs, which is approximately proportional to the temperature difference (<em>Seebeck effect</em>).
+That voltage can be used in a thermal detector, if such a thermocouple is mounted between the absorber and the heat sink.</p>
+<aside class="callout blue">Thermopiles offer increased voltage signals, for example in laser power meters.</aside>
+<p>The thermoelectric voltage from a thermocouple is rather small, typically in the low millivolt region.
+Therefore, one often uses thermopiles, consisting of multiple thermocouples connected in series.
+They all have one junction on the side of the absorber and the other one on the side of the heat sink.
+A laser power sensor can have thermocouples distributed over a larger area &ndash; in an axial sensor design, in a plate between the absorber layer and the heat sink.
+It is generally no problem if the heat generation is not uniform, e.g. due to absorption of a laser beam with limited diameter, since the overall thermoelectric voltage is not sensitive to that.
+It is only that the absorber may be damaged for too high local intensities.</p>
+<p>There are also radial thermopile sensors, where the thermocouples form a ring around the illuminated absorber area.
+Such sensors are substantially slower than axial sensors, however, essentially because the heat has to travel over a longer distance.</p>
+<p>Such thermopile laser sensors are used in many laser <a href="optical_power_meters.html" title="instruments for optical power measurements, based e.g. on heating of an absorber structure or a photodiode">power meters</a>.</p>
+<aside class="callout blue">Thermocouples can be integrated into image sensors.</aside>
+<p>Using thermopiles is less practical for imaging detectors, which need to be made in a simpler way.
+For example, one may use many thermocouples, one for each pixel, placed between an absorber layer and a silicon-based readout chip, which can directly amplify the small thermoelectric voltages.</p>
+<p>For measuring high <a href="pulse_energy.html" title="energy of an optical pulse">pulse energies</a>, there are thermal detectors in the form of <em>laser calorimeters</em>.
+Here, a larger volume of absorber material is heated by a laser pulse, and the resulting temperature increases again measured with thermopiles.
+The thermal time constants of calorimeters are substantial, but such energetic laser pulses are anyway normally not available with substantial repetition rates.</p>
+</div>
+<h3 class="togglediv">Pyroelectric Detectors</h3>
+<div>
+<p>Pyroelectric detectors are based on the pyroelectric effect in ferroelectric crystals.
+They essentially react to temperature changes and cannot produce signals for constant optical powers.
+Therefore, they are mostly used for measuring <a href="pulse_energy.html" title="energy of an optical pulse">pulse energies</a> (&rarr;&nbsp;<a href="optical_energy_meters.html" title="instruments for measuring optical pulse energies">optical energy meters</a>).
+However, there are also other applications, for example in motion detectors, where changes of infrared radiation are detected on much longer time scales of milliseconds to seconds.</p>
+<p>For more details, see the article on <a href="pyroelectric_detectors.html" title="light detectors based on the pyroelectric effect">pyroelectric detectors</a>.</p>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div class="comment">
+<p class="comment_details">2020-04-12</p>
+<p>What are the pros and cons of thermopiles and pyroelectric sensors compared to each other?</p>
+<p style="font-weight:bold">Answer from the <a href="paschotta.html" style="font-weight:bold">author</a>:</p>
+<p>These are hardly competing with each other.
+While thermopiles are widely used for measuring the power of continuous-wave beams, or the average powers of fast pulse trains, pyroelectric sensors are used for measuring pulse energies.</p>
+</div>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="thermal_detectors.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="pyroelectric_detectors.html" title="light detectors based on the pyroelectric effect">pyroelectric detectors</a>, <a href="infrared_detectors.html" title="detectors for infrared light">infrared detectors</a>, <a href="optical_energy_meters.html" title="instruments for measuring optical pulse energies">optical energy meters</a>, <a href="thermal_imaging.html" title="imaging based on thermal radiation">thermal imaging</a><br>and other articles in the categories <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/thermal_detectors.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fthermal_detectors.html&text=RP+Photonics+Encyclopedia+-+thermal+detectors%2C+operation+principle%2C+sensitivity%2C+bandwidth%2C+noise%2C+bolometers%2C+thermocouples%2C+calorimeters%2C+pyroelectric" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fthermal_detectors.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fthermal_detectors.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/thermal_detectors.html"&gt;<br>Article on Thermal Detectors&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/thermal_detectors.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/thermal_detectors.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/thermal_detectors.html<br>article on 'Thermal Detectors' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Fiber Optics Software</h2>
+<a href="./rp_fiber_calculator.html?banner=RP_Fiber_Calculator" style="float:right; margin-left:3px"><img src="./img/fiberpower_logo.png" alt="RP Fiber Calculator software"></a>
+<p><a href="./rp_fiber_calculator.html?banner=RP_Fiber_Calculator">RP Fiber Calculator</a> &ndash; a convenient tool for calculations on optical fibers:</p>
+<ul>
+<li>Define <a href="./rp_fiber_calculator_docu.html?banner=RP_Fiber_Calculator">index or doping profiles</a> with the graphical user interface.</li>
+<li>Calculate the <a href="./rp_fiber_calculator_gm.html?banner=RP_Fiber_Calculator">guided modes</a> and all their properties.</li>
+</ul>
+<p style="text-align:center;"><a href="./rp_fiber_calculator_gm.html?banner=RP_Fiber_Calculator"><img src="./img/mode_solver.png" alt="mode profiles"></a></p>
+<ul>
+<li>Calculate how much power of a <a href="./rp_fiber_calculator_la.html?banner=RP_Fiber_Calculator">laser beam is launched</a> into the modes.</li>
+<li>Simulate <a href="./rp_fiber_calculator_pr.html?banner=RP_Fiber_Calculator">light propagation</a> within the fiber and <a href="./rp_fiber_calculator_co.html?banner=RP_Fiber_Calculator">coupling of light from one fiber to another</a>.</li>
+</ul>
+<a href="./rp_fiber_calculator.html?banner=RP_Fiber_Calculator"><img src="./img/rp_fiber_calculator_screenshot_small.png" alt="screen shot"></a>
+<p>The basic version of this software is offered <a href="./rp_fiber_calculator_download.html?banner=RP_Fiber_Calculator">for free</a>!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="pG9ylQ3b6PenpNdAVB3+Iw==">shownbanner = "RP Fiber Calculator";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Numerical Modeling</h2>
+<p>Developing devices or systems in photonics requires a <b>comprehensive quantitative understanding</b> &ndash; otherwise, it becomes inefficient, waisting time and money.</p>
+<p><a href="./laser_modeling.html?banner=numerical_modeling">Numerical modeling</a> is often the most efficient way towards results:</p>
+<ul>
+<li>understand <em>quantitatively</em> what is going on</li>
+<li>check the influence of design changes or possible detrimental effects</li>
+<li>understand strange experimental observations</li>
+<li>find optimized designs more reliably and faster</li>
+</ul>
+<p style="text-align:center; margin:10px 0;"><a href="./laser_modeling.html?banner=numerical_modeling"><img src="./img/modeling.png" width="234" height="91" alt="laser modeling"></a></p>
+<h3>How to Get Your Modeling Done?</h3>
+<p>We offer both <a href="./consulting.html?banner=numerical_modeling">technical consultancy</a> and powerful <a href="./software.html?banner=numerical_modeling">simulation software</a>.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="pG9ylQ3b6PenpNdAVB3+Iw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/thermal_detectors.html"
+    },
+    "headline": "Thermal Detectors",
+    "image": "https://www.rp-photonics.com/previews/thermal_detectors.png",
+    "datePublished": "2019-05-25",
+    "dateModified": "2020-04-14",
+    "description": "Thermal detectors are light detectors which are based on measuring light-induced temperature rises. While they are not particularly fast, they are suitable for wide wavelength regions and particularly often used in the long-wavelength infrared spectral region. Different types of thermal detectors are discussed, in particular bolometer-based and pyroelectric detectors.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter T",
+      "item": "https://www.rp-photonics.com/encyclopedia_t.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "thermal detectors",
+      "item": "https://www.rp-photonics.com/thermal_detectors.html"
+    }]}
+}
+</script>
+</body>
+</html>

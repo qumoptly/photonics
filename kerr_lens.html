@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-41+MvvcnCT6YvVsXU3jQng=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Kerr lens, self-focusing, defocusing, mode locking</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/kerr_lens.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-07-01">
+<meta name="description" content="A Kerr lens is a lensing effect arising from the Kerr nonlinearity. It is utilized in certain mode-locked lasers, for example.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="Kerr lens, self-focusing, defocusing, mode locking">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kerr Lens">
+<meta property="og:description" content="A Kerr lens is a lensing effect arising from the Kerr nonlinearity. It is utilized in certain mode-locked lasers, for example.">
+<meta property="og:url" content="https://www.rp-photonics.com/kerr_lens.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/kerr_lens.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="A Kerr lens is a lensing effect arising from the Kerr nonlinearity. It is utilized in certain mode-locked lasers, for example.">
+<meta name="twitter:title" content="Kerr Lens">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/kerr_lens.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="41+MvvcnCT6YvVsXU3jQng==">
+page="kerr_lens.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo sponsor"></a> <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="41+MvvcnCT6YvVsXU3jQng==">shownsponsors="Optikexpertisen,TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_k.html">letter K</a> &gt; <a href="kerr_lens.html">Kerr lens</a></p>
+<h1>Kerr Lens</h1>
+<header style="margin-right:0;">
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a lensing effect arising from the Kerr nonlinearity</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Kerr-Linse</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#nonlinear_optics" title="other articles on nonlinear optics">nonlinear optics</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<p><a href="encyclopedia_cite.html?article=Kerr%20lens">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>When a short optical pulse propagates through a nonlinear medium, the <a href="kerr_effect.html" title="a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization">Kerr effect</a> leads to a <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">phase</a> delay which is largest on the <a href="laser_beams.html" title="light beams propagating dominantly in one direction">beam</a> axis (where the <a href="optical_intensity.html" title="optical power per unit area">optical intensity</a> is highest) and smaller outside the axis.
+This is similar to the action of a <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lens</a>: the <a href="wavefronts.html" title="surfaces connecting points with the same phase of a wave">wavefronts</a> are deformed, so that the pulse is focused (assuming a positive <a href="nonlinear_index.html" title="a parameter for quantifying the Kerr nonlinearity of a medium">nonlinear index</a> <span class="eqn_il"><i>n</i><sub>2</sub></span>).
+This effect is called <a href="self_focusing.html" title="focusing of a beam in a transparent medium, caused by the beam itself through a nonlinear process in the medium"><em>self-focusing</em></a> and has important implications for <a href="passive_mode_locking.html" title="a technique of mode locking, based on a saturable absorber inside the laser resonator">passive mode locking</a> of <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">lasers</a> (&rarr;&nbsp;<a href="kerr_lens_mode_locking.html" title="a technique for mode locking a laser, exploiting nonlinear self-focusing"><em>Kerr lens mode locking</em></a>) and for <a href="laser_induced_damage.html" title="damage of optical components induced by laser radiation">optical damage</a> of media (<em>catastrophic <a href="self_focusing.html" title="focusing of a beam in a transparent medium, caused by the beam itself through a nonlinear process in the medium">self-focusing</a></em>).
+For negative <span class="eqn_il"><i>n</i><sub>2</sub></span>, the nonlinearity is <em>self-defocusing</em>.</p>
+<p>When a <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beam</a> with <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a> <span class="eqn_il"><i>P</i></span> and <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a> <span class="eqn_il"><i>w</i></span> propagates through a thin piece (thickness <span class="eqn_il"><i>d</i></span>) of a nonlinear medium with nonlinear index <span class="eqn_il"><i>n</i><sub>2</sub></span>, the <a href="dioptric_power.html" title="the inverse of the focal length">dioptric power</a> (inverse <a href="focal_length.html" title="a measure of how strongly an optical system focuses or defocuses light">focal length</a>) of the Kerr lens is</p>
+<div class="eqn"><img src="eqn/kerr_lens.gif" width="89" height="42" alt="strength of Kerr lens"></div>
+<p>when considering only the phase changes near the beam axis in a parabolic approximation.
+This equation can be derived by calculating the radially dependent nonlinear phase change and comparing it with that of a <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lens</a>.</p>
+<p>The equation shows that for a given optical power Kerr lensing becomes more important for stronger beam focusing: this increases the optical intensities and even more so the intensity gradients.</p>
+<form id="calculate_kerr_lens" class="calculatorform">
+<h2>Calculator for Kerr Lens</h2>
+<table>
+<tr>
+<td>Beam radius:</td><td></td><td></td>
+<td><input name="w" value="" class="cf_calculate_kerr_lens"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Nonlinear index:</td><td></td><td></td>
+<td><input name="n2" value="" class="cf_calculate_kerr_lens"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Thickness of medium:</td><td></td><td></td>
+<td><input name="d" value="" class="cf_calculate_kerr_lens"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Optical power:</td><td></td><td></td>
+<td><input name="P" value="" class="cf_calculate_kerr_lens"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Focal length:</td><td></td><td></td>
+<td><input name="f_k" value="" class="cf_calculate_kerr_lens"></td>
+<td><span class="calcbutton" id="calc_f_k">calc</span></td><td></td>
+</tr>
+</table>
+<p class="comment">Enter input values with units, where appropriate. After you have modified some inputs, click the "calc" button to recalculate the output.</p>
+<noscript>
+<p style="color:red">Attention: The buttons do not work, as Javascript is turned off in your browser!</p>
+</noscript>
+</form>
+<script type="text/javascript" src="calcform.js"></script>
+<script type="text/javascript" nonce="41+MvvcnCT6YvVsXU3jQng==">
+funits = new Array();
+funits["w"] = "m";
+funits["n2"] = "m^2/W";
+funits["d"] = "m";
+funits["P"] = "W";
+funits["f_k"] = "m";
+function calc_f_k() {
+  $("input[name=f_k]").val("???");
+  GetFieldValues("f_k","calculate_kerr_lens");
+  f_k = 1/(8*n2*d/(pi*Math.pow(w,4))*P);
+  $("input[name=f_k]").val(format_u(f_k, "m"));
+ }
+$("input[name=w]").val("10 µm");
+$("input[name=n2]").val("2.6e-20 m^2/W");
+$("input[name=d]").val("1 mm");
+$("input[name=P]").val("1 kW");
+calc_f_k();
+$(document).ready(function() {
+  $("span#calc_f_k").click(function() { calc_f_k() })
+});
+</script>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div class="comment">
+<p class="comment_details">2020-06-30</p>
+<p>Regarding the formula above there is a difference by a factor of 2 between the printed book and the online Encyclopedia. Which formula is correct?</p>
+<p style="font-weight:bold">Answer from the <a href="paschotta.html" style="font-weight:bold">author</a>:</p>
+<p>The formula here is correct. Sorry for the mistake in the printed book.</p>
+</div>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="kerr_lens.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">P. A. Belanger and C. Pare, &ldquo;Self-focusing of Gaussian beams: an alternate derivation&rdquo;, Appl. Opt. 22 (9), 1293 (1983), <a href="https://doi.org/10.1364/AO.22.001293">doi:10.1364/AO.22.001293</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">F. Salin <i>et al.</i>, &ldquo;Modelocking of Ti:sapphire lasers and self-focusing: a Gaussian approximation&rdquo;, Opt. Lett. 16 (21), 1674 (1991), <a href="https://doi.org/10.1364/OL.16.001674">doi:10.1364/OL.16.001674</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">V. Magni <i>et al.</i>, &ldquo;Astigmatism in Gaussian-beam self-focusing and in resonators for Kerr-lens mode locking&rdquo;, J. Opt. Soc. Am. B 12 (3), 476 (1995), <a href="https://doi.org/10.1364/JOSAB.12.000476">doi:10.1364/JOSAB.12.000476</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">J. H. Marburger, &ldquo;Self-focusing: theory&rdquo;, in <i>Progress in Quantum Electronics</i>, J. H. Sanders and S. Stenholm, eds. (Pergamon, Oxford, 1977), Vol. 4, pp. 35-110 (1977)</td></tr>
+<tr><td class="refno">[5]</td><td class="refs">Y. R. Shen, &ldquo;Self-focusing: experimental&rdquo;, in <i>Progress in Quantum Electronics</i>, J. H. Sanders and S. Stenholm, eds. (Pergamon, Oxford, 1977), Vol. 4, pp. 1-34 (1977)</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="dioptric_power.html" title="the inverse of the focal length">dioptric power</a>, <a href="focal_length.html" title="a measure of how strongly an optical system focuses or defocuses light">focal length</a>, <a href="kerr_effect.html" title="a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization">Kerr effect</a>, <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lenses</a>, <a href="self_focusing.html" title="focusing of a beam in a transparent medium, caused by the beam itself through a nonlinear process in the medium">self-focusing</a>, <a href="laser_induced_damage.html" title="damage of optical components induced by laser radiation">laser-induced damage</a>, <a href="kerr_lens_mode_locking.html" title="a technique for mode locking a laser, exploiting nonlinear self-focusing">Kerr lens mode locking</a>, <a href="self_phase_modulation.html" title="nonlinear phase modulation of a beam, caused by its own intensity via the Kerr effect">self-phase modulation</a><br>and other articles in the categories <a href="categories.html#nonlinear_optics" title="other articles on nonlinear optics">nonlinear optics</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/kerr_lens.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fkerr_lens.html&text=RP+Photonics+Encyclopedia+-+Kerr+lens%2C+self-focusing%2C+defocusing%2C+mode+locking" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fkerr_lens.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fkerr_lens.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/kerr_lens.html"&gt;<br>Article on Kerr Lens&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/kerr_lens.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/kerr_lens.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/kerr_lens.html<br>article on 'Kerr Lens' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Fiber Optics Software</h2>
+<a href="./rp_fiber_calculator.html?banner=RP_Fiber_Calculator" style="float:right; margin-left:3px"><img src="./img/fiberpower_logo.png" alt="RP Fiber Calculator software"></a>
+<p><a href="./rp_fiber_calculator.html?banner=RP_Fiber_Calculator">RP Fiber Calculator</a> &ndash; a convenient tool for calculations on optical fibers:</p>
+<ul>
+<li>Define <a href="./rp_fiber_calculator_docu.html?banner=RP_Fiber_Calculator">index or doping profiles</a> with the graphical user interface.</li>
+<li>Calculate the <a href="./rp_fiber_calculator_gm.html?banner=RP_Fiber_Calculator">guided modes</a> and all their properties.</li>
+</ul>
+<p style="text-align:center;"><a href="./rp_fiber_calculator_gm.html?banner=RP_Fiber_Calculator"><img src="./img/mode_solver.png" alt="mode profiles"></a></p>
+<ul>
+<li>Calculate how much power of a <a href="./rp_fiber_calculator_la.html?banner=RP_Fiber_Calculator">laser beam is launched</a> into the modes.</li>
+<li>Simulate <a href="./rp_fiber_calculator_pr.html?banner=RP_Fiber_Calculator">light propagation</a> within the fiber and <a href="./rp_fiber_calculator_co.html?banner=RP_Fiber_Calculator">coupling of light from one fiber to another</a>.</li>
+</ul>
+<a href="./rp_fiber_calculator.html?banner=RP_Fiber_Calculator"><img src="./img/rp_fiber_calculator_screenshot_small.png" alt="screen shot"></a>
+<p>The basic version of this software is offered <a href="./rp_fiber_calculator_download.html?banner=RP_Fiber_Calculator">for free</a>!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="41+MvvcnCT6YvVsXU3jQng==">shownbanner = "RP Fiber Calculator";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Company News</h2>
+<p>Suppliers having an <a href="./bg_entries.html?banner=company_news">ad package</a> in the <a href="./buyersguide.html?banner=company_news">RP Photonics Buyer&#39;s Guide</a> can publish their <a href="./company_news.html?banner=company_news">company news</a>. For example, they may announce mergers and acquisitions, new product lines, or new cooperrations with distributors.</p>
+<p>Currently we have news from the following companies:</p>
+<ul>
+<li><a href="./bg/profiles/laser_quantum
+.html">Laser Quantum
+</a>: High power in a compact platform at key wavelengths
+</li>
+</ul>
+
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="41+MvvcnCT6YvVsXU3jQng==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/kerr_lens.html"
+    },
+    "headline": "Kerr Lens",
+    "image": "https://www.rp-photonics.com/previews/kerr_lens.png",
+    "datePublished": "2008-05-30",
+    "dateModified": "2020-07-01",
+    "description": "A Kerr lens is a lensing effect arising from the Kerr nonlinearity. It is utilized in certain mode-locked lasers, for example.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter K",
+      "item": "https://www.rp-photonics.com/encyclopedia_k.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Kerr lens",
+      "item": "https://www.rp-photonics.com/kerr_lens.html"
+    }]}
+}
+</script>
+</body>
+</html>

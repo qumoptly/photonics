@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-dgeK29jzITwglZ0m9MD+kw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>The Photonics Spotlight - Correctly Designing Frequency Conversion Stages: Not Easy, but Worthwhile!</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/spotlight_2014_11_14.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2014-11-14">
+<meta name="description" content="Correctly designing nonlinear frequency conversion stages is not easy, but has a lot of advantages, making development projects faster and more efficient. Unfortunately, many people take a trial-and-error approach, wasting a lot of resources.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="photonics, spotlight, news, publications, blog, RSS feed, encyclopedia, laser physics, technology">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Photonics Spotlight - Correctly Designing Frequency Conversion Stages: Not Easy, but Worthwhile!">
+<meta property="og:description" content="Correctly designing nonlinear frequency conversion stages is not easy, but has a lot of advantages, making development projects faster and more efficient. Unfortunately, many people take a trial-and-error approach, wasting a lot of resources.">
+<meta property="og:url" content="https://www.rp-photonics.com/spotlight_2014_11_14.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/spotlight_2014_11_14.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Correctly designing nonlinear frequency conversion stages is not easy, but has a lot of advantages, making development projects faster and more efficient. Unfortunately, many people take a trial-and-error approach, wasting a lot of resources.">
+<meta name="twitter:title" content="The Photonics Spotlight - Correctly Designing Frequency Conversion Stages: Not Easy, but Worthwhile!">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/spotlight_2014_11_14.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="dgeK29jzITwglZ0m9MD+kw==">
+page="spotlight_2014_11_14.html"; cat="P"; shownbanner=""; ref="http://www.rp-photonics.com/spotlight.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/nkt_photonics.html"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="dgeK29jzITwglZ0m9MD+kw==">shownsponsors="NKT Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight" class="selected"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="spotlight.html">The Photonics Spotlight</a> &gt; <a href="spotlight_2014_11_14.html">2014-11-14</a></p>
+<h1 class="posting">Correctly Designing Frequency Conversion Stages: Not Easy, but Worthwhile!</h1>
+<div class="posting_details">
+<p>Posted on 2014-11-14 as a part of the <a href="spotlight.html">Photonics Spotlight (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="spotlight_2014_11_14.html" class="url">https://www.rp-photonics.com/spotlight_2014_11_14.html</a></p>
+<p>Author: <a href="https://www.rp-photonics.com/paschotta.html" rel="author">Dr. Rüdiger Paschotta</a>, <a href="https://www.rp-photonics.com/">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: Correctly designing nonlinear frequency conversion stages is not easy, but has a lot of advantages, making development projects faster and more efficient. Unfortunately, many people take a trial-and-error approach, wasting a lot of resources.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p><a href="nonlinear_frequency_conversion.html" title="the conversion of input light to light of other frequencies, using optical nonlinearities">Nonlinear frequency conversion</a> is often used in laser technology &ndash; in conjunction with <a href="continuous_wave_operation.html" title="operation mode of a laser with continuous light emission">continuous-wave</a> lasers and <a href="pulsed_lasers.html" title="lasers emitting light in the form of pulses">pulsed lasers</a>.
+In similar ways as for <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">lasers</a>, the correct design of frequency conversion stages is essential: not only for obtaining the optimum power conversion efficiency, but also for preserving <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a>, achieving a sufficiently high lifetime of the <a href="nonlinear_crystal_materials.html" title="crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal material</a>, etc.
+And indeed there are quite a few design details where the correct choice is certainly not obvious.
+In particular, you have to decide about what type and length of nonlinear crystal to use, what <a href="phase_matching.html" title="a group of techniques for achieving efficient nonlinear interactions in a medium">phase-matching</a> configuration to employ (e.g. <a href="critical_phase_matching.html" title="phase matching of a nonlinear interaction by adjustment of a propagation direction">critical</a> or <a href="noncritical_phase_matching.html" title="a technique of phase matching which does not require a critical angular adjustment">noncritical</a>?), how tightly the <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a> should be focused into the crystal, etc.
+For <a href="pulses.html" title="flashes of light">pulses</a>, in particular for <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a>, a number of additional aspect comes into play; one may have to consider the <a href="phase_matching_bandwidth.html" title="the width of an optical frequency range in which some process (e.g. a nonlinear interaction) can be efficient due to more or less precise phase matching">phase-matching bandwidth</a> or the <a href="group_velocity_mismatch.html" title="the phenomenon that pulses become temporally separated in a medium due to different group velocities, or (quantitatively) the difference of inverse group velocities">group velocity mismatch</a> or peak intensities in the context of possible <a href="laser_induced_damage.html" title="damage of optical components induced by laser radiation">laser-induced damage</a>.</p>
+<p>Surprisingly, however, a large percentage of people developing laser devices still use a trial-and-error approach:</p>
+<ul>
+<li>For example, they select a certain crystal simply because that material has been used successfully in another device, even though the circumstances are quite different.</li>
+<li>They would purchase dozens of crystals with a certain length, not knowing whether half the length (which certainly makes it much cheaper) would be sufficient or possibly even better.</li>
+<li>They would just take some curved <a href="mirrors.html" title="devices which reflect light">mirror</a> or <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lens</a> to focus their laser beam into the crystal, neither knowing what size the <a href="beam_waist.html" title="location with minimum beam radius">beam waist</a> will have, nor what value would be appropriate.</li>
+</ul>
+<p>If the conversion efficiency appears to be satisfactory, they would conclude that it works and can be done that way.
+If the boss later asks for more conversion efficiency, they do not know whether it would be possible.
+How far the applied intensity levels are from the <a href="laser_induced_damage.html" title="damage of optical components induced by laser radiation">laser-induced damage</a> threshold is another question they could not answer &ndash; although the boss would certainly want them to know that!</p>
+<p>That style of working is nicely complemented by similar practices among those selling nonlinear crystal materials, for example.
+Often, they know little concerning the trade-offs between different materials (except that their material is best, of course!), have no justified idea concerning an optimum crystal length, etc.
+Effectively, they tell their buyers: &ldquo;I don't know how that stuff really works; just buy it and try yourself!&rdquo;</p>
+<p>Quite obviously, this is not the recommended way of working in a high-tech area like <a href="photonics.html" title="the science and technology of light">photonics</a>.
+It is highly inefficient, possibly leading to poor performance, unnecessary cost for materials and parts, time-consuming problems with optical damage, etc.
+But why are people working like this?
+Possibly just because they cannot do it better, and believe that they could not do it better.
+Learning often does not appear to be a contemplated option.</p>
+<p>Admittedly, there is no fast way of learning all this.
+One first needs to acquire a thorough understanding of the underlying physics, including the knowledge of calculating details such as <a href="phase_matching.html" title="a group of techniques for achieving efficient nonlinear interactions in a medium">phase-matching</a> angles, intensity-dependent conversion efficiencies and the like.
+In addition, one needs to get familiar e.g. with the typical trade-offs between different phase-matching configurations and the typical pros and cons of tight focusing into nonlinear crystals.
+Finally, one also requires some amount of experience e.g. in order to notice that certain degradation phenomena have to be observed when using particular nonlinear crystal materials.</p>
+<p>When learning all this just for using it once for the design of a device, the amount of work required may be out of proportion.
+However, when somebody at a company regularly designs such devices, that investment into solid know-how will certainly pay off.
+And if a company does not often uses that sort of expertise, the straightforward solution is to employ an expert as an external technical consultant for getting this work done properly.
+Note that paying such an expert for just a few hours of work is nothing compared to what you can waste when trying silly things in the lab.</p>
+<aside class="callout red">Enjoy a one-day course on nonlinear frequency conversion on Feb. 9, 2015 &ndash; the probably easiest way of getting well introduced into that area!</aside>
+<p>By the way, I will present a one-day course on <a href="http://spie.org/PW/course/applied-nonlinear-frequency-conversion">Applied Nonlinear Frequency Conversion</a> at Photonics West (San Francisco) on February 9, 2015.
+This would be an excellent opportunity for many to get an easy introduction into that technical area.
+Those already knowing the basics can still learn a lot in this course.</p>
+<p>Besides, I'm also offering tailored <a href="training.html">staff training courses</a>, performed at my customer's premises.
+That way, a whole team may learn a lot of things within just two or three days, for example</p>
+<hr>
+<p style="font-size:90%; margin-bottom:10px;">This article is a posting of the <a href="spotlight.html">Photonics Spotlight</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page and cite it, because its location is permanent.
+See also the <a href="encyclopedia.html">RP Photonics Encyclopedia</a>.</p>
+<p>Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="https://www.rp-photonics.com/spotlight.rss">RSS feed</a>.</p>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="spotlight_2014_11_14.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/spotlight_2014_11_14.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2014_11_14.html&text=The+Photonics+Spotlight+-+Correctly+Designing+Frequency+Conversion+Stages%3A+Not+Easy%2C+but+Worthwhile%21" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2014_11_14.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2014_11_14.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2014_11_14.html"&gt;<br>Article on The Photonics Spotlight - Correctly Designing Frequency Conversion Stages: Not Easy, but Worthwhile!&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2014_11_14.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/spotlight_2014_11_14.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Paschotta</a>, RP Photonics Consulting GmbH. All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./marketing_contact.html">contact</a>, <a href="./privacy.html">data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Your Lab is Closed due to the Corona Virus Crisis?</h2>
+<p>Time to think how to best utilize your time!</p>
+<p>Here is a suggestion: <br> <b>Consider to start with physical modeling!</b></p>
+<ul>
+<li>Build models for your existing or planned lasers and amplifiers, resonators, etc.</li>
+<li>Utilize such models in order to <b>improve your qualitative and quantitative understanding</b>, solve problems, optimize device performance and <b>develop new ideas</b>.</li>
+<li>Power up your home office instead of wasting your time!</li>
+<li>When getting back to the lab, restart with fresh plans and full power.</li>
+</ul>
+<img src="./img/rp_photonics.png" alt="RP Photonics" style="margin-top:20px; width:225px;">
+<p>offers powerful <a href="./software.html?banner=lab_closed">simulation &amp; design software</a>, e.g. for <a href="./fiberpower.html?banner=lab_closed">active and passive fiber devices</a>, <a href="./resonator.html?banner=lab_closed">laser resonators</a> and <a href="./coating.html?banner=lab_closed">thin-film coatings</a>!</p>
+<p>Getting helpful <a href="./software_support.html?banner=lab_closed">support</a> from RP also benefits your projects.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="dgeK29jzITwglZ0m9MD+kw==">shownbanner = "lab closed";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Numerical Modeling</h2>
+<p>Developing devices or systems in photonics requires a <b>comprehensive quantitative understanding</b> &ndash; otherwise, it becomes inefficient, waisting time and money.</p>
+<p><a href="./laser_modeling.html?banner=numerical_modeling">Numerical modeling</a> is often the most efficient way towards results:</p>
+<ul>
+<li>understand <em>quantitatively</em> what is going on</li>
+<li>check the influence of design changes or possible detrimental effects</li>
+<li>understand strange experimental observations</li>
+<li>find optimized designs more reliably and faster</li>
+</ul>
+<p style="text-align:center; margin:10px 0;"><a href="./laser_modeling.html?banner=numerical_modeling"><img src="./img/modeling.png" width="234" height="91" alt="laser modeling"></a></p>
+<h3>How to Get Your Modeling Done?</h3>
+<p>We offer both <a href="./consulting.html?banner=numerical_modeling">technical consultancy</a> and powerful <a href="./software.html?banner=numerical_modeling">simulation software</a>.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="dgeK29jzITwglZ0m9MD+kw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/spotlight_2014_11_14.html"
+    },
+    "headline": "Correctly Designing Frequency Conversion Stages: Not Easy, but Worthwhile!",
+    "image": "https://www.rp-photonics.com/previews/spotlight_2014_11_14.png",
+    "datePublished": "2014-11-14",
+    "description": "Correctly designing nonlinear frequency conversion stages is not easy, but has a lot of advantages, making development projects faster and more efficient. Unfortunately, many people take a trial-and-error approach, wasting a lot of resources.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "The Photonics Spotlight",
+      "item": "https://www.rp-photonics.com/spotlight.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "2014-11-14",
+      "item": "https://www.rp-photonics.com/spotlight_2014_11_14.html"
+    }]}
+}
+</script>
+</body>
+</html>

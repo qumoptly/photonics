@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-ruOzLWZUZL970kQah2zELA=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - synchronization of lasers, light pulses, mode-locked lasers, Q-switched lasers, resonator length control, active feedback system, passive, phase synchronization</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/synchronization_of_lasers.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="The synchronization of lasers means the synchronization of light pulses generated with different lasers. This implies that the light pulses must have a very small relative timing jitter.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="synchronization of lasers, light pulses, mode-locked lasers, Q-switched lasers, resonator length control, active feedback system, passive, phase synchronization">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Synchronization of Lasers">
+<meta property="og:description" content="The synchronization of lasers means the synchronization of light pulses generated with different lasers. This implies that the light pulses must have a very small relative timing jitter.">
+<meta property="og:url" content="https://www.rp-photonics.com/synchronization_of_lasers.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/synchronization_of_lasers.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="The synchronization of lasers means the synchronization of light pulses generated with different lasers. This implies that the light pulses must have a very small relative timing jitter.">
+<meta name="twitter:title" content="Synchronization of Lasers">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/synchronization_of_lasers.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="ruOzLWZUZL970kQah2zELA==">
+page="synchronization_of_lasers.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="ruOzLWZUZL970kQah2zELA==">shownsponsors="EKSMA OPTICS"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_s.html">letter S</a> &gt; <a href="synchronization_of_lasers.html">synchronization of lasers</a></p>
+<h1>Synchronization of Lasers</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_laser_synchronization_devices.html?s=vbox">13 suppliers for laser synchronization devices</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.kmlabs.com/product/halcyon5/" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="laser synchronization devices" rel="nofollow" class="bg externallink"><img src="./bg/logos/kapteyn_murnane_laboratories.png" alt="Kapteyn-Murnane Laboratories" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.eksmaoptics.com/pockels-cells-and-drivers/laser-synchronization-modules/laser-synchronization-module-and-pulse-delay-generator-sy4000/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="laser synchronization devices" rel="nofollow" class="bg externallink"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.toptica.com/products/psfs-fiber-lasers/femtofiber-customized/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="laser synchronization devices" rel="nofollow" class="bg externallink"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.aerodiode.com/product-category/synchronisation-electronics/" data-supplier="Aerodiode" data-location="product-enc" data-keyword="laser synchronization devices" rel="nofollow" class="bg externallink"><img src="./bg/logos/aerodiode.png" alt="Aerodiode" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_laser_synchronization_devices.html?s=vbox">List of suppliers for<br>laser synchronization devices</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: the synchronization of light pulses generated with lasers</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Synchronisierung von Lasern</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#fluctuations_and_noise" title="other articles on fluctuations and noise">fluctuations and noise</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<p><a href="encyclopedia_cite.html?article=synchronization%20of%20lasers">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>The synchronization of lasers usually means that the temporal positions of generated laser <a href="pulses.html" title="flashes of light">pulses</a> are adjusted such that the pulses from two lasers temporally coincide, or that the pulses from one laser coincide with some electronic signal.
+This is more clearly called <em>timing synchronization</em>.
+Some examples:</p>
+<ul>
+<li>If one wants to utilize <a href="nonlinear_frequency_conversion.html" title="the conversion of input light to light of other frequencies, using optical nonlinearities">nonlinear frequency conversion</a> processes involving different pulses &ndash; for example, <a href="sum_and_difference_frequency_generation.html" title="nonlinear processes generating beams with the sum or difference of the frequencies of the input beams">sum or difference frequency generation</a> or optical <a href="parametric_amplification.html" title="a process of optical amplification based on a parametric nonlinearity">parametric amplification</a>, this can work only if the pulses meet within some nonlinear medium.
+See also the article on <a href="synchronous_pumping.html" title="pumping of a laser or an optical parametric oscillator with short light pulses in synchronism with the emitted pulses">synchronous pumping</a>.</li>
+<li>Two-color <a href="pump_probe_measurements.html" title="techniques for investigating ultrafast phenomena, where a pump pulse excites a sample and a probe pulse is used for probing the sample after an adjustable delay time">pump&ndash;probe measurements</a>, as can be used e.g. in <a href="laser_spectroscopy.html" title="methods where the interaction of laser light with matter is utilized">laser spectroscopy</a>, require precise control of the relative timing, since one is measuring the dependence of a nonlinear response on a delay time between the pulses.</li>
+<li>In the area of optical <a href="frequency_metrology.html" title="the field of technology dealing with precise frequency measurements">frequency metrology</a>, one often needs to precisely synchronize the pulse emission of a <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked laser</a> with a given electronic signal, or the pulse emission of two lasers.</li>
+<li>Systems for <a href="optical_data_transmission.html" title="the transmission of information using light beams, e.g. in fibers">optical data transmission</a> also often require some form of synchronization.</li>
+</ul>
+<p>In some other cases, what is synchronized are actually the electric field oscillations of two <a href="continuous_wave_operation.html" title="operation mode of a laser with continuous light emission">continuous-wave</a> lasers; this is more precisely called <em>phase synchronization</em> and is required e.g. for <a href="coherent_beam_combining.html" title="a class of methods for beam combining, requiring mutual coherence of the combined beams">coherent beam combining</a>.
+Both types of synchronization are treated in the following.</p>
+<h2 class="togglediv">Synchronization of Pulses from Mode-locked Lasers</h2>
+<div>
+<p><a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">Mode-locked lasers</a> emit very regular trains of <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a>.
+If two such lasers are operated with precisely the same <a href="pulse_repetition_rate.html" title="the number of pulses emitted per second e.g. by a mode-locked or Q-switched laser">pulse repetition rate</a>, it can happen that each pulse emitted by one laser temporally coincides with one pulse of the other laser, and this over a long time.</p>
+<p>If a laser is actively mode-locked, the emitted pulses are naturally in synchronism with the <a href="pockels_cell_drivers.html" title="electronic devices for driving Pockels cells">electronic drive signal</a>.
+However, stable operation of such a laser often requires an active feedback system acting on the resonator length, since the <a href="optical_modulators.html" title="devices allowing one to manipulate properties of light beams, such as the optical power or phase">optical modulator</a> used for active mode locking has only a very limited power to &ldquo;pull&rdquo; the circulating pulses towards the desired temporal positions.
+In case of passive mode locking, resonator length control (or a similar message for controlling the resonator round-trip time) is the only way to control the pulse timing.</p>
+<aside class="callout red">Even an extremely small change of resonator length can strongly affect the pulse timing within a fraction of a second.</aside>
+<p>The relative pulse timing can be disturbed by various effects.
+In most cases, it is dominantly affected by drifts of the length of the <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a> and by mechanical vibrations.
+For example, consider a laser emitting 1-ps pulses with a pulse repetition rate of 100&nbsp;MHz.
+If the resonator length changes only by 1&nbsp;nm, this implies a timing error of &asymp;3.3&nbsp;as (attoseconds) per round trip.
+Although that is not very much, within a million resonator round trips (i.e., within 0.01 seconds), the accumulated pulse timing error is already 3.3&nbsp;ps, i.e., several times the pulse duration, and the temporal overlap of pulses is lost.
+Similarly, small temperature changes e.g. within a <a href="laser_crystals.html" title="transparent crystals with laser-active dopants, used as laser gain media">laser crystal</a> can also affect the pulse timing.
+Fast vibrations are less of a problem, since the pulse timing cannot drift very far within a short oscillation period of such a vibration.</p>
+<p>Due to the extremely high sensitivity of the pulse timing to various effects, long-term synchronized operation of such lasers requires the use of some automatic feedback system.
+It is quite easy to modify the resonator length e.g. with a piezo transducer mounted below one of the resonator <a href="laser_mirrors.html" title="high-quality mirrors used in laser resonators and other optical setups">mirrors</a> with a range of e.g. a few micrometers; the greater challenge is to precisely measure the timing error in order to obtain a suitable error signal for driving the transducer.</p>
+<aside class="callout blue">A balanced optical cross correlator can be used to obtain a very accurate timing error signal.</aside>
+<p>The measurement precision achievable with ultrafast <a href="photodetectors.html" title="devices used for the detection of light">photodetectors</a> and electronics is in many cases insufficient for that purpose.
+However, there are all-optical techniques &ndash; in particular, the use of an optical cross correlator.
+Here, the two pulses, the timing of which must be compared, are sent into a <a href="nonlinear_crystal_materials.html" title="crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal</a> where some nonlinear interaction (e.g. <a href="sum_and_difference_frequency_generation.html" title="nonlinear processes generating beams with the sum or difference of the frequencies of the input beams">sum frequency generation</a>) can take place only if the two pulses meet within the crystal.
+A moderately fast photodetector, registering the nonlinear mixing product, delivers the signal, and this depends very sensitively on the relative timing &ndash; however, without telling the sign of the timing error, which is of course relevant for finding the required resonator length correction.
+In order to obtain information on that sign as well, one can use a <em>balanced</em> cross correlator, where one creates two such signals, where for one of these a small timing change is applied to one of the pulses, so that the maximum signal from both detectors is achieved for slightly different relative timings.
+The difference of the two signals then provides a suitable error signal, offering a very high timing discrimination (e.g. some volts per picosecond timing error or even more) together with the needed sign information.</p>
+<aside class="callout blue">Carefully synchronized laser systems can exhibit an extremely small timing jitter.</aside>
+<p>If such an automatic feedback system works well and the lasers are well protected against vibrations, temperature changes, pump power fluctuations and the like, the remaining <a href="timing_jitter.html" title="fluctuations of the temporal positions of pulses">timing jitter</a> can be extremely small: in some cases it has an r.m.s. value far below one femtosecond [6], i.e., a very small fraction of the <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a>.</p>
+<p>The control of the resonator length is most frequently used, but not the only possibility.
+For example, it has been shown that the timing of a <a href="passive_mode_locking.html" title="a technique of mode locking, based on a saturable absorber inside the laser resonator">passively mode-locked</a> laser can also be influenced by control pulses hitting the <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorber</a> used for mode locking [3].
+Also, passive synchronization is possible if two lasers can interact by <a href="cross_phase_modulation.html" title="a nonlinear effect where the optical intensity of one beam influences the phase change of another beam">cross-phase modulation</a> in a laser crystal, for example [2,&thinsp;9].</p>
+<aside class="callout blue">The synchronization of amplified laser sources can involve additional technical challenges.</aside>
+<p>It is also possible to synchronize the outputs of <a href="ultrafast_amplifiers.html" title="amplifiers for ultrashort (femtosecond or picosecond) optical pulses">ultrafast amplifiers</a> for high pulse energies.
+Such amplifiers often contain a <a href="regenerative_amplifiers.html" title="optical amplifiers with a resonator in which a light pulse can do multiple round trips before being coupled out">regenerative amplifier</a>, in which the amplified pulse does many resonator round trips.
+Nevertheless, the obtained pulse timing can be quite precise &ndash; not limited by the switching precision of a <a href="pockels_cells.html" title="electro-optic devices, used for building modulators">Pockels cell</a> used for injecting and extracting the pulse.
+Before the amplifier system, one usually uses a <a href="pulse_pickers.html" title="electrically controlled optical switches used for extracting single pulses from a pulse train">pulse picker</a> for reducing the pulse repetition rate by a certain factor.
+By changing that division factor, one can only achieve a course adjustment of the pulse frequency; for fine control, the pulse repetition rate of the seed laser needs to be controlled.</p>
+<p>For the discussed kind of pulse synchronization, the <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequencies</a> are not relevant, but only the pulse envelopes; the optical frequencies may differ substantially between the two lasers.
+In some cases, however, one needs not only the synchronization of the pulse envelopes, but even <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">phase</a> synchronization of the oscillations of the electric fields (similar to the case of continuous-wave lasers, see below).
+For example, such kind of synchronization allows one to combine two ultrashort pulse lasers such that one obtains an overall wider bandwidth and shorter output pulses [4].
+In that case, one requires two independent controls, acting on two different parameters of the laser emission: the pulse timing and the <a href="carrier_envelope_offset.html" title="the offset between the optical phase and the maximum of the wave envelope of an optical pulse">carrier&ndash;envelope offset</a>.
+For example, one can use the combination of a piezo-actuated mirror and pump power control.
+See the article on <a href="carrier_envelope_offset.html" title="the offset between the optical phase and the maximum of the wave envelope of an optical pulse">carrier&ndash;envelope offset</a> for more details.</p>
+</div>
+<h2 class="togglediv">Synchronization of Pulses from Q-switched Lasers</h2>
+<div>
+<p>The technical details of the synchronization of actively <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched lasers</a> are very different from those for mode-locked lasers:</p>
+<ul>
+<li>The <a href="pulse_duration.html" title="the duration of an optical pulse">pulse durations</a> are far longer &ndash; typically several nanoseconds or more.
+The required precision is often just some fraction (e.g. one tenth) of the pulse duration.
+This is sufficient, for example, if one does some kind of <a href="nonlinear_frequency_conversion.html" title="the conversion of input light to light of other frequencies, using optical nonlinearities">nonlinear frequency conversion</a> such as <a href="sum_and_difference_frequency_generation.html" title="nonlinear processes generating beams with the sum or difference of the frequencies of the input beams">sum or difference frequency generation</a>.</li>
+<li>The resonator length is not a critical parameter, because the pulse timing is essentially determined by the gain dynamics, and small resonator length changes have a minor effect on the pulse duration.</li>
+</ul>
+<aside class="callout blue">The delay between the trigger signal and limited pulse is substantial, and in many cases it fluctuates significantly, e.g. due to pump power fluctuations.</aside>
+<ul>
+<li>The pulse emission in an actively Q-switched laser can simply be triggered via the used <a href="optical_modulators.html" title="devices allowing one to manipulate properties of light beams, such as the optical power or phase">optical modulator</a> (e.g., an <a href="acousto_optic_modulators.html" title="optical modulators based on the acousto-optic effect">acousto-optic modulator</a>).
+However, the output pulse will always have some significant delay, amounting to a large multiple of the pulse duration.
+This means that it must be known ahead of time when a pulse is required.</li>
+<li>In addition, the mentioned pulse delay can substantially fluctuate, e.g. if the energy stored in the laser crystal is not always the same: the more energy is stored, the higher the gain, and the smaller will be the pulse delay.
+If two different actively Q-switched lasers need to be synchronized, one of them may need the trigger signal at an earlier time than the other one, and both lasers must be optimized such that the pulse delay is quite reproducible.</li>
+</ul>
+<p>The situation is again different for passively Q-switched lasers.
+Here, the pulse emission can be triggered by pumping the gain medium such that the optical <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> becomes sufficiently high for pulse emission.
+Relatively precise timing is possible with pulsed pumping, but there is again a substantial delay between the pump pulse and the emitted pulse.
+In case of continuous pumping, leading to the emission of a more or less regular pulse train, the pump power can be used to adjust the pulse repetition rate.</p>
+</div>
+<h2 class="togglediv">Phase Synchronization of Continuous-wave Lasers</h2>
+<div>
+<p>Phase synchronization of continuous-wave lasers means that the electric field oscillations of their outputs are synchronized.
+Because the optical frequencies are very high, this implies an extremely high timing precision &ndash; well below one optical cycle, which may last a few femtoseconds only.</p>
+<p>A relatively simple method is <a href="injection_locking.html" title="a technique for enforcing operation of a laser on a certain optical frequency by injecting light with that frequency into the laser resonator">injection locking</a>.
+Here, the output of one laser (the <a href="master_laser.html" title="a single-frequency laser used for injection locking one or several other lasers">master laser</a>) is injected into the other one (the <a href="slave_laser.html" title="a laser which is injection-locked to another laser">slave laser</a>); under suitable conditions, this will force the slave laser to emit phase-synchronously.</p>
+<p>Instead, one can also use a method based on active feedback.
+The following is needed:</p>
+<ul>
+<li>Both lasers need to be optimized for a very narrow emission <a href="linewidth.html" title="width of the spectrum of a light beam or an absorption feature">linewidth</a>, i.e., for very weak random phase changes of the output.</li>
+<li>A suitable error signal must be generated.
+This can be easily obtained by <a href="interference.html" title="a range of phenomena associated with the superposition of waves">interference</a> between the two outputs e.g. on a beamsplitter.
+The difference of electronic signals from two photodetectors behind the beam splitter clearly tells what the phase difference is (within some limited range of phase differences).</li>
+<li>The optical frequency of at least one of the lasers needs to be controlled accordingly, e.g. with piezo-actuated mirror.</li>
+</ul>
+<p>In a modified scheme, it is also possible to stabilize lasers such that the <em>difference</em> of the optical emission frequencies exactly fits to some electronic signal; again, a kind of phase locking is possible.</p>
+</div>
+<h2 class="togglediv">Quantifying the Quality of Synchronization</h2>
+<div>
+<p>For a single pair of pulses from to lasers, one can simply specify the timing error as the time difference between the pulse maxima (or possibly the &ldquo;center of gravity&rdquo; in the time domain).
+However, one often requires statistical information on the timing errors.
+One possibility is to specify the <a href="power_spectral_density.html" title="optical power or noise power per unit frequency interval">power spectral density</a> of the timing error.
+In many cases, it is sufficient to know some r.m.s. (root mean square) value, which can be obtained by integrating the power spectral density over some frequency range (i.e., some range of noise frequencies) and taking the square root.
+The result can of course depend on the mentioned frequency range; therefore, the result is meaningful only in combination with these two values.</p>
+<p>For phase synchronization, the same quantification is possible as with timing synchronization, just replacing the timing error with the phase error.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_laser_synchronization_devices.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 13 suppliers for laser synchronization devices. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.aerodiode.com/" data-supplier="Aerodiode" data-location="product-enc" data-keyword="laser synchronization devices" rel="nofollow" class="bg externallink" title="Visit the website of Aerodiode"><img src="./bg/logos/aerodiode.png" alt="Aerodiode" class="supplierlogo"></a><a href="https://www.aerodiode.com/product-category/synchronisation-electronics/" data-supplier="Aerodiode" data-location="product-enc" data-keyword="laser synchronization devices" rel="nofollow" class="bg externallink" title="Visit the website of Aerodiode"><img src="./bg/products/aerodiode/laser_synchronization_devices.jpg" alt="laser synchronization devices" class="product"></a><h3><a href="./bg/profiles/aerodiode.html" title="See the profile of Aerodiode">Aerodiode</a></h3><p>AeroDiode has developed various <a href="https://www.aerodiode.com/product-category/synchronisation-electronics/" data-supplier="Aerodiode" data-location="product-enc" data-keyword="laser synchronization devices" rel="nofollow" class="externallink bg">devices for the synchronization of pulsed lasers</a>. This includes optical burst shapers, pulse delay generators (with 10&nbsp;ps delay resolution) for driving EOMs, AOMs or SOAs, and pulse picker synchronization boards.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.kmlabs.com/" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="laser synchronization devices" rel="nofollow" class="bg externallink" title="Visit the website of Kapteyn-Murnane Laboratories"><img src="./bg/logos/kapteyn_murnane_laboratories.png" alt="Kapteyn-Murnane Laboratories" class="supplierlogo"></a><a href="https://www.kmlabs.com/product/halcyon5/" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="laser synchronization devices" rel="nofollow" class="bg externallink" title="Visit the website of Kapteyn-Murnane Laboratories"><img src="./bg/products/kapteyn_murnane_laboratories/halcyon.jpg" alt="laser synchronization devices" class="product"></a><h3><a href="./bg/profiles/kapteyn_murnane_laboratories.html" title="See the profile of Kapteyn-Murnane Laboratories">Kapteyn-Murnane Laboratories</a></h3><p>The KMLabs <a href="https://www.kmlabs.com/product/halcyon5/" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="laser synchronization devices" rel="nofollow" class="externallink bg">Halcyon&trade;</a> repetition-rate stabilized oscillator is popular with customers who need to synchronize oscillator laser pulses with pulses from another laser or with a synchrotron.  Electronics included with the Halcyon lock its output to the customer&rsquo;s reference signal and can provide timing jitter of less than 150&nbsp;fs.  Stabilization of the repetition rate is achieved through multiple features including a temperature-stabilized breadboard, a motorized stage for coarse feedback, and a small piezo-mounted mirror for fast feedback. The KMLabs team works closely with each Halcyon customer to ensure that the system meets their specific needs. Due to the flexible design of the Halcyon&trade;, it can lock to reference signals over a very wide range: 75&nbsp;MHz to 4&nbsp;GHz.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.eksmaoptics.com/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="laser synchronization devices" rel="nofollow" class="bg externallink" title="Visit the website of EKSMA OPTICS"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a><a href="https://www.eksmaoptics.com/pockels-cells-and-drivers/laser-synchronization-modules/laser-synchronization-module-and-pulse-delay-generator-sy4000/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="laser synchronization devices" rel="nofollow" class="bg externallink" title="Visit the website of EKSMA OPTICS"><img src="./bg/products/eksma_optics/laser_synchronization.jpg" alt="laser synchronization devices" class="product"></a><h3><a href="./bg/profiles/eksma_optics.html" title="See the profile of EKSMA OPTICS">EKSMA OPTICS</a></h3><p>EKSMA Optics offers a <a href="https://www.eksmaoptics.com/pockels-cells-and-drivers/laser-synchronization-modules/laser-synchronization-module-and-pulse-delay-generator-sy4000/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="laser synchronization devices" rel="nofollow" class="externallink bg">pulse synchronization module with the delay generator SY4000</a> that is designed to create up to 8 delayed output pulse sequences precisely synchronized to an internal or external clock.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.toptica.com/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="laser synchronization devices" rel="nofollow" class="bg externallink" title="Visit the website of TOPTICA Photonics"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a><h3><a href="./bg/profiles/toptica_photonics.html" title="See the profile of TOPTICA Photonics">TOPTICA Photonics</a></h3><p>TOPTICA offers solutions for synchronization of ultrafast fiber laser and continuous-wave (cw) lasers. <a href="https://www.toptica.com/products/psfs-fiber-lasers/femtofiber-customized/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="laser synchronization devices" rel="nofollow" class="externallink bg">Synchronized femtosecond fiber lasers</a> are a key element for applications like time-resolved microscopy and pump&ndash;probe spectroscopy. Phase and frequency locking of TOPTICA’s broad portfolio of <a href="https://www.toptica.com/products/tunable-diode-lasers/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="laser synchronization devices" rel="nofollow" class="externallink bg">tunable cw diode laser</a> is supported by a range of versatile <a href="https://www.toptica.com/products/tunable-diode-lasers/laser-locking-electronics/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="laser synchronization devices" rel="nofollow" class="externallink bg">laser locking electronics</a>.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="synchronization_of_lasers.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">M. J. W. Rodwell <i>et al.</i>, &ldquo;Subpicosecond laser timing stabilization&rdquo;, IEEE J. Quantum Electron. 25 (4), 817 (1989), <a href="https://doi.org/10.1109/3.17346">doi:10.1109/3.17346</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">C. Fürst, A. Leitenstorfer und A. Laubereau, &ldquo;Mechanism for self-synchronization of femtosecond pulses in a two-color Ti:sapphire Laser&rdquo;, J. Sel. Top. Quantum Electron. 2, 473 (1996), <a href="https://doi.org/10.1109/2944.571746">doi:10.1109/2944.571746</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">N. H. Bonadeo <i>et al.</i>, &ldquo;Passive harmonic mode-locked soliton fiber laser stabilized by an optically pumped saturable Bragg reflector&rdquo;, Opt. Lett. 25 (19), 1421 (2000), <a href="https://doi.org/10.1364/OL.25.001421">doi:10.1364/OL.25.001421</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">R. K. Shelton <i>et al.</i> &ldquo;Phase-coherent optical pulse synthesis from separate femtosecond lasers&rdquo;, Science 293, 1286 (2001), <a href="https://doi.org/10.1126/science.1061754">doi:10.1126/science.1061754</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">R. K. Shelton <i>et al.</i>, &ldquo;Subfemtosecond timing jitter between two independent, actively synchronized, mode-locked lasers&rdquo;, Opt. Lett. 27 (5), 312 (2002), <a href="https://doi.org/10.1364/OL.27.000312">doi:10.1364/OL.27.000312</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">T. R. Schibli <i>et al.</i>, &ldquo;Attosecond active synchronization of passively mode-locked lasers by balanced cross correlation&rdquo;, Opt. Lett. 28 (11), 947 (2003), <a href="https://doi.org/10.1364/OL.28.000947">doi:10.1364/OL.28.000947</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">Y. Kobayashi <i>et al.</i>, &ldquo;Phase-coherent multicolor femtosecond pulse generation&rdquo;, Appl. Phys. Lett. 83 (5), 839 (2003), <a href="https://doi.org/10.1063/1.1598651">doi:10.1063/1.1598651</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">W. Seitz <i>et al.</i>, &ldquo;All-optical synchronization and mode locking of solid-state lasers with nonlinear semiconductor Fabry-Pérot mirrors&rdquo;, IEEE J. Sel. Topics Quantum Electron. 9, 1093 (2003), <a href="https://doi.org/10.1109/JSTQE.2003.819100">doi:10.1109/JSTQE.2003.819100</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">M. Betz <i>et al.</i>, &ldquo;All-optical phase locking of two femtosecond Ti:sapphire lasers: a passive coupling mechanism beyond the slowly varying amplitude approximation&rdquo;, Opt. Lett. 29 (6), 629 (2004), <a href="https://doi.org/10.1364/OL.29.000629">doi:10.1364/OL.29.000629</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">M. Rusu, R. Herda and O. G. Okhotnikov, &ldquo;Passively synchronized two-color mode-locked fiber system based on master-slave lasers geometry&rdquo;, Opt. Express 12 (20), 4719 (2004), <a href="https://doi.org/10.1364/OPEX.12.004719">doi:10.1364/OPEX.12.004719</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">D. Yoshitomi <i>et al.</i>, &ldquo;Ultralow-jitter passive timing stabilization of a mode-locked Er-doped fiber laser by injection of an optical pulse train&rdquo;, Opt. Lett. 31 (22), 3243 (2006), <a href="https://doi.org/10.1364/OL.31.003243">doi:10.1364/OL.31.003243</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">J. Janousek <i>et al.</i>, &ldquo;Investigation of passively synchronized dual-wavelength Q-switched lasers based on V:YAG saturable absorber&rdquo;, Opt. Commun. 265 (1), 277 (2006), <a href="https://doi.org/10.1016/j.optcom.2006.03.002">doi:10.1016/j.optcom.2006.03.002</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">O. V. Palashov <i>et al.</i>, &ldquo;Synchronization of two Q-switched lasers with 150&nbsp;ps jitter&rdquo;, Appl. Opt. 47 (17), 3124 (2008), <a href="https://doi.org/10.1364/AO.47.003124">doi:10.1364/AO.47.003124</a></td></tr>
+<tr><td class="refno">[14]</td><td class="refs">J. Kim and F. X. Kärtner, &ldquo;Attosecond-precision ultrafast photonics&rdquo;, Laser &amp; Photon. Rev. 4 (3), 432 (2010), <a href="https://doi.org/10.1002/lpor.200910003">doi:10.1002/lpor.200910003</a></td></tr>
+<tr><td class="refno">[15]</td><td class="refs">D. Yoshitomi <i>et al.</i>, &ldquo;Long-term stable passive synchronization of  50&nbsp;&mu;J femtosecond Yb-doped fiber chirped-pulse amplifier with a mode-locked Ti:sapphire laser&rdquo;, Opt. Express 18 (25), 26027 (2010), <a href="https://doi.org/10.1364/OE.18.026027">doi:10.1364/OE.18.026027</a></td></tr>
+<tr><td class="refno">[16]</td><td class="refs">M. Zhang <i>et al.</i>, &ldquo;Passive synchronization of all-fiber lasers through a common saturable absorber&rdquo;, Opt. Lett. 36 (20), 3984 (2011), <a href="https://doi.org/10.1364/OL.36.003984">doi:10.1364/OL.36.003984</a></td></tr>
+<tr><td class="refno">[17]</td><td class="refs">A. Schwarz <i>et al.</i>, &ldquo;Active stabilization for optically synchronized optical parametric chirped pulse amplification&rdquo;, Opt. Express 20 (5), 5557 (2012), <a href="https://doi.org/10.1364/OE.20.005557">doi:10.1364/OE.20.005557</a></td></tr>
+<tr><td class="refno">[18]</td><td class="refs">R. Paschotta, H. R. Telle, and U. Keller, &ldquo;Noise of Solid State Lasers&rdquo;, in <i>Solid-State Lasers and Applications</i> (ed. A. Sennaroglu), CRC Press, Boca Raton, FL (2007), Chapter 12, pp. 473&ndash;510</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="stabilization_of_lasers.html" title="measures applied to lasers in order to improve their stability in terms of output power, optical frequency, or other quantities">stabilization of lasers</a>, <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked lasers</a>, <a href="timing_jitter.html" title="fluctuations of the temporal positions of pulses">timing jitter</a>, <a href="laser_noise.html" title="fluctuations of various parameters of laser light, such as the optical power and phase">laser noise</a>, <a href="carrier_envelope_offset.html" title="the offset between the optical phase and the maximum of the wave envelope of an optical pulse">carrier&ndash;envelope offset</a>, <a href="coherent_beam_combining.html" title="a class of methods for beam combining, requiring mutual coherence of the combined beams">coherent beam combining</a>, <a href="synchronous_pumping.html" title="pumping of a laser or an optical parametric oscillator with short light pulses in synchronism with the emitted pulses">synchronous pumping</a><br>and other articles in the categories <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#fluctuations_and_noise" title="other articles on fluctuations and noise">fluctuations and noise</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/synchronization_of_lasers.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fsynchronization_of_lasers.html&text=RP+Photonics+Encyclopedia+-+synchronization+of+lasers%2C+light+pulses%2C+mode-locked+lasers%2C+Q-switched+lasers%2C+resonator+length+control%2C+active+feedback+system%2C+passive%2C+phase+synchronization" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fsynchronization_of_lasers.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fsynchronization_of_lasers.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/synchronization_of_lasers.html"&gt;<br>Article on Synchronization of Lasers&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/synchronization_of_lasers.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/synchronization_of_lasers.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/synchronization_of_lasers.html<br>article on 'Synchronization of Lasers' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="./fiberpower.html?banner=RP_Fiber_Power_6"><img src="./img/fiberpower_ro3b.png" alt="relaxation oscillations" style="margin-bottom:8px"></a>
+<p>Evolution of output power and gain when an Yb-doped fiber laser is switched on. One can see the relaxation oscillations, with convergence towards the steady state. Each red or gray segment corresponds to 0.2&nbsp;&mu;s.</p>
+<p>This diagram has been made with the <a href="./fiberpower.html?banner=RP_Fiber_Power_6"><b>RP Fiber Power</b></a> software.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="ruOzLWZUZL970kQah2zELA==">shownbanner = "RP Fiber Power 6";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Field Guide on Fiber Optics</h2>
+<p>A quick introduction to fiber optics:</p>
+<ul>
+<li>basics of optical fibers</li>
+<li>fiber nonlinearities and their effects</li>
+<li>passive fibers for data transmission</li>
+<li>photonic crystal fibers</li>
+<li>large mode area fibers</li>
+<li>passive fiber-optic components</li>
+<li>active fiber devices: fiber amplifiers and lasers</li>
+</ul>
+<p style="text-align:center;"><a href="http://spie.org/x648.html?product_id=853722"><img src="./img/fg_fibers.png" alt="FG Fiber Optics"></a></p>
+<p>Note that we have also published a <a href="./passive_fiber_optics.html?banner=FG_Fiber_Optics">free tutorial on fiber optics</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="ruOzLWZUZL970kQah2zELA==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/synchronization_of_lasers.html"
+    },
+    "headline": "Synchronization of Lasers",
+    "image": "https://www.rp-photonics.com/previews/synchronization_of_lasers.png",
+    "datePublished": "2016-03-11",
+    "dateModified": "2020-03-14",
+    "description": "The synchronization of lasers means the synchronization of light pulses generated with different lasers. This implies that the light pulses must have a very small relative timing jitter.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter S",
+      "item": "https://www.rp-photonics.com/encyclopedia_s.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "synchronization of lasers",
+      "item": "https://www.rp-photonics.com/synchronization_of_lasers.html"
+    }]}
+}
+</script>
+</body>
+</html>

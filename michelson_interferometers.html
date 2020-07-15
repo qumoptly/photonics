@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-0ivZxJmlyGvUb12DKyBJpg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Michelson interferometers, operation principle, arm length difference, phase difference, distance measurements, accuracy, applications</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/michelson_interferometers.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Michelson interferometers are frequently used for highly precise distance and sensing. For example, one may monitor the movement of machine parts with a resolution far better than 1&nbsp;&mu;m.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="Michelson interferometers, operation principle, arm length difference, phase difference, distance measurements, accuracy, applications">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Michelson Interferometers">
+<meta property="og:description" content="Michelson interferometers are frequently used for highly precise distance and sensing. For example, one may monitor the movement of machine parts with a resolution far better than 1&nbsp;&mu;m.">
+<meta property="og:url" content="https://www.rp-photonics.com/michelson_interferometers.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/michelson_interferometers.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Michelson interferometers are frequently used for highly precise distance and sensing. For example, one may monitor the movement of machine parts with a resolution far better than 1&nbsp;&mu;m.">
+<meta name="twitter:title" content="Michelson Interferometers">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/michelson_interferometers.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="0ivZxJmlyGvUb12DKyBJpg==">
+page="michelson_interferometers.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="0ivZxJmlyGvUb12DKyBJpg==">shownsponsors="eagleyard Photonics,Optikexpertisen"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_michelson_interferometers.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_m.html">letter M</a> &gt; <a href="michelson_interferometers.html">Michelson interferometers</a></p>
+<h1>Michelson Interferometers</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_michelson_interferometers.html?s=vbox">3 suppliers for Michelson interferometers</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_michelson_interferometers.html?s=vbox">List of suppliers for<br>Michelson interferometers</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: an interferometer with two separate arms and a single beam splitter</p>
+<p>More general terms: <a href="interferometers.html" title="optical devices utilizing the phenomenon of interference">interferometers</a>, <a href="optical_metrology.html" title="the science and technology of performing measurements with light">optical metrology</a> instruments</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Michelson-Interferometer</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a></p>
+<p><a href="encyclopedia_cite.html?article=Michelson%20interferometers">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>A Michelson interferometer, as invented by Albert Abraham Michelson in the late 19<sup>th</sup> century, is a very common type of <a href="interferometers.html" title="optical devices utilizing the phenomenon of interference">interferometer</a>, which is frequently used for measuring distances or their changes, but also in various other applications (see below).</p>
+<h2 class="togglediv">Interferometer Setup and Operation Principle</h2>
+<div>
+<p>Such an interferometer is usually operated with a <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a> as a quasi-<a href="monochromatic_light.html" title="light with a single optical frequency">monochromatic</a> light source, although this is not strictly required; the original invention by Michelson was done long before the first laser, and there are still important applications with other light sources, e.g. <a href="superluminescent_sources.html" title="optical sources based on superluminescence">superluminescent sources</a> in <a href="white_light_interferometers.html" title="interferometers using broadband light inputs">white light interferometers</a> of Michelson type.</p>
+<p>It is advantageous to have a single transverse mode <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a>, approximating a <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beam</a>.
+Typically, the <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a> is kept relatively small, but large enough to have a <a href="collimated_beams.html" title="laser beams with weak divergence">collimated beam</a> with roughly constant beam radius along the whole path.
+For that, the <a href="rayleigh_length.html" title="the distance from a beam waist where the mode radius increased by a factor square root of 2">Rayleigh length</a> should be at least as large as the total path length involved. </p>
+<figure>
+<img src="img/michelson_interferometers.png" alt="Michelson interferometer">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Three versions of Michelson interferometers.
+</figcaption>
+</figure>
+<p>A Michelson interferometer (see Figure&nbsp;1) contains a single <a href="beam_splitters.html" title="devices for splitting a laser beam into two or more beams">beam splitter</a> for separating and recombining the beams.
+There are two <em>interferometer arms</em> (each one extending from the beam splitter to an end mirror), which are completely separated in this design.
+The beams are aligned such that the overlap of the two beams going towards the <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a> is as good as possible.
+Ideally, one has two beams with equal complex amplitude profiles (e.g. <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beams</a> with equal <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a>), going along the same axis.
+In that case, one does not observe a fringe pattern at the detector, but rather a beam having a profile with constant shape and only variable power.</p>
+<p>The beam splitter can be a half-silvered mirror, for example, or a <a href="dielectric_mirrors.html" title="mirrors consisting of multiple thin layers of different transparent optical materials">dielectric mirror</a>.
+Its <a href="reflectivity.html" title="the ratio of reflected optical power to the incident optical power at a surface">reflectivity</a> is normally chosen to be around 50&thinsp;&#37;.</p>
+<p>In the simplest implementation with ordinary end <a href="mirrors.html" title="devices which reflect light">mirrors</a> (Figure&nbsp;1, top), each beam may exactly be reflected back in itself, which however may be problematic for the light source; many lasers are sensitive to optical feedback, which may e.g. destabilize their operation.</p>
+<p>Therefore, one may introduce a slight tilt of the two end mirrors (Figure&nbsp;1, middle), such that the reflected beams meet on a slightly separate spot on the beam splitter, and feedback into the light source is avoided.
+This also allows one to get access to both output beams without employing a <a href="faraday_isolators.html" title="optical isolators based on the Faraday effect">Faraday isolator</a>, for example.
+Note, however, that perfect overlap of the two beams going towards the detector is possible only for instruments with equal arm lengths, and one somewhat loses beam overlap when simply translating an end mirror.</p>
+<aside class="callout blue">By using retroflectors instead of ordinary mirrors, one can substantially reduced the alignment sensitivity.</aside>
+<p>Another possibility is to use <a href="retroreflectors.html" title="optical devices which reflect light in a direction which is parallel to the incident beam">retroreflectors</a> (Figure&nbsp;1, bottom), where perfect alignment is possible for any arm lengths.
+This also has the often essential advantage that the interferometer is fairly insensitive to slight angular misalignment of the retroreflectors, which essentially causes only a slight lateral shift but no change in beam direction.</p>
+<p>If perfect alignment is not possible, i.e., some fringe pattern on the detector side is unavoidable (e.g. for large variations of arm lengths due to <a href="beam_divergence.html" title="a measure for how fast a laser beam expands far from its focus">beam divergence</a>), the active area of the photodetector should be so small that one detects only the center of the pattern, for example.
+Otherwise, the interference signal would be washed out.</p>
+</div>
+<h2 class="togglediv">Output Signal</h2>
+<div>
+<p>The beam going to the detector has two contributions, one from each interferometer arm.</p>
+<p>In the simplest case, which one often tries to realize in practice, both contributing beams have equal beam axes and equal complex amplitude profiles, apart from a possible difference in <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">optical phase</a>.
+Neglecting parasitic power losses at the beam splitter (with reflectivity <span class="eqn_il"><i>R</i></span>) and the end mirrors, we can first calculate the optical power getting to the detector when the beam path corresponding to the reflector at the top is blocked: it is <span class="eqn_il"><i>P</i><sub>laser</sub>&thinsp;&middot;&thinsp;(1&thinsp;&minus;&thinsp;<i>R</i>)&thinsp;&middot;&thinsp;<i>R</i></span>, because the beam first has power losses due to transmission through the beam splitter and later upon reflection.
+For the other arm, we obtain the same result, only we first have reflection and then transmission.
+The corresponding complex amplitudes are proportional to the square roots of the powers.
+The total power going to the detector is then, if we also assume <a href="monochromatic_light.html" title="light with a single optical frequency">monochromatic</a> light:</p>
+<div class="eqn"><img src="eqn/mi_p_det.gif" width="437" height="34" alt="output signal of Michelson interferometer"></div>
+<p>where <span class="eqn_il"><span class="greek">&delta;</span><span class="greek">&phi;</span></span> is the phase difference of the contributions from both arms.
+For <span class="eqn_il"><i>R</i></span> = 0.5, we obtain</p>
+<div class="eqn"><img src="eqn/mi_p_det05.gif" width="146" height="41" alt="output signal of Michelson interferometer"></div>
+<p>and see that we get between zero power and the full laser power going to the detector (i.e., perfect interference contrast), depending on the relative phase shift between the interferometer arms.
+For <span class="eqn_il"><i>R</i></span> &ne; 0.5, the interference signals gets weaker, but this is not a critical parameter for the interference contrast.
+Imperfect alignment of interferometer, however, can reduce the interference contrast.</p>
+<p>It is normally assumed that the phase difference changes by <span class="eqn_il">2<span class="greek">&pi;</span></span> when the arm length difference changes by half a wavelength (note the double pass).
+This is not exactly the case, however, since when does not have plane waves propagating in the instrument (see below).</p>
+<aside class="callout green">What happens for operation with non-mono&shy;chro&shy;matic light?</aside>
+<p>If the light source is not monochromatic, one will generally not be able to achieve perfect destructive or constructive interference.
+A relatively simple calculation can be done for a light source with a Gaussian <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a>, and the result is that the interference signal obtains an additional Gaussian factor, which reduces the interference contrast with increasing arm length difference.
+The larger the bandwidth of the light source, the smaller needs to be the arm length difference to obtain a strong interference contrast.</p>
+<p>Michelson originally used a broadband light source in the famous Michelson&ndash;Morley experiment, so that he had to build an interferometer with close to zero arm length difference.</p>
+</div>
+<h2 class="togglediv">Data Processing for Distance Measurements</h2>
+<div>
+<p>It is relatively simple to measure changes of an arm length if it is known in which direction that change occurs.
+Essentially, one then only has to count the oscillations of the interference signal; each oscillation period corresponds to an arm length change of half the optical <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>.
+Of course, one can greatly improve the accuracy by not only counting the number of oscillation cycles, but computing accurate phase values; it is often possible that way to determine length changes with an accuracy which is of the order of 1&thinsp;/&thinsp;100 of the wavelength.</p>
+<p>There are various ways for reliably determining arm length changes even if the direction of movement is not known in advance.
+For example, one can operate an interferometer with two or more substantially different wavelengths, generating detector signals for each one in order to lift the data ambiguity.
+Other methods are based on modulating the arm length difference or the laser frequency in order to retrieve additional information from the resulting modulated detector signal.</p>
+</div>
+<h2 class="togglediv">Using a Compensating Plate</h2>
+<div>
+<p>The optical setups as shown in Figure&nbsp;1 exhibit an asymmetry related to the beam splitter, which typically has a reflecting coating on one side.
+For the upper arm, the light goes through the beam splitter plate once, while for the right arm there are two passages through the plate.
+This asymmetry may cause problems due to the <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> of the plate, when a non-monochromatic light source is used.
+It may be compensated by inserting into the upper arm a compensating plate of suitable thickness, made from the same material as the beam splitter <a href="mirror_substrates.html" title="substrates on which coatings for laser mirrors can be deposited">substrate</a>.
+That also compensates the temperature dependence.</p>
+</div>
+<h2 class="togglediv">Factors Degrading the Accuracy of Distance Measurements</h2>
+<div>
+<p>Accurate distance measurements require a light source with an accurately stabilized optical <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a> or <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">frequency</a>.
+Therefore, one sometimes needs to use special techniques for the <a href="stabilization_of_lasers.html" title="measures applied to lasers in order to improve their stability in terms of output power, optical frequency, or other quantities">stabilization of lasers</a>.</p>
+<p>Interference signals are affected by changes of both arm lengths.
+One often tries to keep the reference arm length as precisely constant as possible.
+This can be achieved with a careful mechanical construction based on materials (e.g. certain glass ceramics) with a very low coefficient of thermal expansion.</p>
+<p>Mechanical vibrations can also seriously affect the operation of such an interferometer.
+Therefore, Michelson interferometers often need to be carefully shielded against vibrations, and constructed with a rigid base plate and robust <a href="opto_mechanics.html" title="mechanical elements used in optics">opto-mechanics</a>.
+In Michelson's original experiment, the whole interferometer setup was floating in a trough of mercury.</p>
+<p>The optical phase differences are not exactly as calculated for <a href="plane_waves.html" title="waves with plane wavefronts">plane waves</a>, since in reality one uses light beams with finite transverse extension.
+For <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beams</a>, for example, one has the additional <a href="gouy_phase_shift.html" title="an additional phase shift occurring in the propagation of focused Gaussian beams">Gouy phase shift</a>, which can be relevant for highly accurate measurements.</p>
+</div>
+<h2 class="togglediv">Examples for Applications of Michelson Interferometers</h2>
+<div>
+<h3 class="togglediv">Distance Measurements</h3>
+<div>
+<p>A typical application is the measurement of length changes with methods as explained above.
+For example, one may precisely monitor the movement of machine parts.</p>
+<p>Extremely high accuracies are required for the detection of gravitational waves e.g. in the LIGO experiment.
+Here, interferometer arm lengths of several kilometers are used, and changes of those by tiny fractions of an atom diameter need to be detected.</p>
+</div>
+<h3 class="togglediv">Michelson Objectives for Profilometers</h3>
+<div>
+<p>Michelson objectives are essentially small Michelson interferometers realized within <a href="microscope_objectives.html" title="the optical component of a microscope which is next to the observed object">microscope objectives</a> and are used in some kinds of <a href="optical_profilometers.html" title="optical non-contact instruments for precisely measuring surface profiles">optical profilometers</a>.</p>
+</div>
+<h3 class="togglediv">Optical Coherence Tomography</h3>
+<div>
+<p>Some Michelson interferometers are intentionally operated with a very broadband light source, so that an interference contrast occurs only near zero arm length difference, as explained above.
+This is utilized in <a href="optical_coherence_tomography.html" title="an optical imaging technique where longitudinal resolution is achieved based on interference effects with low-coherence light">optical coherence tomography</a>, for example.</p>
+</div>
+<h3 class="togglediv">Spectral Measurements</h3>
+<div>
+<p>By recording the interference signal during a linear scan of an arm length, one can determine the optical <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a> of the light source.
+This is the principle of a <a href="wavemeters.html" title="devices for precise measurements of laser wavelengths">wavemeter</a>.
+For high accuracy, a second interference signal from a highly stabilized reference laser is often used.
+The same basic principle can be utilized for <a href="fourier_transform_spectroscopy.html" title="a method for spectroscopy rare an optical spectrum is computed from raw data with a Fourier transform">Fourier transform spectrometers</a>, which can measure the <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectra</a> (and thus the temporal <a href="coherence.html" title="a fixed phase relationship between the electric field values at different locations or at different times">coherence</a>) also of <a href="polychromatic_light.html" title="light with multiple optical frequencies">polychromatic</a> light sources.</p>
+</div>
+<h3 class="togglediv">Chromatic Dispersion Measurements</h3>
+<div>
+<p>The <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> of optical elements, such as <a href="laser_mirrors.html" title="high-quality mirrors used in laser resonators and other optical setups">laser mirrors</a> or optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>, can be measured with white light interferometers of Michelson type.</p>
+</div>
+<h3 class="togglediv">Tunable Optical Filters</h3>
+<div>
+<p>A Michelson interferometer can also be used as a tunable <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical filter</a>, where the optical characteristics are adjusted through the arm length difference.</p>
+</div>
+<h3 class="togglediv">Scientific Applications</h3>
+<div>
+<p>The first application, done by Michelson himself, was a scientific one, essentially the search for evidence for the expected luminiferous aether as the medium in which light propagates.</p>
+<p>Gravitational wave detection has already been mentioned above.</p>
+</div>
+</div>
+<h2 class="togglediv">Similar Types of Interferometers</h2>
+<div>
+<p>There are many variations of the Michelson interferometer.
+For example, a <a href="twyman_green_interferometers.html" title="an interferometer similar to a Michelson interferometer, but with expanded beams">Twyman&ndash;Green interferometer</a> is essentially a Michelson interferometer illuminated with a <a href="monochromatic_light.html" title="light with a single optical frequency">monochromatic</a> point source.
+It is used for characterizing optical elements.</p>
+<p>Similar interferometers may also be made based on optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>.
+Here, the beam splitter is a directional <a href="fiber_couplers.html" title="fiber devices for coupling light from one or several input fibers to one or several output fibers, or from free space into a fiber">fiber coupler</a>.
+While such a fiber-based interferometer can be quite stable against vibrations and immune against misalignment, it can be more sensitive to temperature changes.
+Also, one needs to deal with problems related to random <a href="birefringence.html" title="the polarization dependence of the refractive index of a medium">birefringence</a> of the fiber &ndash; for example, by using <a href="polarization_maintaining_fibers.html" title="specialty optical fibers with strong built-in birefringence, preserving the properly oriented linear polarization of an input beam">polarization-maintaining fibers</a>.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_michelson_interferometers.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 3 suppliers for Michelson interferometers.</p>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="michelson_interferometers.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">A. Michelson and E. Morley, &ldquo;On the relative motion of the Earth and the luminiferous ether&rdquo;, American Journal of Science 34 (203), 333 (1887)</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="interferometers.html" title="optical devices utilizing the phenomenon of interference">interferometers</a>, <a href="twyman_green_interferometers.html" title="an interferometer similar to a Michelson interferometer, but with expanded beams">Twyman&ndash;Green interferometers</a>, <a href="white_light_interferometers.html" title="interferometers using broadband light inputs">white light interferometers</a>, <a href="wavemeters.html" title="devices for precise measurements of laser wavelengths">wavemeters</a>, <a href="fourier_transform_spectroscopy.html" title="a method for spectroscopy rare an optical spectrum is computed from raw data with a Fourier transform">Fourier transform spectroscopy</a><br>and other articles in the categories <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/michelson_interferometers.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fmichelson_interferometers.html&text=RP+Photonics+Encyclopedia+-+Michelson+interferometers%2C+operation+principle%2C+arm+length+difference%2C+phase+difference%2C+distance+measurements%2C+accuracy%2C+applications" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fmichelson_interferometers.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fmichelson_interferometers.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/michelson_interferometers.html"&gt;<br>Article on Michelson Interferometers&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/michelson_interferometers.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/michelson_interferometers.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/michelson_interferometers.html<br>article on 'Michelson Interferometers' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Website Tours</h2>
+<p>You can explore our website with the following tours:</p>
+<ul>
+<li><a href="./encyclopedia.html?tour=Encyclopedia">The RP Photonics Encyclopedia</a></li>
+<li><a href="./encyclopedia.html?tour=New_Encyclopedia_Articles">The latest encyclopedia articles</a></li>
+<li><a href="./buyersguide.html?tour=Using_the_Buyers_Guide">Using the Buyer's Guide</a></li>
+<li><a href="./buyersguide.html?tour=Advertising_in_the_Buyers_Guide">Advertising in the Buyer's Guide</a></li>
+</ul>
+<img src="./img/tour_bus.png" style="width:90%; margin:15px 0;" alt="&nbsp;">
+<p>You will be lead through a couple of pages, obtaining explanations on every one.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="0ivZxJmlyGvUb12DKyBJpg==">shownbanner = "tours";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>More to Read</h2>
+ <p>Here are some randomly selected encyclopedia articles &ndash; just to make you curious:</p>
+  <ul>
+<li><a href="./nanosecond_lasers.html">nanosecond lasers</a></li><li><a href="./propagation_losses.html">propagation losses</a></li><li><a href="./multimode_fibers.html">multimode fibers</a></li><li><a href="./laser_viewing_cards.html">laser viewing cards</a></li><li><a href="./oscillators.html">oscillators</a></li><li><a href="./afocal_optical_systems.html">afocal optical systems</a></li><li><a href="./beat_note.html">beat note</a></li><li><a href="./infrared_cameras.html">infrared cameras</a></li><li><a href="./rod_lenses.html">rod lenses</a></li><li><a href="./spectrometers.html">spectrometers</a></li><li><a href="./optical_parametric_amplifiers.html">optical parametric amplifiers</a></li><li><a href="./dioptric_power.html">dioptric power</a></li><li><a href="./soliton_mode_locking.html">soliton mode locking</a></li><li><a href="./slave_laser.html">slave laser</a></li><li><a href="./ylf_lasers.html">YLF lasers</a></li></ul>
+
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="0ivZxJmlyGvUb12DKyBJpg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/michelson_interferometers.html"
+    },
+    "headline": "Michelson Interferometers",
+    "image": "https://www.rp-photonics.com/previews/michelson_interferometers.png",
+    "datePublished": "2019-04-18",
+    "dateModified": "2020-03-14",
+    "description": "Michelson interferometers are frequently used for highly precise distance and sensing. For example, one may monitor the movement of machine parts with a resolution far better than 1&nbsp;&mu;m.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter M",
+      "item": "https://www.rp-photonics.com/encyclopedia_m.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Michelson interferometers",
+      "item": "https://www.rp-photonics.com/michelson_interferometers.html"
+    }]}
+}
+</script>
+</body>
+</html>

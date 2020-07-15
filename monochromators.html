@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-9p4HEbEAuLfUSXb2b4fzww=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - monochromators, Czerny-Turner, diffraction grating, prism, pass band, bandwidth, resolution, applications</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/monochromators.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Monochromators are essentially tunable optical bandpass filters, which in most cases are based on a diffraction grating. The typically used Czerny-Turner monochromator and its applications are explained.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="monochromators, Czerny-Turner, diffraction grating, prism, pass band, bandwidth, resolution, applications">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Monochromators">
+<meta property="og:description" content="Monochromators are essentially tunable optical bandpass filters, which in most cases are based on a diffraction grating. The typically used Czerny-Turner monochromator and its applications are explained.">
+<meta property="og:url" content="https://www.rp-photonics.com/monochromators.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/monochromators.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Monochromators are essentially tunable optical bandpass filters, which in most cases are based on a diffraction grating. The typically used Czerny-Turner monochromator and its applications are explained.">
+<meta name="twitter:title" content="Monochromators">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/monochromators.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="9p4HEbEAuLfUSXb2b4fzww==">
+page="monochromators.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo sponsor"></a> <a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="9p4HEbEAuLfUSXb2b4fzww==">shownsponsors="DataRay,Knight Optical"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_monochromators.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_m.html">letter M</a> &gt; <a href="monochromators.html">monochromators</a></p>
+<h1>Monochromators</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_monochromators.html?s=vbox">25 suppliers for monochromators</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.dynasil.com/product-category/mini-chrom-monochromators/?utm_source=rpp&utm_medium=prodlist&utm_campaign=rpp&utm_term=mcm-url" data-supplier="Dynasil" data-location="product-enc" data-keyword="monochromators" rel="nofollow" class="bg externallink"><img src="./bg/logos/dynasil.png" alt="Dynasil" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.kmlabs.com/product/xuus/" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="monochromators" rel="nofollow" class="bg externallink"><img src="./bg/logos/kapteyn_murnane_laboratories.png" alt="Kapteyn-Murnane Laboratories" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="http://www.ape-berlin.de/en/spectrum-slicer/" data-supplier="APE" data-location="product-enc" data-keyword="monochromators" rel="nofollow" class="bg externallink"><img src="./bg/logos/ape.png" alt="APE" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_monochromators.html?s=vbox">List of suppliers for<br>monochromators</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: optical devices which transmit only light in an adjustable small range of optical wavelengths</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Monochromatoren</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a></p>
+<p><a href="encyclopedia_cite.html?article=monochromators">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>A monochromator is a kind of tunable optical bandpass <a href="tunable_optical_filters.html" title="optical filters with tunable filter parameters, e.g. concerning center wavelength of pass band">filter</a>, which is in most cases tunable concerning the center wavelength of the pass band and possibly also concerning the transmission <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a> (at least in steps).
+Light outside the pass band is usually absorbed in the device.</p>
+<h2 class="togglediv">Light Input</h2>
+<div>
+<p>An optical monochromator has some kind of input port, which can have different forms:</p>
+<ul>
+<li>For receiving light from free space, it is typically a narrow <a href="optical_slits.html" title="narrow openings through which light can be transmitted">optical slit</a>, onto which the incoming light should be appropriately focused in the &ldquo;narrow&rdquo; direction, using a <a href="cylindrical_lenses.html" title="lenses which focus or defocus light only in one direction">cylindrical lens</a> if the input beam is <a href="collimated_beams.html" title="laser beams with weak divergence">collimated</a>, for example.</li>
+<li>Alternatively, the input light may be delivered through an optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fiber</a>.
+That way, one obtain substantial flexibility, e.g. for placing the monochromator.</li>
+</ul>
+</div>
+<h2 class="togglediv">Output</h2>
+<div>
+<p>The transmitted light is available at the output port, which is also often having the form of a slit, from which relatively divergent light is obtained.
+In some cases, the output is again coupled into an optical fiber.</p>
+</div>
+<h2 class="togglediv">Design Requirements</h2>
+<div>
+<p>The design of a monochromator should ideally fulfill a number of requirements; the most fundamental ones are:</p>
+<ul>
+<li>wide enough wavelength tunability</li>
+<li class="ta_left">high transmission in the pass band</li>
+<li class="ta_left">strong attenuation of light with any other wavelengths</li>
+<li class="ta_left">independence of the center wavelength on the direction or alignment of the input beam</li>
+</ul>
+<p>Typical devices e.g. based on gratings can transmit only 50&#37; of the input power or even substantially less, and they suppress light outside the pass band e.g. by 30&nbsp;dB, or sometimes substantially more.
+Their transmission band should depend only weakly on the alignment of the input beam.</p>
+<p>Additional useful features can be:</p>
+<ul>
+<li>adjustable bandwidth of the pass band</li>
+<li class="ta_left">a well defined filter function, e.g. with steep edges</li>
+<li class="ta_left">compact and robust design</li>
+</ul>
+</div>
+<h2 class="togglediv">Czerny&ndash;Turner Monochromator with a Diffraction Grating</h2>
+<div>
+<p>The classical type of optical monochromator is the Czerny&ndash;Turner monochromator, see Figure&nbsp;1.
+The input light is focused onto the input slit and therefore divergent after the slit.
+It is <a href="collimated_beams.html" title="laser beams with weak divergence">collimated</a> by a curved mirror and hits a <a href="diffraction_gratings.html" title="optical components containing a periodic structure which diffracts light">diffraction grating</a>, which deflects different wavelength components in slightly different directions.
+A second curved mirror translates different beam directions into different positions on the exit slit, so that only light in a narrow wavelength region can get through that slit.
+One may again collimate that light e.g. with an additional <a href="cylindrical_lenses.html" title="lenses which focus or defocus light only in one direction">cylindrical lens</a> after the monochromator.</p>
+<figure>
+<img src="img/czerny_turner_monochromator.png" alt="Czerny-Turner monochromator">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Setup of a Czerny&ndash;Turner monochromator.
+</figcaption>
+</figure>
+<aside class="callout blue">A careful design is needed for suppressing stray light, which is particularly important for applications like Raman spectroscopy.</aside>
+<p>The whole setup is placed in a box, containing additional <a href="optical_apertures.html" title="structures which limit the propagation of light">apertures</a> and <a href="black_coatings.html" title="coatings with strong light absorption">black</a> shields (not shown in the figure) in order to minimize effects of stray light, which might otherwise get to the output in irregular ways.
+Such measures are particularly important in cases where very weak light in the presence of intense light at another wavelength needs to be analyzed &ndash; for example, in <a href="raman_spectroscopy.html" title="optical spectroscopy based on spontaneous or stimulated Raman scattering">Raman spectroscopy</a>.
+In some cases, one needs to use a dual monochromator (i.e., two such devices in a sequence) to achieve better suppression.
+Another solution may be to use a notch filter before the monochromator for attenuating light at the unwanted wavelength.</p>
+<p>The diffraction grating is normally placed on a rotational stage; its position determines the center wavelength of the pass band.
+Some monochromators contain several gratings, often with different line spacings, for addressing different wavelength regions and/or working with different values of the transmission bandwidth.
+The rotational stage is often motorized, so that it can be computer-controlled.
+Some devices have a scale for the rotational position, possibly calibrated in nanometers.
+Simpler monochromators have a micrometer screw, and the user has to translate its scale readings into wavelength values.</p>
+<p>Unfortunately, the dependence of pass band wavelength or <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequency</a> on the rotational angle is nonlinear; that may have to be compensated with software &ndash; for example, on a computer or a built-in microprocessor.</p>
+<p>Spherical mirrors are actually problematic in conjunction with a large slit height due to their <a href="spherical_aberrations.html" title="optical aberrations resulting from spherical optical surfaces">spherical aberrations</a>.
+One may therefore either use toroidal collimating mirrors (a kind of <a href="aspheric_optics.html" title="optical elements with non-spherical surfaces">aspheric optics</a>) or curved slits to avoid such problems.</p>
+<aside class="callout">A wavelength resolution far better than 1&nbsp;nm is easily possible with a grating monochromator.</aside>
+<p>Typical achievable wavelength resolutions of such monochromators are about 0.01&nbsp;nm to 0.1&nbsp;nm.
+Devices with particularly high resolutions tend to be larger (using mirrors with long <a href="focal_length.html" title="a measure of how strongly an optical system focuses or defocuses light">focal length</a> and a grating with larger area); they also need to be built with high mechanical and thermal stability.
+Within some limits, relatively compact setups can be obtained by folding the beam path.</p>
+<p>There are modified types of monochromators, for example the Fastie&ndash;Ebert monochromator wit a common collimator/refocusing mirror, and devices with two gratings for better resolution.</p>
+<p>The quality of the diffraction grating can be important for the performance:</p>
+<ul>
+<li>Its diffraction efficiency determines the power losses.</li>
+</ul>
+<aside class="callout blue">Depending on the application, a blazed grating or a holographic grating may offer better performance.</aside>
+<ul>
+<li>If the diffraction is not concentrated on one particular diffraction order (typically the first one), one may not only achieve less power throughput, but also get parasitic transmission at additional wavelengths, leading to &ldquo;ghost signals&rdquo;; that is particularly relevant for broadband input light.
+In that respect, blazed gratings (a kind of ruled gratings) are better than <a href="holography.html" title="methods for recording and reconstructing three-dimensional images">holographic</a> gratings.</li>
+<li>Light <a href="scattering.html" title="processes where light is sent in other directions, usually but not always in random directions">scattering</a> on the grating should be as weak as possible, because otherwise one obtains some background transmission for any wavelengths.
+In that respect, holographic gratings are usually best.
+One may also suppress effects from additional diffraction orders with an additional prism.</li>
+</ul>
+<p>Based on these considerations, one can decide which type of diffraction grating is most appropriate for a particular application.</p>
+</div>
+<h2 class="togglediv">Prism Monochromators</h2>
+<div>
+<p>Similar monochromators as discussed above can be realized with a <a href="prisms.html" title="transparent optical devices which refract or reflect light">prism</a> instead of a diffraction grating; the transmission bandwidth is then substantially larger due to the smaller angular dispersion of a prism.
+On the other hand, a prism causes lower power losses and can be used in wider wavelength regions, e.g. for <a href="ultraviolet_light.html" title="invisible light with wavelengths shorter than &asymp;&thinsp;400&thinsp;&thinsp;nm">ultraviolet light</a>.</p>
+</div>
+<h2 class="togglediv">Optical Resonators</h2>
+<div>
+<p>Within a very limited range of optical frequencies, an <a href="optical_resonators.html" title="arrangements of optical components which allow a beam of light to circulate">optical resonator</a> can also serve as a monochromator, transmitting light only in resonance.
+The width of the usable frequency range is the <a href="free_spectral_range.html" title="frequency spacing of the axial modes of an optical resonator">free spectral range</a>, which depends on the around-trip time of light in the resonator.</p>
+</div>
+<h2 class="togglediv">Applications of Monochromators</h2>
+<div>
+<p>In the early times of optics, monochromators were often used for obtaining quasi-<a href="monochromatic_light.html" title="light with a single optical frequency">monochromatic light</a>.
+This was of course very inefficient in conjunction with a broadband light source, as required for generating widely tunable monochromatic light.
+For a fixed wavelength, one could use certain low-pressure <a href="gas_discharge_lamps.html" title="light sources which are based on an electrical discharge in an ionized gas or metal vapor">gas discharge lamps</a> and transmit one of the prominent emission lines.
+Nowadays, that application is somewhat less common, because it is often better to use a <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a> as quasi-monochromatic light source.
+Still, the principle is used e.g. in <a href="spectrophotometers.html" title="instruments for measuring the wavelength-dependent transmittance or reflectance of solutions or solid objects">spectrophotometers</a> for measuring the wavelength-dependent <a href="absorbance.html" title="the logarithm with base 10 of the inverse transmittance">absorbance</a> or <a href="reflectance.html" title="the ratio of reflected optical power to the incident optical power at some reflecting object">reflectance</a> of a sample, since a wideband <a href="tunable_lasers.html" title="lasers the output wavelengths of which can be tuned">tunable laser</a> is more difficult to make and use and is more expensive.</p>
+<p>Monochromators are often used in <a href="spectroscopy.html" title="methods where the interaction of light with matter is utilized, e.g. for detecting substances or measuring concentrations">spectroscopy</a>.
+A common application is in combination with a <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a>; with such a setup one can record the <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a> of a light source by recording the transmitted intensity while scanning the transmission band (<em>scanning</em> <a href="spectrometers.html" title="devices for separating spectral components"><em>spectrometer</em></a>).
+Without the exit slit, a monochromator may be used in a <a href="spectrographs.html" title="instruments for spectrally analyzing light">spectrograph</a>.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_monochromators.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 25 suppliers for monochromators. Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.ape-berlin.de/" data-supplier="APE" data-location="product-enc" data-keyword="monochromators" rel="nofollow" class="bg externallink" title="Visit the website of APE"><img src="./bg/logos/ape.png" alt="APE" class="supplierlogo"></a><a href="http://www.ape-berlin.de/en/spectrum-slicer/" data-supplier="APE" data-location="product-enc" data-keyword="monochromators" rel="nofollow" class="bg externallink" title="Visit the website of APE"><img src="./bg/products/ape/monochromators.png" alt="monochromators" class="product"></a><h3><a href="./bg/profiles/ape.html" title="See the profile of APE">APE</a></h3><p>The principle task of the spectrum slicer (or laser monochromator) <a href="http://www.ape-berlin.de/en/spectrum-slicer/" data-supplier="APE" data-location="product-enc" data-keyword="monochromators" rel="nofollow" class="externallink bg">pulseSlicer</a> is to cut out a very narrow spectral part of an ultrashort laser pulse. Essentially, it acts as a tunable bandpass filter. For example, it can be used as a simple solution for narrowing broadband laser pulses.</p><p>Features of our pulseSlicer:</p><p>- easily variable output bandwidth / pulse duration</p><p>- automatisation available</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.dynasil.com/" data-supplier="Dynasil" data-location="product-enc" data-keyword="monochromators" rel="nofollow" class="bg externallink" title="Visit the website of Dynasil"><img src="./bg/logos/dynasil.png" alt="Dynasil" class="supplierlogo"></a><a href="https://www.dynasil.com/product-category/mini-chrom-monochromators/?utm_source=rpp&utm_medium=prodlist&utm_campaign=rpp&utm_term=mcm-url" data-supplier="Dynasil" data-location="product-enc" data-keyword="monochromators" rel="nofollow" class="bg externallink" title="Visit the website of Dynasil"><img src="./bg/products/dynasil/monochromators.jpg" alt="monochromators" class="product"></a><h3><a href="./bg/profiles/dynasil.html" title="See the profile of Dynasil">Dynasil</a></h3><p>Optometrics, a Dynasil company, offers a family of compact, in-line <a href="https://www.dynasil.com/product-category/mini-chrom-monochromators/?utm_source=rpp&utm_medium=prodlist&utm_campaign=rpp&utm_term=mcm" data-supplier="Dynasil" data-location="product-enc" data-keyword="monochromators" rel="nofollow" class="externallink bg">Fastie-Ebert Mini-Chrom Monochromators</a> with a 74-mm focal length, ideally suited for general spectroscopy use as well as OEM system integration. The Mini-Chrom is specifically designed to minimize astigmatic aberrations, enhancing instrument resolution.</p><p>With over 30,000 sold, it has been a proven workhorse for reliable precision, and superior service life!</p><p>Several models are available including <a href="https://www.dynasil.com/product-category/mini-chrom-monochromators/standard-monochromator/?utm_source=rpp&utm_medium=prodlist&utm_campaign=rpp&utm_term=mcm-std" data-supplier="Dynasil" data-location="product-enc" data-keyword="monochromators" rel="nofollow" class="externallink bg">standard</a>, <a href="https://www.dynasil.com/product-category/mini-chrom-monochromators/digital-monochromator/?utm_source=rpp&utm_medium=prodlist&utm_campaign=rpp&utm_term=mcm-digital" data-supplier="Dynasil" data-location="product-enc" data-keyword="monochromators" rel="nofollow" class="externallink bg">digital</a>, <a href="https://www.dynasil.com/product-category/mini-chrom-monochromators/scanning-monochromator/?utm_source=rpp&utm_medium=prodlist&utm_campaign=rpp&utm_term=mcm-scanning" data-supplier="Dynasil" data-location="product-enc" data-keyword="monochromators" rel="nofollow" class="externallink bg">scanning</a> and <a href="https://www.dynasil.com/product-category/mini-chrom-monochromators/scanning-digital-monochromator/?utm_source=rpp&utm_medium=prodlist&utm_campaign=rpp&utm_term=mcm-scanning-digital" data-supplier="Dynasil" data-location="product-enc" data-keyword="monochromators" rel="nofollow" class="externallink bg">scanning digital</a>. View the <a href="https://www.dynasil.com/product-category/mini-chrom-monochromators/?utm_source=rpp&utm_medium=prodlist&utm_campaign=rpp&utm_term=mcm-model-comp" data-supplier="Dynasil" data-location="product-enc" data-keyword="monochromators" rel="nofollow" class="externallink bg">model comparison chart</a>.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.kmlabs.com/" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="monochromators" rel="nofollow" class="bg externallink" title="Visit the website of Kapteyn-Murnane Laboratories"><img src="./bg/logos/kapteyn_murnane_laboratories.png" alt="Kapteyn-Murnane Laboratories" class="supplierlogo"></a><a href="https://www.kmlabs.com/product/xuus/" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="monochromators" rel="nofollow" class="bg externallink" title="Visit the website of Kapteyn-Murnane Laboratories"><img src="./bg/products/kapteyn_murnane_laboratories/xuus.jpg" alt="monochromators" class="product"></a><h3><a href="./bg/profiles/kapteyn_murnane_laboratories.html" title="See the profile of Kapteyn-Murnane Laboratories">Kapteyn-Murnane Laboratories</a></h3><p>The <a href="https://www.kmlabs.com/product/xuus/" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="monochromators" rel="nofollow" class="externallink bg">XUUS monochromator beamline</a> allows the selection under vacuum of a single harmonic from the XUUS high-harmonic generation system.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="monochromators.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="monochromatic_light.html" title="light with a single optical frequency">monochromatic light</a>, <a href="tunable_optical_filters.html" title="optical filters with tunable filter parameters, e.g. concerning center wavelength of pass band">tunable optical filters</a>, <a href="spectrometers.html" title="devices for separating spectral components">spectrometers</a>, <a href="spectrophotometers.html" title="instruments for measuring the wavelength-dependent transmittance or reflectance of solutions or solid objects">spectrophotometers</a>, <a href="spectrographs.html" title="instruments for spectrally analyzing light">spectrographs</a>, <a href="diffraction_gratings.html" title="optical components containing a periodic structure which diffracts light">diffraction gratings</a>, <a href="prisms.html" title="transparent optical devices which refract or reflect light">prisms</a><br>and other articles in the categories <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/monochromators.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fmonochromators.html&text=RP+Photonics+Encyclopedia+-+monochromators%2C+Czerny-Turner%2C+diffraction+grating%2C+prism%2C+pass+band%2C+bandwidth%2C+resolution%2C+applications" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fmonochromators.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fmonochromators.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/monochromators.html"&gt;<br>Article on Monochromators&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/monochromators.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/monochromators.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/monochromators.html<br>article on 'Monochromators' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>You have found the Best Place for Your Banner &ndash; <em>Here!</em></h2>
+<p>Make your</p>
+<ul>
+<li><b>photonics product</b>,</li>
+<li><b>company or organization</b>,</li>
+<li><b>publication or event</b></li>
+</ul>
+<p>well known with an <a href="./marketing_banners.html?banner=your_banner">extra-wide<br>skyscraper banner</a> which will be displayed here (with a given probability per page view).</p>
+<div id="my_rot_box" class="rot_box" style="height:270px;">
+<div>
+<h2>Aspect 1: Huge Traffic</h2>
+<p>This website is <a href="./website_statistics.html?banner=your_banner">immensely popular</a> &ndash; see the <a href="./website_statistics.html?banner=your_banner">detailed statistical data</a>.</p>
+<p>For example, your banner gets &asymp;13,000 views per month if you choose 10% probability per page view.</p>
+</div>
+<div>
+<h2>Aspect 2: Audience</h2>
+<p>The users of this resource are mostly</p>
+<ul>
+<li><b>industry people</b></li>
+<li><b>researchers</b></li>
+</ul>
+<p>working on laser technology and related areas of photonics &ndash; exactly those you want to reach.</p>
+</div>
+<div>
+<h2>Aspect 3: Precise Targeting</h2>
+<p>You can even make the <b>display probability dependent on certain topics</b> &ndash; e.g., increase it for pages on lasers!</p>
+<p>With our <a href="./website_statistics.html?banner=your_banner">convenient selection tool</a>, this is easy to do.</p>
+<p>Which other photonics website can offer that?</p>
+</div>
+<div>
+<h2>Aspect 4: High-quality Environment</h2>
+<p>Get your banner placed on <b>pages with high-quality content</b>, rather than on pages which are crowed with ads! Our pages give visibility <em>just for you!</em></p>
+</div>
+<div>
+<h2>Aspect 5: Transparency</h2>
+<p>On this website, you know exactly on what kind of pages your banner is placed: mostly <a href="./encyclopedia.html?banner=your_banner">encyclopedia articles</a> and <a href="./buyersguide.html?banner=your_banner">buyer's guide pages</a> &ndash; not some undefined bunch of materials.</p>
+<p>We also publish <a href="./website_statistics.html?banner=your_banner">clear statistical data</a>.</p>
+</div>
+<div>
+<h2>Aspect 6: Convenience</h2>
+<p>Our <a href="./website_statistics.html?banner=your_banner">convenient tool</a> makes it easy for you to define the placement of your banner and to find out the cost.</p>
+<p>Also, we deliver a <b>diligent and flexible service</b>, helping you to save time. We even offer to assemble your animated banner!</p>
+</div>
+<div>
+<h2>Aspect 7: Competitive Pricing</h2>
+<p>Compare our prices with those at other places: we deliver better value for money!</p>
+</div>
+</div>
+<table class="rot_box_buttons">
+<tr><td>
+<button id="backwardbutton" title="move backward">&lt;</button>
+<button id="stopbutton" title="stop movement">| |</button>
+<button id="forwardbutton" title="move forward">&gt;</button></td></tr>
+</table>
+<script type="text/Javascript" nonce="9p4HEbEAuLfUSXb2b4fzww==">
+  period = 15000
+  hh = parseInt($("#my_rot_box").css("height")) + 30;
+  $("#my_rot_box").children().css("height", hh);
+  var ns = $("#my_rot_box").children().length;
+  var pp = 0;
+  function MoveContent(t_move, t_fade) {
+    var y = (hh + 4) * pp;
+    if (t_fade != 0)
+      $("#my_rot_box").fadeTo(t_fade, 0.5).animate({scrollTop:y}, t_move, "swing").fadeTo(t_fade, 1);
+    else
+      $("#my_rot_box").animate({scrollTop:y}, t_move, "swing");
+    }
+  $("#backwardbutton").click(function() {
+    clearInterval(timer); $("#stopbutton").text("--"); if (pp > 0) pp--; MoveContent(200, 0);
+  });
+  $("#stopbutton").click(function() {
+    if ($("#stopbutton").text() == "| |") {
+      clearInterval(timer);
+      $("#stopbutton").text("---");
+      $("#stopbutton").attr("title", "restart automatic movement");
+    }
+    else {
+      $("#stopbutton").text("| |");
+      timer = setInterval(advance, period);
+      $("#stopbutton").attr("title", "stop automatic movement");
+    }
+  });
+  $("#forwardbutton").click(function() {
+    clearInterval(timer); $("#stopbutton").text("--"); if (pp < ns - 1) pp++; MoveContent(200, 0);
+  });
+  function advance() {
+    pp++;  if (pp == ns) pp = 0;
+    if (pp == 0) t = 1800; else t = 600;
+    MoveContent(t, 1800);
+    }
+  timer = setInterval(advance, period);
+</script>
+<div style="border:1px solid #888; box-shadow:2px 5px 5px #AAA; padding:8px;">
+<p>Visit our <a href="./marketing_banners.html?banner=your_banner">page on advertising banners</a> to get more details!</p>
+</div>
+</div>
+</aside>
+<script type="text/javascript" nonce="9p4HEbEAuLfUSXb2b4fzww==">shownbanner = "your banner";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Latest Encyclopedia Articles</h2>
+<p>Here are the latest encyclopedia articles:</p>
+<ul>
+<li class="tight"><a href="./variable_reflectivity_mirrors.html">variable reflectivity mirrors</a></li>
+<li class="tight"><a href="./color_centers.html">color centers</a></li>
+<li class="tight"><a href="./excimer_lamps.html">excimer lamps</a></li>
+<li class="tight"><a href="./multimode_beams.html">multimode beams</a></li>
+<li class="tight"><a href="./channel_waveguides.html">channel waveguides</a></li>
+<li class="tight"><a href="./optical_crystals.html">optical crystals</a></li>
+<li class="tight"><a href="./standing_wave_resonators.html">standing-wave resonators</a></li>
+<li class="tight"><a href="./nonlinear_absorption.html">nonlinear absorption</a></li>
+<li class="tight"><a href="./passive_fibers.html">passive fibers</a></li>
+<li class="tight"><a href="./active_fibers.html">active fibers</a></li>
+<li class="tight"><a href="./oem_laser_modules.html">OEM laser modules</a></li>
+<li class="tight"><a href="./industrial_lasers.html">industrial lasers</a></li>
+<li class="tight"><a href="./scientific_lasers.html">scientific lasers</a></li>
+<li class="tight"><a href="./flint_glasses.html">flint glasses</a></li>
+<li class="tight"><a href="./crown_glasses.html">crown glasses</a></li>
+<li class="tight"><a href="./sodium_vapor_lamps.html">sodium vapor lamps</a></li>
+<li class="tight"><a href="./metal_vapor_lamps.html">metal vapor lamps</a></li>
+<li class="tight"><a href="./mercury_vapor_lamps.html">mercury vapor lamps</a></li>
+<li class="tight"><a href="./white_light.html">white light</a></li>
+<li class="tight"><a href="./cie_standard_illuminants.html">CIE standard illuminants</a></li>
+</ul>
+
+<p>The encyclopedia already contains 948 articles.</p>
+<p>See also the regularly appearing articles of the <a href="./spotlight.html?banner=new_articles">The Photonics Spotlight</a> and the <a href="./software_news.html?banner=new_articles">RP Photonics Software News</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="9p4HEbEAuLfUSXb2b4fzww==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/monochromators.html"
+    },
+    "headline": "Monochromators",
+    "image": "https://www.rp-photonics.com/previews/monochromators.png",
+    "datePublished": "2019-03-29",
+    "dateModified": "2020-03-14",
+    "description": "Monochromators are essentially tunable optical bandpass filters, which in most cases are based on a diffraction grating. The typically used Czerny-Turner monochromator and its applications are explained.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter M",
+      "item": "https://www.rp-photonics.com/encyclopedia_m.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "monochromators",
+      "item": "https://www.rp-photonics.com/monochromators.html"
+    }]}
+}
+</script>
+</body>
+</html>

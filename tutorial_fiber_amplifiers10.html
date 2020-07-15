@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-T7/ATALRBUuXW50vMe2rmw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Tutorial &ldquo;Fiber Amplifiers&rdquo;, Part 10: multi-stage amplifiers, different mode areas, gain saturation, pumping, ASE suppression, gain flattening, protection, monitoring</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/tutorial_fiber_amplifiers10.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-04-05">
+<meta name="description" content="Tutorial on fiber amplifiers. The tenth part discusses various aspects of multi-stage fiber amplifiers.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="tutorial, fiber amplifiers, multi-stage amplifiers, different mode areas, gain saturation, pumping, ASE suppression, gain flattening, protection, monitoring">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="T7/ATALRBUuXW50vMe2rmw==">
+page="tutorial_fiber_amplifiers10.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/encyclopedia_a.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="T7/ATALRBUuXW50vMe2rmw==">shownsponsors="DataRay"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials" class="selected"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_tutorials.html">Tutorials</a> &gt; <a href="tutorial_fiber_amplifiers.html">Fiber amplifiers</a> &gt; <a href="tutorial_fiber_amplifiers10.html">Part 10</a></p>
+<h1>Fiber Amplifiers</h1>
+<p>This is part 10 of a <a href="tutorial_fiber_amplifiers.html">tutorial on fiber amplifiers</a> from <a href="paschotta.html">Dr. Paschotta</a>. The tutorial has the following parts:</p>
+<div class="article_parts"><span style='float:left; margin:5px 25px 5px 10px; font-size:60px; color:#888; font-weight:bold; line-height:100%;'>10</span>
+<p>1:&nbsp;<a href="tutorial_fiber_amplifiers1.html">Rare earth ions in fibers</a>, 2:&nbsp;<a href="tutorial_fiber_amplifiers2.html">Gain and pump absorption</a>, 3:&nbsp;<a href="tutorial_fiber_amplifiers3.html">Self-consistent solutions for the steady state</a>, 4:&nbsp;<a href="tutorial_fiber_amplifiers4.html">Amplified spontaneous emission</a>, 5:&nbsp;<a href="tutorial_fiber_amplifiers5.html">Forward and backward pumping</a>, 6:&nbsp;<a href="tutorial_fiber_amplifiers6.html">Double-clad fibers for high-power operation</a>, 7:&nbsp;<a href="tutorial_fiber_amplifiers7.html">Fiber amplifiers for nanosecond pulses</a>, 8:&nbsp;<a href="tutorial_fiber_amplifiers8.html">Fiber amplifiers for ultrashort pulses</a>, 9:&nbsp;<a href="tutorial_fiber_amplifiers9.html">Noise of fiber amplifiers</a>, 10:&nbsp;<span style="text-decoration:underline;">Multi-stage fiber amplifiers</span>
+</p>
+</div>
+<h2 class="togglediv">Part 10: Multi-stage Fiber Amplifiers</h2>
+<div>
+<p>It has been mentioned already in previous parts of this tutorial, e.g. on <a href="tutorial_fiber_amplifiers7.html">nanosecond pulse</a> and <a href="tutorial_fiber_amplifiers8.html">ultrashort pulse</a> amplifiers, that one can use <em>multi-stage amplifiers</em>, i.e., amplifier setups containing multiple active fibers.</p>
+<p>Essentially, there are two different kinds of reasons for using multi-stage amplifiers:</p>
+<ul>
+<li>One may want to use different kinds of active fibers in a setup &ndash; for example, one with small <a href="effective_mode_area.html" title="effective mode area: ">effective mode area</a> for a preamplifier and a <a href="double_clad_fibers.html" title="double-clad fibers: ">double-clad</a> <a href="large_mode_area_fibers.html" title="large mode area fibers: ">large mode area fiber</a> for the final amplifier stage.</li>
+<li>In many cases, one needs to insert optical components between two stages &ndash; for example, <a href="fiber_couplers.html" title="fiber couplers: ">pump couplers</a>, <a href="optical_filters.html" title="optical filters: ">optical filters</a> and switches.</li>
+</ul>
+<p>In the following, we look more in detail at various important aspects of multi-stage amplifiers.</p>
+<h3 class="togglediv">Need for Different Mode Areas</h3>
+<div>
+<p>Fiber amplifier systems often provide a very high gain of several tens of <a href="decibel.html" title="decibel: ">decibels</a>.
+This implies that different parts of the active fiber(s) see very different amounts of optical powers or <a href="pulse_energy.html" title="pulse energy: ">pulse energies</a>.</p>
+<p>There are then several reasons why a large mode area is needed for the last stage (a power amplifier stage):</p>
+<ul>
+<li>Nonlinear effects would be excessive for too low mode areas.</li>
+<li class="ta_left">When using a <a href="double_clad_fibers.html" title="double-clad fibers: ">double-clad fiber</a> for high average powers, a large mode area deceases the cladding/core area ratio and thus improves pump absorption, so that a shorter fiber length can be used; that further reduces nonlinear effects.</li>
+<li class="ta_left ta_left">Further, one avoids or reduces problems with excessive gain saturation (and resulting pulse shape distortions) by high-energy pulses.
+Finally, one also avoids problems resulting from excessive gain (e.g., strong <a href="amplified_spontaneous_emission.html" title="amplified spontaneous emission: ">amplified spontaneous emission</a>, see <a href="tutorial_fiber_amplifiers4.html">part 4</a>) if a high energy needs to be stored in the fiber.</li>
+</ul>
+<p>On the other hand, a smaller mode area remains preferable for a low-power preamplifier:</p>
+<ul>
+<li>We like to have a high <a href="gain_efficiency.html" title="gain efficiency: ">gain efficiency</a> in order to obtain a high amplifier <a href="gain.html" title="gain: ">gain</a> while using a small pump power.</li>
+<li>The power conversion efficiency gets higher in the low average power regime.</li>
+<li>We can use strictly <a href="single_mode_fibers.html" title="single-mode fibers: ">single-mode fibers</a> with robust guiding, allowing tight coiling for a compact setup while keeping the beam shape stable.</li>
+<li>The above mentioned reasons for higher mode areas do not apply for a low-power preamplifier: there are no (or at least smaller) issues with nonlinearities, gain saturation or ASE.</li>
+</ul>
+<p>Typically, the power amplifier stage has a substantially lower gain but provides the largest part of the output power.</p>
+</div>
+<h3 class="togglediv">Need for Different Pumping Options</h3>
+<div>
+<p>When using two different fibers as explained above, one may want to minimize the pump power for the preamplifier by pumping that fiber directly into the core.
+At a low power level, this is easy to do, e.g. using a <a href="fiber_coupled_diode_lasers.html" title="fiber-coupled diode lasers: ">fiber-coupled diode laser</a> and a dichroic <a href="fiber_couplers.html" title="fiber couplers: ">fiber coupler</a>.
+That option, however, may not be suitable for high powers as needed at the end; there, one wants to do cladding pumping, i.e., inject pump light into the pump cladding of a <a href="double_clad_fibers.html" title="double-clad fibers: ">double-clad fiber</a> (see <a href="tutorial_fiber_amplifiers6.html">part 6</a>).
+Obviously, that is at least easier when using two different amplifier stages with accordingly different fibers.</p>
+</div>
+<h3 class="togglediv">Injecting Additional Pump Light</h3>
+<div>
+<p>With fibers, we are sometimes short of ends.
+More fibers help by having more ends.
+In a two-stage amplifier, for example, we already have four fiber ends into which we can inject pump power.
+This is welcome, for example, if we couldn't get enough pump power launched with two pump diodes only.</p>
+</div>
+<h3 class="togglediv">ASE Suppression</h3>
+<div>
+<p>In order to avoid trouble with excessive <a href="amplified_spontaneous_emission.html" title="amplified spontaneous emission: ">amplified spontaneous emission</a> (ASE, see <a href="tutorial_fiber_amplifiers4.html">part 4</a>), a first step is to design for a <a href="gain.html" title="gain: ">gain</a> which is not higher than needed.
+In particular, the <a href="gain_efficiency.html" title="gain efficiency: ">gain efficiency</a> should not be made higher than necessary.
+Sometimes, however, we just need a very high gain of 60&nbsp;dB, for example.
+That in a single amplifier stage would then lead to excessive ASE; more precisely, before we reaching that gain we would convert much of the pump power into ASE power.</p>
+<p>Multi-stage amplifiers allow one to solve that problem by ASE elimination between the stages.
+Essentially, one strongly attenuates ASE there, so that it has to built up &ldquo;from scratch&rdquo; in the next stage.
+There are different options for that:</p>
+<ul>
+<li>If only narrowband signals or pulses need to be amplified, one can simply use a narrowband optical bandpass <a href="optical_filters.html" title="optical filters: ">filter</a> which transmits the useful radiation (signals or pulses) while rejecting most of the ASE.
+If one can use an interference filter with a 1-nm filter bandwidth, for example, that may reduce the unwanted ASE powers already by roughly an order of magnitude.
+For femtosecond pulses, however, which are intrinsically broadband, this is a less effective method, as a larger filter bandwidth is required.</li>
+<li>A <a href="faraday_isolators.html" title="Faraday isolators: ">Faraday isolator</a> allows one to strongly suppress ASE in backward direction.
+That is particularly important since a preamplifier will usually be more sensitive to ASE than a power amplifier stage.</li>
+<li>For pulsed operation, one may also use time gating with an optical switch between the stages, which is opened only for a short time interval around each pulse to be amplified.
+(For example, an <a href="acousto_optic_modulators.html" title="acousto-optic modulators: ">acousto-optic modulator</a> or an <a href="electro_optic_modulators.html" title="electro-optic modulators: ">electro-optic modulator</a> can be used.)
+That method does not avoid possible problems with ASE directly around the pulses, which may disturb some application, but it reduces the ASE power loss in the system.</li>
+<li>If the signals are well polarized throughout the device, one may also use <a href="polarizers.html" title="polarizers: ">polarizers</a> between the stages to suppress ASE in the unused polarized direction.
+However, that measure is less common, as it achieves less than the others and the signals are often unpolarized.</li>
+</ul>
+<p>In some cases, one has to combine two or more of these options in order to achieve sufficient ASE suppression.</p>
+</div>
+<h3 class="togglediv">Minimizing Amplifier Noise</h3>
+<div>
+<p>A low <a href="noise_figure.html" title="noise figure: ">noise figure</a> of an amplifier (see <a href="tutorial_fiber_amplifiers9.html">part 9</a>) may be difficult to achieve with a high-power double-clad fiber amplifier.
+This is because such devices usually operate with a fairly low excitation density at the input end, particularly when being backward-pumped.
+However, if one combines such a power amplifier with a core-pumped preamplifier, the overall device can have a very good noise figure.</p>
+</div>
+<h3 class="togglediv">Protection and Monitoring</h3>
+<div>
+<p>A Faraday circulator (i.e., a <a href="faraday_isolators.html" title="Faraday isolators: ">Faraday isolator</a> with an additional output port) allows one to extract any signal light coming back from the power amplifier, for example as a result of back-reflection from the application.
+In that way, one may avoid damage of the preamplifier or the seed source.
+Note that back-reflected light would be further amplified there.
+And a Faraday isolator at the output may not work since it would have to withstand high optical powers.
+(Of course, it feedback gets strong enough, it may also well kill a circulator between the stages.)</p>
+<p>Also, one may monitor power levels between amplifier stages, e.g. in order to switch off the device when detecting bad operation conditions, such as too strong optical feedback.</p>
+</div>
+<h3 class="togglediv">Gain Flattening</h3>
+<div>
+<p>For some applications such as <a href="optical_fiber_communications.html" title="optical fiber communications: ">optical fiber communications</a> with <a href="wavelength_division_multiplexing.html" title="wavelength division multiplexing: ">wavelength division multiplexing</a>, one requires amplifiers with a &ldquo;flat&rdquo; gain, i.e. with low variations of gain within some spectral window.
+This is often done by inserting some gain-flattening filter, which provides higher optical losses in wavelength regions where the gain would be too high.</p>
+<p>But where to put such a filter?
+If we put it in front of the amplifier, it will spoil the <a href="noise_figure.html" title="noise figure: ">noise figure</a> (see <a href="tutorial_fiber_amplifiers9.html">part 9</a>).
+If we put it behind, it degrades the power conversion efficiency.
+Both problems can be avoided by putting the filter between two amplifier stages, where neither noise issues nor power losses are critical.</p>
+<p>Gain flattening may also be facilitated by combining two fibers with different chemical compositions of the <a href="fiber_core.html" title="fiber core: ">fiber core</a>, leading to different gain spectra and an overall broader gain spectrum.</p>
+</div>
+</div>
+<hr>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="tutorial_fiber_amplifiers10.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Ftutorial_fiber_amplifiers10.html&text=RP+Photonics+Encyclopedia+-+Tutorial+%26ldquo%3BFiber+Amplifiers%26rdquo%3B%2C+Part+10%3A+multi-stage+amplifiers%2C+different+mode+areas%2C+gain+saturation%2C+pumping%2C+ASE+suppression%2C+gain+flattening%2C+protection%2C+monitoring" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Ftutorial_fiber_amplifiers10.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Ftutorial_fiber_amplifiers10.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></main></div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Fiber Optics Software</h2>
+<a href="./rp_fiber_calculator.html?banner=RP_Fiber_Calculator" style="float:right; margin-left:3px"><img src="./img/fiberpower_logo.png" alt="RP Fiber Calculator software"></a>
+<p><a href="./rp_fiber_calculator.html?banner=RP_Fiber_Calculator">RP Fiber Calculator</a> &ndash; a convenient tool for calculations on optical fibers:</p>
+<ul>
+<li>Define <a href="./rp_fiber_calculator_docu.html?banner=RP_Fiber_Calculator">index or doping profiles</a> with the graphical user interface.</li>
+<li>Calculate the <a href="./rp_fiber_calculator_gm.html?banner=RP_Fiber_Calculator">guided modes</a> and all their properties.</li>
+</ul>
+<p style="text-align:center;"><a href="./rp_fiber_calculator_gm.html?banner=RP_Fiber_Calculator"><img src="./img/mode_solver.png" alt="mode profiles"></a></p>
+<ul>
+<li>Calculate how much power of a <a href="./rp_fiber_calculator_la.html?banner=RP_Fiber_Calculator">laser beam is launched</a> into the modes.</li>
+<li>Simulate <a href="./rp_fiber_calculator_pr.html?banner=RP_Fiber_Calculator">light propagation</a> within the fiber and <a href="./rp_fiber_calculator_co.html?banner=RP_Fiber_Calculator">coupling of light from one fiber to another</a>.</li>
+</ul>
+<a href="./rp_fiber_calculator.html?banner=RP_Fiber_Calculator"><img src="./img/rp_fiber_calculator_screenshot_small.png" alt="screen shot"></a>
+<p>The basic version of this software is offered <a href="./rp_fiber_calculator_download.html?banner=RP_Fiber_Calculator">for free</a>!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="T7/ATALRBUuXW50vMe2rmw==">shownbanner = "RP Fiber Calculator";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Tutorial on Fiber Optics</h2>
+<p>See our <a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial">comprehensive fiber optics tutorial</a>:</p>
+<ul>
+<li>guiding light in single-mode and multimode fibers</li>
+<li>fiber ends and joints, propagation and coupling losses</li>
+<li>couplers and splitters</li>
+<li>polarization issues, chromatic dispersion, nonlinearities, pulse propagation</li>
+<li>fiber accessories and tools</li>
+</ul>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/fiber_core_small.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/mode_solver.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/pm_fibers_small.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/fiberpower_self_focusing4_small.png" alt="&nbsp;"></a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="T7/ATALRBUuXW50vMe2rmw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tutorials",
+      "item": "https://www.rp-photonics.com/encyclopedia_tutorials.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Fiber amplifiers",
+      "item": "https://www.rp-photonics.com/tutorial_fiber_amplifiers.html"
+    },{
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Part 10",
+      "item": "https://www.rp-photonics.com/tutorial_fiber_amplifiers10.html"
+    }]}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-tJA88MKxsyWutzcfNkUONw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - microchannel plates, operation principle, electron multiplication, gain, applications, image intensifier, photomultiplier</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/microchannel_plates.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Microchannel plates are fast multi-channel high-gain electron amplifiers. They can be used for compact photomultipliers and for image intensifiers and converters, for example.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="microchannel plates, operation principle, gain, applications, image intensifier, photomultiplier">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Microchannel Plates">
+<meta property="og:description" content="Microchannel plates are fast multi-channel high-gain electron amplifiers. They can be used for compact photomultipliers and for image intensifiers and converters, for example.">
+<meta property="og:url" content="https://www.rp-photonics.com/microchannel_plates.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/microchannel_plates.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Microchannel plates are fast multi-channel high-gain electron amplifiers. They can be used for compact photomultipliers and for image intensifiers and converters, for example.">
+<meta name="twitter:title" content="Microchannel Plates">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/microchannel_plates.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="tJA88MKxsyWutzcfNkUONw==">
+page="microchannel_plates.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="tJA88MKxsyWutzcfNkUONw==">shownsponsors="DataRay"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_m.html">letter M</a> &gt; <a href="microchannel_plates.html">microchannel plates</a></p>
+<h1>Microchannel Plates</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_microchannel_plate_detectors.html?s=vbox">9 suppliers for microchannel plate detectors</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_microchannel_plate_detectors.html?s=vbox">List of suppliers for<br>microchannel plate detectors</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p>Acronym: MCP</p>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: electron amplifiers with many spatial channels</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Mikrokanalplatten; Kanalverstärker</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a>, <a href="categories.html#optoelectronics" title="other articles on optoelectronics">optoelectronics</a></p>
+<p><a href="encyclopedia_cite.html?article=microchannel%20plates">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>A microchannel plate (MCP) is essentially a fast high-gain amplifier for electrons, having many parallel spatial channels for use in <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a> applications.
+It is directly sensitive not only to input electrons, but also to other charged particles (e.g. ions or elementary particles) and to electromagnetic radiation with sufficiently short <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a> (high <a href="photons.html" title="quanta of light energy">photon energy</a>), i.e., from the <a href="ultraviolet_light.html" title="invisible light with wavelengths shorter than &asymp;&thinsp;400&thinsp;&thinsp;nm">ultraviolet</a> to soft X-rays.
+The detection efficiency (<a href="quantum_efficiency.html" title="percentage of input photons which contribute to a desired effect">quantum efficiency</a>) generally depends on the type and energy of the particles or the photons.
+For obtaining sensitivity to visible or infrared light, one can use a <a href="photocathodes.html" title="an electrode where electrons can be released based on the photoelectric effect">photocathode</a> in front of the MCP.</p>
+<p>MCPs are used in various <a href="photonics.html" title="the science and technology of light">photonic</a> instruments, particularly in <a href="image_intensifiers_and_image_converters.html" title="instruments which can intensify images acquired under faint light conditions, or convert images to other wavelengths">image intensifiers and image converters</a>.
+Besides, they are also applied for the detection of X-rays in medical diagnosis or for industrial inspection.
+Other application areas are time-of-flight mass spectrometry, nuclear physics, other fundamental physics and electron microscopy.</p>
+<h2 class="togglediv">Construction and Operation Principle of Microchannel Plates</h2>
+<div>
+<p>A microchannel plate essentially consists of a plate (disk) with a thickness of e.g. 1&nbsp;mm, which consists of an electrically insulating material (typically glass) and contains a hexagonal array of tiny holes (see Figure&nbsp;1 a).
+The front and back face is usually either circular or rectangular.
+The diameter of the active area can be e.g. 20&nbsp;mm, 50&nbsp;mm or even more than 100&nbsp;mm.
+The diameter of each channel can e.g. be 10&nbsp;&mu;m or 20&nbsp;&mu;m.</p>
+<p>MCPs can be fabricated with the following process, for example:</p>
+<ul>
+<li>One assembles many glass fibers to a bundle and fuses them together at a high temperature.</li>
+<li>From that fused bundle, one cuts a slice at some bias angle (see below) against the fiber axes.</li>
+<li>The fibers have a fiber core of a material which can be etched away to obtain the pattern of holes (the channels).</li>
+<li>With a chemical treatment, one generates a thin semiconductor layer on the channel walls.
+That layer is optimized for a high efficiency of secondary electron emission and for a certain low level of electrical conductivity.</li>
+<li>One evaporates a thin metal film, typically a nickel alloy, onto the end faces to form electrodes.
+Those electrodes penetrate somewhat into the channels.</li>
+</ul>
+<p>An electric voltage of the order of 1&nbsp;kV is applied to the electrodes during operation.</p>
+<p>The whole device must be operated in a high vacuum, e.g. at a residual pressure of 10<sup>&minus;4</sup>&nbsp;Pa.</p>
+<figure>
+<img src="img/microchannel_plate.png" alt="microchannel plate">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Front view of a microchannel plate, and the generation of an electron avalanche with a single incident electron.
+</figcaption>
+</figure>
+<p>One side of the microchannel plate is hit by electrons, which are generated e.g. in a <a href="photocathodes.html" title="an electrode where electrons can be released based on the photoelectric effect">photocathode</a> 1&nbsp;mm away from the plate.
+Typically, one makes the setup such that the electron trajectories have some small bias angle (of the order of 10&deg;) against the axes of the channels.</p>
+<p>A single electron sent onto the input side with sufficient energy (e.g. a few hundred electron volts) can generate multiple secondary electrons, which again can hit the inner side of the channel and generate further electrons.
+After several such cycles, the resulting electron avalanche can generate many thousands of output electrons (see Figure&nbsp;1 b).
+This process is similar to that in a conventional <a href="photomultipliers.html" title="photodetection devices based on the photoelectric effect and charge multiplication by secondary emission of electrons">photomultiplier</a>, which however would not provide spatial resolution and is also substantially larger.</p>
+<p>Each of the many channels can act as an independent electron amplifier.
+The spatial distribution of output electrons closely resembles that of the input electrons on the other side.</p>
+<p>Without any input electrons, there is still some weak <em>strip current</em> due to the non-zero conductivity of the plate material.
+While a low strip current may be desirable in terms of power consumption, higher values are advantageous for maximum speed of detection (see below).</p>
+<p>MCPs are often operated in an analog mode, with the output signal being approximately proportional to the input signal.
+However, one can also use them in counting mode, where input events are counted while the electric charge per count is not considered: every event with a charge above some threshold is counted.</p>
+</div>
+<h2 class="togglediv">Key Properties of MCPs</h2>
+<div>
+<h3 class="togglediv">Gain</h3>
+<div>
+<p>The amplification factor, also called <em>gain</em>, depends strongly on the length-to-diameter ratio <span class="eqn_il"><span class="greek">&alpha;</span></span> of the channels and on the operation voltage.
+These two parameters determine the number of amplification cycles and the multiplication factor per cycle.
+The cross-over voltage is defined as the operation voltage where unity gain is achieved; normal operation voltage is substantially higher than that.
+Usual values of <span class="eqn_il"><span class="greek">&alpha;</span></span> are of the order of 50.
+For example, a channel diameter of 10&nbsp;&mu;m then corresponds to a channel length of 0.5&nbsp;mm.</p>
+<p>The gain can be several thousand or even more than 10<sup>6</sup>, but the amplification noise becomes strong for such high gain, mostly because positive ions are accelerated backwards and generate additional input electrons.
+One therefore often limits the gain (via the voltage) to the order of 10<sup>4</sup>.
+The <a href="responsivity.html" title="photocurrent per unit optical power incident on a photodetector">responsivity</a> is then still quite high, which is attractive for detecting very faint signals; even <a href="photon_counting.html" title="photodetection at low light levels where single photon absorption events are counted">photon counting</a> is possible (in conjunction with a photocathode).</p>
+<p>Substantially higher gains are possible with multi-stage MCPs, see below.</p>
+<p>Note that the resulting <a href="sensitivity.html" title="(different meanings, depending on the context)">sensitivity</a> depends not only on the amplification factor, but also on noise.
+Ideally, every incident electron would cause an avalanche of the same intensity, but in reality microchannel plates exhibit a non-perfect <a href="quantum_efficiency.html" title="percentage of input photons which contribute to a desired effect">quantum efficiency</a> (substantially depending on the device design, e.g. on the open area ratio), and there are also substantial fluctuations in the multiplication process.</p>
+</div>
+<h3 class="togglediv">Strip Current</h3>
+<div>
+<p>As explained above, there is a certain strip current flowing through the electrodes even without any input light, which is due to the finite conductivity of the channel walls.
+That current is detrimental in terms of power consumption and causes some heating of the device (which is normally not effectively cooled due to operation in high vacuum).
+On the other hand, it sometimes needs to be increased in order to obtain a faster response (see below).</p>
+<p>Typically, the whole microchannel plate has a resistance of tens to hundreds of megaohms (M&Omega;).
+Strip currents may be as low as 1&nbsp;&mu;A per cm<sup>2</sup> of active area, but can also be dozens of times higher for faster devices.</p>
+</div>
+<h3 class="togglediv">Dark Current</h3>
+<div>
+<p>The <a href="dark_current.html" title="a current from a photodetector which occurs even in the absence of a light input">dark current</a> is the output current &ndash; not to be confused with the strip current &ndash; which occurs without any input signal.
+It is normally very low, e.g. &lt;1&nbsp;pA/cm<sup>2</sup>.
+In counting mode, there is only a very low dark account rate of e.g. a few events per second and cm<sup>2</sup> of active area.</p>
+</div>
+<h3 class="togglediv">Saturation</h3>
+<div>
+<p>The gain remains approximately constant as long as the output current stays far below the strip current.
+For higher output currents (e.g. 5&#37; of the strip current), saturation effects occur, and the range of linear response ends there.
+For a maximum dynamic range with linear response, one therefore uses microchannel plates with increased strip current, although they have a correspondingly higher power consumption.</p>
+<p>The different channels generally saturate independently, as long as the operation voltage does not drop for high output currents.
+Particularly for counting applications, it can thus be advantageous to use an MCP with many small channels, where the dead time of one channel has less influence.</p>
+</div>
+<h3 class="togglediv">Spatial Resolution</h3>
+<div>
+<p>For highest spatial resolution, it is desirable to make the pitch of the channels as small as possible.
+Therefore, MCPs with channel pitch values below 10&nbsp;&mu;m have been developed.
+For keeping the cane constant, one correspondingly reduces the channel length.</p>
+</div>
+<h3 class="togglediv">Detection Bandwidth and Dead Time</h3>
+<div>
+<p>The detection <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a> can be very high (many megahertz), as the electrons have quite short and relatively uniform transit times, i.e., a small <em>transit time spread</em>.
+Typically, the transit times are a few hundred picoseconds, and the transit time spread is well below 100&nbsp;ps.</p>
+<p>After the generation of each electron avalanche, the device has some <em>dead time</em> until the full gain is reached again.
+This is because the electron avalanche changes the electrical charge distribution in the channel.
+Particularly for devices with low electrical conductivity (as is desirable in terms of power consumption), the dead time is a limiting factor.
+Therefore, one may intentionally process the channels for a substantially higher conductivity in order to reduce the dead time.</p>
+</div>
+<h3 class="togglediv">Lifetime, Operation Temperatures and Shock Sensitivity</h3>
+<div>
+<p>The lifetime of a microchannel plate is finite because some degradation occurs during operation.
+For example, an imperfect vacuum leads to the generation of positive ions, which are accelerated in the channels and can cause damage.
+Also, there is a gradual resistance change near the output end due to the electron impact.
+The crucial figure is not the total operation time, but the accumulated electric output charge: aging is substantially faster with signal inputs than without.
+The rate of aging also depends strongly on design and operation details, e.g. the quality of the vacuum, the operation voltage and some fabrication details.</p>
+<p>The operation temperature needs to be kept below 70&thinsp;&deg;C, for example, in order to avoid a thermal run-away: there is some heating due to the strip current (particularly for the faster devices), and that current rises with increasing temperature, assuming a constant operation voltage.</p>
+<p>Although the glass plate of a microchannel plate is mechanically quite robust, MCPs are in practice quite sensitive to mechanical shock.
+This is essentially because they need to be operated in glass tubes which are sealed for high vacuum.
+For example, the required high voltage feedthroughs may be damaged by mechanical shock, leading to vacuum leaks.
+Such a leak can quickly lead to the premature death of an MCP, e.g. by causing an electric gas discharge.</p>
+</div>
+<h3 class="togglediv">Sensitivity to Magnetic Fields</h3>
+<div>
+<p>MCPs are somewhat sensitive to magnetic fields, because those have an influence on the electron trajectories.
+For fields along the channel directions, the gain can even be increased, while transverse fields tend to reduce the gain.
+Generally, the sensitivity to magnetic fields is much lower than for traditional <a href="photomultipliers.html" title="photodetection devices based on the photoelectric effect and charge multiplication by secondary emission of electrons">photomultipliers</a>.
+Even operation at field strengths of several teslas is possible.</p>
+</div>
+</div>
+<h2 class="togglediv">Combination of Multiple MCPs</h2>
+<div>
+<p>For achieving a particularly high again, one often uses a combination of two or three microchannel plates, which are mounted face to face (but generally not with alignment concerning the openings) and are electrically connected in series (without metallic coatings at the interfaces between the plates).
+Compared with simply using a single microchannel plate with correspondingly longer channels, the performance can be substantially better, essentially because positive ions, traveling backwards, are mostly stopped at the interfaces between the plates.
+One thus achieve a higher gain without excessive noise.</p>
+<p>Devices with two microchannel plates are called dual-stage MCPs or VMCPs, because the channels of the two plates are oriented such that there is some angle between them (V-like chevron shape, see Figure&nbsp;2).
+They can achieve a gain of the order of 10<sup>6</sup>.
+Those with three plates and gains up to about 10<sup>7</sup> are called three-stage MCPs or ZMCPs or Z-stack MCPs, again with an angle between the channel orientations of subsequent plates.</p>
+<figure>
+<img src="img/multi_plate_mcp.png" alt="multi-plate MCPs">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Design of dual-stage and three-stage multichannel plates. One obtains a &ldquo;V&rdquo; or &ldquo;Z&rdquo; shape due to the different plate orientations. In reality, the channels are normally not aligned at the interfaces.
+</figcaption>
+</figure>
+<p>Because the channels of the different plates are generally not aligned, there is some loss of spatial resolution: at an interface, electrons from one channel can get into more than one channel of the following plate.</p>
+</div>
+<h2 class="togglediv">Application in an Image Intensifier</h2>
+<div>
+<p>In an <a href="image_intensifiers_and_image_converters.html" title="instruments which can intensify images acquired under faint light conditions, or convert images to other wavelengths">image intensifier</a>, a <a href="photocathodes.html" title="an electrode where electrons can be released based on the photoelectric effect">photocathode</a> generates photoelectrons, which are pulled towards the microchannel plate with some electrical voltage of e.g. 400&nbsp;V.
+Due to the small distance between the photocathode in the input side of the microchannel plate (e.g. 2&nbsp;mm), one obtains proximity coupling, where each photoelectron is most likely to get into the closest channel.
+The resulting output electrons of the plate can then be sent to a <a href="phosphors.html" title="substances which exhibit luminescence, used mostly for illumination and displays">phosphor</a> screen (with further acceleration, e.g. with several kilovolts), which generates a visible image, e.g. for direct viewing with the eye.
+Alternatively, one may send the electrons to an electronic sensor.</p>
+<p>For more details, see the article on <a href="image_intensifiers_and_image_converters.html" title="instruments which can intensify images acquired under faint light conditions, or convert images to other wavelengths">image intensifiers and image converters</a>.</p>
+</div>
+<h2 class="togglediv">Application in a Microchannel Photomultiplier</h2>
+<div>
+<p>In some cases, the spatial resolution is not required.
+One can construct a compact <a href="photomultipliers.html" title="photodetection devices based on the photoelectric effect and charge multiplication by secondary emission of electrons">photomultiplier</a> similar to the image amplifier, with a photocathode in front of a microchannel plate, but simply collecting all output electrons with a single electrode.
+A moderate voltage of e.g. 100&nbsp;V is applied between the MCP output and the anode.
+The whole detector can fit into a quite compact cylindrical housing, e.g. with a diameter and length of a few centimeters.
+The device typically obtains a single high voltage, which is internally distributed over the three parts with a simple voltage divider (made with resistors).
+The largest proportion of the voltage is typically reserved for the multichannel plate, and somewhat lower voltages are used for electron acceleration before and after the microchannel plate.</p>
+<p>Advantages over conventional photomultipliers are the small size and (if a single-stage MCP is used) also a smaller operation voltage.</p>
+<p>It is also possible to use some array of anodes in order to retain some of the spatial resolution.
+For example, each anode may be 2&nbsp;mm wide, collecting the outputs of some number of MCP channels.</p>
+<p>Instead of independently collecting currents from the anodes, one may connect those with resistors and capacitors and only detect the currents at both ends of that string.
+One then obtains a kind of <a href="position_sensitive_detectors.html" title="photodetectors which can detect the position of a light spot in one or two dimensions">position-sensitive detector</a>, which can have a spatial resolution far better than 1&nbsp;mm.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_microchannel_plate_detectors.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 9 suppliers for microchannel plate detectors.</p>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="microchannel_plates.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">J. Wiza, &ldquo;Microchannel plate detectors&rdquo;, &ldquo;Nuclear Instruments and Methods 162 (1-3), 587 (1979)&rdquo;,&ldquo;https://www.sciencedirect.com/science/article/abs/pii/0029554X79907341?via&#37;3Dihub&rdquo;]</td></tr>
+<tr><td class="refno">[2]</td><td class="refs">G. W. Fraser, &ldquo;The soft X-ray quantum detection efficiency of microchannel plates&rdquo;, Nuclear Instrum. and Meth. 195 (3), 523 (1982), <a href="https://doi.org/10.1016/0029-554X(82)90015-5">doi:10.1016/0029-554X(82)90015-5</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">R. C. Taylor <i>et al.</i>, &ldquo;Maximizing the quantum efficiency of microchannel plate detectors: The collection of photoelectrons from the interchannel web using an electric field&rdquo;, Rev. Sci. Instrum. 54, 171 (1983), <a href="https://doi.org/10.1063/1.1137365">doi:10.1063/1.1137365</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">S. Matsuura et a l., &ldquo;Current status of the microchannel plate&rdquo;, IEEE Transactions on Nuclear Science 31 (1), 399 (1984), <a href="https://doi.org/10.1109/TNS.1984.4333286">doi:10.1109/TNS.1984.4333286</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">O. Siegmund, J. Vallerga and A. Tremsin, &ldquo;Characterizations of microchannel plate quantum efficiency&rdquo;, Proc. SPIE 5898, UV, X-Ray, and Gamma-Ray Space Instrumentation for Astronomy XIV (2005), <a href="https://doi.org/10.1117/12.621708">doi:10.1117/12.621708</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="photomultipliers.html" title="photodetection devices based on the photoelectric effect and charge multiplication by secondary emission of electrons">photomultipliers</a>, <a href="image_intensifiers_and_image_converters.html" title="instruments which can intensify images acquired under faint light conditions, or convert images to other wavelengths">image intensifiers and image converters</a><br>and other articles in the categories <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a>, <a href="categories.html#optoelectronics" title="other articles on optoelectronics">optoelectronics</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/microchannel_plates.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fmicrochannel_plates.html&text=RP+Photonics+Encyclopedia+-+microchannel+plates%2C+operation+principle%2C+electron+multiplication%2C+gain%2C+applications%2C+image+intensifier%2C+photomultiplier" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fmicrochannel_plates.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fmicrochannel_plates.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/microchannel_plates.html"&gt;<br>Article on Microchannel Plates&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/microchannel_plates.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/microchannel_plates.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/microchannel_plates.html<br>article on 'Microchannel Plates' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Recent Articles of the RP Photonics Software News:</h2>
+<ul><li>2020-05-25: <a href="software_news_2020_05_25.html">The Numerical Power Package for RP Fiber Power</a></li>
+<li>2020-03-02: <a href="software_news_2020_03_02.html">Creating Multimode Beams in Numerical Beam Propagation</a></li>
+<li>2019-09-10: <a href="software_news_2019_09_10.html">Improvements Concerning Graphics Windows</a></li>
+<li>2018-12-03: <a href="software_news_2018_12_03.html">Using Monitors With High Screen Resolution</a></li>
+<li>2018-09-12: <a href="software_news_2018_09_12.html">Propagating Optical Fields in Fibers Based on Modes or with Numerical Beam Propagation</a></li>
+<li>2018-08-02: <a href="software_news_2018_08_02.html">Data Grids for Numerical Beam Propagation</a></li>
+<li>2018-07-02: <a href="software_news_2018_07_02.html">Namespaces: An Elegant Approach for Avoiding Name Conflicts</a></li>
+<li>2018-05-22: <a href="software_news_2018_05_22.html">Numerical Representation of Ultrashort Pulses</a></li>
+</ul>
+<p>You can receive such articles by subscribing to our <a href="./newsletters.html?banner=Recent_Software_News_Articles">Newsletters</a>!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="tJA88MKxsyWutzcfNkUONw==">shownbanner = "Recent Software News Articles";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2 style="font-size:150%">Tutorial on<br>Fiber Amplifiers</h2>
+<p>See our <a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial">comprehensive tutorial on fiber amplifiers</a>:</p>
+<ul>
+<li>laser-active dopants, gain and pump absorption</li>
+<li>double-clad fibers, pulse amplification</li>
+<li>ASE, noise issues, multi-stage amplifiers</li>
+</ul>
+<p style="margin-left:10px;"><a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial"><img src="./img/fiber_amplifier_small.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial"><img src="./img/dcf_designs_part.png" style="width:100%" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial"><img src="./img/yb_gain_small.png" alt="&nbsp;"></a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="tJA88MKxsyWutzcfNkUONw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/microchannel_plates.html"
+    },
+    "headline": "Microchannel Plates",
+    "image": "https://www.rp-photonics.com/previews/microchannel_plates.png",
+    "datePublished": "2019-06-08",
+    "dateModified": "2020-03-14",
+    "description": "Microchannel plates are fast multi-channel high-gain electron amplifiers. They can be used for compact photomultipliers and for image intensifiers and converters, for example.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter M",
+      "item": "https://www.rp-photonics.com/encyclopedia_m.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "microchannel plates",
+      "item": "https://www.rp-photonics.com/microchannel_plates.html"
+    }]}
+}
+</script>
+</body>
+</html>

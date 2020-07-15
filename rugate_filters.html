@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-Gf8fm8bky/O1sRgX5i+CEA=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - rugate filters, gradient-index filters, multiple notch filter, fabrication, optical properties, analysis, design, optimization</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/rugate_filters.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Rugate filters are dielectric interference filters with a continuous variation of the refractive index. That distinguishes them from conventional dielectric layer structures.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="rugate filters, gradient-index filters, multiple notch filter, fabrication, optical properties, analysis, design, optimization">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Rugate Filters">
+<meta property="og:description" content="Rugate filters are dielectric interference filters with a continuous variation of the refractive index. That distinguishes them from conventional dielectric layer structures.">
+<meta property="og:url" content="https://www.rp-photonics.com/rugate_filters.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/rugate_filters.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Rugate filters are dielectric interference filters with a continuous variation of the refractive index. That distinguishes them from conventional dielectric layer structures.">
+<meta name="twitter:title" content="Rugate Filters">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/rugate_filters.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="Gf8fm8bky/O1sRgX5i+CEA==">
+page="rugate_filters.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo sponsor"></a> <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="Gf8fm8bky/O1sRgX5i+CEA==">shownsponsors="DataRay,EKSMA OPTICS"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_rugate_filters.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_r.html">letter R</a> &gt; <a href="rugate_filters.html">rugate filters</a></p>
+<h1>Rugate Filters</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_rugate_filters.html?s=vbox">6 suppliers for rugate filters</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.knightoptical.com/" data-supplier="Knight Optical" data-location="product-enc" data-keyword="rugate filters" rel="nofollow" class="bg externallink"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_rugate_filters.html?s=vbox">List of suppliers for<br>rugate filters</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="boxadvertisement">
+<h2>Designing Rugate Filters</h2>
+<p>The <a href="coating.html"><b>RP Coating</b> software</a> can be used to design rugate filters; see a <a href="coating_demo_rugate.html">demo case</a>.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: dielectric interference filters with a continuous variation of the refractive index</p>
+<p>Alternative term: gradient-index filters</p>
+<p>More general term: <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical filters</a></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a></p>
+<p><a href="encyclopedia_cite.html?article=rugate%20filters">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Rugate filters are <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical filters</a> based on a <a href="dielectric_coatings.html" title="thin-film coatings made of transparent dielectric materials, e.g. for laser mirrors or anti-reflection coatings">dielectric coating</a>, where the <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> is varied continuously (rather than in steps) at least in some part of the structure.
+Such devices are also called <em>gradient-index filters</em> in order to distinguish them from the conventional step-index filters.</p>
+<p>The simplest example is a structure with a sinusoidal oscillation of the refractive index, leading to reflection in some narrow wavelength region.
+In transmission, one obtains a <em>notch filter</em>, which blocks some limited wavelength range, while in reflection one obtains a bandpass filter.
+Such filters are used, for example, as laser blocking filters in Raman <a href="spectroscopy.html" title="methods where the interaction of light with matter is utilized, e.g. for detecting substances or measuring concentrations">spectroscopy</a>.
+It is also easily possible to combine multiple reflection bands (see below) in order to obtain multiple notch filters, for example.</p>
+<figure>
+<img src="img/rugate_filter_structure.png" alt="rugate filter structure">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Refractive index profile of an apodized rugate notch filter with index matching regions, designed with the <a href="coating.html">RP Coating</a> software (see Ref.&nbsp;[15]).
+</figcaption>
+</figure>
+<figure>
+<img src="img/rugate_spectrum.png" alt="transmission spectrum of a rugate filter">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Transmission spectrum of a rugate notch filter with the design as shown in Figure&nbsp;1.
+</figcaption>
+</figure>
+<p><a href="fiber_bragg_gratings.html" title="reflective structures in the core of an optical fiber with a periodic or aperiodic perturbation of the effective refractive index">Fiber Bragg gratings</a> can in principle also be considered as rugate filters.</p>
+<h2 class="togglediv">Fabrication of Rugate Filters</h2>
+<div>
+<p>There are different techniques for obtaining a continuous variation of the refractive index in a <a href="dielectric_coatings.html" title="thin-film coatings made of transparent dielectric materials, e.g. for laser mirrors or anti-reflection coatings">dielectric coating</a>:</p>
+<ul>
+<li>The probably most common approach is to fabricate mixtures of two different coating materials with a variable mixing ratio.
+For that purpose, one may use double electron beam coevaporation or similar methods (also using resistance heating or ion beam sputtering) with material pairs such as ZrO<sub>2</sub> / MgO, ZrO<sub>2</sub> / SiO<sub>2</sub>, Ta<sub>2</sub>O<sub>5</sub> / TiO<sub>2</sub> or TiO<sub>2</sub> / SiO<sub>2</sub>.
+Depending on the detailed growth conditions (composition, <a href="mirror_substrates.html" title="substrates on which coatings for laser mirrors can be deposited">substrate</a> temperature, etc.), polycrystalline or amorphous structures can result.</li>
+<li>For some coating materials such as TiO<sub>2</sub>, the packing density can be varied during vapor deposition, e.g. by control of the oxygen partial pressure or by glancing angle deposition.
+The packing density directly affects the refractive index [11].
+Such techniques are also applied to porous silicon rugate filters [10].</li>
+</ul>
+<p>A challenge arises from the fact that a precise refractive index control is more difficult to obtain for gradient-index structures.
+For high precision, automatic computer control is required, based on online growth monitoring and a sophisticated algorithm.
+When deviations from the target values are detected during growth, the rest of the structure is automatically adapted such as to compensate the errors as far as possible.</p>
+</div>
+<h2 class="togglediv">Optical Properties of Rugate Filters</h2>
+<div>
+<p>In comparison with filters based on standard <a href="dielectric_coatings.html" title="thin-film coatings made of transparent dielectric materials, e.g. for laser mirrors or anti-reflection coatings">dielectric coatings</a>, rugate filters provide some special potentials:</p>
+<ul>
+<li>A sinusoidal oscillation of the refractive index can create an isolated peak in the <a href="reflectance.html" title="the ratio of reflected optical power to the incident optical power at some reflecting object">reflectance</a> spectrum, without any significant sidebands as are obtained for ordinary <a href="bragg_mirrors.html" title="mirror structures based on Bragg reflection at a period structure">Bragg mirrors</a>.
+Such sidebands essentially arise from the higher-order Fourier components of a rectangular oscillation.
+However, a clean filter behavior of that type requires two additional measures: avoiding additional reflections from the ends and apodization.
+Ref.&nbsp;[15] gives an example.</li>
+<li>It is possible to linearly superimpose multiple oscillations of the refractive index in order to combine multiple reflection features.</li>
+<li>Rugate filters have also been reported to have substantially higher <a href="laser_induced_damage.html" title="damage of optical components induced by laser radiation">laser-induced damage</a> thresholds [12], compared with conventional filters.</li>
+</ul>
+</div>
+<h2 class="togglediv">Analysis, Design and Optimization of Rugate Filters</h2>
+<div>
+<p>For a theoretical analysis, a gradient-index coating structure can be approximated by a step-index structure with a larger number of steps, such that the index change from one &ldquo;layer&rdquo; to the next one becomes very small.
+Therefore, conventional software developed for step-index structures can in principle be used.
+However, one has to deal with a large number of &ldquo;layers&rdquo; and requires an efficient method to specify the structure, as it is not convenient to enter hundreds or thousands of externally computed refractive index values into such software.
+One will usually desire to have the whole structure automatically computed from some set of parameters such as a medium refractive index, an oscillation amplitude, and parameters for apodization.
+Also, it is often necessary to combine the rugate structure with additional parts such as <a href="anti_reflection_coatings.html" title="optical thin-film coatings for reducing reflections from surfaces">anti-reflection coatings</a>.</p>
+<p>Simple filter curves can be obtained with analytical designs.
+For more complex designs, one can use the inverse Fourier transform method, where one essentially exploits the fact that at least for low reflectivities, the reflection spectrum is related to the Fourier transform of the spatial index profile.
+The method can be modified to work also with high reflectivities [2].</p>
+<p>There are also other techniques for the numerical optimization of rugate filters.
+Here, one will usually not optimize layer thickness values, as is common for step-index structures, but rather the details of the refractive index profile.
+The most convenient approach is usually obtained when the structure can be parametrized as explained above.
+One then varies these parameters such as to minimize some kind of merit function, which &ldquo;punishes&rdquo; deviations from the desired optical properties.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_rugate_filters.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 6 suppliers for rugate filters. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.knightoptical.com/" data-supplier="Knight Optical" data-location="product-enc" data-keyword="rugate filters" rel="nofollow" class="bg externallink" title="Visit the website of Knight Optical"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo"></a><h3><a href="./bg/profiles/knight_optical.html" title="See the profile of Knight Optical">Knight Optical</a></h3><p>Essentially dielectric interference filters with a continuous refractive index variation and often referred to as gradient-index filters, our rugate filters are available as custom-made components to meet the specific requirements of your end application. This option allows you to specify the tolerance, size, shape, substrate and optical coatings best suited to your project.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="rugate_filters.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">J. A. Dobrowolski and D. Lowe, &ldquo;Optical thin film synthesis program based on the use of Fourier transforms&rdquo;, Appl. Opt. 17 (19), 3039 (1978), <a href="https://doi.org/10.1364/AO.17.003039">doi:10.1364/AO.17.003039</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">P. G. Verly <i>et al.</i>, &ldquo;Synthesis of high rejection filters with the Fourier transform method&rdquo;, Appl. Opt. 28 (14), 2864 (1989), <a href="https://doi.org/10.1364/AO.28.002864">doi:10.1364/AO.28.002864</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">W. J. Gunning <i>et al.</i>, &ldquo;Codeposition of continuous composition rugate filters&rdquo;, Appl. Opt. 28 (14), 2945 (1989), <a href="https://doi.org/10.1364/AO.28.002945">doi:10.1364/AO.28.002945</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">B. G. Bovard, &ldquo;Rugate filter design: the modified Fourier transform technique&rdquo;, Appl. Opt. 29 (1), 24 (1990), <a href="https://doi.org/10.1364/AO.29.000024">doi:10.1364/AO.29.000024</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">H. Fabricius, &ldquo;Gradient-index filters: designing filters with steep skirts, high reflection, and quintic matching layers&rdquo;, Appl. Opt. 31 (25), 5191 (1992), <a href="https://doi.org/10.1364/AO.31.005191">doi:10.1364/AO.31.005191</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">J. R. Jacobsson, &ldquo;Review of the optical properties of inhomogeneous thin films&rdquo;, Proc. SPIE 2046, 2 (1993)</td></tr>
+<tr><td class="refno">[7]</td><td class="refs">B. A. Tirri <i>et al.</i>, &ldquo;Gradient index film fabrication using optical control techniques&rdquo;, Proc. SPIE 2046, 224 (1993)</td></tr>
+<tr><td class="refno">[8]</td><td class="refs">J.-S. Chen <i>et al.</i>, &ldquo;Mixed films of TiO<sub>2</sub>-SiO<sub>2</sub> deposited by double electron-beam coevaporation&rdquo;, Appl. Opt. 35 (1), 90 (1996), <a href="https://doi.org/10.1364/AO.35.000090">doi:10.1364/AO.35.000090</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">J.-G. Yoon et al, &ldquo;Structural and optical properties of TiO<sub>2</sub>-SiO<sub>2</sub> composite films prepared by aerosol-assisted chemical-vapor deposition&rdquo;, <a href="http://www.kps.or.kr/jkps/downloadPdf.asp?articleuid=%7BF00323B1-17D6-4944-ACE6-A82205F14041%7D">J. Korean Phys. Soc. 33 (6), 699 (1998)</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">K. Kaminska <i>et al.</i>, &ldquo;Simulating structure and optical response of vacuum evaporated porous rugate filters&rdquo;, J. Appl. Phys. 95 (6), 3055 (2004), <a href="https://doi.org/10.1063/1.1649804">doi:10.1063/1.1649804</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">M. Jerman <i>et al.</i>, &ldquo;Refractive index of thin films of SiO<sub>2</sub>, ZrO<sub>2</sub>, and HfO<sub>2</sub> as a function of the films' mass density&rdquo;, Appl. Opt. 44 (15), 3006 (2005), <a href="https://doi.org/10.1364/AO.44.003006">doi:10.1364/AO.44.003006</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">M. Jup&eacute; <i>et al.</i>, &ldquo;Laser-induced damage in gradual index layers and Rugate filters&rdquo;, Proc. SPIE 6403, 640311 (2006), <a href="https://doi.org/10.1117/12.696130">doi:10.1117/12.696130</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">A. V. Tikhonravov <i>et al.</i>, &ldquo;New optimization algorithm for the synthesis of rugate optical coatings&rdquo;, Appl. Opt. 45 (7), 1515 (2006), <a href="https://doi.org/10.1364/AO.45.001515">doi:10.1364/AO.45.001515</a></td></tr>
+<tr><td class="refno">[14]</td><td class="refs">A. Thelen, <i>Design of Optical Interference Coatings</i>, McGraw&ndash;Hill (1989)</td></tr>
+<tr><td class="refno">[15]</td><td class="refs"><a href="coating_demo_rugate.html">Development of a rugate filter</a> with the <a href="coating.html">RP Coating</a> software</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical filters</a>, <a href="dielectric_coatings.html" title="thin-film coatings made of transparent dielectric materials, e.g. for laser mirrors or anti-reflection coatings">dielectric coatings</a>, <a href="bragg_mirrors.html" title="mirror structures based on Bragg reflection at a period structure">Bragg mirrors</a>, <a href="fiber_bragg_gratings.html" title="reflective structures in the core of an optical fiber with a periodic or aperiodic perturbation of the effective refractive index">fiber Bragg gratings</a><br>and other articles in the categories <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/rugate_filters.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Frugate_filters.html&text=RP+Photonics+Encyclopedia+-+rugate+filters%2C+gradient-index+filters%2C+multiple+notch+filter%2C+fabrication%2C+optical+properties%2C+analysis%2C+design%2C+optimization" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Frugate_filters.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Frugate_filters.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/rugate_filters.html"&gt;<br>Article on Rugate Filters&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/rugate_filters.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/rugate_filters.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/rugate_filters.html<br>article on 'Rugate Filters' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="./fiberpower_dcf.html?banner=RP_Fiber_Power_7"><img src="./img/fiberpower_dcf1b.png" alt="double-clad fiber" style="margin-bottom:8px"></a>
+<p>Evolution of the intensity pattern of pump light in a double-clad fiber.
+After some distance, the pump absorption in the fiber core leads to a "hole" in the pump light pattern.</p>
+<p>This diagram has been made with the <a href="./fiberpower.html?banner=RP_Fiber_Power_7"><b>RP Fiber Power</b></a> software.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="Gf8fm8bky/O1sRgX5i+CEA==">shownbanner = "RP Fiber Power 7";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2 style="font-size:20px;">Stand up for Science!</h2>
+<p style="font-size:14px;">It is acceptable that some don't know much about photons, biological evolution or global warming.</p>
+<p style="font-size:16px; font-weight:bold; color:#B20B28;">But we don't want bigot ignorants to make political decisions and educate our children!</p>
+<p style="font-size:14px;">For example, <b>global warming</b> is not a matter of political opinion, but a fact. Ruthless profiteers are leading astray millions of uneducated people, seducing them to take utterly irresponsible positions. <span style="font-weight:bold; color:#B20B28;">But we cannot risk catastrophic climate changes!</span> Science tells us it is high time to act. Read, for example, the <a href="https://www.ipcc.ch/report/sixth-assessment-report-cycle/">IPCC Synthesis Report</a>.</p>
+<p style="font-size:14px; font-weight:bold;">Stand up for science (perhaps by joining a <a href="https://www.marchforscience.com/">March for Science</a>) &ndash; it's our future!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="Gf8fm8bky/O1sRgX5i+CEA==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/rugate_filters.html"
+    },
+    "headline": "Rugate Filters",
+    "image": "https://www.rp-photonics.com/previews/rugate_filters.png",
+    "datePublished": "2012-10-31",
+    "dateModified": "2020-03-14",
+    "description": "Rugate filters are dielectric interference filters with a continuous variation of the refractive index. That distinguishes them from conventional dielectric layer structures.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter R",
+      "item": "https://www.rp-photonics.com/encyclopedia_r.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "rugate filters",
+      "item": "https://www.rp-photonics.com/rugate_filters.html"
+    }]}
+}
+</script>
+</body>
+</html>

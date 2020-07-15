@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-5ug0MgYzcIIuOhRaz0ViGg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - optical time-domain reflectometers, OTDR, operation principle, sensitivity, bandwidth, dynamic range, measurement distance, spatial resolution, dead zones, instrument types, applications</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/optical_time_domain_reflectometers.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Optical time-domain reflectometers are widely used for inspecting fiber-optic data links. They allow one to measure distributed and localized propagation losses and reflections, for example arising from faulty fiber connections or splices.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="optical time-domain reflectometers, OTDR, operation principle, sensitivity, bandwidth, dynamic range, measurement distance, spatial resolution, dead zones, applications">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Optical Time-domain Reflectometers">
+<meta property="og:description" content="Optical time-domain reflectometers are widely used for inspecting fiber-optic data links. They allow one to measure distributed and localized propagation losses and reflections, for example arising from faulty fiber connections or splices.">
+<meta property="og:url" content="https://www.rp-photonics.com/optical_time_domain_reflectometers.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/optical_time_domain_reflectometers.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Optical time-domain reflectometers are widely used for inspecting fiber-optic data links. They allow one to measure distributed and localized propagation losses and reflections, for example arising from faulty fiber connections or splices.">
+<meta name="twitter:title" content="Optical Time-domain Reflectometers">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/optical_time_domain_reflectometers.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="5ug0MgYzcIIuOhRaz0ViGg==">
+page="optical_time_domain_reflectometers.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo sponsor"></a> <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="5ug0MgYzcIIuOhRaz0ViGg==">shownsponsors="DataRay,eagleyard Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_optical_time_domain_reflectometers.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_o.html">letter O</a> &gt; <a href="optical_time_domain_reflectometers.html">optical time-domain reflectometers</a></p>
+<h1>Optical Time-domain Reflectometers</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_optical_time_domain_reflectometers.html?s=vbox">17 suppliers for optical time-domain reflectometers</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_optical_time_domain_reflectometers.html?s=vbox">List of suppliers for<br>optical time-domain reflectometers</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p>Acronym: OTDR</p>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: instruments for measuring the spatially resolved reflectivities and losses in optical fibers</p>
+<p>More general term: <a href="optical_metrology.html" title="the science and technology of performing measurements with light">optical metrology</a> instruments</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">optische Rückstreumessgeräte</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#fiber_optics_and_waveguides" title="other articles on fiber optics and waveguides">fiber optics and waveguides</a>, <a href="categories.html#lightwave_communications" title="other articles on lightwave communications">lightwave communications</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<p><a href="encyclopedia_cite.html?article=optical%20time-domain%20reflectometers">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Optical time domain reflectometers are instruments which measure the spatially resolved reflectivities and losses in optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>.
+They are mostly used in the technology of <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a> for testing <a href="fiber_optic_links.html" title="optical communication links where the signal light is transported in fibers">fiber-optic links</a> (e.g. in cable TV, LAN, metropolitan networks or long-haul Internet backbones) in terms of distributed <a href="propagation_losses.html" title="losses of optical energy during propagation of light">propagation losses</a>, localized losses e.g. due to optical components or poor <a href="fiber_joints.html" title="permanent or removable connections between fiber ends">fiber splices</a>.
+The measurement method, which is explained in the following section, is called <em>optical time-domain reflectometry</em>.
+The acronym OTDR is used for both the instruments and the method.</p>
+<p>Note that a network function can also be tested at a higher level, for example with a <a href="bit_error_rate.html" title="average fraction of wrongly transmitted bits in a communication link">bit error rate</a> tester (BERT).
+However, problems found on that level are not necessarily easy to track down; OTDR can be used to analyze networks on a basic physical level, and they also often greatly help in localizing problems.</p>
+<h2 class="togglediv">Operation Principle of OTDR</h2>
+<div>
+<p>The operation principle of optical time-domain reflectometry is easy to understand.
+The instrument emits short laser <a href="pulses.html" title="flashes of light">pulses</a>, e.g. with <a href="pulse_duration.html" title="the duration of an optical pulse">pulse durations</a> of e.g. some tens of nanoseconds and a <a href="peak_power.html" title="maximum optical power of a pulse">peak power</a> of a few hundred milliwatts, as can be obtained with a single-mode <a href="laser_diodes.html" title="semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diode</a>.
+These pulses are injected through a launch <a href="fiber_cables.html" title="cables containing one or several optical fibers">cable</a> into the tested optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fiber</a> &ndash; or frequently into a <a href="fiber_optic_links.html" title="optical communication links where the signal light is transported in fibers">fiber-optic link</a> which may contain additional components such as <a href="fiber_joints.html" title="permanent or removable connections between fiber ends">fiber splices</a> and <a href="fiber_connectors.html" title="connectors used as terminations of optical fiber cables">fiber connectors</a>, <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical filters</a>, <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifiers</a>, <a href="faraday_isolators.html" title="optical isolators based on the Faraday effect">Faraday isolators</a>, <a href="optical_power_monitors.html" title="devices for monitoring optical powers in free-space light beams or in optical fibers">optical power monitors</a> and <a href="photodetectors.html" title="devices used for the detection of light">photodetectors</a> of telecom receivers.
+Any reflected light is extracted with a directional <a href="fiber_couplers.html" title="fiber devices for coupling light from one or several input fibers to one or several output fibers, or from free space into a fiber">fiber coupler</a> and sent to a fast and sensitive <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a>.
+That allows for a time-resolved measurement of the reflected <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a> and thus of the <a href="return_loss.html" title="a measure for how much reflected light is attenuated">return loss</a>.</p>
+<aside class="callout blue">Rayleigh backscattering in the fiber plays a crucial role for the functioning of OTDR systems.</aside>
+<p>It is of crucial importance that one does not only have localized reflections, e.g. from tiny air gaps in <a href="mechanical_fiber_splices.html" title="permanent or semi-permanent connections of optical fibers which are held in place with mechanical means">mechanical splices</a> or at connectors, but also distributed reflections due to <a href="rayleigh_scattering.html" title="scattering of light at scattering centers which are much smaller than the wavelength">Rayleigh scattering</a> in the fiber, which is caused by microscopic fluctuations in the fiber; those are to some extent unavoidable due to the amorphous structure of the glass.
+A tiny portion of the scattered light is guided by the fiber in backward direction and can therefore be detected at the input end.</p>
+<p>In the simplest case, where one has a long homogeneous fiber without any defects, one will have a reflected power which continuously decreases over time, since contributions measured at later times arise from more distant points in the fiber, and those are weaker due to the propagation losses in both directions.
+Figure&nbsp;1 shows a simulated example for a 10&nbsp;km long fiber with propagation losses of 1&nbsp;dB/m at the test <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>:</p>
+<figure>
+<img src="img/otdr_signal1.png" alt="OTDR signal for a plain fiber">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Calculated OTDR signal from a 10&nbsp;km long fiber with propagation losses of 1&nbsp;dB/m at the test wavelength. The test pulses have been assumed to be 10&nbsp;ns long.
+</figcaption>
+</figure>
+<p>Simulation, the signal abruptly ends where the fiber ends; they are, in reality one may often have a peaked you to the <a href="fresnel_reflections.html" title="light reflections at optical interfaces">Fresnel reflection</a>.</p>
+<p>An OTDR instrument would typically display such a curve, but with a different scaling.
+Instead of the time axis, it uses a spatial axis, simply converting the arrival times into positions, using the known value of the <a href="group_velocity.html" title="the velocity with which the envelope of a weak narrow-band optical pulse propagates in a medium">group velocity</a> of light in the fiber.</p>
+<p>From the slope of the obtained curve, one can easily derive the coefficient of propagation loss in the fiber.</p>
+<p>If a fiber contains a <a href="mechanical_fiber_splices.html" title="permanent or semi-permanent connections of optical fibers which are held in place with mechanical means">mechanical splice</a>, for example, where some amount of additional loss occurs, the obtained OTDR trace will exhibit a step, as shown in Figure&nbsp;2:</p>
+<figure>
+<img src="img/otdr_signal12.png" alt="OTDR signal for a plain fiber">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+OTDR trace for the same fiber as before, but with a 3-dB loss of a faulty splice after 4&nbsp;km.
+</figcaption>
+</figure>
+<p>Note that the magnitude of the step is twice that of the splice loss, since light scattered from locations behind the splice will experience that last twice &ndash; on the forward and backward pass.</p>
+<p>In some cases, when also obtains additional reflections.
+For example, if a <a href="mechanical_fiber_splices.html" title="permanent or semi-permanent connections of optical fibers which are held in place with mechanical means">mechanical splice</a> has a significant air gap, one may obtain substantial <a href="fresnel_reflections.html" title="light reflections at optical interfaces">Fresnel reflections</a>.
+Precisely speaking, they are such Fresnel reflections at both air&ndash;glass interfaces, which cancel each other by destructive <a href="interference.html" title="a range of phenomena associated with the superposition of waves">interference</a> if the width of the air gap is negligible, but no more if the gap gets larger.
+In an OTDR trace, such a reflection will show up as a peak.</p>
+<p>It is thus clear what kind of measurements can be done with an optical time-domain reflectometer:</p>
+<ul>
+<li>One can measure the propagation losses in the fiber at the test wavelength.
+One can also check whether the loss coefficient is constant along the fiber, or changes locally for example due to <a href="bend_losses.html" title="propagation losses in an optical fiber (or other waveguide) caused by bending">bend losses</a> or due to the concatenation of different fibers.</li>
+<li>One can locate and quantify additional localized losses e.g. due to faulty splices or <a href="fiber_connectors.html" title="connectors used as terminations of optical fiber cables">fiber connectors</a> of <a href="fiber_patch_cables.html" title="a protected and connectorized fiber-optic cable">fiber patch cables</a>.
+Also, If a fiber is broken it may still transmit some light, but with a substantial transmission loss.
+Further, one can measure the characteristics of <a href="fiber_couplers.html" title="fiber devices for coupling light from one or several input fibers to one or several output fibers, or from free space into a fiber">fiber couplers</a> and the <a href="insertion_loss.html" title="power losses due to insertion of a device">insertion loss</a> of components such as <a href="faraday_isolators.html" title="optical isolators based on the Faraday effect">Faraday isolators</a>.
+<a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">Fiber amplifiers</a>, even in the unpumped state, are usually also seen because of the reabsorption in the common <a href="four_level_and_three_level_gain_media.html" title="laser gain media without/with reabsorption from the lower laser level">quasi-three-level gain media</a>.</li>
+<li>If a fiber-optic link is damaged, for example by construction works, one may also quickly locate the problem.</li>
+</ul>
+<p>For those results to be relevant, one will usually choose the wavelength of the test pulses to be in the range which is also used for the signal transmission.
+For telecom systems, the wavelength can be in different ranges, e.g. around 850&nbsp;nm, 1.3&nbsp;&mu;m or 1.55&nbsp;&mu;m.
+However, one may achieve a better measurement sensitivity by choosing a substantially shorter wavelength, where Rayleigh backscattering is correspondingly stronger.
+In some cases, this can be useful e.g. for precisely locating some fiber faults.
+A possibility is to perform OTDR measurements somewhat outside the wavelength range of telecom signals in order to facilitate measurements during signal transmission.
+Note that the test wavelength should then also be outside the wavelength region where there is <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> from any <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifiers</a>, since that could obviously affect the measurements.</p>
+<aside class="callout red">Multiple reflections lead to signals which are more difficult to interpret!</aside>
+<p>In some cases, one has to take into account that multiple reflections can occur &ndash; for example, if a fiber contains two different points with substantial <a href="reflectivity.html" title="the ratio of reflected optical power to the incident optical power at a surface">reflectivity</a>.
+The OTDR trace is then more difficult to interpret, since one loses the simple mapping between time and space.</p>
+<aside class="callout blue">For fast trouble shooting, OTDR can be essential.</aside>
+<p>OTDR measurements are particularly helpful for identifying problems.
+For example, if the <a href="bit_error_rate.html" title="average fraction of wrongly transmitted bits in a communication link">bit error rate</a> of a fiber-optic link is too high, that can have many causes.
+It may then be rather tedious to subsequently check all connectors, and checking splices is particularly cumbersome.
+A single OTDR trace may immediately reveal the problem, even if it is kilometers away from the instrument.</p>
+</div>
+<h2 class="togglediv">Required Detection Sensitivity, Dynamic Range and Bandwidth</h2>
+<div>
+<aside class="callout blue">The challenge is the detection with higher bandwidth, high sensitivity and large dynamic range at the same time.</aside>
+<p>In our example case with a <a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode fiber</a>, the reflected signal starts at a level of &approx;-60&nbsp;dB, indicating that only about one millionth of the injected <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a> is returned from the initial section of the fiber (the length of which is determined by the pulse duration).
+This shows that the used <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a> needs to have a high <a href="sensitivity.html" title="(different meanings, depending on the context)">sensitivity</a>.</p>
+<p>Furthermore, the detector of a reflectometer needs to have a large dynamic range, i.e., it must be able to detect signals in a wide range of power levels.
+The achieved dynamic range essentially limits the maximum possible range of measurement distances.
+Typical dynamic range values in the telecom area are around 35 to 50&nbsp;dB.</p>
+<p>The detector must also have a high <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>, because that limits the possible spatial resolution.
+In order to resolve reflections from two discrete points in a distance of 10&nbsp;cm, for example, one needs to resolve signals with a temporal distance of &approx;2 &middot; 10&nbsp;cm / 2&thinsp;&middot;&thinsp;10<sup>8</sup>&nbsp;m/s = 1&nbsp;ns.
+The used pulse duration should then obviously also be shorter than that.
+In practice, however, one often uses substantially longer pulses with duration of tens or even hundreds of nanoseconds in order to limit the acquisition time.</p>
+<p>Note that an increased temporal resolution has two negative effects:</p>
+<ul>
+<li>One needs to use shorter test pulses, which therefore carry less optical energy (assuming a constant peak power).</li>
+<li>The detector noise will usually be higher due to the higher required detection bandwidth.</li>
+</ul>
+<p>Therefore, a high temporal resolution is difficult to obtain &ndash; particularly for long fibers, where quite weak signals need to be detected.</p>
+<p>Substantially stronger signals can be obtained from <a href="multimode_fibers.html" title="fibers supporting more than one guided mode per polarization direction">multimode fibers</a> &ndash; both because of a higher capturing rate for backscattered light and because of the typically higher <a href="numerical_aperture.html" title="sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a>, which favors scattering.
+The propagation losses of such fibers are usually substantially higher, but one also typically uses shorter lengths of them.
+Overall, the OTDR method is then often substantially easier to implement.
+However, it is also required for single-mode long-distance fiber-optic links.</p>
+<p>The required combination of sensitivity and temporal resolution is usually not achievable with a single pulse, but within one test one can average the results of measurements with many pulses, having a sufficiently low <a href="pulse_repetition_rate.html" title="the number of pulses emitted per second e.g. by a mode-locked or Q-switched laser">pulse repetition rate</a> (below the inverse round-trip time for the whole fiber length).
+The longer the spatial measurement range, the higher will be the required sensitivity, and the lower the maximum allowed pulse repetition rate.
+Therefore, the required total measurement time will increase substantially for increased spatial ranges.
+In some cases, acquisition times of many minutes are required.
+One may sometimes sacrifice spatial resolution (by using longer and thus more energetic test pulses) in order to shorten the acquisition time.
+Clearly, the optimum trade-off concerning measurement range, spatial resolution and acquisition time depends on the circumstances.</p>
+<p>One may in principle use a <a href="photomultipliers.html" title="photodetection devices based on the photoelectric effect and charge multiplication by secondary emission of electrons">photomultiplier</a> tube for the pulse detection, since photomultipliers offer the combination of high sensitivity and high bandwidth.
+However, the <a href="photocathodes.html" title="an electrode where electrons can be released based on the photoelectric effect">photocathode</a> needs to be sensitive for the relevant wavelengths, and the achievable <a href="quantum_efficiency.html" title="percentage of input photons which contribute to a desired effect">quantum efficiency</a> in the 1.5-&mu;m telecom wavelength region is quite poor.
+Also, photomultipliers are comparatively bulky and need a very high operation voltage.
+For such reasons, one would typically prefer to use an <a href="avalanche_photodiodes.html" title="photodiodes with internal signal amplification through an avalanche process">avalanche photodiode</a>.</p>
+<p>Typically, the time-dependent detector output will be connected to an analog-to-digital converter (e.g. part of a sampling card) within the reflectometer, which digitizes the values with a certain sampling rate according to the required spatial resolution.
+A microprocessor can then be used to do the required number of acquisitions and provide an averaged OTDR trace.
+Additional data processing can be applied with suitable software.</p>
+<p>Also apply masking techniques for improving the signal quality.
+For example, one may deactivate the photodetector at times where a strong signal is expected in order to more accurately measure what comes behind it.</p>
+</div>
+<h2 class="togglediv">The Dead Zone Problem</h2>
+<div>
+<p>Isolated reflecting points in a fiber system may produce strong spikes in the detector signals, going far above the level of the background from Rayleigh scattering.
+This often causes some dead time of the detection system directly after such an event: the detector then requires some time to get back to its full sensitivity.
+In the spatial domain, that dead time relates to a <em>dead zone</em>.</p>
+<p>Dead zones are quantified by instrument manufacturers.
+The quoted values can substantially depend on the made assumptions.
+For example, one may test the minimum distance between two isolated reflection points of the same strength which allows the separate detection of those; that leads to an <em>event dead zone</em>.
+However, note that it is substantially more challenging to detect a low backscattered power due to Rayleigh scattering after a single isolated reflection, because the detector must get back to the its full sensitivity.
+Therefore, a dead zone in that respect (an <em>attenuation dead zone</em>) can be significantly longer for the same instrument.</p>
+<p>Of course, the magnitude of dead zones can depend on instrument settings, e.g. on the used pulse duration.</p>
+</div>
+<h2 class="togglediv">Types of OTDR Instruments</h2>
+<div>
+<p>While optical time-domain reflectometers are all based on the same operation principle, there are different variants of reflectometers, optimized for different application areas:</p>
+<ul>
+<li>There are high-performance laboratory instruments, offering the longest measurement ranges, high spatial resolution and substantial flexibility for a wide range of test conditions.
+Having reasonably large color displays and convenient controls, they are also nicest to use.
+They can contain many useful features for data analysis, as explained further below.
+Unfortunately, such flexible high-performance equipment has its price.</li>
+<li>For use in the field, there are hand-held reflectometers, which are relatively lightweight and battery-powered.
+However, they may have a lower performance, and the smaller display screen (e.g. 5 inches diagonal, possibly a touch screen) may make their use somewhat less convenient.
+There can also be more limited memory space for storing OTDR traces.
+SD memory cards are common in this area.</li>
+<li>There are remote OTDR devices, which can be permanently installed into fiber-optic links and deliver the data e.g. through ethernet connections to a central location for monitoring a larger system.
+They can be regularly operated to monitor the state of the system, or on demand in case of transmission problems.</li>
+</ul>
+<p>There are also mixed solutions.
+For example, a laboratory or hand-held instrument may also have features for remote use, which can be highly useful in certain situations.</p>
+<p>A simple entry-level OTDR instrument may just display the recorded OTDR traces or variable sections of them.
+More advanced devices offer additional operations.
+Some examples:</p>
+<ul>
+<li>The device may calculate the spatially resolved loss efficient of the fiber from the slope of the OTDR trace.</li>
+<li>It may calculate localized losses and reflections, and numerically indicate them in the graph.</li>
+<li>By comparing traces taken for two different wavelengths, it may identify bent sections, because the <a href="bend_losses.html" title="propagation losses in an optical fiber (or other waveguide) caused by bending">bend losses</a> (in contrast to other typical losses) usually rise substantially with increasing wavelength.</li>
+<li>One may enter certain specifications, e.g. limits to the distributed and localized propagation loss, and suitable software may check whether all those specifications are fulfilled, and point out any violations.
+For example, a single poor-quality splice may be identified, even if the overall link loss is tolerable.</li>
+<li>Artifacts from multiple reflections may be removed.</li>
+<li>A handheld device may have a WiFi or Bluetooth connection to a personal computer, e.g. for transferring traces of for remote control.</li>
+<li>Software may also produce a overall performance rating of a link for a quick assessment of its quality.</li>
+<li>A device may offer testing with different optical wavelengths; that can be essential for testing <a href="wavelength_division_multiplexing.html" title="a multiplexing technique working in the wavelength domain">wavelength division multiplexing</a> (WDM) systems.</li>
+</ul>
+<p>Obviously, the selection of such an instrument should be done by a person having substantial experience in the field, understanding the performance requirements and which kinds of instrument features will be particularly useful for the purpose.
+Note that the required performance can differ substantially between different fields of applications, for example concerning the types of telecom systems: <a href="fiber_to_the_home.html" title="the technology of providing data connections to private homes via optical fibers rather than electric cables">fiber to the home</a>, cable TV, local area optical networks, metropolitan networks or long-haul Internet backbones.</p>
+<p>Some devices are mostly used for locating faults, and may then be of a simpler type, which for example only displays fault locations instead of full OTDR traces.</p>
+</div>
+<h2 class="togglediv">OTDR Data Formats</h2>
+<div>
+<p>There are a few different standouts for OTDR data formats, which facilitate the combination of devices from different suppliers.
+For example, remote OTDR instruments may deliver such standardized OTDR traces, which can then be processed with software from other suppliers.
+An OTDR file will typically contain a long chain of integer values, e.g. logarithmic values in units of 1/1000 dB, and in addition a header indicating some parameters such as the range and resolution.
+Specialized post-processing software is available which allows one to analyze OTDR traces on a personal computer, for example.</p>
+</div>
+<h2 class="togglediv">Bidirectional Testing</h2>
+<div>
+<p>In some cases, it is necessary to test fiber-optic links in both directions.
+For example, one may apply the same OTDR instrument once for each side of the link.
+That can lead to different results particularly in multimode systems, where coupling losses are not necessarily the same in both directions.
+Of course, systems containing <a href="faraday_isolators.html" title="optical isolators based on the Faraday effect">Faraday isolators</a> can be tested in only one direction, unless the isolation is quite poor.</p>
+<p>Sometimes, it makes sense to test two fibers at the same time from one end, connecting the fibers at the other end.
+Although one may still require technicians at both ends, one can avoid the transport of the OTDR instrument (or using two of them).</p>
+</div>
+<h2 class="togglediv">Alternative Methods</h2>
+<div>
+<p>Spatially resolved measurements of Rayleigh backscattering and additional reflections can also be achieved with other methods.
+In particular, one may use <a href="optical_coherence_tomography.html" title="an optical imaging technique where longitudinal resolution is achieved based on interference effects with low-coherence light">optical coherence tomography</a>, which can then also be called <em>low-coherence reflectometry</em>.
+That technique is particularly suitable for measurements of a very short lengths with very high spatial resolution, even far better than 1&nbsp;mm.
+For example, it can be used to investigate <a href="photonic_integrated_circuits.html" title="integrated circuits with optical functions">photonic integrated circuits</a>, which are too small for the application of OTDR.
+The use light source will then typically be a <a href="superluminescent_diodes.html" title="broadband semiconductor light sources based on superluminescence">superluminescent diode</a>.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_optical_time_domain_reflectometers.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 17 suppliers for optical time-domain reflectometers.</p>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="optical_time_domain_reflectometers.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">M. K. Barnoski and S. M. Jensen, &ldquo;Fiber waveguides: A novel technique for investigating attenuation characteristics&rdquo;, Appl. Opt. 15 (9), 2112 (1976), <a href="https://doi.org/10.1364/AO.15.002112">doi:10.1364/AO.15.002112</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">S. D. Personick, &ldquo;Photon probe &ndash; an optical time-domain reflectometer&rdquo;, Bell Syst. Tech. J. 56, 355 (1977)</td></tr>
+<tr><td class="refno">[3]</td><td class="refs">B. Costa <i>et al.</i>, &ldquo;Splice loss evaluation by means of the backscattering technique&rdquo;, Electron.Lett. 15, 550 (1979), <a href="https://doi.org/10.1049/el:19790395">doi:10.1049/el:19790395</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">M. Nakazawa, &ldquo;Rayleigh backscattering theory for single-mode optical fibers&rdquo;, J. Opt. Soc. Am. 73 (9), 1175 (1983), <a href="https://doi.org/10.1364/JOSA.73.001175">doi:10.1364/JOSA.73.001175</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">B. L. Danielson, &ldquo; Optical time-domain reflectometer specifications and performance testing&rdquo;, Appl. Opt. 24 (15), 2313 (1985), <a href="https://doi.org/10.1364/AO.24.002313">doi:10.1364/AO.24.002313</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="reflectivity.html" title="the ratio of reflected optical power to the incident optical power at a surface">reflectivity</a>, <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a>, <a href="rayleigh_scattering.html" title="scattering of light at scattering centers which are much smaller than the wavelength">Rayleigh scattering</a>, <a href="insertion_loss.html" title="power losses due to insertion of a device">insertion loss</a>, <a href="return_loss.html" title="a measure for how much reflected light is attenuated">return loss</a>, <a href="mechanical_fiber_splices.html" title="permanent or semi-permanent connections of optical fibers which are held in place with mechanical means">mechanical fiber splices</a>, <a href="fusion_splicing_of_fibers.html" title="a technique of making low-loss fiber joints by fusing fiber ends together">fusion splicing of fibers</a>, <a href="optical_metrology.html" title="the science and technology of performing measurements with light">optical metrology</a><br>and other articles in the categories <a href="categories.html#fiber_optics_and_waveguides" title="other articles on fiber optics and waveguides">fiber optics and waveguides</a>, <a href="categories.html#lightwave_communications" title="other articles on lightwave communications">lightwave communications</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/optical_time_domain_reflectometers.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Foptical_time_domain_reflectometers.html&text=RP+Photonics+Encyclopedia+-+optical+time-domain+reflectometers%2C+OTDR%2C+operation+principle%2C+sensitivity%2C+bandwidth%2C+dynamic+range%2C+measurement+distance%2C+spatial+resolution%2C+dead+zones%2C+instrument+types%2C+applications" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Foptical_time_domain_reflectometers.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Foptical_time_domain_reflectometers.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/optical_time_domain_reflectometers.html"&gt;<br>Article on Optical Time-domain Reflectometers&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/optical_time_domain_reflectometers.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/optical_time_domain_reflectometers.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/optical_time_domain_reflectometers.html<br>article on 'Optical Time-domain Reflectometers' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Promote Your White Papers and Videos</h2>
+<p>White papers and videos are great instruments for creating an interest in your technology and demonstrating the capabilities of a company. But <b>how to publicize them</b>, reaching the right audience?</p>
+<p><img class="whitepaper" style="padding:30px 5px; width:70%; height:70%;" src="./img/white_paper_example.png" alt="example for white paper"></p>
+<p>Our suggestion: <a href="./marketing_promotions.html?banner=white_papers">place a preview in a suitable encyclopedia article!</a>
+For example, the paper preview shown above would well fit into our articles on <a href="./laser_diodes.html?banner=white_papers">laser diodes</a> and <a href="./diode_bars.html?banner=white_papers">diode bars</a>.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="5ug0MgYzcIIuOhRaz0ViGg==">shownbanner = "white papers";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Free Tutorial: Modeling of Fiber Amplifiers and Lasers</h2>
+<p>We have published a new <a href="./tutorial_modeling.html?banner=modeling_tutorial">tutorial</a> which discusses the modeling of fiber amplifiers and lasers.
+It addresses many questions:</p>
+<ul>
+<li>What is a <a href="./tutorial_modeling1.html?banner=modeling_tutorial">model</a>?</li>
+<li>Should one use <a href="./tutorial_modeling3.html?banner=modeling_tutorial">power propagation or field propagation</a>?</li>
+<li>How to simulate the behavior of <a href="./tutorial_modeling4.html?banner=modeling_tutorial">laser-active ions</a>?</li>
+<li>How to calculate <a href="./tutorial_modeling5.html?banner=modeling_tutorial">steady-state solutions</a>?</li>
+<li>How to simulate <a href="./tutorial_modeling6.html?banner=modeling_tutorial">dynamical behavior</a> and <a href="./tutorial_modeling7.html?banner=modeling_tutorial">ultrashort pulse propagation</a>?</li>
+<li>What aspects are important for the <a href="./tutorial_modeling8.html?banner=modeling_tutorial">decision</a> whether to develop own modeling software or use commercial software?</li>
+</ul>
+<p><a href="./tutorial_modeling.html?banner=modeling_tutorial">Read the tutorial!</a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="5ug0MgYzcIIuOhRaz0ViGg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/optical_time_domain_reflectometers.html"
+    },
+    "headline": "Optical Time-domain Reflectometers",
+    "image": "https://www.rp-photonics.com/previews/optical_time_domain_reflectometers.png",
+    "datePublished": "2019-07-11",
+    "dateModified": "2020-03-14",
+    "description": "Optical time-domain reflectometers are widely used for inspecting fiber-optic data links. They allow one to measure distributed and localized propagation losses and reflections, for example arising from faulty fiber connections or splices.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter O",
+      "item": "https://www.rp-photonics.com/encyclopedia_o.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "optical time-domain reflectometers",
+      "item": "https://www.rp-photonics.com/optical_time_domain_reflectometers.html"
+    }]}
+}
+</script>
+</body>
+</html>

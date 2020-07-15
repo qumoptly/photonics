@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-7NMuMtl6Kvm/2u3KBBqPmw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Carrier-envelope offset, CEO frequency, CEP, absolute phase</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/carrier_envelope_offset.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="The carrier-envelope offset of an optical pulse is the offset between the optical phase and the maximum of the wave envelope. It is particularly relevant in optical frequency metrology.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="Carrier-envelope offset, CEO frequency, CEP, absolute phase">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Carrier&ndash;envelope Offset">
+<meta property="og:description" content="The carrier-envelope offset of an optical pulse is the offset between the optical phase and the maximum of the wave envelope. It is particularly relevant in optical frequency metrology.">
+<meta property="og:url" content="https://www.rp-photonics.com/carrier_envelope_offset.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/carrier_envelope_offset.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="The carrier-envelope offset of an optical pulse is the offset between the optical phase and the maximum of the wave envelope. It is particularly relevant in optical frequency metrology.">
+<meta name="twitter:title" content="Carrier&ndash;envelope Offset">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/carrier_envelope_offset.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="7NMuMtl6Kvm/2u3KBBqPmw==">
+page="carrier_envelope_offset.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="7NMuMtl6Kvm/2u3KBBqPmw==">shownsponsors="TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_c.html">letter C</a> &gt; <a href="carrier_envelope_offset.html">carrier&ndash;envelope offset</a></p>
+<h1>Carrier&ndash;envelope Offset</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_carrier_envelope_offset_measurement_and_stabilization.html?s=vbox">8 suppliers for carrier&ndash;envelope offset measurement and stabilization</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.fastlite.com/en/ar824676-823531-CEP-stabilization-loop.html" data-supplier="Fastlite" data-location="product-enc" data-keyword="carrier--envelope offset measurement and stabilization" rel="nofollow" class="bg externallink"><img src="./bg/logos/fastlite.png" alt="Fastlite" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.kmlabs.com/product/stryde-ultrafast-tisapphire-oscillator/" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="carrier--envelope offset measurement and stabilization" rel="nofollow" class="bg externallink"><img src="./bg/logos/kapteyn_murnane_laboratories.png" alt="Kapteyn-Murnane Laboratories" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.menlosystems.com/products/cep-stable-lasers-and-cep-phase-stabilization/" data-supplier="Menlo Systems" data-location="product-enc" data-keyword="carrier--envelope offset measurement and stabilization" rel="nofollow" class="bg externallink"><img src="./bg/logos/menlo_systems.png" alt="Menlo Systems" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="http://www.sphere-photonics.com/products/cep-tag" data-supplier="Sphere Ultrafast Photonics" data-location="product-enc" data-keyword="carrier--envelope offset measurement and stabilization" rel="nofollow" class="bg externallink"><img src="./bg/logos/sphere_ultrafast_photonics.png" alt="Sphere Ultrafast Photonics" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="http://www.laserquantum.com/applications/detail.cfm?id=28" data-supplier="Laser Quantum" data-location="product-enc" data-keyword="carrier--envelope offset measurement and stabilization" rel="nofollow" class="bg externallink"><img src="./bg/logos/laser_quantum.png" alt="Laser Quantum" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_carrier_envelope_offset_measurement_and_stabilization.html?s=vbox">List of suppliers for<br>carrier--envelope offset measurement and stabilization</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="boxadvertisement">
+<h2>Calculating CEO Effects</h2>
+<p>Ask <a href="index.html">RP Photonics</a> for advice concerning the measurement of the carrier&ndash;envelope offset frequency, its effects in a particular situation, and on calculations.</p>
+<p>CEO effects can be simulated numerically with the software <a href="fiberpower.html"><b>RP Fiber Power</b></a>.
+One could check, for example, how intensity noise is converted to CEO noise by the Kerr nonlinearity.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p>Acronym: CEO</p>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: the offset between the optical phase and the maximum of the wave envelope of an optical pulse</p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<p><a href="encyclopedia_cite.html?article=carrier--envelope%20offset">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>The time dependence of the electric field associated with a <a href="light.html" title="electromagnetic radiation in the visible spectral range, or sometimes in an extended spectral region">light</a> <a href="pulses.html" title="flashes of light">pulse</a> can be described as a fast sinusoidal oscillation, called the <em>carrier</em>, multiplied by a more slowly varying <em>envelope</em> function.
+When the pulse propagates through a medium, the relative position between the carrier wave and envelope will in general change due to <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>, causing a difference between <a href="phase_velocity.html" title="the velocity with which phase fronts propagate in a medium">phase velocity</a> and <a href="group_velocity.html" title="the velocity with which the envelope of a weak narrow-band optical pulse propagates in a medium">group velocity</a>, and possibly also due to optical <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a>.
+The <em>carrier&ndash;envelope offset phase</em> (or <em>absolute phase</em>) of a pulse is defined as the difference between the <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">optical phase</a> of the carrier wave and the envelope position, the latter being converted to a phase value.
+Figure&nbsp;1 shows pulses with different values of the carrier&ndash;envelope offset phase.</p>
+<figure class="right" style="width:330px;">
+<img src="img/ceo.gif" alt="pulse with zero ceo phase">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Electric field (blue curves) of laser pulses with a 5-fs duration and a variable CEO phase. This phase changes by <span class="eqn_il"><span class="greek">&pi;</span>/2</span> from one pulse to the next one, corresponding to a CEO frequency which is one quarter of the pulse repetition rate.
+</figcaption>
+</figure>
+<p>In a <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked laser</a>, a pulse train is usually generated from a single pulse circulating in the <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a>.
+Every time when this pulse hits the <a href="output_couplers.html" title="partially transparent laser mirrors, used for extracting output beams from laser resonators">output coupler</a>, an attenuated copy of it is emitted to the laser output.
+Typically, there is a certain change in the carrier&ndash;envelope offset phase in each round trip, which can be hundreds or thousands of radians.
+Therefore, each emitted pulse will have a different carrier&ndash;envelope phase.
+For the output pulse train, only the change in this phase value modulo <span class="eqn_il">2&thinsp;<span class="greek">&pi;</span></span> is relevant.
+This can very sensitively depend on factors such as the laser power, resonator alignment, etc.</p>
+<h2 class="togglediv">Carrier&ndash;Envelope Offset Frequency</h2>
+<div>
+<p>The <em>carrier&ndash;envelope offset frequency</em> (CEO frequency) of a mode-locked laser is</p>
+<div class="eqn"><img src="eqn/ceo_nu.gif" width="168" height="42" alt="CEO frequency"></div>
+<p>where <span class="eqn_il"><span class="greek">&Delta;</span><span class="greek">&phi;</span><sub>ceo</sub></span> is the change in the carrier&ndash;envelope offset phase (also called <em>carrier&ndash;envelope phase</em>, CEP) per resonator round trip and <span class="eqn_il"><i>f</i><sub>rep</sub></span> is the <a href="pulse_repetition_rate.html" title="the number of pulses emitted per second e.g. by a mode-locked or Q-switched laser">pulse repetition rate</a>.
+The carrier&ndash;envelope offset frequency thus lies between zero and the repetition rate <span class="eqn_il"><i>f</i><sub>rep</sub></span>.
+The <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequencies</a> of the pulse train (which for simplicity is assumed to be noiseless) are</p>
+<div class="eqn"><img src="eqn/ceo_nu_opt.gif" width="110" height="25" alt="optical frequencies"></div>
+<p>with integer values of the index <span class="eqn_il"><i>j</i></span>.
+This means that there is a so-called equidistant <a href="frequency_combs.html" title="optical spectra consisting of equidistant lines">frequency comb</a>, and all occurring optical frequencies are determined by the repetition frequency and the CEO frequency.</p>
+<p>The carrier&ndash;envelope offset frequency is important in optical <a href="frequency_metrology.html" title="the field of technology dealing with precise frequency measurements">frequency metrology</a> and also in high-intensity physics with few-cycle laser pulses, because it affects the oscillation pattern of the electric field and even the peak electric field strength.</p>
+</div>
+<h2 class="togglediv">CEO Measurement</h2>
+<div>
+<p>The carrier envelope offset frequency can be detected e.g. with a so-called <em><span class="eqn_il"><i>f&minus;</i>2<i>f</i></span> <a href="interferometers.html" title="optical devices utilizing the phenomenon of interference">interferometer</a></em> via a <a href="beat_note.html" title="an oscillation of the optical intensity arising from the superposition of light with different optical frequencies">beat note</a> between the higher-frequency end of the <a href="spotlight_2007_10_11.html">comb spectrum</a> with the <a href="frequency_doubling.html" title="the phenomenon that an input wave in a nonlinear material can generate a wave with twice the optical frequency">frequency-doubled</a> lower-frequency end, if the <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a> covers an optical octave.
+(Such broad spectra can be achieved e.g. with <a href="supercontinuum_generation.html" title="a nonlinear process for strong spectral broadening of light">supercontinuum generation</a> in <a href="photonic_crystal_fibers.html" title="specialty optical fibers with a built-in microstructure, in most cases consisting of small air holes in glass">photonic crystal fibers</a>, if the spectrum from the laser is not broad enough.)
+The article on <a href="frequency_combs.html" title="optical spectra consisting of equidistant lines">frequency combs</a> gives more details.</p>
+</div>
+<h2 class="togglediv">CEO Stabilization</h2>
+<div>
+<p>The CEO frequency of a laser can be influenced e.g. via the pump power, by slightly tilting a resonator mirror, or by inserting a glass <a href="wedge_prisms.html" title="prisms with a small angle between the end surfaces">wedge</a> to a variable extent.
+(Various other control elements have also been developed.)
+The combination of detection and control of the CEO frequency allows the CEO frequency to be stabilized to a constant well-known value, so that all <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequencies</a> in the <a href="frequency_combs.html" title="optical spectra consisting of equidistant lines">frequency comb</a> are related to two RF or microwave frequencies [4].
+Under such conditions, a laser is called <em>CEO-stabilized</em> or <em>CEP-stabilized</em>.</p>
+<p>It is also possible to obtain frequency combs which <em>naturally</em> have a zero carrier&ndash;envelope offset frequency, i.e., an essentially constant carrier&ndash;envelope offset phase.
+For this purpose, it is necessary to arrange for <a href="sum_and_difference_frequency_generation.html" title="nonlinear processes generating beams with the sum or difference of the frequencies of the input beams">difference frequency generation</a> with both inputs from a single frequency comb [6].
+This method leads to so-called <em>self-phase-stabilized pulses</em>.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_carrier_envelope_offset_measurement_and_stabilization.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 8 suppliers for carrier--envelope offset measurement and stabilization. Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.laserquantum.com/" data-supplier="Laser Quantum" data-location="product-enc" data-keyword="carrier--envelope offset measurement and stabilization" rel="nofollow" class="bg externallink" title="Visit the website of Laser Quantum"><img src="./bg/logos/laser_quantum.png" alt="Laser Quantum" class="supplierlogo"></a><a href="http://www.laserquantum.com/applications/detail.cfm?id=28" data-supplier="Laser Quantum" data-location="product-enc" data-keyword="carrier--envelope offset measurement and stabilization" rel="nofollow" class="bg externallink" title="Visit the website of Laser Quantum"><img src="./bg/products/laser_quantum/carrier_envelope_offset.jpg" alt="carrier--envelope offset measurement and stabilization" class="product"></a><h3><a href="./bg/profiles/laser_quantum.html" title="See the profile of Laser Quantum">Laser Quantum</a></h3><p>Laser Quantum provides several lasers and systems for <a href="http://www.laserquantum.com/applications/detail.cfm?id=28" data-supplier="Laser Quantum" data-location="product-enc" data-keyword="carrier--envelope offset measurement and stabilization" rel="nofollow" class="externallink bg">carrier&ndash;envelope phase stabilisation</a>, including the <strong>finesse pure CEP</strong> &ndash; an ultra low noise laser with direct pump modulation capabilities and powers between 4&ndash;16&nbsp;W.</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.sphere-photonics.com/" data-supplier="Sphere Ultrafast Photonics" data-location="product-enc" data-keyword="carrier--envelope offset measurement and stabilization" rel="nofollow" class="bg externallink" title="Visit the website of Sphere Ultrafast Photonics"><img src="./bg/logos/sphere_ultrafast_photonics.png" alt="Sphere Ultrafast Photonics" class="supplierlogo"></a><h3><a href="./bg/profiles/sphere_ultrafast_photonics.html" title="See the profile of Sphere Ultrafast Photonics">Sphere Ultrafast Photonics</a></h3><p>The <a href="http://www.sphere-photonics.com/products/cep-tag" data-supplier="Sphere Ultrafast Photonics" data-location="product-enc" data-keyword="carrier--envelope offset measurement and stabilization" rel="nofollow" class="externallink bg">CEP-tag system</a> provides at single-shot measurements of the Carrier Envelope Phase (CEP) offset of amplified laser pulse. It is based on <i>f</i>&ndash;2<i>f</i> interferometry, where the second harmonic of the red edge of an octave-spanning spectrum is spectrally interfered with the blue edge. Detection is based on a photodiode array and the use of Field-Programmable Gate Array (FPGA) electronics enables us to determine the CEP at a rate of 100&nbsp;kHz.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.menlosystems.com/" data-supplier="Menlo Systems" data-location="product-enc" data-keyword="carrier--envelope offset measurement and stabilization" rel="nofollow" class="bg externallink" title="Visit the website of Menlo Systems"><img src="./bg/logos/menlo_systems.png" alt="Menlo Systems" class="supplierlogo"></a><a href="https://www.menlosystems.com/products/cep-stable-lasers-and-cep-phase-stabilization/" data-supplier="Menlo Systems" data-location="product-enc" data-keyword="carrier--envelope offset measurement and stabilization" rel="nofollow" class="bg externallink" title="Visit the website of Menlo Systems"><img src="./bg/products/menlo_systems/ceo_measurement.jpg" alt="carrier--envelope offset measurement and stabilization" class="product"></a><h3><a href="./bg/profiles/menlo_systems.html" title="See the profile of Menlo Systems">Menlo Systems</a></h3><p>Menlo Systems&#39; <a href="https://www.menlosystems.com/products/cep-stable-lasers-and-cep-phase-stabilization/" data-supplier="Menlo Systems" data-location="product-enc" data-keyword="carrier--envelope offset measurement and stabilization" rel="nofollow" class="externallink bg">CEP Stable Lasers and CEP Phase Stabilization</a> are solutions that allow one to stabilize the carrier envelope phase of light pulses. We offer CEP stable femtoscond laser sources as well as phase stabilization electronics for OEM integrators. Applications range from CEP stable front end seed lasers to few cycle pulse oscillators and amplifiers for high harmonic generation and attosecond science.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.kmlabs.com/" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="carrier--envelope offset measurement and stabilization" rel="nofollow" class="bg externallink" title="Visit the website of Kapteyn-Murnane Laboratories"><img src="./bg/logos/kapteyn_murnane_laboratories.png" alt="Kapteyn-Murnane Laboratories" class="supplierlogo"></a><a href="https://www.kmlabs.com/product/stryde-ultrafast-tisapphire-oscillator/" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="carrier--envelope offset measurement and stabilization" rel="nofollow" class="bg externallink" title="Visit the website of Kapteyn-Murnane Laboratories"><img src="./bg/products/kapteyn_murnane_laboratories/stryde.jpg" alt="carrier--envelope offset measurement and stabilization" class="product"></a><h3><a href="./bg/profiles/kapteyn_murnane_laboratories.html" title="See the profile of Kapteyn-Murnane Laboratories">Kapteyn-Murnane Laboratories</a></h3><p>Our <a href="https://www.kmlabs.com/product/stryde-ultrafast-tisapphire-oscillator/" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="carrier--envelope offset measurement and stabilization" rel="nofollow" class="externallink bg">Stryde Ti:sapphire mode-locked oscillator</a> has an optional "CEP-ready" configuration for applications that require CEP stabilization. Our RAEA HP-SP based on a multipass amplifier design has the ideal system architecture for applications that require CEP stabilization for mJ-class, multi-kHz systems.</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.fastlite.com/" data-supplier="Fastlite" data-location="product-enc" data-keyword="carrier--envelope offset measurement and stabilization" rel="nofollow" class="bg externallink" title="Visit the website of Fastlite"><img src="./bg/logos/fastlite.png" alt="Fastlite" class="supplierlogo"></a><a href="http://www.fastlite.com/en/ar824676-823531-CEP-stabilization-loop.html" data-supplier="Fastlite" data-location="product-enc" data-keyword="carrier--envelope offset measurement and stabilization" rel="nofollow" class="bg externallink" title="Visit the website of Fastlite"><img src="./bg/products/fastlite/ceo_stabilization.jpg" alt="carrier--envelope offset measurement and stabilization" class="product"></a><h3><a href="./bg/profiles/fastlite.html" title="See the profile of Fastlite">Fastlite</a></h3><p>The combination of the <a href="http://www.fastlite.com/en/ar824665-823529-Dazzler.html" data-supplier="Fastlite" data-location="product-enc" data-keyword="carrier--envelope offset measurement and stabilization" rel="nofollow" class="externallink bg">Dazzler</a> or <a href="http://www.fastlite.com/en/ar824670-823529-High-repetition-rate-Dazzler.html" data-supplier="Fastlite" data-location="product-enc" data-keyword="carrier--envelope offset measurement and stabilization" rel="nofollow" class="externallink bg">high repetition rate Dazzler</a> single-shot and dispersion-free CEP control, with the multi-kHz single-shot CEP detection of the <a href="http://www.fastlite.com/en/ar824656-823532-Fringeezz.html" data-supplier="Fastlite" data-location="product-enc" data-keyword="carrier--envelope offset measurement and stabilization" rel="nofollow" class="externallink bg">Fringeezz</a> allows to build high bandwidth carrier&ndash;envelope phase stabilization loops. The ultimate CEP control for Ti:sapphire amplifiers, OPCPAs or other CEP-compatible systems, as well as for high-stability interferometers. For amplifier CEP stabilization or phase-tagging, fast and single-shot measurement is mandatory. Placed after a f-to-2f setup, the <a href="http://www.fastlite.com/en/ar824656-823532-Fringeezz.html" data-supplier="Fastlite" data-location="product-enc" data-keyword="carrier--envelope offset measurement and stabilization" rel="nofollow" class="externallink bg">Fringeezz</a> can extract the CEP error for every shot, up to 10&nbsp;kHz.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="carrier_envelope_offset.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">M. Ivanov <i>et al.</i>, &ldquo;Routes to control of intense-field atomic polarizability&rdquo;, Phys. Rev. Lett. 74 (15), 2933 (1995), <a href="https://doi.org/10.1103/PhysRevLett.74.2933">doi:10.1103/PhysRevLett.74.2933</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">L. Xu <i>et al.</i>, &ldquo;Route to phase control of ultrashort light pulses&rdquo;, Opt. Lett. 21 (24), 2008 (1996), <a href="https://doi.org/10.1364/OL.21.002008">doi:10.1364/OL.21.002008</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">A. de Bohan <i>et al.</i>, &ldquo;Phase-dependent harmonic emission with ultrashort laser pulses&rdquo;, Phys. Rev. Lett. 81 (9), 1837 (1998), <a href="https://doi.org/10.1103/PhysRevLett.81.1837">doi:10.1103/PhysRevLett.81.1837</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">H. R. Telle <i>et al.</i>, &ldquo;carrier&ndash;envelope offset phase control: a novel concept for absolute optical frequency measurement and ultrashort pulse generation&rdquo;, Appl. Phys. B 69, 327 (1999), <a href="https://doi.org/10.1007/s003400050813">doi:10.1007/s003400050813</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">T. Brabec and F. Krausz, &ldquo;Intense few-cycle laser fields: frontiers of nonlinear optics&rdquo;, Rev. Mod. Phys. 72 (2), 545 (2000), <a href="https://doi.org/10.1103/RevModPhys.72.545">doi:10.1103/RevModPhys.72.545</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">A. Baltu&scaron;ka <i>et al.</i>, &ldquo;Controlling the carrier&ndash;envelope phase of ultrashort light pulses with optical parametric amplifiers&rdquo;, Phys. Rev. Lett. 88 (13), 133901 (2002), <a href="https://doi.org/10.1103/PhysRevLett.88.133901">doi:10.1103/PhysRevLett.88.133901</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">F. W. Helbing <i>et al.</i>, &ldquo;Carrier&ndash;envelope offset phase-locking with attosecond timing jitter&rdquo;, IEEE J. Quantum Electron. 9 (4), 1030 (2003), <a href="https://doi.org/10.1109/JSTQE.2003.819104">doi:10.1109/JSTQE.2003.819104</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">C. Vozzi <i>et al.</i>, &ldquo;High-energy, few-optical-cycle pulses at 1.5&nbsp;&mu;m with passive carrier&ndash;envelope phase stabilization&rdquo;, Opt. Express 14 (21), 10109 (2006), <a href="https://doi.org/10.1364/OE.14.010109">doi:10.1364/OE.14.010109</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">C. Grebing <i>et al.</i>, &ldquo;Performance comparison of interferometer topologies for carrier&ndash;envelope phase detection&rdquo;, Appl. Phys. B 95 (1), 81 (2009), <a href="https://doi.org/10.1007/s00340-009-3428-9">doi:10.1007/s00340-009-3428-9</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">E. Moon <i>et al.</i>, &ldquo;Advances in carrier&ndash;envelope phase stabilization of grating-based chirped-pulse amplifiers&rdquo;, Laser &amp; Photon. Rev. 4 (1), 160 (2010), <a href="https://doi.org/10.1002/lpor.200810060">doi:10.1002/lpor.200810060</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">V. Tsatourian <i>et al.</i>, &ldquo;Common-path self-referencing interferometer for carrier&ndash;envelope offset frequency stabilization with enhanced noise immunity&rdquo;, Opt. Lett. 35 (8), 1209 (2010), <a href="https://doi.org/10.1364/OL.35.001209">doi:10.1364/OL.35.001209</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">Z. Chang and P. Corkum, &ldquo;Attosecond photon sources: the first decade and beyond&rdquo;, J. Opt. Soc. Am. B 27 (11), B9 (2010), <a href="https://doi.org/10.1364/JOSAB.27.0000B9">doi:10.1364/JOSAB.27.0000B9</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">A. M. Sayler <i>et al.</i>, &ldquo;Precise, real-time, every-single-shot, carrier&ndash;envelope phase measurement of ultrashort laser pulses&rdquo;, Opt. Lett. 36 (1), 1 (2011), <a href="https://doi.org/10.1364/OL.36.000001">doi:10.1364/OL.36.000001</a></td></tr>
+<tr><td class="refno">[14]</td><td class="refs">K. Okamura and T. Kobayashi, &ldquo;Octave-spanning carrier&ndash;envelope phase stabilized visible pulse with sub-3-fs pulse duration&rdquo;, Opt. Lett. 36 (2), 226 (2011), <a href="https://doi.org/10.1364/OL.36.000226">doi:10.1364/OL.36.000226</a></td></tr>
+<tr><td class="refno">[15]</td><td class="refs">B. Borchers <i>et al.</i>, &ldquo;Carrier&ndash;envelope phase stabilization with sub-10&nbsp;as residual timing jitter&rdquo;, Opt. Lett. 36 (21), 4146 (2011), <a href="https://doi.org/10.1364/OL.36.004146">doi:10.1364/OL.36.004146</a></td></tr>
+<tr><td class="refno">[16]</td><td class="refs">G. Gademann <i>et al.</i>, &ldquo;Carrier&ndash;envelope phase stabilization of a terawatt level chirped pulse amplifier for generation of intense isolated attosecond pulses&rdquo;, Opt. Express 19 (25), 24922 (2011), <a href="https://doi.org/10.1364/OE.19.024922">doi:10.1364/OE.19.024922</a></td></tr>
+<tr><td class="refno">[17]</td><td class="refs">A. Klenner <i>et al.</i>, &ldquo;Phase-stabilization of the carrier&ndash;envelope-offset frequency of a SESAM modelocked thin disk laser&rdquo;, Opt. Express 21 (21), 24770 (2013), <a href="https://doi.org/10.1364/OE.21.024770">doi:10.1364/OE.21.024770</a></td></tr>
+<tr><td class="refno">[18]</td><td class="refs">M. Hoffmann <i>et al.</i>, &ldquo;CEO stabilization of a femtosecond laser using a SESAM as fast opto-optical modulator&rdquo;, Opt. Express 21 (24), 30054 (2013), <a href="https://doi.org/10.1364/OE.21.030054">doi:10.1364/OE.21.030054</a></td></tr>
+<tr><td class="refno">[19]</td><td class="refs">T. Paasch-Colberg <i>et al.</i>, &ldquo;Solid-state light-phase detector&rdquo;, Nature Photon. 8, 214 (2014), <a href="https://doi.org/10.1038/nphoton.2013.348">doi:10.1038/nphoton.2013.348</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p>(More references can be found in the article on <a href="frequency_combs.html" title="optical spectra consisting of equidistant lines">frequency combs</a>.)</p>
+<p class="seealso">See also: <a href="pulses.html" title="flashes of light">pulses</a>, <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">optical phase</a>, <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequency</a>, <a href="frequency_combs.html" title="optical spectra consisting of equidistant lines">frequency combs</a>, <a href="frequency_metrology.html" title="the field of technology dealing with precise frequency measurements">frequency metrology</a>, <a href="stabilization_of_lasers.html" title="measures applied to lasers in order to improve their stability in terms of output power, optical frequency, or other quantities">stabilization of lasers</a>, <a href="spotlight_2007_10_11.html">The Photonics Spotlight 2007-10-11</a><br>and other articles in the categories <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/carrier_envelope_offset.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fcarrier_envelope_offset.html&text=RP+Photonics+Encyclopedia+-+Carrier-envelope+offset%2C+CEO+frequency%2C+CEP%2C+absolute+phase" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fcarrier_envelope_offset.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fcarrier_envelope_offset.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/carrier_envelope_offset.html"&gt;<br>Article on Carrier&amp;ndash;envelope Offset&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/carrier_envelope_offset.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/carrier_envelope_offset.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/carrier_envelope_offset.html<br>article on 'Carrier&amp;ndash;envelope Offset' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Your Lab is Closed due to the Corona Virus Crisis?</h2>
+<p>Time to think how to best utilize your time!</p>
+<p>Here is a suggestion: <br> <b>Consider to start with physical modeling!</b></p>
+<ul>
+<li>Build models for your existing or planned lasers and amplifiers, resonators, etc.</li>
+<li>Utilize such models in order to <b>improve your qualitative and quantitative understanding</b>, solve problems, optimize device performance and <b>develop new ideas</b>.</li>
+<li>Power up your home office instead of wasting your time!</li>
+<li>When getting back to the lab, restart with fresh plans and full power.</li>
+</ul>
+<img src="./img/rp_photonics.png" alt="RP Photonics" style="margin-top:20px; width:225px;">
+<p>offers powerful <a href="./software.html?banner=lab_closed">simulation &amp; design software</a>, e.g. for <a href="./fiberpower.html?banner=lab_closed">active and passive fiber devices</a>, <a href="./resonator.html?banner=lab_closed">laser resonators</a> and <a href="./coating.html?banner=lab_closed">thin-film coatings</a>!</p>
+<p>Getting helpful <a href="./software_support.html?banner=lab_closed">support</a> from RP also benefits your projects.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="7NMuMtl6Kvm/2u3KBBqPmw==">shownbanner = "lab closed";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Transparent Laser</h2>
+<p>The dream of each laser developer, and not only of each laser scientist: have a <b>transparent laser</b>, where you can <b>look into any components</b> and see e.g.</p>
+<ul>
+<li>optical intensities</li>
+<li>excitation densities of laser-active ions</li>
+</ul>
+<p>&hellip; and this at any location and time, with arbitrary resolution!</p>
+<p>If you had this, finally you could</p>
+<ul>
+<li>fully understand what goes on in your laser,</li>
+<li>quickly identify and fix any problems, and</li>
+<li><span style="font-weight:bold; color:#B20B28;">make faster progress <br> while saving a lot of money.</span></li>
+</ul>
+<p>Absolutely marvelous, but only a dream?!?</p>
+<p>Good news: such transparent lasers can be made!
+See our presentation:</p>
+<a href="./transparent_laser.html?banner=transparent_laser"><img src="./img/transparent_laser.png" width="234" height="162" alt="presentation"></a>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="7NMuMtl6Kvm/2u3KBBqPmw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/carrier_envelope_offset.html"
+    },
+    "headline": "Carrier&ndash;envelope Offset",
+    "image": "https://www.rp-photonics.com/previews/carrier_envelope_offset.png",
+    "datePublished": "2006-01-16",
+    "dateModified": "2020-03-14",
+    "description": "The carrier&ndash;envelope offset of an optical pulse is the offset between the optical phase and the maximum of the wave envelope. It is particularly relevant in optical frequency metrology.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter C",
+      "item": "https://www.rp-photonics.com/encyclopedia_c.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "carrier&ndash;envelope offset",
+      "item": "https://www.rp-photonics.com/carrier_envelope_offset.html"
+    }]}
+}
+</script>
+</body>
+</html>

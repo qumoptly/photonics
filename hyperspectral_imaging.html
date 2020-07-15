@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-SwS0faM6sPrF+TmhsS+znQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - hyperspectral imaging, data cube, line scanning, spectral scanning, snapshot imagers, applications, satellites, aircraft, geological surveys, environmental monitoring, military</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/hyperspectral_imaging.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Hyperspectral imaging instruments provide a full optical spectrum for each pixel of an image. The article discusses different acquisition methods and applications.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="hyperspectral imaging, line scanning, spectral scanning, applications, satellites, aircraft, geological surveys, environmental monitoring, military">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hyperspectral Imaging">
+<meta property="og:description" content="Hyperspectral imaging instruments provide a full optical spectrum for each pixel of an image. The article discusses different acquisition methods and applications.">
+<meta property="og:url" content="https://www.rp-photonics.com/hyperspectral_imaging.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/hyperspectral_imaging.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Hyperspectral imaging instruments provide a full optical spectrum for each pixel of an image. The article discusses different acquisition methods and applications.">
+<meta name="twitter:title" content="Hyperspectral Imaging">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/hyperspectral_imaging.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="SwS0faM6sPrF+TmhsS+znQ==">
+page="hyperspectral_imaging.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="SwS0faM6sPrF+TmhsS+znQ==">shownsponsors="eagleyard Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_h.html">letter H</a> &gt; <a href="hyperspectral_imaging.html">hyperspectral imaging</a></p>
+<h1>Hyperspectral Imaging</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_hyperspectral_imaging_instruments.html?s=vbox">15 suppliers for hyperspectral imaging instruments</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.nktphotonics.com/lasers-fibers/product/superk-extreme-fianium-supercontinuum-lasers/" data-supplier="NKT Photonics" data-location="product-enc" data-keyword="hyperspectral imaging instruments" rel="nofollow" class="bg externallink"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_hyperspectral_imaging_instruments.html?s=vbox">List of suppliers for<br>hyperspectral imaging instruments</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p>Acronym: HSI</p>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: imaging which provides images with an optical spectrum corresponding to each pixel</p>
+<p>More general term: <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">hyperspektrale Bildgebung</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a></p>
+<p><a href="encyclopedia_cite.html?article=hyperspectral%20imaging">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Hyperspectral imaging denotes techniques of advanced <a href="spectral_imaging.html" title="imaging which also provides spectral information">spectral imaging</a>, where one obtains a full <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a> for each image pixel.
+In contrast to typical cases of <a href="multispectral_imaging.html" title="imaging which provides images with multiple spectral channels">multispectral imaging</a>, one employs a substantial number of different wavelength channels (e.g. hundreds or thousands of them), which are typically more or less equidistant in terms of wavelength or <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequency</a>, are essentially non-overlapping and cover a substantial contiguous spectral range.
+The resulting data can be considered to form a <em>hyperspectral cube</em>, i.e., a three-dimensional set of data with coordinates of <span class="eqn_il"><i>x</i></span>, <span class="eqn_il"><i>y</i></span> and <span class="eqn_il"><span class="greek">&lambda;</span></span> (wavelength) &ndash; see Figure&nbsp;1.</p>
+<figure>
+<img src="img/hyperspectral_imaging.png" alt="hyperspectral imaging">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Data from hyperspectral imaging can be represented as a hyperspectral cube with coordinates <span class="eqn_il"><i>x</i></span>, <span class="eqn_il"><i>y</i></span> and <span class="eqn_il"><span class="greek">&lambda;</span></span>.
+</figcaption>
+</figure>
+<p>Each wavelength channel provides a <a href="monochromatic_light.html" title="light with a single optical frequency">monochromatic</a> two-dimensional image, while one has one <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a> corresponding to each point of such an image.</p>
+<p>Compared with <a href="multispectral_imaging.html" title="imaging which provides images with multiple spectral channels">multispectral imaging</a>, one typically has a substantially larger number of wavelength channels.
+On the other hand, multispectral imagers can be made to cover larger spectral ranges, for example even including very long infrared wavelengths for <a href="thermal_imaging.html" title="imaging based on thermal radiation">thermal imaging</a> &ndash; which is hard to realize with image sensors similar to those which are typically used for hyperspectral imagers.</p>
+<p>For hyperspectral imaging of nearby objects, one may want to apply spectrally controlled illumination, avoiding influences of variable ambient light.
+Alternatively, one may apply calibration procedures, which may for example be based on images of reference objects.</p>
+<h2 class="togglediv">Operation Principles of Hyperspectral Imagers</h2>
+<div>
+<p>The number of implemented wavelength channels is usually too large for using one type of <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a> per wavelength channel in the <a href="image_sensors.html" title="optoelectronic sensors which can be used for imaging">image sensor</a>.
+Therefore, other techniques are typically used:</p>
+<h3 class="togglediv">Point Scanning</h3>
+<div>
+<p>One possibility is to employ some kind of <a href="spectrometers.html" title="devices for separating spectral components">spectrometer</a> in conjunction with a 2D scanning <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a> device (<em>whisk broom scanner</em>).
+At any particular time, one receives light from a certain direction and records an optical spectrum.
+For example, one can use a simple kind of <a href="spectrographs.html" title="instruments for spectrally analyzing light">spectrograph</a> with a <a href="diffraction_gratings.html" title="optical components containing a periodic structure which diffracts light">diffraction grating</a> in front of a one-dimensional <a href="photodiode_arrays.html" title="typically linear arrays of photodiodes, provided as compact devices">photodiode array</a>.</p>
+<p>A complete hyperspectral image requires the scanning of all image directions in two dimensions, and typically requires a substantial acquisition time.
+Also, the use of the incoming light is highly inefficient, and motion artifacts can easily occur.</p>
+<p>Although that method allows one to use a quite conventional spectrometer, it is not frequently used due to the mentioned limitations and the need for scanning optics, usually with mechanical parts.</p>
+</div>
+<h3 class="togglediv">Line Scanning</h3>
+<div>
+<p>Line scanning is the most frequently used image acquisition technique for hyperspectral imaging.
+It means that at any point in time one acquires image information for one line (<em>push broom scanner</em>).
+The selection of a line is typically done by placing an <a href="optical_slits.html" title="narrow openings through which light can be transmitted">optical slit</a> in an <a href="image_planes.html" title="planes which are conjugate to an object plane, so that objects are imaged there">image plane</a>.
+Further, one uses a <a href="diffraction_gratings.html" title="optical components containing a periodic structure which diffracts light">diffraction grating</a> or other dispersive optical element for spatially separating the different wavelength components in the direction perpendicular to the slit.
+The light can then be sent to a two-dimensional <a href="image_sensors.html" title="optoelectronic sensors which can be used for imaging">image sensor</a> (<a href="focal_plane_arrays.html" title="arrays of light detectors placed in the focal plane of an imaging system">focal plane array</a>), where one direction corresponds to a spatial coordinate and the other direction to the <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>.
+One may use exchangeable gratings for covering different spectral regions with different spectral resolution.</p>
+<p>The completion of an image requires multiple such recordings with different orientations of the mentioned slit, or the whole imaging instrument, or the imaged object.
+For example, instruments on aircraft or space satellites are naturally moving in one direction, which should be perpendicular to the direction of the image line.
+Similarly, one can image objects which are moving, for example along a conveyor belt in a factory.
+In other cases, a moving <a href="mirrors.html" title="devices which reflect light">mirror</a> or other kind of scanning optics is needed for one-dimensional scanning of the viewing direction.</p>
+<p>Compared with point scanning, the image acquisition can be much faster, and the tendency for motion artifacts is reduced.
+The required type of <a href="focal_plane_arrays.html" title="arrays of light detectors placed in the focal plane of an imaging system">focal plane array</a> is reasonably simple; it just has to exhibit a sufficiently high <a href="responsivity.html" title="photocurrent per unit optical power incident on a photodetector">responsivity</a> over the full wavelength range of interest.
+The wavelength dependence of the responsivity can be taken into account in the device calibration.</p>
+<p>Still, the use of the input light is not very efficient, since only light corresponding to one line can be utilized at one time.</p>
+</div>
+<h3 class="togglediv">Spectral Scanning</h3>
+<div>
+<p>One can realize hyperspectral imaging essentially by integrating a tunable <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical bandpass filter</a> into a <a href="cameras.html" title="optical instruments for recording still or moving images">camera</a>.
+One then records an image for one wavelength slot at a time and combines the data from many such recordings to a hyperspectral cube.
+Although light for all image directions can be utilized at all times, one uses only a small spectral slot at any time, so that the efficiency of light usage is similarly low as for line scanning.
+Also, it is not easy to realize a tunable bandpass filter for high spectral resolution.</p>
+<p>Alternatively, one may use wavelength-tunable illumination, for example with an <a href="optical_parametric_oscillators.html" title="coherent light sources based on parametric amplification within an optical resonator">optical parametric oscillator</a>.
+Each image exposure is done for one wavelengths, and many exposures with different wavelengths provide a hyperspectral image.</p>
+<p>A central advantage of spectral scanning is the possibility to use conventional imaging instruments.
+For example, one may equip a <a href="microscopes.html" title="instruments for seeing very small objects">microscope</a> with a suitable filter to perform hyperspectral microscopy.</p>
+<p>Another advantage of spectral scanning is the ability to record images for different wavelength channels in arbitrary order.
+In other words, one does not have to record a complete hyperspectral cube each time, but can select wavelengths according to the specific imaging purpose and situation.
+For example, one may regularly operate with only a limited set of wavelengths and acquire images at a different wavelength only under certain circumstances, e.g. when certain interesting objects have been detected.</p>
+</div>
+<h3 class="togglediv">Spatiospectral Scanning</h3>
+<div>
+<p>Spatiospectral Scanning is a kind of mixture between spatial and spectral scanning, where each recording with a two-dimensional image sensor represents a diagonal slice of the hyperspectral cube.
+While one spatial coordinate on the sensor simply corresponds to a spatial coordinate, the second coordinate is wavelength-coded.
+Scanning in one dimension is required to complete the hyperspectral cube.</p>
+</div>
+<h3 class="togglediv">Snapshot Imaging</h3>
+<div>
+<p>Particularly for applications in astronomy, efficient use of incoming light is essential.
+Therefore, it is highly desirable to avoid any spatial or spectral scanning by using some kind of <em>snapshot imaging</em>.
+A substantial number of different technical approaches have been developed for such purposes, and all of them lead to a relatively complex and expensive technical setup.</p>
+<p>To give just one example, one may image the scene to the input of a <a href="fiber_bundles.html" title="bundles of optical fibers">fiber bundle</a>, which is made such that the output fibers are arranged along one line.
+(There are also other optical arrangements which can do such <em>image slicing</em>.)
+One can then disperse the different wavelength components in a direction perpendicular to the line and send the light to a two-dimensional image sensor, or to multiple sensors if required for a large number of pixels.
+In that sense, the operation principle is quite similar to that of a line scanner as explained above.
+However, one can process a full image at once.
+It is essential for efficient light collection to have a fiber bundle with high <a href="numerical_aperture.html" title="sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a> and a high area ratio of the <a href="fiber_core.html" title="the region in an optical fiber which guides light">fiber core</a>.</p>
+<p>While the explained method requires sophisticated optical elements, it delivers hyperspectral cube data quite naturally.
+Other methods have been developed where one needs to employ sophisticated data processing algorithms for obtaining such data.</p>
+</div>
+</div>
+<h2 class="togglediv">Data Processing and Display</h2>
+<div>
+<p>Hyperspectral imaging often produces vast amount of data &ndash; little more than can be captured by a human observer without additional instrument features.
+For viewing such data, one may apply different techniques:</p>
+<ul>
+<li>A simple method is to display monochrome images for variable wavelength channels, which one can dial through with a wheel, for example.</li>
+<li>One may apply false color scales, which however can never show the full spectral content of an image due to limitations of the display and the observer's eye.
+However, one may apply more or less sophisticated processing techniques, for example for extracting chemical information from the optical spectra.
+The color scale then shows chemical rather than spectral information.</li>
+<li>In many cases, the obtained image data are not regularly used for viewing, but for automatic processing.</li>
+</ul>
+</div>
+<h2 class="togglediv">Applications of Hyperspectral Imaging</h2>
+<div>
+<p>Some examples for applications of hyperspectral imaging are explained in the following:</p>
+<ul>
+<li>Hyperspectral instruments on satellites are used for various kinds of Earth monitoring from space, for example for geological surveys, for environmental monitoring and for military surveillance.
+Various wavelengths channels can be used for monitoring vegetation (e.g. agricultural crops), while others are useful for detecting minerals, buildings, etc.</li>
+<li>Smaller regions on Earth can be monitored with instruments on airplanes and drones, which allow for higher spatial resolutions.
+The purposes can be similar as for satellite instruments, for example monitoring the development of agricultural crops or competing plants.</li>
+<li>Military instruments based on space satellites, aircraft or on the ground can be used for detecting and tracking aircraft and missiles.</li>
+<li>In the quality control of agricultural products, hyperspectral imaging allows for quite a precise identification of faulty products or foreign material, e.g. spoiled nuts or stones.
+Imaging devices can be combined with computers for sophisticated data processing and actuators for removing unwanted objects; such <em>digital food sorters</em> can be far more efficient than using human personnel.</li>
+<li>In astronomy, hyperspectral imaging is often called <em>3D spectroscopy</em> or <em>integral field spectroscopy</em> (IFS).
+Detailed spectral information is often vital for categorizing stars, for example.
+One mostly uses sophisticated techniques for snapshot imaging in order to utilize the incoming light most efficiently.</li>
+<li>The investigation of ancient pieces of art can profit from detailed spectral information, which may for example reveal the use of certain materials.</li>
+</ul>
+<p>Generally, hyperspectral instead of only multispectral data can be beneficial to obtain more specific information on various types of objects.
+For example, flowers from different plants may appear in quite similar color for the human eye, but can clearly be distinguished with hyperspectral data, having a much higher spectral resolution.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_hyperspectral_imaging_instruments.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 15 suppliers for hyperspectral imaging instruments. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.nktphotonics.com/" data-supplier="NKT Photonics" data-location="product-enc" data-keyword="hyperspectral imaging instruments" rel="nofollow" class="bg externallink" title="Visit the website of NKT Photonics"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo"></a><a href="https://www.nktphotonics.com/lasers-fibers/product/superk-extreme-fianium-supercontinuum-lasers/" data-supplier="NKT Photonics" data-location="product-enc" data-keyword="hyperspectral imaging instruments" rel="nofollow" class="bg externallink" title="Visit the website of NKT Photonics"><img src="./bg/products/nkt_photonics/superk.jpg" alt="hyperspectral imaging instruments" class="product"></a><h3><a href="./bg/profiles/nkt_photonics.html" title="See the profile of NKT Photonics">NKT Photonics</a></h3><p>Ideal for hyper spectral imaging, the unique properties of our <a href="https://www.nktphotonics.com/lasers-fibers/product/superk-extreme-fianium-supercontinuum-lasers/" data-supplier="NKT Photonics" data-location="product-enc" data-keyword="hyperspectral imaging instruments" rel="nofollow" class="externallink bg">SuperK EXTREME/FIANIUM</a> broadband white light laser allow you to have a picosecond pulse source at any wavelength in the visible and near-infrared spectrum. Combined with our <a href="https://www.nktphotonics.com/lasers-fibers/product/superk-varia-tunable-single-line-filter/" data-supplier="NKT Photonics" data-location="product-enc" data-keyword="hyperspectral imaging instruments" rel="nofollow" class="externallink bg">SuperK VARIA</a> tunable filter, you are effectively turning the SuperK supercontinuum laser into a powerful single-line laser with a 440&nbsp;nm tuning range and variable bandwidth. The center wavelength of the pass band can be tuned anywhere between 400 and 840&nbsp;nm and the bandwidths are variable between 10 and 100&nbsp;nm, making the SuperK VARIA the most flexible filter solution on the market.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="hyperspectral_imaging.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="spectral_imaging.html" title="imaging which also provides spectral information">spectral imaging</a>, <a href="multispectral_imaging.html" title="imaging which provides images with multiple spectral channels">multispectral imaging</a><br>and other articles in the category <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/hyperspectral_imaging.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fhyperspectral_imaging.html&text=RP+Photonics+Encyclopedia+-+hyperspectral+imaging%2C+data+cube%2C+line+scanning%2C+spectral+scanning%2C+snapshot+imagers%2C+applications%2C+satellites%2C+aircraft%2C+geological+surveys%2C+environmental+monitoring%2C+military" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fhyperspectral_imaging.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fhyperspectral_imaging.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/hyperspectral_imaging.html"&gt;<br>Article on Hyperspectral Imaging&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/hyperspectral_imaging.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/hyperspectral_imaging.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/hyperspectral_imaging.html<br>article on 'Hyperspectral Imaging' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2 style="font-size:20px;">Debugging Is Now Fun!</h2>
+<p>The software products which are supporting our <a href="./software_script_language.html?banner=Debugger">script language</a> (e.g. <a href="./fiberpower.html?banner=Debugger">RP Fiber Power</a> and <a href="./coating.html?banner=Debugger">RP Coating</a>) have now got a <a href="./software_news_2017_05_31.html?banner=Debugger">powerful debugger</a>!</p>
+<a href="./software_news_2017_05_31.html?banner=Debugger"><img src="./img/expression_debugger_small.png" alt="debugger" style="margin:10px 0;"></a>
+<p>It works even within expressions, not only after each command!</p>
+<p>The <a href="./software_news.html?banner=Debugger">RP Photonics Software News</a> keep you informed.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="SwS0faM6sPrF+TmhsS+znQ==">shownbanner = "Debugger";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Latest Encyclopedia Articles</h2>
+<p>Here are the latest encyclopedia articles:</p>
+<ul>
+<li class="tight"><a href="./variable_reflectivity_mirrors.html">variable reflectivity mirrors</a></li>
+<li class="tight"><a href="./color_centers.html">color centers</a></li>
+<li class="tight"><a href="./excimer_lamps.html">excimer lamps</a></li>
+<li class="tight"><a href="./multimode_beams.html">multimode beams</a></li>
+<li class="tight"><a href="./channel_waveguides.html">channel waveguides</a></li>
+<li class="tight"><a href="./optical_crystals.html">optical crystals</a></li>
+<li class="tight"><a href="./standing_wave_resonators.html">standing-wave resonators</a></li>
+<li class="tight"><a href="./nonlinear_absorption.html">nonlinear absorption</a></li>
+<li class="tight"><a href="./passive_fibers.html">passive fibers</a></li>
+<li class="tight"><a href="./active_fibers.html">active fibers</a></li>
+<li class="tight"><a href="./oem_laser_modules.html">OEM laser modules</a></li>
+<li class="tight"><a href="./industrial_lasers.html">industrial lasers</a></li>
+<li class="tight"><a href="./scientific_lasers.html">scientific lasers</a></li>
+<li class="tight"><a href="./flint_glasses.html">flint glasses</a></li>
+<li class="tight"><a href="./crown_glasses.html">crown glasses</a></li>
+<li class="tight"><a href="./sodium_vapor_lamps.html">sodium vapor lamps</a></li>
+<li class="tight"><a href="./metal_vapor_lamps.html">metal vapor lamps</a></li>
+<li class="tight"><a href="./mercury_vapor_lamps.html">mercury vapor lamps</a></li>
+<li class="tight"><a href="./white_light.html">white light</a></li>
+<li class="tight"><a href="./cie_standard_illuminants.html">CIE standard illuminants</a></li>
+</ul>
+
+<p>The encyclopedia already contains 948 articles.</p>
+<p>See also the regularly appearing articles of the <a href="./spotlight.html?banner=new_articles">The Photonics Spotlight</a> and the <a href="./software_news.html?banner=new_articles">RP Photonics Software News</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="SwS0faM6sPrF+TmhsS+znQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/hyperspectral_imaging.html"
+    },
+    "headline": "Hyperspectral Imaging",
+    "image": "https://www.rp-photonics.com/previews/hyperspectral_imaging.png",
+    "datePublished": "2019-06-30",
+    "dateModified": "2020-03-14",
+    "description": "Hyperspectral imaging instruments provide a full optical spectrum for each pixel of an image. The article discusses different acquisition methods and applications.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter H",
+      "item": "https://www.rp-photonics.com/encyclopedia_h.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "hyperspectral imaging",
+      "item": "https://www.rp-photonics.com/hyperspectral_imaging.html"
+    }]}
+}
+</script>
+</body>
+</html>

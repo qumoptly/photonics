@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-hGkCu+d76wMfepYoSXsg2g=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - thermal radiation, incandescence, modes, power spectral density, Planck's law, Stefan-Boltzmann law</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/thermal_radiation.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Anybody emits electromagnetic radiation via thermal emission, depending on its surface area, temperature and emissivity. There are relatively simple equations for calculating the emission into a single mode or the overall emission into free space.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="thermal radiation, incandescence, modes, power spectral density, Planck's law, Stefan-Boltzmann law">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Thermal Radiation">
+<meta property="og:description" content="Anybody emits electromagnetic radiation via thermal emission, depending on its surface area, temperature and emissivity. There are relatively simple equations for calculating the emission into a single mode or the overall emission into free space.">
+<meta property="og:url" content="https://www.rp-photonics.com/thermal_radiation.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/thermal_radiation.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Anybody emits electromagnetic radiation via thermal emission, depending on its surface area, temperature and emissivity. There are relatively simple equations for calculating the emission into a single mode or the overall emission into free space.">
+<meta name="twitter:title" content="Thermal Radiation">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/thermal_radiation.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="hGkCu+d76wMfepYoSXsg2g==">
+page="thermal_radiation.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="hGkCu+d76wMfepYoSXsg2g==">shownsponsors="TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_t.html">letter T</a> &gt; <a href="thermal_radiation.html">thermal radiation</a></p>
+<h1>Thermal Radiation</h1>
+<header style="margin-right:0;">
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: electromagnetic radiation which results from thermal emission</p>
+<p>Alternative term: heat radiation</p>
+<p>More general term: electromagnetic radiation</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">thermische Strahlung</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#quantum_optics" title="other articles on quantum optics">quantum optics</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<p><a href="encyclopedia_cite.html?article=thermal%20radiation">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Any object emits some amount of electromagnetic radiation of thermal nature, which is called <em>thermal radiation</em> or sometimes <em>heat radiation</em>.
+This means that some of the thermal energy is converted into electromagnetic radiation energy.
+Only at absolute zero temperature, which can never be exactly reached, that thermal radiation would vanish.</p>
+<p>At the same time, objects may <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorb</a> radiation and get hotter that way.
+Therefore thermal radiation provides a mechanism for exchanging heat between objects.</p>
+<p>Thermal radiation is well known from light bulbs and from the sun, for example.
+Even if the temperature is not high enough to generate visible thermal radiation, there may be strong <a href="infrared_light.html" title="invisible light with wavelengths roughly between 750&thinsp;&thinsp;nm and 1&thinsp;&thinsp;mm">infrared</a> radiation which can be felt on the skin, for example.
+Further examples are given below.</p>
+<p>Thermal radiation is visible due to sufficiently high temperatures, it is also called <em>incandescence</em>.</p>
+<h2 class="togglediv">Thermal Radiation in a Single Mode</h2>
+<div>
+<p>We first consider thermal radiation in a single <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">mode</a>, which is simpler to understand than thermal radiation in free space, where many modes are involved.
+As a theoretical example, we can take a <a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode fiber</a>, for simplicity assuming that it is lossless and single-mode at any <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>.
+Here, we actually have two modes per propagation direction, corresponding to different <a href="polarization_of_light.html" title="direction of the electric field oscillation of a light beam">polarization</a> directions, but in the following we can consider radiation only for one of those directions.
+Also, we assume that both ends of some length of such a fiber are fully covered with <a href="black_coatings.html" title="coatings with strong light absorption">black coatings</a>, and that the whole setup is kept at a certain absolute temperature <span class="eqn_il"><i>T</i></span>.
+In thermal equilibrium, some amount of thermal radiation will travel in the fiber in both directions.</p>
+<p>For calculating that amount of power, we can imagine that we suddenly replace the black coatings with highly reflecting coatings, so that we now have an <a href="optical_resonators.html" title="arrangements of optical components which allow a beam of light to circulate">optical resonator</a>, but we still have the same amount of thermal radiation inside the fiber which has previously been captured.
+(That amount of light will also not change thereafter; the system remains in thermal equilibrium.)
+Each mode of the fiber resonator will on average have an energy which is determined by Bose&ndash;Einstein statistics:</p>
+<div class="eqn"><img src="eqn/be_energy.gif" width="188" height="46" alt="power per mode"></div>
+<p>with the <a href="photons.html" title="quanta of light energy">photon</a> energy <span class="eqn_il"><i>h<span class="greek">&nu;</span></i></span> corresponding to the mode <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">frequency</a>.
+For optical frequencies in the near <a href="infrared_light.html" title="invisible light with wavelengths roughly between 750&thinsp;&thinsp;nm and 1&thinsp;&thinsp;mm">infrared</a>, for example, and temperatures around room temperature, the photon energy is well above the thermal energy <span class="eqn_il"><i>k</i><sub>B</sub><i>T</i></span>, so that the average energy in the mode is far below the photon energy.
+There is then sometimes one thermal photon in the mode, but at most times no photon at all.
+In the contrary situation of very low optical frequencies (in the far infrared) or a high temperatures, where the thermal energy <span class="eqn_il"><i>k</i><sub>B</sub><i>T</i></span> is well above the photon energy, the mean energy would be approximately <span class="eqn_il"><i>k</i><sub>B</sub><i>T</i></span> &ndash; now independent of the optical frequency.
+That is actually the value which would be expected based on classical physics, ignoring the <a href="quantum_optics.html" title="the part of optics which deals with quantum effects">quantum nature of light</a>.</p>
+<p>The mode spacing of the fiber resonator in terms of <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequency</a> is</p>
+<div class="eqn"><img src="eqn/fiber_resonator_ms.gif" width="84" height="45" alt=""></div>
+<p>where <span class="eqn_il"><i>n</i><sub>eff</sub></span> is the <a href="effective_refractive_index.html" title="a number quantifying the phase delay per unit length in a waveguide, relative to the phase delay in vacuum">effective refractive index</a> of the fiber and <span class="eqn_il"><i>L</i></span> the fiber length.
+The mean optical power circulating in one mode of the resonator is the mean energy divided by the round-trip time <span class="eqn_il">2&thinsp;<i>n</i><sub>eff</sub>&thinsp;<i>L</i>&thinsp;/&thinsp;<i>c</i></span>, which is the inverse mode frequency spacing.</p>
+<p>For the original configuration with the black coatings on the fiber ends, we do not have modes, but rather thermal radiation which is smoothly spread over a large range of optical frequencies.
+However, the <a href="power_spectral_density.html" title="optical power or noise power per unit frequency interval">power spectral density</a> of that radiation (in units of W/Hz) equals the average value for the fiber resonator and can thus be calculated as:</p>
+<div class="eqn"><img src="eqn/psd_th.gif" width="292" height="50" alt="power spectral density of thermal radiation"></div>
+<p>This result is independent of the fiber length and the mode spacing.
+For very low frequencies, it is approximately <span class="eqn_il"><i>k</i><sub>B</sub><i>T</i></span>, i.e., even frequency-independent.</p>
+<p>If the fiber were lossless and single-mode for any optical frequencies, the result could be integrated over all frequencies to obtain the total thermal power</p>
+<div class="eqn"><img src="eqn/P_tot_th.gif" width="110" height="48" alt="total thermal power"></div>
+<p>For two polarization directions in a fiber, one would obtain twice that power.</p>
+<p>We have a square dependence on the absolute temperature, essentially because the mean energy of each low-frequency mode is proportional to the temperature, and the number of such modes with a photon energy well below the thermal energy is also proportional to the temperature.</p>
+<p>As a numerical example, we can calculate the average optical power in the wavelength interval from 1000&nbsp;nm to 1100&nbsp;nm for an absolute temperature of 1000&nbsp;K (&approx; 727&thinsp;&deg;C) to be 5.9&nbsp;pW.
+That would not even be easy to detect with a <a href="photodiodes.html" title="semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiode</a>, for example.
+The total thermal power would be 473&nbsp;nW; most of it would be at infrared wavelengths longer than those of our wavelength interval.</p>
+<p>Figure&nbsp;1 shows the calculated power spectral density as a function of wavelength for different temperatures.
+Figure&nbsp;2 shows the total thermal power as a function of temperature.</p>
+<figure>
+<img src="img/thermal_rad_1d.png" alt="thermal radiation in single mode">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Power spectral density of thermal radiation in a single mode, calculated for temperatures between 300&nbsp;K (blue curve) and 3000&nbsp;K (red curve) in steps of 300&nbsp;K.
+</figcaption>
+</figure>
+<figure>
+<img src="img/thermal_rad_1d2.png" alt="thermal radiation in single mode">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Total thermal power in a single mode as the function of temperature. Due to the double-logarithmic scale, one obtains a straight line.
+</figcaption>
+</figure>
+<p>If the coatings at the two fiber ends were not completely black (absorbing), and possibly not equally absorbing at both sides, the propagating thermal powers would nevertheless stay unchanged, as long as the temperatures remain constant.
+A lower <a href="emissivity.html" title="a measure for how strongly an object emits and absorbs thermal radiation">emissivity</a> on one side would reduce the corresponding emitted power, but at the same time this would imply a higher reflectivity for thermal radiation coming from the other side (assuming a zero <a href="transmissivity.html" title="the ratio of transmitted optical power to the incident optical power at a surface">transmissivity</a>).
+Therefore, a coating with lower emissivity would at the same time emit less radiation but also absorb the same reduced amount of it.</p>
+<p>For obtaining a higher usable thermal power in the near infrared, for example, could in principle have an absorbing coating at one fiber end, which is kept at a high temperature, and use the other fiber end without a coating as the output.
+However, the applicable temperature would be limited with that technical approach.
+Instead, one can use the emission of a high temperature filament of a light bulb, <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a> the filament to the fiber end.
+If the image of the hot filament completely covers the whole <a href="fiber_core.html" title="the region in an optical fiber which guides light">fiber core</a> and the imaging optics are a lossless, one can obtain the same thermal power in the fiber as calculated with the equation above.
+Note that the temperature of the filament is the limiting factor.
+A more powerful lamp but without a hotter filament would not help; with that, one could not produce a higher intensity of thermal radiation at the fiber end.
+In other words, the <a href="radiance.html" title="the optical power per unit area and solid angle">radiance</a> of a thermal source is fundamentally limited by the temperature.</p>
+<p>When using a multimode fiber, each fiber mode could obtain the same power of thermal radiation as discussed above for a single mode.
+Therefore, one could obtain a correspondingly larger total thermal power that way.
+As the number of guided modes generally increases with optical frequency, the resulting spectral shape of the over all guided light would also be modified accordingly.</p>
+</div>
+<h2 class="togglediv">Thermal Radiation in Free Space</h2>
+<div>
+<p>The situation with thermal radiation in free space is somewhat more complicated, since there is a large number of modes involved, and the mode density depends on the optical frequency.</p>
+<p>It can be shown by considering an empty box with cuboid shape and reflecting inner surfaces, for example, that the mode density in terms of the number of modes per frequency interval scales with the square of the optical frequency.
+With such considerations, one can obtain <em>Planck's law</em> for the <a href="spectral_quantities.html" title="quantities in radiometry and photometry which describe the distribution e.g. of a radiant flux over different optical frequencies or wavelengths">spectral</a> <a href="radiance.html" title="the optical power per unit area and solid angle">radiance</a> of a blackbody with the absolute temperature <span class="eqn_il"><i>T</i></span> at the optical frequency <span class="eqn_il"><span class="greek">&nu;</span></span>:</p>
+<div class="eqn"><img src="eqn/planck_law_nu.gif" width="401" height="48" alt="Planck's law"></div>
+<p>When referring to wavelengths, one obtains a modified form:</p>
+<div class="eqn"><img src="eqn/planck_law_lambda.gif" width="268" height="48" alt="Planck's law"></div>
+<p>When a preliminary form of that law was heuristically developed by Max Planck in 1900, the underlying physics were not yet understood; essentially, the quantum nature of light only started to be discovered around that time.</p>
+<figure>
+<img src="img/planck_w.png" alt="blackbody radiation spectra">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Optical spectra of blackbody radiation at different temperatures. The higher the temperature, the more the spectral maximum shifts toward shorter wavelengths.
+</figcaption>
+</figure>
+<p>Before Planck, Rayleigh&ndash;Jeans law had been developed based on classical physics, i.e., not taking into account quantum effects.
+This is what ones approximately obtains from Planck's law in the regime <span class="eqn_il"><i>h<span class="greek">&nu;</span>&thinsp;&ll;&thinsp;k</i><sub>B</sub><i>T</i></span>, where the second term in the equation for <span class="eqn_il"><i>L</i><sub>e,&Omega;,<span class="greek_small">&nu;</span></sub></span> is approximately <span class="eqn_il"><i>k</i><sub>B</sub><i>T</i></span>.
+The divergence for infinite optical frequencies (&ldquo;ultraviolet catastrophe&rdquo;) was an obvious concern, and was fixed by the introduction of Planck's law.
+Wien approximation corresponds to the opposite limit for Planck's law (<span class="eqn_il"><i>h<span class="greek">&nu;</span>&thinsp;&gg;&thinsp;k</i><sub>B</sub><i>T</i></span>).</p>
+<p>By integrating Planck's formula over all optical frequencies and spatial directions, one can derive the <em>Stefan&ndash;Boltzmann law</em> for the total emitted <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a> of a blackbody per unit area:</p>
+<div class="eqn"><img src="eqn/stefan_boltzmann.gif" width="80" height="25" alt="Stefan-Boltzmann law"></div>
+<aside class="callout red">The <span class="eqn_il"><i>T</i><sup>4</sup></span> dependence is not a fundamental property of thermal radiation, but rather related to the frequency-dependent mode density of free space!</aside>
+<p>with the Stefan&ndash;Boltzmann constant <span class="eqn_il"><span class="greek">&sigma;</span></span> &approx; 5.6704 &middot; 10<sup>&minus;8</sup> W m<sup>&minus;2</sup> K<sup>&minus;4</sup>.
+Note that here the power is proportional to <span class="eqn_il"><i>T</i><sup>4</sup></span> while it is proportional to <span class="eqn_il"><i>T</i><sup>2</sup></span> in the case of emission into a single mode.
+This is because the number of available free-space modes (in three dimensions) scales with the square of the energy, while the mode density in the single-mode case is constant.</p>
+<figure>
+<img src="img/stefan_boltzmann.png" alt="Stefan-Boltzmann law">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Thermal <a href="radiant_exitance.html" title="radiant flux emitted by a surface per unit area">radiant exitance</a> versus temperature for a blackbody according to the Stefan&ndash;Boltzmann law.
+</figcaption>
+</figure>
+<p>Figure&nbsp;5 shows the thermal radiant exitance (identical to the radiosity) vs. temperature in a wide temperature range, using a doubly logarithmic scale.</p>
+<p>If an object is not a blackbody, on could in principle multiply the result with the <a href="emissivity.html" title="a measure for how strongly an object emits and absorbs thermal radiation">emissivity</a>.
+This, however, works only if the emissivity is frequency-independent &ndash; which it is usually not.</p>
+<p>The optical frequency with maximum information according to Planck's law is proportional to the temperature.
+Note that a similar equation can be derived for the spectral density in terms of wavelengths (<em>Wien's displacement law</em>), and the maximum of that function does <em>not</em> correspond to the mentioned optical frequency, since the conversion from frequency to wavelength intervals involves another wavelength-dependent factor.</p>
+</div>
+<h2 class="togglediv">Coherence of Thermal Light</h2>
+<div>
+<p>Thermal radiation is generally broadband, i.e., its energy is spread over a wide frequency range.
+That implies a low temporal <a href="coherence.html" title="a fixed phase relationship between the electric field values at different locations or at different times">coherence</a>.
+However, one could in principle have a material with a high emissivity in a very limited frequency range and very low emissivity otherwise; that way, one may obtain thermal radiation with increased temporal coherence.</p>
+<p>The spatial coherence of light with thermal origin is also normally small, because it arises from uncoordinated (incoherent) emission from a substantial area.
+Higher spatial coherence can be obtained by using thermal emission from a small emitter.
+However, it will usually be hard to achieve a spatial coherence which is comparable to that of a <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a>.</p>
+</div>
+<h2 class="togglediv">Practical Importance of Thermal Radiation</h2>
+<div>
+<p>Thermal radiation is relevant in many areas of photonics technology and more generally in engineering.
+Some examples:</p>
+<ul>
+<li>Many light sources are based on the emission of thermal radiation.
+The classical example is the <a href="incandescent_lamps.html" title="light sources which produce thermal radiation from an electrically heated filament">incandescent lamp</a>, but there are also thermal <a href="infrared_emitters.html" title="devices emitting infrared radiation">infrared emitters</a> for use in <a href="spectroscopy.html" title="methods where the interaction of light with matter is utilized, e.g. for detecting substances or measuring concentrations">spectroscopy</a>, for example.</li>
+<li>Thermal radiation can be a challenge when some object needs to be thermally insulated.
+For example, even an object which is suspended in a vacuum chamber, such that thermal conduction is minimized, can exchange thermal energy with its surroundings through radiation.
+Therefore, one sometimes uses layers with low emissivity (or low-emissivity coatings on surfaces) as an element for thermal insulation.</li>
+<li>Thermal infrared emission is exploited for infrared temperature measurements and <a href="thermal_imaging.html" title="imaging based on thermal radiation">thermal imaging</a> purposes.</li>
+</ul>
+<p>As the photon energy of visible light is well above the thermal energy at room temperature, thermal emission is usually not an issue in <a href="optics.html" title="the science and technology dealing with the properties and the propagation of light">optics</a>, including photodetection.
+This is different in radio technology, for example, where sensitive detectors can easily register thermal radiation.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="thermal_radiation.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">L. S. Fohrmann <i>et al.</i>, &ldquo;Single mode thermal emission&rdquo;, Opt. Express 23 (21), 27672 (2015), <a href="https://doi.org/10.1364/OE.23.027672">doi:10.1364/OE.23.027672</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">R. Paschotta, &ldquo;Coherent light from a bulb?&rdquo;, <a href="spotlight_2009_11_03.html">The Photonics Spotlight 2009-11-03</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">R. Paschotta, &ldquo;Launching light from a bulb into a single-mode fiber&rdquo;, <a href="spotlight_2008_02_22.html">The Photonics Spotlight 2008-02-22</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="emissivity.html" title="a measure for how strongly an object emits and absorbs thermal radiation">emissivity</a>, <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorption</a>, <a href="infrared_light.html" title="invisible light with wavelengths roughly between 750&thinsp;&thinsp;nm and 1&thinsp;&thinsp;mm">infrared light</a>, <a href="infrared_emitters.html" title="devices emitting infrared radiation">infrared emitters</a>, <a href="thermal_imaging.html" title="imaging based on thermal radiation">thermal imaging</a><br>and other articles in the categories <a href="categories.html#quantum_optics" title="other articles on quantum optics">quantum optics</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/thermal_radiation.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fthermal_radiation.html&text=RP+Photonics+Encyclopedia+-+thermal+radiation%2C+incandescence%2C+modes%2C+power+spectral+density%2C+Planck%27s+law%2C+Stefan-Boltzmann+law" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fthermal_radiation.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fthermal_radiation.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/thermal_radiation.html"&gt;<br>Article on Thermal Radiation&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/thermal_radiation.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/thermal_radiation.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/thermal_radiation.html<br>article on 'Thermal Radiation' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="./fiberpower_self_focusing.html?banner=RP_Fiber_Power_4"><img src="./img/fiberpower_self_focusing4b.png" alt="self-focusing in a fiber" style="margin-bottom:8px"></a>
+<p>Intensity distribution in a fiber at megawatt power levels. The Kerr nonlinearity destabilizes the initially launched LP<sub>11</sub> mode.</p>
+<p>This diagram has been made with the <a href="./fiberpower.html?banner=RP_Fiber_Power_4"><b>RP Fiber Power</b></a> software.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="hGkCu+d76wMfepYoSXsg2g==">shownbanner = "RP Fiber Power 4";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Fighting Fraud in Science</h2>
+<p>We occasionally read about scientific fraud &ndash; things like fabricated measurement results &ndash; which is utterly unfair and also undermines the trust of the public in science and its results.</p>
+<p>How to fight that problem?</p>
+<ul>
+<li>Do we need to tell young scientists more clearly that fraud is evil?</li>
+<li>Do supervisors have to stop trusting the results of their coworkers?</li>
+<li>Does the pressure to produce results inevitably favor fraud?</li>
+<li>Where exactly lies the responsibility, if something goes wrong?</li>
+</ul>
+<p>Our <a href="./spotlight_2009_10_19.html?banner=science_fraud">Photonics Spotlight article on science fraud</a> analyzes that carefully.
+It suggests that <b>the risk of fraud is close to zero where supervisors do a responsible job</b>.
+Relations to a more widespread problem &ndash; <b>corrupt authorship practices</b> &ndash; are also identified.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="hGkCu+d76wMfepYoSXsg2g==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/thermal_radiation.html"
+    },
+    "headline": "Thermal Radiation",
+    "image": "https://www.rp-photonics.com/previews/thermal_radiation.png",
+    "datePublished": "2019-04-30",
+    "dateModified": "2020-03-14",
+    "description": "Anybody emits electromagnetic radiation via thermal emission, depending on its surface area, temperature and emissivity. There are relatively simple equations for calculating the emission into a single mode or the overall emission into free space.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter T",
+      "item": "https://www.rp-photonics.com/encyclopedia_t.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "thermal radiation",
+      "item": "https://www.rp-photonics.com/thermal_radiation.html"
+    }]}
+}
+</script>
+</body>
+</html>

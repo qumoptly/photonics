@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-T8pe9JHsOcYovsBq9BVOkA=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - chirped mirrors, dielectric, double-chirped mirror designs, dispersion compensation</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/chirped_mirrors.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Chirped mirrors are Bragg-type dispersive mirrors with a spatial variation of the Bragg wavelength. They can be used for dispersion compensation, for example.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="chirped mirrors, dielectric, double-chirped mirror designs, dispersion compensation">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Chirped Mirrors">
+<meta property="og:description" content="Chirped mirrors are Bragg-type dispersive mirrors with a spatial variation of the Bragg wavelength. They can be used for dispersion compensation, for example.">
+<meta property="og:url" content="https://www.rp-photonics.com/chirped_mirrors.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/chirped_mirrors.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Chirped mirrors are Bragg-type dispersive mirrors with a spatial variation of the Bragg wavelength. They can be used for dispersion compensation, for example.">
+<meta name="twitter:title" content="Chirped Mirrors">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/chirped_mirrors.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="T8pe9JHsOcYovsBq9BVOkA==">
+page="chirped_mirrors.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/nkt_photonics.html"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="T8pe9JHsOcYovsBq9BVOkA==">shownsponsors="NKT Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_chirped_mirrors.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_c.html">letter C</a> &gt; <a href="chirped_mirrors.html">chirped mirrors</a></p>
+<h1>Chirped Mirrors</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_chirped_mirrors.html?s=vbox">15 suppliers for chirped mirrors</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.laseroptik.de/en/coatings/dispersive-coatings" data-supplier="Laseroptik" data-location="product-enc" data-keyword="chirped mirrors" rel="nofollow" class="bg externallink"><img src="./bg/logos/laseroptik.png" alt="Laseroptik" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="http://www.edmundoptics.com/c/ultrafast-laser-mirrors/1204/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="chirped mirrors" rel="nofollow" class="bg externallink"><img src="./bg/logos/edmund_optics.png" alt="Edmund Optics" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_chirped_mirrors.html?s=vbox">List of suppliers for<br>chirped mirrors</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="boxadvertisement">
+<h2>Designing Chirped Mirrors</h2>
+<p>Ask <a href="index.html">RP Photonics</a> for working out <a href="services_manu.html">designs</a> of chirped mirrors to meet special dispersion profiles while avoiding too tight fabrication tolerances.</p>
+<p>Due to its high flexibility, the powerful software <a href="coating.html"><b>RP Coating</b></a> is well suited for designing optimized chirped mirrors.</p>
+<figure>
+<img src="img/dcm_penetration_s.png" alt="field penetration in a chirped mirror">
+</figure>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: Bragg-type dispersive mirrors with a spatial variation of the Bragg wavelength</p>
+<p>More general term: <a href="dielectric_mirrors.html" title="mirrors consisting of multiple thin layers of different transparent optical materials">dielectric mirrors</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">gechirpte Spiegel</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<p><a href="encyclopedia_cite.html?article=chirped%20mirrors">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>A chirped mirror is a kind of dielectric <a href="dispersive_mirrors.html" title="mirrors which provide some amount of chromatic dispersion for the reflected beam">dispersive mirror</a> with a spatial variation of the layer thickness values.
+Such mirrors are used for <a href="dispersion_compensation.html" title="the control of the overall chromatic dispersion of a system by adding optical elements with a suitable amount of dispersion">dispersion compensation</a> in <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked lasers</a>, for example.
+Another interesting feature of such mirrors is that they make it possible to achieve a broader reflection <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a> than ordinary <a href="bragg_mirrors.html" title="mirror structures based on Bragg reflection at a period structure">Bragg mirrors</a>.
+Due to the many dimensions of possible optimization, chirped mirrors are often sold as <a href="custom_optics.html" title="optical elements made according to customer-specific specifications">custom optics</a>.</p>
+<h2 class="togglediv">Principles of Dispersive Chirped Mirrors</h2>
+<div>
+<p>The basic idea of chirped mirror designs [1] is that the Bragg wavelength is not constant but varies within the structure (along the propagation direction), so that light at different wavelengths penetrates to a different extent into the mirror structure and thus experiences a different <a href="group_delay.html" title="a measure of the time delay experienced by narrow-band light pulses in an optical device">group delay</a>.</p>
+<p>However, a na&iuml;ve design directly based on this idea would not work: it would exhibit strong oscillations of the group delay and even more so of the <a href="group_delay_dispersion.html" title="the frequency dependency of the group delay, or (quantitatively) the corresponding derivative with respect to angular frequency">group delay dispersion</a>.
+This disturbing effect can to some extent be mitigated by numerical optimization of the layer structure, but this is difficult because the optimization has to be done in a multi-dimensional space (resulting from the large number of layers) where a huge number of local optima exist, most of which do not correspond to satisfactory designs.</p>
+<figure class="left" style="width:323px;">
+<img src="img/chirped_mirror.png" alt="double-chirped mirror">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Operation principle of a chirped mirror.
+Light with a long wavelength penetrates deeper into the mirror structure and thus experiences a larger group delay.
+This leads to anomalous chromatic dispersion.
+</figcaption>
+</figure>
+<p>Later, it was found [5] that the disturbing oscillations have two origins:</p>
+<ul>
+<li>There is a <a href="fresnel_reflections.html" title="light reflections at optical interfaces">Fresnel reflection</a> at the front face (the interface to air), which leads to strong additional dispersion as in a <a href="gires_tournois_interferometers.html" title="linear optical resonators used for introducing chromatic dispersion">Gires&ndash;Tournois interferometer</a>.</li>
+<li>The sudden &ldquo;switching&rdquo; of the coupling of counterpropagating waves from zero in air to a finite value in the structure causes a kind of impedance mismatch.</li>
+</ul>
+<p>Both problems can be eliminated with a <em>double-chirped</em> design, which has two additional features:</p>
+<ul>
+<li>The coupling of counterpropagating waves is turned on smoothly by also varying the duty cycle, i.e., the ratio of optical thickness of high and low index layers.
+(For a duty cycle above or below 50&#37;, the effective reflectance of a layer pair is reduced.)</li>
+<li>The Fresnel reflection is removed with an additional <a href="anti_reflection_coatings.html" title="optical thin-film coatings for reducing reflections from surfaces">anti-reflection structure</a> on top of the double-chirped section (not shown in Figure&nbsp;1).</li>
+</ul>
+<p>Even without numerical optimization, double-chirped designs can have a dispersion profile which relatively nicely matches the design goal.
+Further refinement is then achieved with numerical optimization, i.e., with fine tuning of the layer thickness values.</p>
+<figure>
+<img src="img/dcm_design.png" alt="numerically optimized dispersive chirped mirror">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Reflection and dispersion properties of a numerically optimized chirped mirror design, developed with the software <a href="coating.html">RP Coating</a>. The dashed curve shows the target dispersion, which is fairly precisely matched in a broad wavelength range. Even broader wavelength ranges are possible, when a larger number of layers is used.
+</figcaption>
+</figure>
+<figure>
+<img src="img/dcm_penetration.png" alt="field penetration into dispersive mirror">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Field penetration into the chirped mirror of Figure&nbsp;2. It is apparent that within the wavelength range 1000&ndash;1200&nbsp;nm, the field penetrates more deeply into the structure for longer wavelengths. The larger group delay for longer wavelengths corresponds to anomalous dispersion.
+</figcaption>
+</figure>
+</div>
+<h2 class="togglediv">Application in Mode-locked Lasers</h2>
+<div>
+<p>For mode-locked lasers with an ultrabroad bandwidth, as required for operation in the few-cycle regime, it is challenging to design mirrors with the corresponding ultrabroad reflection bandwidth, combined with proper chromatic dispersion over the most of that range.
+The factor limiting the bandwidth achievable is in most cases the difficulty of making anti-reflection structures with very small residual <a href="reflectance.html" title="the ratio of reflected optical power to the incident optical power at some reflecting object">reflectance</a> over a large bandwidth.
+This problem can be solved with so-called <em>backside coated</em> (BASIC) chirped mirrors [11].
+The key idea of such a design is to interface the chirped mirror structure with a glass <a href="mirror_substrates.html" title="substrates on which coatings for laser mirrors can be deposited">substrate</a> rather than with air; the air&ndash;glass interface is then at a different location, and the effects of the residual reflectance of that (also AR-coated) surface can be eliminated by using a wedge shape for that glass piece.</p>
+<p>Double-chirped mirrors (DCMs) are often used for <a href="dispersion_compensation.html" title="the control of the overall chromatic dispersion of a system by adding optical elements with a suitable amount of dispersion">dispersion compensation</a> in <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked lasers</a>, particularly for those with <a href="pulse_duration.html" title="the duration of an optical pulse">pulse durations</a> below &asymp;&thinsp;20&nbsp;fs.
+They are typically designed not only to compensate a constant <a href="group_delay_dispersion.html" title="the frequency dependency of the group delay, or (quantitatively) the corresponding derivative with respect to angular frequency">group delay dispersion</a>, but also to correct higher-order dispersion.
+However, there are limits concerning how much dispersion (and in particular higher-order dispersion) can be compensated with a double-chirped mirror.
+Possible solutions are to use a suitable combination of several mirrors, where the dispersion errors from different mirrors partially cancel each other, and to combine chirped mirrors with a <a href="prism_pairs.html" title="combinations of two prisms, mostly used for dispersion compensation">prism pair</a>.
+Another challenge arises from the tight fabrication tolerances; at least some of the layers typically have to be fabricated with a precision of the thickness of a few nanometers.
+The remaining wiggles in the group delay versus wavelength can be further reduced by using appropriate combinations of mirrors where the wiggles at least partially cancel each other.</p>
+</div>
+<h2 class="togglediv">Chirped Semiconductor Mirrors</h2>
+<div>
+<p>It has been shown [10] that double-chirped mirror designs can also be used with semiconductor mirrors.
+Such mirrors can generate a much higher amount of dispersion, although in a much smaller <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>.
+They can be used for compensating the dispersion in a mode-locked laser with a single compact device even when e.g. a long <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a> requires a high amount of anomalous dispersion for <a href="soliton_mode_locking.html" title="a mechanism for laser mode locking based on soliton pulses">soliton mode locking</a>.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_chirped_mirrors.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 15 suppliers for chirped mirrors. Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.laseroptik.de/" data-supplier="Laseroptik" data-location="product-enc" data-keyword="chirped mirrors" rel="nofollow" class="bg externallink" title="Visit the website of Laseroptik"><img src="./bg/logos/laseroptik.png" alt="Laseroptik" class="supplierlogo"></a><a href="http://www.laseroptik.de/en/coatings/dispersive-coatings" data-supplier="Laseroptik" data-location="product-enc" data-keyword="chirped mirrors" rel="nofollow" class="bg externallink" title="Visit the website of Laseroptik"><img src="./bg/products/laseroptik/chirped_mirrors.png" alt="chirped mirrors" class="product"></a><h3><a href="./bg/profiles/laseroptik.html" title="See the profile of Laseroptik">Laseroptik</a></h3><p>LASEROPTIK designs and produces various kinds of <a href="http://www.laseroptik.de/en/coatings/dispersive-coatings" data-supplier="Laseroptik" data-location="product-enc" data-keyword="chirped mirrors" rel="nofollow" class="externallink bg">dispersive coatings</a>, including <a href="http://www.laseroptik.de/en/coatings/dispersive-coatings/chirped-mirrors-and-matched-pairs" data-supplier="Laseroptik" data-location="product-enc" data-keyword="chirped mirrors" rel="nofollow" class="externallink bg">chirped mirrors and matched pairs</a> of chirped mirrors, also all other kinds of coated optics for dispersion management like <a href="http://www.laseroptik.de/en/coatings/dispersive-coatings/gti-mirrors" data-supplier="Laseroptik" data-location="product-enc" data-keyword="chirped mirrors" rel="nofollow" class="externallink bg">GTI mirrors</a>. We use Ion Beam Sputtering (IBS) for highest quality and widely ranging dispersion measurement setups for precise characterization.</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.edmundoptics.com/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="chirped mirrors" rel="nofollow" class="bg externallink" title="Visit the website of Edmund Optics"><img src="./bg/logos/edmund_optics.png" alt="Edmund Optics" class="supplierlogo"></a><a href="http://www.edmundoptics.com/c/ultrafast-laser-mirrors/1204/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="chirped mirrors" rel="nofollow" class="bg externallink" title="Visit the website of Edmund Optics"><img src="./bg/products/edmund_optics/dispersive_mirrors.jpg" alt="chirped mirrors" class="product"></a><h3><a href="./bg/profiles/edmund_optics.html" title="See the profile of Edmund Optics">Edmund Optics</a></h3><p>Edmund Optics offers various kinds of <a href="http://www.edmundoptics.com/c/ultrafast-laser-mirrors/1204/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="chirped mirrors" rel="nofollow" class="externallink bg">mirrors for ultrafast laser technology</a>, including highly dispersive chirped mirrors for different spectral regions such as 0.8&nbsp;&mu;m, 1&nbsp;&mu;m and 2&nbsp;&mu;m, but also UV and other infrared versions.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="chirped_mirrors.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">R. Szipöcs <i>et al.</i>, &ldquo;Chirped multilayer coatings for broad-band dispersion control in femtosecond lasers&rdquo;, Opt. Lett. 19 (3), 201 (1994), <a href="https://doi.org/10.1364/OL.19.000201">doi:10.1364/OL.19.000201</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">A. Stingl <i>et al.</i>, &ldquo;Sub-10-fs mirror-dispersion-controlled Ti:sapphire laser&rdquo;, Opt. Lett. 20 (6), 602 (1995), <a href="https://doi.org/10.1364/OL.20.000602">doi:10.1364/OL.20.000602</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">R. Szipöcs and A. Koh&aacute;zi-Kis, &ldquo;Theory and design of chirped dielectric mirrors&rdquo;, Appl. Phys. B 65, 115 (1997), <a href="https://doi.org/10.1007/s003400050258">doi:10.1007/s003400050258</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">E. J. Mayer <i>et al.</i>, &ldquo;Ultrabroadband chirped mirrors for femtosecond lasers&rdquo;, Opt. Lett. 22 (8), 528 (1997), <a href="https://doi.org/10.1364/OL.22.000528">doi:10.1364/OL.22.000528</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">F. X. Kärtner <i>et al.</i>, &ldquo;Design and fabrication of double-chirped mirrors&rdquo;, Opt. Lett. 22 (11), 831 (1997), <a href="https://doi.org/10.1364/OL.22.000831">doi:10.1364/OL.22.000831</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">N. Matuschek <i>et al.</i>, &ldquo;Theory of double-chirped mirrors&rdquo;, IEEE J. Quantum Electron. 33 (2), 295 (1998), <a href="https://doi.org/10.1109/2944.686724">doi:10.1109/2944.686724</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">G. Tempea <i>et al.</i>, &ldquo;Dispersion control over 150&nbsp;THz with chirped dielectric mirrors&rdquo;, JSTQE 4 (2), 193 (1998), <a href="https://doi.org/10.1109/2944.686723">doi:10.1109/2944.686723</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">N. Matuschek <i>et al.</i>, &ldquo;Theory of double-chirped mirrors&rdquo;, JSTQE 4 (2), 197 (1998), <a href="https://doi.org/10.1109/2944.686724">doi:10.1109/2944.686724</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">N. Matuschek <i>et al.</i>, &ldquo;Analytical design of double-chirped mirrors with custom-tailored dispersion characteristics&rdquo;, IEEE J. Quantum Electron. 35 (2), 129 (1999), <a href="https://doi.org/10.1109/3.740733">doi:10.1109/3.740733</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">R. Paschotta <i>et al.</i>, &ldquo;Double-chirped semiconductor mirror for dispersion compensation in femtosecond lasers&rdquo;, Appl. Phys. Lett. 75 (15), 2166 (1999), <a href="https://doi.org/10.1063/1.124953">doi:10.1063/1.124953</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">N. Matuschek <i>et al.</i>, &ldquo;Back-side-coated chirped mirrors with ultra-smooth broadband dispersion characteristics&rdquo;, Appl. Phys. B 71, 509 (2000), <a href="https://doi.org/10.1007/s003400000426">doi:10.1007/s003400000426</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">F. X. Kärtner <i>et al.</i>, &ldquo;Ultrabroadband double-chirped mirror pairs for generation of octave spectra&rdquo;, J. Opt. Soc. Am. B 18 (6), 882 (2001), <a href="https://doi.org/10.1364/JOSAB.18.000882">doi:10.1364/JOSAB.18.000882</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">G. Tempea <i>et al.</i>, &ldquo;Tilted-front-interface chirped mirrors&rdquo;, J. Opt. Soc. Am. B 18 (11), 1747 (2001), <a href="https://doi.org/10.1364/JOSAB.18.001747">doi:10.1364/JOSAB.18.001747</a></td></tr>
+<tr><td class="refno">[14]</td><td class="refs">V. Pervak <i>et al.</i>, &ldquo;Dispersion control over the ultraviolet&ndash;visible&ndash;near-infrared spectral range with HfO<sub>2</sub>/SiO<sub>2</sub>-chirped dielectric multilayers&rdquo;, Opt. Lett. 32 (9), 1183 (2007), <a href="https://doi.org/10.1364/OL.32.001183">doi:10.1364/OL.32.001183</a></td></tr>
+<tr><td class="refno">[15]</td><td class="refs">V. Pervak <i>et al.</i>, &ldquo;High-dispersive mirrors for femtosecond lasers&rdquo;, Opt. Express 16 (14), 10220 (2008), <a href="https://doi.org/10.1364/OE.16.010220">doi:10.1364/OE.16.010220</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>, <a href="dispersion_compensation.html" title="the control of the overall chromatic dispersion of a system by adding optical elements with a suitable amount of dispersion">dispersion compensation</a>, <a href="dispersive_mirrors.html" title="mirrors which provide some amount of chromatic dispersion for the reflected beam">dispersive mirrors</a>, <a href="dielectric_mirrors.html" title="mirrors consisting of multiple thin layers of different transparent optical materials">dielectric mirrors</a>, <a href="laser_mirrors.html" title="high-quality mirrors used in laser resonators and other optical setups">laser mirrors</a>, <a href="anti_reflection_coatings.html" title="optical thin-film coatings for reducing reflections from surfaces">anti-reflection coatings</a><br>and other articles in the categories <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<hr style="margin-top:16px; margin-bottom:12px;">
+<a href="paschotta.html"><img src="img/paschotta3_small.jpg" alt="Dr. R. Paschotta" style="float:left; margin:0px 16px 20px 18px;" width="80" height="97"></a>
+<div style="margin-bottom:12px;">
+<p style="font-size:90%; line-height:20px; padding-right:20px;">This encyclopedia is authored by <a href="paschotta.html" class="redlink">Dr. Rüdiger Paschotta</a>, the founder and executive of <a href="index.html" class="redlink">RP Photonics Consulting GmbH</a>.
+How about a <a href="training.html" class="redlink">tailored training course</a> from this distinguished expert at your location?
+<a href="contact.html" class="redlink">Contact</a> RP Photonics to find out how his <a href="./services.html" class="redlink">technical consulting services</a> (e.g. product designs, problem solving, independent evaluations, training) and <a href="software.html" class="redlink">software</a> could become very valuable for your business!</p>
+</div>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/chirped_mirrors.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fchirped_mirrors.html&text=RP+Photonics+Encyclopedia+-+chirped+mirrors%2C+dielectric%2C+double-chirped+mirror+designs%2C+dispersion+compensation" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fchirped_mirrors.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fchirped_mirrors.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/chirped_mirrors.html"&gt;<br>Article on Chirped Mirrors&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/chirped_mirrors.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/chirped_mirrors.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/chirped_mirrors.html<br>article on 'Chirped Mirrors' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Short-term Software Licenses Available</h2>
+<p>Do you need simulation software (such as our <a href="./fiberpower.html?banner=rented_software">RP Fiber Power</a>) only during a <b>short-term project</b>?</p>
+<p>Or do you want to <b>test such software very thoroughly</b> before fully committing to it?</p>
+<p>RP Photonics is now offering a solution: <a href="./software_licenses.html?banner=rented_software">software licenses</a> which are valid for a <b>limited time</b>.</p>
+<p>Our conditions are very fair:</p>
+<ul>
+<li>Pay only 5% of the amount for a permanent license for one month.</li>
+<li>When switching over to a permanent license directly thereafter, get the already paid money fully deducted!</li>
+<li>If you decide for that only later on, still get two thirds deducted.</li>
+</ul>
+<p>We are confident that you will like our software and finally decide for permanent licenses.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="T8pe9JHsOcYovsBq9BVOkA==">shownbanner = "rented software";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Latest Encyclopedia Articles</h2>
+<p>Here are the latest encyclopedia articles:</p>
+<ul>
+<li class="tight"><a href="./variable_reflectivity_mirrors.html">variable reflectivity mirrors</a></li>
+<li class="tight"><a href="./color_centers.html">color centers</a></li>
+<li class="tight"><a href="./excimer_lamps.html">excimer lamps</a></li>
+<li class="tight"><a href="./multimode_beams.html">multimode beams</a></li>
+<li class="tight"><a href="./channel_waveguides.html">channel waveguides</a></li>
+<li class="tight"><a href="./optical_crystals.html">optical crystals</a></li>
+<li class="tight"><a href="./standing_wave_resonators.html">standing-wave resonators</a></li>
+<li class="tight"><a href="./nonlinear_absorption.html">nonlinear absorption</a></li>
+<li class="tight"><a href="./passive_fibers.html">passive fibers</a></li>
+<li class="tight"><a href="./active_fibers.html">active fibers</a></li>
+<li class="tight"><a href="./oem_laser_modules.html">OEM laser modules</a></li>
+<li class="tight"><a href="./industrial_lasers.html">industrial lasers</a></li>
+<li class="tight"><a href="./scientific_lasers.html">scientific lasers</a></li>
+<li class="tight"><a href="./flint_glasses.html">flint glasses</a></li>
+<li class="tight"><a href="./crown_glasses.html">crown glasses</a></li>
+<li class="tight"><a href="./sodium_vapor_lamps.html">sodium vapor lamps</a></li>
+<li class="tight"><a href="./metal_vapor_lamps.html">metal vapor lamps</a></li>
+<li class="tight"><a href="./mercury_vapor_lamps.html">mercury vapor lamps</a></li>
+<li class="tight"><a href="./white_light.html">white light</a></li>
+<li class="tight"><a href="./cie_standard_illuminants.html">CIE standard illuminants</a></li>
+</ul>
+
+<p>The encyclopedia already contains 948 articles.</p>
+<p>See also the regularly appearing articles of the <a href="./spotlight.html?banner=new_articles">The Photonics Spotlight</a> and the <a href="./software_news.html?banner=new_articles">RP Photonics Software News</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="T8pe9JHsOcYovsBq9BVOkA==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/chirped_mirrors.html"
+    },
+    "headline": "Chirped Mirrors",
+    "image": "https://www.rp-photonics.com/previews/chirped_mirrors.png",
+    "datePublished": "2005-08-27",
+    "dateModified": "2020-03-14",
+    "description": "Chirped mirrors are Bragg-type dispersive mirrors with a spatial variation of the Bragg wavelength. They can be used for dispersion compensation, for example.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter C",
+      "item": "https://www.rp-photonics.com/encyclopedia_c.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "chirped mirrors",
+      "item": "https://www.rp-photonics.com/chirped_mirrors.html"
+    }]}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-PqpxlQ8JJIkgpbFI6XqZHQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - parabolic pulses, self-similar pulse propagation, fiber amplifiers, similariton</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/parabolic_pulses.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-06-25">
+<meta name="description" content="Parabolic pulses are pulses with a parabolic intensity profile. Under certain circumstances, they can exhibit self-similar propagation in optical fibers.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="parabolic pulses, self-similar pulse propagation, fiber amplifiers, similariton">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Parabolic Pulses">
+<meta property="og:description" content="Parabolic pulses are pulses with a parabolic intensity profile. Under certain circumstances, they can exhibit self-similar propagation in optical fibers.">
+<meta property="og:url" content="https://www.rp-photonics.com/parabolic_pulses.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/parabolic_pulses.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Parabolic pulses are pulses with a parabolic intensity profile. Under certain circumstances, they can exhibit self-similar propagation in optical fibers.">
+<meta name="twitter:title" content="Parabolic Pulses">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/parabolic_pulses.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="PqpxlQ8JJIkgpbFI6XqZHQ==">
+page="parabolic_pulses.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/encyclopedia.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo sponsor"></a> <a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="PqpxlQ8JJIkgpbFI6XqZHQ==">shownsponsors="El.En.,Knight Optical"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_p.html">letter P</a> &gt; <a href="parabolic_pulses.html">parabolic pulses</a></p>
+<h1>Parabolic Pulses</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="boxadvertisement">
+<h2>Simulation of Parabolic Pulses</h2>
+<p>The software <a href="fiberpower.html"><b>RP Fiber Power</b></a> can be used for numerically simulating ultrashort pulse propagation.
+See a demo case for <a href="fiberpower_parpulse.html"><b>parabolic pulses in a fiber amplifier</b></a>.</p>
+<figure>
+<a href="fiberpower_parpulse.html"><img src="img/fiberpower_parpulse1s.png" alt="tapered fiber"></a>
+</figure>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: pulses with a parabolic intensity profile</p>
+<p>More general term: light <a href="pulses.html" title="flashes of light">pulses</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">parabolische Pulse</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#nonlinear_optics" title="other articles on nonlinear optics">nonlinear optics</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<p><a href="encyclopedia_cite.html?article=parabolic%20pulses">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>A parabolic pulse is an optical <a href="pulses.html" title="flashes of light">pulse</a> (usually an <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulse</a>) that has a temporal intensity profile with a parabolic shape &ndash; not only near the pulse center, but also well towards the wings up to the point where the intensity goes to zero.
+In the ideal case, the pulse would have an intensity profile according to</p>
+<div class="eqn"><img src="eqn/par_pulse.gif" width="236" height="64" alt="parabolic intensity profile"></div>
+<p>Figure&nbsp;1 shows an approximately parabolic pulse, as it can result from pulse propagation in a <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifier</a> under certain circumstances.
+Parabolic pulses have a number of remarkable properties, which have turned out to be particularly important in the context of fiber amplifiers for generating high-<a href="pulse_energy.html" title="energy of an optical pulse">energy</a> <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a>.</p>
+<figure>
+<img src="img/parabolic_pulse_t.png" alt="parabolic pulse">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Temporal profile of a nearly parabolic pulse, such as can be generated in a fiber amplifier fed with Gaussian pulses. Such simulations can be made with the software <a href="fiberpower.html"><b>RP Fiber Power</b></a>.
+</figcaption>
+</figure>
+<p>Up-<a href="chirp.html" title="time dependence of the instantaneous frequency of an optical pulse">chirped</a> parabolic pulses can be generated in a <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifier</a> where the amplified pulses not only experience optical <a href="gain.html" title="a measure of the strength of optical amplification">gain</a>, but also the <a href="kerr_effect.html" title="a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization">Kerr nonlinearity</a> and normal <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>.
+In this situation, a chirped parabolic pulse is the asymptotic solution for long propagation lengths [3,&thinsp;8].
+After a sufficiently long propagation length, associated with a sufficiently large <a href="amplification_factor.html" title="the factor by which the power of a signal is amplified">amplification factor</a>, the shape of the resulting pulses no longer depends on the shape or duration of the seed pulses, and the <a href="peak_power.html" title="maximum optical power of a pulse">peak power</a> and <a href="pulse_duration.html" title="the duration of an optical pulse">duration</a> after a long propagation length depend only on the seed pulse energy.
+This is a case of <em>self-similar pulse propagation</em>, since the parabolic pulse shape, although not the pulse duration, is preserved.
+Therefore, such pulses are sometimes called <em>similaritons</em>.
+The pulse duration parameter is</p>
+<div class="eqn"><img src="eqn/par_pulse_tau.gif" width="173" height="30" alt="duration of asymptotic parabolic pulse"></div>
+<p>where <span class="eqn_il"><i>g</i></span> is the exponential gain coefficient, and the full bandwidth (not the full width at half maximum) is</p>
+<div class="eqn"><img src="eqn/par_pulse_dv.gif" width="141" height="52" alt="bandwidth of asymptotic parabolic pulse"></div>
+<p>Both grow with the cubic root of the <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a> <span class="eqn_il"><i>E</i><sub>p</sub></span>, so that the <a href="time_bandwidth_product.html" title="product of temporal and spectral width of a pulse">time&ndash;bandwidth product</a> of the pulses grows in proportion to <span class="eqn_il"><i>E</i><sub>p</sub><sup>2/3</sup></span>.</p>
+<p>The pulses have a very nearly linear up-<a href="chirp.html" title="time dependence of the instantaneous frequency of an optical pulse">chirp</a>, i.e., a linearly rising <a href="instantaneous_frequency.html" title="temporal derivative of the oscillation phase divided by 2&pi;">instantaneous frequency</a>, with a growth rate of the instantaneous frequency which is independent of the pulse energy:</p>
+<div class="eqn"><img src="eqn/par_pulse_dvdt.gif" width="78" height="45" alt="frequency slope of asymptotic parabolic rate"></div>
+<form id="calculate_pulses" class="calculatorform">
+<h2>Calculator for Parabolic Pulses</h2>
+<table>
+<tr>
+<td>Gain:</td><td></td><td></td>
+<td><input name="g_dB" value="" class="cf_calculate_pulses"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Dispersion:</td><td></td><td></td>
+<td><input name="beta2" value="" class="cf_calculate_pulses"></td>
+<td></td><td>(1 fs<sup>2</sup> = 1e-30 s<sup>2</sup>)</td>
+</tr>
+<tr>
+<td>Nonlinearity:</td><td></td><td></td>
+<td><input name="gamma" value="" class="cf_calculate_pulses"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Pulse energy:</td><td></td><td></td>
+<td><input name="E_p" value="" class="cf_calculate_pulses"></td>
+<td><span class="calcbutton" id="calc_E_p">calc</span></td><td></td>
+</tr>
+<tr>
+<td>Pulse duration:</td><td></td><td></td>
+<td><input name="tau_p" value="" class="cf_calculate_pulses"></td>
+<td><span class="calcbutton" id="calc_tau_p">calc</span></td><td></td>
+</tr>
+<tr>
+<td>Bandwidth:</td><td></td><td></td>
+<td><input name="dv" value="" class="cf_calculate_pulses" readonly></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Chirp:</td><td></td><td></td>
+<td><input name="dv_dt" value="" class="cf_calculate_pulses"></td>
+<td><span class="calcbutton" id="calc_dv_dt">calc</span></td><td></td>
+</tr>
+</table>
+<p class="comment">Enter input values with units, where appropriate. After you have modified some values, click a "calc" button to recalculate the field left of it.</p>
+<p class="comment"> The default values in this form correspond to a pulse energy of 1 nJ in the diagram below.</p>
+<noscript>
+<p style="color:red">Attention: The buttons do not work, as Javascript is turned off in your browser!</p>
+</noscript>
+</form>
+<script type="text/javascript" src="calcform.js"></script>
+<script type="text/javascript" nonce="PqpxlQ8JJIkgpbFI6XqZHQ==">
+funits = new Array();
+funits["g_dB"] = "dB/m";
+funits["beta2"] = "&s^2/m";
+funits["gamma"] = "rad/(W m)";
+funits["E_p"] = "J";
+function calc_E_p() {
+  $("input[name=E_p]").val("???");
+  GetFieldValues("E_p","calculate_pulses");
+  E_p = Math.pow(tau_p/Math.sqrt(2),3)/(27*Math.pow(g_dB/4.343,-2)*(gamma*beta2/2));
+  $("input[name=E_p]").val(format_u(E_p, "J"));
+  calc_dv();
+ }
+funits["tau_p"] = "s";
+function calc_tau_p() {
+  $("input[name=tau_p]").val("???");
+  GetFieldValues("tau_p","calculate_pulses");
+  tau_p = Math.sqrt(2)*3*Math.pow(g_dB/4.343,-2/3)*Math.pow(gamma*beta2/2,1/3)*Math.pow(E_p,1/3);
+  $("input[name=tau_p]").val(format_u(tau_p, "s"));
+  calc_dv();
+ }
+funits["dv"] = "Hz";
+function calc_dv() {
+  $("input[name=dv]").val("???");
+  GetFieldValues("dv","calculate_pulses");
+  dv = Math.pow(g_dB/4.343*gamma/2,1/3)/(pi*Math.pow(beta2,2/3))*Math.pow(E_p,1/3);
+  $("input[name=dv]").val(format_u(dv, "Hz"));
+ }
+funits["dv_dt"] = "Hz/ps";
+function calc_dv_dt() {
+  $("input[name=dv_dt]").val("???");
+  GetFieldValues("dv_dt","calculate_pulses");
+  dv_dt = ((g_dB/4.343)/(6*pi*beta2))*1e-12;
+  $("input[name=dv_dt]").val(format_u(dv_dt, "Hz/ps"));
+ }
+$("input[name=g_dB]").val("10 dB/m");
+$("input[name=beta2]").val("20000e-30 s^2/m");
+$("input[name=gamma]").val("5 mrad/(W m)");
+$("input[name=E_p]").val("1 nJ");
+calc_tau_p();
+calc_dv();
+calc_dv_dt();
+$(document).ready(function() {
+  $("span#calc_E_p").click(function() { calc_E_p() })
+  $("span#calc_tau_p").click(function() { calc_tau_p() })
+  $("span#calc_dv_dt").click(function() { calc_dv_dt() })
+});
+</script>
+<p>With increasing propagation length, the peak power rises in proportion to <span class="eqn_il"><i>E</i><sub>p</sub><sup>2/3</sup></span>.
+The chirp rate (in THz/ps) approaches a constant value, which is determined only by the fiber dispersion and gain per unit length.
+The spectral <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a> rises in proportion to the pulse duration, i.e., in proportion to <span class="eqn_il"><i>E</i><sub>p</sub><sup>1/3</sup></span>.</p>
+<figure>
+<img src="img/parabolic_pulse_tau.png" alt="evolution of pulse duration">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Evolution of the pulse duration in a hypothetical amplifier with infinite gain bandwidth.
+The solid curves show the pulse duration in the amplifier (blue) and after a compressor with optimized <a href="group_delay_dispersion.html" title="the frequency dependency of the group delay, or (quantitatively) the corresponding derivative with respect to angular frequency">GDD</a> (red).
+The dashed curve shows the asymptotic values, which in this case are reached after &asymp;&thinsp;20&nbsp;dB of amplification.
+</figcaption>
+</figure>
+<p>Depending on the input pulse parameters, in particular on the pulse duration and energy, the parabolic evolution may set in only after some amount of linear amplification.
+Therefore, the pulse duration and bandwidth do not necessarily rise by orders of magnitude even if the pulse energy is increased by several orders of magnitude.
+This is shown in Figure&nbsp;2, where the seed pulses had 10&nbsp;pJ energy and 500&nbsp;fs duration.
+Initially, the amplification is nearly linear, but then both the <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a> and pulse duration begin to rise significantly.
+Due to the increased bandwidth, dispersively compressed pulses can be significantly shorter than the initial pulses.</p>
+<p>Note that the limited <a href="gain_bandwidth.html" title="the width of the optical frequency range in which significant gain is available from an amplifier">gain bandwidth</a> of a real <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifier</a> limits the pulse energy range in which parabolic pulse amplification is possible.
+The parameters in Figure&nbsp;2 go far beyond that limit.</p>
+<h2 class="togglediv">Attractions of Parabolic Pulse Amplification</h2>
+<div>
+<p>The remarkable properties of parabolic pulses lead to a number of technologically attractive features of <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifiers</a> for <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a>, when they are designed as &ldquo;parabolic amplifiers&rdquo;:</p>
+<ul>
+<li>Wave breaking is safely avoided.
+The pulses generated have no significant side lobes in the temporal or spectral shape.</li>
+<li>Such an amplifier does not require a seed source with carefully chosen pulse parameters, as these are not important provided that the <a href="amplification_factor.html" title="the factor by which the power of a signal is amplified">amplification factor</a> is large enough.
+The seed pulses may be significantly longer than the output pulses.
+They should not be too long, however, as otherwise the asymptotic solution is only slowly approached.</li>
+<li>The fiber parameters (<a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>, <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearity</a> and <a href="gain.html" title="a measure of the strength of optical amplification">gain</a>) are also not critical.
+(This is remarkably different to schemes based on <a href="solitons.html" title="pulses with a certain balance of nonlinear and dispersive effects">soliton</a> effects.)</li>
+<li>As the amplified pulses have a nearly linear chirp, it is relatively easy to obtain nearly <a href="transform_limit.html" title="a limit for the time&ndash;bandwidth&ndash;product of an optical pulse">transform-limited pulses</a> by dispersive <a href="pulse_compression.html" title="linear or nonlinear techniques for reducing the durations of optical pulses">pulse compression</a>.
+However, higher-order <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> of the compressor should not be excessive.</li>
+<li>The chirp during amplification can be an important advantage, because the amplification of transform-limited pulses could lead to excessive nonlinear <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">phase</a> shifts.
+The situation is therefore similar to that of <a href="chirped_pulse_amplification.html" title="a technique for amplifying pulses to very high optical intensities while avoiding excessive nonlinear pulse distortions or optical damage">chirped-pulse amplification</a>, but with a lower amount of pulse <a href="pulse_stretchers.html" title="devices for temporally stretching ultrashort light pulses">stretching</a>.</li>
+</ul>
+<p>Limitations arise from the following effects:</p>
+<ul>
+<li>The limited <a href="gain_bandwidth.html" title="the width of the optical frequency range in which significant gain is available from an amplifier">gain bandwidth</a> effectively limits the possible pulse energy.
+For <a href="ytterbium_doped_gain_media.html" title="laser gain media containing laser-active ytterbium ions">ytterbium-doped</a> fibers with standard <a href="effective_mode_area.html" title="a quantitative measure of the area which a waveguide or fiber mode effectively covers in the transverse dimensions">mode areas</a>, it is of the order of some tens of nJ &ndash; far below the <a href="saturation_energy.html" title="a measure of the incident optical pulse energy required for achieving significant saturation of an absorber or a gain medium">saturation energy</a>.
+Therefore, with a parabolic pulse one can only extract a minor part of the stored energy in the fiber.
+This regime is thus most suitable for amplifying pulse trains with very high repetition rates but moderate pulse energies.</li>
+<li>In principle, the amplified pulse could generate a high <a href="raman_gain.html" title="optical gain arising from stimulated Raman scattering">Raman gain</a> at some longer wavelengths, so that a strong Stokes pulse would be formed, and the original pulse would be distorted.
+However, a high enough Raman gain for that problem is usually not reached in a parabolic pulse amplifier.</li>
+<li>Higher-order chromatic dispersion of the fiber and a compressor should not be too strong.</li>
+<li><a href="amplifier_noise.html" title="noise introduced to a signal in an amplifier device">Amplifier noise</a> may also be relevant under certain circumstances.</li>
+</ul>
+<p>To find an optimized design of a parabolic amplifier, it is advisable to study its behavior with numerical <a href="pulse_propagation_modeling.html" title="working with physical models describing the propagation of ultrashort pulses e.g. in lasers or optical fibers">pulse propagation modeling</a>, including the potentially disturbing effects mentioned above.</p>
+<p>The principle of parabolic pulse amplification has also been applied to <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked</a> <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber lasers</a> [6] (<em>similariton fiber lasers</em>).
+Here, the <a href="bandwidth.html" title="the width of some frequency or wavelength range">spectral width</a> of the circulating pulse is strongly oscillating: it increases during amplification but is reset in every round trip by some <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical filter</a>.
+This approach makes it possible to reach significantly higher pulse energies with potentially cheap fiber laser sources.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="parabolic_pulses.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">D. Anderson <i>et al.</i>, &ldquo;Wave-breaking-free pulses in nonlinear-optical fibers&rdquo;, J. Opt. Soc. Am. B 10 (7), 1185 (1993), <a href="https://doi.org/10.1364/JOSAB.10.001185">doi:10.1364/JOSAB.10.001185</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">K. Tamura and M. Nakazawa, &ldquo;Pulse compression by nonlinear pulse evolution with reduced optical wave breaking in erbium-doped fiber amplifiers&rdquo;, Opt. Lett. 21 (1), 68 (1996), <a href="https://doi.org/10.1364/OL.21.000068">doi:10.1364/OL.21.000068</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">M. E. Fermann <i>et al.</i>, &ldquo;Self-similar propagation and amplification of parabolic pulses in optical fibers&rdquo;, Phys. Rev. Lett. 84 (26), 6010 (2000), <a href="https://doi.org/10.1103/PhysRevLett.84.6010">doi:10.1103/PhysRevLett.84.6010</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">V. I. Kruglov <i>et al.</i>, &ldquo;Self-similar propagation of high-power parabolic pulses in optical fiber amplifiers&rdquo;, Opt. Lett. 25 (24), 1753 (2000), <a href="https://doi.org/10.1364/OL.25.001753">doi:10.1364/OL.25.001753</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">T. Hirooka and M. Nakazawa, &ldquo;Parabolic pulse generation by use of a dispersion-decreasing fiber with normal group-velocity dispersion&rdquo;, Opt. Lett. 29 (5), 498 (2004), <a href="https://doi.org/10.1364/OL.29.000498">doi:10.1364/OL.29.000498</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">F. Ö. Ilday <i>et al.</i>, &ldquo;Self-similar evolution of parabolic pulses in a laser&rdquo;, Phys. Rev. Lett. 92 (21), 213902 (2004), <a href="https://doi.org/10.1103/PhysRevLett.92.213902">doi:10.1103/PhysRevLett.92.213902</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">C. K. Nielsen <i>et al.</i>, &ldquo;Self-starting self-similar all-polarization maintaining Yb-doped fiber laser&rdquo;, Opt. Express 13 (23), 9346 (2005), <a href="https://doi.org/10.1364/OPEX.13.009346">doi:10.1364/OPEX.13.009346</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">V. I. Kruglov and J. D. Harvey, &ldquo;Asymptotically exact parabolic solutions of the generalized nonlinear Schrödinger equation with varying parameters&rdquo;, J. Opt. Soc. Am. B 23 (12), 2541 (2006), <a href="https://doi.org/10.1364/JOSAB.23.002541">doi:10.1364/JOSAB.23.002541</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">T. Schreiber <i>et al.</i>, &ldquo;Microjoule-level all-polarization-maintaining femtosecond fiber source&rdquo;, Opt. Lett. 31 (5), 574 (2006), <a href="https://doi.org/10.1364/OL.31.000574">doi:10.1364/OL.31.000574</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">A. Ruehl <i>et al.</i>, &ldquo;Dynamics of parabolic pulses in an ultrafast fiber laser&rdquo;, Opt. Lett. 31 (18), 2734 (2006), <a href="https://doi.org/10.1364/OL.31.002734">doi:10.1364/OL.31.002734</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">J. M. Dudley <i>et al.</i>, &ldquo;Self-similarity and scaling phenomena in nonlinear ultrafast optics&rdquo;, Nature Phys. 3, 597 (2007), <a href="https://doi.org/10.1038/nphys705">doi:10.1038/nphys705</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">D. N. Papadopoulos <i>et al.</i>, &ldquo;Generation of 63&nbsp;fs 4.1&nbsp;MW peak power pulses from a parabolic fiber amplifier operated beyond the gain bandwidth limit&rdquo;, Opt. Lett. 32 (17), 2520 (2007), <a href="https://doi.org/10.1364/OL.32.002520">doi:10.1364/OL.32.002520</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">R. Paschotta, <a href="fiberpower_parpulse.html">case study on parabolic pulses in an ytterbium-doped fiber amplifier</a></td></tr>
+<tr><td class="refno">[14]</td><td class="refs">R. Paschotta, tutorial on &quot;<a href="tutorial_fiber_amplifiers.html">Fiber Amplifiers</a>&quot;, <a href="tutorial_fiber_amplifiers8.html">part 8 on ultrafast amplifiers</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifiers</a>, <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a>, <a href="chirped_pulse_amplification.html" title="a technique for amplifying pulses to very high optical intensities while avoiding excessive nonlinear pulse distortions or optical damage">chirped-pulse amplification</a>, <a href="pulse_compression.html" title="linear or nonlinear techniques for reducing the durations of optical pulses">pulse compression</a>, <a href="pulse_propagation_modeling.html" title="working with physical models describing the propagation of ultrashort pulses e.g. in lasers or optical fibers">pulse propagation modeling</a>, <a href="mode_locked_fiber_lasers.html" title="ultrafast fiber lasers which are actively or passively mode-locked for generating ultrashort pulses">mode-locked fiber lasers</a><br>and other articles in the categories <a href="categories.html#nonlinear_optics" title="other articles on nonlinear optics">nonlinear optics</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<hr style="margin-top:16px; margin-bottom:12px;">
+<a href="paschotta.html"><img src="img/paschotta3_small.jpg" alt="Dr. R. Paschotta" style="float:left; margin:0px 16px 20px 18px;" width="80" height="97"></a>
+<div style="margin-bottom:12px;">
+<p style="font-size:90%; line-height:20px; padding-right:20px;">This encyclopedia is authored by <a href="paschotta.html" class="redlink">Dr. Rüdiger Paschotta</a>, the founder and executive of <a href="index.html" class="redlink">RP Photonics Consulting GmbH</a>.
+How about a <a href="training.html" class="redlink">tailored training course</a> from this distinguished expert at your location?
+<a href="contact.html" class="redlink">Contact</a> RP Photonics to find out how his <a href="./services.html" class="redlink">technical consulting services</a> (e.g. product designs, problem solving, independent evaluations, training) and <a href="software.html" class="redlink">software</a> could become very valuable for your business!</p>
+</div>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/parabolic_pulses.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fparabolic_pulses.html&text=RP+Photonics+Encyclopedia+-+parabolic+pulses%2C+self-similar+pulse+propagation%2C+fiber+amplifiers%2C+similariton" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fparabolic_pulses.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fparabolic_pulses.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/parabolic_pulses.html"&gt;<br>Article on Parabolic Pulses&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/parabolic_pulses.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/parabolic_pulses.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/parabolic_pulses.html<br>article on 'Parabolic Pulses' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Discount for Startups</h2>
+<p>We have introduced a special offer: there is now a <a href="./bg_startups.html?banner=Startup_discount">startup discount</a> of 25% for the <a href="./bg_entries.html?banner=Startup_discount">advertising package</a> in the <a href="./buyersguide.html?banner=Startup_discount">RP Photonics Buyer&#39;s Guide</a>.
+</p>
+<p>We understand the challenge for technology startups and are happy to support them with our powerful resource and our marketing expertise.</p>
+<p>Note that marketing is particularly vital for startups: get orders before financially running out of steam!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="PqpxlQ8JJIkgpbFI6XqZHQ==">shownbanner = "Startup discount";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Latest Encyclopedia Articles</h2>
+<p>Here are the latest encyclopedia articles:</p>
+<ul>
+<li class="tight"><a href="./variable_reflectivity_mirrors.html">variable reflectivity mirrors</a></li>
+<li class="tight"><a href="./color_centers.html">color centers</a></li>
+<li class="tight"><a href="./excimer_lamps.html">excimer lamps</a></li>
+<li class="tight"><a href="./multimode_beams.html">multimode beams</a></li>
+<li class="tight"><a href="./channel_waveguides.html">channel waveguides</a></li>
+<li class="tight"><a href="./optical_crystals.html">optical crystals</a></li>
+<li class="tight"><a href="./standing_wave_resonators.html">standing-wave resonators</a></li>
+<li class="tight"><a href="./nonlinear_absorption.html">nonlinear absorption</a></li>
+<li class="tight"><a href="./passive_fibers.html">passive fibers</a></li>
+<li class="tight"><a href="./active_fibers.html">active fibers</a></li>
+<li class="tight"><a href="./oem_laser_modules.html">OEM laser modules</a></li>
+<li class="tight"><a href="./industrial_lasers.html">industrial lasers</a></li>
+<li class="tight"><a href="./scientific_lasers.html">scientific lasers</a></li>
+<li class="tight"><a href="./flint_glasses.html">flint glasses</a></li>
+<li class="tight"><a href="./crown_glasses.html">crown glasses</a></li>
+<li class="tight"><a href="./sodium_vapor_lamps.html">sodium vapor lamps</a></li>
+<li class="tight"><a href="./metal_vapor_lamps.html">metal vapor lamps</a></li>
+<li class="tight"><a href="./mercury_vapor_lamps.html">mercury vapor lamps</a></li>
+<li class="tight"><a href="./white_light.html">white light</a></li>
+<li class="tight"><a href="./cie_standard_illuminants.html">CIE standard illuminants</a></li>
+</ul>
+
+<p>The encyclopedia already contains 948 articles.</p>
+<p>See also the regularly appearing articles of the <a href="./spotlight.html?banner=new_articles">The Photonics Spotlight</a> and the <a href="./software_news.html?banner=new_articles">RP Photonics Software News</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="PqpxlQ8JJIkgpbFI6XqZHQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/parabolic_pulses.html"
+    },
+    "headline": "Parabolic Pulses",
+    "image": "https://www.rp-photonics.com/previews/parabolic_pulses.png",
+    "datePublished": "2006-03-13",
+    "dateModified": "2020-06-25",
+    "description": "Parabolic pulses are pulses with a parabolic intensity profile. Under certain circumstances, they can exhibit self-similar propagation in optical fibers.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter P",
+      "item": "https://www.rp-photonics.com/encyclopedia_p.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "parabolic pulses",
+      "item": "https://www.rp-photonics.com/parabolic_pulses.html"
+    }]}
+}
+</script>
+</body>
+</html>

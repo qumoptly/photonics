@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-HB6kfp/LHS7m8IgtFEcK5g=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - dispersion management, compensation, mode-locked laser, fiber-optic link</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/dispersion_management.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Dispersion management is the use of tailored chromatic dispersion to enhance the function of optical devices or systems. It is used in certain mode-locked lasers, for example.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="dispersion management, compensation, mode-locked laser, fiber-optic link">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Dispersion Management">
+<meta property="og:description" content="Dispersion management is the use of tailored chromatic dispersion to enhance the function of optical devices or systems. It is used in certain mode-locked lasers, for example.">
+<meta property="og:url" content="https://www.rp-photonics.com/dispersion_management.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/dispersion_management.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Dispersion management is the use of tailored chromatic dispersion to enhance the function of optical devices or systems. It is used in certain mode-locked lasers, for example.">
+<meta name="twitter:title" content="Dispersion Management">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/dispersion_management.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="HB6kfp/LHS7m8IgtFEcK5g==">
+page="dispersion_management.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="HB6kfp/LHS7m8IgtFEcK5g==">shownsponsors="EKSMA OPTICS"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_d.html">letter D</a> &gt; <a href="dispersion_management.html">dispersion management</a></p>
+<h1>Dispersion Management</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_dispersion_management_devices.html?s=vbox">6 suppliers for dispersion management devices</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.sphere-photonics.com/products/d-scan" data-supplier="Sphere Ultrafast Photonics" data-location="product-enc" data-keyword="dispersion management devices" rel="nofollow" class="bg externallink"><img src="./bg/logos/sphere_ultrafast_photonics.png" alt="Sphere Ultrafast Photonics" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="http://www.fastlite.com/en/ar824672-823529-Dispersion-management-solutions.html" data-supplier="Fastlite" data-location="product-enc" data-keyword="dispersion management devices" rel="nofollow" class="bg externallink"><img src="./bg/logos/fastlite.png" alt="Fastlite" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_dispersion_management_devices.html?s=vbox">List of suppliers for<br>dispersion management devices</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="advicebox">
+<p>Ask <a href="index.html">RP Photonics</a> for advice e.g. concerning dispersion compensation in mode-locked lasers or dispersion effects on signal propagation in telecom systems.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: the use of tailored chromatic dispersion to enhance the function of optical devices or systems</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Dispersions-Management</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#lightwave_communications" title="other articles on lightwave communications">lightwave communications</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<p><a href="encyclopedia_cite.html?article=dispersion%20management">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Dispersion management is a somewhat wider term than <a href="dispersion_compensation.html" title="the control of the overall chromatic dispersion of a system by adding optical elements with a suitable amount of dispersion">dispersion compensation</a>, even though both are often used in the same way.
+Strictly, dispersion compensation should be understood as a method for canceling the <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> of some optical element(s), whereas dispersion management is more generally the use of tailored dispersion properties in order to enhance some function.</p>
+<p>Examples of dispersion management in different situations are:</p>
+<ul>
+<li>In a <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked laser</a> operating at a wavelength around 1&nbsp;&mu;m or shorter, the intracavity optical elements often contribute normal chromatic dispersion.
+For optimum <a href="pulse_generation.html" title="the generation of light pulses (flashes)">pulse generation</a>, it is often beneficial to overcompensate the normal chromatic dispersion in order to utilize the regime of anomalous dispersion, where <a href="solitons.html" title="pulses with a certain balance of nonlinear and dispersive effects">soliton</a> effects can help to obtain shorter pulses (&rarr;&nbsp;<a href="soliton_mode_locking.html" title="a mechanism for laser mode locking based on soliton pulses"><em>soliton mode locking</em></a>), which may also have a higher pulse quality e.g. in terms of weak pedestals and high stability.
+If the wanted <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a> is in the regime of tens of femtoseconds or less, it is usually also necessary to compensate carefully the higher-order dispersion, i.e., to control the <a href="group_delay_dispersion.html" title="the frequency dependency of the group delay, or (quantitatively) the corresponding derivative with respect to angular frequency">group delay dispersion</a> over a significant optical bandwidth.</li>
+<li>In a <a href="mode_locked_fiber_lasers.html" title="ultrafast fiber lasers which are actively or passively mode-locked for generating ultrashort pulses">mode-locked fiber laser</a>, dispersive and <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinear</a> effects can become so strong that the pulse parameters (including the pulse duration and <a href="chirp.html" title="time dependence of the instantaneous frequency of an optical pulse">chirp</a>) vary significantly during each <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">resonator</a> round trip.
+With a suitable combination of <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a> exhibiting normal and anomalous dispersion, a <em>stretched-pulse fiber laser</em> can be realized, which can generate pulses (<em>dispersion-managed solitons</em>) with significantly higher <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a> than with, e.g., <a href="soliton_mode_locking.html" title="a mechanism for laser mode locking based on soliton pulses">soliton mode locking</a>.</li>
+<li>Similar effects can be used in <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a>: a <a href="fiber_optic_links.html" title="optical communication links where the signal light is transported in fibers">fiber-optic link</a> consisting of a periodic arrangement of fibers with normal and anomalous dispersion can help to suppress nonlinear effects such as channel cross-talk via <a href="four_wave_mixing.html" title="an interaction of light waves based on a &chi;<sup>(3)</sup> nonlinearity">four-wave mixing</a>.
+It is possible to suppress the Gordon&ndash;Haus <a href="timing_jitter.html" title="fluctuations of the temporal positions of pulses">timing jitter</a> at the same time, if the average chromatic dispersion is zero.</li>
+</ul>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_dispersion_management_devices.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 6 suppliers for dispersion management devices. Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.sphere-photonics.com/" data-supplier="Sphere Ultrafast Photonics" data-location="product-enc" data-keyword="dispersion management devices" rel="nofollow" class="bg externallink" title="Visit the website of Sphere Ultrafast Photonics"><img src="./bg/logos/sphere_ultrafast_photonics.png" alt="Sphere Ultrafast Photonics" class="supplierlogo"></a><a href="http://www.sphere-photonics.com/products/d-scan" data-supplier="Sphere Ultrafast Photonics" data-location="product-enc" data-keyword="dispersion management devices" rel="nofollow" class="bg externallink" title="Visit the website of Sphere Ultrafast Photonics"><img src="./bg/products/sphere_ultrafast_photonics/d-scan_hand.jpg" alt="dispersion management devices" class="product"></a><h3><a href="./bg/profiles/sphere_ultrafast_photonics.html" title="See the profile of Sphere Ultrafast Photonics">Sphere Ultrafast Photonics</a></h3><p><a href="http://www.sphere-photonics.com/products/d-scan" data-supplier="Sphere Ultrafast Photonics" data-location="product-enc" data-keyword="dispersion management devices" rel="nofollow" class="externallink bg">d-scan </a>is an inline, compact and high-performance device for the simultaneous measurement and compression of even the most demanding ultrafast pulses. It can be used either as a stand-alone system or integrated with existing optical pulse compressors. It handles broadband oscillators, amplifiers, OPAs and hollow-fiber compressors.</p><p>Coupling your beam into the d-scan is easily achieved in less than one minute and a full measurement takes less than 10 seconds. The resulting d-scan traces are very intuitive and a proprietary algorithm provides fast and accurate retrieval of the full electric field of the pulses.</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.fastlite.com/" data-supplier="Fastlite" data-location="product-enc" data-keyword="dispersion management devices" rel="nofollow" class="bg externallink" title="Visit the website of Fastlite"><img src="./bg/logos/fastlite.png" alt="Fastlite" class="supplierlogo"></a><a href="http://www.fastlite.com/en/ar824672-823529-Dispersion-management-solutions.html" data-supplier="Fastlite" data-location="product-enc" data-keyword="dispersion management devices" rel="nofollow" class="bg externallink" title="Visit the website of Fastlite"><img src="./bg/products/fastlite/dispersion_management.jpg" alt="dispersion management devices" class="product"></a><h3><a href="./bg/profiles/fastlite.html" title="See the profile of Fastlite">Fastlite</a></h3><p>Fastlite patented Grism design for <a href="http://www.fastlite.com/en/ar824672-823529-Dispersion-management-solutions.html" data-supplier="Fastlite" data-location="product-enc" data-keyword="dispersion management devices" rel="nofollow" class="externallink bg">dispersion management</a> allows independent control of 2nd, 3rd and 4th orders of dispersion. These are ideal solutions for:</p><p>- compact, CEP-compatible stretcher </p><p>- dispersion compensation modules for Dazzler systems</p><p>- stretcher / compressor setups in OPCPA systems</p><p>All our solutions are tailored to fit the exact dispersion requirements of your experiment.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="dispersion_management.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">M. Nakazawa and H. Kuboto, &ldquo;Optical soliton communication in a positively and negatively dispersion-allocated optical fibre transmission line&rdquo;, Electron. Lett. 31, 216 (1995), <a href="https://doi.org/10.1049/el:19950159">doi:10.1049/el:19950159</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">N. J. Smith <i>et al.</i>, &ldquo;Enhanced power solitons in optical fibres with periodic dispersion management&rdquo;, Electron. Lett. 32, 54 (1996), <a href="https://doi.org/10.1049/el:19960062">doi:10.1049/el:19960062</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">T. Yu <i>et al.</i>, &ldquo;Dispersion-managed soliton interactions in optical fibers&rdquo;, Opt. Lett. 22 (11), 793 (1997), <a href="https://doi.org/10.1364/OL.22.000793">doi:10.1364/OL.22.000793</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">A. Hasegawa <i>et al.</i>, &ldquo;Recent progress in dispersion-managed soliton transmission technologies&rdquo;, Opt. Fiber Technol. 3 (3), 197 (1997), <a href="https://doi.org/10.1006/ofte.1997.0227">doi:10.1006/ofte.1997.0227</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">V. S. Grigoryan and C. R. Menyuk, &ldquo;Dispersion-managed solitons at normal average dispersion&rdquo;, Opt. Lett. 23 (8), 609 (1998), <a href="https://doi.org/10.1364/OL.23.000609">doi:10.1364/OL.23.000609</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">S. K. Turitsyn, &ldquo;Breathing self-similar dynamics and oscillatory tails of the chirped dispersion-managed soliton&rdquo;, Phys. Rev. E 58 (2), R1256 (1998), <a href="https://doi.org/10.1103/PhysRevE.58.R1256">doi:10.1103/PhysRevE.58.R1256</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">Y. Chen <i>et al.</i>, &ldquo;Dispersion-managed mode locking&rdquo;, J. Opt. Soc. Am. B 16 (11), 1999 (1999), <a href="https://doi.org/10.1364/JOSAB.16.001999">doi:10.1364/JOSAB.16.001999</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">A. Berntson and B. A. Malomed, &ldquo;Dispersion management with filtering&rdquo;, Opt. Lett. 24 (8), 507 (1999), <a href="https://doi.org/10.1364/OL.24.000507">doi:10.1364/OL.24.000507</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">L. F. Mollenauer <i>et al.</i>, &ldquo;Demonstration of massive wavelength-division multiplexing over transoceanic distances by use of dispersion-managed solitons&rdquo;, Opt. Lett. 25 (10), 704 (2000), <a href="https://doi.org/10.1364/OL.25.000704">doi:10.1364/OL.25.000704</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">R. Ganapathy <i>et al.</i>, &ldquo;Soliton interaction under soliton dispersion management&rdquo;, IEEE J. Quantum Electron. 44 (4), 383 (2008), <a href="https://doi.org/10.1109/JQE.2007.914778">doi:10.1109/JQE.2007.914778</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="dispersion.html" title="the dependence of the phase velocity in a medium on the optical frequency or the propagation mode">dispersion</a>, <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>, <a href="dispersion_compensation.html" title="the control of the overall chromatic dispersion of a system by adding optical elements with a suitable amount of dispersion">dispersion compensation</a>, <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a><br>and other articles in the categories <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#lightwave_communications" title="other articles on lightwave communications">lightwave communications</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/dispersion_management.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fdispersion_management.html&text=RP+Photonics+Encyclopedia+-+dispersion+management%2C+compensation%2C+mode-locked+laser%2C+fiber-optic+link" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fdispersion_management.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fdispersion_management.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/dispersion_management.html"&gt;<br>Article on Dispersion Management&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/dispersion_management.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/dispersion_management.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/dispersion_management.html<br>article on 'Dispersion Management' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Website Tours</h2>
+<p>You can explore our website with the following tours:</p>
+<ul>
+<li><a href="./encyclopedia.html?tour=Encyclopedia">The RP Photonics Encyclopedia</a></li>
+<li><a href="./encyclopedia.html?tour=New_Encyclopedia_Articles">The latest encyclopedia articles</a></li>
+<li><a href="./buyersguide.html?tour=Using_the_Buyers_Guide">Using the Buyer's Guide</a></li>
+<li><a href="./buyersguide.html?tour=Advertising_in_the_Buyers_Guide">Advertising in the Buyer's Guide</a></li>
+</ul>
+<img src="./img/tour_bus.png" style="width:90%; margin:15px 0;" alt="&nbsp;">
+<p>You will be lead through a couple of pages, obtaining explanations on every one.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="HB6kfp/LHS7m8IgtFEcK5g==">shownbanner = "tours";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Latest Encyclopedia Articles</h2>
+<p>Here are the latest encyclopedia articles:</p>
+<ul>
+<li class="tight"><a href="./variable_reflectivity_mirrors.html">variable reflectivity mirrors</a></li>
+<li class="tight"><a href="./color_centers.html">color centers</a></li>
+<li class="tight"><a href="./excimer_lamps.html">excimer lamps</a></li>
+<li class="tight"><a href="./multimode_beams.html">multimode beams</a></li>
+<li class="tight"><a href="./channel_waveguides.html">channel waveguides</a></li>
+<li class="tight"><a href="./optical_crystals.html">optical crystals</a></li>
+<li class="tight"><a href="./standing_wave_resonators.html">standing-wave resonators</a></li>
+<li class="tight"><a href="./nonlinear_absorption.html">nonlinear absorption</a></li>
+<li class="tight"><a href="./passive_fibers.html">passive fibers</a></li>
+<li class="tight"><a href="./active_fibers.html">active fibers</a></li>
+<li class="tight"><a href="./oem_laser_modules.html">OEM laser modules</a></li>
+<li class="tight"><a href="./industrial_lasers.html">industrial lasers</a></li>
+<li class="tight"><a href="./scientific_lasers.html">scientific lasers</a></li>
+<li class="tight"><a href="./flint_glasses.html">flint glasses</a></li>
+<li class="tight"><a href="./crown_glasses.html">crown glasses</a></li>
+<li class="tight"><a href="./sodium_vapor_lamps.html">sodium vapor lamps</a></li>
+<li class="tight"><a href="./metal_vapor_lamps.html">metal vapor lamps</a></li>
+<li class="tight"><a href="./mercury_vapor_lamps.html">mercury vapor lamps</a></li>
+<li class="tight"><a href="./white_light.html">white light</a></li>
+<li class="tight"><a href="./cie_standard_illuminants.html">CIE standard illuminants</a></li>
+</ul>
+
+<p>The encyclopedia already contains 948 articles.</p>
+<p>See also the regularly appearing articles of the <a href="./spotlight.html?banner=new_articles">The Photonics Spotlight</a> and the <a href="./software_news.html?banner=new_articles">RP Photonics Software News</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="HB6kfp/LHS7m8IgtFEcK5g==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/dispersion_management.html"
+    },
+    "headline": "Dispersion Management",
+    "image": "https://www.rp-photonics.com/previews/dispersion_management.png",
+    "datePublished": "2007-08-06",
+    "dateModified": "2020-03-14",
+    "description": "Dispersion management is the use of tailored chromatic dispersion to enhance the function of optical devices or systems. It is used in certain mode-locked lasers, for example.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter D",
+      "item": "https://www.rp-photonics.com/encyclopedia_d.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "dispersion management",
+      "item": "https://www.rp-photonics.com/dispersion_management.html"
+    }]}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-azHs+CxTCQMSuyG8hLa8sw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Raman scattering, Raman effect, gain, fibers, Stokes wave, inelastic scattering</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/raman_scattering.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Raman scattering is a nonlinear scattering process involving optical phonons. It can occur spontaneously, but also in stimulated form.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="Raman scattering, Raman effect, gain, fibers, Stokes wave, inelastic scattering">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Raman Scattering">
+<meta property="og:description" content="Raman scattering is a nonlinear scattering process involving optical phonons. It can occur spontaneously, but also in stimulated form.">
+<meta property="og:url" content="https://www.rp-photonics.com/raman_scattering.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/raman_scattering.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Raman scattering is a nonlinear scattering process involving optical phonons. It can occur spontaneously, but also in stimulated form.">
+<meta name="twitter:title" content="Raman Scattering">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/raman_scattering.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="azHs+CxTCQMSuyG8hLa8sw==">
+page="raman_scattering.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo sponsor"></a> <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="azHs+CxTCQMSuyG8hLa8sw==">shownsponsors="RPMC Lasers,TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_r.html">letter R</a> &gt; <a href="raman_scattering.html">Raman scattering</a></p>
+<h1>Raman Scattering</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="boxadvertisement">
+<h2>Calculations of Raman Scattering</h2>
+<p>The software <a href="fiberpower.html"><b>RP Fiber Power</b></a> can be used for analyzing stimulated Raman scattering &ndash; see a <a href="fiberpower_solitonshift.html">demo case for the soliton self-frequency shift</a>.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a nonlinear scattering process involving optical phonons</p>
+<p>More general terms: <a href="scattering.html" title="processes where light is sent in other directions, usually but not always in random directions">scattering</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Raman-Streuung</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#fiber_optics_and_waveguides" title="other articles on fiber optics and waveguides">fiber optics and waveguides</a>, <a href="categories.html#nonlinear_optics" title="other articles on nonlinear optics">nonlinear optics</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<p><a href="encyclopedia_cite.html?article=Raman%20scattering">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>The nonlinear response of a transparent optical medium to the <a href="optical_intensity.html" title="optical power per unit area">optical intensity</a> of light propagating through the medium is very fast, but not instantaneous.
+In particular, a non-instantaneous response is caused by vibrations of the crystal (or glass) lattice.
+When these vibrations are associated with optical phonons, the effect is called <em>Raman scattering</em>, whereas acoustical phonons are associated with <a href="brillouin_scattering.html" title="a nonlinear scattering effect involving acoustic phonons">Brillouin scattering</a>.
+When e.g. two <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beams</a> with different <a href="wavelength.html" title="the spatial period of a plane wave">wavelengths</a> (and normally with the same polarization direction) propagate together through a Raman-active medium, the longer wavelength beam (called the <em>Stokes wave</em>) can experience optical amplification at the expense of the shorter wavelength beam.
+In addition, lattice vibrations are excited, leading to a temperature rise.
+The <a href="raman_gain.html" title="optical gain arising from stimulated Raman scattering">Raman gain</a> for the longer wavelength beam can be exploited in <a href="raman_amplifiers.html" title="optical amplifiers based on Raman gain">Raman amplifiers</a> and <a href="raman_lasers.html" title="lasers based on Raman gain rather than on laser gain from stimulated emission">Raman lasers</a>.
+That gain can be substantial if the <a href="stokes_shift.html" title="the reduction in photon energy in certain processes">Stokes shift</a> corresponds to a frequency difference of several terahertz.</p>
+<p>Raman scattering can occur not only in solid materials, but also in liquids or gases.
+For example, molecular glasses have vibrational/rotational excitations, and the observed Stokes shifts are related to those.</p>
+<p>In the Raman scattering process, one pump <a href="photons.html" title="quanta of light energy">photon</a> is converted into one lower-energy signal photon, and the difference of photon energies is carried away by a phonon (a quantum of the lattice vibrations).
+In principle, it is also possible that an already existing phonon interacts with a pump photon to generate one higher-energy photon, belonging to an <em>anti-Stokes wave</em> at a shorter wavelength.
+That process, however, is usually weak, particularly at low temperatures.
+Note, however, that strong anti-Stokes light can also arise from <a href="four_wave_mixing.html" title="an interaction of light waves based on a &chi;<sup>(3)</sup> nonlinearity">four wave mixing</a> if that process is <a href="phase_matching.html" title="a group of techniques for achieving efficient nonlinear interactions in a medium">phase-matched</a>.</p>
+<p>When the intensity of the generated Stokes wave becomes sufficiently high, that wave may again act as the pump for a further Raman process.
+Particularly in some <a href="raman_lasers.html" title="lasers based on Raman gain rather than on laser gain from stimulated emission">Raman lasers</a>, it is possible to observe several Stokes orders (<em>cascaded Raman lasers</em>).</p>
+<p>Raman scattering is also called <em>inelastic scattering</em>, because the involved loss of photon energy is somewhat reminiscent of losses of kinetic energy in collisions of mechanical objects.</p>
+<p>Apart from the mentioned stimulated Raman scattering effect, which can be described with classical physics, there is also <em>spontaneous</em> Raman scattering, caused by <a href="quantum_noise.html" title="noise arising from quantum fluctuations">quantum</a> effects.</p>
+<p>Raman scattering can also occur within the broad <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a> of, e.g., an <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort optical pulse</a>, effectively shifting the spectral envelope of the pulse towards longer wavelengths (<em>Raman self-frequency shift</em>, also called <em>soliton self-frequency shift</em>).</p>
+<p>Some typical Raman-active media are</p>
+<ul>
+<li>certain molecular gases, e.g. hydrogen (H<sub>2</sub>), methane (CH<sub>4</sub>) and carbon dioxide (CO<sub>2</sub>), used in, e.g., high pressure cells for Raman shifters</li>
+<li>solid-state media such as glass <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a> or certain crystals, e.g. barium nitride = Ba(NO<sub>3</sub>)<sub>2</sub>, various <a href="tungstate_lasers.html" title="solid-state lasers based on tungstate crystals as gain media">tungstates</a> such as KGd(WO<sub>4</sub>)<sub>2</sub> = KGW and KY(WO<sub>4</sub>)<sub>2</sub> = KYW, and synthetic diamond</li>
+</ul>
+<p>The Raman effect occurs together with the <a href="kerr_effect.html" title="a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization">Kerr effect</a>, which results from the (nearly) instantaneous response of the electrons.</p>
+<figure>
+<img src="img/fiberpower_srs4.png" alt="evolution of the pulse spectrum in the fiber">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Evolution of the pulse spectrum in a fiber amplifier. Near the right end, a significant part of the power is shifted into longer-wavelength components by stimulated Raman scattering. The simulation has been made with the software <a href="fiberpower.html">RP Fiber Power</a> as part of a <a href="fiberpower_srs.html">case study</a>.
+</figcaption>
+</figure>
+<figure>
+<img src="img/fiberpower_srs_mm2.png" alt="optical powers along the fiber">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Evolution of optical powers in a parabolic-index multimode fiber, simulated with the numerical beam propagation feature of the software <a href="fiberpower.html">RP Fiber Power</a> as part of a <a href="fiberpower_srs_mm.html">case study</a>. A signal wave is strongly amplified, while the pump wave is strongly depleted. Multiple modes are involved in the conversion process.
+</figcaption>
+</figure>
+<p>In optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fiber</a> devices such as <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifiers</a> for intense <a href="pulses.html" title="flashes of light">pulses</a>, Raman scattering can be detrimental: it can transfer much of the pulse energy into a wavelength range where laser amplification does not occur.
+This effect can limit the <a href="peak_power.html" title="maximum optical power of a pulse">peak power</a> achievable with such devices.
+Even in continuous-wave <a href="high_power_fiber_lasers_and_amplifiers.html" title="fiber lasers and fiber amplifiers with high output powers of e.g. &gt;&thinsp;10&thinsp;&thinsp;W">high-power fiber lasers and amplifiers</a>, Raman scattering can be a problem.
+There are, however, various kinds of solutions to such problems, including <a href="chirped_pulse_amplification.html" title="a technique for amplifying pulses to very high optical intensities while avoiding excessive nonlinear pulse distortions or optical damage">chirped-pulse amplification</a> and the use of special fiber designs (see e.g. [9]) which suppress Raman scattering by attenuating the Raman-shifted wavelength component.</p>
+<p>In bulk media, such as certain <a href="nonlinear_crystal_materials.html" title="crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal materials</a>, unwanted stimulated Raman scattering can occur even via non-collinear <a href="phase_matching.html" title="a group of techniques for achieving efficient nonlinear interactions in a medium">phase matching</a>, if the pump intensity is rather high and the beam width is large enough.
+This can occur e.g. in <a href="optical_parametric_generators.html" title="light sources based on parametric amplifiers with no signal or idler input">optical parametric generators</a> operated with intense pump pulses.</p>
+<p>Raman scattering is also used in <a href="raman_spectroscopy.html" title="optical spectroscopy based on spontaneous or stimulated Raman scattering">Raman spectroscopy</a>.
+In particular, it allows one to investigate the vibrational modes of solid materials and vibrational/rotational states of molecules.</p>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="raman_scattering.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">V. V. Raman and K. S. Krishnan, &ldquo;A new type of secondary radiation&rdquo;, Nature 121, 501 (1928), <a href="https://doi.org/10.1038/121501c0">doi:10.1038/121501c0</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">G. Eckhardt <i>et al.</i>, &ldquo;Stimulated emission of Stokes and anti-Stokes Raman lines from diamond, calcite and alpha-sulfur single crystals&rdquo;, Appl. Phys. Lett. 3, 137 (1963), <a href="https://doi.org/10.1063/1.1753903">doi:10.1063/1.1753903</a> (first report of stimulated Raman scattering in insulating crystals)</td></tr>
+<tr><td class="refno">[3]</td><td class="refs">N. Bloembergen, &ldquo;The stimulated Raman effect&rdquo;, Am. J. Phys. 35 (11), 989 (1967), <a href="https://doi.org/10.1119/1.1973774">doi:10.1119/1.1973774</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">R. G. Smith, &ldquo;Optical power handling capacity of low loss optical fibers as determined by stimulated Raman and Brillouin scattering&rdquo;, Appl. Opt. 11 (11), 2489 (1972), <a href="https://doi.org/10.1364/AO.11.002489">doi:10.1364/AO.11.002489</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">K. J. Blow and D. Wood, &ldquo;Theoretical description of transient stimulated Raman scattering in optical fibers&rdquo;, IEEE J. Quantum Electron. 25 (12), 2665 (1989), <a href="https://doi.org/10.1109/3.40655">doi:10.1109/3.40655</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">R. H. Stolen <i>et al.</i>, &ldquo;Raman response function of silica-core fibers&rdquo;, J. Opt. Soc. Am. B 6 (6), 1159 (1989), <a href="https://doi.org/10.1364/JOSAB.6.001159">doi:10.1364/JOSAB.6.001159</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">D. Hollenbeck and C. D. Cantrell, &ldquo;Multiple-vibrational-mode model for fiber-optic Raman gain spectrum and response function&rdquo;, J. Opt. Soc. Am. B 19 (12), 2886 (2002), <a href="https://doi.org/10.1364/JOSAB.19.002886">doi:10.1364/JOSAB.19.002886</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">J. Santhanam and G. P. Agrawal, &ldquo;Raman-induced spectral shifts in optical fibers: general theory based on the moment method&rdquo;, Opt. Commun. 222, 413 (2003), <a href="https://doi.org/10.1016/S0030-4018(03)01561-X">doi:10.1016/S0030-4018(03)01561-X</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">J. M. Fini <i>et al.</i>, &ldquo;Distributed suppression of stimulated Raman scattering in an Yb-doped filter-fiber amplifier&rdquo;, Opt. Lett. 31 (17), 2550 (2006), <a href="https://doi.org/10.1364/OL.31.002550">doi:10.1364/OL.31.002550</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">Q. Lin and G. P. Agrawal, &ldquo;Raman response function for silica fibers&rdquo;, Opt. Lett. 31 (21), 3086 (2006), <a href="https://doi.org/10.1364/OL.31.003086">doi:10.1364/OL.31.003086</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">D. J. Spence and R. P. Mildren, &ldquo;Mode locking using stimulated Raman scattering&rdquo;, Opt. Express 15 (13), 8170 (2007), <a href="https://doi.org/10.1364/OE.15.008170">doi:10.1364/OE.15.008170</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">X. Ma <i>et al.</i>, &ldquo;Propagation-length independent SRS threshold in chirally-coupled-core fibers&rdquo;, Opt. Express 19 (23), 22575 (2011), <a href="https://doi.org/10.1364/OE.19.022575">doi:10.1364/OE.19.022575</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">R. Paschotta, &quot;<a href="spotlight_2018_03_05.html">Dependence on Raman conversion on the optical bandwidth</a>&quot; (2018)</td></tr>
+<tr><td class="refno">[14]</td><td class="refs">G. P. Agrawal, <i>Nonlinear Fiber Optics</i>, 4th edn., Academic Press, New York (2007)</td></tr>
+<tr><td class="refno">[15]</td><td class="refs">R. Paschotta, case studies involving Raman scattering: <a href="fiberpower_solitonshift.html">soliton self-frequency shift</a>, <a href="fiberpower_srs.html">SRS in an Yb-doped fiber amplifier</a> and <a href="fiberpower_srs_mm.html">in a multimode fiber</a>.</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="raman_gain.html" title="optical gain arising from stimulated Raman scattering">Raman gain</a>, <a href="raman_amplifiers.html" title="optical amplifiers based on Raman gain">Raman amplifiers</a>, <a href="raman_lasers.html" title="lasers based on Raman gain rather than on laser gain from stimulated emission">Raman lasers</a>, <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a>, <a href="stokes_shift.html" title="the reduction in photon energy in certain processes">Stokes shift</a>, <a href="brillouin_scattering.html" title="a nonlinear scattering effect involving acoustic phonons">Brillouin scattering</a>, <a href="kerr_effect.html" title="a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization">Kerr effect</a>, <a href="hyper_raman_scattering.html" title="Raman scattering processes involving two pump photons">hyper Raman scattering</a>, <a href="raman_spectroscopy.html" title="optical spectroscopy based on spontaneous or stimulated Raman scattering">Raman spectroscopy</a>, <a href="spotlight_2010_03_03.html">The Photonics Spotlight 2010-03-03</a><br>and other articles in the categories <a href="categories.html#fiber_optics_and_waveguides" title="other articles on fiber optics and waveguides">fiber optics and waveguides</a>, <a href="categories.html#nonlinear_optics" title="other articles on nonlinear optics">nonlinear optics</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/raman_scattering.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Framan_scattering.html&text=RP+Photonics+Encyclopedia+-+Raman+scattering%2C+Raman+effect%2C+gain%2C+fibers%2C+Stokes+wave%2C+inelastic+scattering" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Framan_scattering.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Framan_scattering.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/raman_scattering.html"&gt;<br>Article on Raman Scattering&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/raman_scattering.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/raman_scattering.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/raman_scattering.html<br>article on 'Raman Scattering' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Now is the Time for Training!</h2>
+<p>When your lab is closed, how to best utilize your time? With training, of course.</p>
+<p>Some suggestions:</p>
+<ul>
+<li>Use the RP Photonics website, reading <a href="./encyclopedia.html?banner=video_training">encyclopedia</a> articles, <a href="./tutorials.html?banner=video_training">tutorials</a>, <a href="./spotlight.html?banner=video_training">Photonics Spotlight</a> articles, etc. &ndash; all for free.</li>
+<li>Get a <a href="./training.html?banner=video_training">tailored training course</a> delivered through the internet &ndash; with every participant connected from home!</li>
+<li>Start with <a href="./software_modeling.html?banner=video_training">physical modeling</a> in order to fully understand your systems and devices, optimize performance, create new ideas&hellip;</li>
+</ul>
+<img src="./img/rp_photonics.png" alt="RP Photonics" style="margin-top:20px; width:225px;">
+<p>offers <a href="./training.html?banner=video_training">tailored training courses</a> and powerful <a href="./software.html?banner=video_training">simulation &amp; design software</a>, e.g. for <a href="./fiberpower.html?banner=video_training">active and passive fiber devices</a>, <a href="./resonator.html?banner=video_training">laser resonators</a> and <a href="./coating.html?banner=video_training">thin-film coatings</a>!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="azHs+CxTCQMSuyG8hLa8sw==">shownbanner = "video training";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Latest Encyclopedia Articles</h2>
+<p>Here are the latest encyclopedia articles:</p>
+<ul>
+<li class="tight"><a href="./variable_reflectivity_mirrors.html">variable reflectivity mirrors</a></li>
+<li class="tight"><a href="./color_centers.html">color centers</a></li>
+<li class="tight"><a href="./excimer_lamps.html">excimer lamps</a></li>
+<li class="tight"><a href="./multimode_beams.html">multimode beams</a></li>
+<li class="tight"><a href="./channel_waveguides.html">channel waveguides</a></li>
+<li class="tight"><a href="./optical_crystals.html">optical crystals</a></li>
+<li class="tight"><a href="./standing_wave_resonators.html">standing-wave resonators</a></li>
+<li class="tight"><a href="./nonlinear_absorption.html">nonlinear absorption</a></li>
+<li class="tight"><a href="./passive_fibers.html">passive fibers</a></li>
+<li class="tight"><a href="./active_fibers.html">active fibers</a></li>
+<li class="tight"><a href="./oem_laser_modules.html">OEM laser modules</a></li>
+<li class="tight"><a href="./industrial_lasers.html">industrial lasers</a></li>
+<li class="tight"><a href="./scientific_lasers.html">scientific lasers</a></li>
+<li class="tight"><a href="./flint_glasses.html">flint glasses</a></li>
+<li class="tight"><a href="./crown_glasses.html">crown glasses</a></li>
+<li class="tight"><a href="./sodium_vapor_lamps.html">sodium vapor lamps</a></li>
+<li class="tight"><a href="./metal_vapor_lamps.html">metal vapor lamps</a></li>
+<li class="tight"><a href="./mercury_vapor_lamps.html">mercury vapor lamps</a></li>
+<li class="tight"><a href="./white_light.html">white light</a></li>
+<li class="tight"><a href="./cie_standard_illuminants.html">CIE standard illuminants</a></li>
+</ul>
+
+<p>The encyclopedia already contains 948 articles.</p>
+<p>See also the regularly appearing articles of the <a href="./spotlight.html?banner=new_articles">The Photonics Spotlight</a> and the <a href="./software_news.html?banner=new_articles">RP Photonics Software News</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="azHs+CxTCQMSuyG8hLa8sw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/raman_scattering.html"
+    },
+    "headline": "Raman Scattering",
+    "image": "https://www.rp-photonics.com/previews/raman_scattering.png",
+    "datePublished": "2008-06-01",
+    "dateModified": "2020-03-14",
+    "description": "Raman scattering is a nonlinear scattering process involving optical phonons. It can occur spontaneously, but also in stimulated form.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter R",
+      "item": "https://www.rp-photonics.com/encyclopedia_r.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Raman scattering",
+      "item": "https://www.rp-photonics.com/raman_scattering.html"
+    }]}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-D8F/4VVQFUuk1i52RoNcSw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>The software RP Fiber Power: stimulated Raman scattering in Yb-doped fiber amplifier</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/fiberpower_srs.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-05-22">
+<meta name="description" content="Stimulated Raman scattering in an Yb-doped fiber amplifier has been numerically simulated. It leads to strong pulse distortions.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="RP Fiber Power, simulation, design, software, fiber amplifier, stimulated Raman scattering">
+<script type="text/javascript" src="./jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" nonce="D8F/4VVQFUuk1i52RoNcSw==">
+page="fiberpower_srs.html"; cat="S"; shownbanner=""; ref="http://www.rp-photonics.com/encyclopedia_r.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td class="selected"><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="fiberpower_srs_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software_start" href="software.html">Introduction</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<p>Products:</p>
+<a id="Overview" href="software_overview.html">Overview</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html" class="sel">RP Fiber Power</a>
+<a href="fiberpower_features.html" class="sub">Features</a>
+<a href="fiberpower_speed.html" class="sub">Speed</a>
+<a href="fiberpower_model.html" class="sub">Model</a>
+<a href="fiberpower_data.html" class="sub">Data</a>
+<a href="fiberpower_interface.html" class="sub">Interface</a>
+<a href="fiberpower_case_studies.html" class="sub sel">Demos</a>
+<a href="fiberpower_versions.html" class="sub">Versions</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<p>Various aspects:</p>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<p>Take action:</p>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main"><main>
+<div class="softwarelogo">
+<p class="fig" style="margin-top:12px"><img src="img/fiberpower_logo.png" width="75" height="75" alt="RP Fiber Power logo"></p>
+</div>
+<p class="breadcrumbs"><a href="software.html">Software</a> &gt; <a href="fiberpower.html">RP Fiber Power</a> &gt; <a href="fiberpower_case_studies.html">Demo</a> &gt; <a href="fiberpower_srs.html">SRS</a></p>
+<h1>RP Fiber Power &ndash; Simulation and Design Software <br> for Fiber Optics, Amplifiers and Fiber Lasers</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower.html">Overview</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_features.html">Features</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_speed.html">Speed</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_model.html">Model</a></td>
+</tr><tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_data.html">Data</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_interface.html">Interface</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="fiberpower_case_studies.html">Demos</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_versions.html">Versions</a></td>
+</tr>
+</table>
+<h2>Example Case: Stimulated Raman Scattering in Yb-doped Fiber Amplifier</h2>
+<h3>Description of the Model</h3>
+<p>Here, we simulate the propagation of an ultrashort pulse in a fiber amplifier, where the substantial fiber nonlinearity leads to stimulated Raman scattering (SRS).
+The model is similar to that for <a href="fiberpower_parpulse.html">parabolic pulse propagation</a>, except that the fiber is longer and the pulse parameters are different.</p>
+<h3>Results</h3>
+<p>Figure&nbsp;1 shows the amplified pulse in the time domain.
+Particularly in the leading part, it exhibits fast wiggles.
+These result from the interference of the original part of the pulse spectrum with the Raman-shifted part.</p>
+<figure>
+<img src="img/fiberpower_srs1.png" alt="amplified pulse with SRS influence">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Amplified pulse in the time domain.
+</figcaption>
+</figure>
+<p>Figure&nbsp;2 shows the pulse spectrum.
+(For comparison, the narrow spectrum of the input pulse at 1040&nbsp;nm is shown with a dotted curve, with the energy increased by a factor of 30.)
+Much of the pulse energy has been shifted to the long-wavelength region around 1080&ndash;1120&nbsp;nm.
+Note that subsequent simulation runs deliver somewhat different structures in that part due to the randomness of Raman scattering, which is influence by quantum fluctuations.</p>
+<figure>
+<img src="img/fiberpower_srs2.png" alt="amplified pulse with SRS influence">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Amplified pulse in the spectral domain.
+</figcaption>
+</figure>
+<p>Figure&nbsp;3 shows the spectrogram of the output pulse.
+The original component shows an up-chirp due to the normal chromatic dispersion of the fiber, whereas the Raman-shifted part exhibits an irregular structure.</p>
+<figure>
+<img src="img/fiberpower_srs3.png" alt="spectrogram of amplified pulse with SRS influence">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Spectrogram of the amplified pulse.
+</figcaption>
+</figure>
+<p>Figure&nbsp;4 shows how the pulse spectrum evolves in the fiber.
+Towards the right side, it first gets broader and broader (mainly due to <a href="self_phase_modulation.html" title="nonlinear phase modulation of a beam, caused by its own intensity via the Kerr effect">self-phase modulation</a>), and in the last part, the Raman scattering effect sets in.
+One can see how it &ldquo;eats up&rdquo; particularly the longer-wavelength part of the original spectral region.
+This is because the shorter-wavelength components propagate with a somewhat lower speed, losing the temporal overlap with the Raman-shifted part.
+(For a similar reason, one can see in Figure&nbsp;1 that the trailing part of the pulse in the time domain is not affected by SRS.)</p>
+<figure>
+<img src="img/fiberpower_srs4.png" alt="evolution of the pulse spectrum in the fiber">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Evolution of the pulse spectrum in the fiber.
+</figcaption>
+</figure>
+<p>Note that the detailed behavior of the pulses depends substantially on various parameters.
+For example, for femtosecond pulses, having a broader spectrum, Raman spectrum can occur within the spectrum.
+This strongly reduces the impact of quantum fluctuations; the pulse propagation becomes much more deterministic.
+In other cases, the chromatic dispersion is different, which can also substantially change the results.</p>
+<p>(<a href="fiberpower_case_studies.html">back to the list of example cases</a>)</p>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</main></div>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="D8F/4VVQFUuk1i52RoNcSw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Software",
+      "item": "https://www.rp-photonics.com/software.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "RP Fiber Power",
+      "item": "https://www.rp-photonics.com/fiberpower.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Demo",
+      "item": "https://www.rp-photonics.com/fiberpower_case_studies.html"
+    },{
+      "@type": "ListItem",
+      "position": 4,
+      "name": "SRS",
+      "item": "https://www.rp-photonics.com/fiberpower_srs.html"
+    }]}
+}
+</script>
+</body>
+</html>

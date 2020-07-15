@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-/2VBeZAMlWHKc50OJdJwmg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - focal length, focal distance, dioptric power, curved mirror, lens equation, microscope, photographic objective, focus, beam radius</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/focal_length.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-06-25">
+<meta name="description" content="The focal length of an optical system is a measure of how strongly it focuses or defocuses light.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="focal length, focal distance, dioptric power, curved mirror, lens equation, microscope, photographic objective, focus, beam radius">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Focal Length">
+<meta property="og:description" content="The focal length of an optical system is a measure of how strongly it focuses or defocuses light.">
+<meta property="og:url" content="https://www.rp-photonics.com/focal_length.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/focal_length.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="The focal length of an optical system is a measure of how strongly it focuses or defocuses light.">
+<meta name="twitter:title" content="Focal Length">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/focal_length.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="/2VBeZAMlWHKc50OJdJwmg==">
+page="focal_length.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="/2VBeZAMlWHKc50OJdJwmg==">shownsponsors="EKSMA OPTICS"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_f.html">letter F</a> &gt; <a href="focal_length.html">focal length</a></p>
+<h1>Focal Length</h1>
+<header style="margin-right:0;">
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a measure of how strongly an optical system focuses or defocuses light</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Brennweite</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a></p>
+<p>Formula symbol: <span class="eqn_il"><i>f</i></span></p>
+<p>Units: m</p>
+<p><a href="encyclopedia_cite.html?article=focal%20length">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Various types of optical systems (e.g. <a href="microscope_objectives.html" title="the optical component of a microscope which is next to the observed object">microscope objectives</a> and curved <a href="laser_mirrors.html" title="high-quality mirrors used in laser resonators and other optical setups">laser mirrors</a>) can focus or defocus light, and the focal length is used for quantifying such effects.
+The simplest case is that of a thin focusing <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lens</a> (Figure&nbsp;1a).
+If a sufficiently large <a href="collimated_beams.html" title="laser beams with weak divergence">collimated beam</a> of light is incident on the lens, the beam will be focused, and the focal length is the distance from the lens to that focus (assuming that the lens is surrounded by vacuum or air, not by some dense substance with a significant <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a>).
+For a defocusing lens (Figure&nbsp;1b), the focal length is the distance from the lens to the <em>virtual focus</em> (indicated by the dashed lines), taken as a negative value.
+Some authors use different sign conventions, however, in particularly concerning the front and back focal length (see below).</p>
+<figure>
+<img src="img/focal_length.png" alt="focal length of lenses">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Focusing and defocusing lenses and their focal length. For the defocusing lens, the focal length is specified as a negative value.
+</figcaption>
+</figure>
+<h2 class="togglediv">Focal Length of a Thin or Thick Lens</h2>
+<div>
+<p>An ideal thin lens with a given focal length <span class="eqn_il"><i>f</i></span> (taken as positive in case of a focusing lens) creates a radially varying <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">phase</a> delay for a <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a> according to the following equation:</p>
+<div class="eqn"><img src="eqn/dphi_lens.gif" width="109" height="44" alt="radial phase change at lens"></div>
+<p>This formula ignores the constant part of the <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">optical phase</a> change as well as <a href="optical_aberrations.html" title="degradations of optical images caused in imaging instruments">optical aberrations</a>.</p>
+<p>The following equation allows one to calculate the <a href="dioptric_power.html" title="the inverse of the focal length">dioptric power</a> and thus the focal length of <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lens</a> made of a <a href="optical_materials.html" title="materials used for optical components">material</a> with <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> <span class="eqn_il"><i>n</i></span> and with curvature radii <span class="eqn_il"><i>R</i><sub>1</sub></span> and <span class="eqn_il"><i>R</i><sub>2</sub></span> on the two surfaces:</p>
+<div class="eqn"><img src="eqn/f_lens.gif" width="218" height="50" alt="focal length of a lens"></div>
+<p>The curvature radii are taken as positive values for convex surfaces and negative for concave surfaces.
+Positive results are obtained for focusing lenses, negative results for defocusing lenses.
+The last term is relevant only for thick lenses with substantial curvature on both sides.
+The formula delivers the focal length within the <a href="paraxial_approximation.html" title="a frequently used approximation, essentially assuming small angular deviations of the propagation directions from some beam axis">paraxial approximation</a>, not considering <a href="spherical_aberrations.html" title="optical aberrations resulting from spherical optical surfaces">spherical aberrations</a>, for example.</p>
+<p>The equation holds for <a href="paraxial_approximation.html" title="a frequently used approximation, essentially assuming small angular deviations of the propagation directions from some beam axis">paraxial</a> rays, not too far from the symmetry axis.</p>
+<form id="calculate_f_of_lens" class="calculatorform">
+<h2>Calculator for Focal Length of a Lens</h2>
+<table>
+<tr>
+<td>Refractive index:</td><td></td><td></td>
+<td><input name="n" value="" class="cf_calculate_f_of_lens"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Radius 1:</td><td></td><td></td>
+<td><input name="R1" value="" class="cf_calculate_f_of_lens"></td>
+<td></td><td>(0 = no curvature)</td>
+</tr>
+<tr>
+<td>Radius 2:</td><td></td><td></td>
+<td><input name="R2" value="" class="cf_calculate_f_of_lens"></td>
+<td></td><td>(0 = no curvature)</td>
+</tr>
+<tr>
+<td>Thickness:</td><td></td><td></td>
+<td><input name="d" value="" class="cf_calculate_f_of_lens"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Focal length:</td><td></td><td></td>
+<td><input name="f_lens" value="" class="cf_calculate_f_of_lens"></td>
+<td><span class="calcbutton" id="calc_f_lens">calc</span></td><td></td>
+</tr>
+</table>
+<p class="comment">Enter input values with units, where appropriate. After you have modified some inputs, click the "calc" button to recalculate the output.</p>
+<noscript>
+<p style="color:red">Attention: The buttons do not work, as Javascript is turned off in your browser!</p>
+</noscript>
+</form>
+<script type="text/javascript" src="calcform.js"></script>
+<script type="text/javascript" nonce="/2VBeZAMlWHKc50OJdJwmg==">
+funits = new Array();
+funits["n"] = "";
+funits["R1"] = "m";
+funits["R2"] = "m";
+funits["d"] = "m";
+funits["f_lens"] = "m";
+function calc_f_lens() {
+  $("input[name=f_lens]").val("???");
+  GetFieldValues("f_lens","calculate_f_of_lens");
+  f_lens = 1/((n-1)*(inv(R1)+inv(R2))-(n-1)*(n-1)*(d/n)*inv(R1*R2));
+  $("input[name=f_lens]").val(format_u(f_lens, "m"));
+ }
+$("input[name=n]").val("1.5");
+$("input[name=R1]").val("0");
+$("input[name=R2]").val("50 mm");
+$("input[name=d]").val("5 mm");
+calc_f_lens();
+$(document).ready(function() {
+  $("span#calc_f_lens").click(function() { calc_f_lens() })
+});
+</script>
+</div>
+<h2 class="togglediv">Focal Length of a Curved Mirror</h2>
+<div>
+<p>Curved <a href="mirrors.html" title="devices which reflect light">mirrors</a> are often used for focusing or defocusing light.
+For example, within <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonators</a> curved <a href="laser_mirrors.html" title="high-quality mirrors used in laser resonators and other optical setups">laser mirrors</a> with <a href="dielectric_coatings.html" title="thin-film coatings made of transparent dielectric materials, e.g. for laser mirrors or anti-reflection coatings">dielectric coatings</a> are more commonly used than lenses, mainly because they introduce lower losses.</p>
+<p>A mirror with a curvature radius <span class="eqn_il"><i>R</i></span> of the surface has a focal length <span class="eqn_il"><i>f</i>&thinsp;=&thinsp;<i>R</i>&thinsp;/&thinsp;2</span>, if the beam axis is normal to the mirror surface.
+(We take positive signs for concave curvatures and focusing mirrors.)
+If there is some non-zero angle <span class="eqn_il"><span class="greek">&theta;</span></span> between the beam axis and the normal direction, the focal length is <span class="eqn_il"><i>f</i><sub>tan</sub>&thinsp;=&thinsp;(<i>R</i>&thinsp;/&thinsp;2)&thinsp;&middot;&thinsp;cos&thinsp;<span class="greek">&theta;</span></span> in the tangential direction (i.e., within the plane of incidence) and <span class="eqn_il"><i>f</i><sub>sag</sub>&thinsp;=&thinsp;(<i>R</i>&thinsp;/&thinsp;2)&thinsp;/&thinsp;cos&thinsp;<span class="greek">&theta;</span></span> in the sagittal direction.</p>
+<form id="calculate_f_mirror" class="calculatorform">
+<h2>Calculator for Focal Length of a Curved Mirror</h2>
+<table>
+<tr>
+<td>Radius of curvature:</td><td></td><td></td>
+<td><input name="R" value="" class="cf_calculate_f_mirror"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Angle of incidence:</td><td></td><td></td>
+<td><input name="theta" value="" class="cf_calculate_f_mirror"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Focal length:</td><td></td><td></td>
+<td><input name="f_t" value="" class="cf_calculate_f_mirror"></td>
+<td><span class="calcbutton" id="calc_f_t">calc</span></td><td>(tangential)</td>
+</tr>
+<tr>
+<td></td><td></td><td></td>
+<td><input name="f_s" value="" class="cf_calculate_f_mirror"></td>
+<td><span class="calcbutton" id="calc_f_s">calc</span></td><td>(sagittal)</td>
+</tr>
+</table>
+<p class="comment">Enter input values with units, where appropriate. After you have modified some values, click a "calc" button to recalculate the field left of it.</p>
+<noscript>
+<p style="color:red">Attention: The buttons do not work, as Javascript is turned off in your browser!</p>
+</noscript>
+</form>
+<script type="text/javascript" nonce="/2VBeZAMlWHKc50OJdJwmg==">
+funits["R"] = "m";
+funits["theta"] = "deg";
+funits["f_t"] = "m";
+function calc_f_t() {
+  $("input[name=f_t]").val("???");
+  GetFieldValues("f_t","calculate_f_mirror");
+  f_t = -(R/2)*Math.cos(theta*pi/180);
+  $("input[name=f_t]").val(format_u(f_t, "m"));
+ }
+funits["f_s"] = "m";
+function calc_f_s() {
+  $("input[name=f_s]").val("???");
+  GetFieldValues("f_s","calculate_f_mirror");
+  f_s = -(R/2)/Math.cos(theta*pi/180);
+  $("input[name=f_s]").val(format_u(f_s, "m"));
+ }
+$("input[name=R]").val("50 mm");
+$("input[name=theta]").val("20 deg");
+calc_f_t();
+calc_f_s();
+$(document).ready(function() {
+  $("span#calc_f_t").click(function() { calc_f_t() })
+  $("span#calc_f_s").click(function() { calc_f_s() })
+});
+</script>
+<p>Curved <a href="laser_mirrors.html" title="high-quality mirrors used in laser resonators and other optical setups">laser mirrors</a> usually have a curvature radius somewhere between 10&nbsp;mm and 5&nbsp;m.
+The fabrication of <a href="dielectric_mirrors.html" title="mirrors consisting of multiple thin layers of different transparent optical materials">dielectric mirror</a> coatings can be more difficult for very strongly curved <a href="mirror_substrates.html" title="substrates on which coatings for laser mirrors can be deposited">mirror substrates</a>, but with refined techniques it is possible to reach focal lengths of only a few millimeters, as required for some miniature lasers.</p>
+</div>
+<h2 class="togglediv">Focal Length of an Extended Optical System</h2>
+<div>
+<aside class="callout red">It is not obvious how to define the focal length of an extended system &ndash; there are different possibilities!</aside>
+<p>For an optical system, which may consist of multiple lenses and other optical elements, the above definition of the focal length cannot be used, as it is not clear a priori for an extended system where to measure the distance to the focus: from the entrance into the optical system, from the exit, the middle, or some other position?
+In principle, an arbitrary definition of a reference point (e.g. the entrance or the middle) could be used, but that would in general mean that some common rules can not be applied, which e.g. hold for the radius of the <a href="beam_waist.html" title="location with minimum beam radius">beam waist</a> at a focus behind some lens with a given focal length (see below), or the possible <a href="magnification.html" title="the enlargements of images">magnification</a> of a <a href="telescopes.html" title="optical instruments for viewing distant objects, or sometimes more generally afocal systems">telescope</a> containing that optical system.</p>
+<p>A common (but not universally used) approach for the definition of focal lengths of extended systems is based on <a href="geometrical_optics.html" title="a concept of optics which is based on the propagation of light rays, ignoring wave properties of light">geometrical optics</a>.
+For finding the <em>front</em> <a href="focal_points_and_focal_planes.html" title="points to which parallel input rays are concentrated by an optical system, and the planes going through those points"><em>focal point</em></a>, one calculates rays which are horizontal on the back side (see Figure&nbsp;2), using the <a href="paraxial_approximation.html" title="a frequently used approximation, essentially assuming small angular deviations of the propagation directions from some beam axis">paraxial approximation</a>.
+The optical system is considered as a &ldquo;black box&rdquo;, where one does not care about the actual ray paths; instead, one works with internal rays which are extrapolated from the outer rays.
+Based on those extrapolated rays, one can define the <em>front</em> <a href="principal_points_and_principal_planes.html" title="planes from which rays appear to be deflected in an optical system according to paraxial optics, and the intersections of those planes with the optical axis"><em>principal plane</em></a> (or <em>first principal plane</em>).
+The <em>front focal length</em> is then the distance between the front focal point (in the front <a href="focal_points_and_focal_planes.html" title="points to which parallel input rays are concentrated by an optical system, and the planes going through those points">focal plane</a>) and the front <a href="principal_points_and_principal_planes.html" title="planes from which rays appear to be deflected in an optical system according to paraxial optics, and the intersections of those planes with the optical axis">principal plane</a> (see Figure&nbsp;2).
+Some authors define the focal length to be negative in the situation of Figure&nbsp;2, because the focal point is located <em>before</em> the front principal plane; others take the absolute value.</p>
+<figure>
+<img src="img/front_focus.png" alt="front focal length">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+The front focal point is related to parallel rays on the back side (= output side). The optical input is considered to be on the left side. The ray path within the device is only extrapolated from the outer ray path.
+</figcaption>
+</figure>
+<p>For a defocusing system, the front focal plane can be located on the output side; it contains a virtual focal point.
+Again, the focal length is the distance between principal plane and focal plane.</p>
+<p>Similarly, one can define the <em>back focal plane</em> (or <em>second focal plane</em>) and <em>back principal plane</em> (or <em>second principal plane</em>), where horizontal rays occur on the left side, while on the right side one has converging rays for a focusing system and diverging rays for a defocusing system.
+If the <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> is the same on the input and output side (e.g. &approx;1 for air), the front focal length and back focal length are identical (apart from possible sign differences used by some authors) and can thus simply called <em>the</em> focal length.
+The two principal planes, however, generally do not coincide for thick lenses, and they can even lie outside a lens.</p>
+<p>The explained definition delivers a focal length which can also be used in equations for the size of the focus (see below), for example.</p>
+<p>Note that the locations of the left and right edges of the optical system (e.g. positions of outer lens surfaces, <a href="optical_windows.html" title="flat transparent plates with optical quality, used for protection against the environment">optical windows</a> etc.) or its housing are not relevant for those definitions.</p>
+<p>Different sign conventions for focal lengths are used in the literature.
+For example, one may have a negative front focal length if the front focal point lies before the front principal plane.
+Obviously, any equations involving focal lengths should be used with the assumed sign conventions.</p>
+<p>See also the article on <a href="principal_points_and_principal_planes.html" title="planes from which rays appear to be deflected in an optical system according to paraxial optics, and the intersections of those planes with the optical axis">principal planes</a>.</p>
+</div>
+<h2 class="togglediv">Focal Distances</h2>
+<div>
+<p>In contrast to focal lengths, <a href="focal_distance.html" title="the distance between an objective and its focal point"><em>focal distances</em></a> are related not to the <a href="principal_points_and_principal_planes.html" title="planes from which rays appear to be deflected in an optical system according to paraxial optics, and the intersections of those planes with the optical axis">principal planes</a> but rather to the vertex points of lenses (not caring about a housing, which may be further extended).
+The front focal distance is thus the distance between front focal point and the entrance surface of the optics, while the back focal distance is the distance between the back surface and the back focal point.</p>
+<aside class="callout red">Focal distances are sometimes confused with focal lengths!</aside>
+<p>Unfortunately, the terms are also used differently by other authors.
+For example, it happens that a focal distance is assumed to be the same as a focal length.
+Therefore, some product catalogs specify focal lengths, which should actually be called focal distances, and in addition the <em>effective focal length</em>.</p>
+<p>The focal distance should also not be confused with the <a href="working_distance.html" title="the distance between an objective and the object">working distance</a>, which is the distance between a specimen and the lens housing.
+Note that a specimen is not necessarily placed in the focal plane, e.g. when the input light to an objective is not <a href="collimated_beams.html" title="laser beams with weak divergence">collimated</a>.</p>
+</div>
+<h2 class="togglediv">Effective Focal Length of a Photographic Objective</h2>
+<div>
+<p>Considerable confusion arises from the fact that in the context of <a href="photo_cameras.html" title="optical instruments for taking photographic images">photo cameras</a> the term <em>effective focal length</em> is also used with a completely different meaning, as explained in the following.</p>
+<p>The angle of view of the <a href="cameras.html" title="optical instruments for recording still or moving images">camera</a> is determined by the ratio of the image size on the film and the focal length.
+Film-based cameras have for a long time mostly used 35-mm film (also called 135 film according to ISO Standard 1007), where the image size on the film is typically 36&nbsp;mm&thinsp;&times;&thinsp;24&nbsp;mm.
+(The width of the film spool is 35&nbsp;mm, somewhat larger than 24&nbsp;mm, as the picture does not extend to the edges of the spool.)
+A standard objective then has a focal length of 50&nbsp;mm.
+However, modern digital cameras (particularly the more compact ones) often contain <a href="image_sensors.html" title="optoelectronic sensors which can be used for imaging">image sensors</a> which are smaller than 36&nbsp;mm&thinsp;&times;&thinsp;24&nbsp;mm, so that an objective lens with a correspondingly smaller focal length (e.g. 32&nbsp;mm instead of 50&nbsp;mm) is required for obtaining the same <a href="field_of_view.html" title="the angular extent of the field which can be observed with an optical instruments or the eye">field of view</a>.
+As many photographers are still used to the previously valid relation between focal length and angle of view, it has become common to specify the <em>effective focal length</em> of an objective of a digital camera as that focal length which would give the same angle of view in combination with ordinary 35-mm film.
+For example, an objective with a true focal length of 32&nbsp;mm may then be said to have an effective focal length of 50&nbsp;mm and thus function as a standard objective, rather than e.g. a macro or tele objective.</p>
+<p>It can be expected that this type of conversion will be abandoned as 35-mm film becomes less and less common.</p>
+</div>
+<h2 class="togglediv">Optical Systems with an Adjustable Focal Length</h2>
+<div>
+<p>For some applications, in particular for focusing of <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a> systems, it is essential than the focal length of an optical system can be fine adjusted.
+The following physical principles can be used:</p>
+<ul>
+<li>If a lens is made of deformable material, applying some mechanical pressure can alter its shape, and this can change the focal length.
+This principle is used in the eye's lens.
+The focal length is somewhat reduced for focusing on nearby objects.</li>
+<li>When an optical system contains multiple optical elements (e.g. lenses), the focal length may be tuned by adjusting the relative distances between the optical elements.
+This principle is used e.g. in photographic zoom objectives.</li>
+</ul>
+</div>
+<h2 class="togglediv">Wavelength Dependence of the Focal Length; Using Curved Mirrors</h2>
+<div>
+<p>Ordinary lenses, working on the basis of <a href="refraction.html" title="the change of the propagation direction when a wave comes from one medium into another one">refraction</a>, have a focal length which is slightly wavelength-dependent due to the wavelength dependence of the <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> (&ndash;> <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>).
+This effect leads to <a href="chromatic_aberrations.html" title="image distortions caused by wavelength-dependent optical effects"><em>chromatic aberrations</em></a> of imaging systems and similar problems in other applications where an optical system is used for a wide range of optical wavelengths.
+Lens combinations (e.g., objectives for photographic cameras) can be designed such that chromatic aberrations are minimized.
+Most common is the use of <a href="achromatic_optics.html" title="optical devices or setups with minimized chromatic aberrations"><em>achromatic doublets</em></a>, i.e., lenses consisting of two different <a href="optical_glasses.html" title="glasses of high quality, made for optical applications">glass</a> materials chosen such that the overall chromatic aberrations are largely canceled.</p>
+<p>One may eliminate <a href="chromatic_aberrations.html" title="image distortions caused by wavelength-dependent optical effects">chromatic aberrations</a> altogether by using optical systems with mirrors only.
+A curved mirror with radius of curvature <span class="eqn_il"><i>R</i></span> has a focal length <span class="eqn_il"><i>f</i>&thinsp;=&thinsp;<i>R</i>&thinsp;/&thinsp;2</span> (for normal incidence), determined only by the geometry and thus independent of the wavelength.
+On the other hand, for non-normal incidence the focal length in the tangential direction is decreased by the cosine of the angle of incidence, and increased by the inverse cosine of that angle in the sagittal direction.
+Therefore, such mirrors can introduce <a href="astigmatism.html" title="a kind of optical aberrations; alternatively, a defect of optical lenses or a property of laser beams">astigmatism</a>.</p>
+</div>
+<h2 class="togglediv">Dioptric Power</h2>
+<div>
+<p>The <em>dioptric power</em> (also called <em>focusing power</em>) of a lens is defined as the inverse of the effective focal length (which is the same is the front and back focal length if the median on both sides of the optics is the same).
+This means that a strongly focusing lens has a small focal length, but a large dioptric power.
+For prescription glasses, it is common the specify the dioptric power, whereas the focal length is specified for standard <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lenses</a>, <a href="microscope_objectives.html" title="the optical component of a microscope which is next to the observed object">microscope objectives</a>, and <a href="photographic_objectives.html" title="objective lenses used for photography">photographic objectives</a>.</p>
+</div>
+<h2 class="togglediv">Focusing of Divergent Beams</h2>
+<div>
+<figure class="right" style="width:212px;">
+<img src="img/lens_equation_fig.png" alt="illustration for lens equation">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Illustration of the lens equation.
+</figcaption>
+</figure>
+<p>If a divergent (rather than collimated) beam hits a focusing lens, the distance <span class="eqn_il"><i>b</i></span> from the lens to the focus becomes larger than <span class="eqn_il"><i>f</i></span> (Figure&nbsp;2).
+The <em>lens equation</em> states that</p>
+<div class="eqn"><img src="eqn/lens_equation.gif" width="69" height="41" alt="lens equation"></div>
+<p>where <span class="eqn_il"><i>a</i></span> is the distance from the original focus to the lens.
+This shows that <span class="eqn_il"><i>b&thinsp;&asymp;&thinsp;f</i></span> if <span class="eqn_il"><i>a&thinsp;&gt;&gt;&thinsp;f</i></span>, but <span class="eqn_il"><i>b&thinsp;&gt;&thinsp;f</i></span> otherwise.
+That relation can be intuitively understood: a focusing power <span class="eqn_il">1&thinsp;/&thinsp;<i>a</i></span> would be required to collimate the incident beam (i.e. to remove its <a href="beam_divergence.html" title="a measure for how fast a laser beam expands far from its focus">beam divergence</a>), so that only a focusing power <span class="eqn_il">1&thinsp;/&thinsp;<i>f&thinsp;&minus;</i>&thinsp;1&thinsp;/&thinsp;<i>a</i></span> is left for focusing.</p>
+<p>If <span class="eqn_il"><i>a&thinsp;&le;&thinsp;f</i></span>, the equation cannot be fulfilled: the lens can then not focus the beam.</p>
+<form id="calculate_waist" class="calculatorform">
+<h2>Calculator for Beam Focusing</h2>
+<table>
+<tr>
+<td>a:</td><td></td><td></td>
+<td><input name="a" value="" class="cf_calculate_waist"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Focal length:</td><td></td><td></td>
+<td><input name="f_l" value="" class="cf_calculate_waist"></td>
+<td><span class="calcbutton" id="calc_f_l">calc</span></td><td></td>
+</tr>
+<tr>
+<td>b:</td><td></td><td></td>
+<td><input name="b" value="" class="cf_calculate_waist"></td>
+<td><span class="calcbutton" id="calc_b">calc</span></td><td></td>
+</tr>
+</table>
+<p class="comment">Enter input values with units, where appropriate. After you have modified some values, click a "calc" button to recalculate the field left of it.</p>
+<noscript>
+<p style="color:red">Attention: The buttons do not work, as Javascript is turned off in your browser!</p>
+</noscript>
+</form>
+<script type="text/javascript" nonce="/2VBeZAMlWHKc50OJdJwmg==">
+funits["a"] = "m";
+funits["f_l"] = "m";
+function calc_f_l() {
+  $("input[name=f_l]").val("???");
+  GetFieldValues("f_l","calculate_waist");
+  f_l = 1/(1/a+1/b);
+  $("input[name=f_l]").val(format_u(f_l, "m"));
+ }
+funits["b"] = "m";
+function calc_b() {
+  $("input[name=b]").val("???");
+  GetFieldValues("b","calculate_waist");
+  b = 1/(1/f_l-1/a);
+  $("input[name=b]").val(format_u(b, "m"));
+ }
+$("input[name=a]").val("2 m");
+$("input[name=f_l]").val("100 mm");
+calc_b();
+$(document).ready(function() {
+  $("span#calc_f_l").click(function() { calc_f_l() })
+  $("span#calc_b").click(function() { calc_b() })
+});
+</script>
+<p>Note that the lens equation applies for rays, assuming that the <a href="paraxial_approximation.html" title="a frequently used approximation, essentially assuming small angular deviations of the propagation directions from some beam axis">paraxial approximation</a> is valid, i.e., all angles relative to the beam axis remain small.</p>
+</div>
+<h2 class="togglediv">Achievable Beam Waist Radius</h2>
+<div>
+<p>If a <a href="collimated_beams.html" title="laser beams with weak divergence">collimated</a> <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beam</a> with <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a> <span class="eqn_il"><i>w</i><sub>0</sub></span> hits a focusing lens with focal length <span class="eqn_il"><i>f</i></span>, the beam radius of the <a href="beam_waist.html" title="location with minimum beam radius">beam waist</a> (focus) after the lens can be calculated with the equation</p>
+<div class="eqn"><img src="eqn/focus_size.gif" width="70" height="45" alt="beam radius of focus after a lens"></div>
+<p>where it is assumed that the beam radius at the focus is much smaller than the initial beam radius <span class="eqn_il"><i>w</i><sub>0</sub></span>.
+(This condition is violated for beams with a too small incident radius; the focus is then larger than according to the given equation.)
+Also, it is assumed that the beam radius is significantly larger than the wavelength <span class="eqn_il"><span class="greek">&lambda;</span></span>, so that the <a href="paraxial_approximation.html" title="a frequently used approximation, essentially assuming small angular deviations of the propagation directions from some beam axis">paraxial approximation</a> is valid.</p>
+<form id="calculate_waist_radius" class="calculatorform">
+<h2>Calculator for Beam Waist Radius</h2>
+<table>
+<tr>
+<td>Wavelength:</td><td></td><td></td>
+<td><input name="lambda" value="" class="cf_calculate_waist_radius"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Focal length:</td><td></td><td></td>
+<td><input name="f_m" value="" class="cf_calculate_waist_radius"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Initial beam radius:</td><td></td><td></td>
+<td><input name="w0" value="" class="cf_calculate_waist_radius"></td>
+<td></td><td>(collimated input beam)</td>
+</tr>
+<tr>
+<td>Beam quality factor:</td><td></td><td></td>
+<td><input name="M2" value="" class="cf_calculate_waist_radius"></td>
+<td></td><td>(1 for Gaussian beams)</td>
+</tr>
+<tr>
+<td>Waist radius:</td><td></td><td></td>
+<td><input name="w_f" value="" class="cf_calculate_waist_radius"></td>
+<td><span class="calcbutton" id="calc_w_f">calc</span></td><td></td>
+</tr>
+</table>
+<p class="comment">Enter input values with units, where appropriate. After you have modified some inputs, click the "calc" button to recalculate the output.</p>
+<noscript>
+<p style="color:red">Attention: The buttons do not work, as Javascript is turned off in your browser!</p>
+</noscript>
+</form>
+<script type="text/javascript" nonce="/2VBeZAMlWHKc50OJdJwmg==">
+funits["lambda"] = "m";
+funits["f_m"] = "m";
+funits["w0"] = "m";
+funits["M2"] = "";
+funits["w_f"] = "m";
+function calc_w_f() {
+  $("input[name=w_f]").val("???");
+  GetFieldValues("w_f","calculate_waist_radius");
+  w_f = M2*lambda*f_m/(Math.PI*w0);
+  $("input[name=w_f]").val(format_u(w_f, "m"));
+ }
+$("input[name=lambda]").val("1064 nm");
+$("input[name=f_m]").val("100 mm");
+$("input[name=w0]").val("500 µm");
+$("input[name=M2]").val("1");
+calc_w_f();
+$(document).ready(function() {
+  $("span#calc_w_f").click(function() { calc_w_f() })
+});
+</script>
+<p>The equation shows that what determines the minimum possible beam radius is not the focal length <span class="eqn_il"><i>f</i></span> alone, but rather the ratio of <span class="eqn_il"><i>f</i></span> to the radius of the open <a href="optical_apertures.html" title="structures which limit the propagation of light">aperture</a> of the lens, which sets a maximum to the input beam radius <span class="eqn_il"><i>w</i><sub>0</sub></span>.
+For a focusing or collimation lens, that ratio is essentially the <a href="numerical_aperture.html" title="sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber"><em>numerical aperture</em></a> of the lens.</p>
+<p>Whether this rule can also be applied to an extended optical system with focal length <span class="eqn_il"><i>f</i></span> depends on the applied definition of <span class="eqn_il"><i>f</i></span>.
+It is useful to specify an <em>effective focal length</em> which is valid for such relations.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="focal_length.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="focal_distance.html" title="the distance between an objective and its focal point">focal distance</a>, <a href="numerical_aperture.html" title="sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a>, <a href="optical_apertures.html" title="structures which limit the propagation of light">optical apertures</a>, <a href="principal_points_and_principal_planes.html" title="planes from which rays appear to be deflected in an optical system according to paraxial optics, and the intersections of those planes with the optical axis">principal points and principal planes</a>, <a href="beam_divergence.html" title="a measure for how fast a laser beam expands far from its focus">beam divergence</a>, <a href="chromatic_aberrations.html" title="image distortions caused by wavelength-dependent optical effects">chromatic aberrations</a>, <a href="optical_aberrations.html" title="degradations of optical images caused in imaging instruments">optical aberrations</a>, <a href="f_number.html" title="a measure for the open aperture of a photographic objective">f-number</a>, <a href="achromatic_optics.html" title="optical devices or setups with minimized chromatic aberrations">achromatic optics</a>, <a href="abcd_matrix.html" title="a 2-by-2 matrix describing the effect of an optical element on a laser beam">ABCD matrix</a>, <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lenses</a>, <a href="mirrors.html" title="devices which reflect light">mirrors</a><br>and other articles in the category <a href="categories.html#general_optics" title="other articles on general optics">general optics</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/focal_length.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Ffocal_length.html&text=RP+Photonics+Encyclopedia+-+focal+length%2C+focal+distance%2C+dioptric+power%2C+curved+mirror%2C+lens+equation%2C+microscope%2C+photographic+objective%2C+focus%2C+beam+radius" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Ffocal_length.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Ffocal_length.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/focal_length.html"&gt;<br>Article on Focal Length&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/focal_length.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/focal_length.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/focal_length.html<br>article on 'Focal Length' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Your Lab is Closed due to the Corona Virus Crisis?</h2>
+<p>Time to think how to best utilize your time!</p>
+<p>Here is a suggestion: <br> <b>Consider to start with physical modeling!</b></p>
+<ul>
+<li>Build models for your existing or planned lasers and amplifiers, resonators, etc.</li>
+<li>Utilize such models in order to <b>improve your qualitative and quantitative understanding</b>, solve problems, optimize device performance and <b>develop new ideas</b>.</li>
+<li>Power up your home office instead of wasting your time!</li>
+<li>When getting back to the lab, restart with fresh plans and full power.</li>
+</ul>
+<img src="./img/rp_photonics.png" alt="RP Photonics" style="margin-top:20px; width:225px;">
+<p>offers powerful <a href="./software.html?banner=lab_closed">simulation &amp; design software</a>, e.g. for <a href="./fiberpower.html?banner=lab_closed">active and passive fiber devices</a>, <a href="./resonator.html?banner=lab_closed">laser resonators</a> and <a href="./coating.html?banner=lab_closed">thin-film coatings</a>!</p>
+<p>Getting helpful <a href="./software_support.html?banner=lab_closed">support</a> from RP also benefits your projects.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="/2VBeZAMlWHKc50OJdJwmg==">shownbanner = "lab closed";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>How PhD Students Should Get Supported by Supervisors</h2>
+<p>A recent <a href="./spotlight_2014_12_17.html?banner=supervisors">article in the Photonics Spotlight</a> discusses the responsibilities of supervisors (professors and senior research assistance).</p>
+<p>Some key statements:</p>
+<ul>
+<li>Even if PhD students can carry out most of the work in a research project, vital inputs are needed from supervisors particularly in the planning phase and when a crisis occurs.</li>
+<li>A helpful supervisor does not only benefit the supported students, but contributes to the effectiveness of the whole research team.</li>
+<li>If serious engagement were the condition of authorship of supervisors, supervisors would be more likely to do their job.</li>
+<li>A substantial risk for science fraud arises only in a serious crisis &ndash; and is in that case strongly dependent on how the supervisor performs!</li>
+</ul>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="/2VBeZAMlWHKc50OJdJwmg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/focal_length.html"
+    },
+    "headline": "Focal Length",
+    "image": "https://www.rp-photonics.com/previews/focal_length.png",
+    "datePublished": "2007-12-09",
+    "dateModified": "2020-06-25",
+    "description": "The focal length of an optical system is a measure of how strongly it focuses or defocuses light.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter F",
+      "item": "https://www.rp-photonics.com/encyclopedia_f.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "focal length",
+      "item": "https://www.rp-photonics.com/focal_length.html"
+    }]}
+}
+</script>
+</body>
+</html>

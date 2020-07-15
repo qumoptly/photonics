@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-SAsTQn0FjUDFq8U5r/SIeQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - frequency tripling, third-harmonic generation, nonlinear frequency conversion, crystal lifetime, degradation</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/frequency_tripling.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Frequency tripling is the phenomenon that an input laser beam generates a beam with three times the optical frequency. It usually involves frequency doubling with subsequent sum frequency generation.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="frequency tripling, third-harmonic generation, nonlinear frequency conversion, crystal lifetime, degradation">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Frequency Tripling">
+<meta property="og:description" content="Frequency tripling is the phenomenon that an input laser beam generates a beam with three times the optical frequency. It usually involves frequency doubling with subsequent sum frequency generation.">
+<meta property="og:url" content="https://www.rp-photonics.com/frequency_tripling.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/frequency_tripling.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Frequency tripling is the phenomenon that an input laser beam generates a beam with three times the optical frequency. It usually involves frequency doubling with subsequent sum frequency generation.">
+<meta name="twitter:title" content="Frequency Tripling">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/frequency_tripling.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="SAsTQn0FjUDFq8U5r/SIeQ==">
+page="frequency_tripling.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/nkt_photonics.html"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="SAsTQn0FjUDFq8U5r/SIeQ==">shownsponsors="NKT Photonics,TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_f.html">letter F</a> &gt; <a href="frequency_tripling.html">frequency tripling</a></p>
+<h1>Frequency Tripling</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_frequency_tripling_devices.html?s=vbox">24 suppliers for frequency tripling devices</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.covesion.com/" data-supplier="Covesion" data-location="product-enc" data-keyword="frequency tripling devices" rel="nofollow" class="bg externallink"><img src="./bg/logos/covesion.png" alt="Covesion" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.nktphotonics.com/lasers-fibers/product/onefive-origami-xp-high-energy-femtosecond-laser/" data-supplier="NKT Photonics" data-location="product-enc" data-keyword="frequency tripling devices" rel="nofollow" class="bg externallink"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="http://www.ape-berlin.de/en/harmonic-generation/frequency-tripling-with-third-harmonic-generation/" data-supplier="APE" data-location="product-enc" data-keyword="frequency tripling devices" rel="nofollow" class="bg externallink"><img src="./bg/logos/ape.png" alt="APE" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.hcphotonics.com/ppln-mixers" data-supplier="HC Photonics" data-location="product-enc" data-keyword="frequency tripling devices" rel="nofollow" class="bg externallink"><img src="./bg/logos/hc_photonics.png" alt="HC Photonics" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.eksmaoptics.com/femtoline-components/femtoline-nonlinear-laser-crystals/femtokits-for-third-harmonic-generation-of-ti-sapphire-laser/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="frequency tripling devices" rel="nofollow" class="bg externallink"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_frequency_tripling_devices.html?s=vbox">List of suppliers for<br>frequency tripling devices</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="advicebox">
+<p>Ask <a href="index.html">RP Photonics</a> for advice on the design of nonlinear frequency conversion devices.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: the phenomenon that an input laser beam generates a beam with three times the optical frequency</p>
+<p>Alternative term: third-harmonic generation</p>
+<p>More general terms: <a href="nonlinear_frequency_conversion.html" title="the conversion of input light to light of other frequencies, using optical nonlinearities">nonlinear frequency conversion</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Frequenzverdreifachung</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#nonlinear_optics" title="other articles on nonlinear optics">nonlinear optics</a></p>
+<p><a href="encyclopedia_cite.html?article=frequency%20tripling">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Frequency tripling is a process of <a href="nonlinear_frequency_conversion.html" title="the conversion of input light to light of other frequencies, using optical nonlinearities">nonlinear frequency conversion</a> where the resulting <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequency</a> is three times that of the input laser beam.
+In principle, this can be achieved with a <span class="eqn_il"><span class="greek">&chi;</span><sup>(3)</sup></span> <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearity</a> for direct third-harmonic generation [12&ndash;14], but this is difficult due to the small <span class="eqn_il"><span class="greek">&chi;</span><sup>(3)</sup></span> nonlinearity of optical media and <a href="phase_matching.html" title="a group of techniques for achieving efficient nonlinear interactions in a medium">phase-matching</a> constraints (except for tripling in gases).
+Therefore, frequency tripling is usually realized as a cascaded process, beginning with <a href="frequency_doubling.html" title="the phenomenon that an input wave in a nonlinear material can generate a wave with twice the optical frequency">frequency doubling</a> of the input beam and subsequent <a href="sum_and_difference_frequency_generation.html" title="nonlinear processes generating beams with the sum or difference of the frequencies of the input beams">sum frequency generation</a> of both waves, with both processes being based on <a href="nonlinear_crystal_materials.html" title="crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal materials</a> with a <span class="eqn_il"><span class="greek">&chi;</span><sup>(2)</sup></span> nonlinearity.</p>
+<figure>
+<img src="img/frequency_tripling.png" alt="frequency doubling">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+A typical configuration for frequency tripling: an <a href="infrared_light.html" title="invisible light with wavelengths roughly between 750&thinsp;&thinsp;nm and 1&thinsp;&thinsp;mm">infrared</a> input beam at 1064&nbsp;nm generates a green 532-nm wave, and these two mix in a second crystal to obtain 355-nm light.
+</figcaption>
+</figure>
+<p>The main application of frequency tripling is the generation of <a href="ultraviolet_light.html" title="invisible light with wavelengths shorter than &asymp;&thinsp;400&thinsp;&thinsp;nm">ultraviolet light</a>.
+Most common is the generation of 355-nm light by frequency tripling of a laser beam with 1064&nbsp;nm, as obtained from a <a href="yag_lasers.html" title="lasers based on YAG (yttrium aluminum garnet) crystals, usually Nd:YAG or Yb:YAG">Nd:YAG</a> or <a href="vanadate_lasers.html" title="lasers based on rare-earth-doped yttrium, gadolinium or lutetium vanadate crystals, usually Nd:YVO<sub>4</sub>">Nd:YVO<sub>4</sub> laser</a>.
+A common approach is to use two LBO (lithium triborate) crystals, or an LBO and an BBO crystal, the first being phase-matched for second-harmonic generation and the second for sum frequency generation.
+It is easy to make this process efficient when using pulses from a <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched</a> or <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked laser</a>, but also possible in <a href="continuous_wave_operation.html" title="operation mode of a laser with continuous light emission">continuous-wave operation</a> e.g. with <a href="intracavity_frequency_doubling.html" title="frequency doubling with a nonlinear crystal within the laser resonator">intracavity frequency doubling</a> and resonant sum frequency generation.</p>
+<p>It is also possible to generate <a href="blue_lasers.html" title="lasers emitting blue light">blue</a> light by frequency tripling the output of a 1.3-&mu;m <a href="neodymium_doped_gain_media.html" title="laser gain media containing laser-active neodymium ions">neodymium</a> laser.</p>
+<h2 class="togglediv">Power Conversion Efficiency</h2>
+<div>
+<p>Theoretically, the total power conversion efficiency of the frequency tripling process could be close to 100&thinsp;&#37; in a single pass through the crystals.
+For that, the frequency doubler should have a conversion efficiency of 2/3, so that the second-harmonic wave has twice the power of the remaining fundamental wave, and both have equal <a href="photons.html" title="quanta of light energy">photon</a> numbers.
+In practice, the efficiency of the frequency doubler is normally somewhat lower (often around 40 to 50&thinsp;&#37;), and in particular the sum frequency mixer is far from 100&thinsp;&#37; efficient.
+The latter problem can result from many effects, such as too low optical intensities, design limitations enforced by <a href="laser_induced_damage.html" title="damage of optical components induced by laser radiation">optical damage</a>, effects of <a href="spatial_walk_off.html" title="the phenomenon that the intensity distribution of a beam in an anisotropic crystal drifts away from the direction of the wave vector">spatial walk-off</a>, mismatch of <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a> and/or temporal walk-off, etc.
+Tentatively, the conversion works best for high peak powers in not too short pulses, and when the <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a> is high and the optical <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a> not too high.
+Overall conversion efficiencies from infrared to ultraviolet can then be of the order of 30 to 40&#37;.</p>
+<p>With numerical modeling, the whole frequency tripling process can be simulated with fairly high accuracy and reliability of the results.</p>
+</div>
+<h2 class="togglediv">Degradation of Nonlinear Crystals</h2>
+<div>
+<p>For efficient single-pass third-harmonic generation, the nonlinear crystals need to be operated with fairly high optical intensities.
+For the sum-frequency mixer crystal, this is often a problem: the intense <a href="ultraviolet_light.html" title="invisible light with wavelengths shorter than &asymp;&thinsp;400&thinsp;&thinsp;nm">ultraviolet light</a> can lead to gradual degradation of the crystal material and an <a href="anti_reflection_coatings.html" title="optical thin-film coatings for reducing reflections from surfaces">anti-reflection coating</a> on the exit surface, even for operation well below the threshold for instant <a href="laser_induced_damage.html" title="damage of optical components induced by laser radiation">laser-induced damage</a>.
+Under such conditions, nonlinear crystals can become consumables, i.e., system parts with quite limited lifetime, which need to be replaced relatively often.
+As normally only the volume of the beam is affected, one may often somewhat shift the crystal in order to use another region which has not yet been degraded.
+Such movements may also be done with some automatic crystal shifter; this method is sometimes called <em>indexing</em> of the crystal.
+Under good conditions, one may reach several hundred hours of operation on one spot of an LBO crystal and use dozens of spots for obtaining an overall lifetime of many thousand hours with a single crystal.</p>
+<p>The achieved crystal lifetime can depend on various factors, including the crystal material type, the material quality, the peak and average intensity levels, details of anti-reflection coatings, other pulse parameters such as the <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a>, and also contaminants in the ambient air.
+For example, hydrocarbons from some oils at mechanical parts may be chemically altered by the ultraviolet light and may lead to the deposition of absorbing material on the crystal and on other optics, e.g. a <a href="collimated_beams.html" title="laser beams with weak divergence">collimation</a> <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lens</a>.</p>
+<p>Note that higher UV output powers do not necessarily decrease the crystal lifetime, if the mode areas in the crystal are increased in proportion to the power level.
+The operational intensities are then not higher than in lower-power devices.
+One may be tempted, however, to use higher powers for applying higher intensities with the goal of further increasing the power conversion efficiency.
+This can then reduce the crystal lifetime.</p>
+<p>Substantial improvements in crystal lifetime for a given output power level are possible by using an <a href="enhancement_cavities.html" title="optical cavities for exploiting the resonant enhancement of the power of circulating light">enhancement cavity</a> around the third-harmonic crystal, i.e., by doing resonant frequency conversion.
+This is because the single-pass conversion efficiency can then be lower, as the non-converted light is &ldquo;recycled&rdquo;.
+One may then work without an automatic crystal shifter.
+However, resonant enhancement is not always possible (e.g., for laser sources with insufficient <a href="coherence.html" title="a fixed phase relationship between the electric field values at different locations or at different times">coherence</a> properties) and introduces additional complications.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_frequency_tripling_devices.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 24 suppliers for frequency tripling devices. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.nktphotonics.com/" data-supplier="NKT Photonics" data-location="product-enc" data-keyword="frequency tripling devices" rel="nofollow" class="bg externallink" title="Visit the website of NKT Photonics"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo"></a><a href="https://www.nktphotonics.com/lasers-fibers/product/onefive-origami-xp-high-energy-femtosecond-laser/" data-supplier="NKT Photonics" data-location="product-enc" data-keyword="frequency tripling devices" rel="nofollow" class="bg externallink" title="Visit the website of NKT Photonics"><img src="./bg/products/nkt_photonics/frequency_tripling_devices.jpg" alt="frequency tripling devices" class="product"></a><h3><a href="./bg/profiles/nkt_photonics.html" title="See the profile of NKT Photonics">NKT Photonics</a></h3><p>Do you need frequency tripling? For our <a href="https://www.nktphotonics.com/lasers-fibers/product/onefive-origami-xp-high-energy-femtosecond-laser/" data-supplier="NKT Photonics" data-location="product-enc" data-keyword="frequency tripling devices" rel="nofollow" class="externallink bg">Origami XP</a> high power ultrafast laser, we offer a third harmonic module that converts 1030&nbsp;nm to 343&nbsp;nm. The module comes in a two port or three port variants depending on the need for selection between 1030&nbsp;nm, 525&nbsp;nm and 343&nbsp;nm.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.eksmaoptics.com/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="frequency tripling devices" rel="nofollow" class="bg externallink" title="Visit the website of EKSMA OPTICS"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a><h3><a href="./bg/profiles/eksma_optics.html" title="See the profile of EKSMA OPTICS">EKSMA OPTICS</a></h3><p>We offer <a href="https://www.eksmaoptics.com/femtoline-components/femtoline-nonlinear-laser-crystals/femtokits-for-third-harmonic-generation-of-ti-sapphire-laser/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="frequency tripling devices" rel="nofollow" class="externallink bg">Femtokits</a> &ndash; complete solutions for efficient third harmonic generation with femtosecond Ti:sapphire lasers. Wide choice of standard BBO, LBO and DKDP nonlinear crystals for THG in <a href="https://www.eksmaoptics.com/nd-yag-laser-line-components/nd-yag-laser-line-crystals/harmonics-crystals/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="frequency tripling devices" rel="nofollow" class="externallink bg">Nd:YAG LaserLine</a> and <a href="https://www.eksmaoptics.com/femtoline-components/femtoline-nonlinear-laser-crystals/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="frequency tripling devices" rel="nofollow" class="externallink bg">FemtoLine</a> chapters.</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.ape-berlin.de/" data-supplier="APE" data-location="product-enc" data-keyword="frequency tripling devices" rel="nofollow" class="bg externallink" title="Visit the website of APE"><img src="./bg/logos/ape.png" alt="APE" class="supplierlogo"></a><a href="http://www.ape-berlin.de/en/harmonic-generation/frequency-tripling-with-third-harmonic-generation/" data-supplier="APE" data-location="product-enc" data-keyword="frequency tripling devices" rel="nofollow" class="bg externallink" title="Visit the website of APE"><img src="./bg/products/ape/frequency_tripling.jpg" alt="frequency tripling devices" class="product"></a><h3><a href="./bg/profiles/ape.html" title="See the profile of APE">APE</a></h3><p>As part of our HarmoniXX product line, the <a href="http://www.ape-berlin.de/en/harmonic-generation/frequency-tripling-with-third-harmonic-generation/" data-supplier="APE" data-location="product-enc" data-keyword="frequency tripling devices" rel="nofollow" class="externallink bg">HarmoniXX THG</a> is a frequency converter for tripling the frequency of ultra short-pulse lasers.</p><p>Unlike conventional triplers, the HarmoniXX THG requires less adjustment efforts, because no separation and recombination of the interacting beams is needed. This user-friendly feature has one common optical beam path for all interacting beams. It is implemented by means of a proprietary delay compensator and provides consistent spatial overlap for optimum efficiency.</p><p>For more details, see our <a href="http://www.ape-berlin.de/en/harmonic-generation/frequency-tripling-with-third-harmonic-generation/#1500043794885-e05f0280-1597" data-supplier="APE" data-location="product-enc" data-keyword="frequency tripling devices" rel="nofollow" class="externallink bg">specifications</a>.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.covesion.com/" data-supplier="Covesion" data-location="product-enc" data-keyword="frequency tripling devices" rel="nofollow" class="bg externallink" title="Visit the website of Covesion"><img src="./bg/logos/covesion.png" alt="Covesion" class="supplierlogo"></a><img src="./bg/products/covesion/frequency_tripling.jpg" alt="frequency tripling devices" class="product"><h3><a href="./bg/profiles/covesion.html" title="See the profile of Covesion">Covesion</a></h3><p>We offer magnesium-doped PPLN for Sum Frequency Generation (SFG) for cascaded THG from a 1550-nm SHG crystal, or from a fixed 1550-nm laser and a tunable Ti:sapphire (or similar) laser for tunable green generation.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.hcphotonics.com/" data-supplier="HC Photonics" data-location="product-enc" data-keyword="frequency tripling devices" rel="nofollow" class="bg externallink" title="Visit the website of HC Photonics"><img src="./bg/logos/hc_photonics.png" alt="HC Photonics" class="supplierlogo"></a><a href="https://www.hcphotonics.com/ppln-mixers" data-supplier="HC Photonics" data-location="product-enc" data-keyword="frequency tripling devices" rel="nofollow" class="bg externallink" title="Visit the website of HC Photonics"><img src="./bg/products/hc_photonics/frequency_tripling_devices.jpg" alt="frequency tripling devices" class="product"></a><h3><a href="./bg/profiles/hc_photonics.html" title="See the profile of HC Photonics">HC Photonics</a></h3><p>HC Photonics (HCP) offers both commercial off-the-shelf (COTS) and custom PPMgO:LN or PPMgO:LT based <a href="https://www.hcphotonics.com/ppln-mixers" data-supplier="HC Photonics" data-location="product-enc" data-keyword="frequency tripling devices" rel="nofollow" class="externallink bg">frequency tripling devices</a> for input wavelength ranging from 1064&nbsp;nm to 5000&nbsp;nm.</p><p>The product mix includes bare crystals and plug-and-play fibered mixers.  </p><p>A typical reference spec is &gt;30&nbsp;mW at 355&nbsp;nm from a fibered mixer requiring only 2.5&nbsp;W cw pump at 1064&nbsp;nm. Please contact us for solutions to meet your specific demands.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="frequency_tripling.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">G. H. C. New and J. F. Ward, &ldquo;Optical third-harmonic generation in gases&rdquo;, Phys. Rev. Lett. 19 (10), 556 (1967), <a href="https://doi.org/10.1103/PhysRevLett.19.556">doi:10.1103/PhysRevLett.19.556</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">W. Seka <i>et al.</i>, &ldquo;Demonstration of high efficiency third harmonic conversion of high power Nd:glass laser radiation&rdquo;, Opt. Commun. 34, 469 (1980), <a href="https://doi.org/10.1016/0030-4018(80)90419-8">doi:10.1016/0030-4018(80)90419-8</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">R. Craxton, &ldquo;High efficiency frequency tripling schemes for high-power Nd: Glass lasers&rdquo;, IEEE J. Quantum Electron. 17 (9), 1771 (1981), <a href="https://doi.org/10.1109/JQE.1981.1071318">doi:10.1109/JQE.1981.1071318</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">G. Manneberg, &ldquo;Phase-matched frequency tripling and phase conjugation in isotropic materials&rdquo;, J. Opt. Soc. Am. B 4 (11), 1790 (1987), <a href="https://doi.org/10.1364/JOSAB.4.001790">doi:10.1364/JOSAB.4.001790</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">A. Lago <i>et al.</i>, &ldquo;Coherent 70.9-nm radiation generated in neon by frequency tripling the fifth harmonic of a Nd:YAG laser&rdquo;, Opt. Lett. 13 (3), 221 (1988), <a href="https://doi.org/10.1364/OL.13.000221">doi:10.1364/OL.13.000221</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">R. Friedberg <i>et al.</i>, &ldquo;Optimizing third harmonic generation in gases&rdquo;, J. Phys. B: At. Mol. Opt. Phys. 24, 2883 (1991), <a href="https://doi.org/10.1088/0953-4075/24/12/011">doi:10.1088/0953-4075/24/12/011</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">R. Wu, &ldquo;High-efficiency and compact blue source: intracavity frequency tripling by using LBO and BBO without the influence of birefringence&rdquo;, Appl. Opt. 32 (6), 971 (1993), <a href="https://doi.org/10.1364/AO.32.000971">doi:10.1364/AO.32.000971</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">L. Goldberg <i>et al.</i>, &ldquo;Tunable UV generation at 286&nbsp;nm by frequency tripling of a high-power mode-locked semiconductor laser&rdquo;, Opt. Lett. 20 (15), 1640 (1995), <a href="https://doi.org/10.1364/OL.20.001640">doi:10.1364/OL.20.001640</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">D. Eimerl <i>et al.</i>, &ldquo;Multicrystal designs for efficient third-harmonic generation&rdquo;, Opt. Lett. 22 (16), 1208 (1997), <a href="https://doi.org/10.1364/OL.22.001208">doi:10.1364/OL.22.001208</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">J. Squier <i>et al.</i>, &ldquo;Third harmonic generation microscopy&rdquo;, Opt. Express 3 (9), 315 (1998), <a href="https://doi.org/10.1364/OE.3.000315">doi:10.1364/OE.3.000315</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">Z. Sun <i>et al.</i>, &ldquo;Generation of 4.3-W coherent blue light by frequency-tripling of a side-pumped Nd:YAG laser in LBO crystals&rdquo;, Opt. Express 12 (26), 6428 (2004), <a href="https://doi.org/10.1364/OPEX.12.006428">doi:10.1364/OPEX.12.006428</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">F. Gravier and B. Boulanger, &ldquo;Cubic parametric frequency generation in rutile single crystal&rdquo;, Opt. Express 14 (24), 11715 (2006), <a href="https://doi.org/10.1364/OE.14.011715">doi:10.1364/OE.14.011715</a></td></tr>
+<tr><td class="refno"><sup>&nbsp;</sup>[13]</td><td class="refs">K. Miyata <i>et al.</i>, &ldquo;Phase-matched pure <i>&chi;</i><sup>(3)</sup> third-harmonic generation in noncentrosymmetric BiB<sub>3</sub>O<sub>6</sub>&rdquo;, Opt. Lett. 34 (4), 500 (2009), <a href="https://doi.org/10.1364/OL.34.000500">doi:10.1364/OL.34.000500</a></td></tr>
+<tr><td class="refno">[14]</td><td class="refs">K. Miyata <i>et al.</i>, &ldquo;High-efficiency single-crystal third-harmonic generation in BiB3O6&rdquo;, Opt. Lett. 36 (18), 3627 (2011), <a href="https://doi.org/10.1364/OL.36.003627">doi:10.1364/OL.36.003627</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="frequency_doubling.html" title="the phenomenon that an input wave in a nonlinear material can generate a wave with twice the optical frequency">frequency doubling</a>, <a href="frequency_quadrupling.html" title="the phenomenon that an input laser beam generates a beam with four times the optical frequency">frequency quadrupling</a>, <a href="nonlinear_frequency_conversion.html" title="the conversion of input light to light of other frequencies, using optical nonlinearities">nonlinear frequency conversion</a>, <a href="nonlinear_crystal_materials.html" title="crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal materials</a>, <a href="ultraviolet_light.html" title="invisible light with wavelengths shorter than &asymp;&thinsp;400&thinsp;&thinsp;nm">ultraviolet light</a>, <a href="ultraviolet_lasers.html" title="lasers (or other laser-based light sources) generating ultraviolet light">ultraviolet lasers</a><br>and other articles in the category <a href="categories.html#nonlinear_optics" title="other articles on nonlinear optics">nonlinear optics</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/frequency_tripling.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Ffrequency_tripling.html&text=RP+Photonics+Encyclopedia+-+frequency+tripling%2C+third-harmonic+generation%2C+nonlinear+frequency+conversion%2C+crystal+lifetime%2C+degradation" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Ffrequency_tripling.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Ffrequency_tripling.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/frequency_tripling.html"&gt;<br>Article on Frequency Tripling&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/frequency_tripling.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/frequency_tripling.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/frequency_tripling.html<br>article on 'Frequency Tripling' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Short-term Software Licenses Available</h2>
+<p>Do you need simulation software (such as our <a href="./fiberpower.html?banner=rented_software">RP Fiber Power</a>) only during a <b>short-term project</b>?</p>
+<p>Or do you want to <b>test such software very thoroughly</b> before fully committing to it?</p>
+<p>RP Photonics is now offering a solution: <a href="./software_licenses.html?banner=rented_software">software licenses</a> which are valid for a <b>limited time</b>.</p>
+<p>Our conditions are very fair:</p>
+<ul>
+<li>Pay only 5% of the amount for a permanent license for one month.</li>
+<li>When switching over to a permanent license directly thereafter, get the already paid money fully deducted!</li>
+<li>If you decide for that only later on, still get two thirds deducted.</li>
+</ul>
+<p>We are confident that you will like our software and finally decide for permanent licenses.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="SAsTQn0FjUDFq8U5r/SIeQ==">shownbanner = "rented software";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2 style="font-size:150%">Tutorial on<br>Fiber Amplifiers</h2>
+<p>See our <a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial">comprehensive tutorial on fiber amplifiers</a>:</p>
+<ul>
+<li>laser-active dopants, gain and pump absorption</li>
+<li>double-clad fibers, pulse amplification</li>
+<li>ASE, noise issues, multi-stage amplifiers</li>
+</ul>
+<p style="margin-left:10px;"><a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial"><img src="./img/fiber_amplifier_small.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial"><img src="./img/dcf_designs_part.png" style="width:100%" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial"><img src="./img/yb_gain_small.png" alt="&nbsp;"></a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="SAsTQn0FjUDFq8U5r/SIeQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/frequency_tripling.html"
+    },
+    "headline": "Frequency Tripling",
+    "image": "https://www.rp-photonics.com/previews/frequency_tripling.png",
+    "datePublished": "2005-06-19",
+    "dateModified": "2020-03-14",
+    "description": "Frequency tripling is the phenomenon that an input laser beam generates a beam with three times the optical frequency. It usually involves frequency doubling with subsequent sum frequency generation.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter F",
+      "item": "https://www.rp-photonics.com/encyclopedia_f.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "frequency tripling",
+      "item": "https://www.rp-photonics.com/frequency_tripling.html"
+    }]}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-MuTbe/xWXdxAPhnR8+pG7A=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - optical profilometers, non-contact optical surface profile measurements, interferometer, coherence, OCT, focus variation, digital holography, triangulation, time of flight, structured light, performance factors, geometric specifications</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/optical_profilometers.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Optical profilometers (surface profilers) can be used for very precisely measuring height profiles of surfaces, e.g. for assessing surface roughness, scratches and digs of optical surface finish. They can be based on interferometric and other methods, partly reaching a resolution far better than 1&nbsp;&mu;m. There are applications in optical metrology, optics fabrication, thin film production, semiconductor chip inspection and data storage.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="optical profilometers, interferometer, coherence, OCT, focus variation, triangulation, time of flight, structured light, performance factors">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Optical Profilometers">
+<meta property="og:description" content="Optical profilometers (surface profilers) can be used for very precisely measuring height profiles of surfaces, e.g. for assessing surface roughness, scratches and digs of optical surface finish. They can be based on interferometric and other methods, partly reaching a resolution far better than 1&nbsp;&mu;m. There are applications in optical metrology, optics fabrication, thin film production, semiconductor chip inspection and data storage.">
+<meta property="og:url" content="https://www.rp-photonics.com/optical_profilometers.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/optical_profilometers.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Optical profilometers (surface profilers) can be used for very precisely measuring height profiles of surfaces, e.g. for assessing surface roughness, scratches and digs of optical surface finish. They can be based on interferometric and other methods, partly reaching a resolution far better than 1&nbsp;&mu;m. There are applications in optical metrology, optics fabrication, thin film production, semiconductor chip inspection and data storage.">
+<meta name="twitter:title" content="Optical Profilometers">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/optical_profilometers.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="MuTbe/xWXdxAPhnR8+pG7A==">
+page="optical_profilometers.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="MuTbe/xWXdxAPhnR8+pG7A==">shownsponsors="TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_optical_profilometers.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_o.html">letter O</a> &gt; <a href="optical_profilometers.html">optical profilometers</a></p>
+<h1>Optical Profilometers</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_optical_profilometers.html?s=vbox">9 suppliers for optical profilometers</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_optical_profilometers.html?s=vbox">List of suppliers for<br>optical profilometers</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: optical non-contact instruments for precisely measuring surface profiles</p>
+<p>Alternative term: optical surface profilers</p>
+<p>More general term: <a href="optical_metrology.html" title="the science and technology of performing measurements with light">optical metrology</a> instruments</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Profilometer, Topographie-Messsysteme</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a></p>
+<p><a href="encyclopedia_cite.html?article=optical%20profilometers">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Optical profilometers, also called <em>optical surface profilers</em>, are optical non-contact instruments for precisely measuring surface profiles.
+Essentially, they measure the surface elevation <span class="eqn_il"><i>z</i></span> as a function of lateral coordinates <span class="eqn_il"><i>x</i></span> and <span class="eqn_il"><i>y</i></span> over some area.
+This differs from the function of an ordinary <a href="microscopes.html" title="instruments for seeing very small objects">microscope</a>, for example, where the image contrast can depend on a number of optical properties of the sample, which are often not related to the object's topology.</p>
+<figure>
+<img src="img/laser_cut_sensofar.png" alt="laser cut, imaged with an optical profilometer">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Image of a laser cut, taken with a profiler. Source: <a href="https://www.sensofar.com/" rel="nofollow">Sensofar</a>
+</figcaption>
+</figure>
+<p>Profilometers are used, for example, for inspecting surfaces of <a href="laser_mirrors.html" title="high-quality mirrors used in laser resonators and other optical setups">laser mirrors</a>, <a href="prisms.html" title="transparent optical devices which refract or reflect light">prisms</a> or glass flats, even of super-polished optics.
+Details of the surface form and roughness (not just an r.m.s. roughness value) and isolated defects such as scratches or digs of surface finish can be detected.
+Therefore, high resolution profilometers are essential tools for many applications:</p>
+<aside class="callout blue">Applications of profilometers are inside and outside the area of optics.</aside>
+<ul>
+<li>They are essential for fundamental surface analysis, quality control and process development in <a href="optical_fabrication.html" title="the fabrication of optical components like lenses, prisms and mirrors">optical fabrication</a>, with application on polished or <a href="dielectric_coatings.html" title="thin-film coatings made of transparent dielectric materials, e.g. for laser mirrors or anti-reflection coatings">coated</a> surfaces.</li>
+<li>In semiconductor chip inspection, the surface topography (including roughness) e.g. after certain lithographic production steps is one of the important characteristics for judging the quality of results.</li>
+<li>In the fabrication of mechanical parts, the progress of surface finishing processes can be monitored.</li>
+<li>Research in tribology profits from assessing the microscopic details of surfaces.</li>
+</ul>
+<p>There are numerous other fields of scientific research and industrial inspection which can profit from an optical profiler.
+Devices with lower spatial resolution can be used for purposes like measuring surface shapes over larger areas.</p>
+<aside class="callout blue">Optical profilers compete with mechanical instruments, mostly with stylus profilers. A main difference is that optical devices do not require physical contact with the tested surface.</aside>
+<p>There are also other kinds of (non-optical) profilometers, namely <em>contact profilometers</em>, which are based on mechanical scanning of surfaces with a small tip, called a <em>stylus</em>.
+Tiny displacements of the stylus in contact with the probed surface, which reflects the surface topography, can be analyzed with a capacitance sensor, for example.
+A related method is <em>force microscopy</em>, because the measurements involve mechanical forces between the stylus (tip) and the sample.
+In extreme cases, axial and lateral resolutions down to a few tens of nanometers are reached, so that single atoms can be resolved; this is called <em>atomic force microscopy</em> (AFM).</p>
+<figure>
+<img src="img/drill_tool_sensofar.png" alt="drill tool imaged with a profilometer">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Image of a drill tool, taken with a profilometer. Source: <a href="https://www.sensofar.com/" rel="nofollow">Sensofar</a>
+</figcaption>
+</figure>
+<p>Optical profilers have the advantage of safely non-destructive non-contact surface analysis while partly offering similar measurement accuracy and often higher speed.
+In some cases, they also deliver additional information concerning the optical properties of a surface, e.g. on its color.</p>
+<h2 class="togglediv">Essential Performance Factors of Profilometers</h2>
+<div>
+<p>Profiler systems can differ in a number of essential performance factors, which may exclude a proper surface analysis in various situations.
+The most important aspects are summarized in the following:</p>
+<ul>
+<li>The <em>spatial resolution</em> is often substantially different in longitudinal (vertical) and lateral (horizontal, transverse) direction.
+Particularly in the longitudinal direction can be of the order of 10&nbsp;nm for some kinds of devices, while the lateral resolution is more often of the order of 1&nbsp;&mu;m or more.
+Some surface profilers allow the user to choose between different objectives for different accuracy levels.</li>
+</ul>
+<aside class="callout blue">High lateral resolution is often obtained only in conjunction with a small field of view.</aside>
+<ul>
+<li>Typically, devices produce images with a limited <a href="field_of_view.html" title="the angular extent of the field which can be observed with an optical instruments or the eye"><em>field of view</em></a> (<em>image area</em>).
+One may then translate the sample or the measurement device to look at different sections of the surface area, but it is not always simple to produce continuous images by stitching together smaller images.
+Some methods allow one to investigate a rather large area with one shot, but typically with lower spatial resolution.</li>
+<li>The longitudinal measurement range can also vary substantially between different methods.
+Some of them are suitable only for nearly flat surfaces.</li>
+<li>Some measurement principles hit limitations when samples with too large <em>surface slope</em> are investigated; they may lead to totally wrong readings for such regions.
+Others do not have that problem and can be used even for devices with steep structures.</li>
+<li>The <em>image acquisition time</em> is also an important factor for many applications, and can vary substantially, depending on the measurement method and the required image area and accuracy.
+Some devices are suitable even for real-time analysis with very high image frame rates.</li>
+</ul>
+<p>Other aspects concerning the applicability of methods to certain types of samples or situations; some examples:</p>
+<ul>
+<li>The methods differ very much in terms of the possible <a href="working_distance.html" title="the distance between an objective and the object"><em>working distance</em></a>, i.e., the distance between the measurement device and the surface under test.
+Some of them need working distances well below a millimeter (possibly creating a risk of inadvertent contact), while others can work from substantial distances.</li>
+</ul>
+<aside class="callout red">Not every profiling method is applicable to every type of sample!</aside>
+<ul>
+<li>Some measurement methods work only on certain materials, e.g. on smooth samples with a substantial specular <a href="reflectivity.html" title="the ratio of reflected optical power to the incident optical power at a surface">reflectivity</a>.
+There are suitable profiles for all sort of materials, such as metals, glasses, ceramics, polymers, paints and paper.</li>
+<li>High-resolution instruments often require careful suppression of <em>mechanical vibrations</em> with suitable damping mounts etc.
+Obviously, they should not be operated in environments with excessive vibrations.
+Some profilers, however, are so fast that mechanical vibrations of the sample are less critical.</li>
+</ul>
+<figure>
+<img src="img/calibration_standard_sensofar.png" alt="calibration standard for optical profilometer">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+A calibration standard imaged with an optical profilometer. Source: <a href="https://www.sensofar.com/" rel="nofollow">Sensofar</a>
+</figcaption>
+</figure>
+</div>
+<h2 class="togglediv">Types of Profilometer Systems and their Operation Principles</h2>
+<div>
+<p>Optical profilometers can be based on very different measurement principles, as explained in the following sections.
+Suppliers of commercially available devices do not always fully reveal the detailed operation principles, but often only the reached performance figures.</p>
+<h3 class="togglediv">Traditional Interferometers</h3>
+<div>
+<p>Traditional types of <a href="interferometers.html" title="optical devices utilizing the phenomenon of interference">interferometers</a>, often operated with <a href="laser_light.html" title="light generated with a laser device">laser light</a> of high spatial and temporal <a href="coherence.html" title="a fixed phase relationship between the electric field values at different locations or at different times">coherence</a>, such as <a href="twyman_green_interferometers.html" title="an interferometer similar to a Michelson interferometer, but with expanded beams">Twyman&ndash;Green interferometers</a>, are often used for surface characterization, for example.
+Here, one generates a fringe pattern by interference of light reflected from a surface with light from the same source reflected on a very flat reference surface.
+With a slight tilt e.g. of the reference surface, one obtains a regular fringe pattern, and deformations of the fringes reveal deviations from perfect flatness.</p>
+<p>In modern instruments, interference patterns are not simply viewed, but recorded with some electronic <a href="image_sensors.html" title="optoelectronic sensors which can be used for imaging">image sensor</a> (e.g. a CCD sensor), and the fringe patterns can be further processed with computer software.
+Such software can acquire topographic information and compute corresponding images, e.g. displaying deviations from desired shapes with a color code.
+Such additions can be regarded as realizing a profiler based on an interferometer, which itself would not yet quality as profilometer.</p>
+<p>Such interferometric methods are very accurate concerning axial resolution.
+They are mostly applied to nearly flat surfaces or surfaces with a well defined curvature, as often encountered in <a href="optics.html" title="the science and technology dealing with the properties and the propagation of light">optics</a>.
+The lateral resolution is typically quite limited, e.g. a few tens of microns.
+It can be better with microscopic methods such as those described in the following section.</p>
+</div>
+<h3 class="togglediv">Interferometer Microscopes</h3>
+<div>
+<p>For realizing an interferometer, e.g. of <a href="twyman_green_interferometers.html" title="an interferometer similar to a Michelson interferometer, but with expanded beams">Twyman&ndash;Green</a> type, with higher transverse resolution, one could in principle insert ordinary <a href="microscope_objectives.html" title="the optical component of a microscope which is next to the observed object">microscope objectives</a> of the same type into the setup &ndash; one in the probe arm and one in the reference arm.
+However, it is more practical to realize a modified kind of microscope interferometer, using only one objective, but a special kind of <em>interferometer objective</em>, which integrates the beam splitter and the reference mirror.</p>
+<p>There are different implementations of specialized <a href="objectives.html" title="optical elements for collecting light from inspected objects, or for sending light to objects"><em>interferometry objectives</em></a>.
+For example, instead of an ordinary <a href="microscope_objectives.html" title="the optical component of a microscope which is next to the observed object">microscope objective</a>, one may use a <em>Mirau objective</em> (Figure&nbsp;4, left side), realizing the principle of a Mirau <a href="interferometers.html" title="optical devices utilizing the phenomenon of interference">interferometer</a> (named after André Henri Mirau).
+Between the object plane and the imaging optics, there is a partially reflecting mirror (<a href="beam_splitters.html" title="devices for splitting a laser beam into two or more beams">beam splitter</a>), and above it there is a small reference mirror.
+Light coming down through the objective will partially get to the sample and partially to the reference mirror, and what is reflected on both is recombined at the beam splitter.
+Due to the broad bandwidth of the used light, interference fringes are observed only when the distances from the beam splitter to the object and to the reference mirror are about equal.
+That way, one can measure the elevation of the object point.</p>
+<p>Alternatively, one may use a Michelson objective (Figure&nbsp;4, right side).
+Those are usually preferred for cases with lower <a href="magnification.html" title="the enlargements of images">magnification</a> and offer a larger working distance.</p>
+<figure>
+<img src="img/interferometer_objectives.png" alt="interferometer objectives">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Mirau objective and Michelson objective. The imaging optics are shown in a simplified way, with a simple lens.
+</figcaption>
+</figure>
+</div>
+<h3 class="togglediv">Confocal Scanning Microscopy</h3>
+<div>
+<figure class="right" style="width:208px;">
+<img src="img/confocal_microscope.png" alt="confocal microscope">
+<figcaption><span class="start">Figure&nbsp;5:</span> 
+Setup of a confocal microscope.
+</figcaption>
+</figure>
+<p>The analysis of sample elevation can be based on the principle of <a href="confocal_scanning_microscopes.html" title="optical microscopes with enhanced depth resolution based on the confocal measurement principle">confocal scanning microscopy</a> (Figure&nbsp;5).
+Here, a high longitudinal resolution is essentially reached with the following principle:</p>
+<ul>
+<li>Point illumination: a small spot on the sample is illuminated with a tightly focused <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a>.</li>
+<li>Confocal detection: a plane of the sample is imaged onto a small <a href="pinholes.html" title="circular holes, typically with diameters well below one millimeter">pinhole</a>, so that a high transmission through the pinhole is achieved only when the target point is at a certain elevation.</li>
+<li>Scanning: for each lateral position, one scans the longitudinal position of the sample (or alternatively the <a href="microscope_objectives.html" title="the optical component of a microscope which is next to the observed object">microscope objective</a> or some mirror), and determines the point of maximum transmission, which reflects the local elevation of the sample.</li>
+</ul>
+<p>For topographic measurements, such a microscope can be programmed such that for every point on the imaged area it measures the depth value for which maximum signal intensity is obtained.</p>
+<p>In some cases, it is convenient to replace the pinhole with the end of a <a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode fiber</a> in order to obtain a particularly compact imaging head.</p>
+<p>There are also profilers which instead of a microscope objective use some <a href="telecentric_lenses.html" title="lenses or objectives having the entrance or exit pupil at infinity">telecentric</a> optics for scanning larger areas (with dimensions of several centimeters).
+In such cases, the lateral resolution is substantially lower, e.g. some tens of microns.
+The axial resolution for flat surfaces can still be very high.</p>
+</div>
+<h3 class="togglediv">Focus Variation Microscopy</h3>
+<div>
+<p>Focus variation microscopy is another method of scanning microscopy, but not necessarily involving a laser.
+Its operation principle is to capture microscopic images with different focus adjustments and find that adjustment which leads to maximum sharpness of the image (similar to the autofocus in some <a href="photo_cameras.html" title="optical instruments for taking photographic images">photo cameras</a>).
+That adjustment is then a measure for the elevation at the center of the image.
+By scanning the sample position or the viewing direction of the microscope, one can acquire information for complete two-dimensional image.</p>
+<p>The used <a href="image_sensors.html" title="optoelectronic sensors which can be used for imaging">image sensor</a> needs to have only a quite limited number of pixels, since the image sharpness is relevant only in a small area around the point of interest.</p>
+<p>Of course, focus variation works only if there is &ldquo;something to see&rdquo; on the object &ndash; not if an object is nearly perfectly flat and uniformly illuminated.
+Modulated (structured) illumination is a solution which makes the method work for many kinds of samples.</p>
+<p>The axial resolution can be a few microns when using a high-NA <a href="microscope_objectives.html" title="the optical component of a microscope which is next to the observed object">microscope objective</a>.
+The lateral one can be similar or better due to the small <a href="depth_of_field.html" title="the distance between the nearest and furthest objects that can be imaged with reasonably sharp focus for a given focus setting">depth of field</a>.</p>
+<p>In comparison with confocal scanning microscopy, the method is simpler to realize and less sensitive to problems with steep slopes on the sample.</p>
+</div>
+<h3 class="togglediv">Low Coherence Interferometry</h3>
+<div>
+<p>Some profilometers are essentially <a href="white_light_interferometers.html" title="interferometers using broadband light inputs">white light interferometers</a>, utilizing the principle of <a href="optical_coherence_tomography.html" title="an optical imaging technique where longitudinal resolution is achieved based on interference effects with low-coherence light">optical coherence tomography</a>.
+They create topographic images by scanning a sample with a tightly focused beam, acquiring information on the elevation of a single point at the time and assembling those data to a complete image in a computer.
+The used light source is a kind of <a href="white_light_sources.html" title="light sources with very broad optical bandwidth">white light source</a>, i.e., it is a broad optical <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>, such that interference fringes are detected only when the optical path length difference of the <a href="interferometers.html" title="optical devices utilizing the phenomenon of interference">interferometer</a> is very small (see Figure&nbsp;6).
+Therefore, there is not the usual ambiguity of interferometers operated with <a href="monochromatic_light.html" title="light with a single optical frequency">monochromatic light</a>.
+For more details of the operation principle, see the article on <a href="optical_coherence_tomography.html" title="an optical imaging technique where longitudinal resolution is achieved based on interference effects with low-coherence light">optical coherence tomography</a>.</p>
+<figure>
+<img src="img/wli_profiler_signal.png" alt="signal from white light interferometer">
+<figcaption><span class="start">Figure&nbsp;6:</span> 
+Simulated <span class="eqn_il"><i>z</i></span> scans of a white light interferometer at different points on a surface profile, from which the elevation profile (blue curve) can be retrieved.
+</figcaption>
+</figure>
+<p>The transverse resolution of such OCT-based profilers is similar to that of usual <a href="microscopes.html" title="instruments for seeing very small objects">microscopes</a>, i.e., a few microns or even significantly below 1&nbsp;&mu;m.
+In the lateral direction, it can even be substantially better, down to a couple of nanometers; it is essentially limited by the bandwidth of the source.</p>
+<p>Typically, one will use an OCT method with quite fast acquisition, not requiring a mechanical scan for each sample point.
+Still, one needs to scan the sample position, typically in two dimensions.
+The total image acquisition time depends very much on the used OCT method, the required field size and resolution, and therefore differs very much between different devices and measurement conditions.</p>
+</div>
+<h3 class="togglediv">Digital Holographic Microscopy</h3>
+<div>
+<p>Digital <a href="holography.html" title="methods for recording and reconstructing three-dimensional images">holography</a> provides methods where a complete surface profile can be acquired with a single acquisition using an electronic <a href="image_sensors.html" title="optoelectronic sensors which can be used for imaging">image sensor</a>.
+The basic principle is that one records a hologram, i.e., an interference pattern involving the surface under investigation and a reference beam.
+The hologram is not reconstructed in traditional ways by illumination with laser light, but rather numerically on a computer.</p>
+<p>Due to the high speed of such methods, very high acquisition rates are possible, sometimes with more than 1000 image frames per second.
+Therefore, one can even monitor vibrations in real time, and there is no need for vibration suppression.
+Also, measurements can be performed on moving targets.</p>
+</div>
+<h3 class="togglediv">Triangulation Sensors</h3>
+<div>
+<p>Triangulation is a widely used measurement method which is based on detecting changes of the position of a <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a>.
+In case of a profilometer, a sharply focused laser beam hits the investigated surface under a substantial angle, so that changes of elevation of the sample are translated into changes of position, which can be measured with a <a href="position_sensitive_detectors.html" title="photodetectors which can detect the position of a light spot in one or two dimensions">position-sensitive detector</a>.
+(<a href="autocollimators.html" title="optical instruments for precisely measuring angular alignments">Autocollimators</a> are often used.)
+Limitations of the method are encountered for objects with diffuse <a href="scattering.html" title="processes where light is sent in other directions, usually but not always in random directions">scattering</a>, where one does not obtain a clean reflected beam.
+For relatively smooth surfaces however, certain optimized triangulation sends can reach very high lateral resolutions far better than 0.1&nbsp;&mu;m.
+On the other hand, the technique is suitable for scanning large areas.</p>
+<p>Triangulation sensors can work with strongly curved and irregular surfaces, where the application of interferometers would be difficult.</p>
+</div>
+<h3 class="togglediv">Time-of-flight Sensors</h3>
+<div>
+<p>The principle of <a href="time_of_flight_measurements.html" title="distance measurements based on measuring the time of flight of a light pulse">time-of-flight measurements</a> is usually used for larger distances, but it can also be optimized for a relatively high lateral resolution, partially better than 1&nbsp;mm.
+This is of course still very poor compared with some interferometric methods and clearly insufficient for optics inspection, for example.</p>
+</div>
+<h3 class="togglediv">Profilometers Based on Structured Light</h3>
+<div>
+<p>The topography of surfaces can be measured by illuminating the surface with structured light, for example with a regular pattern of fine stripes, and recording an image which reveals surface features through the deformation of the stripes.
+Such methods can be implemented with a relatively simple and robust technology, but they can never reach the lateral or axial resolution of interferometric instruments.</p>
+</div>
+</div>
+<h2 class="togglediv">Geometric Product Specifications</h2>
+<div>
+<p>Profilers do not only deliver images and topography graphs; they can also be used to obtain geometric product specifications, e.g. concerning the roughness of a surface.
+There are certain standards such as ISO 25178, which define in detail how certain surface texture parameters are defined and how they should be calculated from measured surface profiles.
+Such standards also define nominal characteristics of various types of profilometer instruments and how they can be calibrated, using certain measurement standards.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_optical_profilometers.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 9 suppliers for optical profilometers.</p>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="optical_profilometers.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="white_light_interferometers.html" title="interferometers using broadband light inputs">white light interferometers</a>, <a href="optical_metrology.html" title="the science and technology of performing measurements with light">optical metrology</a>, <a href="confocal_scanning_microscopes.html" title="optical microscopes with enhanced depth resolution based on the confocal measurement principle">confocal scanning microscopes</a><br>and other articles in the categories <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/optical_profilometers.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Foptical_profilometers.html&text=RP+Photonics+Encyclopedia+-+optical+profilometers%2C+non-contact+optical+surface+profile+measurements%2C+interferometer%2C+coherence%2C+OCT%2C+focus+variation%2C+digital+holography%2C+triangulation%2C+time+of+flight%2C+structured+light%2C+performance+factors%2C+geometric+specifications" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Foptical_profilometers.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Foptical_profilometers.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/optical_profilometers.html"&gt;<br>Article on Optical Profilometers&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/optical_profilometers.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/optical_profilometers.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/optical_profilometers.html<br>article on 'Optical Profilometers' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Staff Training</h2>
+<p>Up-to-date technical know-how is the key to success in photonics.
+RP Photonics offers high quality <a href="./training.html?banner=staff_training">training courses</a> at your location:</p>
+<ul>
+<li>Courses on basic, intermediate or advanced topics &ndash; tailored to your needs and already existing knowledge.</li>
+<li>Boost the competence of your whole team within a few days!</li>
+<li>Get your questions answered straight away.</li>
+<li>Stimulate new ideas and motivate the whole team.</li>
+</ul>
+<p style="text-align:center;"><img src="./img/paschotta5.jpg" alt=" "></p>
+<p><a href="./paschotta.html?banner=staff_training">Dr. Paschotta</a> from RP Photonics</p>
+<ul>
+<li>is a top expert in laser technology, fiber optics and nonlinear optics, also highly respected and trustworthy partner,</li>
+<li>can explain complicated things in helpful ways, and</li>
+<li>addresses your needs.</li>
+</ul>
+<p>Could there be a better investment for a high-tech company?</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="MuTbe/xWXdxAPhnR8+pG7A==">shownbanner = "staff training";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Free Tutorial: Modeling of Fiber Amplifiers and Lasers</h2>
+<p>We have published a new <a href="./tutorial_modeling.html?banner=modeling_tutorial">tutorial</a> which discusses the modeling of fiber amplifiers and lasers.
+It addresses many questions:</p>
+<ul>
+<li>What is a <a href="./tutorial_modeling1.html?banner=modeling_tutorial">model</a>?</li>
+<li>Should one use <a href="./tutorial_modeling3.html?banner=modeling_tutorial">power propagation or field propagation</a>?</li>
+<li>How to simulate the behavior of <a href="./tutorial_modeling4.html?banner=modeling_tutorial">laser-active ions</a>?</li>
+<li>How to calculate <a href="./tutorial_modeling5.html?banner=modeling_tutorial">steady-state solutions</a>?</li>
+<li>How to simulate <a href="./tutorial_modeling6.html?banner=modeling_tutorial">dynamical behavior</a> and <a href="./tutorial_modeling7.html?banner=modeling_tutorial">ultrashort pulse propagation</a>?</li>
+<li>What aspects are important for the <a href="./tutorial_modeling8.html?banner=modeling_tutorial">decision</a> whether to develop own modeling software or use commercial software?</li>
+</ul>
+<p><a href="./tutorial_modeling.html?banner=modeling_tutorial">Read the tutorial!</a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="MuTbe/xWXdxAPhnR8+pG7A==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/optical_profilometers.html"
+    },
+    "headline": "Optical Profilometers",
+    "image": "https://www.rp-photonics.com/previews/optical_profilometers.png",
+    "datePublished": "2019-04-16",
+    "dateModified": "2020-03-14",
+    "description": "Optical profilometers (surface profilers) can be used for very precisely measuring height profiles of surfaces, e.g. for assessing surface roughness, scratches and digs of optical surface finish. They can be based on interferometric and other methods, partly reaching a resolution far better than 1&nbsp;&mu;m. There are applications in optical metrology, optics fabrication, thin film production, semiconductor chip inspection and data storage.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter O",
+      "item": "https://www.rp-photonics.com/encyclopedia_o.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "optical profilometers",
+      "item": "https://www.rp-photonics.com/optical_profilometers.html"
+    }]}
+}
+</script>
+</body>
+</html>

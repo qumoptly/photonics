@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-HWzyBk0nHjv2/kpa+L4qqA=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - dispersive mirrors, chromatic dispersion, chirped mirrors, dispersion compensation</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/dispersive_mirrors.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Dispersive mirrors are mirrors which provide some amount of chromatic dispersion for the reflected beam. They can be used for dispersion compensation in mode-locked lasers, for example.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="dispersive mirrors, chromatic dispersion, chirped mirrors, dispersion compensation">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Dispersive Mirrors">
+<meta property="og:description" content="Dispersive mirrors are mirrors which provide some amount of chromatic dispersion for the reflected beam. They can be used for dispersion compensation in mode-locked lasers, for example.">
+<meta property="og:url" content="https://www.rp-photonics.com/dispersive_mirrors.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/dispersive_mirrors.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Dispersive mirrors are mirrors which provide some amount of chromatic dispersion for the reflected beam. They can be used for dispersion compensation in mode-locked lasers, for example.">
+<meta name="twitter:title" content="Dispersive Mirrors">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/dispersive_mirrors.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="HWzyBk0nHjv2/kpa+L4qqA==">
+page="dispersive_mirrors.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="HWzyBk0nHjv2/kpa+L4qqA==">shownsponsors="eagleyard Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_dispersive_mirrors.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_d.html">letter D</a> &gt; <a href="dispersive_mirrors.html">dispersive mirrors</a></p>
+<h1>Dispersive Mirrors</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_dispersive_mirrors.html?s=vbox">16 suppliers for dispersive mirrors</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.laseroptik.de/en/coatings/dispersive-coatings" data-supplier="Laseroptik" data-location="product-enc" data-keyword="dispersive mirrors" rel="nofollow" class="bg externallink"><img src="./bg/logos/laseroptik.png" alt="Laseroptik" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="http://www.edmundoptics.com/c/ultrafast-laser-mirrors/1204/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="dispersive mirrors" rel="nofollow" class="bg externallink"><img src="./bg/logos/edmund_optics.png" alt="Edmund Optics" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_dispersive_mirrors.html?s=vbox">List of suppliers for<br>dispersive mirrors</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="boxadvertisement">
+<h2>Designing Dispersive Mirrors</h2>
+<p>Due to its high flexibility, the powerful software <a href="coating.html"><b>RP Coating</b></a> is well suited for designing a wide range of dispersive mirrors &ndash; for example, in the form of chirped mirrors.</p>
+<figure>
+<img src="img/dcm_penetration_s.png" alt="field penetration in a chirped mirror">
+</figure>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: mirrors which provide some amount of chromatic dispersion for the reflected beam</p>
+<p>More general term: <a href="mirrors.html" title="devices which reflect light">mirrors</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">dispersive Spiegel</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a></p>
+<p><a href="encyclopedia_cite.html?article=dispersive%20mirrors">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Dispersive mirrors are <a href="mirrors.html" title="devices which reflect light">mirrors</a> &ndash; usually a kind of <a href="laser_mirrors.html" title="high-quality mirrors used in laser resonators and other optical setups">laser mirrors</a> &ndash; which provide some amount of <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>.
+They can be used for <a href="dispersion_compensation.html" title="the control of the overall chromatic dispersion of a system by adding optical elements with a suitable amount of dispersion">dispersion compensation</a> within a <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a> or for the <a href="pulse_compression.html" title="linear or nonlinear techniques for reducing the durations of optical pulses">compression</a> of <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a>, for example, or for other applications in femtosecond <a href="laser_optics.html" title="optical elements and systems used with lasers - either in lasers or for transmitting and manipulating laser light">laser optics</a> and optical signal processing.</p>
+<p>Usually, dispersive mirrors are made in the form of <a href="dielectric_mirrors.html" title="mirrors consisting of multiple thin layers of different transparent optical materials">dielectric mirrors</a>, and they can be based on different operation principles:</p>
+<ul>
+<li>Some simple designs are essentially realizing a <a href="gires_tournois_interferometers.html" title="linear optical resonators used for introducing chromatic dispersion">Gires&ndash;Tournois interferometer</a>, where the chromatic dispersion essentially results from interference effects at an off-resonant <a href="optical_resonators.html" title="arrangements of optical components which allow a beam of light to circulate">optical resonator</a>.
+It is possible to obtain a large amount of chromatic dispersion (many thousands of fs<sup>2</sup>) of any sign, but only with a limited optical <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>.
+The higher the amount of chromatic dispersion, the more stringent is the limit for the optical bandwidth.</li>
+<li>A totally different operation principle is that of the <a href="chirped_mirrors.html" title="Bragg-type dispersive mirrors with a spatial variation of the Bragg wavelength">chirped mirror</a>, where the optical penetration depth is wavelength-dependent.
+According to a very simplified picture, the resulting chromatic dispersion can be explained as resulting from a wavelength-dependent path length.
+With proper optimization and precise growth of the dielectric structure, ultra broadband mirrors e.g. for octave-spanning <a href="titanium_sapphire_lasers.html" title="lasers based on a Ti:sapphire gain medium">titanium&ndash;sapphire lasers</a> can be produced.</li>
+</ul>
+<p>Apart from the amount of chromatic dispersion in the bandwidth, it is often important to achieve a high precision of the whole spectral dispersion profile.
+For example, one may use such mirrors for compensating even higher-order chromatic dispersion in the <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">resonator</a> of a <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked laser</a>.</p>
+<p>Usually, dispersive mirrors are highly reflecting.
+In case that there is any significant transmission, the chromatic dispersion for the transmitted light is generally totally different from the chromatic dispersion for the reflected light.</p>
+<aside class="callout blue">Dispersive mirrors usually exhibit higher parasitic power losses than ordinary laser mirrors.</aside>
+<p>Compared with ordinary highly reflecting <a href="laser_mirrors.html" title="high-quality mirrors used in laser resonators and other optical setups">laser mirrors</a>, which are generally designed as <a href="bragg_mirrors.html" title="mirror structures based on Bragg reflection at a period structure">Bragg mirrors</a>, dispersive mirrors exhibit tentatively higher parasitic losses (i.e., a somewhat lower reflectance) and the lower <a href="laser_induced_damage.html" title="damage of optical components induced by laser radiation">optical damage</a> threshold.
+This results from the substantially deeper penetration depth into the dielectric structure.
+(See Figure&nbsp;3 of the article on <a href="chirped_mirrors.html" title="Bragg-type dispersive mirrors with a spatial variation of the Bragg wavelength">chirped mirrors</a>.)
+The higher parasitic losses also imply a higher degree of <a href="thermal_lensing.html" title="a lensing effect induced by temperature gradients">thermal lensing</a> on such mirrors, if they are used for high-power laser beams.
+With optimized high-power dispersive mirrors, however, thermal effects can be kept on the level which is quite low compared with those at other kinds of dispersive elements, e.g. <a href="prism_pairs.html" title="combinations of two prisms, mostly used for dispersion compensation">prism pairs</a>.
+Key aspects for such an optimization are the minimization of parasitic losses and the use of a mirror <a href="mirror_substrates.html" title="substrates on which coatings for laser mirrors can be deposited">substrate</a> <a href="optical_materials.html" title="materials used for optical components">material</a> with a low thermal expansion coefficient and a high thermal conductivity.</p>
+<figure class="right" style="width:169px;">
+<img src="img/beam_at_mirror_pair.png" alt="laser beam bouncing at a pair of mirrors">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Multiple passes of a laser beam at a pair of dispersive mirrors.
+</figcaption>
+</figure>
+<p>If a simple reflection on a dispersive mirror does not provide sufficiently much chromatic dispersion, one may use multiple reflections, e.g. between two dispersive mirrors, where the two mirror surfaces are parallel to each other and non-normal incidence is used (see Figure&nbsp;1).
+Note that the angle of incidence should not be too large, because the chromatic dispersion depends on that angle.
+Obviously, the total power losses and the total strength of thermal lensing scale with the number of reflections.</p>
+<p>Sometimes, a matched pair of two different dispersive mirrors is used, where the dispersion errors of both mirrors are partially compensated.</p>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_dispersive_mirrors.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 16 suppliers for dispersive mirrors. Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.laseroptik.de/" data-supplier="Laseroptik" data-location="product-enc" data-keyword="dispersive mirrors" rel="nofollow" class="bg externallink" title="Visit the website of Laseroptik"><img src="./bg/logos/laseroptik.png" alt="Laseroptik" class="supplierlogo"></a><a href="http://www.laseroptik.de/en/coatings/dispersive-coatings" data-supplier="Laseroptik" data-location="product-enc" data-keyword="dispersive mirrors" rel="nofollow" class="bg externallink" title="Visit the website of Laseroptik"><img src="./bg/products/laseroptik/chirped_mirrors.png" alt="dispersive mirrors" class="product"></a><h3><a href="./bg/profiles/laseroptik.html" title="See the profile of Laseroptik">Laseroptik</a></h3><p>LASEROPTIK designs and produces various kinds of <a href="http://www.laseroptik.de/en/coatings/dispersive-coatings" data-supplier="Laseroptik" data-location="product-enc" data-keyword="dispersive mirrors" rel="nofollow" class="externallink bg">dispersive coatings</a>, including <a href="http://www.laseroptik.de/en/coatings/dispersive-coatings/chirped-mirrors-and-matched-pairs" data-supplier="Laseroptik" data-location="product-enc" data-keyword="dispersive mirrors" rel="nofollow" class="externallink bg">chirped mirrors and matched pairs</a> of chirped mirrors, also all other kinds of coated optics for dispersion management like <a href="http://www.laseroptik.de/en/coatings/dispersive-coatings/gti-mirrors" data-supplier="Laseroptik" data-location="product-enc" data-keyword="dispersive mirrors" rel="nofollow" class="externallink bg">GTI mirrors</a>. We use Ion Beam Sputtering (IBS) for highest quality and widely ranging dispersion measurement setups for precise characterization.</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.edmundoptics.com/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="dispersive mirrors" rel="nofollow" class="bg externallink" title="Visit the website of Edmund Optics"><img src="./bg/logos/edmund_optics.png" alt="Edmund Optics" class="supplierlogo"></a><a href="http://www.edmundoptics.com/c/ultrafast-laser-mirrors/1204/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="dispersive mirrors" rel="nofollow" class="bg externallink" title="Visit the website of Edmund Optics"><img src="./bg/products/edmund_optics/dispersive_mirrors.jpg" alt="dispersive mirrors" class="product"></a><h3><a href="./bg/profiles/edmund_optics.html" title="See the profile of Edmund Optics">Edmund Optics</a></h3><p>Edmund Optics offers various kinds of <a href="http://www.edmundoptics.com/c/ultrafast-laser-mirrors/1204/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="dispersive mirrors" rel="nofollow" class="externallink bg">mirrors for ultrafast laser technology</a>, including low-dispersion and highly dispersive broadband mirrors for different spectral regions such as 0.8&nbsp;&mu;m, 1&nbsp;&mu;m and 2&nbsp;&mu;m, but also UV and other infrared versions.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="dispersive_mirrors.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>, <a href="dispersion_compensation.html" title="the control of the overall chromatic dispersion of a system by adding optical elements with a suitable amount of dispersion">dispersion compensation</a>, <a href="gires_tournois_interferometers.html" title="linear optical resonators used for introducing chromatic dispersion">Gires&ndash;Tournois interferometers</a>, <a href="chirped_mirrors.html" title="Bragg-type dispersive mirrors with a spatial variation of the Bragg wavelength">chirped mirrors</a>, <a href="laser_mirrors.html" title="high-quality mirrors used in laser resonators and other optical setups">laser mirrors</a>, <a href="pulse_compression.html" title="linear or nonlinear techniques for reducing the durations of optical pulses">pulse compression</a><br>and other articles in the categories <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/dispersive_mirrors.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fdispersive_mirrors.html&text=RP+Photonics+Encyclopedia+-+dispersive+mirrors%2C+chromatic+dispersion%2C+chirped+mirrors%2C+dispersion+compensation" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fdispersive_mirrors.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fdispersive_mirrors.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/dispersive_mirrors.html"&gt;<br>Article on Dispersive Mirrors&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/dispersive_mirrors.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/dispersive_mirrors.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/dispersive_mirrors.html<br>article on 'Dispersive Mirrors' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Your Lab is Closed due to the Corona Virus Crisis?</h2>
+<p>Time to think how to best utilize your time!</p>
+<p>Here is a suggestion: <br> <b>Consider to start with physical modeling!</b></p>
+<ul>
+<li>Build models for your existing or planned lasers and amplifiers, resonators, etc.</li>
+<li>Utilize such models in order to <b>improve your qualitative and quantitative understanding</b>, solve problems, optimize device performance and <b>develop new ideas</b>.</li>
+<li>Power up your home office instead of wasting your time!</li>
+<li>When getting back to the lab, restart with fresh plans and full power.</li>
+</ul>
+<img src="./img/rp_photonics.png" alt="RP Photonics" style="margin-top:20px; width:225px;">
+<p>offers powerful <a href="./software.html?banner=lab_closed">simulation &amp; design software</a>, e.g. for <a href="./fiberpower.html?banner=lab_closed">active and passive fiber devices</a>, <a href="./resonator.html?banner=lab_closed">laser resonators</a> and <a href="./coating.html?banner=lab_closed">thin-film coatings</a>!</p>
+<p>Getting helpful <a href="./software_support.html?banner=lab_closed">support</a> from RP also benefits your projects.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="HWzyBk0nHjv2/kpa+L4qqA==">shownbanner = "lab closed";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>More to Read</h2>
+ <p>Here are some randomly selected encyclopedia articles &ndash; just to make you curious:</p>
+  <ul>
+<li><a href="./clustering.html">clustering</a></li><li><a href="./thermal_imaging.html">thermal imaging</a></li><li><a href="./ultraviolet_optics.html">ultraviolet optics</a></li><li><a href="./composite_laser_crystals.html">composite laser crystals</a></li><li><a href="./photographic_objectives.html">photographic objectives</a></li><li><a href="./wedge_prisms.html">wedge prisms</a></li><li><a href="./spectral_lamps.html">spectral lamps</a></li><li><a href="./green_lasers.html">green lasers</a></li><li><a href="./multipass_gas_cells.html">multipass gas cells</a></li><li><a href="./laser_development.html">laser development</a></li><li><a href="./fiber_bundles.html">fiber bundles</a></li><li><a href="./intensity_noise.html">intensity noise</a></li><li><a href="./optical_amplifiers.html">optical amplifiers</a></li><li><a href="./plastic_optical_fibers.html">plastic optical fibers</a></li><li><a href="./photomultipliers.html">photomultipliers</a></li></ul>
+
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="HWzyBk0nHjv2/kpa+L4qqA==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/dispersive_mirrors.html"
+    },
+    "headline": "Dispersive Mirrors",
+    "image": "https://www.rp-photonics.com/previews/dispersive_mirrors.png",
+    "datePublished": "2016-02-08",
+    "dateModified": "2020-03-14",
+    "description": "Dispersive mirrors are mirrors which provide some amount of chromatic dispersion for the reflected beam. They can be used for dispersion compensation in mode-locked lasers, for example.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter D",
+      "item": "https://www.rp-photonics.com/encyclopedia_d.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "dispersive mirrors",
+      "item": "https://www.rp-photonics.com/dispersive_mirrors.html"
+    }]}
+}
+</script>
+</body>
+</html>

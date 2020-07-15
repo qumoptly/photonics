@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-lYLuVyttZzSia5dQmAgTOA=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Tutorial &ldquo;Modeling of Fiber Amplifiers and Lasers&rdquo;, Part 3: Power propagation or field propagation - numerical beam propagation, optical powers, algorithms</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/tutorial_modeling3.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-04-05">
+<meta name="description" content="Tutorial on modeling of fiber amplifiers and lasers. This part explains the difference between power propagation and field propagation.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="tutorial, modeling, fiber amplifiers, fiber lasers, optical power, numerical beam propagation, algorithm">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="lYLuVyttZzSia5dQmAgTOA==">
+page="tutorial_modeling3.html?banner=modeling_tutorial"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/quiz.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="lYLuVyttZzSia5dQmAgTOA==">shownsponsors="RPMC Lasers"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials" class="selected"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_tutorials.html">Tutorials</a> &gt; <a href="tutorial_modeling.html">Modeling</a> &gt; <a href="tutorial_modeling3.html">Part 3</a></p>
+<h1>Modeling of Fiber Amplifiers and Lasers</h1>
+<p>This is part 3 of a <a href="tutorial_modeling.html">tutorial on modeling of fiber amplifiers and lasers</a> from <a href="paschotta.html">Dr. Paschotta</a>. The tutorial has the following parts:</p>
+<div class="article_parts"><span style='float:left; margin:0 25px 5px 10px; font-size:60px; color:#888; font-weight:bold; line-height:100%;'>3</span>
+<p>1:&nbsp;<a href="tutorial_modeling1.html">Introduction</a>, 2:&nbsp;<a href="tutorial_modeling2.html">Optical channels</a>, 3:&nbsp;<span style="text-decoration:underline;">Power propagation or field propagation</span>, 4:&nbsp;<a href="tutorial_modeling4.html">The laser-active ions</a>, 5:&nbsp;<a href="tutorial_modeling5.html">Continuous-wave operation of amplifiers and lasers</a>, 6:&nbsp;<a href="tutorial_modeling6.html">Amplifying and generating short pulses</a>, 7:&nbsp;<a href="tutorial_modeling7.html">Ultrashort pulses</a>, 8:&nbsp;<a href="tutorial_modeling8.html">Using home-made software or a commercial product?</a>
+</p>
+</div>
+<h2 class="togglediv">Part 3: Power Propagation or Field Propagation</h2>
+<div>
+<p>We now need to consider how exactly the light and its spatial properties should be represented in a model.
+We need to decide exactly which quantities are to be used in mathematical equations and numerical data structures.
+For efficient solutions, this choice should be dependent on the situation.</p>
+<h3 class="togglediv">Assuming a Top-hat Transverse Profile</h3>
+<div>
+<p>In the simplest case, we can essentially ignore the transverse dimension, assuming a top-hat intensity distribution in the transverse direction: light is assumed to homogeneously fill the fiber core (and not to go beyond it), and we <b>only consider the variation of optical power</b> along the fiber due to amplification, absorption or losses.
+In the equations we have the optical power <span class="eqn_il"><i>P</i><sub><i>j</i></sub>(<i>z</i>)</span> for channel <span class="eqn_il"><i>j</i></span>, where the coordinate <span class="eqn_il"><i>z</i></span> varies from 0 to <span class="eqn_il"><i>L</i><sub><i>f</i></sub></span>, the length of the active fiber.</p>
+<p>One usually uses a simple array of power values for each optical channel, where we have a certain fixed longitudinal spacing of the stored values.
+That spacing should be fine enough for a reasonably accurate representation of the varying power level.
+The array may have 51 components, for example, for realizing 50 numerical steps in <span class="eqn_il"><i>z</i></span> direction.</p>
+<aside class="callout blue">Only propagating optical powers in <span class="eqn_il"><i>z</i></span> direction is relatively simple, at least for a single pass only.</aside>
+<p>The variation of optical power in <span class="eqn_il"><i>z</i></span> direction can be described with a simple differential equation:</p>
+<div class="eqn"><img src="eqn/dpdz.gif" width="188" height="44" alt="variation of power in a fiber amplifier"></div>
+<p>where <span class="eqn_il"><i>g</i><sub><i>j</i></sub></span>(z) is the local gain.
+(Typically, signal channels have positive gain values throughout the fiber, whereas pump channels have negative values, indicating absorption.)
+The normally constant value <span class="eqn_il"><span class="greek">&alpha;</span><sub><i>j</i></sub></span> represents additional background losses of the fiber, for example resulting from Rayleigh scattering.
+(Within a short amplifier or laser fiber, this can often be ignored.)
+The plus sign applies for forward-propagating channels, and the minus sign for backward-propagating channels.
+In dynamic simulations (see <a href="tutorial_modeling6.html">part 6</a>), the gain values can change with time, e.g. due to saturation effects.</p>
+<p>The local gain or loss <span class="eqn_il"><i>g</i><sub><i>j</i></sub></span> depends on details of the laser-active ions and their excitation levels, which themselves can depend on the optical powers of all channels; we will look at that in <a href="tutorial_modeling4.html">section 4</a>.</p>
+</div>
+<h3 class="togglediv">Other Fixed Transverse Profiles</h3>
+<div>
+<p>Often we are dealing with <a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode fibers</a>.
+Here, we again have a fixed intensity profile, only that it is not a top-hat profile, but closer to a <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian</a> profile.
+Much of the power is inside the fiber core, but the wings somewhat extend beyond it (see Figure&nbsp;2).</p>
+<figure>
+<img src="img/lp01_mode.png" alt="effective mode area of Gaussian mode">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Intensity distribution of an LP<sub>01</sub> mode of a <a href="step_index_fibers.html" title="optical fibers with a step-index refractive index profile">step-index fiber</a>.
+</figcaption>
+</figure>
+<p>For the simplest extension of the model, the only change with respect to the previously discussed top-hat model is the somewhat reduced overlap of the intensity profile with the fiber core, which results in somewhat smaller values of the local gain or loss <span class="eqn_il"><i>g</i><sub><i>j</i></sub></span>.
+This reduction is often described with overlap factors <span class="eqn_il"><span class="greek">&xi;</span><sub><i>j</i></sub></span>, which can be calculated from the intensity and doping profiles.
+A more accurate technique is to divide the region of the fiber core into concentric rings, within which the optical intensities do not very that much.
+One then uses separate overlap factors and excitation levels for all the rings; more on that in <a href="tutorial_modeling5.html">section 5</a>.</p>
+<p>Of course, simulation software can take care of all that.
+In addition to the core diameter, the software needs to be supplied with information on the transverse intensity profiles of all channels.
+A flexible software such as our product <a href="fiberpower.html"><b>RP Fiber Power</b></a> offers different options:</p>
+<aside class="callout blue">Depending on the situation, different definitions of the transverse intensity profiles are required.</aside>
+<ul>
+<li>Assuming Gaussian or top-hat profiles with given beam radii is a frequently chosen option.
+(Often, the supplier of a fiber specifies a mode size which can be used here.)</li>
+<li>One can also define arbitrary intensity profiles based on mathematical expressions or tabulated values.</li>
+<li>In other cases, one may want to use intensity profiles from fiber <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a> as calculated with the <a href="fiberpower_model.html">mode solver</a>.</li>
+</ul>
+<p>In any case, the software then automatically calculates the required overlap factors.</p>
+</div>
+<h3 class="togglediv">Variable Transverse Profiles and Numerical Beam Propagation</h3>
+<div>
+<p>In some cases, one cannot assume a fixed transverse intensity profile, as that profile varies during the propagation and these variations need to be studied.
+Variations of the intensity profile may result either from changes of the fiber properties (e.g., in <a href="tapered_fibers.html" title="optical fibers which are over some length stretched out to a very small diameter">tapered fibers</a>) or through propagation effects mostly in <a href="multimode_fibers.html" title="fibers supporting more than one guided mode per polarization direction">multimode fibers</a>.
+For example, the pump intensity profile in the highly multimode pump cladding of a <a href="double_clad_fibers.html" title="optical fibers with different waveguide structures for pump and signal light">double-clad fiber</a> can develop a kind of &ldquo;hole&rdquo; around the doped core, as pump absorption occurs only in that core.
+We have discussed this phenomenon in a <a href="fiberpower_dcf.html">case study</a>, from which Figure&nbsp;2 has been taken.</p>
+<figure>
+<img src="img/fiberpower_dcf1.png" alt="amplitude distribution along the fiber">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Amplitude distribution of pump light along a double-clad fiber with a circular pump cladding. Towards the right end, a &ldquo;hole&rdquo; forms in the intensity distribution due to the absorption, which happens only in the small fiber core (near the center).
+</figcaption>
+</figure>
+<p>If propagation effects are relevant, the description of the light field must be substantially more comprehensive.
+When assuming a <a href="monochromatic_light.html" title="light with a single optical frequency">monochromatic</a> field, one needs to consider a whole transverse distribution of complex field amplitudes (for each <span class="eqn_il"><i>z</i></span> position) rather than a simple power value.
+Note that not only the optical intensities, but also the optical phases need to be considered, as these have a profound impact on the light propagation.
+(For example, curved wavefronts can cause light to diverge or converge.)
+For non-monochromatic fields, one may have to consider multiple frequency components separately.</p>
+<p>There are different numerical methods for calculating beam propagation:</p>
+<aside class="callout blue">Which numerical method for beam propagation is most efficient depends on the circumstances. For fibers, the well known split-step Fourier method is often quite suitable.</aside>
+<ul>
+<li>The well known <em>split-step Fourier method</em> treats <a href="diffraction.html" title="wave phenomena which occur when light waves hit some structure with variable transmission or phase changes">diffraction</a> effects in the spatial Fourier domain.
+Each step is relatively time-consuming, as it involves two two-dimensional Fourier transforms, but it often allows for a relatively large step size.
+It can therefore be quite efficient for weakly guiding fibers (with a small <a href="numerical_aperture.html" title="sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a>).</li>
+<li>For devices with high <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> contrast, a finite-difference method may be more appropriate, where the complex amplitude at one point is calculated only from a limited set of points in the previous plane.
+However, the calculation of the required matrices is a quite difficult subject, and usually one needs to use fairly small longitudinal step sizes.</li>
+<li>There are mode-based algorithms, which have their own limitations.</li>
+</ul>
+<aside class="callout blue">A lot of phenomena can be investigated with numerical beam propagation.</aside>
+<p>With a suitable simulation software, one can investigate a very wide range of phenomena.
+For example, one can study the effects of bending the fiber: light is coupled out into the cladding, causing <a href="bend_losses.html" title="propagation losses in an optical fiber (or other waveguide) caused by bending">bend losses</a>.
+Note that the general beam propagation algorithm allows one to study light not only in the core, but also in the cladding &ndash; with essentially arbitrary 3D profiles of the <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a>.
+Other examples are coupling losses at non-ideal fiber splices, multicore fibers, tapered fibers and fiber couplers.
+Some of these applications are in the area of passive fiber optics.</p>
+<p>For propagation through an amplifier or laser fiber, one of course needs to take into account the absorption and amplification in the fiber, including saturation effects.</p>
+<aside class="callout red">Don't waste time with numerical beam propagation in cases where simple power propagation is sufficient!</aside>
+<p>Generally, the computational effort for numerical beam propagation is far higher than for simple power propagation algorithms, as can be applied in situations with fixed transverse intensity profiles as explained above.
+Also, it is then hard to find self-consistent solutions (<a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a>) in a <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a>.
+Simulation software will often only offer single-pass propagation but not the calculation of self-consistent steady-state solutions for lasers, for example.</p>
+<p>Concerning double-clad fibers, we have seen that numerical beam propagation can be used to investigate certain pump absorption phenomena which would be overlooked in the simplified model, assuming a fixed intensity profile for the pump light (for example, a top-hat distribution).
+On the other hand, the numerical effort becomes substantially more severe.
+Therefore, in practice one has to decide whether the mentioned type of phenomena are of interest.
+If the main aspect to be studied lies in a different field &ndash; for example, phenomena related to processes within the fiber core &ndash;, one may decide to use a simplified model, being aware that the pump absorption is not very accurately modeled.
+One should keep in mind that the best model is not necessarily the most accurate one, but rather the one which is most suitable for the job to be done.</p>
+<p>Go to <a href="tutorial_modeling4.html">Part 4: Continuous-wave operation of amplifiers and lasers</a>, or back to the <a href="tutorial_modeling.html">start page</a>.</p>
+</div>
+</div>
+<hr>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="tutorial_modeling3.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Ftutorial_modeling3.html&text=RP+Photonics+Encyclopedia+-+Tutorial+%26ldquo%3BModeling+of+Fiber+Amplifiers+and+Lasers%26rdquo%3B%2C+Part+3%3A+Power+propagation+or+field+propagation+-+numerical+beam+propagation%2C+optical+powers%2C+algorithms" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Ftutorial_modeling3.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Ftutorial_modeling3.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></main></div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="https://www.dynasil.com/" data-supplier="Dynasil" data-location="banner" rel="nofollow" class="bg externallink"><img src="./bg/banners/dynasil.jpg" alt="Dynasil"></a>
+</div>
+</aside>
+<script type="text/javascript" nonce="lYLuVyttZzSia5dQmAgTOA==">shownbanner = "Dynasil";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Free Tutorial: Modeling of Fiber Amplifiers and Lasers</h2>
+<p>We have published a new <a href="./tutorial_modeling.html?banner=modeling_tutorial">tutorial</a> which discusses the modeling of fiber amplifiers and lasers.
+It addresses many questions:</p>
+<ul>
+<li>What is a <a href="./tutorial_modeling1.html?banner=modeling_tutorial">model</a>?</li>
+<li>Should one use <a href="./tutorial_modeling3.html?banner=modeling_tutorial">power propagation or field propagation</a>?</li>
+<li>How to simulate the behavior of <a href="./tutorial_modeling4.html?banner=modeling_tutorial">laser-active ions</a>?</li>
+<li>How to calculate <a href="./tutorial_modeling5.html?banner=modeling_tutorial">steady-state solutions</a>?</li>
+<li>How to simulate <a href="./tutorial_modeling6.html?banner=modeling_tutorial">dynamical behavior</a> and <a href="./tutorial_modeling7.html?banner=modeling_tutorial">ultrashort pulse propagation</a>?</li>
+<li>What aspects are important for the <a href="./tutorial_modeling8.html?banner=modeling_tutorial">decision</a> whether to develop own modeling software or use commercial software?</li>
+</ul>
+<p><a href="./tutorial_modeling.html?banner=modeling_tutorial">Read the tutorial!</a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="lYLuVyttZzSia5dQmAgTOA==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tutorials",
+      "item": "https://www.rp-photonics.com/encyclopedia_tutorials.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Modeling",
+      "item": "https://www.rp-photonics.com/tutorial_modeling.html"
+    },{
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Part 3",
+      "item": "https://www.rp-photonics.com/tutorial_modeling3.html"
+    }]}
+}
+</script>
+</body>
+</html>

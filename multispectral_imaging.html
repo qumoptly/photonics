@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-4H+BhJeHKsxEwNOV+POQQw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - multispectral imaging, operation principles, multispectral sensors, real cameras, scanning instruments, applications, Earth monitoring, environmental, military surveillance</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/multispectral_imaging.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Multispectral imaging produces images with multiple spectral channels, often going beyond the visible spectral region into the ultraviolet or infrared.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="multispectral imaging, operation principles, , scanning instruments, applications, Earth monitoring, environmental, military surveillance">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Multispectral Imaging">
+<meta property="og:description" content="Multispectral imaging produces images with multiple spectral channels, often going beyond the visible spectral region into the ultraviolet or infrared.">
+<meta property="og:url" content="https://www.rp-photonics.com/multispectral_imaging.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/multispectral_imaging.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Multispectral imaging produces images with multiple spectral channels, often going beyond the visible spectral region into the ultraviolet or infrared.">
+<meta name="twitter:title" content="Multispectral Imaging">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/multispectral_imaging.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="4H+BhJeHKsxEwNOV+POQQw==">
+page="multispectral_imaging.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="4H+BhJeHKsxEwNOV+POQQw==">shownsponsors="TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_m.html">letter M</a> &gt; <a href="multispectral_imaging.html">multispectral imaging</a></p>
+<h1>Multispectral Imaging</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_multispectral_imaging_instruments.html?s=vbox">9 suppliers for multispectral imaging instruments</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_multispectral_imaging_instruments.html?s=vbox">List of suppliers for<br>multispectral imaging instruments</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: imaging which provides images with multiple spectral channels</p>
+<p>More general term: <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">multispektrale Bildgebung</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a></p>
+<p><a href="encyclopedia_cite.html?article=multispectral%20imaging">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Multispectral imaging means methods for <a href="spectral_imaging.html" title="imaging which also provides spectral information">spectral imaging</a> where one obtains images corresponding to at least a couple of spectral channels &ndash; sometimes more than ten.
+The used spectral regions are often at least partially outside the visible spectral range, covering parts of the <a href="infrared_light.html" title="invisible light with wavelengths roughly between 750&thinsp;&thinsp;nm and 1&thinsp;&thinsp;mm">infrared</a> and <a href="ultraviolet_light.html" title="invisible light with wavelengths shorter than &asymp;&thinsp;400&thinsp;&thinsp;nm">ultraviolet</a> region.
+For example, a multi-spectral imager may provide wavelength channels for near-UV, red, green, blue, near-infrared, mid-infrared and far-infrared light &ndash; sometimes even <a href="thermal_radiation.html" title="electromagnetic radiation which results from thermal emission">thermal radiation</a> (&rarr;&nbsp;<a href="thermal_imaging.html" title="imaging based on thermal radiation">thermal imaging</a>).</p>
+<p>In principle, one might also consider color <a href="photo_cameras.html" title="optical instruments for taking photographic images">photography</a> as means for multispectral imaging, but multispectral imagers typically offer non-overlapping wavelength channels, and also typically more than three channels.</p>
+<p>While some multispectral imaging devices (also called multispectral <a href="cameras.html" title="optical instruments for recording still or moving images">cameras</a>) are used on space satellites and airplanes (see below), there are also hand-held devices as well as imaging devices installed in industrial settings, for example.</p>
+<p>Multispectral cameras are often customized for specific applications, particularly concerning the used spectral bands.</p>
+<h2 class="togglediv">Operation Principles</h2>
+<div>
+<h3 class="togglediv">Multispectral Image Sensors</h3>
+<div>
+<p>For a limited number of wavelength channels (e.g. 5 or 8), one may use a kind of <a href="image_sensors.html" title="optoelectronic sensors which can be used for imaging">image sensor</a> which for each pixel has multiple <a href="photodetectors.html" title="devices used for the detection of light">photodetectors</a>, one for each wavelength channel &ndash; similar to an RGB sensor as used in a <a href="photo_cameras.html" title="optical instruments for taking photographic images">photo camera</a>.
+While this operation principle leads to a simple optical setup, it has some limitations:</p>
+<ul>
+<li>One requires a specialized image sensor according to the required spectral channels.</li>
+<li>Each photodetector covers a certain area, and all light outside the corresponding wavelength region is lost.
+This implies a disadvantage in terms of <a href="sensitivity.html" title="(different meanings, depending on the context)">sensitivity</a>, particularly when the number of wavelength channels gets larger.</li>
+<li>It may be difficult to obtain high performance of the <a href="imaging_with_a_lens.html" title="creation of an optical image using a single lens">imaging</a> system when it needs to cover a very wide spectral region overall.</li>
+</ul>
+<p>Those regions, that technical approach is not very widespread.</p>
+</div>
+<h3 class="togglediv">Multispectral Wheel Cameras for Spectral Scanning</h3>
+<div>
+<p>One can realize spectral scanning by adding a multispectral wheel to a conventional <a href="cameras.html" title="optical instruments for recording still or moving images">camera</a> with a broadband response.
+Such a wheel contains multiple <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical bandpass filters</a> for selecting different wavelength regions.
+The wheel may be continuously rotating, or alternatively one may randomly select one filter at a time with computer control.
+This technical approach has the advantage that one can easily choose from a variety of filters, depending on the specific application.</p>
+</div>
+<h3 class="togglediv">Combination of Cameras or Image Sensors</h3>
+<div>
+<p>One may employ a combination of <a href="cameras.html" title="optical instruments for recording still or moving images">cameras</a>, for example one for visible light (with 3 or 4 channels) and one or more <a href="infrared_cameras.html" title="cameras which work with infrared light">infrared cameras</a>.
+Each of the cameras may be equipped with <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">bandpass filters</a> for limiting the sensitivity to a certain spectral region.
+Each optical system can then be optimized for the relevant spectral region, and less specialized image sensors are required.
+Disadvantages are that one requires multiple camera <a href="objectives.html" title="optical elements for collecting light from inspected objects, or for sending light to objects">objectives</a> and needs to ensure good spatial overlap of the obtained images (which is most difficult for near objects).</p>
+<p>A mixed approach is to use common optics for all wavelengths, but to separate the different wavelengths channels before sending the light to several image sensors.</p>
+</div>
+<h3 class="togglediv">Scanning Instruments</h3>
+<div>
+<p>One can also employ the principle of scanning imagers, which is most often realized for <a href="hyperspectral_imaging.html" title="imaging which provides images with an optical spectrum corresponding to each pixel">hyperspectral imaging</a>.
+The most common method is to select only image information along a line, using an <a href="optical_slits.html" title="narrow openings through which light can be transmitted">optical slit</a> in an <a href="image_planes.html" title="planes which are conjugate to an object plane, so that objects are imaged there">image plane</a>, and to disperse the different wavelength components in the direction perpendicular to that line.
+A complete image needs to be assembled by combining recordings for different orientations of the camera, the slit or the object.
+One may not necessarily assign one spectral bin to each pixel in the direction of spectral dispersion, but combine multiple pixel according to the required spectral channels.</p>
+<p>The principle of line scanning is often used with instruments in moving objects such as airplanes and satellites; it is sufficient to subsequently make recordings for one line perpendicular to the flight direction, and to assemble those to obtain complete images, which can cover large elongated areas.
+Similarly, stationary scanning instruments are used for inspecting objects on conveyor belts in industrial factories.</p>
+<p>One may alternatively use point scanning, which has the advantage that one can use a simple kind of <a href="spectrometers.html" title="devices for separating spectral components">spectrometer</a>, for example an <a href="acousto_optic_tunable_filters.html" title="acousto-optic devices which can be used for filtering light, controlled with an RF input">acousto-optic tunable filter</a>.
+However, this leads to tentatively longer acquisition times and stronger motion artifacts.</p>
+</div>
+</div>
+<h2 class="togglediv">Applications of Multispectral Imaging</h2>
+<div>
+<p>Some examples for applications of multispectral imaging are shortly explained in the following:</p>
+<ul>
+<li>Multispectral instruments on satellites are used for various kinds of Earth monitoring from space, for example for geological surveys, for environmental monitoring and for military surveillance.
+Various wavelengths channels can be used for monitoring vegetation (e.g. agricultural crops, biomass mapping), while others are useful for detecting minerals, non-authorized land use, buildings, etc.</li>
+<li>Smaller regions on Earth can be monitored with instruments on airplanes or drones, which allow for higher spatial resolutions.
+The purposes can be similar is for satellite instruments, for example monitoring the development of agricultural crops or the detection of forest fires.</li>
+<li>Space- or ground-based military installations can be used for detecting and tracking aircraft and missiles.
+Multispectral data can be beneficial to obtain more specific information on those objects.</li>
+<li>For medical diagnostics, one can take multispectral images e.g. of the skin.</li>
+<li>Some applications are in <a href="colorimetry.html" title="the science and technology of objectively measuring optical properties related to color impressions for the human eye">colorimetry</a>; it can be helpful not only to have more complete spectral information than only of RGB type.</li>
+<li>Objects with specific spectral features can be used for authentication purposes, preventing the simple use of color copiers.</li>
+</ul>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_multispectral_imaging_instruments.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 9 suppliers for multispectral imaging instruments.</p>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="multispectral_imaging.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="spectral_imaging.html" title="imaging which also provides spectral information">spectral imaging</a>, <a href="hyperspectral_imaging.html" title="imaging which provides images with an optical spectrum corresponding to each pixel">hyperspectral imaging</a><br>and other articles in the category <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/multispectral_imaging.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fmultispectral_imaging.html&text=RP+Photonics+Encyclopedia+-+multispectral+imaging%2C+operation+principles%2C+multispectral+sensors%2C+real+cameras%2C+scanning+instruments%2C+applications%2C+Earth+monitoring%2C+environmental%2C+military+surveillance" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fmultispectral_imaging.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fmultispectral_imaging.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/multispectral_imaging.html"&gt;<br>Article on Multispectral Imaging&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/multispectral_imaging.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/multispectral_imaging.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/multispectral_imaging.html<br>article on 'Multispectral Imaging' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2 style="font-size:20px;">Debugging Is Now Fun!</h2>
+<p>The software products which are supporting our <a href="./software_script_language.html?banner=Debugger">script language</a> (e.g. <a href="./fiberpower.html?banner=Debugger">RP Fiber Power</a> and <a href="./coating.html?banner=Debugger">RP Coating</a>) have now got a <a href="./software_news_2017_05_31.html?banner=Debugger">powerful debugger</a>!</p>
+<a href="./software_news_2017_05_31.html?banner=Debugger"><img src="./img/expression_debugger_small.png" alt="debugger" style="margin:10px 0;"></a>
+<p>It works even within expressions, not only after each command!</p>
+<p>The <a href="./software_news.html?banner=Debugger">RP Photonics Software News</a> keep you informed.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="4H+BhJeHKsxEwNOV+POQQw==">shownbanner = "Debugger";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Fighting Fraud in Science</h2>
+<p>We occasionally read about scientific fraud &ndash; things like fabricated measurement results &ndash; which is utterly unfair and also undermines the trust of the public in science and its results.</p>
+<p>How to fight that problem?</p>
+<ul>
+<li>Do we need to tell young scientists more clearly that fraud is evil?</li>
+<li>Do supervisors have to stop trusting the results of their coworkers?</li>
+<li>Does the pressure to produce results inevitably favor fraud?</li>
+<li>Where exactly lies the responsibility, if something goes wrong?</li>
+</ul>
+<p>Our <a href="./spotlight_2009_10_19.html?banner=science_fraud">Photonics Spotlight article on science fraud</a> analyzes that carefully.
+It suggests that <b>the risk of fraud is close to zero where supervisors do a responsible job</b>.
+Relations to a more widespread problem &ndash; <b>corrupt authorship practices</b> &ndash; are also identified.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="4H+BhJeHKsxEwNOV+POQQw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/multispectral_imaging.html"
+    },
+    "headline": "Multispectral Imaging",
+    "image": "https://www.rp-photonics.com/previews/multispectral_imaging.png",
+    "datePublished": "2019-06-30",
+    "dateModified": "2020-03-14",
+    "description": "Multispectral imaging produces images with multiple spectral channels, often going beyond the visible spectral region into the ultraviolet or infrared.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter M",
+      "item": "https://www.rp-photonics.com/encyclopedia_m.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "multispectral imaging",
+      "item": "https://www.rp-photonics.com/multispectral_imaging.html"
+    }]}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-SMgHRsH60whJEy55TDuIRg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>The software RP Fiber Power: tapered fiber</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/fiberpower_tapered_fiber.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-05-22">
+<meta name="description" content="Light propagation in a tapered fiber is investigated with numerical beam propagation. The power loss in the taper is strongly mode-dependent.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="RP Fiber Power, simulation, design, software, model, tapered fiber">
+<script type="text/javascript" src="./jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" nonce="SMgHRsH60whJEy55TDuIRg==">
+page="fiberpower_tapered_fiber.html?banner=RP_Fiber_Power_5"; cat="S"; shownbanner=""; ref="http://www.rp-photonics.com/optical_metrology.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td class="selected"><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="fiberpower_tapered_fiber_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software_start" href="software.html">Introduction</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<p>Products:</p>
+<a id="Overview" href="software_overview.html">Overview</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html" class="sel">RP Fiber Power</a>
+<a href="fiberpower_features.html" class="sub">Features</a>
+<a href="fiberpower_speed.html" class="sub">Speed</a>
+<a href="fiberpower_model.html" class="sub">Model</a>
+<a href="fiberpower_data.html" class="sub">Data</a>
+<a href="fiberpower_interface.html" class="sub">Interface</a>
+<a href="fiberpower_case_studies.html" class="sub sel">Demos</a>
+<a href="fiberpower_versions.html" class="sub">Versions</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<p>Various aspects:</p>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<p>Take action:</p>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main"><main>
+<div class="softwarelogo">
+<p class="fig" style="margin-top:12px"><img src="img/fiberpower_logo.png" width="75" height="75" alt="RP Fiber Power logo"></p>
+</div>
+<p class="breadcrumbs"><a href="software.html">Software</a> &gt; <a href="fiberpower.html">RP Fiber Power</a> &gt; <a href="fiberpower_case_studies.html">Demo</a> &gt; <a href="fiberpower_tapered_fiber.html">Tapered fiber</a></p>
+<h1>RP Fiber Power &ndash; Simulation and Design Software <br> for Fiber Optics, Amplifiers and Fiber Lasers</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower.html">Overview</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_features.html">Features</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_speed.html">Speed</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_model.html">Model</a></td>
+</tr><tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_data.html">Data</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_interface.html">Interface</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="fiberpower_case_studies.html">Demos</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_versions.html">Versions</a></td>
+</tr>
+</table>
+<h2>Example Case: Tapered Fiber</h2>
+<p>Here we investigate how light propagates in <a href="tapered_fibers.html" title="optical fibers which are over some length stretched out to a very small diameter">tapered fibers</a>, i.e., fibers which have been heated and stretched such that the core dimension is reduced in some taper region.</p>
+<h3>Description of the Model</h3>
+<p>The reduction in fiber diameter is described with a simple function:</p>
+<pre class="codedisplay">
+t_min := 0.5
+t(z) := t_min + (1 - t_min) * 0.5 * (1 + cos(1 * 2pi * z / z_max))
+</pre>
+<p>When we later define the refractive index profile, we can easily use that function to modify a predefined two-dimensional function:</p>
+<pre class="codedisplay">
+  bp_set_n_z('n_f(sqrt(x^2 + y^2) / t(z))', 'z'); { index profile }
+</pre>
+<p>The numerical resolution needs to be chosen such that cladding modes are realistically modeled, because we must expect that some light is lost from the core in the tapered region.</p>
+<h3>Results</h3>
+<p>Initially, we assume a single-mode step-index fiber.
+The incident light is assumed to be fully in the guided mode (the LP<sub>01</sub> mode) of the fiber.
+Figure&nbsp;1 shows the amplitude distribution along the fiber.
+The gray curves illustrate the taper, reducing the fiber diameter in the middle by 50&#37;.
+The red curve shows about 13&#37; of the optical power are lost.
+This is because the LP<sub>01</sub> becomes quite weakly guided in the taper region, and the taper is a bit too fast for an adiabatic transition.</p>
+<figure>
+<img src="img/fiberpower_tapered_fiber1.png" alt="amplitude distribution along the fiber">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Amplitude distribution along the fiber.
+</figcaption>
+</figure>
+<p>Figure&nbsp;2 shows how various parameters evolve.
+Three different measures are used for the beam size:</p>
+<ul>
+<li>The beam radius calculated from the second moment of the intensity distribution.
+(The software offers a predefined function for that.)
+That value increases substantially in the taper region.</li>
+<li>The beam radius can also be calculated from the <a href="effective_mode_area.html" title="a quantitative measure of the area which a waveguide or fiber mode effectively covers in the transverse dimensions">effective area</a>, which is an entirely different definition.
+That value would be relevant for judging how strong nonlinear effects could be.
+It also increases in the taper region, but less strongly.</li>
+<li>The half width at half maximum (HWHM) of the intensity distribution.
+(Such a function can be user-defined easily with a few lines of script code.)
+That kind of beam radius even decreases a little in the taper region, at least initially, and overall shows only little variation.
+Note that it does not take into account the long &ldquo;tails&rdquo; of the intensity distributions of weakly guided modes.</li>
+</ul>
+<figure>
+<img src="img/fiberpower_tapered_fiber2.png" alt="amplitude distribution along the fiber">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Evolution of beam parameters along the fiber.
+</figcaption>
+</figure>
+<p>In a second simulation, we assume a fiber with doubled numerical aperture (0.2 instead of 0.1).
+That more strongly guiding fiber also supports LP<sub>11</sub> modes &ndash; but not in the tapered region.
+If we launch the initial beam into the LP<sub>01</sub> mode (as above), it can &ldquo;survive&rdquo; the tapered region without substantial losses, as it is guided quite strongly &ndash; see Figure&nbsp;3.
+The beam size (not shown here) undergoes only quite moderate changes.</p>
+<figure>
+<img src="img/fiberpower_tapered_fiber3.png" alt="amplitude distribution along the fiber">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Amplitude distribution along the fiber with higher numerical aperture.
+</figcaption>
+</figure>
+<p>If we launch into the LP<sub>11</sub> mode, the light is entirely lost in the taper region, as seen in Figure&nbsp;4:</p>
+<figure>
+<img src="img/fiberpower_tapered_fiber4.png" alt="amplitude distribution along the fiber">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Amplitude distribution along the fiber for launching into the LP<sub>11</sub> mode.
+</figcaption>
+</figure>
+<p>One sees in Figure&nbsp;4 that reflections from the edges of the grid &ndash; a numerical artifact &ndash; are not completely suppressed.
+This, however, is no problem for the purpose of this investigation; only the detailed curve for the power drop and the calculated 0.1&#37; transmission for the LP<sub>11</sub> mode are not accurate &ndash; the latter should be essentially zero.</p>
+<p>(<a href="fiberpower_case_studies.html">back to the list of example cases</a>)</p>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</main></div>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="SMgHRsH60whJEy55TDuIRg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Software",
+      "item": "https://www.rp-photonics.com/software.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "RP Fiber Power",
+      "item": "https://www.rp-photonics.com/fiberpower.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Demo",
+      "item": "https://www.rp-photonics.com/fiberpower_case_studies.html"
+    },{
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Tapered fiber",
+      "item": "https://www.rp-photonics.com/fiberpower_tapered_fiber.html"
+    }]}
+}
+</script>
+</body>
+</html>

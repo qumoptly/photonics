@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-129fCl4KRPOFPjA1W7CXcQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>The thin-film software RP Coating - demo file: dual-wavelength anti-reflection coating</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/coating_demo_ar.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-05-22">
+<meta name="description" content="A dual-wavelength anti-reflection coating is designed with numerical optimization.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="RP Coating, modeling, software, optical multilayer structures, demo files">
+<script type="text/javascript" src="./jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" nonce="129fCl4KRPOFPjA1W7CXcQ==">
+page="coating_demo_ar.html"; cat="S"; shownbanner=""; ref="http://www.rp-photonics.com/coating.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td class="selected"><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="coating_demo_ar_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software_start" href="software.html">Introduction</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<p>Products:</p>
+<a id="Overview" href="software_overview.html">Overview</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html" class="sel">RP Coating</a>
+<a href="coating_purpose.html" class="sub">Purpose</a>
+<a href="coating_model.html" class="sub">Model</a>
+<a href="coating_interface.html" class="sub">Interface</a>
+<a href="coating_demos.html" class="sub sel">Demos</a>
+<a href="coating_versions.html" class="sub">Versions</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<p>Various aspects:</p>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<p>Take action:</p>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="software.html">Software</a> &gt; <a href="coating.html">RP Coating</a> &gt; <a href="coating_demos.html">Demo cases</a> &gt; <a href="coating_demo_ar.html">AR Coatings</a></p>
+<h1>RP Coating &ndash; Advanced Software for<br>Designing Optical Multilayer Structures</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="coating.html">Overview</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_purpose.html">Purpose</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_model.html">Model</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_interface.html">Interface</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="coating_demos.html">Demos</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_versions.html">Versions</a></td>
+</tr>
+</table>
+<h2 class="togglediv">Demo File: Anti-reflection Coatings</h2>
+<div>
+<p>This demo file provides a <a href="software_custom_forms.html">custom form</a> with which one can easily design <a href="anti_reflection_coatings.html" title="optical thin-film coatings for reducing reflections from surfaces">anti-reflection coatings</a>.
+You simply enter the following in the form:</p>
+<ul>
+<li>choice of materials (substrate and layer structure)</li>
+<li class="ta_left">requirements: maximum three wavelength, for which the reflectivity should be minimized, a bandwidth, angle of incidence and polarization</li>
+<li class="ta_left ta_left">numerical parameters: maximum number of random trials (Monte Carlo method) etc.</li>
+</ul>
+<figure>
+<img src="img/coating_form_ar_coating.png" alt="form for designing anti-reflection coatings">
+</figure>
+<p>The first diagram shows the reflection spectrum of the optimized structure:</p>
+<figure>
+<img src="img/coating_demo_ar1.png" alt="reflectivity spectrum of anti-reflection coating">
+</figure>
+<p>A second diagram shows the reflectivity as a function of wavelength and angle of incidence:</p>
+<figure>
+<img src="img/coating_demo_ar2.png" alt="reflectivity spectrum of anti-reflection coating">
+</figure>
+<p>As we are using a <a href="software_custom_forms.html">custom form</a>, both the form and the underlying calculations can be modified by the user according to specific requirements.</p>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</main></div>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="129fCl4KRPOFPjA1W7CXcQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Software",
+      "item": "https://www.rp-photonics.com/software.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "RP Coating",
+      "item": "https://www.rp-photonics.com/coating.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Demo cases",
+      "item": "https://www.rp-photonics.com/coating_demos.html"
+    },{
+      "@type": "ListItem",
+      "position": 4,
+      "name": "AR Coatings",
+      "item": "https://www.rp-photonics.com/coating_demo_ar.html"
+    }]}
+}
+</script>
+</body>
+</html>

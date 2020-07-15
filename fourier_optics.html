@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-PENYyKjCXe04RSqTlw4tEg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Fourier optics, spatial Fourier transforms, decomposition into plane waves, transfer function, far field, numerical beam propagation</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/fourier_optics.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Spatial Fourier transforms are widely used in wave optics for calculating the propagation of light, both with analytical and numerical methods.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="Fourier optics, spatial Fourier transforms, decomposition into plane waves, transfer function, far field, numerical beam propagation">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fourier Optics">
+<meta property="og:description" content="Spatial Fourier transforms are widely used in wave optics for calculating the propagation of light, both with analytical and numerical methods.">
+<meta property="og:url" content="https://www.rp-photonics.com/fourier_optics.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/fourier_optics.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Spatial Fourier transforms are widely used in wave optics for calculating the propagation of light, both with analytical and numerical methods.">
+<meta name="twitter:title" content="Fourier Optics">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/fourier_optics.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="PENYyKjCXe04RSqTlw4tEg==">
+page="fourier_optics.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> <a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo sponsor"></a> <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="PENYyKjCXe04RSqTlw4tEg==">shownsponsors="eagleyard Photonics,EKSMA OPTICS,Knight Optical,TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_f.html">letter F</a> &gt; <a href="fourier_optics.html">Fourier optics</a></p>
+<h1>Fourier Optics</h1>
+<header style="margin-right:0;">
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: the description of light propagation based on transverse spatial Fourier transforms</p>
+<p>More general term: <a href="optics.html" title="the science and technology dealing with the properties and the propagation of light">optics</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Fourier-Optik</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a></p>
+<p><a href="encyclopedia_cite.html?article=Fourier%20optics">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>In <a href="wave_optics.html" title="the description of optical phenomena based on wave models">wave optics</a>, one often applies mathematical methods which include transverse spatial Fourier transforms, and are thus called methods of <em>Fourier optics</em>.
+The corresponding calculations, which often involve one-dimensional or two-dimensional integrals, can sometimes be done with purely analytical means.
+Fourier methods are also widely used for numerical computations.</p>
+<p>The purpose of Fourier optics is essentially to calculate and analyze how <a href="light.html" title="electromagnetic radiation in the visible spectral range, or sometimes in an extended spectral region">light</a> propagates e.g. in optical instruments like <a href="microscopes.html" title="instruments for seeing very small objects">microscopes</a>, taking into account its wave nature (in contrast to <a href="geometrical_optics.html" title="a concept of optics which is based on the propagation of light rays, ignoring wave properties of light">geometrical optics</a>).
+Both <a href="refraction.html" title="the change of the propagation direction when a wave comes from one medium into another one">refractive</a> and <a href="diffractive_optics.html" title="optical elements with operation principles based on diffraction of light">diffractive optics</a> can be investigated with Fourier optics.
+Such methods are mostly restricted to situations where light propagates essentially in one direction; however, the <a href="paraxial_approximation.html" title="a frequently used approximation, essentially assuming small angular deviations of the propagation directions from some beam axis">paraxial approximation</a> (substantially limiting the angular range) is often not required, and certain extensions for bidirectional propagation are also possible.
+Therefore, Fourier optics is applicable to a wide range of cases of practical interest.</p>
+<p>Various central results of Fourier optics, some of which are explained in this introductory article, are highly useful for developing a deeper qualitative understanding of light propagation.
+Besides, for you optics methods allow for accurate quantitative calculations in many cases &ndash; particularly when using numerical tools.</p>
+<h2 class="togglediv">General Principles</h2>
+<div>
+<aside class="callout blue">Look at one wavelength at a time.</aside>
+<p>Fourier optics calculations are often made for <a href="monochromatic_light.html" title="light with a single optical frequency">monochromatic light</a>.
+For applications with <a href="polychromatic_light.html" title="light with multiple optical frequencies">polychromatic light</a>, one will often simply do the corresponding calculations for a set of optical <a href="wavelength.html" title="the spatial period of a plane wave">wavelengths</a> which can be considered as representative.</p>
+<aside class="callout blue">Describe light with complex amplitudes.</aside>
+<p>The monochromatic light is usually described with complex amplitudes, containing information both on amplitude and phase of the electrical installation.
+Frequently, one uses a purely scalar wave model, ignoring aspects like <a href="polarization_of_light.html" title="direction of the electric field oscillation of a light beam">polarization</a>.</p>
+<aside class="callout blue">Consider light fields in planes.</aside>
+<p>The complex amplitudes are often considered in planes perpendicular to the optical axis of a system.
+Input light is described by amplitudes in some input plane, e.g. at <span class="eqn_il"><i>z</i></span> = 0, and the output may be the resulting amplitude distribution at some larger <span class="eqn_il"><i>z</i></span> value, e.g. corresponding to a position behind an optical instrument.
+Alternatively, one may calculate the <a href="near_field_and_far_field.html" title="the optical field either close to a source or object or far from it">far field</a> distribution with angles instead of positions as coordinates.</p>
+</div>
+<h2 class="togglediv">Decomposition into Plane Waves</h2>
+<div>
+<p>The light field in a particular plane may be described with complex amplitudes <span class="eqn_il"><i>A</i>(<i>x</i>,&thinsp;<i>y</i>)</span>, where the coordinates <span class="eqn_il"><i>x</i></span> and <span class="eqn_il"><i>y</i></span> are zero on the optical axis.
+Those amplitudes may represent, for example, the <span class="eqn_il"><i>x</i></span> or <span class="eqn_il"><i>y</i></span> component of the electric field.
+The application of a spatial Fourier transform in two dimensions (<span class="eqn_il"><i>x</i></span> and <span class="eqn_il"><i>y</i></span>) leads to the Fourier-space amplitude field <span class="eqn_il"><i>A</i><sub>F</sub>(<span class="greek">&nu;</span><sub><i>x</i></sub>,&thinsp;<span class="greek">&nu;</span><sub><i>y</i></sub>)</span>, where <span class="eqn_il"><span class="greek">&nu;</span><sub><i>x</i></sub></span> and <span class="eqn_il"><span class="greek">&nu;</span><sub><i>y</i></sub></span> are <em>transverse spatial frequencies</em>, indicating the number of oscillation cycles per unit length.</p>
+<p>The spatial frequencies can then be associated with the Cartesian components of the <a href="wave_vector.html" title="a vector indicating the direction of wave propagation and the phase delay per unit length">wave vector</a>:</p>
+<div class="eqn"><img src="eqn/k_xy.gif" width="158" height="25" alt="wave vector and spatial frequencies"></div>
+<p>From those components, one can calculate the <span class="eqn_il"><i>z</i></span> component of the wave vector:</p>
+<div class="eqn"><img src="eqn/k_z.gif" width="141" height="36" alt="z component of wave vector"></div>
+<p>where <span class="eqn_il"><i>k</i>&thinsp;=&thinsp;2<span class="greek">&pi;</span>&thinsp;/&thinsp;<span class="greek">&lambda;</span></span> is the magnitude of the wave vector, which is independent of propagation direction in free space or in an isotropic <a href="optical_materials.html" title="materials used for optical components">optical material</a>.</p>
+<p>We have taken a positive sign, assuming propagation of light in the positive <span class="eqn_il"><i>z</i></span> direction.
+Further, one usually assumes that the spatial frequencies are small enough for the term under the square root to be positive.
+Otherwise, one would obtain an imaginary wave vector component, describing an exponentially rising or decaying amplitude, as obtained e.g. for evanescent waves.</p>
+<p>Essentially, the spatial Fourier transform provides a decomposition of the light field into <a href="plane_waves.html" title="waves with plane wavefronts">plane waves</a>, which have a continuous spectrum of propagation directions but all have the same magnitude according to the chosen wavelength.</p>
+</div>
+<h2 class="togglediv">Transfer Function of Free Space</h2>
+<div>
+<p>The propagation of light in free space is easily described, because the Fourier transform delivers a superposition of plane waves, and those are <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a> of free space.
+(The same holds for propagation in a homogeneous optical media with a certain <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a>; one can just do the same calculations, taking the wavelength in the medium instead of the vacuum wavelength.)
+For a propagation distance <span class="eqn_il"><i>d</i></span>, the resulting phase shift of each plane wave is simply <span class="eqn_il"><i>k</i><sub><i>z</i></sub>&thinsp;<i>z</i></span>.
+(Some authors use the opposite sign convention, resulting in the opposite sign also for all phase terms in the following.)
+Therefore, the transfer function of free space for a propagation distance <span class="eqn_il"><i>d</i></span> is:</p>
+<div class="eqn"><img src="eqn/tf_free_space.gif" width="258" height="53" alt="transfer function of free space"></div>
+<p>While this is easy to handle in numerical calculations, for analytical calculations it is often necessary to apply an approximation in order to get a simpler term.
+One frequently applies the <em>Fresnel approximation</em> with the underlying assumption</p>
+<div class="eqn"><img src="eqn/fresnel_approx.gif" width="94" height="28" alt="Fresnel approximation"></div>
+<p>and obtains (approximately)</p>
+<div class="eqn"><img src="eqn/tf_free_space_fresnel.gif" width="509" height="53" alt="free-space transfer function with Fresnel approximation"></div>
+<p>The constant term is often ignored, if it is irrelevant for the application.</p>
+<p>The calculation of the resulting amplitudes after some propagation distance is then simple:</p>
+<ul>
+<li>Apply a spatial Fourier transform to the amplitudes.</li>
+<li class="ta_left">Multiply the result with the given transfer function.</li>
+<li class="ta_left">Apply an inverse spatial Fourier transform if the results are needed in real space.</li>
+</ul>
+<p>In simple cases, this can be done with analytical means, sometimes leading to fairly simple equations as found in many textbooks.</p>
+</div>
+<h2 class="togglediv">Effects of Optical Elements</h2>
+<div>
+<p>The effect of optical elements can often be described (with some simplification) as a multiplication of the amplitudes with spatially dependent real or complex factors:</p>
+<ul>
+<li>A hard aperture may be defined with a transmission function <span class="eqn_il"><i>t</i><sub>ap</sub>(<i>x</i>,&thinsp;<i>y</i>)</span> which only has values 0 and 1.
+For a soft aperture, the function values can vary continuously.</li>
+<li>Similarly, one may treat cases with <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> e.g. in a laser <a href="gain_media.html" title="media for laser amplification">gain medium</a>.</li>
+<li>A thin <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lens</a> can be described with a complex phase factor which varies in proportion to the square of the distance from the optical axis (ignoring a constant offset as well as the finite size of the lens):</li>
+</ul>
+<div class="eqn"><img src="eqn/tf_lens.gif" width="226" height="48" alt="phase factor for a thin lens"></div>
+<ul>
+<li>A <a href="diffraction_gratings.html" title="optical components containing a periodic structure which diffracts light">diffraction grating</a> is described with a periodically varying phase factor.
+There may be an approximately sinusoidal oscillation for a holographic grating or a more complicated oscillating function (having several harmonics) for a ruled grating.</li>
+</ul>
+<p>Again, analytical solutions are known for certain simple situations, at least for the far field (see below) &ndash; for example for calculating the diffraction patterns for single or multiple slits or for circular apertures.</p>
+<p>For calculating the effect of a sequence of optical elements with air spaces in between, one can do the propagation step by step, applying spatial Fourier transforms as needed to switch between real and Fourier space.
+Only, one may then soon leave the area where analytical solutions are available.</p>
+</div>
+<h2 class="togglediv">The Far Field</h2>
+<div>
+<p>Sometimes, one is interested in the <a href="near_field_and_far_field.html" title="the optical field either close to a source or object or far from it">far field</a>, i.e., in the light field after a large propagation distance, where the angular intensity distributions stays approximately constant.
+The angular field distribution can easily be calculated from the Fourier-transformed spatial field distribution; one only needs to properly scale the angles to obtain the corresponding spatial frequencies:</p>
+<div class="eqn"><img src="eqn/far_field_from_a_f.gif" width="200" height="44" alt="far field"></div>
+<p>By taking the squared modulus of those amplitudes, one obtains the far field intensity profile.</p>
+<p>It is thus not necessary to propagate the field over a large distance to approximate the far field; instead, one can simply compute the Fourier-transformed amplitude field and calculate the far field from that.
+The mentioned result can be proven using the <em>Fraunhofer approximation</em>, for example.</p>
+</div>
+<h2 class="togglediv">Fourier Planes</h2>
+<div>
+<p>Another interesting finding is that one obtains a so-called Fourier plane in a distance of one <a href="focal_length.html" title="a measure of how strongly an optical system focuses or defocuses light">focal length</a> after a thin <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lens</a> (i.e., in the back <a href="focal_points_and_focal_planes.html" title="points to which parallel input rays are concentrated by an optical system, and the planes going through those points">focal plane</a>), assuming a quadratic phase profile as given above.
+Each position in that plane corresponds to a certain spatial frequency of the input field (before the lens), more precisely to certain values of <span class="eqn_il"><span class="greek">&nu;</span><sub><i>x</i></sub></span> and <span class="eqn_il"><span class="greek">&nu;</span><sub><i>y</i></sub></span>.</p>
+<p>As the spatial Fourier transform reveals the far field distribution, as explained above, it is apparent that by using a lens one can reveal that pattern without applying a large propagation distance.</p>
+<p>By placing an <a href="optical_apertures.html" title="structures which limit the propagation of light">optical aperture</a> in a Fourier plane, one can effectively modulate the spatial frequency spectrum.
+For example, with a circular aperture centered on the optical axis, one can implement a low-pass filter, transmitting only components with sufficiently low spatial frequencies.
+(That is the operation principle of some <a href="mode_cleaners.html" title="devices which can improve the beam quality of laser beams">mode cleaners</a>.)
+With a second lens, one can transform back into real space.</p>
+<p>Note that the finite size of a lens also introduces an aperture and therefore some low-pass filtering.
+This is what limits the spatial resolution of a <a href="microscope_objectives.html" title="the optical component of a microscope which is next to the observed object">microscope objective</a>, for example.
+Therefore, a Fourier plane in a strict sense cannot be realized with lenses of finite size: each spatial frequency component causes a spot of finite size in the focal plane.
+On the other hand, the finite size does not matter in practice if the input beams are anyway restricted to a smaller spatial region.</p>
+</div>
+<h2 class="togglediv">Numerical Beam Propagation</h2>
+<div>
+<p>It is conceptually relatively simple to implement a numerical beam propagation algorithm based on Fourier optics:</p>
+<ul>
+<li>Every field distribution in a plane is represented by a regular a array of field amplitudes, which should cover a sufficiently large area (somewhat beyond the area where significant fields can occur).
+Further, the spacing of the grid points should be small enough to provide the required spatial resolution.
+Note that spatial resolution is directly linked to the possible range of spatial frequencies or propagation angles.</li>
+<li>One can apply a two-dimensional Fast Fourier Transform (FFT) algorithm for efficient computations.
+This works best if the number of grid points in each direction is a power of 2.</li>
+<li>An air space between two optical components can be bridged with just one Fourier transform and inverse transform, no matter how large the spacing is.
+Only if the field distributions at intermediate places are of interest, additional Fourier transforms need to be used.</li>
+</ul>
+<p>Additional difficulties arise in cases where one needs to propagate fields through inhomogeneous items.
+For example, for light propagation in an optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fiber</a> one needs to take into account the refractive index profile around the <a href="fiber_core.html" title="the region in an optical fiber which guides light">fiber core</a> and possibly even at the age of the <a href="fiber_cladding.html" title="the area(s) around the core of an optical fiber">fiber cladding</a>.
+For such cases, one may apply a <em>split-step Fourier technique</em>, where one alternatingly simulates the effects of diffraction (in Fourier space) and of the refractive index profile (in real space).
+A high numerical accuracy requires the choice of a sufficiently small step size.
+Computation times can be long for propagation over long distances with a small step size, particularly if the required amplitude grids are large.
+Therefore, one sometimes applies additional tricks which allow one to strongly restrict the covered spatial area.</p>
+<p>It is possible to study <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulse</a> propagation, particularly in the linear regime.
+Here, one needs to perform Fourier optics calculations for many wavelength components of a pulse.
+The results can be assembled to describe the propagation of the whole pulse.
+Such calculations can quickly become rather time- and memory intensive, however.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="fourier_optics.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">A. E. Siegman, <i>Lasers</i>, University Science Books, Mill Valley, CA (1986)</td></tr>
+<tr><td class="refno">[2]</td><td class="refs">B. E. A. Saleh and M. C. Teich, <i>Fundamentals of Photonics</i>, John Wiley &amp; Sons, Inc., New York (1991)</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="wave_optics.html" title="the description of optical phenomena based on wave models">wave optics</a>, <a href="plane_waves.html" title="waves with plane wavefronts">plane waves</a>, <a href="near_field_and_far_field.html" title="the optical field either close to a source or object or far from it">near field and far field</a><br>and other articles in the category <a href="categories.html#general_optics" title="other articles on general optics">general optics</a></p>
+<hr style="margin-top:16px; margin-bottom:12px;">
+<a href="paschotta.html"><img src="img/paschotta3_small.jpg" alt="Dr. R. Paschotta" style="float:left; margin:0px 16px 20px 18px;" width="80" height="97"></a>
+<div style="margin-bottom:12px;">
+<p style="font-size:90%; line-height:20px; padding-right:20px;">This encyclopedia is authored by <a href="paschotta.html" class="redlink">Dr. Rüdiger Paschotta</a>, the founder and executive of <a href="index.html" class="redlink">RP Photonics Consulting GmbH</a>.
+How about a <a href="training.html" class="redlink">tailored training course</a> from this distinguished expert at your location?
+<a href="contact.html" class="redlink">Contact</a> RP Photonics to find out how his <a href="./services.html" class="redlink">technical consulting services</a> (e.g. product designs, problem solving, independent evaluations, training) and <a href="software.html" class="redlink">software</a> could become very valuable for your business!</p>
+</div>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/fourier_optics.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Ffourier_optics.html&text=RP+Photonics+Encyclopedia+-+Fourier+optics%2C+spatial+Fourier+transforms%2C+decomposition+into+plane+waves%2C+transfer+function%2C+far+field%2C+numerical+beam+propagation" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Ffourier_optics.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Ffourier_optics.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/fourier_optics.html"&gt;<br>Article on Fourier Optics&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/fourier_optics.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/fourier_optics.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/fourier_optics.html<br>article on 'Fourier Optics' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Traffic on this Website</h2>
+<p>This website is enormously popular. The page views of the <span style="color:#B20B28; font-weight:bold;">encyclopedia</span> and the <span style="color:#4820DD; font-weight:bold;">buyer's guide</span> in the last 12 months:</p>
+<table class="traffictable">
+<tr><th>Month&nbsp;&nbsp;</th><th colspan="2">Page views</th></tr>
+<tr><td>2019-07</td><td style="width:30px; text-align:right;">207,953&nbsp;</td><td><div style="width:74px; background-color:#B20B28; float:left;"></div><div style="width:9px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2019-08</td><td style="width:30px; text-align:right;">199,700&nbsp;</td><td><div style="width:71px; background-color:#B20B28; float:left;"></div><div style="width:8px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2019-09</td><td style="width:30px; text-align:right;">232,582&nbsp;</td><td><div style="width:84px; background-color:#B20B28; float:left;"></div><div style="width:9px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2019-10</td><td style="width:30px; text-align:right;">269,144&nbsp;</td><td><div style="width:97px; background-color:#B20B28; float:left;"></div><div style="width:10px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2019-11</td><td style="width:30px; text-align:right;">282,278&nbsp;</td><td><div style="width:104px; background-color:#B20B28; float:left;"></div><div style="width:9px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2019-12</td><td style="width:30px; text-align:right;">237,826&nbsp;</td><td><div style="width:86px; background-color:#B20B28; float:left;"></div><div style="width:9px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2020-01</td><td style="width:30px; text-align:right;">222,178&nbsp;</td><td><div style="width:79px; background-color:#B20B28; float:left;"></div><div style="width:10px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2020-02</td><td style="width:30px; text-align:right;">225,389&nbsp;</td><td><div style="width:80px; background-color:#B20B28; float:left;"></div><div style="width:10px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2020-03</td><td style="width:30px; text-align:right;">222,647&nbsp;</td><td><div style="width:80px; background-color:#B20B28; float:left;"></div><div style="width:9px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2020-04</td><td style="width:30px; text-align:right;">239,946&nbsp;</td><td><div style="width:87px; background-color:#B20B28; float:left;"></div><div style="width:9px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2020-05</td><td style="width:30px; text-align:right;">236,587&nbsp;</td><td><div style="width:85px; background-color:#B20B28; float:left;"></div><div style="width:10px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2020-06</td><td style="width:30px; text-align:right;">219,899&nbsp;</td><td><div style="width:78px; background-color:#B20B28; float:left;"></div><div style="width:10px; background-color:#4820DD; float:left;"></div></td></tr>
+</table>
+<p>Total: <b>2,796,129 page views</b> within 12 months.</p>
+<p>See also our <a href="./website_statistics.html?banner=web_traffic">detailed published data</a>. They are no surprise in the light of the <a href="./website_search_engines.html?banner=web_traffic">extraordinary Google ranking</a>.</p>
+<p>Obviously, it would be a good idea to <a href="./marketing.html?banner=web_traffic">advertise your photonics products</a> on this site &ndash; with <a href="./bg_entries.html?banner=web_traffic">enhanced entries in the buyer's guide</a> and with <a href="./marketing_banners.html?banner=web_traffic">banners</a> at this place here.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="PENYyKjCXe04RSqTlw4tEg==">shownbanner = "web traffic";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Latest Encyclopedia Articles</h2>
+<p>Here are the latest encyclopedia articles:</p>
+<ul>
+<li class="tight"><a href="./variable_reflectivity_mirrors.html">variable reflectivity mirrors</a></li>
+<li class="tight"><a href="./color_centers.html">color centers</a></li>
+<li class="tight"><a href="./excimer_lamps.html">excimer lamps</a></li>
+<li class="tight"><a href="./multimode_beams.html">multimode beams</a></li>
+<li class="tight"><a href="./channel_waveguides.html">channel waveguides</a></li>
+<li class="tight"><a href="./optical_crystals.html">optical crystals</a></li>
+<li class="tight"><a href="./standing_wave_resonators.html">standing-wave resonators</a></li>
+<li class="tight"><a href="./nonlinear_absorption.html">nonlinear absorption</a></li>
+<li class="tight"><a href="./passive_fibers.html">passive fibers</a></li>
+<li class="tight"><a href="./active_fibers.html">active fibers</a></li>
+<li class="tight"><a href="./oem_laser_modules.html">OEM laser modules</a></li>
+<li class="tight"><a href="./industrial_lasers.html">industrial lasers</a></li>
+<li class="tight"><a href="./scientific_lasers.html">scientific lasers</a></li>
+<li class="tight"><a href="./flint_glasses.html">flint glasses</a></li>
+<li class="tight"><a href="./crown_glasses.html">crown glasses</a></li>
+<li class="tight"><a href="./sodium_vapor_lamps.html">sodium vapor lamps</a></li>
+<li class="tight"><a href="./metal_vapor_lamps.html">metal vapor lamps</a></li>
+<li class="tight"><a href="./mercury_vapor_lamps.html">mercury vapor lamps</a></li>
+<li class="tight"><a href="./white_light.html">white light</a></li>
+<li class="tight"><a href="./cie_standard_illuminants.html">CIE standard illuminants</a></li>
+</ul>
+
+<p>The encyclopedia already contains 948 articles.</p>
+<p>See also the regularly appearing articles of the <a href="./spotlight.html?banner=new_articles">The Photonics Spotlight</a> and the <a href="./software_news.html?banner=new_articles">RP Photonics Software News</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="PENYyKjCXe04RSqTlw4tEg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/fourier_optics.html"
+    },
+    "headline": "Fourier Optics",
+    "image": "https://www.rp-photonics.com/previews/fourier_optics.png",
+    "datePublished": "2019-05-16",
+    "dateModified": "2020-03-14",
+    "description": "Spatial Fourier transforms are widely used in wave optics for calculating the propagation of light, both with analytical and numerical methods.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter F",
+      "item": "https://www.rp-photonics.com/encyclopedia_f.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Fourier optics",
+      "item": "https://www.rp-photonics.com/fourier_optics.html"
+    }]}
+}
+</script>
+</body>
+</html>

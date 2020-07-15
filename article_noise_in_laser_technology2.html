@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-hDxPZm78qdZfxfFKAmD7lw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>Noise in Laser Technology &ndash; Part 2: Fluctuations in Pulsed Lasers</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/article_noise_in_laser_technology2.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Here, we discuss noise of pulsed lasers, which is in various respects different from that of continuous-wave lasers.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="pulsed lasers, intensity noise, phase noise, laser noise, amplifier noise">
+<script type="text/javascript" src="./jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" nonce="hDxPZm78qdZfxfFKAmD7lw==">
+page="article_noise_in_laser_technology2.html"; cat="A"; shownbanner=""; ref="http://www.rp-photonics.com/q_switched_lasers.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td class="selected"><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Consulting</span> <span id="slogan">&hellip; competent technical support for your business!!</span></p>
+</div>
+<nav id="con">
+<div id="navitems">
+<a id="Home" href="./consulting.html">Home</a>
+<a id="Company" href="./company.html">Company</a>
+<a id="Topics" href="./topics.html">Topics</a>
+<a id="Publications" href="./encyc.html" class="sel">Publications</a>
+<a id="Publications_Encyclopedia" href="./encyc.html" class="sub">Encyclopedia</a>
+<a id="Publications_FG_lasers" href="./fg_lasers.html" class="sub">FG to Lasers</a>
+<a id="Publications_FG_laser_pulses" href="./fg_laser_pulses.html" class="sub">FG Laser Pulses</a>
+<a id="Publications_FG_fiber_optics" href="./fg_fiber_optics.html" class="sub">FG Fiber Optics</a>
+<a id="Publications_Tutorials" href="./tutorials.html" class="sub">Tutorials</a>
+<a id="Publications_Scientific" href="./scipubs.html" class="sub">Scientific</a>
+<a id="Publications_Articles" href="./journal_articles.html" class="sub sel">Trade journals</a>
+<a id="Publications_Downloads" href="./downloads.html" class="sub">Downloads</a>
+<p>Offers:</p>
+<a id="Services" href="./services.html">Services</a>
+<a id="Software" href="./software_con.html">Software</a>
+<p>Various:</p>
+<a id="News" href="./news.html">News</a>
+<a id="Website" href="./website.html">Website</a>
+<a id="Nletters" href="./newsletters.html">Newsletters</a>
+<a id="Contact" href="./contact.html">Contact</a>
+</div>
+<div id="newsbox">
+<!-- Our bestseller: the simulation software<br><a href="./fiberpower.html?s=news">RP Fiber Power</a> -->
+<!--
+Read our <a href="./tutorials.html?s=news">fiber optics tutorials</a> and get our <a href="./newsletters.html?s=news">newsletters</a> on <a href="./spotlight.html?s=news">technology</a> and <a href="./software_news.html?s=news">software</a>!
+-->
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="consulting.html">Consulting</a> &gt; <a href="encyc.html">Articles</a> &gt; <a href="article_noise_in_laser_technology1.html">Noise in Laser Technologie</a></p>
+<h1>Noise in Laser Technology &ndash; Part 2: Fluctuations in Pulsed Lasers</h1>
+<p>Author: <a href="paschotta.html">Rüdiger Paschotta</a>, <a href="index.html">RP Photonics Consulting GmbH</a></p>
+<p>(This article appeared in similar form in <a href="http://www.wiley-vch.de/berlin/journals/op/09-03/OP0903_S45-S47.pdf" rel="nofollow">Optik &amp; Photonik 3, 45 (2009)</a>. See also <a href="article_noise_in_laser_technology1.html">Part 1 &ndash; Intensity and Phase Noise</a> and <a href="article_noise_in_laser_technology3.html">Part 3 &ndash; Beam Pointing Fluctuations</a>.)</p>
+<p class="abstract"><b>Abstract:</b> Here, we discuss noise of pulsed lasers, which is in various respects different from that of continuous-wave lasers.</p>
+<p>The <a href="article_noise_in_laser_technology1.html">first part of this series</a> treated noise of the intensity and phase of continuous-wave lasers.
+<a href="pulsed_lasers.html" title="lasers emitting light in the form of pulses">Pulsed lasers</a> (e.g. <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched lasers</a>) are different in some respects, both concerning the mathematical description and physical features.
+In some important application areas such as laser material processing, noise properties may be of limited interest, although even in that area there can be impacts e.g. of pulse energy fluctuations on the processing quality.
+Other pulsed laser systems are used for example for <a href="lidar.html" title="a technique for acquiring 3D images with laser pulses">LIDAR</a>, where noise properties can be quite essential.</p>
+<p><a href="beam_pointing_fluctuations.html" title="fluctuations of the propagation direction of a laser beam">Beam pointing fluctuations</a>, as can occur in both continuous-wave and pulsed lasers, will be discussed in the next part of this series.
+<a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">Mode-locked lasers</a> are not considered in this article; they do emit <a href="pulses.html" title="flashes of light">pulses</a>, but on a much shorter time scale, and the involved physics are partly quite different.</p>
+<h2 class="togglediv">How to Describe Noise in Pulses</h2>
+<div>
+<p>An essential difference between <a href="continuous_wave_operation.html" title="operation mode of a laser with continuous light emission">continuous-wave</a> and <a href="pulsed_lasers.html" title="lasers emitting light in the form of pulses">pulsed lasers</a> is that the intensity, phase etc. of a continuous-wave laser are continuously evolving variables, whereas for pulsed lasers we are dealing with parameters of discrete pulses.
+Each <a href="pulses.html" title="flashes of light">pulse</a> can be characterized by a set of parameters such as the <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a>, <a href="peak_power.html" title="maximum optical power of a pulse">peak power</a>, <a href="pulse_duration.html" title="the duration of an optical pulse">duration</a>, mean <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequency</a> and arrival time, and their fluctuations need to be described statistically.</p>
+<p>For single pulses, possibly emitted on demand, the statistical description is relatively simple.
+For each pulse parameter, there is a distribution function, which may often be approximated with a Gaussian.
+It is then often sufficient to specify an r.m.s. value of a quantity like the pulse energy under certain conditions (e.g. pulse emission after some minimum pumping time).
+It may, however, also be relevant to consider correlations between different parameters, as discussed further below.</p>
+<p>Frequently, a laser emits pulses periodically with a certain <a href="pulse_repetition_rate.html" title="the number of pulses emitted per second e.g. by a mode-locked or Q-switched laser">pulse repetition rate</a> <span class="eqn_il"><i>f</i><sub>rep</sub></span>.
+The statistics of the fluctuations of pulse parameters can then be described with a <a href="power_spectral_density.html" title="optical power or noise power per unit frequency interval">power spectral density</a> (PSD) as for a continuous-wave laser, except that the upper noise frequency is limited to <span class="eqn_il"><i>f</i><sub>rep</sub>&thinsp;/&thinsp;2</span>.
+Fluctuations faster than that are meaningless.
+For example, an oscillation of pulse energy with <span class="eqn_il">0.8&thinsp;<i>f</i><sub>rep</sub></span> could not be distinguished from an oscillation with <span class="eqn_il">0.2&thinsp;<i>f</i><sub>rep</sub></span>.
+On the other hand, the lowest noise frequency on which information can be obtained is again limited by the measurement time: very slow fluctuations are visible only when data are recorded over long times.</p>
+</div>
+<h2 class="togglediv">Not Trivial: Definition of Pulse Parameters</h2>
+<div>
+<p>The definition of some pulse parameters requires careful consideration.
+For example, the <a href="peak_power.html" title="maximum optical power of a pulse">peak power</a> may be taken to be the highest occurring power in a pulse shape, but that depends on a measurement <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>.
+For example, a pulse shape may exhibit substantial mode beating (Fig.&nbsp;1), which may be seen by a fast <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a>, but averaged out by a slower one.
+The use of a slow detector may be justified e.g. when the intended application is also not sensitive to fast fluctuations.
+In some cases, one may even approximate the peak power by the <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a> divided by the <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a>.</p>
+<figure>
+<img src="img/mode_beating_in_qs_laser.png" alt="mode beating in a Q-switched laser">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Temporal pulse shape of a Q-switched laser with mode beating.
+The temporal position of the peak depends on the timing resolution of the detector.
+The &ldquo;center of mass&rdquo; is less sensitive to such issues.
+</figcaption>
+</figure>
+<p>By the way, the <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a> may be affected by similar issues when mode <a href="beat_note.html" title="an oscillation of the optical intensity arising from the superposition of light with different optical frequencies">beating</a> occurs.
+It should be noted that fluctuations of beam intensity at some point in the profile may be larger than those of the power, as the spatial beam shape may also fluctuate.
+This may happen in lasers emitting on multiple transverse modes &ndash; particularly when the number of involved modes is small.</p>
+<p><a href="timing_jitter.html" title="fluctuations of the temporal positions of pulses">Timing errors</a> can also be defined in different ways.
+First of all, what is the temporal position of a pulse?
+The start of a pulse can not be reliably determined, and the peak (position with highest power) is also problematic: it can depend on the detection bandwidth and can even be ambiguous.
+The most common definition of temporal pulse position, avoiding such problems, is based on the &ldquo;center of mass&rdquo; of the power distribution.
+Its fluctuations will often be substantially weaker than those of the peak position.
+The next question is how to define the timing error.
+For an actively <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched laser</a>, one may consider the fluctuations of the delay between a trigger signal and the pulse position.
+In other cases, one may refer to a regular timing grid with the same average repetition rate.</p>
+</div>
+<h2 class="togglediv">Relevant Physical Phenomena in Pulsed Lasers</h2>
+<div>
+<p>In <a href="pulsed_lasers.html" title="lasers emitting light in the form of pulses">pulsed lasers</a>, a wide range of physical phenomena are responsible for fluctuations.
+In <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched lasers</a>, for example, the pulse build-up normally starts with <a href="spontaneous_emission.html" title="a quantum effect, causing the spontaneous decay of excited states of atoms or ions">spontaneous emission</a>, and its randomness causes macroscopic fluctuations of pulse parameters &ndash; particularly of the pulse timing and (for multimode lasers) the distribution of <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a> over different <a href="resonator_modes.html" title="modes of an optical or microwave resonator">resonator modes</a>.
+Further influences come from thermal changes, mechanical vibrations, pump noise, etc.</p>
+<figure>
+<img src="img/pulsed_laser_systems.png" alt="Q-switched bulk laser and fiber-based amplifier system">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Schematic setups of a Q-switched bulk laser (top) and a fiber-based amplifier system (bottom).
+Both could generate e.g. 100-&mu;J pulses at 1064&nbsp;nm, while having substantially different noise properties.
+</figcaption>
+</figure>
+<p>A <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifier</a> system, generating pulses with similar parameters but in a very different way (Fig.&nbsp;2), can have entirely different noise properties.
+For example, the pulse timing may be much more precise, and <a href="higher_order_modes.html" title="transverse modes of a resonator or waveguide, excluding the fundamental (axial) modes">higher-order modes</a> are absent if <a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode fiber</a> is used.
+On the other hand, the <a href="linewidth.html" title="width of the spectrum of a light beam or an absorption feature">linewidth</a> may be by orders of magnitude larger than that of a single-mode Q-switched bulk laser, and <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinear effects</a> in the power amplifier may generate spurious <a href="raman_scattering.html" title="a nonlinear scattering process involving optical phonons">Raman-shifted</a> wavelength components.</p>
+<p>Some pulsed <a href="solid_state_lasers.html" title="lasers based on solid-state gain media (usually ion-doped crystals or glasses)">solid-state lasers</a> are not Q-switched, but free-running with a pulsed pump source.
+Particularly high pulse energies can be associated with strong heating effects during a pulse, which can have many consequences, such as changes of mode frequencies, the spectral profile of the gain, thermal lensing, etc.
+Therefore, such lasers are hardly candidates for particularly low-noise operation.</p>
+<p>The best noise properties are often achieved in lasers with tight mode control.
+For example, a compact Q-switched <a href="yag_lasers.html" title="lasers based on YAG (yttrium aluminum garnet) crystals, usually Nd:YAG or Yb:YAG">Nd:YAG laser</a> may have a <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">resonator</a> with good suppression of higher-order transverse modes and a high frequency selectivity, enforcing stable operation on a single resonator mode (<a href="single_frequency_operation.html" title="an operation mode of a laser where only a single resonator mode acquires a significant power"><em>single-frequency operation</em></a>).
+This fully eliminates a range of noise phenomena associated with mode competition, mode beating etc.
+If the setup is also mechanically stable, and the laser is pumped with a low-noise <a href="laser_diodes.html" title="semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diode</a>, the noise performance may be excellent particularly in terms of pulse energy, duration and <a href="linewidth.html" title="width of the spectrum of a light beam or an absorption feature">linewidth</a>.
+Further improvements may result from active <a href="stabilization_of_lasers.html" title="measures applied to lasers in order to improve their stability in terms of output power, optical frequency, or other quantities">stabilization</a> of the <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequency</a>, possibly combined with some prelasing and/or injection locking technique.
+Here, the randomness in the pulse initiation is reduced by providing a well-defined seed signal.</p>
+</div>
+<h2 class="togglediv">Noise Influences in Pulse Amplification</h2>
+<div>
+<p>The limited <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a> from compact single-frequency lasers sometimes enforces the use of an <a href="optical_amplifiers.html" title="devices for amplifying the power of light beams">amplifier</a> system.
+Unfortunately, amplification can introduce various kinds of noise.
+As long as an amplifier is only weakly <a href="gain_saturation.html" title="the phenomenon that the gain of an amplifier is reduced for high input signal powers">saturated</a>, the <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a> fluctuations may be increased strongly, essentially because tiny fluctuations of stored energy translate into substantial fluctuations of amplifier gain.
+That problem becomes smaller in strongly saturated amplifiers; this situation is common in power <a href="amplifier_chains.html" title="amplifiers consisting of several stages">amplifier stages</a> and particularly for <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifiers</a>.
+Here, the output energy is essentially limited by the extractable energy, and not by the unsaturated laser gain.</p>
+<p>A saturated amplifier may still suffer from nonlinear effects &ndash; particularly when it is a <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifier</a>.
+Stimulated <a href="raman_scattering.html" title="a nonlinear scattering process involving optical phonons">Raman scattering</a> (SRS) can shift a fluctuating amount of energy to longer wavelengths, whereas stimulated <a href="brillouin_scattering.html" title="a nonlinear scattering effect involving acoustic phonons">Brillouin scattering</a> (SBS) leads to back-reflected energy, and the Kerr nonlinearity may redistribute power between different modes or even create new frequency components via four-wave mixing, also involving quantum noise.
+It may even be necessary to use a seed laser with a large <a href="linewidth.html" title="width of the spectrum of a light beam or an absorption feature">linewidth</a> in order to avoid problems with SBS.</p>
+<p>Even a perfect amplifier can not avoid the problem that a low-power <a href="seed_lasers.html" title="lasers which are used for generating some seed light into an amplifier or another laser">seed laser</a> may have a fundamentally limited noise performance.
+For example, a low-power <a href="laser_diodes.html" title="semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diode</a> has a much larger <a href="linewidth.html" title="width of the spectrum of a light beam or an absorption feature">linewidth</a> than an optimized compact Q-switched bulk laser, and that problem may only become worse during amplification.
+For excellent noise properties at high power levels, one may have to resort to <a href="injection_seeding.html" title="a technique for enforcing narrowband operation of a laser or optical parametric oscillator by injecting light into its resonator">injection seeding</a> of carefully stabilized high-power lasers.</p>
+</div>
+<h2 class="togglediv">Correlated Fluctuations</h2>
+<div>
+<p>As mentioned above, correlations can also be of interest, and they occur frequently.
+In <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched lasers</a>, for example, the fluctuations of pulse energy, duration and pulse timing are normally correlated: the highest-energy pulses usually come sooner and are shorter.
+This is because an above-average stored energy in the gain medium before the pulse causes a higher pulse energy, but also a larger laser <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> and thus faster pulse build-up.
+As a result, the relative fluctuations of <a href="peak_power.html" title="maximum optical power of a pulse">peak power</a> are larger than those of the pulse energy.</p>
+</div>
+<h2 class="togglediv">Conclusions</h2>
+<div>
+<p>Compared to <a href="continuous_wave_operation.html" title="operation mode of a laser with continuous light emission">continuous-wave</a> lasers, <a href="pulsed_lasers.html" title="lasers emitting light in the form of pulses">pulsed lasers</a> tend to have more complex noise properties.
+They exhibit many more possible types of noise, as there are plenty of fluctuating parameters, compared to just two (intensity and phase) for a single-frequency continuous-wave laser.
+Also, a lot of additional physical phenomena in pulsed lasers can be relevant for the noise performance.</p>
+<p>Depending on the application, different types of noise can be relevant, and different types of laser systems can be very different in such respects.
+We have seen, for example, that a <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifier</a> system may deliver much more precise pulse timing, while not being competitive in terms of a small linewidth in energetic pulses.
+Therefore, it can be crucial to well understand both the detailed requirements of an application and the strengths and weaknesses of different kinds of laser systems.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="article_noise_in_laser_technology2.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs"><a href="encyclopedia.html">RP Photonics Encyclopedia</a>: articles on laser noise, intensity noise, phase noise and others</td></tr>
+<tr><td class="refno">[2]</td><td class="refs">R. Paschotta, H. R. Telle, and U. Keller, <i>Noise of Solid State Lasers</i>, in Solid-State Lasers and Applications (ed. A. Sennaroglu), CRC Press, Boca Raton, FL (2007), Chapter 12, pp. 473&ndash;510</td></tr>
+<tr><td class="refno">[3]</td><td class="refs"><a href="article_noise_in_laser_technology1.html">Part 1 &ndash; Intensity and Phase Noise</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs"><a href="article_noise_in_laser_technology3.html">Part 3 &ndash; Beam Pointing Fluctuations</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="pulsed_lasers.html" title="lasers emitting light in the form of pulses">pulsed lasers</a>, <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched lasers</a>, <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a>, <a href="peak_power.html" title="maximum optical power of a pulse">peak power</a>, <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a>, <a href="timing_jitter.html" title="fluctuations of the temporal positions of pulses">timing jitter</a></p>
+</main></div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="hDxPZm78qdZfxfFKAmD7lw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Consulting",
+      "item": "https://www.rp-photonics.com/consulting.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Articles",
+      "item": "https://www.rp-photonics.com/encyc.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Noise in Laser Technologie",
+      "item": "https://www.rp-photonics.com/article_noise_in_laser_technology1.html"
+    }]}
+}
+</script>
+</body>
+</html>

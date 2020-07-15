@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-N026I9uCho57Z019wasBDg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - lasers, principle of operation, resonator, cavity, laser beam, stimulated emission</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/lasers.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-07-11">
+<meta name="description" content="Lasers are devices generating visible or invisible light, based on stimulated emission of light. Due to the manifold special properties of laser light, lasers are important for many applications.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="lasers, principle of operation, resonator, cavity, laser beam, stimulated emission">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lasers">
+<meta property="og:description" content="Lasers are devices generating visible or invisible light, based on stimulated emission of light. Due to the manifold special properties of laser light, lasers are important for many applications.">
+<meta property="og:url" content="https://www.rp-photonics.com/lasers.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/lasers.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Lasers are devices generating visible or invisible light, based on stimulated emission of light. Due to the manifold special properties of laser light, lasers are important for many applications.">
+<meta name="twitter:title" content="Lasers">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/lasers.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="N026I9uCho57Z019wasBDg==">
+page="lasers.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/marketing.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/nkt_photonics.html"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo sponsor"></a> <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="N026I9uCho57Z019wasBDg==">shownsponsors="NKT Photonics,Optikexpertisen,TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_lasers.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_l.html">letter L</a> &gt; <a href="lasers.html">lasers</a></p>
+<h1>Lasers</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_lasers.html?s=vbox">259 suppliers for lasers</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.oewaves.com/hi-q-lasers" data-supplier="OEwaves" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink"><img src="./bg/logos/oewaves.png" alt="OEwaves" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.kmlabs.com/tisapphire-lasers" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink"><img src="./bg/logos/kapteyn_murnane_laboratories.png" alt="Kapteyn-Murnane Laboratories" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="http://www.edmundoptics.com/c/laser-sources/1207/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink"><img src="./bg/logos/edmund_optics.png" alt="Edmund Optics" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="http://www.class5photonics.com/high-power-opcpa-systems.html" data-supplier="Class 5 Photonics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink"><img src="./bg/logos/class_5_photonics.png" alt="Class 5 Photonics" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.laserquantum.com/products/continuous-wave.cfm" data-supplier="Laser Quantum" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink"><img src="./bg/logos/laser_quantum.png" alt="Laser Quantum" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="http://www.ekspla.com/products/" data-supplier="EKSPLA" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink"><img src="./bg/logos/ekspla.png" alt="EKSPLA" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.nktphotonics.com/lasers-fibers/" data-supplier="NKT Photonics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.rpmclasers.com/product-category/cw-lasers-and-modules/" data-supplier="RPMC Lasers" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.toptica.com/company-profile/all-wavelengths/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="http://www.frlaserco.com/Products/Laser-Diodes" data-supplier="Frankfurt Laser Company" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink"><img src="./bg/logos/frankfurt_laser_company.png" alt="Frankfurt Laser Company" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.quantel-laser.com/en/products.html" data-supplier="Lumibird" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink"><img src="./bg/logos/lumibird.png" alt="Lumibird" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_lasers.html?s=vbox">List of suppliers for lasers</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="advicebox">
+<p>Ask <a href="index.html">RP Photonics</a> for advice on any aspect of lasers. You may also profit from <a href="training.html">in-house training courses</a>, tailored to your needs.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: devices generating visible or invisible light, based on stimulated emission of light</p>
+<p>More general term: light sources</p>
+<p>More specific terms: <a href="solid_state_lasers.html" title="lasers based on solid-state gain media (usually ion-doped crystals or glasses)">solid-state lasers</a>, <a href="diode_lasers.html" title="semiconductor laser devices based on laser diodes">diode lasers</a>, <a href="gas_lasers.html" title="lasers with a gas (or plasma) as gain medium">gas lasers</a>, <a href="excimer_lasers.html" title="lasers where optical amplification occurs in a plasma containing excited dimers (or other molecules) with an anti-binding electronic ground state">excimer lasers</a>, <a href="radiation_balanced_lasers.html" title="lasers where the heat generation in the gain medium is compensated by optical refrigeration in the same medium">radiation-balanced lasers</a>, <a href="cryogenic_lasers.html" title="lasers where the gain medium is operated at cryogenic temperatures">cryogenic lasers</a>, <a href="visible_lasers.html" title="lasers (or other laser-based light sources) emitting visible light">visible lasers</a>, <a href="eye_safe_lasers.html" title="lasers emitting in a wavelength region with relatively low hazards for the human eye">eye-safe lasers</a>, infrared lasers, <a href="ultraviolet_lasers.html" title="lasers (or other laser-based light sources) generating ultraviolet light">ultraviolet lasers</a>, <a href="x_ray_lasers.html" title="lasers emitting in the X-ray spectral region">X-ray lasers</a>, <a href="bulk_lasers.html" title="lasers based on bulk crystals as gain media">bulk lasers</a>, <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber lasers</a>, <a href="dye_lasers.html" title="lasers based on liquid or solid dyes as gain media">dye lasers</a>, <a href="upconversion_lasers.html" title="lasers relying on upconversion processes">upconversion lasers</a>, <a href="free_electron_lasers.html" title="laser devices where light amplification occurs by interaction with fast electrons in an undulator">free electron lasers</a>, <a href="raman_lasers.html" title="lasers based on Raman gain rather than on laser gain from stimulated emission">Raman lasers</a>, <a href="high_power_lasers.html" title="lasers emitting very high optical powers">high-power lasers</a>, <a href="narrow_linewidth_lasers.html" title="single-frequency lasers with a narrow optical emission spectrum">narrow-linewidth lasers</a>, <a href="tunable_lasers.html" title="lasers the output wavelengths of which can be tuned">tunable lasers</a>, <a href="pulsed_lasers.html" title="lasers emitting light in the form of pulses">pulsed lasers</a>, <a href="ultrafast_lasers.html" title="lasers emitting ultrashort pulses">ultrafast lasers</a>, <a href="industrial_lasers.html" title="lasers used for industrial purposes, for example for laser material processing">industrial lasers</a>, <a href="scientific_lasers.html" title="lasers which are designed for scientific applications">scientific lasers</a>, <a href="alignment_lasers.html" title="lasers used for alignment purposes">alignment lasers</a>, <a href="medical_lasers.html" title="laser systems used for medical applications">medical lasers</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Laser</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#lasers" title="other articles on lasers">lasers</a></p>
+<p><a href="encyclopedia_cite.html?article=lasers">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>&ldquo;Laser&rdquo; (rarely written as l.a.s.e.r.) is an acronym for &ldquo;Light Amplification by Stimulated Emission of Radiation&rdquo;, coined in 1957 by the laser pioneer Gordon Gould.
+Although this original meaning denotes an principle of operation (exploiting <a href="stimulated_emission.html" title="a quantum effect, where photon emission is triggered by other photons">stimulated emission</a> from excited atoms or ions), the term is now mostly used for <em>devices</em> generating light based on the laser principle.
+More specifically, one usually means laser <a href="oscillators.html" title="a device producing an oscillation &ndash; in contrast to an amplifier, for example"><em>oscillators</em></a>, but sometimes also includes devices with laser <a href="optical_amplifiers.html" title="devices for amplifying the power of light beams">amplifiers</a>, also called <a href="master_oscillator_power_amplifier.html" title="a laser system consisting of a seed laser and a laser amplifier for boosting the output power">master oscillator power amplifier</a> (MOPA).</p>
+<p>The first laser device was a <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">pulsed</a> ruby laser, demonstrated by Theodore Maiman in 1960 [2,&thinsp;3].
+In the same year, the first gas laser (a <a href="helium_neon_lasers.html" title="gas lasers based on a helium&ndash;neon mixture">helium&ndash;neon laser</a> [5]) and the first <a href="laser_diodes.html" title="semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diode</a> were made.
+Before this experimental work, Arthur Schawlow, Charles Hard Townes, Nikolay Basov and Alexander Prokhorov had published ground-breaking theoretical work on the operation principles of lasers, and a microwave amplifier and oscillator (maser) had been developed by Townes' group in 1953.
+The term &ldquo;optical maser&rdquo; (MASER = microwave amplification by stimulated amplification of radiation) was initially used, but later replaced with &ldquo;laser&rdquo;.</p>
+<p>Laser technology is at the core of the wider area of <a href="photonics.html" title="the science and technology of light">photonics</a>, essentially because <a href="laser_light.html" title="light generated with a laser device">laser light</a> has a number of very special properties:</p>
+<ul>
+<li>It is usually emitted as a well directed <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a> which can propagate over long lengths without much <a href="beam_divergence.html" title="a measure for how fast a laser beam expands far from its focus">divergence</a> and can be focused to very small spots, where a high <a href="optical_intensity.html" title="optical power per unit area">intensity</a> is achieved.</li>
+<li>It can have a very narrow optical <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>, whereas e.g. most lamps emit light with a very broad <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a>.</li>
+<li>It may be emitted continuously, or alternatively in the form of short or ultrashort <a href="pulses.html" title="flashes of light">pulses</a>, with durations from microseconds down to a few femtoseconds.
+The temporal concentration of energy &ndash; in addition to the potential of strong spatial confinement in a beam focus &ndash; allows for even far higher <a href="optical_intensity.html" title="optical power per unit area">intensities</a> to be generated.</li>
+</ul>
+<p>These properties, which make laser light very interesting for a range of <a href="laser_applications.html" title="applications involving laser devices">applications</a>, are to a large extent the consequences of the very high degree of spatial and/or temporal <a href="coherence.html" title="a fixed phase relationship between the electric field values at different locations or at different times">coherence</a> of laser radiation.
+The articles on <a href="laser_light.html" title="light generated with a laser device">laser light</a> and <a href="laser_applications.html" title="applications involving laser devices">laser applications</a> give more details.</p>
+<p>In laser technology, a wide range of optical components such as <a href="laser_crystals.html" title="transparent crystals with laser-active dopants, used as laser gain media">laser crystals</a>, <a href="laser_mirrors.html" title="high-quality mirrors used in laser resonators and other optical setups">laser mirrors</a>, <a href="polarizers.html" title="optical filters where the light transmission depends strongly on the direction of polarization">polarizers</a>, <a href="faraday_isolators.html" title="optical isolators based on the Faraday effect">Faraday isolators</a> and tunable <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical filters</a> are used; see the article on <a href="laser_optics.html" title="optical elements and systems used with lasers - either in lasers or for transmitting and manipulating laser light">laser optics</a>.</p>
+<h2 class="togglediv">How a Laser Works</h2>
+<div>
+<h3 class="togglediv">Basic Principle</h3>
+<div>
+<p>A laser <a href="oscillators.html" title="a device producing an oscillation &ndash; in contrast to an amplifier, for example">oscillator</a> usually comprises an <a href="optical_resonators.html" title="arrangements of optical components which allow a beam of light to circulate">optical resonator</a> (<a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a>, laser <a href="cavities.html" title="resonators for light (or for microwaves)">cavity</a>) in which light can circulate (e.g. between two mirrors), and within this resonator a <a href="gain_media.html" title="media for laser amplification">gain medium</a> (e.g. a <a href="laser_crystals.html" title="transparent crystals with laser-active dopants, used as laser gain media">laser crystal</a>), which serves to amplify the light.
+Without the gain medium, the circulating light would become weaker and weaker in each resonator round trip, because it experiences some losses, e.g. upon reflection at mirrors.
+However, the gain medium can amplify the circulating light, thus compensating the losses if the gain is high enough.
+The gain medium requires some external supply of energy &ndash; it needs to be &ldquo;pumped&rdquo;, e.g. by injecting light (<a href="optical_pumping.html" title="electronically exciting a medium with light, or specifically populating certain electronic levels"><em>optical pumping</em></a>) or an electric current (<em>electrical pumping</em> &rarr;&nbsp;<a href="semiconductor_lasers.html" title="lasers based on semiconductor gain media"><em>semiconductor lasers</em></a>).
+The principle of laser amplification is <a href="stimulated_emission.html" title="a quantum effect, where photon emission is triggered by other photons">stimulated emission</a>.</p>
+<figure>
+<img src="img/laser.png" alt="setup of an optically pumped laser">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Setup of a simple optically pumped laser. The laser resonator is made of a highly reflecting curved mirror and a partially transmissive flat mirror, the <a href="output_couplers.html" title="partially transparent laser mirrors, used for extracting output beams from laser resonators">output coupler</a>, which extracts some of the circulating laser light as the useful output. The gain medium is a laser crystal, which is <a href="side_pumping.html" title="a technique of pumping a solid-state laser in directions which are approximately transverse to its beam direction">side-pumped</a>, e.g. with light from a <a href="flash_lamps.html" title="gas discharge lamps which are used for generating intense light pulses">flash lamp</a>.
+</figcaption>
+</figure>
+<p>A laser can not operate if the <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> is smaller than the resonator losses; the device is then below the so-called <a href="laser_threshold.html" title="an operation condition of a laser where laser emission just starts to occur">laser threshold</a> and only emits some <a href="luminescence.html" title="light emission which is not caused by heating">luminescence</a> light.
+Significant power output is achieved only for pump powers above the laser threshold, where the gain can reach the level of the resonator losses.</p>
+<p>If the gain is larger than the losses, the power of the light in the laser resonator rises very rapidly, starting e.g. with low levels of light from <a href="fluorescence.html" title="luminescence arising from irradiation with light">fluorescence</a>.
+Note that the resonator round-trip time is usually very small (e.g. a few nanoseconds, sometimes even much less), so that even a small net round-trip gain implies rapid exponential growth of the intracavity power.
+As high laser powers <a href="gain_saturation.html" title="the phenomenon that the gain of an amplifier is reduced for high input signal powers">saturate</a> the gain, the laser power will in the steady state reach a level so that the saturated gain just equals the resonator losses (&rarr;&nbsp;<a href="gain_clamping.html" title="a firm limitation of the gain of some amplifier or laser, usually caused by lasing action"><em>gain clamping</em></a>).
+Before reaching this steady state, a laser usually undergoes some <a href="relaxation_oscillations.html" title="small mutually coupled oscillations of the laser power and laser gain around their steady-state values">relaxation oscillations</a>.
+The <a href="threshold_pump_power.html" title="the pump power at which the laser threshold is reached">threshold pump power</a> is the pump power where the <a href="small_signal_gain.html" title="optical gain for small signal intensities, where no amplifier saturation occurs">small-signal gain</a> is just sufficient for lasing.</p>
+<p>Some fraction of the light power circulating in the resonator is usually transmitted by a partially transparent mirror, the so-called <a href="output_couplers.html" title="partially transparent laser mirrors, used for extracting output beams from laser resonators">output coupler</a> mirror.
+The resulting beam constitutes the useful output of the laser.
+The transmission of the output coupler mirror can be optimized for maximum output power (see also: <a href="slope_efficiency.html" title="differential power efficiency of a laser">slope efficiency</a>).</p>
+</div>
+<h3 class="togglediv">Coherence of Laser Radiation</h3>
+<div>
+<aside class="callout green">Why does laser light has such a high degree of coherence?</aside>
+<p>A high degree of spatial <a href="coherence.html" title="a fixed phase relationship between the electric field values at different locations or at different times">coherence</a> of the laser radiation can be achieved, essentially because the light emission is triggered (stimulated) by the intracavity radiation (i.e., the light is circulating in the laser resonator), rather than occurring <a href="spontaneous_emission.html" title="a quantum effect, causing the spontaneous decay of excited states of atoms or ions">spontaneously</a>.
+In the stimulated emission process, the laser-active ions are made to emit light in the direction of already existing light, and also with the same <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">optical phase</a>.
+The resulting amplitude and phase profile of the laser beam is largely determined by the properties of the <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a>, not by the laser gain medium.</p>
+<p>Temporal coherence is a different issue, and it has completely different origins.
+Some laser <a href="gain_media.html" title="media for laser amplification">gain media</a> can emit light only in a narrow spectral range.
+Even if that is not the case, a laser often emits light only at a precisely defined <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a> or <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">frequency</a>, because the conditions are such that a net zero round-trip gain is possible only for that wavelength.
+A laser may be <a href="tunable_lasers.html" title="lasers the output wavelengths of which can be tuned">tuned</a> to the exact wanted wavelength e.g. by using a tunable intracavity bandpass filter, such as a <a href="lyot_filters.html" title="optical filter devices based on birefringence, exhibiting a wavelength-dependent transmission">Lyot filter</a>.
+Again, the mechanism of stimulated emission is of crucial importance: the laser-active ions can be made to emit at exactly the optical frequency of already existing light.
+The smaller the emission <a href="linewidth.html" title="width of the spectrum of a light beam or an absorption feature">linewidth</a> (i.e., the narrower the <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a> of emitted light), the higher the degree of temporal coherence.</p>
+<p>Interestingly, even <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a> can exhibit a very high degree of temporal coherence, in that case involving coherence between subsequent pulses in a regular pulse train.
+This is related to the formation of a <a href="frequency_combs.html" title="optical spectra consisting of equidistant lines">frequency comb</a> as the <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a>.</p>
+</div>
+<h3 class="togglediv">Generation of Light Pulses</h3>
+<div>
+<p>Some lasers are operated in a <a href="continuous_wave_operation.html" title="operation mode of a laser with continuous light emission">continuous</a> fashion, whereas others generate <a href="pulses.html" title="flashes of light">pulses</a>, which can be particularly intense.
+There are various methods for <a href="pulse_generation.html" title="the generation of light pulses (flashes)">pulse generation</a> with lasers, allowing the generation of pulses with durations of microseconds, <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">nanoseconds</a>, <a href="picosecond_lasers.html" title="lasers emitting pulses with picosecond durations">picoseconds</a>, or even down a few <a href="femtosecond_lasers.html" title="lasers emitting light pulses with durations between a few femtoseconds and hundreds of femtoseconds">femtoseconds</a> (&rarr;&nbsp;<a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less"><em>ultrashort pulses</em></a> from <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking"><em>mode-locked lasers</em></a>).
+Often, a laser medium can accumulate some amount of energy over some &ldquo;pumping&rdquo; time in order to then release it within a much shorter time.</p>
+<p>The optical <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a> (or <a href="linewidth.html" title="width of the spectrum of a light beam or an absorption feature">linewidth</a>) of a continuously operating laser may be very small when only a single <a href="resonator_modes.html" title="modes of an optical or microwave resonator">resonator mode</a> can oscillate (&rarr;&nbsp;<a href="single_frequency_operation.html" title="an operation mode of a laser where only a single resonator mode acquires a significant power"><em>single-frequency operation</em></a>).
+In other cases, particularly for <a href="mode_locking.html" title="a group of techniques for generating ultrashort pulses in lasers">mode-locked</a> lasers, the bandwidth can be very large &ndash; in extreme cases, it can span about a full octave.
+The center frequency of the laser radiation is typically near the frequency of maximum <a href="gain.html" title="a measure of the strength of optical amplification">gain</a>, but if the resonator losses are made frequency-dependent, the laser <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a> can be <a href="wavelength_tuning.html" title="the manipulation of the output wavelength of an optical device such as a laser or an optical parametric oscillator">tuned</a> within the range where sufficient gain is available.
+Some broadband <a href="gain_media.html" title="media for laser amplification">gain media</a> such as <a href="titanium_sapphire_lasers.html" title="lasers based on a Ti:sapphire gain medium">Ti:sapphire</a> and <a href="chromium_doped_gain_media.html" title="laser gain media doped with chromium ions">Cr:ZnSe</a> allow wavelength tuning over hundreds of nanometers.</p>
+</div>
+<h3 class="togglediv">Laser Noise</h3>
+<div>
+<p>Due to various influences, the output of lasers always contains some noise in properties such as the output <a href="intensity_noise.html" title="noise of the optical intensity or power of a laser beam">power</a> or <a href="phase_noise.html" title="noise of the optical phase of a beam or of an electric signal">phase</a>.
+For <a href="pulsed_lasers.html" title="lasers emitting light in the form of pulses">pulsed lasers</a>, additional quantities can come into play, for example the <a href="timing_jitter.html" title="fluctuations of the temporal positions of pulses">timing jitter</a>.
+For more details, see the article on <a href="laser_noise.html" title="fluctuations of various parameters of laser light, such as the optical power and phase">laser noise</a>.</p>
+</div>
+</div>
+<h2 class="togglediv">Types of Lasers</h2>
+<div>
+<p>Laser technology is a rather diverse field, utilizing a wide range of very different kinds of laser gain media, optical elements and techniques.
+Common types of lasers are:</p>
+<ul>
+<li><a href="semiconductor_lasers.html" title="lasers based on semiconductor gain media"><em>Semiconductor lasers</em></a> (mostly <a href="laser_diodes.html" title="semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diodes</a>), electrically (or sometimes optically) pumped, efficiently generating very high output powers (but typically with poor <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a>), or low powers with good spatial properties (e.g. for application in CD and DVD players), or <a href="pulse_generation.html" title="the generation of light pulses (flashes)">pulses</a> (e.g. for <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">telecom applications</a>) with very high <a href="pulse_repetition_rate.html" title="the number of pulses emitted per second e.g. by a mode-locked or Q-switched laser">pulse repetition rates</a>.
+Special types include <a href="quantum_cascade_lasers.html" title="semiconductor lasers relying on intersubband transitions, normally emitting in the mid-infrared spectral region">quantum cascade lasers</a> (for mid-<a href="infrared_light.html" title="invisible light with wavelengths roughly between 750&thinsp;&thinsp;nm and 1&thinsp;&thinsp;mm">infrared light</a>) and <a href="surface_emitting_semiconductor_lasers.html" title="semiconductor lasers where the generated light propagates in the direction perpendicular to the wafer surface">surface-emitting semiconductor lasers</a> (VCSELs and VECSELs), the latter also being suitable for pulse generation with high powers.</li>
+<li><a href="solid_state_lasers.html" title="lasers based on solid-state gain media (usually ion-doped crystals or glasses)"><em>Solid-state lasers</em></a> based on ion-doped <a href="laser_crystals_versus_glasses.html">crystals or glasses</a> (<a href="doped_insulator_lasers.html" title="lasers with a solid-state gain medium containing a laser-active dopant"><em>doped insulator lasers</em></a>), pumped with <a href="lamp_pumped_lasers.html" title="lasers which are pumped with flash lamps or arc lamps, or in rare cases with tungsten halogen lamps">discharge lamps</a> or <a href="laser_diodes.html" title="semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diodes</a>, generating <a href="high_power_lasers.html" title="lasers emitting very high optical powers">high output powers</a>, or lower powers with very high beam quality, spectral purity and/or stability (e.g. for measurement purposes), or <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a> with <a href="picosecond_lasers.html" title="lasers emitting pulses with picosecond durations">picosecond</a> or <a href="femtosecond_lasers.html" title="lasers emitting light pulses with durations between a few femtoseconds and hundreds of femtoseconds">femtosecond</a> <a href="pulse_duration.html" title="the duration of an optical pulse">durations</a>.
+Common gain media are <a href="yag_lasers.html" title="lasers based on YAG (yttrium aluminum garnet) crystals, usually Nd:YAG or Yb:YAG">Nd:YAG</a>, <a href="vanadate_lasers.html" title="lasers based on rare-earth-doped yttrium, gadolinium or lutetium vanadate crystals, usually Nd:YVO<sub>4</sub>">Nd:YVO<sub>4</sub></a>, <a href="ylf_lasers.html" title="lasers based on YLF (yttrium lithium fluoride) crystals, usually Nd:YLF">Nd:YLF</a>, Nd:glass, <a href="ytterbium_doped_gain_media.html" title="laser gain media containing laser-active ytterbium ions">Yb:YAG</a>, Yb:glass, <a href="titanium_sapphire_lasers.html" title="lasers based on a Ti:sapphire gain medium">Ti:sapphire</a>, <a href="chromium_doped_gain_media.html" title="laser gain media doped with chromium ions">Cr:YAG and Cr:LiSAF</a>.
+A special type of ion-doped glass lasers are:</li>
+<li><a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers"><em>Fiber lasers</em></a>, based on optical glass <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a> which are doped with some laser-active ions in the <a href="fiber_core.html" title="the region in an optical fiber which guides light">fiber core</a>.
+Fiber lasers can achieve extremely high output powers (up to kilowatts) with high beam quality, allow for widely wavelength-tunable operation, narrow <a href="linewidth.html" title="width of the spectrum of a light beam or an absorption feature">linewidth</a> operation, etc.</li>
+<li><a href="gas_lasers.html" title="lasers with a gas (or plasma) as gain medium"><em>Gas lasers</em></a> (e.g. <a href="helium_neon_lasers.html" title="gas lasers based on a helium&ndash;neon mixture">helium&ndash;neon lasers</a>, <a href="co2_lasers.html" title="infrared lasers based on a gas mixture in which light is amplified by carbon dioxide molecules">CO<sub>2</sub> lasers</a>, and <a href="argon_ion_lasers.html" title="gas lasers based on light amplification in ionized argon in a gas discharge">argon ion lasers</a>) and <a href="excimer_lasers.html" title="lasers where optical amplification occurs in a plasma containing excited dimers (or other molecules) with an anti-binding electronic ground state">excimer lasers</a>, based on gases which are typically excited with electrical discharges.
+Frequently used gases include CO<sub>2</sub>, argon, krypton, and gas mixtures such as helium&ndash;neon.
+Common excimers are ArF, KrF, XeF, and F<sub>2</sub>.
+As far as gas molecules are involved in the laser process, such lasers are also called <a href="molecular_lasers.html" title="gas lasers where the laser-active gas consists of molecules rather than separate atoms or ions">molecular lasers</a>.</li>
+</ul>
+<p>Less common are chemical and nuclear pumped lasers, <a href="free_electron_lasers.html" title="laser devices where light amplification occurs by interaction with fast electrons in an undulator">free electron lasers</a>, and <a href="x_ray_lasers.html" title="lasers emitting in the X-ray spectral region">X-ray lasers</a>.</p>
+</div>
+<h2 class="togglediv">Laser Sources in a Wider Sense</h2>
+<div>
+<p>There are some light sources which are not strictly lasers, but are nevertheless often called <em>laser sources</em>:</p>
+<ul>
+<li>In some cases, the term is used for amplifying devices emitting light without an input (excluding seeded amplifiers).
+An example are <a href="x_ray_lasers.html" title="lasers emitting in the X-ray spectral region">X-ray lasers</a>, which are usually <a href="superluminescent_sources.html" title="optical sources based on superluminescence"><em>superluminescent sources</em></a>, based on <a href="spontaneous_emission.html" title="a quantum effect, causing the spontaneous decay of excited states of atoms or ions">spontaneous emission</a> followed by single-pass amplification.
+There is then no <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a>.
+A similar situation occurs for <a href="optical_parametric_generators.html" title="light sources based on parametric amplifiers with no signal or idler input">optical parametric generators</a>, where the amplification, however, is not based on <a href="stimulated_emission.html" title="a quantum effect, where photon emission is triggered by other photons">stimulated emission</a>; it is <a href="parametric_amplification.html" title="a process of optical amplification based on a parametric nonlinearity">parametric amplification</a> based on optical <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a>.
+Light from such devices can have laser-like properties, such as strongly directional emission, high spatial and temporal <a href="coherence.html" title="a fixed phase relationship between the electric field values at different locations or at different times">coherence</a> and a narrow optical bandwidth.</li>
+<li>In other cases, the term <em>laser sources</em> is justified by the fact that the source contains a laser, among other components.
+This is the case for combinations of lasers and <a href="optical_amplifiers.html" title="devices for amplifying the power of light beams">amplifiers</a> (&rarr;&nbsp;<a href="master_oscillator_power_amplifier.html" title="a laser system consisting of a seed laser and a laser amplifier for boosting the output power"><em>master oscillator power amplifier</em></a>), and also for sources based on <a href="nonlinear_frequency_conversion.html" title="the conversion of input light to light of other frequencies, using optical nonlinearities">nonlinear frequency conversion</a> of laser radiation, e.g. with <a href="frequency_doubling.html" title="the phenomenon that an input wave in a nonlinear material can generate a wave with twice the optical frequency">frequency doublers</a> or <a href="optical_parametric_oscillators.html" title="coherent light sources based on parametric amplification within an optical resonator">optical parametric oscillators</a>.</li>
+</ul>
+</div>
+<h2 class="togglediv">Safety Aspects</h2>
+<div>
+<p>The work with lasers can raise significant safety issues.
+Some of those are directly related to the laser light, in particular to the high <a href="optical_intensity.html" title="optical power per unit area">optical intensities</a> achievable, but there are also other hazards related to laser sources.
+See the article on <a href="laser_safety.html" title="safety of the use of laser devices">laser safety</a> for details.</p>
+</div>
+<h2 class="togglediv">Laser Applications</h2>
+<div>
+<p>There is an enormously wide range of applications for a great variety of different laser devices.
+They are largely based on various special properties of <a href="laser_light.html" title="light generated with a laser device">laser light</a>, many of which cannot be achieved with any other kind of light sources.
+See the article on <a href="laser_applications.html" title="applications involving laser devices">laser applications</a> for an overview.</p>
+<p>On the other hand, many potential laser applications cannot be practically realized so far because lasers are relatively expensive to make &ndash; or more precisely, because they are so far mostly made with relatively expensive methods.
+Most lasers are fabricated in relatively small volumes and with a limited degree of automation.
+Another aspect is that lasers are relatively sensitive in various respects, for example concerning the precise alignment of optical components, mechanical vibrations and dust particles.
+Therefore, there is ongoing research and development for finding more cost-effective and robust solutions.</p>
+<p>For business success, it is often vital not just to develop lasers with high performance and low cost, but also to identify the best suited applications, or develop lasers which are best suited for particular applications.
+Also, the knowledge of the application details can be very important.
+For example, in laser material processing it is vital to know the exact requirements in terms of laser <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>, <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a>, <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a>, <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a> etc. for optimum processing results.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_lasers.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 259 suppliers for lasers. Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.class5photonics.com/" data-supplier="Class 5 Photonics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink" title="Visit the website of Class 5 Photonics"><img src="./bg/logos/class_5_photonics.png" alt="Class 5 Photonics" class="supplierlogo"></a><a href="http://www.class5photonics.com/high-power-opcpa-systems.html" data-supplier="Class 5 Photonics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink" title="Visit the website of Class 5 Photonics"><img src="./bg/products/class_5_photonics/ultrafast_lasers.jpg" alt="lasers" class="product"></a><h3><a href="./bg/profiles/class_5_photonics.html" title="See the profile of Class 5 Photonics">Class 5 Photonics</a></h3><p>Class 5 Photonics offer powerful and high-performance femtosecond lasers based on <a href="http://www.class5photonics.com/high-power-opcpa-systems.html" data-supplier="Class 5 Photonics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">optical parametric chirped pulse amplification (OPCPA)</a> suitable for higher harmonic generation (HHG):</p><p>- 5&nbsp;W to 100&nbsp;W average power for demanding applications</p><p>- pulse duration from 100&nbsp;fs down to 9&nbsp;fs</p><p>- pumped by industrial Yb:fiber or Yb:YAG amplifiers</p><p>- CEP stability available</p><p>- add-ons: EUV to MID-IR wavelength extension</p><p>Extreme power at extreme wavelengths with award-winning products serving the ultrafast community with wavelengths ranging from high-flux extreme-ultraviolet (XUV) to high-field Terahertz &ndash; enabling researchers in physics, chemistry, and biology to conduct outstanding research at the frontiers of their fields.</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.edmundoptics.com/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink" title="Visit the website of Edmund Optics"><img src="./bg/logos/edmund_optics.png" alt="Edmund Optics" class="supplierlogo"></a><a href="http://www.edmundoptics.com/c/laser-sources/1207/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink" title="Visit the website of Edmund Optics"><img src="./bg/products/edmund_optics/lasers.jpg" alt="lasers" class="product"></a><h3><a href="./bg/profiles/edmund_optics.html" title="See the profile of Edmund Optics">Edmund Optics</a></h3><p>Edmund Optics offers a wide range of <a href="http://www.edmundoptics.com/c/laser-sources/1207/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">laser sources</a>, including <a href="http://www.edmundoptics.com/c/machine-vision-lasers/1273/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">machine vision lasers</a>, <a href="http://www.edmundoptics.com/c/life-science-lasers/1274/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">life science lasers</a>, <a href="http://www.edmundoptics.com/c/metrology-lasers/1275/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">metrology lasers</a>, <a href="http://www.edmundoptics.com/c/gas-lasers/636/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">gas lasers</a>, <a href="http://www.edmundoptics.com/c/industrial-and-pointing-lasers/1271/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">industrial and point lasers</a>, and <a href="http://www.edmundoptics.com/c/material-processing-lasers/1272/" data-supplier="Edmund Optics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">material processing lasers</a>.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.toptica.com/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink" title="Visit the website of TOPTICA Photonics"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a><a href="https://www.toptica.com/company-profile/all-wavelengths/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink" title="Visit the website of TOPTICA Photonics"><img src="./bg/products/toptica_photonics/lasers.jpg" alt="lasers" class="product"></a><h3><a href="./bg/profiles/toptica_photonics.html" title="See the profile of TOPTICA Photonics">TOPTICA Photonics</a></h3><p>TOPTICA&#39;s products provide an ultra-broad <a href="https://www.toptica.com/company-profile/all-wavelengths/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">laser wavelength coverage</a>: 190&nbsp;nm &ndash; 0.1&nbsp;THz (corresponding to 3&nbsp;mm). They enable a big variety of demanding applications in quantum optics, spectroscopy, biophotonics, microscopy, test &amp; measurement, as well as materials inspection. The unique wavelength range is based on three major product categories:</p><p>- <a href="https://www.toptica.com/products/tunable-diode-lasers/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">diode lasers</a>, 190&nbsp;nm &ndash; 3500&nbsp;nm with frequency-conversion techniques</p><p>- <a href="https://www.toptica.com/products/psfs-fiber-lasers/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">ultrafast fiber lasers</a>, 488&nbsp;nm &ndash; 2300&nbsp;nm, (3500&nbsp;nm customized) 5000 &ndash; 15000&nbsp;nm</p><p>- <a href="https://www.toptica.com/products/terahertz-systems/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">terahertz systems</a>, 0.1 &ndash; 6&nbsp;THz (15&nbsp;THz customized)</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.rpmclasers.com/" data-supplier="RPMC Lasers" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink" title="Visit the website of RPMC Lasers"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a><h3><a href="./bg/profiles/rpmc_lasers.html" title="See the profile of RPMC Lasers">RPMC Lasers</a></h3><p>RPMC Lasers offers the widest selection of solid-state lasers in North America, including both pulsed and CW sources ranging in wavelength from the UV through the IR. <a href="https://www.rpmclasers.com/product-category/pulsed-lasers/" data-supplier="RPMC Lasers" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">Pulsed lasers</a> include DPSS lasers, flashlamp lasers, fiber lasers, and micro lasers/microchip Lasers. Additionally, <a href="https://www.rpmclasers.com/product-category/cw-lasers-and-modules/" data-supplier="RPMC Lasers" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">CW laser modules</a> including single mode and multimode DPSS laser and laser diode modules available in both fiber coupled and free space configurations. </p><p>Applications include material processing, LIDAR, micromachining, and other others.</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.laserquantum.com/" data-supplier="Laser Quantum" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink" title="Visit the website of Laser Quantum"><img src="./bg/logos/laser_quantum.png" alt="Laser Quantum" class="supplierlogo"></a><a href="https://www.laserquantum.com/products/continuous-wave.cfm" data-supplier="Laser Quantum" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink" title="Visit the website of Laser Quantum"><img src="./bg/products/laser_quantum/lasers.jpg" alt="lasers" class="product"></a><h3><a href="./bg/profiles/laser_quantum.html" title="See the profile of Laser Quantum">Laser Quantum</a></h3><p>Laser Quantum is a world-class manufacturer of high-quality <a href="http://www.laserquantum.com/products/continuous-wave.cfm" data-supplier="Laser Quantum" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">diode-pumped solid-state</a> and <a href="http://www.laserquantum.com/products/femtosecond.cfm" data-supplier="Laser Quantum" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">ultrafast lasers</a>.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.lumibird.com/en" data-supplier="Lumibird" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink" title="Visit the website of Lumibird"><img src="./bg/logos/lumibird.png" alt="Lumibird" class="supplierlogo"></a><a href="https://www.quantel-laser.com/en/products.html" data-supplier="Lumibird" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink" title="Visit the website of Lumibird"><img src="./bg/products/lumibird/lasers.jpg" alt="lasers" class="product"></a><h3><a href="./bg/profiles/lumibird.html" title="See the profile of Lumibird">Lumibird</a></h3><p>Lumibird manufactures a wide range of lasers thanks to its expertise in three key technologies: <a href="https://www.quantel-laser.com/en/products.html" data-supplier="Lumibird" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">pulsed solid-state lasers</a> (nanosecond range), <a href="https://www.keopsys.com/products-services-lasers-amplifiers/" data-supplier="Lumibird" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">CW and pulsed fiber lasers and fiber amplifiers</a>, and <a href="https://www.quantel-laser.com/en/products.html?category=55" data-supplier="Lumibird" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">laser diodes</a>. Various application areas are addressed, in industry (manufacturing, lidar sensors), science (laboratories and universities), medical (ophthalmology) and defense.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.nktphotonics.com/" data-supplier="NKT Photonics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink" title="Visit the website of NKT Photonics"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo"></a><a href="https://www.nktphotonics.com/lasers-fibers/" data-supplier="NKT Photonics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink" title="Visit the website of NKT Photonics"><img src="./bg/products/nkt_photonics/lasers.jpg" alt="lasers" class="product"></a><h3><a href="./bg/profiles/nkt_photonics.html" title="See the profile of NKT Photonics">NKT Photonics</a></h3><p>NKT Photonics offers a <a href="https://www.nktphotonics.com/lasers-fibers/" data-supplier="NKT Photonics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">wide range of lasers</a> spanning from <a href="https://www.nktphotonics.com/lasers-fibers/product-category/pulsed-diode-lasers/" data-supplier="NKT Photonics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">pulsed diode lasers</a> over <a href="https://www.nktphotonics.com/lasers-fibers/product-category/koheras-single-frequency-lasers/" data-supplier="NKT Photonics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">ultra-low noise single-frequency fiber lasers</a> and <a href="https://www.nktphotonics.com/lasers-fibers/product-category/scientific-ultrafast-lasers/" data-supplier="NKT Photonics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">scientific</a> and <a href="https://www.nktphotonics.com/lasers-fibers/product-category/industrial-ultrafast-lasers/" data-supplier="NKT Photonics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">industrial</a> ultrafast lasers to <a href="https://www.nktphotonics.com/lasers-fibers/product-category/supercontinuum-lasers/" data-supplier="NKT Photonics" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">supercontinuum white light lasers</a>. Whatever your laser need, we have a system for you!</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.kmlabs.com/" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink" title="Visit the website of Kapteyn-Murnane Laboratories"><img src="./bg/logos/kapteyn_murnane_laboratories.png" alt="Kapteyn-Murnane Laboratories" class="supplierlogo"></a><a href="https://www.kmlabs.com/tisapphire-lasers" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink" title="Visit the website of Kapteyn-Murnane Laboratories"><img src="./bg/products/kapteyn_murnane_laboratories/stryde.jpg" alt="lasers" class="product"></a><h3><a href="./bg/profiles/kapteyn_murnane_laboratories.html" title="See the profile of Kapteyn-Murnane Laboratories">Kapteyn-Murnane Laboratories</a></h3><p><a href="https://www.kmlabs.com/tisapphire-lasers" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">Ti:sapphire</a> is the workhorse of ultrafast lasers due to its high gain bandwidth, enabling delivery of the shortest pulses and scalable to high pulse energy and average power. KMLabs provides a full suite of modelocked oscillators and integrated oscillator-amplifier systems, spanning pulse energies from the nJ range to 30&nbsp;mJ in pulses from 15&nbsp;fs to 40&nbsp;fs.</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.frlaserco.com/" data-supplier="Frankfurt Laser Company" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink" title="Visit the website of Frankfurt Laser Company"><img src="./bg/logos/frankfurt_laser_company.png" alt="Frankfurt Laser Company" class="supplierlogo"></a><a href="http://www.frlaserco.com/Products/Laser-Diodes" data-supplier="Frankfurt Laser Company" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink" title="Visit the website of Frankfurt Laser Company"><img src="./bg/products/frankfurt_laser_company/laser_diodes.jpg" alt="lasers" class="product"></a><h3><a href="./bg/profiles/frankfurt_laser_company.html" title="See the profile of Frankfurt Laser Company">Frankfurt Laser Company</a></h3><p>Frankfurt Laser Company offers the widest wavelength range for <a href="http://www.frlaserco.com/Products/Laser-Diodes" data-supplier="Frankfurt Laser Company" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">laser diodes</a> on the world market from 370&nbsp;nm to 12&nbsp;µm, single mode &amp; multimode, broad area, DFB and DBR, fiber Bragg grating stabilized, quantum cascade, VCSELs, superluminescent diodes and mid-IR light emitting diodes. We offer wavelength selection and custom packaging; please contact us to discuss your requirements.</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.oewaves.com/" data-supplier="OEwaves" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink" title="Visit the website of OEwaves"><img src="./bg/logos/oewaves.png" alt="OEwaves" class="supplierlogo"></a><a href="http://www.oewaves.com/hi-q-lasers" data-supplier="OEwaves" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink" title="Visit the website of OEwaves"><img src="./bg/products/oewaves/narrow_linewidth_lasers.jpg" alt="lasers" class="product"></a><h3><a href="./bg/profiles/oewaves.html" title="See the profile of OEwaves">OEwaves</a></h3><p>The <a href="http://www.oewaves.com/hi-q-lasers" data-supplier="OEwaves" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">HI-Q™ Laser</a> houses a proprietary driver/controller and the <a href="http://www.oewaves.com/hi-q-lasers" data-supplier="OEwaves" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">OEwaves laser source</a> which is based on a high quality factor (Q) Whispering Gallery Mode (WGM) micro-resonator. The laser is scalable to a variety of wavelengths in 370&ndash;4500&nbsp;nm. </p><p>The unique technology of the OEwaves HI-Q&trade; Laser leverages the self-injection on locking of a suitable commercially available laser diode via a resonant optical feedback from a high-Q WGM micro-resonator. Its monolithically integrated approach along with micro-scale mass and volume make the laser virtually insensitive to environmental vibrations.</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.ekspla.com/" data-supplier="EKSPLA" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink" title="Visit the website of EKSPLA"><img src="./bg/logos/ekspla.png" alt="EKSPLA" class="supplierlogo"></a><a href="http://www.ekspla.com/products/" data-supplier="EKSPLA" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="bg externallink" title="Visit the website of EKSPLA"><img src="./bg/products/ekspla/yag_lasers.jpg" alt="lasers" class="product"></a><h3><a href="./bg/profiles/ekspla.html" title="See the profile of EKSPLA">EKSPLA</a></h3><p>EKPLA offers a wide range of <a href="http://www.ekspla.com/products/femtosecond-lasers" data-supplier="EKSPLA" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">femtosecond</a>, <a href="http://www.ekspla.com/products/picosecond-lasers/" data-supplier="EKSPLA" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">picosecond</a> and <a href="http://www.ekspla.com/products/nanosecond-lasers/ " data-supplier="EKSPLA" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">nanosecond</a> lasers as well as <a href="http://www.ekspla.com/products/tunable-wavelength-lasers/" data-supplier="EKSPLA" data-location="product-enc" data-keyword="lasers" rel="nofollow" class="externallink bg">tunable wavelength systems</a> for research and industrial applications.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="lasers.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">A. L. Schawlow and C. H. Townes, &ldquo;Infrared and optical masers&rdquo;, Phys. Rev. 112 (6), 1940 (1958), <a href="https://doi.org/10.1103/PhysRev.112.1940">doi:10.1103/PhysRev.112.1940</a> (ground-breaking work; also contains the famous <a href="schawlow_townes_linewidth.html" title="linewidth of a single-frequency laser with quantum noise only">Schawlow&ndash;Townes equation</a>)</td></tr>
+<tr><td class="refno">[2]</td><td class="refs">T. H. Maiman, &ldquo;Stimulated optical radiation in ruby&rdquo;, Nature 187, 493 (1960), <a href="https://doi.org/10.1038/187493a0">doi:10.1038/187493a0</a> (first experimental demonstration of a laser), <a href="https://doi.org/10.1038/187493a0">doi:10.1038/187493a0</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">T. H. Maiman, &ldquo;Optical maser action in ruby&rdquo;, Br. Commun. Electron. 7, 674 (1960)</td></tr>
+<tr><td class="refno">[4]</td><td class="refs">P. P. Sorokin and M. J. Stevenson, &ldquo;Stimulated infrared emission from trivalent uranium&rdquo;, Phys. Rev. Lett. 5 (12), 557 (1960), <a href="https://doi.org/10.1103/PhysRevLett.5.557">doi:10.1103/PhysRevLett.5.557</a> (the first four-level laser)</td></tr>
+<tr><td class="refno">[5]</td><td class="refs">A. Javan, W. R. Bennett Jr., and D. R. Herriott, &ldquo;Population inversion and continuous optical maser oscillation in a gas discharge containing a He&ndash;Ne mixture&rdquo;, Phys. Rev. Lett. 6 (3), 106 (1961), <a href="https://doi.org/10.1103/PhysRevLett.6.106">doi:10.1103/PhysRevLett.6.106</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">G. Smith, &ldquo;The early laser years at Hughes Aircraft Company&rdquo;, IEEE J. Quantum Electron. 20 (6), 577 (1984), <a href="https://doi.org/10.1109/JQE.1984.1072445">doi:10.1109/JQE.1984.1072445</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">R. E. Slusher, &ldquo;Laser technology&rdquo;, Rev. Mod. Phys. 71, S471 (1999), <a href="https://doi.org/10.1103/RevModPhys.71.S471">doi:10.1103/RevModPhys.71.S471</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">J. M. Gill, &ldquo;Lasers: a 40-year perspective&rdquo;, IEEE J. Quantum Electron. 6 (6), 1111 (2000), <a href="https://doi.org/10.1109/2944.902159">doi:10.1109/2944.902159</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">&quot;<a href="http://www.aip.org/history/exhibits/laser/">Bright idea: the first lasers</a>&quot;, American Institute of Physics (2010)</td></tr>
+<tr><td class="refno">[10]</td><td class="refs">J. Hecht, &ldquo;Short history of laser development&rdquo;, Opt. Eng. 49, 091002 (2010), <a href="https://doi.org/10.1364/AO.49.000F99">doi:10.1364/AO.49.000F99</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">A. E. Siegman, <i>Lasers</i>, University Science Books, Mill Valley, CA (1986)</td></tr>
+<tr><td class="refno">[12]</td><td class="refs">O. Svelto, <i>Principles of Lasers</i>, Plenum Press, New York (1998)</td></tr>
+<tr><td class="refno">[13]</td><td class="refs">F. Träger (ed.), <i>Handbook of Lasers and Optics</i>, Springer, Berlin (2007)</td></tr>
+<tr><td class="refno">[14]</td><td class="refs">R. Paschotta, <a href="http://spie.org/x648.xml?product_id=767474"><i>Field Guide to Lasers</i></a>, SPIE Press, Bellingham, WA (2007)</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="laser_light.html" title="light generated with a laser device">laser light</a>, <a href="laser_optics.html" title="optical elements and systems used with lasers - either in lasers or for transmitting and manipulating laser light">laser optics</a>, <a href="laser_applications.html" title="applications involving laser devices">laser applications</a>, <a href="laser_physics.html" title="the field of physics dealing with phenomena in lasers">laser physics</a>, <a href="laser_design.html" title="the design of a laser device, or the process of working out such a design">laser design</a>, <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonators</a>, <a href="laser_crystals.html" title="transparent crystals with laser-active dopants, used as laser gain media">laser crystals</a>, <a href="gain_media.html" title="media for laser amplification">gain media</a>, <a href="diode_pumped_lasers.html" title="solid-state lasers which are pumped with laser diodes">diode-pumped lasers</a>, <a href="lamp_pumped_lasers.html" title="lasers which are pumped with flash lamps or arc lamps, or in rare cases with tungsten halogen lamps">lamp-pumped lasers</a>, <a href="solid_state_lasers.html" title="lasers based on solid-state gain media (usually ion-doped crystals or glasses)">solid-state lasers</a>, <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber lasers</a>, <a href="waveguide_lasers.html" title="lasers with a waveguide structure in the gain medium">waveguide lasers</a>, <a href="upconversion_lasers.html" title="lasers relying on upconversion processes">upconversion lasers</a>, <a href="semiconductor_lasers.html" title="lasers based on semiconductor gain media">semiconductor lasers</a>, <a href="gas_lasers.html" title="lasers with a gas (or plasma) as gain medium">gas lasers</a>, <a href="molecular_lasers.html" title="gas lasers where the laser-active gas consists of molecules rather than separate atoms or ions">molecular lasers</a>, <a href="x_ray_lasers.html" title="lasers emitting in the X-ray spectral region">X-ray lasers</a>, <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked lasers</a>, <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched lasers</a>, <a href="visible_lasers.html" title="lasers (or other laser-based light sources) emitting visible light">visible lasers</a>, <a href="laser_threshold.html" title="an operation condition of a laser where laser emission just starts to occur">laser threshold</a>, <a href="slope_efficiency.html" title="differential power efficiency of a laser">slope efficiency</a>, <a href="laser_noise.html" title="fluctuations of various parameters of laser light, such as the optical power and phase">laser noise</a>, <a href="linewidth.html" title="width of the spectrum of a light beam or an absorption feature">linewidth</a>, <a href="coherence.html" title="a fixed phase relationship between the electric field values at different locations or at different times">coherence</a>, <a href="wavelength_tuning.html" title="the manipulation of the output wavelength of an optical device such as a laser or an optical parametric oscillator">wavelength tuning</a>, <a href="laser_safety.html" title="safety of the use of laser devices">laser safety</a>, <a href="laser_specifications.html" title="descriptions of essential properties of a laser system, such as performance parameters, dimensions, and operating conditions">laser specifications</a>, <a href="scientific_lasers.html" title="lasers which are designed for scientific applications">scientific lasers</a><br>and other articles in the category <a href="categories.html#lasers" title="other articles on lasers">lasers</a></p>
+<hr style="margin-top:16px; margin-bottom:12px;">
+<a href="paschotta.html"><img src="img/paschotta3_small.jpg" alt="Dr. R. Paschotta" style="float:left; margin:0px 16px 20px 18px;" width="80" height="97"></a>
+<div style="margin-bottom:12px;">
+<p style="font-size:90%; line-height:20px; padding-right:20px;">This encyclopedia is authored by <a href="paschotta.html" class="redlink">Dr. Rüdiger Paschotta</a>, the founder and executive of <a href="index.html" class="redlink">RP Photonics Consulting GmbH</a>.
+How about a <a href="training.html" class="redlink">tailored training course</a> from this distinguished expert at your location?
+<a href="contact.html" class="redlink">Contact</a> RP Photonics to find out how his <a href="./services.html" class="redlink">technical consulting services</a> (e.g. product designs, problem solving, independent evaluations, training) and <a href="software.html" class="redlink">software</a> could become very valuable for your business!</p>
+</div>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/lasers.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Flasers.html&text=RP+Photonics+Encyclopedia+-+lasers%2C+principle+of+operation%2C+resonator%2C+cavity%2C+laser+beam%2C+stimulated+emission" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Flasers.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Flasers.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/lasers.html"&gt;<br>Article on Lasers&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/lasers.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/lasers.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/lasers.html<br>article on 'Lasers' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Your Lab is Closed due to the Corona Virus Crisis?</h2>
+<p>Time to think how to best utilize your time!</p>
+<p>Here is a suggestion: <br> <b>Consider to start with physical modeling!</b></p>
+<ul>
+<li>Build models for your existing or planned lasers and amplifiers, resonators, etc.</li>
+<li>Utilize such models in order to <b>improve your qualitative and quantitative understanding</b>, solve problems, optimize device performance and <b>develop new ideas</b>.</li>
+<li>Power up your home office instead of wasting your time!</li>
+<li>When getting back to the lab, restart with fresh plans and full power.</li>
+</ul>
+<img src="./img/rp_photonics.png" alt="RP Photonics" style="margin-top:20px; width:225px;">
+<p>offers powerful <a href="./software.html?banner=lab_closed">simulation &amp; design software</a>, e.g. for <a href="./fiberpower.html?banner=lab_closed">active and passive fiber devices</a>, <a href="./resonator.html?banner=lab_closed">laser resonators</a> and <a href="./coating.html?banner=lab_closed">thin-film coatings</a>!</p>
+<p>Getting helpful <a href="./software_support.html?banner=lab_closed">support</a> from RP also benefits your projects.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="N026I9uCho57Z019wasBDg==">shownbanner = "lab closed";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Field Guide on Lasers</h2>
+<p>Enjoy a compact introduction to laser technology:</p>
+<ul>
+<li>basic principles</li>
+<li>laser beams</li>
+<li>laser resonators</li>
+<li>various types of lasers</li>
+<li>Q switching and mode locking</li>
+<li>frequency conversion</li>
+<li>laser safety</li>
+</ul>
+<p style="text-align:center;"><a href="http://spie.org/x648.html?product_id=767474"><img src="./img/fg_lasers.png" alt="FG Lasers"></a></p>
+<p>This book soon became a bestseller among the SPIE Field Guides.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="N026I9uCho57Z019wasBDg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/lasers.html"
+    },
+    "headline": "Lasers",
+    "image": "https://www.rp-photonics.com/previews/lasers.png",
+    "datePublished": "2014-08-01",
+    "dateModified": "2020-07-11",
+    "description": "Lasers are devices generating visible or invisible light, based on stimulated emission of light. Due to the manifold special properties of laser light, lasers are important for many applications.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter L",
+      "item": "https://www.rp-photonics.com/encyclopedia_l.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "lasers",
+      "item": "https://www.rp-photonics.com/lasers.html"
+    }]}
+}
+</script>
+</body>
+</html>

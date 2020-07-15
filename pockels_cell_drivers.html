@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-zyqHtBwwCIQREHPas+9qLw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Pockels cell drivers, required voltages, switching speed, bandwidth, precision, timing jitter, applications, safety</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/pockels_cell_drivers.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Pockels cells need to be operated with high voltages, delivered with a suitable Pockels cell driver. Depending on the application, the requirements on the driver can be quite different.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="Pockels cell drivers, required voltages, switching speed, bandwidth, precision, timing jitter, applications, safety">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pockels Cell Drivers">
+<meta property="og:description" content="Pockels cells need to be operated with high voltages, delivered with a suitable Pockels cell driver. Depending on the application, the requirements on the driver can be quite different.">
+<meta property="og:url" content="https://www.rp-photonics.com/pockels_cell_drivers.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/pockels_cell_drivers.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Pockels cells need to be operated with high voltages, delivered with a suitable Pockels cell driver. Depending on the application, the requirements on the driver can be quite different.">
+<meta name="twitter:title" content="Pockels Cell Drivers">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/pockels_cell_drivers.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="zyqHtBwwCIQREHPas+9qLw==">
+page="pockels_cell_drivers.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/nkt_photonics.html"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="zyqHtBwwCIQREHPas+9qLw==">shownsponsors="NKT Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_pockels_cell_drivers.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_p.html">letter P</a> &gt; <a href="pockels_cell_drivers.html">Pockels cell drivers</a></p>
+<h1>Pockels Cell Drivers</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_pockels_cell_drivers.html?s=vbox">18 suppliers for Pockels cell drivers</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://gandh.com/product-categories/pockels-cell-drivers/" data-supplier="G&H" data-location="product-enc" data-keyword="Pockels cell drivers" rel="nofollow" class="bg externallink"><img src="./bg/logos/g_h.png" alt="G&H" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.eksmaoptics.com/pockels-cells-and-drivers/pockels-cells-drivers/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="Pockels cell drivers" rel="nofollow" class="bg externallink"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.kmlabs.com/product/eclipse-pulse-picker/" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="Pockels cell drivers" rel="nofollow" class="bg externallink"><img src="./bg/logos/kapteyn_murnane_laboratories.png" alt="Kapteyn-Murnane Laboratories" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.rpmclasers.com/types/pockels-cell-driver/" data-supplier="RPMC Lasers" data-location="product-enc" data-keyword="Pockels cell drivers" rel="nofollow" class="bg externallink"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_pockels_cell_drivers.html?s=vbox">List of suppliers for<br>Pockels cell drivers</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: electronic devices for driving Pockels cells</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Treiber für Pockels-Zellen</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a></p>
+<p><a href="encyclopedia_cite.html?article=Pockels%20cell%20drivers">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p><a href="pockels_cells.html" title="electro-optic devices, used for building modulators">Pockels cells</a> are used in various kinds of <a href="electro_optic_modulators.html" title="optical modulators based on the electro-optic effect">electro-optic modulators</a>, which are controlled by applying an electrical voltage.
+That voltage is supplied by some kind of Pockels cell driver connected to the two electrodes of the Pockels cell.</p>
+<p>Typical applications of Pockels cells in the area of laser technology are:</p>
+<ul>
+<li>active <a href="q_switching.html" title="a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q switching</a>, mostly of <a href="solid_state_lasers.html" title="lasers based on solid-state gain media (usually ion-doped crystals or glasses)">solid-state lasers</a></li>
+<li>active <a href="mode_locking.html" title="a group of techniques for generating ultrashort pulses in lasers">mode locking</a></li>
+<li><a href="cavity_dumping.html" title="a method for extracting intense short or ultrashort pulses from a laser, using an optical switch in the laser resonator">cavity dumping</a> of continuous-wave or <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked</a> <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">lasers</a></li>
+<li><a href="regenerative_amplifiers.html" title="optical amplifiers with a resonator in which a light pulse can do multiple round trips before being coupled out">regenerative amplifiers</a> for <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a></li>
+<li><a href="pulse_pickers.html" title="electrically controlled optical switches used for extracting single pulses from a pulse train">pulse pickers</a> for ultrashort pulses (e.g. for reducing the <a href="pulse_repetition_rate.html" title="the number of pulses emitted per second e.g. by a mode-locked or Q-switched laser">pulse repetition rate</a>)</li>
+<li>modulating laser beams, e.g. in a sinusoidal fashion in the context of <a href="stabilization_of_lasers.html" title="measures applied to lasers in order to improve their stability in terms of output power, optical frequency, or other quantities">stabilization of lasers</a></li>
+</ul>
+<p>The requirements on the electronic driver can be very different depending on the application; see below for more details.</p>
+<p>Nowadays, basically all Pockels cell drivers are made based on solid-state electronic technology, using high voltage transistors such as MOSFETs.
+Multiple high voltage transistors may have to be stacked, taking care to achieve an even distribution of voltage across those.
+Instead of using some heavily isolated floating gate drive circuitry for the different transistors, one may use certain advanced ideas such as implementing so-called avalanche switch stacks involving avalanche diodes (not meaning <a href="avalanche_photodiodes.html" title="photodiodes with internal signal amplification through an avalanche process">avalanche photodiodes</a>) and/or avalanche bipolar transistors.</p>
+<p>Device lifetimes can be very long, provided that properly engineered drivers are used with appropriate care.
+On the other hand, drivers can be destroyed very quickly when used inappropriately.</p>
+<h2 class="togglediv">Required Voltages</h2>
+<div>
+<aside class="callout red">Hundreds or even thousands of volts are often required for driving Pockels cells &ndash; that is not easy to achieve and potentially dangerous!</aside>
+<p>The required voltage is typically of substantial magnitude.
+Frequently, one needs to access the full transmission range of an <a href="intensity_modulators.html" title="devices which can be used to modulate the intensity (power) of a light beam">intensity modulator</a> based on a Pockels cell, or alternatively a large range of phase delays of a <a href="phase_modulators.html" title="devices for manipulating the phase of a laser beam">phase modulator</a>, and therefore requires control voltages of the order of the so-called <em>half-wave voltage</em>.
+That voltage is often hundreds of volts or even several kilovolts, particularly for large <a href="optical_apertures.html" title="structures which limit the propagation of light">aperture</a> Pockels cells.
+In some cases, however, substantially smaller drive voltages are sufficient.</p>
+<p>It can be sensible to select a Pockels cell with relatively small half-wave voltage, for example by using an electro-optic material with high electro-optic coefficient and/or by working with a relatively small aperture size in case of a cell with transverse electrodes.
+For longitudinal Pockels cell designs, the average size does not influence the required control voltage, only the electrical capacitance.</p>
+<p>Of course, appropriate safety measures have to be taken in order to avoid electric shocks; see below the paragraph on safety.</p>
+</div>
+<h2 class="togglediv">Speed or Bandwidth Requirements</h2>
+<div>
+<aside class="callout blue">Pockels cells are capacitive loads, and rapid switching involves substantial current spikes.</aside>
+<p>For some applications, it is required to rapidly switch the transmission of an intensity modulator, e.g. between about 0 and 100&thinsp;&#37;.
+That is often achieved by quickly discharging the output with a fast transistor-based switch.
+It is important to realize that a Pockels cell constitutes a capacitive load, and that different cells exhibit very different capacitance values.
+While no significant electric current is required to hold a certain voltage at a Pockels cell, a substantial current spike needs to be supplied by the driver to rapidly change that voltage.
+For example, consider a Pockels cell with only 10&nbsp;pF capacitance and a switching voltage of 1&nbsp;kV: we need 10&nbsp;nJ of electric charge to be moved e.g. within 10&nbsp;ns, which implies a current spike of the order of 1&nbsp;A &ndash; quite a lot for a high-voltage supply.
+Even the average currents can become substantial when operating such devices at high repetition rates of hundreds of kilohertz or even several megahertz.</p>
+<p>Both an excessive capacitance of the Pockels cell and a too modest current pulse capability of the driver can lead to a limited switching speed.
+This can be problematic, for example when <a href="q_switching.html" title="a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q switching</a> or <a href="cavity_dumping.html" title="a method for extracting intense short or ultrashort pulses from a laser, using an optical switch in the laser resonator">cavity dumping</a> a <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a>, where serious performance degradations can result.
+Note, however, that the <a href="laser_design.html" title="the design of a laser device, or the process of working out such a design">laser design</a> and operation parameters also have a profound influence on the requirements concerning switching speed.</p>
+<p>For fast switching (e.g. with fall times of a few nanoseconds), one also needs to take into account the inductance of the electrical connections, e.g. avoiding excessively long cables.</p>
+<p>Some drivers are optimized for very fast switching in one direction, while the switching speed is much lower in the other direction, which may be irrelevant for the application.
+For example, power losses in a Q-switched laser need to be reduced rapidly for generating a <a href="pulses.html" title="flashes of light">pulse</a>, while the recovery of the introduced losses can be much slower without causing problems.
+In other cases, fast switching is required in both directions, and suitable drivers have been developed, for example using a push&ndash;pull circuit topology.</p>
+<p>In the frequency domain, the speed of a driver &ndash; or more precisely, of the combination of a Pockels cell and its driver and the cable in between &ndash; is quantified in the form of a <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>.
+The shortest possible switching time is of the order of the inverse bandwidth.</p>
+</div>
+<h2 class="togglediv">Precision</h2>
+<div>
+<p>For some applications, it is vital to control the voltage at a Pockels cell with high precision.
+For example, a <a href="pulse_pickers.html" title="electrically controlled optical switches used for extracting single pulses from a pulse train">pulse picker</a> should well transmit the selected pulses while ideally blocking all other pulses completely.
+Partially transmitting additional pulses, even at a rather low level, may severely compromise a system performance.
+Imperfections of that kind can be introduced by inaccurate electronics, but in some cases also by certain deficits of Pockels cells, such as thermal effects and <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinear</a> optical effects.</p>
+</div>
+<h2 class="togglediv">Special Requirements</h2>
+<div>
+<p>Simple Pockels cell drivers simply accept an analog input signal of moderate voltage, amplify it proportionally and send it to the cell.
+There may be a control knob for adjusting the amplification, e.g. such that one can precisely switch between zero and 100&#37; transmission of a modulator.</p>
+<p>Other drivers have a digital trigger input; that can be appropriate e.g. for operating <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched lasers</a>.
+There may be an adjustable time delay between the input trigger and the applied output voltage.
+For example, there are devices which can receive a trigger signal when a flashlamp-pump laser is pumped, so that a Q-switched pulse is generated e.g. 200&nbsp;&mu;s later.</p>
+<p>Most devices are simply attached to the electrical power grid (e.g. at 110&nbsp;V or 230&nbsp;V), while others are operated with a DC voltage of moderate magnitude, for example 24&nbsp;V.</p>
+<p>Some drivers (unipolar ones) have one of their two output pins at ground potential.
+Others have a bipolar balanced output, where the two outputs have opposite voltages against ground potential.
+The voltage against ground can be lower that way, which may be advantageous in terms of safety.
+Of course, suitable cables and connectors are required for that kind of operation, and not every Pockels cell can be connected to such a driver, as both electrodes need to be isolated against electrical ground.</p>
+<p>Some drivers have their own housing with connectors, controls, a voltage display, etc., while others are available in OEM versions for being integrated into other devices.</p>
+<p>For the operation of a <a href="regenerative_amplifiers.html" title="optical amplifiers with a resonator in which a light pulse can do multiple round trips before being coupled out">regenerative amplifier</a>, one needs to trigger a Pockels cell quite precisely based on a signal from a first <a href="photodiodes.html" title="semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiode</a>.
+The required electronics may also be integrated into a Pockels cell driver.
+Otherwise, clearly defined interfaces are required to connect such devices successfully.</p>
+<p>A very small <a href="timing_jitter.html" title="fluctuations of the temporal positions of pulses">timing jitter</a> of the driver is often essential for the applications in <a href="regenerative_amplifiers.html" title="optical amplifiers with a resonator in which a light pulse can do multiple round trips before being coupled out">regenerative amplifiers</a> and for <a href="cavity_dumping.html" title="a method for extracting intense short or ultrashort pulses from a laser, using an optical switch in the laser resonator">cavity dumping</a>, while for a simple Q-switched laser it may not matter much.</p>
+</div>
+<h2 class="togglediv">Safety Considerations</h2>
+<div>
+<p>As Pockels cell drivers usually produce dangerously high electrical voltages, they need to be used with care.
+This begins with a suitable connection to their power source.
+Usually, drivers are connected to the public grid, and it is particularly important for those that their AC input connection is properly grounded with suitable intact cables.</p>
+<p>As mentioned above, devices with a balanced bipolar output are somewhat less dangerous in the sense that they exhibit lower voltages against ground.</p>
+<p>It is essential to use proper cabling with sufficient insulation for high voltages.
+The used cables should be regularly inspected for damages particularly to the insulation, as can easily occur in a laboratory or industrial environment, for example.
+The quality of electrical connectors is also vital.
+Regular inspections are required by law in many countries.</p>
+<p>Certainly, the user manual of the device should be carefully read before starting operations, and the device should be turned on only when being sure that all electrical connections are correctly made.</p>
+<p>High-voltage drivers can often not tolerate short circuits &ndash; they can be quickly damaged e.g. when an output pin is connected to electrical ground.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_pockels_cell_drivers.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 18 suppliers for Pockels cell drivers. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.rpmclasers.com/" data-supplier="RPMC Lasers" data-location="product-enc" data-keyword="Pockels cell drivers" rel="nofollow" class="bg externallink" title="Visit the website of RPMC Lasers"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a><h3><a href="./bg/profiles/rpmc_lasers.html" title="See the profile of RPMC Lasers">RPMC Lasers</a></h3><p>RPMC Lasers offers a wide range of <a href="https://www.rpmclasers.com/types/pockels-cell-driver/" data-supplier="RPMC Lasers" data-location="product-enc" data-keyword="Pockels cell drivers" rel="nofollow" class="externallink bg">Pockels cell drivers</a> for high-speed electro-optic shutters and active Q-switching. Our Pockels cell drivers utilize solid-state MOSFET technology which provides excellent trigger noise immunity and a smooth output waveform.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.eksmaoptics.com/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="Pockels cell drivers" rel="nofollow" class="bg externallink" title="Visit the website of EKSMA OPTICS"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a><a href="https://www.eksmaoptics.com/pockels-cells-and-drivers/pockels-cells-drivers/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="Pockels cell drivers" rel="nofollow" class="bg externallink" title="Visit the website of EKSMA OPTICS"><img src="./bg/products/eksma_optics/pockels_cell_drivers.jpg" alt="Pockels cell drivers" class="product"></a><h3><a href="./bg/profiles/eksma_optics.html" title="See the profile of EKSMA OPTICS">EKSMA OPTICS</a></h3><p>Pockels cell drivers designed for a wide range of applications and operating modes &ndash; pulse selection, Q-switching, cavity dumping, CW beam chopping, burst modes. Drivers are designed for variations of output voltage, repetition rate and rise/fall time of HV pulses.</p></aside>
+<aside class="bg_vendoritem"><a href="https://gandh.com/" data-supplier="G&H" data-location="product-enc" data-keyword="Pockels cell drivers" rel="nofollow" class="bg externallink" title="Visit the website of G&amp;H"><img src="./bg/logos/g_h.png" alt="G&H" class="supplierlogo"></a><a href="https://gandh.com/product-categories/pockels-cell-drivers/" data-supplier="G&H" data-location="product-enc" data-keyword="Pockels cell drivers" rel="nofollow" class="bg externallink" title="Visit the website of G&amp;H"><img src="./bg/products/g_h/pockels_cell_drivers.jpg" alt="Pockels cell drivers" class="product"></a><h3><a href="./bg/profiles/g_h.html" title="See the profile of G&H">G&H</a></h3><p>G&amp;H <a href="https://gandh.com/product-categories/pockels-cell-drivers/" data-supplier="G&H" data-location="product-enc" data-keyword="Pockels cell drivers" rel="nofollow" class="externallink bg">Pockels cell drivers</a> have been developed to complement our range of Pockels Cells. High quality components are integrated into our designs to maximize lifetime, safety, and reliability. Our Pockels cell drivers include the Q-series Q-switch drivers and R-series regenerative amplifier drivers. Q-switch drivers provide a fast rise time followed by a longer decay time. Regenerative amplifier drivers have a square pulse with a fast rise and fall time, adjustable pulse width and may be operated to 100 kHz or more. The Q series product line includes the Lab Q-Drive, OEM Q-Drive, and QDP models while the R series product line includes the R200, the R200 System, the HVR, and the HVR System.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.kmlabs.com/" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="Pockels cell drivers" rel="nofollow" class="bg externallink" title="Visit the website of Kapteyn-Murnane Laboratories"><img src="./bg/logos/kapteyn_murnane_laboratories.png" alt="Kapteyn-Murnane Laboratories" class="supplierlogo"></a><a href="https://www.kmlabs.com/product/eclipse-pulse-picker/" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="Pockels cell drivers" rel="nofollow" class="bg externallink" title="Visit the website of Kapteyn-Murnane Laboratories"><img src="./bg/products/kapteyn_murnane_laboratories/eclipse.jpg" alt="Pockels cell drivers" class="product"></a><h3><a href="./bg/profiles/kapteyn_murnane_laboratories.html" title="See the profile of Kapteyn-Murnane Laboratories">Kapteyn-Murnane Laboratories</a></h3><p>The KMLabs <a href="https://www.kmlabs.com/product/eclipse-pulse-picker/" data-supplier="Kapteyn-Murnane Laboratories" data-location="product-enc" data-keyword="Pockels cell drivers" rel="nofollow" class="externallink bg">Eclipse</a> is a high repetition rate, half wave Pockels cell and driver unit, designed for laser pulse picking at up to 20&nbsp;kHz. The Eclipse has a minimum window of 10&nbsp;ns, and &gt;90% throughput between 750&nbsp;nm and 850&nbsp;nm. KMLabs&rsquo; compact design allows the driver to be packaged in with the optical unit, thus minimizing the high voltage line-length, and thereby maximizing the switching speed. The high voltage source for the Eclipse is an external, 19&rdquo;w x 13&rdquo;d x 3.5&rdquo;h unit.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="pockels_cell_drivers.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="pockels_cells.html" title="electro-optic devices, used for building modulators">Pockels cells</a>, <a href="electro_optic_modulators.html" title="optical modulators based on the electro-optic effect">electro-optic modulators</a><br>and other articles in the category <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/pockels_cell_drivers.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fpockels_cell_drivers.html&text=RP+Photonics+Encyclopedia+-+Pockels+cell+drivers%2C+required+voltages%2C+switching+speed%2C+bandwidth%2C+precision%2C+timing+jitter%2C+applications%2C+safety" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fpockels_cell_drivers.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fpockels_cell_drivers.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/pockels_cell_drivers.html"&gt;<br>Article on Pockels Cell Drivers&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/pockels_cell_drivers.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/pockels_cell_drivers.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/pockels_cell_drivers.html<br>article on 'Pockels Cell Drivers' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2 style="font-size:20px;">Debugging Is Now Fun!</h2>
+<p>The software products which are supporting our <a href="./software_script_language.html?banner=Debugger">script language</a> (e.g. <a href="./fiberpower.html?banner=Debugger">RP Fiber Power</a> and <a href="./coating.html?banner=Debugger">RP Coating</a>) have now got a <a href="./software_news_2017_05_31.html?banner=Debugger">powerful debugger</a>!</p>
+<a href="./software_news_2017_05_31.html?banner=Debugger"><img src="./img/expression_debugger_small.png" alt="debugger" style="margin:10px 0;"></a>
+<p>It works even within expressions, not only after each command!</p>
+<p>The <a href="./software_news.html?banner=Debugger">RP Photonics Software News</a> keep you informed.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="zyqHtBwwCIQREHPas+9qLw==">shownbanner = "Debugger";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Tutorial on Fiber Optics</h2>
+<p>See our <a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial">comprehensive fiber optics tutorial</a>:</p>
+<ul>
+<li>guiding light in single-mode and multimode fibers</li>
+<li>fiber ends and joints, propagation and coupling losses</li>
+<li>couplers and splitters</li>
+<li>polarization issues, chromatic dispersion, nonlinearities, pulse propagation</li>
+<li>fiber accessories and tools</li>
+</ul>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/fiber_core_small.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/mode_solver.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/pm_fibers_small.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/fiberpower_self_focusing4_small.png" alt="&nbsp;"></a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="zyqHtBwwCIQREHPas+9qLw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/pockels_cell_drivers.html"
+    },
+    "headline": "Pockels Cell Drivers",
+    "image": "https://www.rp-photonics.com/previews/pockels_cell_drivers.png",
+    "datePublished": "2019-02-19",
+    "dateModified": "2020-03-14",
+    "description": "Pockels cells need to be operated with high voltages, delivered with a suitable Pockels cell driver. Depending on the application, the requirements on the driver can be quite different.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter P",
+      "item": "https://www.rp-photonics.com/encyclopedia_p.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Pockels cell drivers",
+      "item": "https://www.rp-photonics.com/pockels_cell_drivers.html"
+    }]}
+}
+</script>
+</body>
+</html>

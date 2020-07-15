@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-V3CxYM1ja3kQSNZ5CuZQyA=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>The software RP Fiber Power: case studies for fiber lasers, amplifiers, script language, fiber modes, dynamic simulations, ultrashort pulse propagation</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/fiberpower_case_studies.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-05-22">
+<meta name="description" content="Many example cases demonstrate the versatility of the software RP Fiber Power. They cover not only fiber devices, but also bulk devices.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="RP Fiber Power, simulation, design, software, fiber amplifiers, lasers, power, examples">
+<script type="text/javascript" src="./jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" nonce="V3CxYM1ja3kQSNZ5CuZQyA==">
+page="fiberpower_case_studies.html"; cat="S"; shownbanner=""; ref="http://www.rp-photonics.com/fiberpower.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td class="selected"><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="fiberpower_case_studies_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software_start" href="software.html">Introduction</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<p>Products:</p>
+<a id="Overview" href="software_overview.html">Overview</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html" class="sel">RP Fiber Power</a>
+<a href="fiberpower_features.html" class="sub">Features</a>
+<a href="fiberpower_speed.html" class="sub">Speed</a>
+<a href="fiberpower_model.html" class="sub">Model</a>
+<a href="fiberpower_data.html" class="sub">Data</a>
+<a href="fiberpower_interface.html" class="sub">Interface</a>
+<a href="fiberpower_case_studies.html" class="sub sel">Demos</a>
+<a href="fiberpower_versions.html" class="sub">Versions</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<p>Various aspects:</p>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<p>Take action:</p>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main"><main>
+<div class="softwarelogo">
+<p class="fig" style="margin-top:12px"><img src="img/fiberpower_logo.png" width="75" height="75" alt="RP Fiber Power logo"></p>
+</div>
+<p class="breadcrumbs"><a href="software.html">Software</a> &gt; <a href="fiberpower.html">RP Fiber Power</a> &gt; <a href="fiberpower_case_studies.html">Demos</a></p>
+<h1>RP Fiber Power &ndash; Simulation and Design Software <br> for Fiber Optics, Amplifiers and Fiber Lasers</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower.html">Overview</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_features.html">Features</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_speed.html">Speed</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_model.html">Model</a></td>
+</tr><tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_data.html">Data</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_interface.html">Interface</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="fiberpower_case_studies.html">Demos</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_versions.html">Versions</a></td>
+</tr>
+</table>
+<p>Here, you find a number of video demos, various detailed demonstration case studies and various nice graphics made with the software.</p>
+<table class="subnavtable fiberpowerdemos">
+<tr>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="fiberpower_case_studies.html">Case Studies</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_videos.html">Video Demos</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_graphics.html">Nice Graphics</a></td>
+</tr>
+<tr><td colspan="3" class="fiberpowerdemosbox">
+<h2>Example Cases Described on Separate Pages</h2>
+<p>A first set of examples illustrates the power of the <b>mode solver</b> and the <b>numerical beam propagation</b>:</p>
+<ul>
+<li><a href="fiberpower_modes.html">calculating fiber modes</a></li>
+<li class="ta_left"><a href="fiberpower_gesi.html">modes of a germanosilicate fiber, with calculation of dispersion</a></li>
+<li class="ta_left ta_left"><a href="fiberpower_launch.html">launching light into a multimode fiber</a></li>
+<li class="ta_left ta_left ta_left"><a href="fiberpower_bend_loss.html">bend effects in a large mode area fiber</a></li>
+<li class="ta_left ta_left ta_left ta_left"><a href="fiberpower_self_focusing.html">nonlinear self-focusing</a></li>
+<li class="ta_left ta_left ta_left ta_left ta_left"><a href="fiberpower_sm_launch.html">light evolution for a misaligned input beam</a></li>
+<li class="ta_left ta_left ta_left ta_left ta_left ta_left"><a href="fiberpower_dcf.html">pump absorption in a double-clad fiber</a></li>
+<li class="ta_left ta_left ta_left ta_left ta_left ta_left ta_left"><a href="fiberpower_tapered_fiber.html">light in a tapered fiber</a></li>
+<li class="ta_left ta_left ta_left ta_left ta_left ta_left ta_left ta_left"><a href="fiberpower_coupler.html">fiber coupler</a></li>
+<li class="ta_left ta_left ta_left ta_left ta_left ta_left ta_left ta_left ta_left"><a href="fiberpower_hom_coupler.html">mode coupling in a fiber Bragg grating</a></li>
+<li class="ta_left ta_left ta_left ta_left ta_left ta_left ta_left ta_left ta_left ta_left"><a href="fiberpower_qs_yag_bp.html">actively Q-switched Nd:YAG laser</a> (bulk laser system; dynamic simulation with wave propagation)</li>
+<li class="ta_left ta_left ta_left ta_left ta_left ta_left ta_left ta_left ta_left ta_left ta_left"><a href="fiberpower_srs_mm.html">stimulated Raman scattering in a multimode fiber</a></li>
+</ul>
+<p>Further demo files show how to simulate <b>fiber amplifiers and lasers</b> (only steady-state calculations):</p>
+<ul>
+<li><a href="fiberpower_edfa.html">erbium-doped fiber amplifier</a></li>
+<li class="ta_left"><a href="fiberpower_ydfl.html">cladding-pumped high-power ytterbium-doped fiber laser</a></li>
+<li class="ta_left ta_left"><a href="fiberpower_tdfl.html">thulium-doped blue upconversion laser</a></li>
+<li class="ta_left ta_left ta_left"><a href="fiberpower_ase.html">ASE source with automatic spectral optimization</a></li>
+</ul>
+<p>Here are some examples for <b>dynamic simulations</b>:</p>
+<ul>
+<li><a href="fiberpower_pamp.html">pulse amplification in a fiber amplifier</a></li>
+<li class="ta_left"><a href="fiberpower_qs_laser.html">actively Q-switched fiber laser</a></li>
+<li class="ta_left ta_left"><a href="fiberpower_qs_yag.html">actively Q-switched Nd:YAG laser</a> (bulk laser system)</li>
+<li class="ta_left ta_left ta_left"><a href="fiberpower_qs_yag_bp.html">actively Q-switched Nd:YAG laser</a> (bulk laser system; with wave propagation)</li>
+<li class="ta_left ta_left ta_left ta_left"><a href="fiberpower_pqs_yag.html">passively Q-switched Nd:YAG laser</a> (bulk laser system)</li>
+</ul>
+<p>Next, there are demonstrations for simulating the <b>propagation of ultrashort pulses</b>:</p>
+<ul>
+<li><a href="fiberpower_ho_solitons.html">higher-order solitons</a></li>
+<li class="ta_left"><a href="fiberpower_solitonshift.html">soliton self-frequency shift</a></li>
+<li class="ta_left ta_left"><a href="fiberpower_parpulse.html">parabolic pulses in a fiber amplifier</a></li>
+<li class="ta_left ta_left ta_left"><a href="fiberpower_srs.html">stimulated Raman scattering in a fiber amplifier</a></li>
+<li class="ta_left ta_left ta_left ta_left"><a href="fiberpower_regen.html">regenerative amplifier</a> (bulk system)</li>
+<li class="ta_left ta_left ta_left ta_left ta_left"><a href="fiberpower_ml_fl.html">mode-locked fiber laser</a></li>
+<li class="ta_left ta_left ta_left ta_left ta_left ta_left"><a href="fiberpower_cpa.html">chirped-pulse amplifier system</a></li>
+<li class="ta_left ta_left ta_left ta_left ta_left ta_left ta_left"><a href="fiberpower_data_trans.html">data transmission</a></li>
+<li class="ta_left ta_left ta_left ta_left ta_left ta_left ta_left ta_left"><a href="fiberpower_sc.html">supercontinuum generation</a></li>
+</ul>
+<p>Finally, a demonstration for generating output in other forms:</p>
+<ul>
+<li><a href="fiberpower_html.html">reporting calculated results as web pages</a></li>
+</ul>
+<p>Click on the links to get the details.</p>
+<p>Even more demo files (in total more than 70) are delivered with the software.
+As a user, you can simply copy demo scripts and modify them according to your needs.
+However, you may also easily generate new scripts using the interactive forms.</p>
+</td></tr>
+</table>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</main></div>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="V3CxYM1ja3kQSNZ5CuZQyA==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Software",
+      "item": "https://www.rp-photonics.com/software.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "RP Fiber Power",
+      "item": "https://www.rp-photonics.com/fiberpower.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Demos",
+      "item": "https://www.rp-photonics.com/fiberpower_case_studies.html"
+    }]}
+}
+</script>
+</body>
+</html>

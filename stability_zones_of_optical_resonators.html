@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-N+T7gI9fg9WxPU0KXbAlrQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - stability zones of optical resonators, laser resonator, cavity, alignment sensitivity, zone I, zone II</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/stability_zones_of_optical_resonators.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Stability zones are parameter regions of an optical resonator where the resonator is geometrically stable.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="stability zones of optical resonators, laser resonator, cavity, alignment sensitivity, zone I, zone II">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Stability Zones of Optical Resonators">
+<meta property="og:description" content="Stability zones are parameter regions of an optical resonator where the resonator is geometrically stable.">
+<meta property="og:url" content="https://www.rp-photonics.com/stability_zones_of_optical_resonators.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/stability_zones_of_optical_resonators.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Stability zones are parameter regions of an optical resonator where the resonator is geometrically stable.">
+<meta name="twitter:title" content="Stability Zones of Optical Resonators">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/stability_zones_of_optical_resonators.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="N+T7gI9fg9WxPU0KXbAlrQ==">
+page="stability_zones_of_optical_resonators.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="N+T7gI9fg9WxPU0KXbAlrQ==">shownsponsors="El.En."</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_s.html">letter S</a> &gt; <a href="stability_zones_of_optical_resonators.html">stability zones of optical resonators</a></p>
+<h1>Stability Zones of Optical Resonators</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="boxadvertisement">
+<h2>Calculating Stability Zones</h2>
+<p>The software <a href="resonator.html"><b>RP Resonator</b></a> can be used to calculate stability zones of laser resonators, and to find optimized resonator designs e.g. concerning the location of the operation point within a stability zone.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: parameter regions of an optical resonator where the resonator is geometrically stable</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Stabilitätszonen</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#optical_resonators" title="other articles on optical resonators">optical resonators</a></p>
+<p><a href="encyclopedia_cite.html?article=stability%20zones%20of%20optical%20resonators">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>When a parameter of a <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a> (optical cavity) such as an arm length or the dioptric power (inverse <a href="focal_length.html" title="a measure of how strongly an optical system focuses or defocuses light">focal length</a>) of the focusing element in the resonator is varied, the resonator may go through one (for <a href="ring_lasers.html" title="lasers with a ring resonator">ring</a> resonators) or two (for <a href="standing_wave_resonators.html" title="optical resonators with two end mirrors">standing-wave resonators</a>) <em>stability zones</em>.</p>
+<p>In a purely geometric analysis, stability means that a ray injected into the optical system will stay at a finite distance from the axis even after many round trips.
+In this regime, the <a href="resonator_modes.html" title="modes of an optical or microwave resonator">resonator modes</a> (self-reproducing field configurations, calculated with <a href="wave_optics.html" title="the description of optical phenomena based on wave models">wave optics</a>) are of much simpler structure than for an <a href="unstable_resonators.html" title="optical resonators which are dynamically unstable with respect to transverse beam offsets">unstable resonator</a>.
+The properties of the resonator modes can vary strongly within a stability zone and also between different zones.</p>
+<figure>
+<img src="img/stability_zones.png" alt="stability zones">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Stability zones of a standing-wave laser resonator.
+The curves show the beam radii at the end mirrors and in the <a href="laser_crystals.html" title="transparent crystals with laser-active dopants, used as laser gain media">laser crystal</a> as functions of the focusing power (dioptric power) of the <a href="thermal_lensing.html" title="a lensing effect induced by temperature gradients">thermal lens</a> of the gain medium, which is roughly proportional to the pump power.
+Here, the left zone is zone II according to Magni, and the right one is zone I.
+</figcaption>
+</figure>
+<h2 class="togglediv">Properties of Stability Zones for Linear Resonators</h2>
+<div>
+<p>The detailed properties of stability zones are very important for the issue of <a href="resonator_design.html" title="the description of the optical components from which an optical resonator is made, and their exact arrangement">resonator design</a>, in particular as a part of <a href="laser_design.html" title="the design of a laser device, or the process of working out such a design">laser design</a>, because the properties of a laser resonator can be essential for laser performance.
+Resonator stability zones have been explored in a huge volume of literature.
+A paper by Magni [2] presented a detailed analysis for <a href="standing_wave_resonators.html" title="optical resonators with two end mirrors">linear resonators</a>.
+Some important properties are discussed in the following:</p>
+<ul>
+<li>At the edges of the stability zones of a linear resonator, the <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radii</a> at the resonator end mirrors can either diverge or vanish.</li>
+<li>In the case of a variable <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lens</a>, such as the <a href="thermal_lensing.html" title="a lensing effect induced by temperature gradients">thermal lens</a> in the laser <a href="gain_media.html" title="media for laser amplification">gain medium</a>, the beam radius at the position of the variable lens goes through a minimum somewhere within a stability zone, and diverges at the stability edges.</li>
+<li>Both stability zones of a linear resonator have the same minimum beam radius at the variable lens, but are very different in other respects.
+In particular, one of the stability zones (called zone&nbsp;II according to Magni) has a stability edge where the mode sizes on both end mirrors diverge.
+At this point, the <a href="alignment_sensitivity_of_optical_resonators.html" title="the sensitivity of a laser, an optical resonator or some other device with respect to misalignment">alignment sensitivity</a> of the resonator also diverges, so that stable operation of a laser near such a point is difficult to achieve: not only mirror tilts, but also asymmetries of the thermal lens, as can occur during pump alignment, critically affect the transverse position of the laser mode.
+The other stability zone, called zone&nbsp;I, does not exhibit such a divergence of alignment sensitivity, and is generally overall better than zone&nbsp;II in terms of stability.</li>
+<li>The width of the stability zones in terms of focusing power of the variable lens is twice the <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a> divided by <span class="eqn_il"><span class="greek">&pi;</span></span> times the square of the minimum beam radius at the variable lens.
+This means that resonators with a large minimum mode size inevitably have narrow stability regions.</li>
+<li>Only one of the two stability zones of a linear resonator may be observed, e.g. when the variable lens is very close to one end mirror (shifting zone&nbsp;I into a regime with very strong focusing), or when both stability zones merge to form a single zone of twice the width.</li>
+<li>In cases without circular symmetry around the beam axis, the stability zones for the horizontal and vertical direction can be different, and may not overlap.</li>
+</ul>
+</div>
+<h2 class="togglediv">Properties of Stability Zones for Ring Resonators</h2>
+<div>
+<p>Similar to Ref. [2] for linear resonators, Ref. [3] presented an analysis for <a href="ring_resonators.html" title="optical resonators where light can independently circulate in two different directions">ring resonators</a>.
+These have somewhat simpler properties, which however are similar to those of linear resonators in many respects:</p>
+<ul>
+<li>Ring resonators have only a single stability zone.</li>
+<li class="ta_left">At both edges of the stability zone, the mode radii diverge.
+However, only at one of the edges the <a href="alignment_sensitivity_of_optical_resonators.html" title="the sensitivity of a laser, an optical resonator or some other device with respect to misalignment">alignment sensitivity</a> also diverges, whereas it reaches a minimum on the other stability edge.</li>
+<li class="ta_left">The minimum mode size at the thermal lens again determines the width of the stability region in terms of dioptric power, but that width is twice as large as for a linear resonator.</li>
+</ul>
+<p>The differences to linear resonators are related to the fact that in a ring resonator the laser beam passes the thermal lens only once per round trip, instead of twice as in a linear resonator.</p>
+</div>
+<h2 class="togglediv">Consequences for Resonator Design</h2>
+<div>
+<p>Some of the consequences of such properties for the <a href="resonator_design.html" title="the description of the optical components from which an optical resonator is made, and their exact arrangement">design</a> of <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonators</a> (particularly for <a href="solid_state_lasers.html" title="lasers based on solid-state gain media (usually ion-doped crystals or glasses)">solid-state</a> <a href="bulk_lasers.html" title="lasers based on bulk crystals as gain media">bulk lasers</a>) are shortly discussed in the following:</p>
+<ul>
+<li><a href="high_power_lasers.html" title="lasers emitting very high optical powers">High-power</a> <a href="solid_state_lasers.html" title="lasers based on solid-state gain media (usually ion-doped crystals or glasses)">solid-state lasers</a> are often designed with a relatively small minimum mode size in the gain medium, because otherwise the stability zones would be too narrow, and the laser could be operated only in a narrow range of pump powers.
+A consequence of that, however, is that the laser will oscillate on multiple transverse <a href="resonator_modes.html" title="modes of an optical or microwave resonator">resonator modes</a> and thus not generate a <a href="diffraction_limited_beams.html" title="beams with a minimum possible beam divergence for a given waist radius">diffraction-limited</a> output beam.</li>
+<li>For stable operation of a laser with diffraction-limited output (high <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a>), it is often preferable to operate close to the point with minimum mode size in the gain medium, and of course to design the resonator such that this mode approximately matches the pump intensity distribution.
+Such an operation point minimizes the sensitivity to small changes of the focusing power of the thermal lens.</li>
+<li>It can also be preferable to operate a laser in stability zone&nbsp;I in order to minimize the alignment sensitivity.
+There exists a systematic procedure to find a resonator design which operates at the beam radius minimum of the wanted stability zone, while meeting other requirements such as a suitable minimum mode size.</li>
+</ul>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="stability_zones_of_optical_resonators.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">S. De Silvestri <i>et al.</i>, &ldquo;Novel stability diagrams for continuous-wave solid-state laser resonators&rdquo;, Opt. Lett. 11 (8), 513 (1986), <a href="https://doi.org/10.1364/OL.11.000513">doi:10.1364/OL.11.000513</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">V. Magni, &ldquo;Multielement stable resonators containing a variable lens&rdquo;, J. Opt. Soc. Am. A 4 (10), 1962 (1987), <a href="https://doi.org/10.1364/JOSAA.4.001962">doi:10.1364/JOSAA.4.001962</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">S. De Silvestri <i>et al.</i>, &ldquo;Rod thermal lensing effects in solid-state laser ring resonators&rdquo;, Opt. Commun. 65 (5), 373 (1988), <a href="https://doi.org/10.1016/0030-4018(88)90106-X">doi:10.1016/0030-4018(88)90106-X</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">V. Magni <i>et al.</i>, &ldquo;Recent developments in laser resonator design&rdquo;, Opt. Quantum Electron. 23, 1105 (1991), <a href="https://doi.org/10.1007/BF00619980">doi:10.1007/BF00619980</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">N. Hodgson and H. Weber, <i>Laser Resonators and Beam Propagation</i>, 2nd edn., Springer, Berlin (2005)</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="resonator_design.html" title="the description of the optical components from which an optical resonator is made, and their exact arrangement">resonator design</a>, <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonators</a>, <a href="alignment_sensitivity_of_optical_resonators.html" title="the sensitivity of a laser, an optical resonator or some other device with respect to misalignment">alignment sensitivity of optical resonators</a>, <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">lasers</a>, <a href="thermal_lensing.html" title="a lensing effect induced by temperature gradients">thermal lensing</a>, <a href="spotlight_2006_10_01.html">The Photonics Spotlight 2006-10-01</a><br>and other articles in the category <a href="categories.html#optical_resonators" title="other articles on optical resonators">optical resonators</a></p>
+<hr style="margin-top:16px; margin-bottom:12px;">
+<a href="paschotta.html"><img src="img/paschotta3_small.jpg" alt="Dr. R. Paschotta" style="float:left; margin:0px 16px 20px 18px;" width="80" height="97"></a>
+<div style="margin-bottom:12px;">
+<p style="font-size:90%; line-height:20px; padding-right:20px;">This encyclopedia is authored by <a href="paschotta.html" class="redlink">Dr. Rüdiger Paschotta</a>, the founder and executive of <a href="index.html" class="redlink">RP Photonics Consulting GmbH</a>.
+How about a <a href="training.html" class="redlink">tailored training course</a> from this distinguished expert at your location?
+<a href="contact.html" class="redlink">Contact</a> RP Photonics to find out how his <a href="./services.html" class="redlink">technical consulting services</a> (e.g. product designs, problem solving, independent evaluations, training) and <a href="software.html" class="redlink">software</a> could become very valuable for your business!</p>
+</div>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/stability_zones_of_optical_resonators.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fstability_zones_of_optical_resonators.html&text=RP+Photonics+Encyclopedia+-+stability+zones+of+optical+resonators%2C+laser+resonator%2C+cavity%2C+alignment+sensitivity%2C+zone+I%2C+zone+II" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fstability_zones_of_optical_resonators.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fstability_zones_of_optical_resonators.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/stability_zones_of_optical_resonators.html"&gt;<br>Article on Stability Zones of Optical Resonators&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/stability_zones_of_optical_resonators.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/stability_zones_of_optical_resonators.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/stability_zones_of_optical_resonators.html<br>article on 'Stability Zones of Optical Resonators' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Evaluation of Technologies</h2>
+<p>In the laser and photonics industry, it is often essential to obtain competent evaluations of certain technologies:</p>
+<ul>
+<li>A CTO of a laser company needs to know whether some new technical idea is worthwhile pursuing. Maybe there are some hidden problems?</li>
+<li>A user of lasers is told about a great new laser architecture &ndash; but will it really serve her needs?</li>
+<li>Venture capital firms need to find out what the potentials and limitations of certain technologies are. We call that applying <em>due diligence</em>.</li>
+</ul>
+<h3>Get help!</h3>
+<p>Involving a top expert such as <a href="./paschotta.html?banner=technology_evaluation">Dr. Paschotta</a> into technology evaluations can have many advantages:</p>
+<ul>
+<li>He has a good overview on many technologies and their potentials and limitations.</li>
+<li>His analytic mind allows him to develop a balanced perspective, taking into account all relevant aspects.</li>
+<li>He is well trained in writing useful reports.</li>
+<li>He may bring in new perspectives and ideas.</li>
+</ul>
+<p>Just <a href="./contact.html?banner=technology_evaluation">contact RP Photonics</a> to find out what we can do for you!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="N+T7gI9fg9WxPU0KXbAlrQ==">shownbanner = "technology evaluation";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Interesting Articles</h2>
+<p>We offer a huge selection of interesting articles on laser technology and photonics. Some examples:</p>
+<ul>
+<li><a href="./spotlight_2018_09_28.html?banner=articles">Resonator modes in microchip lasers</a></li>
+<li><a href="./spotlight_2018_08_22.html?banner=articles">What is different for quasi-three-level lasers?</a></li>
+<li><a href="./spotlight_2018_06_08.html?banner=articles">Understanding intensity noise</a></li>
+<li><a href="./spotlight_2018_05_11.html?banner=articles">Gain saturation in solid-state lasers</a></li>
+<li><a href="./spotlight_2018_04_06.html?banner=articles">The essential roles of phonons in solid-state lasers</a></li>
+<li><a href="./spotlight_2018_01_08.html?banner=articles">Self-starting of passively mode-locked lasers</a></li>
+<li><a href="./spotlight_2017_12_04.html?banner=articles">Energy levels of solid-state gain media</a></li>
+<li><a href="./software_news_2018_08_02.html?banner=articles">Data grids for numerical beam propagation</a></li>
+<li><a href="./software_news_2018_05_22.html?banner=articles">Numerical representation of ultrashort pulses</a></li>
+</ul>
+<p>These articles belong to our newsletters, which appear about once per month.
+You will not regret to <a href="./newsletters.html?banner=articles">register</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="N+T7gI9fg9WxPU0KXbAlrQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/stability_zones_of_optical_resonators.html"
+    },
+    "headline": "Stability Zones of Optical Resonators",
+    "image": "https://www.rp-photonics.com/previews/stability_zones_of_optical_resonators.png",
+    "datePublished": "2007-07-11",
+    "dateModified": "2020-03-14",
+    "description": "Stability zones are parameter regions of an optical resonator where the resonator is geometrically stable.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter S",
+      "item": "https://www.rp-photonics.com/encyclopedia_s.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "stability zones of optical resonators",
+      "item": "https://www.rp-photonics.com/stability_zones_of_optical_resonators.html"
+    }]}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-65f7AJ/ON6uL1X797NS/Uw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>The software RP Resonator for advanced laser resonator design and optimization</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/resonator.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-05-22">
+<meta name="description" content="RP Resonator is a particularly flexible software for the design and optimization of laser resonators.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="RP Resonator, modeling, software, resonator design, resonator design, laser, thermal lens">
+<script type="text/javascript" src="./jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" nonce="65f7AJ/ON6uL1X797NS/Uw==">
+page="resonator.html?banner=RP_Resonator"; cat="S"; shownbanner=""; ref="http://www.rp-photonics.com/quiz.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td class="selected"><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="resonator_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software_start" href="software.html">Introduction</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<p>Products:</p>
+<a id="Overview" href="software_overview.html">Overview</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html" class="sel">RP Resonator</a>
+<a href="resonator_purpose.html" class="sub">Purpose</a>
+<a href="resonator_model.html" class="sub">Model</a>
+<a href="resonator_interface.html" class="sub">Interface</a>
+<a href="resonator_demos.html" class="sub">Demos</a>
+<a href="resonator_versions.html" class="sub">Versions</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<p>Various aspects:</p>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<p>Take action:</p>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main"><main>
+<div class="softwarelogo">
+<p class="fig" style="margin-top:12px"><img src="img/resonator_logo.png" width="73" height="73" alt="RP Fiber Power logo"></p>
+</div>
+<p class="breadcrumbs"><a href="software.html">Software</a> &gt; <a href="resonator.html">RP Resonator</a></p>
+<h1>RP Resonator &ndash; Advanced Software for Laser Resonator Design and Optimization</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="resonator.html">Overview</a></td>
+<td class="sub_nav"><a class="sub_n" href="resonator_purpose.html">Purpose</a></td>
+<td class="sub_nav"><a class="sub_n" href="resonator_model.html">Model</a></td>
+<td class="sub_nav"><a class="sub_n" href="resonator_interface.html">Interface</a></td>
+<td class="sub_nav"><a class="sub_n" href="resonator_demos.html">Demos</a></td>
+<td class="sub_nav"><a class="sub_n" href="resonator_versions.html">Versions</a></td>
+</tr>
+</table>
+<h2>A Powerful Tool for Designing and Optimizing Optical Resonators</h2>
+<p><b>RP Resonator V4</b> is a powerful software for calculations on optical resonators.
+In particular, it can be used to produce optimized laser resonator designs.
+Its <a href="resonator_interface.html">user interface</a> combines uttermost flexibility with an easy start, making the software suitable for quick calculations in an industrial environment as well as for advanced research.
+Don't waste your time with some free resonator design software from questionable sources &ndash; professional work becomes effective and efficient only with high-quality software tools.</p>
+<p>See our video:</p>
+<figure>
+<a href="resonator_video1.html"><img src="video/video_r1/video_r1.png" alt="introduction to RP Resonator V4"></a>
+</figure>
+<h2 class="togglediv">Start with Simple Forms</h2>
+<div>
+<p>There are various demo files, containing handy <a href="software_custom_forms.html"><b>custom forms</b></a>, with which you can very easily get started.
+See examples for a linear or ring laser resonator:</p>
+<figure>
+<img src="img/resonator_form_linear_resonator.png" alt="form for linear resonator">
+</figure>
+<figure>
+<img src="img/resonator_form_ring_resonator.png" alt="form for ring resonator">
+</figure>
+<p>When executing the calculation, you get various diagrams (not shown here).
+You can also get outputs displayed in the form.
+Further numerical outputs can appear in the output area on the right side.</p>
+<p>A great feature is that those forms and calculations are not hard-wired: you obtain <a href="software_script_language.html"><b>script files</b></a>, in which you can <b>easily modify the forms and calculations according to your specific needs</b>!
+For example, you may introduce more optical elements to the resonator or create additional diagrams.
+And in case that things are getting too difficult for you, you will get very helpful <a href="software_support.html"><b>technical support</b></a>.
+You can get even complete new scripts made according to your informal description of what you need.</p>
+</div>
+<h2 class="togglediv">Scripting is Highly Flexible &ndash; and Easy!</h2>
+<div>
+<p>In <b>RP Resonator</b>, you can define a resonator structure in text form, i.e., in a script.
+For example, a bow-tie <a href="ring_resonators.html" title="optical resonators where light can independently circulate in two different directions">ring resonator</a> could be defined as follows:</p>
+<figure>
+<img src="img/resonator_def.png" alt="definition of a ring resonator">
+</figure>
+<p>Various parameter values such as the arm lengths <span class="eqn_il"><i>a</i></span> and <span class="eqn_il"><i>b</i></span> have been assigned to variables (not shown here), and the arm length <span class="eqn_il"><i>d</i></span> has been calculated from those, using a simple trigonometric expression.</p>
+<p>(You can also use a wizard form, where you will in some parameters, from which the required code is generated automatically.)</p>
+<p>Showing the resonator and plotting the beam radius vs. position is similarly easy:</p>
+<figure>
+<img src="img/resonator_plots.png" alt="plotting in RP Resonator">
+</figure>
+<p>The first generated diagram is shown here:</p>
+<figure>
+<img src="img/bow-tie_ring_resonator.png" alt="bow-tie ring resonator">
+</figure>
+<p>Similarly, all sorts of other tasks can easily be accomplished with a few lines of script code &ndash; for example:</p>
+<ul>
+<li>Generate other graphical diagrams for visualizing properties of your resonator or whatever else.</li>
+<li>Define a figure-of-merit function as a precise definition of your optimization target, and do a numerical optimization of some resonator parameters such that the value of that function becomes minimal.</li>
+<li>Save any calculated data in a text file or binary file &ndash; essentially any file format can be generated.</li>
+</ul>
+<p>(See also our <a href="resonator_demos.html"><b>case studies</b></a> as concrete examples (involving laser resonators and others), and read about the nice <a href="resonator_interface.html"><b>user interface</b></a>.)</p>
+<aside class="callout green">Which other resonator design software offers such an enormous flexibility?</aside>
+<p>Compared with other resonator design software, <b>RP Resonator</b> is <b>far more flexible</b>.
+For example, you can have any parameters of the resonator setup calculated using some mathematical expressions.
+You can even generate resonator components within loops, so that by changing a single parameter you can even modify the number of components in your setup.
+(For example, you could state that you want sequence of <i>N</i> crystals with some air spaces and lenses or mirrors in between.)
+Also, you can automatically optimize resonator parameters such that a freely defined figure of merit is minimized.
+For complex resonator design tasks, such functionality is not just nice to have, but essential.</p>
+</div>
+<h2 class="togglediv">The Product Brochure</h2>
+<div>
+<p>You can <a href="RP_Resonator.pdf"><b>download our brochure in PDF format</b></a>.</p>
+<figure>
+<a href="RP_Resonator.pdf"><img src="img/rp_resonator_brochure.png" alt="RP Resonator brochure"></a>
+</figure>
+<h2>Many Powerful Features</h2>
+<p>The main features of <b>RP Resonator V4</b> are:</p>
+<ul>
+<li><b>RP Resonator</b> can <b>calculate a wide range of properties</b> of <a href="optical_resonators.html" title="arrangements of optical components which allow a beam of light to circulate">optical resonators</a>, such as the variation of the <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a>, the sensitivity of the <a href="resonator_modes.html" title="modes of an optical or microwave resonator">resonator mode</a> e.g. to <a href="thermal_lensing.html" title="a lensing effect induced by temperature gradients">thermal lensing</a> and <a href="alignment_sensitivity_of_optical_resonators.html" title="the sensitivity of a laser, an optical resonator or some other device with respect to misalignment">misalignment</a>, <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> from geometric effects, <a href="gouy_phase_shift.html" title="an additional phase shift occurring in the propagation of focused Gaussian beams">Gouy phase shifts</a>, frequency degeneracies of resonator modes, etc.
+Note that many of those aspects are very relevant for the achieved laser performance.</li>
+<li>It also facilitates sophisticated design <b>optimizations</b>.
+A figure of merit of arbitrary kind can be easily defined, and refined algorithms are used for minimizing this figure of merit by adjusting selected resonator properties.
+If necessary, arbitrary boundary conditions can be observed such as preserving certain symmetries, limiting the difference of certain quantities, etc.</li>
+<li>The software can <b>draw the resonator setup</b> and provide basically arbitrary plots showing all its properties.</li>
+<li>The software has a very versatile <a href="resonator_interface.html"><b>user interface</b></a>.
+It is controlled with a powerful <a href="software_script_language.html"><b>script language</b></a>.
+In addition, it offers an <b>input wizards form</b>, where one can generate large parts of the required script code simply by filling out forms.
+Just type numbers or even mathematical expressions into the form fields, and you instantly see the corresponding script code being generated.
+It is also possible to make <a href="software_custom_forms.html"><b>custom forms</b></a>, i.e., forms tailored to specific applications &ndash; made by yourself or within the technical support.</li>
+<li>Due to the <a href="software_script_language.html">script language</a>, you obtain an <b>enormous flexibility</b>.
+For example, you can define a resonator model where you have <a href="resonator_mp_amp.html">multiple passes through a laser crystal</a>, and the detailed arm lengths and angles are calculated automatically from a few given parameters.
+Then you can optimize the resonator by manually or automatically adjusting these parameters.</li>
+<li>In addition to the detailed <b>PDF manual</b>, there is an <b>extensive context-sensitive online help system</b>.</li>
+</ul>
+<p>Having these features, the software can be <a href="resonator_purpose.html">applied</a> in a great variety of cases.
+The probably most important application is the design of <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonators</a>.
+Some examples are shown as <a href="resonator_demos.html">demos</a>.</p>
+<p>Another important aspect of this software: you can verify that its <a href="paschotta.html">developer</a> surely understands the involved physics and knows the scientific literature.
+He will be the person who makes sure that any problem you may have with using the software will be solved very soon.
+<b>Substantial technical</b> <a href="resonator_interface.html#Support"><b>support</b></a> &ndash; also usable for more general consultancy on related technical matters! &ndash; is <b>included in the</b> <a href="software_licenses.html"><b>license</b></a> <b>fee</b>.</p>
+<p>The powerful combination of software and competent support helps you to achieve fast and very efficient progress in your development projects.</p>
+</div>
+<div class="software_questions">
+<p>If you have any <b>further questions</b> or need a <b>quotation</b>:</p>
+<div class="button action"><a href="software_contact.html"><b>Contact us</b></a></div>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</main></div>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="65f7AJ/ON6uL1X797NS/Uw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Software",
+      "item": "https://www.rp-photonics.com/software.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "RP Resonator",
+      "item": "https://www.rp-photonics.com/resonator.html"
+    }]}
+}
+</script>
+</body>
+</html>

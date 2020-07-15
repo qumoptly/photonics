@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-LmuurX9B5IiHjdWxZZMAcw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>The software RP Fiber Power: pulse generation in a Q-switched fiber laser, numerical simulation of pulse shapes</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/fiberpower_qs_laser.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-05-22">
+<meta name="description" content="Pulse generation in a Q-switched fiber laser is simulated with the software RP Fiber Power.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="RP Fiber Power, simulation, design, software, fiber amplifiers, lasers, power, model, pulse, energy extraction">
+<script type="text/javascript" src="./jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" nonce="LmuurX9B5IiHjdWxZZMAcw==">
+page="fiberpower_qs_laser.html"; cat="S"; shownbanner=""; ref="http://www.rp-photonics.com/fiberpower.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td class="selected"><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="fiberpower_qs_laser_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software_start" href="software.html">Introduction</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<p>Products:</p>
+<a id="Overview" href="software_overview.html">Overview</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html" class="sel">RP Fiber Power</a>
+<a href="fiberpower_features.html" class="sub">Features</a>
+<a href="fiberpower_speed.html" class="sub">Speed</a>
+<a href="fiberpower_model.html" class="sub">Model</a>
+<a href="fiberpower_data.html" class="sub">Data</a>
+<a href="fiberpower_interface.html" class="sub">Interface</a>
+<a href="fiberpower_case_studies.html" class="sub sel">Demos</a>
+<a href="fiberpower_versions.html" class="sub">Versions</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<p>Various aspects:</p>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<p>Take action:</p>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main"><main>
+<div class="softwarelogo">
+<p class="fig" style="margin-top:12px"><img src="img/fiberpower_logo.png" width="75" height="75" alt="RP Fiber Power logo"></p>
+</div>
+<p class="breadcrumbs"><a href="software.html">Software</a> &gt; <a href="fiberpower.html">RP Fiber Power</a> &gt; <a href="fiberpower_case_studies.html">Demo</a> &gt; <a href="fiberpower_qs_laser.html">Q-switched fiber laser</a></p>
+<h1>RP Fiber Power &ndash; Simulation and Design Software <br> for Fiber Optics, Amplifiers and Fiber Lasers</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower.html">Overview</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_features.html">Features</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_speed.html">Speed</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_model.html">Model</a></td>
+</tr><tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_data.html">Data</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_interface.html">Interface</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="fiberpower_case_studies.html">Demos</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_versions.html">Versions</a></td>
+</tr>
+</table>
+<h2>Example Case: Pulse Generation in a Q-switched Fiber Laser</h2>
+<h3>Description of the Model</h3>
+<p>We numerically simulate pulse generation in a fiber laser with the following properties:</p>
+<ul>
+<li>The <a href="double_clad_fibers.html" title="optical fibers with different waveguide structures for pump and signal light">double-clad fiber</a> has a uniform ytterbium doping concentration in its step-index single-mode core.</li>
+<li>The laser is continuously pumped from both ends.</li>
+<li>The output coupler on the right side is a <a href="fiber_bragg_gratings.html" title="reflective structures in the core of an optical fiber with a periodic or aperiodic perturbation of the effective refractive index">fiber Bragg grating</a> with 10&#37; reflectivity in a 1-nm bandwidth around 1060&thinsp;nm.</li>
+<li>A Q-switch is inserted on the left side of the active fiber.
+It has a finite switching time and a high suppression in the closed state.</li>
+<li>Time delays of 3&thinsp;ns and 1&thinsp;ns, respectively, are assumed for the propagation in undoped fibers on the left and right side of the active fiber.</li>
+<li><a href="amplified_spontaneous_emission.html" title="a process where spontaneously emitted radiation (luminescence) is amplified">Amplified spontaneous emission</a> is taken into account, as it limits the achievable gain and the stored energy.</li>
+</ul>
+<p>The laser is first pumped until the steady state is reached.
+Then the Q-switch is opened for 500&thinsp;ns, so that a pulse is emitted, and the Q-switched is closed again.
+These cycles are repeated with a repetition rate of 10&thinsp;kHz.</p>
+<h3>Results</h3>
+<p>Figure&nbsp;1 shows the time-dependent output powers in the first and second Q-switching cycle, and also the time dependence of the ytterbium excitation.
+In order to show both pulses on the same time scale, the indicated time is taken to be the time after opening the Q-switch.</p>
+<figure>
+<img src="img/qs_fl_time.png" alt="laser output versus time">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Output power and ytterbium excitation versus time.
+</figcaption>
+</figure>
+<p>The complicated pulse shapes, which are unusual for anyone being more familiar with Q-switched <a href="bulk_lasers.html" title="lasers based on bulk crystals as gain media">bulk lasers</a>, are essentially a consequence of the high laser gain.
+Within a single resonator round trip, the optical energy within the <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a> can rise from a value far below the <a href="saturation_energy.html" title="a measure of the incident optical pulse energy required for achieving significant saturation of an absorber or a gain medium">saturation energy</a> to a level well above the saturation energy.
+This leads to spikes with a duration well below the round-trip time.</p>
+<p>As the repumping time between two pulses (&asymp;&thinsp;10&thinsp;&mu;s) is too short to fully replenish the extracted energy, the second Q-switching cycle begins with a lower energy and thus a lower laser gain.
+Nevertheless, the first pulse has an even slightly lower energy, because it comes earlier (due to the higher gain) and therefore loses energy due to the finite switching speed of the Q-switch.</p>
+<p>Figure&nbsp;2 shows the optical powers and the degree of ytterbium excitation as functions of the position in the active fiber just before the first pulse is triggered.
+Despite the higher pump intensities near the ends, the excitation is lower there because of strong ASE.
+The situation is asymmetric because the fiber Bragg grating on the right side leads to strong ASE in backward direction within its reflection bandwidth, whereas forward ASE is not enhanced.</p>
+<figure>
+<img src="img/qs_fl_z.png" alt="position-dependent quantities in fiber amplifier">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Optical powers and fractional ytterbium excitation versus position the active fiber.
+</figcaption>
+</figure>
+<p>We see that a substantial power is extracted by <a href="amplified_spontaneous_emission.html" title="a process where spontaneously emitted radiation (luminescence) is amplified">amplified spontaneous emission</a>; this limits the achievable <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> and stored energy.
+For the situation after the pulse emission (not shown here), the gain is much lower, and ASE is negligible until sufficient energy is replenished by the pump source.</p>
+<p>Figure&nbsp;3 shows the evolution of pulse energy and peak power.
+After the emission of only 3 pulses, the steady state is nearly reached.</p>
+<figure>
+<img src="img/qs_fl_pulses.png" alt="evolution of pulse parameters in Q-switched fiber laser">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Evolution of pulse energy and peak power in the Q-switched fiber laser.
+The horizontal scale denotes the number of pulses.
+</figcaption>
+</figure>
+<p>The first pulse starts with the fiber being pumped for a long time, so that it is in the steady state.
+As explained above, the energy of the first pulse is strongly reduced by losses at the Q-switch, having a finite switching time.</p>
+<p>It becomes apparent that the analysis of the simulated behavior leads to a strongly improved physical understanding, which is particularly useful for the optimization of fiber lasers.</p>
+<p>(<a href="fiberpower_case_studies.html">back to the list of example cases</a>)</p>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</main></div>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="LmuurX9B5IiHjdWxZZMAcw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Software",
+      "item": "https://www.rp-photonics.com/software.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "RP Fiber Power",
+      "item": "https://www.rp-photonics.com/fiberpower.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Demo",
+      "item": "https://www.rp-photonics.com/fiberpower_case_studies.html"
+    },{
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Q-switched fiber laser",
+      "item": "https://www.rp-photonics.com/fiberpower_qs_laser.html"
+    }]}
+}
+</script>
+</body>
+</html>

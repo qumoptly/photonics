@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-BtTyukm96w1fwrpjG98WlQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - dispersion compensation, pulse compression, optical fiber communications</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/dispersion_compensation.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Dispersion compensation is the control of the overall chromatic dispersion of a system by adding optical elements with a suitable amount of dispersion.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="dispersion compensation, pulse compression, optical fiber communications">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Dispersion Compensation">
+<meta property="og:description" content="Dispersion compensation is the control of the overall chromatic dispersion of a system by adding optical elements with a suitable amount of dispersion.">
+<meta property="og:url" content="https://www.rp-photonics.com/dispersion_compensation.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/dispersion_compensation.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Dispersion compensation is the control of the overall chromatic dispersion of a system by adding optical elements with a suitable amount of dispersion.">
+<meta name="twitter:title" content="Dispersion Compensation">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/dispersion_compensation.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="BtTyukm96w1fwrpjG98WlQ==">
+page="dispersion_compensation.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo sponsor"></a> <a href="./sponsors/nkt_photonics.html"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="BtTyukm96w1fwrpjG98WlQ==">shownsponsors="DataRay,NKT Photonics,TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_d.html">letter D</a> &gt; <a href="dispersion_compensation.html">dispersion compensation</a></p>
+<h1>Dispersion Compensation</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_dispersion_compensation_modules.html?s=vbox">21 suppliers for dispersion compensation modules</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.teraxion.com/en/products/optical-communications" data-supplier="TeraXion" data-location="product-enc" data-keyword="dispersion compensation modules" rel="nofollow" class="bg externallink"><img src="./bg/logos/teraxion.png" alt="TeraXion" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="http://www.ape-berlin.de/en/dispersion-compensation/" data-supplier="APE" data-location="product-enc" data-keyword="dispersion compensation modules" rel="nofollow" class="bg externallink"><img src="./bg/logos/ape.png" alt="APE" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_dispersion_compensation_modules.html?s=vbox">List of suppliers for<br>dispersion compensation modules</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="advicebox">
+<p>Ask <a href="index.html">RP Photonics</a> for advice on what is the most appropriate technique of dispersion compensation in your case, and how to design the device.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: the control of the overall chromatic dispersion of a system by adding optical elements with a suitable amount of dispersion</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Dispersionskompensation</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#lightwave_communications" title="other articles on lightwave communications">lightwave communications</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<p><a href="encyclopedia_cite.html?article=dispersion%20compensation">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Dispersion compensation essentially means canceling the <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> of some optical element(s).
+However, the term is often used in a more general sense of <a href="dispersion_management.html" title="the use of tailored chromatic dispersion to enhance the function of optical devices or systems">dispersion management</a>, meaning the control the overall <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> of some system.
+The goal can be, e.g., to avoid excessive temporal broadening of <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a> and/or the distortion of signals.
+Dispersion compensation is applied mainly in mode-locked lasers and in telecommunication systems, but also sometimes in optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a> transporting light e.g. to or from some <a href="fiber_optic_sensors.html" title="optical sensors based on fiber devices">fiber-optic sensor</a>.</p>
+<h2 class="togglediv">Dispersion Compensation in Fiber-optic Communication Links</h2>
+<div>
+<p>Dispersion compensation is an important issue for <a href="fiber_optic_links.html" title="optical communication links where the signal light is transported in fibers">fiber-optic links</a>, i.e., in the context of <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a>.
+Here, strong dispersive broadening of modulated signals can occur in cases with high data rates.
+Without dispersion compensation, each symbol would be broadened so much that it would strongly overlap with a number of neighbored symbols.
+Even for moderate broadening, significant inter-symbol interference can strongly distort the detected signal.
+Therefore, it is essential to compensate the dispersion before detecting the signal.</p>
+<p>For high data rates such as 40&nbsp;Gbit/s or 160&nbsp;Gbit/s, pulse broadening becomes much stronger than for 10&nbsp;Gbit/s, for example.
+This is essentially because the spectral <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a> of the signal becomes larger.
+It is then generally not sufficient to compensate the second-order dispersion only; one also needs to deal with higher-order dispersion.
+Problems can arise, for example, when <a href="dispersion_shifted_fibers.html" title="fibers with a non-standard zero dispersion wavelength">dispersion-shifted fibers</a> with a substantial dispersion slope are used, and only dispersion of second order is compensated.
+Figure&nbsp;1 show this effect for a single 2-ps pulse at 1550&nbsp;nm after 10&nbsp;km and 50&nbsp;km of such a fiber.
+Mainly uncompensated <a href="third_order_dispersion.html" title="chromatic dispersion related to a third-order dependence of the phase change on the frequency offset">third-order dispersion</a> is responsible for the resulting distortions.</p>
+<figure>
+<img src="img/dispersion_compensation.png" alt="imperfect dispersion compensation">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Distortion of a triple pulse after 10&nbsp;km (solid curve) and 50&nbsp;km (dashed curve) of a dispersion-shifted fiber, when only second-order dispersion is compensated. The simulation has been done with the software <a href="propulse.html">RP ProPulse</a>.
+</figcaption>
+</figure>
+<p>The resulting pulse distortion may appear small.
+However, a simulation with triple 2-ps pulses at a spacing as applied for 160&nbsp;Gbit/s demonstrates that even in that case significant signal distortions can arise due to inter-symbol interference.</p>
+<figure>
+<img src="img/dispersion_compensation2.png" alt="imperfect dispersion compensation">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Pulse distortion after 10&nbsp;km (solid curve) and 50&nbsp;km (dashed curve) of a dispersion-shifted fiber, when only second-order dispersion is compensated.
+</figcaption>
+</figure>
+<p>The dispersion of a transmission fiber can be compensated with sections of fibers with different designs or with other optical elements.
+<a href="dispersion_compensation_modules.html" title="modules used for dispersion compensation">Dispersion compensation modules</a> (DCMs) can contain, e.g., long pieces of <a href="dispersion_shifted_fibers.html" title="fibers with a non-standard zero dispersion wavelength">dispersion-shifted fibers</a> or chirped <a href="fiber_bragg_gratings.html" title="reflective structures in the core of an optical fiber with a periodic or aperiodic perturbation of the effective refractive index">fiber Bragg gratings</a>.
+The latter have the advantage of compactness and comparatively low <a href="insertion_loss.html" title="power losses due to insertion of a device">insertion losses</a>.</p>
+<p>To some extent, the effects of dispersion in a system for <a href="optical_data_transmission.html" title="the transmission of information using light beams, e.g. in fibers">optical data transmission</a> can also be mitigated by <a href="electronic_dispersion_compensation.html" title="a method for mitigating the effects of chromatic dispersion in fiber-optic communication links with electronic components in the receiver">electronic dispersion compensation</a>.</p>
+</div>
+<h2 class="togglediv">Dispersion Compensation in Mode-locked Lasers</h2>
+<div>
+<p>In a <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked laser</a> for <a href="femtosecond_lasers.html" title="lasers emitting light pulses with durations between a few femtoseconds and hundreds of femtoseconds">femtosecond</a> pulse generation, the <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> introduced by the <a href="gain_media.html" title="media for laser amplification">gain medium</a> and other optical components in the <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a> is often not desirable, because it tends to broaden and <a href="chirp.html" title="time dependence of the instantaneous frequency of an optical pulse">chirp</a> the generated <a href="pulses.html" title="flashes of light">pulses</a>.
+While the naturally occurring <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> is often in the normal dispersion regime, the desired dispersion may either be close to zero or even anomalous (for the formation of <a href="quasi_soliton_pulses.html" title="soliton-like pulses in lasers or fiber-optic links">quasi-soliton pulses</a> in the resonator).
+Such dispersion values can be achieved by introducing optical components with anomalous dispersion.
+In the case of <a href="bulk_lasers.html" title="lasers based on bulk crystals as gain media">bulk lasers</a>, such components are usually either special dielectric <a href="dispersive_mirrors.html" title="mirrors which provide some amount of chromatic dispersion for the reflected beam">dispersive mirrors</a> (e.g. in the form of monolithic <a href="gires_tournois_interferometers.html" title="linear optical resonators used for introducing chromatic dispersion">Gires&ndash;Tournois interferometers</a> or <a href="chirped_mirrors.html" title="Bragg-type dispersive mirrors with a spatial variation of the Bragg wavelength">chirped mirrors</a>), or <a href="prism_pairs.html" title="combinations of two prisms, mostly used for dispersion compensation">prism pairs</a>.
+For <a href="mode_locked_fiber_lasers.html" title="ultrafast fiber lasers which are actively or passively mode-locked for generating ultrashort pulses">mode-locked fiber lasers</a>, the dispersion can be compensated with special dispersive fibers (e.g. <a href="photonic_crystal_fibers.html" title="specialty optical fibers with a built-in microstructure, in most cases consisting of small air holes in glass">photonic crystal fibers</a> or multimode fibers where a higher-order mode is used), with chirped <a href="fiber_bragg_gratings.html" title="reflective structures in the core of an optical fiber with a periodic or aperiodic perturbation of the effective refractive index">fiber Bragg gratings</a>, or sometimes with bulk components such as pairs of <a href="diffraction_gratings.html" title="optical components containing a periodic structure which diffracts light">diffraction gratings</a>.</p>
+<p>For pulses with durations below roughly 30&nbsp;fs, it is necessary to control not only the second-order dispersion but also the dispersion of higher orders.
+It may then be important e.g. to select the appropriate <a href="optical_materials.html" title="materials used for optical components">material</a> for a prism pair, or an optimized geometry of a prism compressor.
+There are also special devices called <em>GRISMs</em> [7], with a grating structure on a <a href="prisms.html" title="transparent optical devices which refract or reflect light">prism</a>, which make possible an optimized ratio of the strength of second- and third-order dispersion.</p>
+</div>
+<h2 class="togglediv">Dispersive Pulse Compression</h2>
+<div>
+<p>Dispersive optical elements can also be used to dispersively (linearly) compress <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a> outside <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonators</a>.
+The article on <a href="pulse_compression.html" title="linear or nonlinear techniques for reducing the durations of optical pulses">pulse compression</a> gives more details.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_dispersion_compensation_modules.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 21 suppliers for dispersion compensation modules. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.teraxion.com/" data-supplier="TeraXion" data-location="product-enc" data-keyword="dispersion compensation modules" rel="nofollow" class="bg externallink" title="Visit the website of TeraXion"><img src="./bg/logos/teraxion.png" alt="TeraXion" class="supplierlogo"></a><a href="https://www.teraxion.com/en/products/optical-communications" data-supplier="TeraXion" data-location="product-enc" data-keyword="dispersion compensation modules" rel="nofollow" class="bg externallink" title="Visit the website of TeraXion"><img src="./bg/products/teraxion/dispersion_compensation_modules.jpg" alt="dispersion compensation modules" class="product"></a><h3><a href="./bg/profiles/teraxion.html" title="See the profile of TeraXion">TeraXion</a></h3><p><a href="https://www.teraxion.com/en/products/optical-communications" data-supplier="TeraXion" data-location="product-enc" data-keyword="dispersion compensation modules" rel="nofollow" class="externallink bg">Static and tunable</a> dispersion compensation modules for Access, DCI and legacy communication systems. Low loss chromatic dispersion emulators and compensators available for lab use.</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.ape-berlin.de/" data-supplier="APE" data-location="product-enc" data-keyword="dispersion compensation modules" rel="nofollow" class="bg externallink" title="Visit the website of APE"><img src="./bg/logos/ape.png" alt="APE" class="supplierlogo"></a><a href="http://www.ape-berlin.de/en/dispersion-compensation/" data-supplier="APE" data-location="product-enc" data-keyword="dispersion compensation modules" rel="nofollow" class="bg externallink" title="Visit the website of APE"><img src="./bg/products/ape/dispersion_compensation.png" alt="dispersion compensation modules" class="product"></a><h3><a href="./bg/profiles/ape.html" title="See the profile of APE">APE</a></h3><p>The APE <a href="http://www.ape-berlin.de/en/dispersion-compensation/" data-supplier="APE" data-location="product-enc" data-keyword="dispersion compensation modules" rel="nofollow" class="externallink bg">femtoControl</a> is a compact motorized dispersion compensation unit for optimization of the duration of femtosecond laser pulses in the spectral range of Ti:sapphire lasers.</p><p>femtoControl compensates for material dispersion by applying the inverse amount of dispersion to the pulse. This is generated by a pair of prisms on motorized translation stages allowing continuous adjustment of the pulse length.</p><p>For example, femtoControl can help to achieve more crisp and clearer microscope images especially for multi-photon microscopy.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="dispersion_compensation.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">E. B. Treacy, &ldquo;Optical pulse compression with diffraction gratings&rdquo;, IEEE J. Quantum Electron. 5 (9), 454 (1969), <a href="https://doi.org/10.1109/JQE.1969.1076303">doi:10.1109/JQE.1969.1076303</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">O. E. Mart&iacute;nez <i>et al.</i>, &ldquo;Negative group-velocity dispersion using refraction&rdquo;, J. Opt. Soc. Am. A 1 (10), 1003 (1984), <a href="https://doi.org/10.1364/JOSAA.1.001003">doi:10.1364/JOSAA.1.001003</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">R. L. Fork <i>et al.</i>, &ldquo;Negative dispersion using pairs of prisms&rdquo;, Opt. Lett. 9 (5), 150 (1984), <a href="https://doi.org/10.1364/OL.9.000150">doi:10.1364/OL.9.000150</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">J. Kuhl and J. Heppner, &ldquo;Compression of femtosecond optical pulses with dielectric multilayer interferometers&rdquo;, IEEE J. Quantum Electron. 22 (1), 182 (1986), <a href="https://doi.org/10.1109/JQE.1986.1072855">doi:10.1109/JQE.1986.1072855</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">R. L. Fork <i>et al.</i>, &ldquo;Compression of optical pulses to six femtoseconds by using cubic phase compensation&rdquo;, Opt. Lett. 12 (7), 483 (1987), <a href="https://doi.org/10.1364/OL.12.000483">doi:10.1364/OL.12.000483</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">D. Garthe <i>et al.</i>, &ldquo;Adjustable dispersion equaliser for 10 and 20&nbsp;Gbit/s over distances up to 160&nbsp;km&rdquo;, Electron. Lett. 30 (25), 2159 (1994), <a href="https://doi.org/10.1049/el:19941453">doi:10.1049/el:19941453</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">S. Kane and J. Squier, &ldquo;Grism-pair stretcher&ndash;compressor system for simultaneous second- and third-order dispersion compensation in chirped-pulse amplification&rdquo;, J. Opt. Soc. Am. B 14 (3), 661 (1997), <a href="https://doi.org/10.1364/JOSAB.14.000661">doi:10.1364/JOSAB.14.000661</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">G. Tempea <i>et al.</i>, &ldquo;Dispersion control over 150&nbsp;THz with chirped dielectric mirrors&rdquo;, JSTQE 4 (2), 193 (1998), <a href="https://doi.org/10.1109/2944.686723">doi:10.1109/2944.686723</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">N. Matuschek <i>et al.</i>, &ldquo;Theory of double-chirped mirrors&rdquo;, JSTQE 4 (2), 197 (1998), <a href="https://doi.org/10.1109/2944.686724">doi:10.1109/2944.686724</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">B. Golubovic <i>et al.</i>, &ldquo;Double Gires&ndash;Tournois interferometer negative-dispersion mirrors for use in tunable mode-locked lasers&rdquo;, Opt. Lett. 25 (4), 275 (2000), <a href="https://doi.org/10.1364/OL.25.000275">doi:10.1364/OL.25.000275</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">H. Lim <i>et al.</i>, &ldquo;Femtosecond ytterbium fiber laser with photonic crystal fiber for dispersion control&rdquo;, Opt. Express 10 (25), 1497 (2002), <a href="https://doi.org/10.1364/OE.10.001497">doi:10.1364/OE.10.001497</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">A. Isomäki and O. G. Okhotnikov, &ldquo;All-fiber ytterbium soliton mode-locked laser with dispersion control by solid-core photonic bandgap fiber&rdquo;, Opt. Express 14 (10), 4368 (2006), <a href="https://doi.org/10.1364/OE.14.004368">doi:10.1364/OE.14.004368</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">N. M. Litchinitser <i>et al.</i>, &ldquo;Fiber-based tunable dispersion compensation&rdquo;, J. Opt. Fiber Commun. Rep. 4, 41 (2007), <a href="https://doi.org/10.1007/978-0-387-48948-3_11">doi:10.1007/978-0-387-48948-3_11</a></td></tr>
+<tr><td class="refno">[14]</td><td class="refs">R. Jones <i>et al.</i>, &ldquo;Silicon photonic tunable optical dispersion compensator&rdquo;, Opt. Express 15 (24), 15836 (2007), <a href="https://doi.org/10.1364/OE.15.015836">doi:10.1364/OE.15.015836</a></td></tr>
+<tr><td class="refno">[15]</td><td class="refs">M. E. Durst <i>et al.</i>, &ldquo;Tunable dispersion compensation by a rotating cylindrical lens&rdquo;, Opt. Lett. 34 (8), 1195 (2009), <a href="https://doi.org/10.1364/OL.34.001195">doi:10.1364/OL.34.001195</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>, <a href="dispersion_compensation_modules.html" title="modules used for dispersion compensation">dispersion compensation modules</a>, <a href="mode_locking.html" title="a group of techniques for generating ultrashort pulses in lasers">mode locking</a>, <a href="solitons.html" title="pulses with a certain balance of nonlinear and dispersive effects">solitons</a>, <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a>, <a href="prism_pairs.html" title="combinations of two prisms, mostly used for dispersion compensation">prism pairs</a>, <a href="gires_tournois_interferometers.html" title="linear optical resonators used for introducing chromatic dispersion">Gires&ndash;Tournois interferometers</a>, <a href="fiber_bragg_gratings.html" title="reflective structures in the core of an optical fiber with a periodic or aperiodic perturbation of the effective refractive index">fiber Bragg gratings</a>, <a href="chirped_mirrors.html" title="Bragg-type dispersive mirrors with a spatial variation of the Bragg wavelength">chirped mirrors</a>, <a href="dispersive_mirrors.html" title="mirrors which provide some amount of chromatic dispersion for the reflected beam">dispersive mirrors</a>, <a href="electronic_dispersion_compensation.html" title="a method for mitigating the effects of chromatic dispersion in fiber-optic communication links with electronic components in the receiver">electronic dispersion compensation</a>, <a href="pulse_compression.html" title="linear or nonlinear techniques for reducing the durations of optical pulses">pulse compression</a><br>and other articles in the categories <a href="categories.html#lightwave_communications" title="other articles on lightwave communications">lightwave communications</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/dispersion_compensation.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fdispersion_compensation.html&text=RP+Photonics+Encyclopedia+-+dispersion+compensation%2C+pulse+compression%2C+optical+fiber+communications" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fdispersion_compensation.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fdispersion_compensation.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/dispersion_compensation.html"&gt;<br>Article on Dispersion Compensation&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/dispersion_compensation.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/dispersion_compensation.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/dispersion_compensation.html<br>article on 'Dispersion Compensation' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Discount for Startups</h2>
+<p>We have introduced a special offer: there is now a <a href="./bg_startups.html?banner=Startup_discount">startup discount</a> of 25% for the <a href="./bg_entries.html?banner=Startup_discount">advertising package</a> in the <a href="./buyersguide.html?banner=Startup_discount">RP Photonics Buyer&#39;s Guide</a>.
+</p>
+<p>We understand the challenge for technology startups and are happy to support them with our powerful resource and our marketing expertise.</p>
+<p>Note that marketing is particularly vital for startups: get orders before financially running out of steam!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="BtTyukm96w1fwrpjG98WlQ==">shownbanner = "Startup discount";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Free Tutorial: Modeling of Fiber Amplifiers and Lasers</h2>
+<p>We have published a new <a href="./tutorial_modeling.html?banner=modeling_tutorial">tutorial</a> which discusses the modeling of fiber amplifiers and lasers.
+It addresses many questions:</p>
+<ul>
+<li>What is a <a href="./tutorial_modeling1.html?banner=modeling_tutorial">model</a>?</li>
+<li>Should one use <a href="./tutorial_modeling3.html?banner=modeling_tutorial">power propagation or field propagation</a>?</li>
+<li>How to simulate the behavior of <a href="./tutorial_modeling4.html?banner=modeling_tutorial">laser-active ions</a>?</li>
+<li>How to calculate <a href="./tutorial_modeling5.html?banner=modeling_tutorial">steady-state solutions</a>?</li>
+<li>How to simulate <a href="./tutorial_modeling6.html?banner=modeling_tutorial">dynamical behavior</a> and <a href="./tutorial_modeling7.html?banner=modeling_tutorial">ultrashort pulse propagation</a>?</li>
+<li>What aspects are important for the <a href="./tutorial_modeling8.html?banner=modeling_tutorial">decision</a> whether to develop own modeling software or use commercial software?</li>
+</ul>
+<p><a href="./tutorial_modeling.html?banner=modeling_tutorial">Read the tutorial!</a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="BtTyukm96w1fwrpjG98WlQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/dispersion_compensation.html"
+    },
+    "headline": "Dispersion Compensation",
+    "image": "https://www.rp-photonics.com/previews/dispersion_compensation.png",
+    "datePublished": "2006-07-16",
+    "dateModified": "2020-03-14",
+    "description": "Dispersion compensation is the control of the overall chromatic dispersion of a system by adding optical elements with a suitable amount of dispersion.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter D",
+      "item": "https://www.rp-photonics.com/encyclopedia_d.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "dispersion compensation",
+      "item": "https://www.rp-photonics.com/dispersion_compensation.html"
+    }]}
+}
+</script>
+</body>
+</html>

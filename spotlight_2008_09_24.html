@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-F0qEWfeZaH2k4wjiM1rbyw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>The Photonics Spotlight - Decoupling Pulse Duration and Pulse Energy</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/spotlight_2008_09_24.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2008-09-24">
+<meta name="description" content="Changes of the pulse repetition rate of a Q-switched laser usually also affect the pulse duration. This can be avoided with a master oscillator power amplifier setup. The article compares both concepts.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="photonics, spotlight, news, publications, blog, RSS feed, encyclopedia, laser physics, technology">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Photonics Spotlight - Decoupling Pulse Duration and Pulse Energy">
+<meta property="og:description" content="Changes of the pulse repetition rate of a Q-switched laser usually also affect the pulse duration. This can be avoided with a master oscillator power amplifier setup. The article compares both concepts.">
+<meta property="og:url" content="https://www.rp-photonics.com/spotlight_2008_09_24.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/spotlight_2008_09_24.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Changes of the pulse repetition rate of a Q-switched laser usually also affect the pulse duration. This can be avoided with a master oscillator power amplifier setup. The article compares both concepts.">
+<meta name="twitter:title" content="The Photonics Spotlight - Decoupling Pulse Duration and Pulse Energy">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/spotlight_2008_09_24.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="F0qEWfeZaH2k4wjiM1rbyw==">
+page="spotlight_2008_09_24.html"; cat="P"; shownbanner=""; ref="http://www.rp-photonics.com/spotlight.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="F0qEWfeZaH2k4wjiM1rbyw==">shownsponsors="EKSMA OPTICS"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight" class="selected"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="spotlight.html">The Photonics Spotlight</a> &gt; <a href="spotlight_2008_09_24.html">2008-09-24</a></p>
+<h1 class="posting">Decoupling Pulse Duration and Pulse Energy</h1>
+<div class="posting_details">
+<p>Posted on 2008-09-24 as a part of the <a href="spotlight.html">Photonics Spotlight (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="spotlight_2008_09_24.html" class="url">https://www.rp-photonics.com/spotlight_2008_09_24.html</a></p>
+<p>Author: <a href="https://www.rp-photonics.com/paschotta.html" rel="author">Dr. Rüdiger Paschotta</a>, <a href="https://www.rp-photonics.com/">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: Changes of the pulse repetition rate of a Q-switched laser usually also affect the pulse duration. This can be avoided with a master oscillator power amplifier setup. The article compares both concepts.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p class="ref">Ref.: encyclopedia articles on <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched lasers</a>, <a href="master_oscillator_fiber_amplifier.html" title="a laser system containing a fiber amplifier for boosting the output power">master oscillator fiber amplifier</a></p>
+<p>When the <a href="pulse_repetition_rate.html" title="the number of pulses emitted per second e.g. by a mode-locked or Q-switched laser">pulse repetition rate</a> of an actively <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched laser</a> is increased, while the (continuously applied) pump power remains constant, the <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a> is reduced.
+An important side effect of this is that the <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a> is increased.
+Therefore, the <a href="peak_power.html" title="maximum optical power of a pulse">peak power</a> is reduced even more, as it depends on both the pulse energy and the pulse duration.
+As a rule of thumb, which is normally quite precise for repetition rates above the inverse <a href="upper_state_lifetime.html" title="the lifetime of the population of the upper laser level">upper-state lifetime</a> of the <a href="gain_media.html" title="media for laser amplification">gain medium</a>, a doubling of the repetition rate will reduce the pulse energy to one half the original value, double the pulse duration, and reduce the peak power by a factor of 4.</p>
+<p>That relation between pulse repetition rate and duration is undesirable for some <a href="laser_applications.html" title="applications involving laser devices">laser applications</a> e.g. in the area of laser material processing.
+A change in repetition rate alone usually has the simple effect of linearly rescaling the processing time, assuming that the workpiece fully recovers between subsequent pulses.
+The additional change of pulse duration, however, can have effects which are difficult to predict.</p>
+<p>A possible solution is to generate the <a href="pulses.html" title="flashes of light">pulses</a> not with a Q-switched laser, but rather with a <a href="master_oscillator_power_amplifier.html" title="a laser system consisting of a seed laser and a laser amplifier for boosting the output power">master oscillator power amplifier</a> (MOPA) setup.
+If the <a href="optical_amplifiers.html" title="devices for amplifying the power of light beams">amplifier</a> is a <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifier</a>, the device may also be called <a href="master_oscillator_fiber_amplifier.html" title="a laser system containing a fiber amplifier for boosting the output power">master oscillator fiber amplifier</a> (MOFA).
+(Some even call it a <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber laser</a>.)
+The <a href="seed_lasers.html" title="lasers which are used for generating some seed light into an amplifier or another laser">seed laser</a> of such a device may be a <a href="laser_diodes.html" title="semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diode</a>.
+The seed pulse duration can simply be controlled via the electronic driver.
+Possible <a href="gain_saturation.html" title="the phenomenon that the gain of an amplifier is reduced for high input signal powers">gain saturation</a> effects in the amplifier can be compensated by adjusting the duration and possibly also the temporal shape of the seed pulses.
+Effectively, it becomes possible to decouple the pulse duration from the pulse energy.
+This can be very useful in cases where the repetition rate needs to be changed all the time, or some finite pulse trains are needed with larger temporal gaps in between, and each pulse (including the first one in each burst) needs to have well controlled parameters.</p>
+<p>Unfortunately, that change of system architecture can also have disadvantages.
+A possible issue at least for fiber amplifiers is that <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fiber</a> <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a> and the possibility of damage set limits to the <a href="peak_power.html" title="maximum optical power of a pulse">peak power</a> which can be generated that way.
+Also, such a MOPA has a high <a href="gain.html" title="a measure of the strength of optical amplification">gain</a>, and is thus very sensitive to backreflected light.</p>
+<p>It depends on the circumstances which of the two concepts is better suited.
+A conventional Q-switched laser may be preferable when a variation of repetition rate is not required, or when a very high pulse energy is needed.
+On the other hand, the flexibility of a fiber-based MOPA may be very desirable particularly for the development of new applications.
+One may even easily experiment with different temporal pulse shapes.</p>
+<hr>
+<p style="font-size:90%; margin-bottom:10px;">This article is a posting of the <a href="spotlight.html">Photonics Spotlight</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page and cite it, because its location is permanent.
+See also the <a href="encyclopedia.html">RP Photonics Encyclopedia</a>.</p>
+<p>Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="https://www.rp-photonics.com/spotlight.rss">RSS feed</a>.</p>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="spotlight_2008_09_24.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/spotlight_2008_09_24.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2008_09_24.html&text=The+Photonics+Spotlight+-+Decoupling+Pulse+Duration+and+Pulse+Energy" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2008_09_24.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2008_09_24.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2008_09_24.html"&gt;<br>Article on The Photonics Spotlight - Decoupling Pulse Duration and Pulse Energy&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2008_09_24.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/spotlight_2008_09_24.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Paschotta</a>, RP Photonics Consulting GmbH. All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./marketing_contact.html">contact</a>, <a href="./privacy.html">data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Recent Articles of the RP Photonics Software News:</h2>
+<ul><li>2020-05-25: <a href="software_news_2020_05_25.html">The Numerical Power Package for RP Fiber Power</a></li>
+<li>2020-03-02: <a href="software_news_2020_03_02.html">Creating Multimode Beams in Numerical Beam Propagation</a></li>
+<li>2019-09-10: <a href="software_news_2019_09_10.html">Improvements Concerning Graphics Windows</a></li>
+<li>2018-12-03: <a href="software_news_2018_12_03.html">Using Monitors With High Screen Resolution</a></li>
+<li>2018-09-12: <a href="software_news_2018_09_12.html">Propagating Optical Fields in Fibers Based on Modes or with Numerical Beam Propagation</a></li>
+<li>2018-08-02: <a href="software_news_2018_08_02.html">Data Grids for Numerical Beam Propagation</a></li>
+<li>2018-07-02: <a href="software_news_2018_07_02.html">Namespaces: An Elegant Approach for Avoiding Name Conflicts</a></li>
+<li>2018-05-22: <a href="software_news_2018_05_22.html">Numerical Representation of Ultrashort Pulses</a></li>
+</ul>
+<p>You can receive such articles by subscribing to our <a href="./newsletters.html?banner=Recent_Software_News_Articles">Newsletters</a>!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="F0qEWfeZaH2k4wjiM1rbyw==">shownbanner = "Recent Software News Articles";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>How PhD Students Should Get Supported by Supervisors</h2>
+<p>A recent <a href="./spotlight_2014_12_17.html?banner=supervisors">article in the Photonics Spotlight</a> discusses the responsibilities of supervisors (professors and senior research assistance).</p>
+<p>Some key statements:</p>
+<ul>
+<li>Even if PhD students can carry out most of the work in a research project, vital inputs are needed from supervisors particularly in the planning phase and when a crisis occurs.</li>
+<li>A helpful supervisor does not only benefit the supported students, but contributes to the effectiveness of the whole research team.</li>
+<li>If serious engagement were the condition of authorship of supervisors, supervisors would be more likely to do their job.</li>
+<li>A substantial risk for science fraud arises only in a serious crisis &ndash; and is in that case strongly dependent on how the supervisor performs!</li>
+</ul>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="F0qEWfeZaH2k4wjiM1rbyw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/spotlight_2008_09_24.html"
+    },
+    "headline": "Decoupling Pulse Duration and Pulse Energy",
+    "image": "https://www.rp-photonics.com/previews/spotlight_2008_09_24.png",
+    "datePublished": "2008-09-24",
+    "description": "Changes of the pulse repetition rate of a Q-switched laser usually also affect the pulse duration. This can be avoided with a master oscillator power amplifier setup. The article compares both concepts.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "The Photonics Spotlight",
+      "item": "https://www.rp-photonics.com/spotlight.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "2008-09-24",
+      "item": "https://www.rp-photonics.com/spotlight_2008_09_24.html"
+    }]}
+}
+</script>
+</body>
+</html>

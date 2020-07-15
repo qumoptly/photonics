@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-cj33CDbSZteJEVfPCdXLww=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - chromatic dispersion, group velocity, group delay, GDD, anomalous, normal, higher order</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/chromatic_dispersion.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-06-25">
+<meta name="description" content="Chromatic dispersion is the frequency dependence of the phase velocity in a transparent medium. It can lead to wavelength-dependent group velocities of light pulses, for example.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="chromatic dispersion, group velocity, group delay, GDD, anomalous, normal, higher order">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Chromatic Dispersion">
+<meta property="og:description" content="Chromatic dispersion is the frequency dependence of the phase velocity in a transparent medium. It can lead to wavelength-dependent group velocities of light pulses, for example.">
+<meta property="og:url" content="https://www.rp-photonics.com/chromatic_dispersion.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/chromatic_dispersion.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Chromatic dispersion is the frequency dependence of the phase velocity in a transparent medium. It can lead to wavelength-dependent group velocities of light pulses, for example.">
+<meta name="twitter:title" content="Chromatic Dispersion">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/chromatic_dispersion.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="cj33CDbSZteJEVfPCdXLww==">
+page="chromatic_dispersion.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="cj33CDbSZteJEVfPCdXLww==">shownsponsors="DataRay"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_c.html">letter C</a> &gt; <a href="chromatic_dispersion.html">chromatic dispersion</a></p>
+<h1>Chromatic Dispersion</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_chromatic_dispersion_measurement_devices.html?s=vbox">4 suppliers for chromatic dispersion measurement devices</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_chromatic_dispersion_measurement_devices.html?s=vbox">List of suppliers for<br>chromatic dispersion measurement devices</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="advicebox">
+<p>Ask <a href="index.html">RP Photonics</a> for any kind of calculations concerning chromatic dispersion and its effects in various situations.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: the frequency dependence of the phase velocity in a transparent medium</p>
+<p>More specific terms: normal and anomalous dispersion, material dispersion, <a href="waveguide_dispersion.html" title="chromatic dispersion arising from waveguiding effects">waveguide dispersion</a>, <a href="group_delay_dispersion.html" title="the frequency dependency of the group delay, or (quantitatively) the corresponding derivative with respect to angular frequency">group delay dispersion</a>, <a href="third_order_dispersion.html" title="chromatic dispersion related to a third-order dependence of the phase change on the frequency offset">third-order dispersion</a>, <a href="principal_dispersion.html" title="a crude measure for chromatic dispersion of a transparent optical material">principal dispersion</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">chromatische Dispersion</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<p><a href="encyclopedia_cite.html?article=chromatic%20dispersion">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>The chromatic dispersion of an optical medium is the phenomenon that the <a href="phase_velocity.html" title="the velocity with which phase fronts propagate in a medium">phase velocity</a> and <a href="group_velocity.html" title="the velocity with which the envelope of a weak narrow-band optical pulse propagates in a medium">group velocity</a> of light propagating in a transparent medium depend on the <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequency</a>; that dependency results mostly from the interaction of light with electrons of the medium.
+A related quantitative measure is the <a href="group_velocity_dispersion.html" title="the frequency dependence of the group velocity in a medium, or (quantitatively) the derivative of the inverse group velocity with respect to angular frequency">group velocity dispersion</a>.</p>
+<p>The attribute &ldquo;chromatic&rdquo; is used to distinguish this type of dispersion from other types, which are relevant particularly for optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>: <a href="intermodal_dispersion.html" title="the phenomenon that the group velocity of light propagating in a waveguide structure depends on the waveguide mode">intermodal dispersion</a> and <a href="polarization_mode_dispersion.html" title="the polarization dependence of the propagation characteristics of light waves in optical fibers">polarization mode dispersion</a>.</p>
+<p>Chromatic dispersion can also occur from geometrical effects, for example; see below the section on chromatic dispersion of optical components.</p>
+<h2 class="togglediv">Mathematical Description of Chromatic Dispersion</h2>
+<div>
+<p>An early measure for the magnitude of chromatic dispersion was the <em>Abbe number</em> <span class="eqn_il"><i>V</i><sub>D</sub></span>, introduced by Ernst Abbe:</p>
+<div class="eqn"><img src="eqn/abbe_number.gif" width="84" height="45" alt="Abbe number"></div>
+<p>The denominator is also called the <a href="principal_dispersion.html" title="a crude measure for chromatic dispersion of a transparent optical material">principal dispersion</a>.
+The Abbe number depends on the refractive indices at only three different wavelengths:</p>
+<ul>
+<li>486.1&nbsp;nm (blue Fraunhofer F line from hydrogen)</li>
+<li class="ta_left">589.2&nbsp;nm (orange Fraunhofer D line from sodium)</li>
+<li class="ta_left">656.3&nbsp;nm (red Fraunhofer C line from hydrogen)</li>
+</ul>
+<p>Large values of the Abbe number indicate <em>low</em> chromatic dispersion and vice versa.
+Such values can be used for the design of <a href="achromatic_optics.html" title="optical devices or setups with minimized chromatic aberrations">achromatic optical elements</a>, but can of course give only a quite rough indication.</p>
+<p>The modern way of quantifying chromatic dispersion is based on a Taylor expansion of the <a href="wavenumber.html" title="the phase delay per unit length, or that quantity divided by 2&pi;">wavenumber</a> <span class="eqn_il"><i>k</i></span> (change in <a href="spectral_phase.html" title="the phase of the electric field in the frequency domain">spectral phase</a> per unit length) as a function of the angular frequency <span class="eqn_il"><span class="greek">&omega;</span></span>.
+The expansion is made around some center frequency <span class="eqn_il"><span class="greek">&omega;</span><sub>0</sub></span>, e.g. the mean frequency of some laser <a href="pulses.html" title="flashes of light">pulses</a>:</p>
+<div class="eqn"><img src="eqn/disp_k.gif" width="434" height="44" alt="k(w) for dispersive medium"></div>
+<p>where the terms corresponding to the different orders have the following meaning:</p>
+<ul>
+<li>The zero-order term describes a common phase shift.</li>
+<li class="ta_left">The first-order term contains the inverse <a href="group_velocity.html" title="the velocity with which the envelope of a weak narrow-band optical pulse propagates in a medium">group velocity</a> (i.e., the <a href="group_delay.html" title="a measure of the time delay experienced by narrow-band light pulses in an optical device">group delay</a> per unit length) and describes an overall time delay without an effect on the pulse shape:</li>
+</ul>
+<div class="eqn"><img src="eqn/disp_k1.gif" width="92" height="48" alt="inverse group velocity in dispersive medium"></div>
+<ul>
+<li>The second-order (quadratic) term contains the second-order dispersion or <a href="group_delay_dispersion.html" title="the frequency dependency of the group delay, or (quantitatively) the corresponding derivative with respect to angular frequency">group delay dispersion</a> (GDD) per unit length:</li>
+</ul>
+<div class="eqn"><img src="eqn/disp_k2.gif" width="68" height="44" alt="GDD for dispersive medium"></div>
+<ul>
+<li>The third-order (cubic) term contains the <a href="third_order_dispersion.html" title="chromatic dispersion related to a third-order dependence of the phase change on the frequency offset">third-order dispersion</a> (TOD) per unit length:</li>
+</ul>
+<div class="eqn"><img src="eqn/disp_k3.gif" width="70" height="44" alt="TOD for dispersive medium"></div>
+<p>Second-order dispersion is often specified in units of s<sup>2</sup>/m.
+It is the derivative of the inverse <a href="group_velocity.html" title="the velocity with which the envelope of a weak narrow-band optical pulse propagates in a medium">group velocity</a> with respect to angular frequency:</p>
+<div class="eqn"><img src="eqn/disp_v_g.gif" width="232" height="56" alt="group delay dispersion and group velocity"></div>
+<p>As an example, the group delay dispersion of silica is +36&nbsp;fs<sup>2</sup>/mm at 800&nbsp;nm, or &minus;22&nbsp;fs<sup>2</sup>/mm at 1500&nbsp;nm.
+Zero group delay dispersion is reached close to 1270&nbsp;nm.</p>
+<p>The dispersion of various orders for a medium can most conveniently be calculated if the <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> is specified with a kind of <a href="sellmeier_formula.html" title="an equation for calculating the wavelength-dependent refractive index of a medium">Sellmeier formula</a>.
+Tabulated index data are less suitable, since the numerical differentiation is sensitive to noise.</p>
+<p>For light propagating in <a href="waveguides.html" title="spatially inhomogeneous transparent structures for guiding light">waveguides</a> such as optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>, one considers the <a href="propagation_constant.html" title="a mode- and frequency-dependent quantity describing the propagation of light in a medium or waveguide">phase constant</a> <span class="eqn_il"><span class="greek">&beta;</span></span> instead of the <a href="wavenumber.html" title="the phase delay per unit length, or that quantity divided by 2&pi;">wavenumber</a> <span class="eqn_il"><i>k</i></span>.
+The second-order dispersion, for example, is then given as the second derivative of <span class="eqn_il"><span class="greek">&beta;</span></span> with respect to angular frequency.
+This is often called <span class="eqn_il"><span class="greek">&beta;</span>''</span> or <span class="eqn_il"><span class="greek">&beta;</span><sub>2</sub></span>.</p>
+</div>
+<h2 class="togglediv">Normal and Anomalous Dispersion</h2>
+<div>
+<p>One distinguishes <em>normal dispersion</em> (for <span class="eqn_il"><i>k&#39;&#39;&thinsp;&gt;</i>&thinsp;0</span>) and <em>anomalous dispersion</em> (for <span class="eqn_il"><i>k&#39;&#39;&thinsp;&lt;</i>&thinsp;0</span>).
+Normal dispersion, where the <a href="group_velocity.html" title="the velocity with which the envelope of a weak narrow-band optical pulse propagates in a medium">group velocity</a> decreases with increasing <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequency</a>, occurs for most transparent media in the visible spectral region.
+Anomalous dispersion sometimes occurs at longer <a href="wavelength.html" title="the spatial period of a plane wave">wavelengths</a>, e.g. in silica (the basis of most optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>) for wavelengths longer than the <a href="zero_dispersion_wavelength.html" title="a wavelength where the group delay dispersion of a fiber or a material is zero">zero-dispersion wavelength</a> of &asymp;&thinsp;1.3&nbsp;&mu;m.</p>
+<p>Great care is recommended when the sign of dispersion is specified.
+The <a href="ultrafast_optics.html" title="the part of optics dealing with ultrafast phenomena">ultrafast optics</a> community identifies that sign with the sign of <span class="eqn_il"><i>k&#39;&#39;</i></span>.
+The opposite sign is usually used in <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a>, where the dispersion is often specified with the <em>dispersion parameter</em></p>
+<div class="eqn"><img src="eqn/disp_d.gif" width="118" height="44" alt="dispersion of fibers"></div>
+<p>in units of picoseconds per nanometer and kilometer (ps/(nm&thinsp;km)).
+The different signs result from using a frequency derivative in one case and a wavelength derivative in the other.
+Note also that the conversion factor depends on the wavelength.</p>
+<form id="calculate_dispersion" class="calculatorform">
+<h2>Conversion of Chromatic Dispersion Values</h2>
+<table>
+<tr>
+<td>Center wavelength:</td><td></td><td></td>
+<td><input name="lambda" value="" class="cf_calculate_dispersion"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Group velocity dispersion:</td><td></td><td></td>
+<td><input name="GVD" value="" class="cf_calculate_dispersion"></td>
+<td><span class="calcbutton" id="calc_GVD">calc</span></td><td>(1 fs<sup>2</sup> = 1e-30 s<sup>2</sup>)</td>
+</tr>
+<tr>
+<td>Dispersion parameter:</td><td></td><td></td>
+<td><input name="D_l" value="" class="cf_calculate_dispersion"></td>
+<td><span class="calcbutton" id="calc_D_l">calc</span></td><td></td>
+</tr>
+</table>
+<p class="comment">Enter input values with units, where appropriate. After you have modified some values, click a "calc" button to recalculate the field left of it.</p>
+<noscript>
+<p style="color:red">Attention: The buttons do not work, as Javascript is turned off in your browser!</p>
+</noscript>
+</form>
+<script type="text/javascript" src="calcform.js"></script>
+<script type="text/javascript" nonce="cj33CDbSZteJEVfPCdXLww==">
+funits = new Array();
+funits["lambda"] = "m";
+funits["GVD"] = "&fs2/m";
+function calc_GVD() {
+  $("input[name=GVD]").val("???");
+  GetFieldValues("GVD","calculate_dispersion");
+  GVD = -1e30*(lambda*lambda)/(2*pi*2.9979e8)*D_l*(1e-12/(1e-9*1e3));
+  $("input[name=GVD]").val(format_u(GVD, "&fs2/m"));
+ }
+funits["D_l"] = "&ps/(nm km)";
+function calc_D_l() {
+  $("input[name=D_l]").val("???");
+  GetFieldValues("D_l","calculate_dispersion");
+  D_l = -2*pi*2.9979e8/(lambda*lambda)*1e-30*GVD/(1e-12/(1e-9*1e3));
+  $("input[name=D_l]").val(format_u(D_l, "&ps/(nm km)"));
+ }
+$("input[name=lambda]").val("1000 nm");
+$("input[name=GVD]").val("1000 fs2/m");
+calc_D_l();
+$(document).ready(function() {
+  $("span#calc_GVD").click(function() { calc_GVD() })
+  $("span#calc_D_l").click(function() { calc_D_l() })
+});
+</script>
+<p>Between wavelength regions with normal and anomalous dispersion, there is a <a href="zero_dispersion_wavelength.html" title="a wavelength where the group delay dispersion of a fiber or a material is zero">zero dispersion wavelength</a>.
+The region around this wavelength can be special in some respects, not only concerning weak dispersive pulse broadening.</p>
+</div>
+<h2 class="togglediv">Higher-order Dispersion</h2>
+<div>
+<p>Dispersion of third and higher order is called <em>higher-order dispersion</em>.
+When dealing with very broad optical spectra, one sometimes has to consider dispersion up to the fourth or even fifth and sixth order.
+Ultimately, the concept of Taylor expansion loses its value in this regime, where many dispersion orders have to be considered.
+It is therefore often more convenient e.g. in numerical modeling to work directly with a table of frequency-dependent phase changes.</p>
+</div>
+<h2 class="togglediv">Effects of Chromatic Dispersion</h2>
+<div>
+<h3 class="togglediv">Wavelength-dependent Refraction and Diffraction</h3>
+<div>
+<p>A frequently encountered phenomenon is that dispersion causes wavelength-dependent <a href="refraction.html" title="the change of the propagation direction when a wave comes from one medium into another one">refraction</a>, which is responsible, e.g., for the occurrence of rainbows.
+Similarly, wavelength-dependent <a href="diffraction.html" title="wave phenomena which occur when light waves hit some structure with variable transmission or phase changes">diffraction</a> at a <a href="diffraction_gratings.html" title="optical components containing a periodic structure which diffracts light">diffraction grating</a> allows the spatial separation of different frequency components of light.</p>
+</div>
+<h3 class="togglediv">Dispersive Pulse Broadening and Chirping</h3>
+<div>
+<p>Dispersion has an important impact on the propagation of <a href="pulses.html" title="flashes of light">pulses</a>, because a pulse always has a finite spectral width (<a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a>), so that dispersion can cause its frequency components to propagate with different velocities.
+Normal dispersion, for example, leads to a lower <a href="group_velocity.html" title="the velocity with which the envelope of a weak narrow-band optical pulse propagates in a medium">group velocity</a> of higher-frequency components, and thus to a positive <a href="chirp.html" title="time dependence of the instantaneous frequency of an optical pulse">chirp</a>, whereas anomalous dispersion creates negative chirps.</p>
+<p><a href="polychromatic_light.html" title="light with multiple optical frequencies">Polychromatic light</a>, e.g. corresponding to ultrashort light pulses, may be described with complex amplitudes <span class="eqn_il"><i>A</i></span> in the time or frequency domain.
+If it propagates through a dispersive medium, the resulting change of complex amplitudes can be described with the following equations.
+The simpler situation is found in the frequency domain, where second- and third-order dispersion generate phase changes proportional to the second or third power of frequency offset, respectively:</p>
+<div class="eqn"><img src="eqn/disp_fd.gif" width="302" height="48" alt="chromatic dispersion in frequency domain"></div>
+<p>In the time domain, those factors are replaced with time derivatives:</p>
+<div class="eqn"><img src="eqn/disp_td.gif" width="289" height="50" alt="chromatic dispersion in time domain"></div>
+<p>The frequency dependence of the group velocity also has an effect on the <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a>.
+If the pulse is initially unchirped, dispersion in a medium will always increase its <a href="pulse_duration.html" title="the duration of an optical pulse">duration</a> (<em>dispersive pulse broadening</em>).
+For an originally unchirped <a href="gaussian_pulses.html" title="pulses with a temporal intensity profile which has a Gaussian shape">Gaussian pulse</a> with the duration <span class="eqn_il"><span class="greek">&tau;</span><sub>0</sub></span>, which experiences only second-order dispersion <span class="eqn_il"><i>D</i><sub>2</sub></span>, the pulse duration is increased according to</p>
+<div class="eqn"><img src="eqn/disp_broadening.gif" width="230" height="60" alt="dispersive broadening"></div>
+<p>The approximation holds for the case of strong broadening, i.e., for <span class="eqn_il"><i>D</i><sub>2</sub>&thinsp;&gt;&gt;&thinsp;<span class="greek">&tau;</span><sub>0</sub><sup>2</sup></span>.
+In that regime, shorter input pulses lead to longer output pulses.
+This is an effect of the increased pulse bandwidth.</p>
+<p>As a numerical example, an initially unchirped 30-fs pulse at 800&nbsp;nm becomes stretched to 45&nbsp;fs after 10&nbsp;mm of propagation in silica (with +360&nbsp;fs<sup>2</sup>).
+After 10&nbsp;cm, the pulse duration would increase to 334&nbsp;fs.</p>
+<form id="calculate_broadening" class="calculatorform">
+<h2>Dispersive Pulse Broadening</h2>
+<table>
+<tr>
+<td>Unchirped pulse duration:</td><td></td><td></td>
+<td><input name="tau0" value="" class="cf_calculate_broadening"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Group delay dispersion:</td><td></td><td></td>
+<td><input name="D2" value="" class="cf_calculate_broadening"></td>
+<td></td><td>(1 fs<sup>2</sup> = 1e-30 s<sup>2</sup>)</td>
+</tr>
+<tr>
+<td>Pulse duration:</td><td></td><td></td>
+<td><input name="tau" value="" class="cf_calculate_broadening"></td>
+<td><span class="calcbutton" id="calc_tau">calc</span></td><td></td>
+</tr>
+</table>
+<p class="comment">Enter input values with units, where appropriate. After you have modified some inputs, click the "calc" button to recalculate the output.</p>
+<noscript>
+<p style="color:red">Attention: The buttons do not work, as Javascript is turned off in your browser!</p>
+</noscript>
+</form>
+<script type="text/javascript" nonce="cj33CDbSZteJEVfPCdXLww==">
+funits["tau0"] = "s";
+funits["D2"] = "fs^2";
+funits["tau"] = "s";
+function calc_tau() {
+  $("input[name=tau]").val("???");
+  GetFieldValues("tau","calculate_broadening");
+  tau = tau0*Math.sqrt(1+Math.pow(4*Math.log(2)*1e-30*D2/(tau0*tau0),2));
+  $("input[name=tau]").val(format_u(tau, "s"));
+ }
+$("input[name=tau0]").val("100 fs");
+$("input[name=D2]").val("5000 fs^2");
+calc_tau();
+$(document).ready(function() {
+  $("span#calc_tau").click(function() { calc_tau() })
+});
+</script>
+<p>Dispersion of the opposite sign can be used later to recompress the pulse (<em>dispersive <a href="pulse_compression.html" title="linear or nonlinear techniques for reducing the durations of optical pulses">pulse compression</a></em>).
+This is important, e.g., in the context of <a href="chirped_pulse_amplification.html" title="a technique for amplifying pulses to very high optical intensities while avoiding excessive nonlinear pulse distortions or optical damage">chirped-pulse amplification</a>.
+Depending on the sign and amount of required dispersion, and also on other factors such as the optical <a href="peak_power.html" title="maximum optical power of a pulse">peak power</a>, different devices are used as dispersive compressors.
+Examples are <a href="prism_pairs.html" title="combinations of two prisms, mostly used for dispersion compensation">prism pairs</a>, pairs of <a href="diffraction_gratings.html" title="optical components containing a periodic structure which diffracts light">diffraction gratings</a>, <a href="chirped_mirrors.html" title="Bragg-type dispersive mirrors with a spatial variation of the Bragg wavelength">chirped mirrors</a> or other <a href="dispersive_mirrors.html" title="mirrors which provide some amount of chromatic dispersion for the reflected beam">dispersive mirrors</a>, chirped <a href="bragg_gratings.html" title="reflecting structures with a periodic refractive index modulation">Bragg gratings</a>, and dispersive <a href="optical_glasses.html" title="glasses of high quality, made for optical applications">glass</a> <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>.</p>
+<figure>
+<img src="img/pulse_broadening.png" alt="dispersive pulse broadening">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Output <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a> versus initial pulse duration for dispersive pulse broadening with different levels of group delay dispersion (GDD).
+Note that shorter pulses are increasingly sensitive to dispersion.
+Substantial broadening occurs when the square of the pulse duration is smaller than the group delay dispersion.
+</figcaption>
+</figure>
+<p>Higher-order dispersion causes more complicated changes of the pulse shape.
+A challenge in <a href="dispersion_compensation.html" title="the control of the overall chromatic dispersion of a system by adding optical elements with a suitable amount of dispersion">dispersion compensation</a> is often to compensate not only the lowest (second) order of dispersion, but also higher orders for approaching the <a href="transform_limit.html" title="a limit for the time&ndash;bandwidth&ndash;product of an optical pulse">transform limit</a>.</p>
+</div>
+<h3 class="togglediv">Soliton Effects</h3>
+<div>
+<p>Although dispersion alone leads to pulse broadening, dispersion combined with the <a href="kerr_effect.html" title="a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization">Kerr nonlinearity</a> can give rise to the formation of <a href="solitons.html" title="pulses with a certain balance of nonlinear and dispersive effects">solitons</a> and in this way assist the generation of extremely short pulses of light with a <a href="soliton_mode_locking.html" title="a mechanism for laser mode locking based on soliton pulses">soliton mode-locked laser</a>.
+However, this usually requires the careful management of dispersion over a wide wavelength range, i.e., taking care also of higher-order terms.</p>
+</div>
+<h3 class="togglediv">Dispersion in Nonlinear Optics</h3>
+<div>
+<p>In <a href="nonlinear_optics.html" title="the part of optics dealing with optical nonlinearities and their applications">nonlinear optics</a>, particularly concerning <a href="nonlinear_frequency_conversion.html" title="the conversion of input light to light of other frequencies, using optical nonlinearities">nonlinear frequency conversion</a>, chromatic dispersion has manifold influences, which can be grouped into three categories:</p>
+<ul>
+<li>It determines the options for <a href="phase_matching.html" title="a group of techniques for achieving efficient nonlinear interactions in a medium">phase matching</a> of parametric nonlinear processes.</li>
+<li>It limits the effective interaction length for short <a href="pulses.html" title="flashes of light">pulses</a> via the <a href="group_velocity_mismatch.html" title="the phenomenon that pulses become temporally separated in a medium due to different group velocities, or (quantitatively) the difference of inverse group velocities">group velocity mismatch</a> (&rarr;&nbsp;<a href="temporal_walk_off.html" title="the loss of temporal overlap of pulses, caused by group velocity mismatch"><em>temporal walk-off</em></a>, limited <a href="phase_matching_bandwidth.html" title="the width of an optical frequency range in which some process (e.g. a nonlinear interaction) can be efficient due to more or less precise phase matching">phase-matching bandwidth</a>).</li>
+<li>It can also limit the nonlinear interaction length via dispersive pulse broadening: eventually, the pulses become so long that their <a href="peak_power.html" title="maximum optical power of a pulse">peak power</a> is too low for efficient nonlinear interactions.
+However, the group velocity mismatch normally introduces the more stringent limitation.</li>
+</ul>
+</div>
+</div>
+<h2 class="togglediv">Chromatic Dispersion of Optical Components</h2>
+<div>
+<p>Dispersion can also be defined for optical components rather than media.
+In that case, one performs the Taylor expansion as shown above for the total phase delay of the component (rather than for the <a href="wavenumber.html" title="the phase delay per unit length, or that quantity divided by 2&pi;">wavenumber</a>, i.e., the phase delay per unit length), and obtains the total group delay dispersion (in units of seconds squared) rather than the dispersion per unit length.</p>
+<p>The chromatic dispersion of an optical component may simply result from the dispersion of its parts, but in some cases large amounts of dispersion can arise from <a href="interference.html" title="a range of phenomena associated with the superposition of waves">interference</a> effects.
+For example, a <a href="gires_tournois_interferometers.html" title="linear optical resonators used for introducing chromatic dispersion">Gires&ndash;Tournois interferometer</a> generates dispersion by interference effects in an <a href="optical_resonators.html" title="arrangements of optical components which allow a beam of light to circulate">optical resonator</a>, and not primarily via material dispersion.
+The same happens in other types of <a href="interferometers.html" title="optical devices utilizing the phenomenon of interference">interferometers</a>.
+The amount of dispersion arising from such effects can be huge when large differences in propagation lengths are involved.</p>
+<p>Chromatic dispersion can also result from geometric effects.
+An important example is that of a <a href="prism_pairs.html" title="combinations of two prisms, mostly used for dispersion compensation">prism pair</a> as is often used for <a href="dispersion_compensation.html" title="the control of the overall chromatic dispersion of a system by adding optical elements with a suitable amount of dispersion">dispersion compensation</a> in <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked lasers</a>.
+Here, chromatic dispersion arises from wavelength-dependent path lengths, caused by wavelength-dependent refraction at <a href="prisms.html" title="transparent optical devices which refract or reflect light">prism</a> surfaces.
+Similar effects occur in <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonators</a> containing Brewster-angled optical components, and in Bragg grating pairs as used for dispersive <a href="pulse_compression.html" title="linear or nonlinear techniques for reducing the durations of optical pulses">pulse compression</a>.</p>
+</div>
+<h2 class="togglediv">Waveguide Dispersion</h2>
+<div>
+<p>The discussion above is based on the assumption of <a href="plane_waves.html" title="waves with plane wavefronts">plane waves</a>.
+In practice, significant deviations from this situation can occur, in particular in the context of <a href="waveguides.html" title="spatially inhomogeneous transparent structures for guiding light">waveguides</a>.
+Here, the quantity of interest is usually not the magnitude of the <a href="wave_vector.html" title="a vector indicating the direction of wave propagation and the phase delay per unit length">wave vector</a> (<span class="eqn_il"><i>k</i></span> vector) (which anyway is no longer well defined), but rather the value <span class="eqn_il"><span class="greek">&beta;</span></span> (the imaginary part of the <a href="propagation_constant.html" title="a mode- and frequency-dependent quantity describing the propagation of light in a medium or waveguide">propagation constant</a>), which specifies the phase change per unit length in the propagation direction.
+As <span class="eqn_il"><span class="greek">&beta;</span></span> is influenced by the waveguide (particularly for mode diameters of only a few wavelengths or even less), the dispersion is also affected (&rarr;&nbsp;<a href="waveguide_dispersion.html" title="chromatic dispersion arising from waveguiding effects"><em>waveguide dispersion</em></a>).
+This is important e.g. in optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>, and particularly in <a href="photonic_crystal_fibers.html" title="specialty optical fibers with a built-in microstructure, in most cases consisting of small air holes in glass">photonic crystal fibers</a> with very small <a href="effective_mode_area.html" title="a quantitative measure of the area which a waveguide or fiber mode effectively covers in the transverse dimensions">effective mode areas</a>.
+In some cases, waveguide dispersion makes the overall dispersion anomalous even in the visible wavelength region, where the material dispersion of silica alone is clearly in the normal dispersion regime.
+For <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">telecom applications</a>, fiber designs are often made for tailored dispersion properties, resulting in, e.g., <a href="dispersion_shifted_fibers.html" title="fibers with a non-standard zero dispersion wavelength">dispersion-shifted fibers</a>.</p>
+</div>
+<h2 class="togglediv">Chromatic Dispersion from Polarization Effects</h2>
+<div>
+<p>A special type of chromatic dispersion can result from <a href="polarization_mode_dispersion.html" title="the polarization dependence of the propagation characteristics of light waves in optical fibers">polarization mode dispersion</a> e.g. in optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>.
+For a certain fiber span and a given wavelength, two input principal polarization states can be determined, which exhibit somewhat different values of the group delay.
+Besides this differential group delay, there are contributions to the group delay dispersion with opposite signs for the two principal polarization states.
+Such effects can be relevant for <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a> at very high bit rates.</p>
+</div>
+<h2 class="togglediv">Measurement of Chromatic Dispersion</h2>
+<div>
+<p>There are several techniques for measuring chromatic dispersion:</p>
+<ul>
+<li>The pulse delay technique [2] (for <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>) is based on measuring the difference in propagation time (<a href="group_delay.html" title="a measure of the time delay experienced by narrow-band light pulses in an optical device">group delay</a>) for <a href="pulses.html" title="flashes of light">pulses</a> with different center wavelengths.
+This is typically done using hundreds of meters (or even some kilometers) of a fiber.
+The dispersion is obtained by differentiation of these data.</li>
+<li>The phase shift technique or &ldquo;difference method&rdquo; [4] (also for <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>): a light beam with a sinusoidally modulated intensity is sent through a fiber, and the phases of the oscillations of input and output power are compared.
+The group delay can be calculated from that phase, and the dispersion can be measured by performing the measurement at different wavelengths.</li>
+<li>Dispersion in the <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">resonator</a> of a wavelength-tunable passively <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked laser</a> can be measured by monitoring changes in the pulse repetition frequency when the laser wavelength is changed, as this reveals the wavelength-dependent <a href="group_delay.html" title="a measure of the time delay experienced by narrow-band light pulses in an optical device">group delay</a>.</li>
+<li>Different types of <a href="interferometers.html" title="optical devices utilizing the phenomenon of interference">interferometry</a> [5] (e.g. <a href="white_light_interferometers.html" title="interferometers using broadband light inputs">white-light interferometry</a> [6] or <a href="spectral_phase.html" title="the phase of the electric field in the frequency domain">spectral phase</a> interferometry [10]) can be used to measure the phase delay caused by a dispersive component.
+The dispersion properties can be obtained from this phase by numerical differentiation.
+The method is normally used for dispersion measurements on dispersive <a href="laser_mirrors.html" title="high-quality mirrors used in laser resonators and other optical setups">laser mirrors</a> and sometimes for <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>.</li>
+</ul>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_chromatic_dispersion_measurement_devices.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 4 suppliers for chromatic dispersion measurement devices.</p>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="chromatic_dispersion.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">M. DiDomenico, &ldquo;Material dispersion in optical fiber waveguides&rdquo;, Appl. Opt. 11 (3), 652 (1972), <a href="https://doi.org/10.1364/AO.11.000652">doi:10.1364/AO.11.000652</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">L. G. Cohen and C. Lin, &ldquo;Pulse delay measurements in the zero material dispersion wavelength region for optical fibers&rdquo;, Appl. Opt. 16 (12), 3136 (1977), <a href="https://doi.org/10.1364/AO.16.003136">doi:10.1364/AO.16.003136</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">D. N. Payne and A. H. Hartog, &ldquo;Determination of the wavelength of zero material dispersion in optical fibers by pulse-delay measurement&rdquo;, Electron. Lett. 13 (21), 627 (1977), <a href="https://doi.org/10.1049/el:19770449">doi:10.1049/el:19770449</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">A. Sugimura and K. Daikoku, &ldquo;Wavelength dispersion of optical fibers directly measured by &lsquo;difference method&rsquo; in the 0.8&ndash;1.6&nbsp;&mu;m range&rdquo;, Rev. Sci. Instrum. 50 (3), 434 (1979), <a href="https://doi.org/10.1063/1.1135825">doi:10.1063/1.1135825</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">M. Tateda <i>et al.</i>, &ldquo;Interferometric method for chromatic dispersion measurement in a single-mode optical fiber&rdquo;, IEEE J. Quantum Electron. 17 (3), 404 (1981), <a href="https://doi.org/10.1109/JQE.1981.1071115">doi:10.1109/JQE.1981.1071115</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">H.-T. Shang, &ldquo;Chromatic dispersion measurement by white-light interferometry on metre-length single-mode optical fibres&rdquo;, Electron. Lett. 17 (17), 603 (1981), <a href="https://doi.org/10.1049/el:19810424">doi:10.1049/el:19810424</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">B. Costa <i>et al.</i>, &ldquo;Phase-shift technique for the measurement of chromatic dispersion in single-mode optical fibres using LED's&rdquo;, Electron. Lett. 19 (25), 1074 (1982), <a href="https://doi.org/10.1049/el:19830729">doi:10.1049/el:19830729</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">L. Cohen, &ldquo;Comparison of single-mode fiber dispersion measurement techniques&rdquo;, J. Lightwave Technol. 3 (5), 958 (1985), <a href="https://doi.org/10.1109/JLT.1985.1074327">doi:10.1109/JLT.1985.1074327</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">L. Thevenaz <i>et al.</i>, &ldquo;All-fiber interferometer for chromatic dispersion measurements&rdquo;, IEEE J. Lightwave Technol. 6 (1), 1 (1988), <a href="https://doi.org/10.1109/50.3953">doi:10.1109/50.3953</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">C. Dorrer, &ldquo;Chromatic dispersion characterization by direct instantaneous frequency measurement&rdquo;, Opt. Lett. 29 (2), 204 (2004), <a href="https://doi.org/10.1364/OL.29.000204">doi:10.1364/OL.29.000204</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">I. A. Walmsley <i>et al.</i>, &ldquo;The role of dispersion in ultrafast optics&rdquo;, Rev. Sci. Instrum. 72 (1), 1 (2001), <a href="https://doi.org/10.1063/1.1330575">doi:10.1063/1.1330575</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">R. Paschotta, tutorial on &quot;<a href="passive_fiber_optics.html">Passive Fiber Optics</a>&quot;, <a href="passive_fiber_optics10.html">Part 10: Chromatic Dispersion</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="group_velocity_dispersion.html" title="the frequency dependence of the group velocity in a medium, or (quantitatively) the derivative of the inverse group velocity with respect to angular frequency">group velocity dispersion</a>, <a href="group_delay_dispersion.html" title="the frequency dependency of the group delay, or (quantitatively) the corresponding derivative with respect to angular frequency">group delay dispersion</a>, <a href="zero_dispersion_wavelength.html" title="a wavelength where the group delay dispersion of a fiber or a material is zero">zero dispersion wavelength</a>, <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>, <a href="dispersion.html" title="the dependence of the phase velocity in a medium on the optical frequency or the propagation mode">dispersion</a>, <a href="waveguide_dispersion.html" title="chromatic dispersion arising from waveguiding effects">waveguide dispersion</a>, <a href="dispersion_compensation.html" title="the control of the overall chromatic dispersion of a system by adding optical elements with a suitable amount of dispersion">dispersion compensation</a>, <a href="dispersion_management.html" title="the use of tailored chromatic dispersion to enhance the function of optical devices or systems">dispersion management</a>, <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>, <a href="group_velocity.html" title="the velocity with which the envelope of a weak narrow-band optical pulse propagates in a medium">group velocity</a>, <a href="refraction.html" title="the change of the propagation direction when a wave comes from one medium into another one">refraction</a>, <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a>, <a href="sellmeier_formula.html" title="an equation for calculating the wavelength-dependent refractive index of a medium">Sellmeier formula</a>, <a href="kramers_kronig_relations.html" title="mathematical relations between absorption coefficient and refractive index of transparent media">Kramers&ndash;Kronig relations</a>, <a href="dispersion_shifted_fibers.html" title="fibers with a non-standard zero dispersion wavelength">dispersion-shifted fibers</a><br>and other articles in the categories <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/chromatic_dispersion.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fchromatic_dispersion.html&text=RP+Photonics+Encyclopedia+-+chromatic+dispersion%2C+group+velocity%2C+group+delay%2C+GDD%2C+anomalous%2C+normal%2C+higher+order" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fchromatic_dispersion.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fchromatic_dispersion.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/chromatic_dispersion.html"&gt;<br>Article on Chromatic Dispersion&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/chromatic_dispersion.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/chromatic_dispersion.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/chromatic_dispersion.html<br>article on 'Chromatic Dispersion' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Now is the Time for Training!</h2>
+<p>When your lab is closed, how to best utilize your time? With training, of course.</p>
+<p>Some suggestions:</p>
+<ul>
+<li>Use the RP Photonics website, reading <a href="./encyclopedia.html?banner=video_training">encyclopedia</a> articles, <a href="./tutorials.html?banner=video_training">tutorials</a>, <a href="./spotlight.html?banner=video_training">Photonics Spotlight</a> articles, etc. &ndash; all for free.</li>
+<li>Get a <a href="./training.html?banner=video_training">tailored training course</a> delivered through the internet &ndash; with every participant connected from home!</li>
+<li>Start with <a href="./software_modeling.html?banner=video_training">physical modeling</a> in order to fully understand your systems and devices, optimize performance, create new ideas&hellip;</li>
+</ul>
+<img src="./img/rp_photonics.png" alt="RP Photonics" style="margin-top:20px; width:225px;">
+<p>offers <a href="./training.html?banner=video_training">tailored training courses</a> and powerful <a href="./software.html?banner=video_training">simulation &amp; design software</a>, e.g. for <a href="./fiberpower.html?banner=video_training">active and passive fiber devices</a>, <a href="./resonator.html?banner=video_training">laser resonators</a> and <a href="./coating.html?banner=video_training">thin-film coatings</a>!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="cj33CDbSZteJEVfPCdXLww==">shownbanner = "video training";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Latest Encyclopedia Articles</h2>
+<p>Here are the latest encyclopedia articles:</p>
+<ul>
+<li class="tight"><a href="./variable_reflectivity_mirrors.html">variable reflectivity mirrors</a></li>
+<li class="tight"><a href="./color_centers.html">color centers</a></li>
+<li class="tight"><a href="./excimer_lamps.html">excimer lamps</a></li>
+<li class="tight"><a href="./multimode_beams.html">multimode beams</a></li>
+<li class="tight"><a href="./channel_waveguides.html">channel waveguides</a></li>
+<li class="tight"><a href="./optical_crystals.html">optical crystals</a></li>
+<li class="tight"><a href="./standing_wave_resonators.html">standing-wave resonators</a></li>
+<li class="tight"><a href="./nonlinear_absorption.html">nonlinear absorption</a></li>
+<li class="tight"><a href="./passive_fibers.html">passive fibers</a></li>
+<li class="tight"><a href="./active_fibers.html">active fibers</a></li>
+<li class="tight"><a href="./oem_laser_modules.html">OEM laser modules</a></li>
+<li class="tight"><a href="./industrial_lasers.html">industrial lasers</a></li>
+<li class="tight"><a href="./scientific_lasers.html">scientific lasers</a></li>
+<li class="tight"><a href="./flint_glasses.html">flint glasses</a></li>
+<li class="tight"><a href="./crown_glasses.html">crown glasses</a></li>
+<li class="tight"><a href="./sodium_vapor_lamps.html">sodium vapor lamps</a></li>
+<li class="tight"><a href="./metal_vapor_lamps.html">metal vapor lamps</a></li>
+<li class="tight"><a href="./mercury_vapor_lamps.html">mercury vapor lamps</a></li>
+<li class="tight"><a href="./white_light.html">white light</a></li>
+<li class="tight"><a href="./cie_standard_illuminants.html">CIE standard illuminants</a></li>
+</ul>
+
+<p>The encyclopedia already contains 948 articles.</p>
+<p>See also the regularly appearing articles of the <a href="./spotlight.html?banner=new_articles">The Photonics Spotlight</a> and the <a href="./software_news.html?banner=new_articles">RP Photonics Software News</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="cj33CDbSZteJEVfPCdXLww==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/chromatic_dispersion.html"
+    },
+    "headline": "Chromatic Dispersion",
+    "image": "https://www.rp-photonics.com/previews/chromatic_dispersion.png",
+    "datePublished": "2005-04-17",
+    "dateModified": "2020-06-25",
+    "description": "Chromatic dispersion is the frequency dependence of the phase velocity in a transparent medium. It can lead to wavelength-dependent group velocities of light pulses, for example.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter C",
+      "item": "https://www.rp-photonics.com/encyclopedia_c.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "chromatic dispersion",
+      "item": "https://www.rp-photonics.com/chromatic_dispersion.html"
+    }]}
+}
+</script>
+</body>
+</html>

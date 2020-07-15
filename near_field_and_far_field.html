@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-hp5NYR+PMfBlSj8ELO4ayQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - near field and far field, dipole, diffraction at an aperture, imaging, near field microscope, laser beam, optical fiber</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/near_field_and_far_field.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Generally, the near field is the optical field close to some object or beam focus, while the far field is the field at large distances. Depending on the context, the meanings can be somewhat different.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="near field and far field, dipole, diffraction at an aperture, imaging, near field microscope, laser beam, optical fiber">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Near Field and Far Field">
+<meta property="og:description" content="Generally, the near field is the optical field close to some object or beam focus, while the far field is the field at large distances. Depending on the context, the meanings can be somewhat different.">
+<meta property="og:url" content="https://www.rp-photonics.com/near_field_and_far_field.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/near_field_and_far_field.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Generally, the near field is the optical field close to some object or beam focus, while the far field is the field at large distances. Depending on the context, the meanings can be somewhat different.">
+<meta name="twitter:title" content="Near Field and Far Field">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/near_field_and_far_field.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="hp5NYR+PMfBlSj8ELO4ayQ==">
+page="near_field_and_far_field.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> <a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo sponsor"></a> <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="hp5NYR+PMfBlSj8ELO4ayQ==">shownsponsors="eagleyard Photonics,EKSMA OPTICS,El.En.,TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_n.html">letter N</a> &gt; <a href="near_field_and_far_field.html">near field and far field</a></p>
+<h1>Near Field and Far Field</h1>
+<header style="margin-right:0;">
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: the optical field either close to a source or object or far from it</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Nahfeld und Fernfeld</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<p><a href="encyclopedia_cite.html?article=near%20field%20and%20far%20field">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>The terms near field and far field have similar, but somewhat different meanings depending on the context.
+Various cases are discussed in the following sections.
+Normally, there is no precisely defined boundary for the near or far field.</p>
+<p>Often, one uses certain approximations for calculations, which are fulfilled only in the near field or in the far field.
+The near or far field can then be defined based on how well those approximations are fulfilled.</p>
+<p>There are quantities which are defined only in the near or far field, or based on the near or far field.
+For example, the <a href="beam_divergence.html" title="a measure for how fast a laser beam expands far from its focus">divergence</a> of a <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a> is based on its far field profile.</p>
+<h2 class="togglediv">Radiating Dipole</h2>
+<div>
+<p>An oscillating electric dipole (e.g. an antenna or an excited atom or ion) emits electromagnetic radiation.
+Here, the near field has an extension less than one <a href="wavelength.html" title="the spatial period of a plane wave">wavelengths</a>.
+The far field occurs for distances from the dipole which are much larger than the wavelength.
+Various mathematical expressions for the far field are substantially simpler than those for the complete radiation field.</p>
+<p>This also applies to radiation from antennae.
+Here, it is also of interest that objects in the near field can have a direct back-action on the antenna, while more distant objects can receive radiation without affecting the antenna.
+The near field also contains rapidly decaying field components which are not observable at larger distances.</p>
+<p>Note that the near field of an antenna can extend substantially beyond one wavelength if the antenna is large.</p>
+</div>
+<h2 class="togglediv">Diffraction at an Aperture</h2>
+<div>
+<p>When light is <a href="diffraction.html" title="wave phenomena which occur when light waves hit some structure with variable transmission or phase changes">diffracted</a> at an <a href="optical_apertures.html" title="structures which limit the propagation of light">optical aperture</a>, there can be substantial differences between the shapes of resulting diffraction patterns, depending on the distance of observation.
+Here, the near field is defined is the range where the <a href="fresnel_number.html" title="a parameter determining the regime of diffraction effects">Fresnel number</a> is much larger than unity, while the far field is characterized by Fresnel numbers well below unity.</p>
+</div>
+<h2 class="togglediv">Imaging</h2>
+<div>
+<p><a href="imaging.html" title="mapping objects points to image points; applications involving such methods">Imaging</a> devices such as <a href="microscopes.html" title="instruments for seeing very small objects">microscopes</a> are generally limited in image resolution to the order of half the optical <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>.
+This is only true for devices utilizing the optical far field, however.
+There are different types of <em>optical near field microscopes</em> which can achieve a resolution far below the wavelength.
+For example, there are instruments which can a sample with a tapered fiber tip, having an opening diameter far below 1&nbsp;&mu;m.
+Such a tip must be put very close to the sample so that it penetrates the near field.</p>
+</div>
+<h2 class="togglediv">Evanescent Fields</h2>
+<div>
+<p>In various situations, one has evanescent fields, which by definition are confined to the close vicinity of some object.
+For example, such fields occur in the context of <a href="total_internal_reflection.html" title="the phenomenon that light incident on the boundary between two transparent media is fully reflected if the light is coming from the optical more dense medium and the angle of incidence is sufficiently large">total internal reflection</a> or for light <a href="scattering.html" title="processes where light is sent in other directions, usually but not always in random directions">scattering</a> at tiny dielectric particles.</p>
+</div>
+<h2 class="togglediv">Laser Beams</h2>
+<div>
+<p>For a <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a> (which is often a <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beam</a>), the near field is the area around the beam focus within less than one effective <a href="rayleigh_length.html" title="the distance from a beam waist where the mode radius increased by a factor square root of 2">Rayleigh length</a>.
+The far field is the region far from the focus, with a distance much larger than the Rayleigh length, where the <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a> increases about linearly with the distance from the focus.</p>
+</div>
+<h2 class="togglediv">Optical Fibers</h2>
+<div>
+<p>The near field for light exiting an optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fiber</a> is the area in which the field profile has not yet been substantially expanded.
+For a rough criterion, one can calculate the <a href="rayleigh_length.html" title="the distance from a beam waist where the mode radius increased by a factor square root of 2">Rayleigh length</a> based on the <a href="mode_radius.html" title="a measure of the transverse extent of a laser mode or laser beam">mode radius</a> of the fundamental fiber <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">mode</a>.
+On the other hand, the far field is obtained in distances which are large compared with that Rayleigh length; there, the shape of the beam profile is essentially determined by the 2D <a href="fourier_optics.html" title="the description of light propagation based on transverse spatial Fourier transforms">Fourier transform</a> of the near-field profile.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="near_field_and_far_field.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="diffraction.html" title="wave phenomena which occur when light waves hit some structure with variable transmission or phase changes">diffraction</a>, <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a>, <a href="fourier_optics.html" title="the description of light propagation based on transverse spatial Fourier transforms">Fourier optics</a><br>and other articles in the categories <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/near_field_and_far_field.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fnear_field_and_far_field.html&text=RP+Photonics+Encyclopedia+-+near+field+and+far+field%2C+dipole%2C+diffraction+at+an+aperture%2C+imaging%2C+near+field+microscope%2C+laser+beam%2C+optical+fiber" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fnear_field_and_far_field.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fnear_field_and_far_field.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/near_field_and_far_field.html"&gt;<br>Article on Near Field and Far Field&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/near_field_and_far_field.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/near_field_and_far_field.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/near_field_and_far_field.html<br>article on 'Near Field and Far Field' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="./fiberpower.html?banner=RP_Fiber_Power_6"><img src="./img/fiberpower_ro3b.png" alt="relaxation oscillations" style="margin-bottom:8px"></a>
+<p>Evolution of output power and gain when an Yb-doped fiber laser is switched on. One can see the relaxation oscillations, with convergence towards the steady state. Each red or gray segment corresponds to 0.2&nbsp;&mu;s.</p>
+<p>This diagram has been made with the <a href="./fiberpower.html?banner=RP_Fiber_Power_6"><b>RP Fiber Power</b></a> software.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="hp5NYR+PMfBlSj8ELO4ayQ==">shownbanner = "RP Fiber Power 6";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Latest Encyclopedia Articles</h2>
+<p>Here are the latest encyclopedia articles:</p>
+<ul>
+<li class="tight"><a href="./variable_reflectivity_mirrors.html">variable reflectivity mirrors</a></li>
+<li class="tight"><a href="./color_centers.html">color centers</a></li>
+<li class="tight"><a href="./excimer_lamps.html">excimer lamps</a></li>
+<li class="tight"><a href="./multimode_beams.html">multimode beams</a></li>
+<li class="tight"><a href="./channel_waveguides.html">channel waveguides</a></li>
+<li class="tight"><a href="./optical_crystals.html">optical crystals</a></li>
+<li class="tight"><a href="./standing_wave_resonators.html">standing-wave resonators</a></li>
+<li class="tight"><a href="./nonlinear_absorption.html">nonlinear absorption</a></li>
+<li class="tight"><a href="./passive_fibers.html">passive fibers</a></li>
+<li class="tight"><a href="./active_fibers.html">active fibers</a></li>
+<li class="tight"><a href="./oem_laser_modules.html">OEM laser modules</a></li>
+<li class="tight"><a href="./industrial_lasers.html">industrial lasers</a></li>
+<li class="tight"><a href="./scientific_lasers.html">scientific lasers</a></li>
+<li class="tight"><a href="./flint_glasses.html">flint glasses</a></li>
+<li class="tight"><a href="./crown_glasses.html">crown glasses</a></li>
+<li class="tight"><a href="./sodium_vapor_lamps.html">sodium vapor lamps</a></li>
+<li class="tight"><a href="./metal_vapor_lamps.html">metal vapor lamps</a></li>
+<li class="tight"><a href="./mercury_vapor_lamps.html">mercury vapor lamps</a></li>
+<li class="tight"><a href="./white_light.html">white light</a></li>
+<li class="tight"><a href="./cie_standard_illuminants.html">CIE standard illuminants</a></li>
+</ul>
+
+<p>The encyclopedia already contains 948 articles.</p>
+<p>See also the regularly appearing articles of the <a href="./spotlight.html?banner=new_articles">The Photonics Spotlight</a> and the <a href="./software_news.html?banner=new_articles">RP Photonics Software News</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="hp5NYR+PMfBlSj8ELO4ayQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/near_field_and_far_field.html"
+    },
+    "headline": "Near Field and Far Field",
+    "image": "https://www.rp-photonics.com/previews/near_field_and_far_field.png",
+    "datePublished": "2019-06-12",
+    "dateModified": "2020-03-14",
+    "description": "Generally, the near field is the optical field close to some object or beam focus, while the far field is the field at large distances. Depending on the context, the meanings can be somewhat different.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter N",
+      "item": "https://www.rp-photonics.com/encyclopedia_n.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "near field and far field",
+      "item": "https://www.rp-photonics.com/near_field_and_far_field.html"
+    }]}
+}
+</script>
+</body>
+</html>

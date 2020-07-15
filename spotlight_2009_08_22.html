@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-9A/nLwIkiRLFXKu43IEU9A=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>The Photonics Spotlight - Jitter and Phase Noise of Mode-locked Fiber Lasers</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/spotlight_2009_08_22.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2009-08-22">
+<meta name="description" content="A new paper on the timing jitter and phase noise of wavebreaking-free fiber lasers has appeared (in an open-access journal). RP Photonics has been involved in this research. A lot of interesting results have been obtained.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="photonics, spotlight, news, publications, blog, RSS feed, encyclopedia, laser physics, technology">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Photonics Spotlight - Jitter and Phase Noise of Mode-locked Fiber Lasers">
+<meta property="og:description" content="A new paper on the timing jitter and phase noise of wavebreaking-free fiber lasers has appeared (in an open-access journal). RP Photonics has been involved in this research. A lot of interesting results have been obtained.">
+<meta property="og:url" content="https://www.rp-photonics.com/spotlight_2009_08_22.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/spotlight_2009_08_22.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="A new paper on the timing jitter and phase noise of wavebreaking-free fiber lasers has appeared (in an open-access journal). RP Photonics has been involved in this research. A lot of interesting results have been obtained.">
+<meta name="twitter:title" content="The Photonics Spotlight - Jitter and Phase Noise of Mode-locked Fiber Lasers">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/spotlight_2009_08_22.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="9A/nLwIkiRLFXKu43IEU9A==">
+page="spotlight_2009_08_22.html"; cat="P"; shownbanner=""; ref="http://www.rp-photonics.com/spotlight.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo sponsor"></a> <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="9A/nLwIkiRLFXKu43IEU9A==">shownsponsors="El.En.,TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight" class="selected"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="spotlight.html">The Photonics Spotlight</a> &gt; <a href="spotlight_2009_08_22.html">2009-08-22</a></p>
+<h1 class="posting">Jitter and Phase Noise of Mode-locked Fiber Lasers</h1>
+<div class="posting_details">
+<p>Posted on 2009-08-22 as a part of the <a href="spotlight.html">Photonics Spotlight (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="spotlight_2009_08_22.html" class="url">https://www.rp-photonics.com/spotlight_2009_08_22.html</a></p>
+<p>Author: <a href="https://www.rp-photonics.com/paschotta.html" rel="author">Dr. Rüdiger Paschotta</a>, <a href="https://www.rp-photonics.com/">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: A new paper on the timing jitter and phase noise of wavebreaking-free fiber lasers has appeared (in an open-access journal). RP Photonics has been involved in this research. A lot of interesting results have been obtained.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p class="ref">Ref.: O. Prochnow et al., &ldquo;Quantum-limited noise performance of a femtosecond all-fiber ytterbium laser&rdquo;, Opt. Express 17 (18), 15525 (2009) (open access!); see also references therein</p>
+<p>Even though I largely work for industrial customers in these days, occasionally I enjoy being involved in some interesting research.
+A paper on the most recent work just appeared in Optics Express, see above.
+This work was done in collaboration with colleagues from the <a href="http://www.lzh.de" rel="nofollow">Laserzentrum Hannover</a>.</p>
+<p>There have been plenty of papers reporting some <a href="timing_jitter.html" title="fluctuations of the temporal positions of pulses">timing jitter</a> measurements on <a href="mode_locked_fiber_lasers.html" title="ultrafast fiber lasers which are actively or passively mode-locked for generating ultrashort pulses">mode-locked fiber lasers</a>, so what is exciting about another one?
+That there is also some modeling, and a reasonable agreement between experiment and theory?
+No, it's really more than that.
+If it weren't, I would not have been keen to be involved.
+But I am delighted to report that we really learned a lot.</p>
+<h2 class="togglediv">What is the Noise Level of Wavebreaking-free Fiber Lasers?</h2>
+<div>
+<p>First of all, little has been known on the noise properties of wavebreaking-free fiber lasers.
+In contrast to <a href="soliton_mode_locking.html" title="a mechanism for laser mode locking based on soliton pulses">soliton mode-locked</a> lasers, these devices exhibit a rather sophisticated pulse evolution, with strong changes of various pulse parameters in each resonator round trip, and with strong influences of <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> and the <a href="kerr_effect.html" title="a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization">Kerr nonlinearity</a>.
+There are no analytical models describing such lasers and particularly their noise properties.
+So we are operating in a regime where there are open questions.</p>
+<p>One such question was whether we get a reasonable estimate of the <a href="timing_jitter.html" title="fluctuations of the temporal positions of pulses">timing jitter</a> by applying a simple analytical model which ignores the complicated pulse evolution.
+It was well conceivable that this could work, but equally possible that it wouldn't.
+But how to test that?
+Many would say: Just compare the analytical results with the measured data, then you see it.
+Well, it is not as easy as that.
+The experimentally measured noise was substantially stronger, but what is the reason?
+Is it that the simplified model is inadequate in this case, or is there simply technical excess noise in the experiment, as it is often observed?
+Note that these models typically just say what should happen if there are only <a href="quantum_noise.html" title="noise arising from quantum fluctuations">quantum noise</a> influences in the system, but it hard to find out how much excess noise there is in an experiment.</p>
+<p>To resolve that question, I set up a <b>numerical simulation</b>, where the pulse evolution under the influence of quantum noise is simulated and the noise properties are statistically evaluated.
+In contrast to the situation with an analytical model, a numerical model can contain much more detail of the pulse evolution, and we can still solve the equations numerically.
+So it is kind of intermediate between the simple model and the experiment, and we obtained important insight from that exercise.
+The numerical results also indicate noise far above the level expected from the simple model, and that level fitted well to that of the experiment.
+So the conclusions are that (a) the simple analytical model, ignoring details of the pulse evolution, is really too simple, and (b) that the influence of technical excess noise on the experiment appears not to be substantial.</p>
+</div>
+<h2 class="togglediv">Phase Noise and Carrier&ndash;Envelope Offset Noise</h2>
+<div>
+<p>An important part was that we also investigated the optical <a href="phase_noise.html" title="noise of the optical phase of a beam or of an electric signal">phase noise</a> and the noise of the <a href="carrier_envelope_offset.html" title="the offset between the optical phase and the maximum of the wave envelope of an optical pulse">carrier&ndash;envelope offset</a>.
+Both have  interesting relations to the timing jitter, as already discussed in an earlier paper (R. Paschotta et al., Appl. Phys. B 82 (2), 265 (2006)).
+My modeling (both analytical and numerical results) indicated that the optical phase noise should be quite weak, whereas the noise of the carrier&ndash;envelope offset is strong.
+This is very much in contrast to a situation where the timing jitter would result from fluctuations of the resonator length: in that case, the optical phase noise would be much stronger, whereas such fluctuations contribute little to the carrier&ndash;envelope offset noise.
+So the theory says that the jitter and phase noise resulting from quantum fluctuations behave quite differently from that resulting from resonator length fluctuations.
+And indeed the experimental data were found to be just as the theory predicted!
+This is also another confirmation that the noise in our laser results mainly from quantum noise influences.</p>
+</div>
+<h2 class="togglediv">Conclusions for Fiber-based Frequency Comb Sources</h2>
+<div>
+<p>We can also put that work in another context: the development of low-noise <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked laser</a> sources generating <a href="frequency_combs.html" title="optical spectra consisting of equidistant lines">frequency combs</a>.
+<a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">Fiber lasers</a> are attractive because they could be cheaper sources for various applications.
+However, most types of mode-locked fiber lasers are very much limited in terms of (intra-cavity) <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a> and also often produce somewhat longer pulses.
+For both reasons, such lasers are subject to relatively strong influences of quantum noise.
+Now, these wavebreaking-free fiber lasers (as considered in our work) look very promising, as they can deliver substantially increased pulse energies and rather short pulses as well.
+Unfortunately, our work demonstrated that this does not necessarily translate into superior noise properties: the complicated nonlinear pulse dynamics lead to substantially stronger noise than expected from simplified models.
+If it is so, we at least are glad to know it.</p>
+</div>
+<h2 class="togglediv">A Remark on Modeling</h2>
+<div>
+<p>As a side remark, I hope this work demonstrates that <a href="laser_modeling.html" title="the investigation of phenomena and quantitative relations in lasers, using theoretical models and computational methods">modeling work</a> is much more than setting up a model, comparing some results with measurements, and celebrating some nice agreement.
+(I have seen too many of those papers.)
+The point of scientific research is not to demonstrate some agreement, but to learn something new.
+For that, a model can be a powerful tool, but the crucial ingredient is to utilize such a tool in an intelligent way.</p>
+</div>
+<hr>
+<p style="font-size:90%; margin-bottom:10px;">This article is a posting of the <a href="spotlight.html">Photonics Spotlight</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page and cite it, because its location is permanent.
+See also the <a href="encyclopedia.html">RP Photonics Encyclopedia</a>.</p>
+<p>Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="https://www.rp-photonics.com/spotlight.rss">RSS feed</a>.</p>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="spotlight_2009_08_22.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/spotlight_2009_08_22.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2009_08_22.html&text=The+Photonics+Spotlight+-+Jitter+and+Phase+Noise+of+Mode-locked+Fiber+Lasers" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2009_08_22.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2009_08_22.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2009_08_22.html"&gt;<br>Article on The Photonics Spotlight - Jitter and Phase Noise of Mode-locked Fiber Lasers&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2009_08_22.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/spotlight_2009_08_22.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Paschotta</a>, RP Photonics Consulting GmbH. All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./marketing_contact.html">contact</a>, <a href="./privacy.html">data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Website Tours</h2>
+<p>You can explore our website with the following tours:</p>
+<ul>
+<li><a href="./encyclopedia.html?tour=Encyclopedia">The RP Photonics Encyclopedia</a></li>
+<li><a href="./encyclopedia.html?tour=New_Encyclopedia_Articles">The latest encyclopedia articles</a></li>
+<li><a href="./buyersguide.html?tour=Using_the_Buyers_Guide">Using the Buyer's Guide</a></li>
+<li><a href="./buyersguide.html?tour=Advertising_in_the_Buyers_Guide">Advertising in the Buyer's Guide</a></li>
+</ul>
+<img src="./img/tour_bus.png" style="width:90%; margin:15px 0;" alt="&nbsp;">
+<p>You will be lead through a couple of pages, obtaining explanations on every one.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="9A/nLwIkiRLFXKu43IEU9A==">shownbanner = "tours";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Company News</h2>
+<p>Suppliers having an <a href="./bg_entries.html?banner=company_news">ad package</a> in the <a href="./buyersguide.html?banner=company_news">RP Photonics Buyer&#39;s Guide</a> can publish their <a href="./company_news.html?banner=company_news">company news</a>. For example, they may announce mergers and acquisitions, new product lines, or new cooperrations with distributors.</p>
+<p>Currently we have news from the following companies:</p>
+<ul>
+<li><a href="./bg/profiles/laser_quantum
+.html">Laser Quantum
+</a>: High power in a compact platform at key wavelengths
+</li>
+</ul>
+
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="9A/nLwIkiRLFXKu43IEU9A==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/spotlight_2009_08_22.html"
+    },
+    "headline": "Jitter and Phase Noise of Mode-locked Fiber Lasers",
+    "image": "https://www.rp-photonics.com/previews/spotlight_2009_08_22.png",
+    "datePublished": "2009-08-22",
+    "description": "A new paper on the timing jitter and phase noise of wavebreaking-free fiber lasers has appeared (in an open-access journal). RP Photonics has been involved in this research. A lot of interesting results have been obtained.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "The Photonics Spotlight",
+      "item": "https://www.rp-photonics.com/spotlight.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "2009-08-22",
+      "item": "https://www.rp-photonics.com/spotlight_2009_08_22.html"
+    }]}
+}
+</script>
+</body>
+</html>

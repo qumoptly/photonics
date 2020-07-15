@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-uz2gP8O4K2hQ9A18N/HMpQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>The Photonics Spotlight - Frequency Doubling and the Reverse Process</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/spotlight_2013_08_26.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2013-08-26">
+<meta name="description" content="We consider frequency doubling and the reserve process: degenerate parametric oscillation. It turns out that a degenerate OPO is not exactly doing the time-reserved process of frequency doubling. Therefore, it is not surprising that it has a threshold, while the frequency doubler does not. We also consider back-conversion in frequency doublers, which can occur not only due to imperfect phase matching.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="photonics, spotlight, news, publications, blog, RSS feed, encyclopedia, laser physics, technology">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Photonics Spotlight - Frequency Doubling and the Reverse Process">
+<meta property="og:description" content="We consider frequency doubling and the reserve process: degenerate parametric oscillation. It turns out that a degenerate OPO is not exactly doing the time-reserved process of frequency doubling. Therefore, it is not surprising that it has a threshold, while the frequency doubler does not. We also consider back-conversion in frequency doublers, which can occur not only due to imperfect phase matching.">
+<meta property="og:url" content="https://www.rp-photonics.com/spotlight_2013_08_26.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/spotlight_2013_08_26.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="We consider frequency doubling and the reserve process: degenerate parametric oscillation. It turns out that a degenerate OPO is not exactly doing the time-reserved process of frequency doubling. Therefore, it is not surprising that it has a threshold, while the frequency doubler does not. We also consider back-conversion in frequency doublers, which can occur not only due to imperfect phase matching.">
+<meta name="twitter:title" content="The Photonics Spotlight - Frequency Doubling and the Reverse Process">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/spotlight_2013_08_26.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="uz2gP8O4K2hQ9A18N/HMpQ==">
+page="spotlight_2013_08_26.html"; cat="P"; shownbanner=""; ref="http://www.rp-photonics.com/spotlight.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo sponsor"></a> <a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="uz2gP8O4K2hQ9A18N/HMpQ==">shownsponsors="Knight Optical,RPMC Lasers"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight" class="selected"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="spotlight.html">The Photonics Spotlight</a> &gt; <a href="spotlight_2013_08_26.html">2013-08-26</a></p>
+<h1 class="posting">Frequency Doubling and the Reverse Process</h1>
+<div class="posting_details">
+<p>Posted on 2013-08-26 as a part of the <a href="spotlight.html">Photonics Spotlight (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="spotlight_2013_08_26.html" class="url">https://www.rp-photonics.com/spotlight_2013_08_26.html</a></p>
+<p>Author: <a href="https://www.rp-photonics.com/paschotta.html" rel="author">Dr. Rüdiger Paschotta</a>, <a href="https://www.rp-photonics.com/">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: We consider frequency doubling and the reserve process: degenerate parametric oscillation. It turns out that a degenerate OPO is not exactly doing the time-reserved process of frequency doubling. Therefore, it is not surprising that it has a threshold, while the frequency doubler does not. We also consider back-conversion in frequency doublers, which can occur not only due to imperfect phase matching.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p>Years ago, in a Ph. D. viva I heard the following interesting question:</p>
+<p>A degenerate <a href="optical_parametric_oscillators.html" title="coherent light sources based on parametric amplification within an optical resonator">optical parametric oscillator</a> (OPO) converts green light at 532&nbsp;nm, for example, into infrared light at 1064&nbsp;nm.
+This is just the opposite of what a <a href="frequency_doubling.html" title="the phenomenon that an input wave in a nonlinear material can generate a wave with twice the optical frequency">frequency doubler</a>, pumped with a 1064-nm laser, does.
+How can it be that the OPO works only above a certain threshold power, whereas the frequency doubler has no threshold?
+After all, isn't one process just the time-reserved version of the other process?</p>
+<p>The Ph. D. candidate who got that question was taken by surprise.
+A colleague of him, who was a listener on that day and had his viva a few weeks later, then got the same question and failed as well.
+I wondered whether the professor asking the question actually knew the answer himself!</p>
+<p>Anyway, the answer is not that difficult to find, although one may easily miss one detail and therefore require some time.
+Consider what exactly is the time-reserved process of frequency doubling.
+The frequency doubler has an input at 1064&nbsp;nm and only <em>partially</em> converts that to 532&nbsp;nm; some of the 1064-nm light exits the crystal unconverted.
+So the time-reversed process requires <em>two</em> inputs: one at 532&nbsp;nm, but also one at 1064&nbsp;nm!
+If you really do that properly, you can convert all the light back to 1064&nbsp;nm &ndash; not only above some threshold.</p>
+<p>Here, another interesting question arises.
+How can the crystal &ldquo;know&rdquo; whether it is supposed to transfer optical power from the fundamental to the harmonic wave, or vice versa?
+If you heard rumors that it is the relative phase between the two beams, you may (or should!) wonder how one can compare phases of beams with different <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequencies</a> &ndash; doesn't that phase difference change substantially within attoseconds!?
+Well, we have to look at the physics occurring in the <a href="nonlinear_crystal_materials.html" title="crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal</a>.
+The fundamental wave generates a <a href="nonlinear_polarization.html" title="the part of the light-induced electric polarization which depends nonlinearly on the electric field of the light">nonlinear polarization</a> wave, having twice the optical frequency &ndash; i.e., the frequency of the harmonic wave.
+That polarization wave now interacts with the existing harmonic wave, and the relative phase between these two is what determines the direction of power transfer.
+How, the phase of the nonlinear polarization at the second harmonic is <em>twice</em> the phase of the fundamental wave.
+The relevant phase difference is thus <em>not</em> that between fundamental and harmonic, but rather <em>twice</em> the fundamental phase minus the harmonic phase.</p>
+<p>That relative phase is also affected by the <a href="phase_matching.html" title="a group of techniques for achieving efficient nonlinear interactions in a medium">phase mismatch</a>.
+So if we don't have proper <a href="phase_matching.html" title="a group of techniques for achieving efficient nonlinear interactions in a medium">phase matching</a> of our process, the relative phase changes such that after some short distance the direction of energy transfer is reversed.
+That's why phase matching is essential for efficient nonlinear power conversion.</p>
+<p>Even with perfect phase matching, a frequency doubler can run into back-conversion when operated at too high intensities: if the fundamental wave is fully depleted at some point, back-conversion will take place after that point.
+Note that for a <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beam</a> profile, for example, that will occur before the conversion of the wings of the beam profile is complete.
+For that reason, 90&#37; conversion is not possible with Gaussian beams &ndash; at least in a single pass.
+With <a href="resonant_frequency_doubling.html" title="frequency doubling with a nonlinear crystal placed in a resonant enhancement cavity">resonant frequency doubling</a>, such a limit wouldn't apply; here, the single-pass conversion doesn't need to be high for complete overall conversion.</p>
+<hr>
+<p style="font-size:90%; margin-bottom:10px;">This article is a posting of the <a href="spotlight.html">Photonics Spotlight</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page and cite it, because its location is permanent.
+See also the <a href="encyclopedia.html">RP Photonics Encyclopedia</a>.</p>
+<p>Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="https://www.rp-photonics.com/spotlight.rss">RSS feed</a>.</p>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="spotlight_2013_08_26.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/spotlight_2013_08_26.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2013_08_26.html&text=The+Photonics+Spotlight+-+Frequency+Doubling+and+the+Reverse+Process" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2013_08_26.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2013_08_26.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2013_08_26.html"&gt;<br>Article on The Photonics Spotlight - Frequency Doubling and the Reverse Process&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2013_08_26.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/spotlight_2013_08_26.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Paschotta</a>, RP Photonics Consulting GmbH. All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./marketing_contact.html">contact</a>, <a href="./privacy.html">data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Thin-film Optics Software</h2>
+<p><a href="./coating.html?banner=RP_Coating">RP Coating</a> is a most versatile software for thin-film design.
+Analyze and optimize a wide range of devices:</p>
+<ul>
+<li>dielectric mirrors, including <a href="./coating_demo_dichroic.html?banner=RP_Coating">dichroic</a> and <a href="./coating_demo_gti.html?banner=RP_Coating">dispersive mirrors</a></li>
+<li><a href="./coating_demo_ar.html?banner=RP_Coating">AR coatings</a></li>
+<li>filters (including <a href="./coating_demo_rugate.html?banner=RP_Coating">rugate filters</a>)</li>
+<li><a href="./coating_demo_polarizer.html?banner=RP_Coating">thin-film polarizers</a></li>
+<li>VECSELs</li>
+</ul>
+<p style="text-align:center;"><a href="./coating.html?banner=RP_Coating"><img src="./img/rp_coating_220.png" alt="coating design"></a></p>
+<p>Further features:</p>
+<ul>
+<li>extreme flexibility due to <a href="./software_script_language.html?banner=RP_Coating">scripting</a>: arbitrary parametrization e.g. of chirped layer structures, definition of arbitrary figure of merits for numerical optimization, generation of arbitrary plots</li>
+<li>comprehensive documentation (PDF and online)</li>
+<li>competent <a href="./software_support.html?banner=RP_Coating">technical support</a></li>
+</ul>
+<p>Use <a href="./coating.html?banner=RP_Coating"><b>RP Coating</b></a> to quickly become a thin-film expert!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="uz2gP8O4K2hQ9A18N/HMpQ==">shownbanner = "RP Coating";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Field Guide on Laser Pulse Generation</h2>
+<p>Learn a lot on pulse generation with lasers:</p>
+<ul>
+<li>basic on optical pulses</li>
+<li>Q switching</li>
+<li>cavity dumping</li>
+<li>gain switching</li>
+<li>mode locking</li>
+<li>amplification of ultrashort pulses</li>
+<li>pulse characterization</li>
+</ul>
+<p style="text-align:center;"><a href="http://spie.org/x648.xml?product_id=800629"><img src="./img/fg_laser_pulses.png" alt="FG Laser Pulse Generation"></a></p>
+<p>Enjoy a compact booklet, authored by a top expert on laser pulses.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="uz2gP8O4K2hQ9A18N/HMpQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/spotlight_2013_08_26.html"
+    },
+    "headline": "Frequency Doubling and the Reverse Process",
+    "image": "https://www.rp-photonics.com/previews/spotlight_2013_08_26.png",
+    "datePublished": "2013-08-26",
+    "description": "We consider frequency doubling and the reserve process: degenerate parametric oscillation. It turns out that a degenerate OPO is not exactly doing the time-reserved process of frequency doubling. Therefore, it is not surprising that it has a threshold, while the frequency doubler does not. We also consider back-conversion in frequency doublers, which can occur not only due to imperfect phase matching.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "The Photonics Spotlight",
+      "item": "https://www.rp-photonics.com/spotlight.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "2013-08-26",
+      "item": "https://www.rp-photonics.com/spotlight_2013_08_26.html"
+    }]}
+}
+</script>
+</body>
+</html>

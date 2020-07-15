@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-3C5H0ex1FjL1+R08Z8FkkA=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - polarization mode dispersion, PMD, differential group delay</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/polarization_mode_dispersion.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-07-10">
+<meta name="description" content="Polarization mode dispersion is the polarization dependence of the propagation characteristics of light waves in optical fibers. It can result from random birefringence and then needs to be described with statistical methods.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="polarization mode dispersion, PMD, differential group delay">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Polarization Mode Dispersion">
+<meta property="og:description" content="Polarization mode dispersion is the polarization dependence of the propagation characteristics of light waves in optical fibers. It can result from random birefringence and then needs to be described with statistical methods.">
+<meta property="og:url" content="https://www.rp-photonics.com/polarization_mode_dispersion.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/polarization_mode_dispersion.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Polarization mode dispersion is the polarization dependence of the propagation characteristics of light waves in optical fibers. It can result from random birefringence and then needs to be described with statistical methods.">
+<meta name="twitter:title" content="Polarization Mode Dispersion">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/polarization_mode_dispersion.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="3C5H0ex1FjL1+R08Z8FkkA==">
+page="polarization_mode_dispersion.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo sponsor"></a> <a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="3C5H0ex1FjL1+R08Z8FkkA==">shownsponsors="DataRay,RPMC Lasers"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_p.html">letter P</a> &gt; <a href="polarization_mode_dispersion.html">polarization mode dispersion</a></p>
+<h1>Polarization Mode Dispersion</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_polarization_mode_dispersion_measurement_and_compensation_equipment.html?s=vbox">4 suppliers for polarization mode dispersion measurement and compensation equipment</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_polarization_mode_dispersion_measurement_and_compensation_equipment.html?s=vbox">List of suppliers for<br>polarization mode dispersion measurement and compensation equipment</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p>Acronym: PMD</p>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: the polarization dependence of the propagation characteristics of light waves in optical fibers</p>
+<p>More general term: <a href="dispersion.html" title="the dependence of the phase velocity in a medium on the optical frequency or the propagation mode">dispersion</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Polarisations-Dispersion</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#fiber_optics_and_waveguides" title="other articles on fiber optics and waveguides">fiber optics and waveguides</a>, <a href="categories.html#lightwave_communications" title="other articles on lightwave communications">lightwave communications</a></p>
+<p><a href="encyclopedia_cite.html?article=polarization%20mode%20dispersion">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>In optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>, there is usually some slight difference in the propagation characteristics of light waves with different polarization states.
+A <em>differential group delay</em> can occur even for fibers which according to the design should have a rotational symmetry and thus exhibit no <a href="birefringence.html" title="the polarization dependence of the refractive index of a medium">birefringence</a>.
+This effect can result from random imperfections or bending of the fibers, or from other kinds of mechanical stress, and is also affected by temperature changes.
+Mainly due to the influence of bending, the PMD of a cabled fiber can be completely different from that of the same fiber on a spool.
+Modern <a href="fiber_cables.html" title="cables containing one or several optical fibers">fiber cables</a> as used in <a href="fiber_optic_links.html" title="optical communication links where the signal light is transported in fibers">fiber-optic links</a> have been optimized for low PMD, but the handling of such cables can still have some influence.</p>
+<p>The terms <em>polarization mode dispersion</em> (PMD) and <em>differential group delay</em> (DGD) are often used interchangeably, but sometimes with slightly different meanings.
+Some authors call the phenomenon PMD and consider DGD to be its magnitude.
+Others define PMD as the statistical standard deviation of DGD in some wavelength interval.
+Note that for optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a> the DGD can have a substantial and complicated dependence on the optical wavelength.</p>
+<p>Some authors use the term <em>second-order PMD</em> for the derivative of the differential group delay with respect to angular frequency [2] &ndash; although there is actually no second-order derivative involved.</p>
+<h2 class="togglediv">Detrimental Effects in Communication Systems</h2>
+<div>
+<p>Polarization mode dispersion can have adverse effects on <a href="optical_data_transmission.html" title="the transmission of information using light beams, e.g. in fibers">optical data transmission</a> in <a href="fiber_optic_links.html" title="optical communication links where the signal light is transported in fibers">fiber-optic links</a> over long distances at very high data rates, because portions of the transmitted signals in different polarization modes will arrive at slightly different times.
+Effectively, this can cause some level of <a href="pulses.html" title="flashes of light">pulse</a> broadening, leading to inter-symbol interference, and thus a degradation of the received signal, leading to an increased <a href="bit_error_rate.html" title="average fraction of wrongly transmitted bits in a communication link">bit error rate</a>.</p>
+<p>In principle, one could determine the so-called <em>principle polarization states</em> of a fiber span, and inject the optical signals only into one such state.
+For a sufficiently narrow optical bandwidth, there would then be no pulse broadening, although for larger bandwidths there is a polarization-related contribution to <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> (with its sign being different for the two principle states).
+However, this method is usually not practical, partly because the principle polarization states change with time.</p>
+<p>Effects of polarization mode dispersion often need to be described statistically, concerning not only random temporal changes but also the dependence on the fiber length.
+For short fiber sections, the DGD is proportional to the fiber length.
+For longer sections, different portions of fiber contribute uncorrelated amounts of DGD, and the total r.m.s. value of the differential <a href="group_delay.html" title="a measure of the time delay experienced by narrow-band light pulses in an optical device">group delay</a> scales only with the square root of the fiber length.</p>
+</div>
+<h2 class="togglediv">Reducing the Effects of PMD</h2>
+<div>
+<h3 class="togglediv">Optimized Fibers</h3>
+<div>
+<p>The first measure for reducing PMD is to choose an optical fiber with reduced PMD.
+Modern <a href="telecom_fibers.html" title="optical fibers for use in optical fiber communications">telecom fibers</a> have fairly stringent PMD specifications, but fibers laid in the early 1990s often exhibit much stronger PMD, which is often not even specified.</p>
+<p>In principle, the problem could be solved by using well-defined polarization states in <a href="polarization_maintaining_fibers.html" title="specialty optical fibers with strong built-in birefringence, preserving the properly oriented linear polarization of an input beam">polarization-maintaining fibers</a>, but this approach is usually not practical for various reasons: it would not only be necessary to use the more expensive and more lossy polarization-maintaining fibers for all components (including e.g. <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifiers</a>), but also the polarization directions would have to be aligned at many interfaces.</p>
+</div>
+<h3 class="togglediv">PMD Compensation</h3>
+<div>
+<p>For achieving the highest possible bit rates, particularly with older fibers and in long <a href="fiber_optic_links.html" title="optical communication links where the signal light is transported in fibers">fiber-optic links</a>, it can be necessary to compensate the polarization mode dispersion.
+There are devices for introducing an adjustable amount of PMD in order to compensate PMD of a fiber-optic link.
+Essentially, such a device may contain</p>
+<ul>
+<li>a <a href="fiber_polarization_controllers.html" title="devices which allow one to control the state of polarization of light within fibers">fiber polarization controller</a>, followed by</li>
+<li>a <a href="polarizers.html" title="optical filters where the light transmission depends strongly on the direction of polarization">polarizer</a> and a variable <a href="optical_delay_lines.html" title="an optical setup which is used to introduce a time delay for a light beam">optical delay line</a> which is applied only to light of one polarization direction, and</li>
+<li>another polarizer acting as a beam combiner.</li>
+</ul>
+<p>By adjusting the delay line, one can minimize the overall PMD.</p>
+<p>Note that temperature changes can make the PMD effect time-dependent; for highest data rates, it may therefore be necessary to apply an automatic feedback system.
+If the system has multiple wavelength channels (&rarr;&nbsp;<a href="wavelength_division_multiplexing.html" title="a multiplexing technique working in the wavelength domain"><em>wavelength division multiplexing</em></a>), the compensation may have to be done separately for each channel, because the effect is wavelength dependent.</p>
+</div>
+<h3 class="togglediv">Minimizing the Sensitivity to PMD</h3>
+<div>
+<p>Another strategy can be to limit the capacity of each transmission channel, but using many different channels in a single fiber, e.g. with the technique of <a href="wavelength_division_multiplexing.html" title="a multiplexing technique working in the wavelength domain">wavelength division multiplexing</a>.</p>
+<p>There are also advanced modulation schemes with reduced symbol rate (for a given bit rate), which are less sensitive to PMD.</p>
+</div>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_polarization_mode_dispersion_measurement_and_compensation_equipment.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 4 suppliers for polarization mode dispersion measurement and compensation equipment.</p>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="polarization_mode_dispersion.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">N. Gisin <i>et al.</i>, &ldquo;Polarization mode dispersion of short and long single-mode fibers&rdquo;, IEEE J. Lightwave Technol. 9 (7), 821 (1991), <a href="https://doi.org/10.1109/50.85780">doi:10.1109/50.85780</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">H. Kogelnik <i>et al.</i>, &ldquo;Jones matrix for second-order polarization mode dispersion&rdquo;, Opt. Lett. 25 (1), 19 (2000), <a href="https://doi.org/10.1364/OL.25.000019">doi:10.1364/OL.25.000019</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">P. Williams, &ldquo;PMD measurement techniques and how to avoid the pitfalls&rdquo;, J. Opt. Fiber Commun. Rep. 1, 84 (2004), <a href="https://doi.org/10.1007/s10297-004-0010-4">doi:10.1007/s10297-004-0010-4</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">J. P. Gordon, &ldquo;Statistical properties of polarization mode dispersion&rdquo;, J. Opt. Fiber Commun. Rep. 1, 210&ndash;217 (2004), <a href="https://doi.org/10.1007/s10297-004-0003-3">doi:10.1007/s10297-004-0003-3</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">D. A. Nolan <i>et al.</i>, &ldquo;Fibers with low polarization-mode dispersion&rdquo;, J. Lightwave Technol. 22 (4), 1066 (2004), <a href="https://doi.org/10.1109/JLT.2004.825240">doi:10.1109/JLT.2004.825240</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">A. Mecozzi, &ldquo;Theory of polarization mode dispersion with linear birefringence&rdquo;, Opt. Lett. 33 (12), 1315 (2008), <a href="https://doi.org/10.1364/OL.33.001315">doi:10.1364/OL.33.001315</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">ITU standard G.666 (07/05), &ldquo;Characteristics of PMD compensators and PMD compensating receivers&rdquo;, <a href="https://www.itu.int/rec/T-REC-G.666-200507-S/_page.print">International Telecommunication Union (2005)</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>, <a href="fiber_optic_links.html" title="optical communication links where the signal light is transported in fibers">fiber-optic links</a>, <a href="polarization_maintaining_fibers.html" title="specialty optical fibers with strong built-in birefringence, preserving the properly oriented linear polarization of an input beam">polarization-maintaining fibers</a>, <a href="birefringence.html" title="the polarization dependence of the refractive index of a medium">birefringence</a><br>and other articles in the categories <a href="categories.html#fiber_optics_and_waveguides" title="other articles on fiber optics and waveguides">fiber optics and waveguides</a>, <a href="categories.html#lightwave_communications" title="other articles on lightwave communications">lightwave communications</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/polarization_mode_dispersion.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fpolarization_mode_dispersion.html&text=RP+Photonics+Encyclopedia+-+polarization+mode+dispersion%2C+PMD%2C+differential+group+delay" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fpolarization_mode_dispersion.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fpolarization_mode_dispersion.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/polarization_mode_dispersion.html"&gt;<br>Article on Polarization Mode Dispersion&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/polarization_mode_dispersion.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/polarization_mode_dispersion.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/polarization_mode_dispersion.html<br>article on 'Polarization Mode Dispersion' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Now is the Time for Training!</h2>
+<p>When your lab is closed, how to best utilize your time? With training, of course.</p>
+<p>Some suggestions:</p>
+<ul>
+<li>Use the RP Photonics website, reading <a href="./encyclopedia.html?banner=video_training">encyclopedia</a> articles, <a href="./tutorials.html?banner=video_training">tutorials</a>, <a href="./spotlight.html?banner=video_training">Photonics Spotlight</a> articles, etc. &ndash; all for free.</li>
+<li>Get a <a href="./training.html?banner=video_training">tailored training course</a> delivered through the internet &ndash; with every participant connected from home!</li>
+<li>Start with <a href="./software_modeling.html?banner=video_training">physical modeling</a> in order to fully understand your systems and devices, optimize performance, create new ideas&hellip;</li>
+</ul>
+<img src="./img/rp_photonics.png" alt="RP Photonics" style="margin-top:20px; width:225px;">
+<p>offers <a href="./training.html?banner=video_training">tailored training courses</a> and powerful <a href="./software.html?banner=video_training">simulation &amp; design software</a>, e.g. for <a href="./fiberpower.html?banner=video_training">active and passive fiber devices</a>, <a href="./resonator.html?banner=video_training">laser resonators</a> and <a href="./coating.html?banner=video_training">thin-film coatings</a>!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="3C5H0ex1FjL1+R08Z8FkkA==">shownbanner = "video training";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Transparent Laser</h2>
+<p>The dream of each laser developer, and not only of each laser scientist: have a <b>transparent laser</b>, where you can <b>look into any components</b> and see e.g.</p>
+<ul>
+<li>optical intensities</li>
+<li>excitation densities of laser-active ions</li>
+</ul>
+<p>&hellip; and this at any location and time, with arbitrary resolution!</p>
+<p>If you had this, finally you could</p>
+<ul>
+<li>fully understand what goes on in your laser,</li>
+<li>quickly identify and fix any problems, and</li>
+<li><span style="font-weight:bold; color:#B20B28;">make faster progress <br> while saving a lot of money.</span></li>
+</ul>
+<p>Absolutely marvelous, but only a dream?!?</p>
+<p>Good news: such transparent lasers can be made!
+See our presentation:</p>
+<a href="./transparent_laser.html?banner=transparent_laser"><img src="./img/transparent_laser.png" width="234" height="162" alt="presentation"></a>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="3C5H0ex1FjL1+R08Z8FkkA==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/polarization_mode_dispersion.html"
+    },
+    "headline": "Polarization Mode Dispersion",
+    "image": "https://www.rp-photonics.com/previews/polarization_mode_dispersion.png",
+    "datePublished": "2008-09-16",
+    "dateModified": "2020-07-10",
+    "description": "Polarization mode dispersion is the polarization dependence of the propagation characteristics of light waves in optical fibers. It can result from random birefringence and then needs to be described with statistical methods.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter P",
+      "item": "https://www.rp-photonics.com/encyclopedia_p.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "polarization mode dispersion",
+      "item": "https://www.rp-photonics.com/polarization_mode_dispersion.html"
+    }]}
+}
+</script>
+</body>
+</html>

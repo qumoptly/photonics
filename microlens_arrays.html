@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-JHiJS0Ed5vgobxmtQuDJPg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - microlens arrays, fabrication, parameters, applications</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/microlens_arrays.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-07-11">
+<meta name="description" content="Microlens arrays are one- or two-dimensional arrays of microlenses, which have applications in laser beam collimators, beam homogenizers, wavefront sensors and image sensors.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="microlens arrays, fabrication, parameters, applications">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Microlens Arrays">
+<meta property="og:description" content="Microlens arrays are one- or two-dimensional arrays of microlenses, which have applications in laser beam collimators, beam homogenizers, wavefront sensors and image sensors.">
+<meta property="og:url" content="https://www.rp-photonics.com/microlens_arrays.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/microlens_arrays.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Microlens arrays are one- or two-dimensional arrays of microlenses, which have applications in laser beam collimators, beam homogenizers, wavefront sensors and image sensors.">
+<meta name="twitter:title" content="Microlens Arrays">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/microlens_arrays.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="JHiJS0Ed5vgobxmtQuDJPg==">
+page="microlens_arrays.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="JHiJS0Ed5vgobxmtQuDJPg==">shownsponsors="eagleyard Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_microlens_arrays.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_m.html">letter M</a> &gt; <a href="microlens_arrays.html">microlens arrays</a></p>
+<h1>Microlens Arrays</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_microlens_arrays.html?s=vbox">17 suppliers for microlens arrays</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.nilt.com/optical-applications/microlens-arrays/" data-supplier="NIL Technology" data-location="product-enc" data-keyword="microlens arrays" rel="nofollow" class="bg externallink"><img src="./bg/logos/nil_technology.png" alt="NIL Technology" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.shanghai-optics.com/components/micro-optics/microlens/" data-supplier="Shanghai Optics" data-location="product-enc" data-keyword="microlens arrays" rel="nofollow" class="bg externallink"><img src="./bg/logos/shanghai_optics.png" alt="Shanghai Optics" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_microlens_arrays.html?s=vbox">List of suppliers for<br>microlens arrays</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: one- or two-dimensional arrays of microlenses, used e.g. in Shack-Hartmann wavefront sensors</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Mikrolinsen-Arrays</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a></p>
+<p><a href="encyclopedia_cite.html?article=microlens%20arrays">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Microlens arrays (or <em>micro-lens arrays</em>) are one- or two-dimensional arrays of <a href="microlenses.html" title="optical lenses of particularly small diameter, e.g. below 1 mm">microlenses</a>, i.e., rather small <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lenses</a> (<em>lenslets</em>).
+In most cases, the lenslets form a periodic pattern either of square or hexagonal type, where the lens pitch is a few hundred micrometers, some tens of micrometers or even less.</p>
+<figure class="right" style="width:166px;">
+<img src="img/collimating_lens_array.png" alt="collimating lens array">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Collimation of the output of a <a href="vcsel_arrays.html" title="arrays containing many VCSEL laser emitters">VCSEL array</a>.
+</figcaption>
+</figure>
+<p>The outer transverse shape is usually a square (e.g. 10&nbsp;mm &times; 10&nbsp;mm), or possibly a rectangle or circle.
+The number of microlenses can be thousands, possibly many thousands or even millions.</p>
+<p>Microlens arrays are available as separate optical components.
+Some of them are provided in mounted form, i.e., surrounded by some mental or polymer part which fits into standard optical mounts.
+The lenses are often equipped with <a href="anti_reflection_coatings.html" title="optical thin-film coatings for reducing reflections from surfaces">anti-reflection coatings</a> on both sides.
+Sometimes, the lenses are realized as a thin transparent structured layer contacted to a flat homogeneous glass or semiconductor substrate.</p>
+<p>There are also microlens arrays which are part of a larger assembly.
+For example, some CCD and CMOS <a href="image_sensors.html" title="optoelectronic sensors which can be used for imaging">image sensors</a> contain one microlens per <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a> for increasing the light collection efficiency: all incident light should be concentrated to the active areas, which cover only part of the chip area.</p>
+<h2 class="togglediv">Important Parameters of the Microlens Arrays</h2>
+<div>
+<p>Such arrays can differ in a number of respects:</p>
+<ul>
+<li>The lenses are usually of circular type, but there are also arrays with <a href="cylindrical_lenses.html" title="lenses which focus or defocus light only in one direction">cylindrical lenses</a>.
+Note that even lenses focusing in both directions can have a square geometrical shape.</li>
+<li>They may be optimized for different spectral ranges, for example for visible light and/or parts of the near <a href="infrared_light.html" title="invisible light with wavelengths roughly between 750&thinsp;&thinsp;nm and 1&thinsp;&thinsp;mm">infrared</a>.
+This affects the choice of <a href="optical_materials.html" title="materials used for optical components">optical material</a> and the anti-reflection coatings.</li>
+<li>Different values of the <em>lens pitch</em> are available &ndash; from a few micrometers (only a few times an optical <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>!) to hundreds of micrometers.
+A high accuracy of the lens positions is vital for some applications.</li>
+<li>In many cases, a large <em>fill factor</em> is desirable; this is the ratio of the total area of usable lens apertures to the total area of the array.
+Example, for a square array of circular lenses without any space between those, the fill factor would be <span class="eqn_il"><span class="greek">&pi;</span>/4</span> &approx; 78.5&#37;.
+Hexagonal arrays can reach a higher fill factor, but are not usable for all applications.</li>
+<li>Each lens is characterized by its diameter and <a href="focal_length.html" title="a measure of how strongly an optical system focuses or defocuses light"><em>focal length</em></a>.
+The homogeneity of the focal length over the full device area can be important.
+For <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a> applications, the amount of <a href="optical_aberrations.html" title="degradations of optical images caused in imaging instruments"><em>optical aberrations</em></a> can also be relevant.
+In some cases, one uses <a href="aspheric_optics.html" title="optical elements with non-spherical surfaces">aspheric lenses</a> (e.g. made with reactive ion etching) for minimizing aberrations.</li>
+<li>The <em>light throughput</em> is limited by the fill factor and possibly by non-perfect <a href="transmissivity.html" title="the ratio of transmitted optical power to the incident optical power at a surface">transmissivity</a> of the lenses due to parasitic <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorption</a> and/or reflections.</li>
+</ul>
+</div>
+<h2 class="togglediv">Fabrication of Microlens Arrays</h2>
+<div>
+<p>Lens arrays are usually produced with a micro-fabrication method which forms all microlenses in a single production step.
+For example, one may employ a photolithographic method, where the lens pattern is defined by a photolithographic mask, which can be of grayscale or binary type.
+(Partially, one uses techniques which are common in semiconductor processing technology, and are called <em>wafer level optics</em>.)
+Particularly in the area of <a href="plastic_optics.html" title="optical elements made of organic polymer materials">plastic optics</a>, one applies mechanical techniques such as molding, e.g. of epoxy materials.</p>
+<p>In some cases, the phenomenon of surface tension is used for obtaining smooth and repeatable lens surface shapes.
+The resulting surface is then generally non-spherical, and not necessarily ideal with respect to <a href="optical_aberrations.html" title="degradations of optical images caused in imaging instruments">optical aberrations</a>.</p>
+<p>One can also apply methods of laser material processing, forming only one lenslet at a time or possibly some number of them, using multiple processing beams.
+Such methods provide substantial versatility and flexibility, but are generally slow and expensive.</p>
+<p>Different <a href="optical_materials.html" title="materials used for optical components">optical materials</a> can be used, such as fused silica, various other glasses or <a href="plastic_optics.html" title="optical elements made of organic polymer materials">plastics</a> (polymer materials).
+The choice of material must fit to the chosen production technique, but also has effects on various device properties, e.g. the usable spectral range and the mechanical and thermal stability.</p>
+</div>
+<h2 class="togglediv">Application of Microlens Arrays</h2>
+<div>
+<p>Microlens arrays find applications in several areas of modern <a href="optics.html" title="the science and technology dealing with the properties and the propagation of light">optics</a> and optical products:</p>
+<ul>
+<li>A linear cylindrical lens array can <a href="collimated_beams.html" title="laser beams with weak divergence">collimate</a> the radiation from all emitters of a <a href="diode_bars.html" title="a type of semiconductor laser containing a one-dimensional array of broad-area emitters">diode bar</a> (diode array), typically in the fast axis direction (FAC = fast axis collimator).
+Similarly, the output of a two-dimensional <a href="vcsel_arrays.html" title="arrays containing many VCSEL laser emitters">VCSEL array</a> (see Figure&nbsp;1) can be collimated with a 2D spherical lens array.
+In <a href="integrated_optics.html" title="the technology dealing with the construction of photonic integrated circuits">integrated optics</a>, lens arrays can be used to collimate the output of arrays of <a href="waveguides.html" title="spatially inhomogeneous transparent structures for guiding light">waveguides</a>.</li>
+</ul>
+<figure class="right" style="width:386px;">
+<img src="img/shack_hartmann_sensor.png" alt="Shack-Hartmann wavefront sensor">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+<a href="shack_hartmann_wavefront_sensors.html" title="wavefront sensors which are based on a microlens array">Shack&ndash;Hartmann wavefront sensor</a>, containing a microlenses array.
+</figcaption>
+</figure>
+<ul>
+<li>In a <a href="shack_hartmann_wavefront_sensors.html" title="wavefront sensors which are based on a microlens array">Shack&ndash;Hartmann wavefront sensor</a> (see Figure&nbsp;2), a microlens array is used to probe the wavefront orientation at many points across an area, e.g. the cross section of a <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a>.
+Such sensors are widely used in adaptive optics.</li>
+<li>Some kinds of <a href="beam_homogenizers.html" title="devices for producing beam profiles with homogeneous intensity distribution">beam homogenizers</a> (optical <a href="diffusers.html" title="devices which scatter light such that its spatial coherence is substantially reduced">diffusers</a>) contain a microlens array.</li>
+<li>There are CCD and CMOS <a href="image_sensors.html" title="optoelectronic sensors which can be used for imaging">image sensors</a> where each photodetector is equipped with a microlens for increasing the light collection efficiency.
+As such lenses do not perform an imaging function, their <a href="optical_aberrations.html" title="degradations of optical images caused in imaging instruments">optical aberrations</a> are not relevant.</li>
+<li>There are also <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a> devices based on microlenses, used e.g. for photocopiers and <a href="photo_cameras.html" title="optical instruments for taking photographic images">photo cameras</a> for smartphones.
+Also, one can make <em>lightfield cameras</em>.</li>
+<li>Lens arrays can be used for generating reference beams in the interferometric characterization of large lenses.</li>
+</ul>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_microlens_arrays.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 17 suppliers for microlens arrays. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.nilt.com/" data-supplier="NIL Technology" data-location="product-enc" data-keyword="microlens arrays" rel="nofollow" class="bg externallink" title="Visit the website of NIL Technology"><img src="./bg/logos/nil_technology.png" alt="NIL Technology" class="supplierlogo"></a><a href="https://www.nilt.com/optical-applications/microlens-arrays/" data-supplier="NIL Technology" data-location="product-enc" data-keyword="microlens arrays" rel="nofollow" class="bg externallink" title="Visit the website of NIL Technology"><img src="./bg/products/nil_technology/microlens_arrays.jpg" alt="microlens arrays" class="product"></a><h3><a href="./bg/profiles/nil_technology.html" title="See the profile of NIL Technology">NIL Technology</a></h3><p>NIL Technology provides a wide range of both standard and custom <a href="https://www.nilt.com/optical-applications/microlens-arrays/" data-supplier="NIL Technology" data-location="product-enc" data-keyword="microlens arrays" rel="nofollow" class="externallink bg">microlens arrays</a> with a broad range of lens configurations and spherical or aspherical lens shapes. We can offer both one-dimensional and two-dimensional arrays. We also have lens configurations as hexagonal and square configurations, as well as random, with options of close packed lenses or with gaps between the lenses.</p><p>We have a variety of masters with concave or convex microlens arrays for use in production of polymer microlens arrays by hot-embossing, UV replication or injection molding. </p><p>The masters are offered in fused silica and nickel. Lens depth/height and lens width can be controlled independently, so any parabolic lens shape can be realized on the stamps. Polymer replications with convex and concave lens arrays can also be provided.</p><p>We also have a wide selection of microlens standard stamps.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.shanghai-optics.com/" data-supplier="Shanghai Optics" data-location="product-enc" data-keyword="microlens arrays" rel="nofollow" class="bg externallink" title="Visit the website of Shanghai Optics"><img src="./bg/logos/shanghai_optics.png" alt="Shanghai Optics" class="supplierlogo"></a><a href="https://www.shanghai-optics.com/components/micro-optics/microlens/" data-supplier="Shanghai Optics" data-location="product-enc" data-keyword="microlens arrays" rel="nofollow" class="bg externallink" title="Visit the website of Shanghai Optics"><img src="./bg/products/shanghai_optics/microlens_arrays.jpg" alt="microlens arrays" class="product"></a><h3><a href="./bg/profiles/shanghai_optics.html" title="See the profile of Shanghai Optics">Shanghai Optics</a></h3><p>Shanghai Optics Inc <a href="https://www.shanghai-optics.com/components/micro-optics/microlens/" data-supplier="Shanghai Optics" data-location="product-enc" data-keyword="microlens arrays" rel="nofollow" class="externallink bg">custom micro-lenses</a> are made from high index optical glass. They are precision polished to very high tolerances, so that they can be mounted into complex imaging systems.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="microlens_arrays.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="microlenses.html" title="optical lenses of particularly small diameter, e.g. below 1 mm">microlenses</a>, <a href="shack_hartmann_wavefront_sensors.html" title="wavefront sensors which are based on a microlens array">Shack&ndash;Hartmann wavefront sensors</a><br>and other articles in the category <a href="categories.html#general_optics" title="other articles on general optics">general optics</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/microlens_arrays.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fmicrolens_arrays.html&text=RP+Photonics+Encyclopedia+-+microlens+arrays%2C+fabrication%2C+parameters%2C+applications" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fmicrolens_arrays.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fmicrolens_arrays.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/microlens_arrays.html"&gt;<br>Article on Microlens Arrays&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/microlens_arrays.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/microlens_arrays.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/microlens_arrays.html<br>article on 'Microlens Arrays' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Website Tours</h2>
+<p>You can explore our website with the following tours:</p>
+<ul>
+<li><a href="./encyclopedia.html?tour=Encyclopedia">The RP Photonics Encyclopedia</a></li>
+<li><a href="./encyclopedia.html?tour=New_Encyclopedia_Articles">The latest encyclopedia articles</a></li>
+<li><a href="./buyersguide.html?tour=Using_the_Buyers_Guide">Using the Buyer's Guide</a></li>
+<li><a href="./buyersguide.html?tour=Advertising_in_the_Buyers_Guide">Advertising in the Buyer's Guide</a></li>
+</ul>
+<img src="./img/tour_bus.png" style="width:90%; margin:15px 0;" alt="&nbsp;">
+<p>You will be lead through a couple of pages, obtaining explanations on every one.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="JHiJS0Ed5vgobxmtQuDJPg==">shownbanner = "tours";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>More to Read</h2>
+ <p>Here are some randomly selected encyclopedia articles &ndash; just to make you curious:</p>
+  <ul>
+<li><a href="./passive_mode_locking.html">passive mode locking</a></li><li><a href="./passive_mode_locking.html">passive mode locking</a></li><li><a href="./reference_cavities.html">reference cavities</a></li><li><a href="./fiber_loop_mirrors.html">fiber loop mirrors</a></li><li><a href="./gain_bandwidth.html">gain bandwidth</a></li><li><a href="./brewster_windows.html">Brewster windows</a></li><li><a href="./brewster_plates.html">Brewster plates</a></li><li><a href="./reflectance.html">reflectance</a></li><li><a href="./dye_lasers.html">dye lasers</a></li><li><a href="./astigmatism.html">astigmatism</a></li><li><a href="./polarization_beam_combining.html">polarization beam combining</a></li><li><a href="./dielectric_coatings.html">dielectric coatings</a></li><li><a href="./continuous_wave_operation.html">continuous-wave operation</a></li><li><a href="./active_fibers.html">active fibers</a></li><li><a href="./vcsel_arrays.html">VCSEL arrays</a></li></ul>
+
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="JHiJS0Ed5vgobxmtQuDJPg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/microlens_arrays.html"
+    },
+    "headline": "Microlens Arrays",
+    "image": "https://www.rp-photonics.com/previews/microlens_arrays.png",
+    "datePublished": "2019-08-19",
+    "dateModified": "2020-07-11",
+    "description": "Microlens arrays are one- or two-dimensional arrays of microlenses, which have applications in laser beam collimators, beam homogenizers, wavefront sensors and image sensors.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter M",
+      "item": "https://www.rp-photonics.com/encyclopedia_m.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "microlens arrays",
+      "item": "https://www.rp-photonics.com/microlens_arrays.html"
+    }]}
+}
+</script>
+</body>
+</html>

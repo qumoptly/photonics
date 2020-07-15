@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-q5dxwNqHL5rEwrDjV9K3fg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>The Photonics Spotlight - Fiber Lasers: More Difficult to Design than Bulk Lasers</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/spotlight_2011_02_10.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2011-02-10">
+<meta name="description" content="The article discusses a number of issues which make the design and development of fiber lasers substantially more complicated and expensive than that of bulk lasers. The reasons for this are manyfold; they include the typically very high optical intensities (which cause strong saturation effects), the typical quasi-three-level peculiarities, ASE, pulse shaping mechanisms, and polarization issues.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="photonics, spotlight, news, publications, blog, RSS feed, encyclopedia, laser physics, technology">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Photonics Spotlight - Fiber Lasers: More Difficult to Design than Bulk Lasers">
+<meta property="og:description" content="The article discusses a number of issues which make the design and development of fiber lasers substantially more complicated and expensive than that of bulk lasers. The reasons for this are manyfold; they include the typically very high optical intensities (which cause strong saturation effects), the typical quasi-three-level peculiarities, ASE, pulse shaping mechanisms, and polarization issues.">
+<meta property="og:url" content="https://www.rp-photonics.com/spotlight_2011_02_10.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/spotlight_2011_02_10.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="The article discusses a number of issues which make the design and development of fiber lasers substantially more complicated and expensive than that of bulk lasers. The reasons for this are manyfold; they include the typically very high optical intensities (which cause strong saturation effects), the typical quasi-three-level peculiarities, ASE, pulse shaping mechanisms, and polarization issues.">
+<meta name="twitter:title" content="The Photonics Spotlight - Fiber Lasers: More Difficult to Design than Bulk Lasers">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/spotlight_2011_02_10.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="q5dxwNqHL5rEwrDjV9K3fg==">
+page="spotlight_2011_02_10.html"; cat="P"; shownbanner=""; ref="http://www.rp-photonics.com/spotlight.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo sponsor"></a> <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="q5dxwNqHL5rEwrDjV9K3fg==">shownsponsors="eagleyard Photonics,Optikexpertisen,TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight" class="selected"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="spotlight.html">The Photonics Spotlight</a> &gt; <a href="spotlight_2011_02_10.html">2011-02-10</a></p>
+<h1 class="posting">Fiber Lasers: More Difficult to Design than Bulk Lasers</h1>
+<div class="posting_details">
+<p>Posted on 2011-02-10 as a part of the <a href="spotlight.html">Photonics Spotlight (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="spotlight_2011_02_10.html" class="url">https://www.rp-photonics.com/spotlight_2011_02_10.html</a></p>
+<p>Author: <a href="https://www.rp-photonics.com/paschotta.html" rel="author">Dr. Rüdiger Paschotta</a>, <a href="https://www.rp-photonics.com/">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: The article discusses a number of issues which make the design and development of fiber lasers substantially more complicated and expensive than that of bulk lasers. The reasons for this are manyfold; they include the typically very high optical intensities (which cause strong saturation effects), the typical quasi-three-level peculiarities, ASE, pulse shaping mechanisms, and polarization issues.</p>
+</div>
+<p class="ref">Ref.: encyclopedia articles on <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber lasers</a>, <a href="laser_design.html" title="the design of a laser device, or the process of working out such a design">laser design</a>, <a href="laser_development.html" title="the process of developing a laser device">laser development</a></p>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p>Fundamentally, the physical effects underlying the <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a> operation in <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber lasers</a> are exactly the same as in <a href="bulk_lasers.html" title="lasers based on bulk crystals as gain media">bulk lasers</a>: amplification via <a href="stimulated_emission.html" title="a quantum effect, where photon emission is triggered by other photons">stimulated emission</a>, <a href="gain_saturation.html" title="the phenomenon that the gain of an amplifier is reduced for high input signal powers">gain saturation</a>, <a href="amplified_spontaneous_emission.html" title="a process where spontaneously emitted radiation (luminescence) is amplified">amplified spontaneous emission</a>, etc.
+Therefore, one might expect that <a href="laser_design.html" title="the design of a laser device, or the process of working out such a design">designing</a> fiber lasers can be based on essentially the same methods as the design of bulk lasers, simply with accordingly adjusted parameters.
+That expectation, however, turns out to be totally wrong.
+For a number of reasons, some of which are discussed in the following, fiber lasers behave differently in many respects, and their design involves complications which are usually not encountered in bulk lasers.</p>
+<h2 class="togglediv">Operation with High Optical Intensities</h2>
+<div>
+<p>Due to the small <a href="effective_mode_area.html" title="a quantitative measure of the area which a waveguide or fiber mode effectively covers in the transverse dimensions">effective mode area</a> of the <a href="fiber_core.html" title="the region in an optical fiber which guides light">fiber core</a>, it is easy to achieve high optical intensities driving the laser-active ions.
+This is nice in some situations; for example, it becomes relatively easy to efficiently operate lasers even on &ldquo;difficult&rdquo; <a href="laser_transitions.html" title="optical transitions where stimulated emission is used to obtain optical amplification">laser transitions</a>.
+For example, one can build quite efficient <a href="upconversion_lasers.html" title="lasers relying on upconversion processes">upconversion fiber lasers</a>.
+Also, the <a href="four_level_and_three_level_gain_media.html" title="laser gain media without/with reabsorption from the lower laser level">quasi-three-level nature</a> of many laser transitions is no problem in fibers; it is easy to obtain substantial populations in high-lying energy levels, also good power conversion efficiencies.</p>
+<p>On the other hand, operation regimes with optical intensities far above the <a href="saturation_power.html" title="a measure of the incident optical power required for achieving significant saturation of an absorber or a gain medium">saturation powers</a> are more difficult to understand.
+Consider, for example, the frequently encountered situation that an <a href="ytterbium_doped_gain_media.html" title="laser gain media containing laser-active ytterbium ions">ytterbium-doped</a> <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifier</a> is pumped at 975&nbsp;nm.
+At that wavelength, we have a high <a href="transition_cross_sections.html" title="material parameters for quantifying the likelihood or rate of optical transition events">absorption cross section</a> which results in a rather low saturation power &ndash; much lower than the usually applied pump powers.
+As a result of this, we obtain a peculiar behavior: the pump absorption is very high for very low pump powers, but it is very easily saturated even with relatively small optical powers.
+The following diagram shows a simulation with the <a href="fiberpower.html">software <b>RP Fiber Power</b></a>, where only 20&nbsp;mW of pump power at 975&nbsp;nm are injected into an ytterbium-doped fiber.</p>
+<figure>
+<img src="img/pump_abs_in_yb_fiber.png" alt="pump absorption in Yb-doped fiber">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Absorption of a 975-nm pump wave in an Yb-doped fiber, simulated with the software <b>RP Fiber Power</b>.
+</figcaption>
+</figure>
+<p>One sees that the pump power decays about linearly, not exponentially, and this over a length which is far larger than the (low-intensity) <a href="absorption_length.html" title="the length of which absorption reduces the optical intensity to 1/e of its initial value">absorption length</a> of 13&nbsp;mm.
+The dotted black curve shows that the Yb excitation is held at approximately 50&#37; within the first 20&nbsp;cm of fiber and only then starts to drop quickly.</p>
+<p>The following diagram shows what happens for different injected pump powers.
+If we inject only 10&nbsp;mW, for example, the pump power will be fully exhausted after about 20&nbsp;cm.
+We see that the appropriate fiber length for some laser or amplifier may well depend on the applied power levels, and can be far larger than the absorption length.</p>
+<figure>
+<img src="img/pump_abs_in_yb_fiber2.png" alt="pump absorption in Yb-doped fiber">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Absorption of 975-nm pump waves with different initial powers in an Yb-doped fiber.
+</figcaption>
+</figure>
+</div>
+<h2 class="togglediv">Peculiarities of Quasi-three-level Behavior</h2>
+<div>
+<p>The diagrams above also show one of the typical peculiarities of the quasi-three-level behavior, which is regularly encountered in fiber devices.
+In the given examples, the ytterbium excitation saturates at roughly 50&thinsp;&#37; for 975-nm pumping, because the <a href="transition_cross_sections.html" title="material parameters for quantifying the likelihood or rate of optical transition events">transition cross sections</a> for absorption and emission are about equal.
+For strong pumping, there are large and approximately equal rates of absorption and stimulated emission processes, whereas <a href="spontaneous_emission.html" title="a quantum effect, causing the spontaneous decay of excited states of atoms or ions">spontaneous emission</a> plays only a minor role.
+Well, it does determine the speed with which the pump power decays, as spontaneous emission is the only way to dissipated energy, as long as there are no other processes like <a href="quenching.html" title="the reduction or limitation of an excited-state population, mostly by unwanted effects">quenching</a> and <a href="amplified_spontaneous_emission.html" title="a process where spontaneously emitted radiation (luminescence) is amplified">ASE</a>.</p>
+</div>
+<h2 class="togglediv">Amplified Spontaneous Emission</h2>
+<div>
+<p>The high <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> of fiber devices leads to strong effects of <a href="amplified_spontaneous_emission.html" title="a process where spontaneously emitted radiation (luminescence) is amplified">amplified spontaneous emission</a> (ASE).
+For example, imagine that we simply inject a 975-nm pump wave into a fiber just as before, only we use a longer fiber so that we can inject and absorb higher pump powers.
+It is assumed (as before) that the fiber ends are not reflecting back any light; one may, for example, use angle-cleaved fiber ends.</p>
+<figure>
+<img src="img/pump_abs_in_longer_yb_fiber.png" alt="pump absorption in longer Yb-doped fiber">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Absorption of a stronger 975-nm pump wave in a longer Yb-doped fiber.
+Here, we get strong ASE effects.
+</figcaption>
+</figure>
+<p>The resulting behavior is quite different than before.
+The high laser gain at longer wavelength (around 1030&nbsp;nm) leads to strong ASE, particularly in backward direction.
+The strong ASE powers pull down the ytterbium excitation density and therefore increase the pump absorption.
+Although the ytterbium excitation is decreased only slightly near the left end, the pump absorption is increased substantially.</p>
+<p>Somebody not expecting that effect may be quite surprised by the behavior of the fiber: the effective pump absorption of the fiber becomes extremely strong even for high pump powers.
+It may take a while to find out the reason in a lab experiment.
+Quite obviously, it is more efficient first to explore the situation with some powerful simulation software such as <a href="fiberpower.html"><b>RP Fiber Power</b></a> before trying this and that in the lab.</p>
+</div>
+<h2 class="togglediv">Mode-locked Fiber Lasers</h2>
+<div>
+<p>For <a href="mode_locked_fiber_lasers.html" title="ultrafast fiber lasers which are actively or passively mode-locked for generating ultrashort pulses">mode-locked fiber lasers</a>, many more complications come into play.
+Many of them are associated with strong optical <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a> of the fiber, having a small effective mode area and typically a much longer length than a <a href="laser_crystals.html" title="transparent crystals with laser-active dopants, used as laser gain media">laser crystal</a>.
+Particularly when one requires high performance in terms of <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a> and <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a>, one is forced to enter certain operation regimes which let the laser cope much better with strong nonlinearities.
+However, the involved pulse shaping mechanisms are much more complicated to understand than the characteristics of simple <a href="soliton_mode_locking.html" title="a mechanism for laser mode locking based on soliton pulses">soliton mode-locked</a> lasers.
+(Many mode-locked bulk lasers can be operated in that simple regime.)
+For example, one uses all-normal-dispersion fiber lasers, where the pulses are strongly <a href="chirp.html" title="time dependence of the instantaneous frequency of an optical pulse">chirped</a> within the laser resonator, and often also exhibit strong &ldquo;breathing&rdquo;, i.e., strong changes of the pulse parameters in each resonator round trip.</p>
+<p>By the way, many misconceptions are spread in the corresponding scientific literature; for example, some people assume so-called self-similar pulse evolution in regimes where it certainly does not occur.
+Even just to get an overview on the scientific literature on mode-locked fiber lasers is a daunting task.</p>
+<p>Whereas a simple soliton mode-locked bulk laser can often be designed with a few back-of-the envelope calculations (at least by an expert in the field), the design of such ultrafast fiber lasers is a complicated issue, which often requires extended numerical simulation efforts.</p>
+</div>
+<h2 class="togglediv">Polarization Issues</h2>
+<div>
+<p>In bulk lasers, one sometimes struggles with issues like <a href="depolarization_loss.html" title="losses of optical power in a laser resonator, caused by depolarization e.g. in a laser crystal">depolarization loss</a>, but in many cases one does not have to think a lot about polarization.
+With fiber devices, however, polarization is often a matter of concern.
+Even if one does not care about the <a href="polarization_of_light.html" title="direction of the electric field oscillation of a light beam">polarization</a> of laser emission, polarization effects can cause trouble.
+For example, one may require additional polarizing components to force a laser to stably operate on a <a href="single_frequency_operation.html" title="an operation mode of a laser where only a single resonator mode acquires a significant power">single frequency</a>, or to exhibit stable <a href="mode_locking.html" title="a group of techniques for generating ultrashort pulses in lasers">mode locking</a>.
+In principle, one may eliminate many problems by working throughout with <a href="polarization_maintaining_fibers.html" title="specialty optical fibers with strong built-in birefringence, preserving the properly oriented linear polarization of an input beam">polarization-maintaining fibers</a>, but that introduces additional issues (for example, the need to orient fibers for each <a href="fusion_splicing_of_fibers.html" title="a technique of making low-loss fiber joints by fusing fiber ends together">fiber splice</a>) and substantially adds to the manufacturing cost.</p>
+</div>
+<h2 class="togglediv">Consequences for the Laser Development</h2>
+<div>
+<p>As a consequence of the discussed complications in active fiber devices, the <a href="laser_development.html" title="the process of developing a laser device">laser development</a> process can be substantially more difficult than for bulk lasers.
+It definitely requires more know-how and often also more refined capabilities for the <a href="software.html">numerical simulation</a> of various performance aspects.</p>
+<p>Typically, the development will be more expensive than for a bulk laser.
+This can more than offset the potentially lower cost of the parts required.
+For large quantities, however, the parts cost will dominate, of course, so that a more sophisticated development process can be tolerated.</p>
+<p>Note that in industrial development one experiences many more boundary conditions than in scientific research.
+Whereas researchers can often &ldquo;sell&rdquo; results with lasers operating in unexpected parameter regions, industrial development normally has to meet <a href="laser_specifications.html" title="descriptions of essential properties of a laser system, such as performance parameters, dimensions, and operating conditions">specifications</a> which are given in advance; it is not enough just to have &ldquo;something nice&rdquo;.
+Also, one cannot use certain things which are convenient in a research lab but not practical for a product, for example because they do not allow one to achieve a high stability of the operation point.</p>
+</div>
+<hr>
+<p style="font-size:90%; margin-bottom:10px;">This article is a posting of the <a href="spotlight.html">Photonics Spotlight</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page and cite it, because its location is permanent.
+See also the <a href="encyclopedia.html">RP Photonics Encyclopedia</a>.</p>
+<p>Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="https://www.rp-photonics.com/spotlight.rss">RSS feed</a>.</p>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="spotlight_2011_02_10.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/spotlight_2011_02_10.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2011_02_10.html&text=The+Photonics+Spotlight+-+Fiber+Lasers%3A+More+Difficult+to+Design+than+Bulk+Lasers" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2011_02_10.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2011_02_10.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2011_02_10.html"&gt;<br>Article on The Photonics Spotlight - Fiber Lasers: More Difficult to Design than Bulk Lasers&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2011_02_10.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/spotlight_2011_02_10.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Paschotta</a>, RP Photonics Consulting GmbH. All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./marketing_contact.html">contact</a>, <a href="./privacy.html">data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="./fiberpower_regen.html?banner=RP_Fiber_Power_3"><img src="./img/fiberpower_regen6b.png" alt="regenerative amplifier" style="margin-bottom:8px"></a>
+<p>Pulse energy from a <a href="./fiberpower_regen.html?banner=RP_Fiber_Power_3">regenerative amplifier</a>, when the number of resonator round-trips per amplification cycle is varied. Such instabilities (involving several bifurcations) can be well studied with a numerical model.</p>
+<p>This diagram has been made with the <a href="./fiberpower.html?banner=RP_Fiber_Power_3"><b>RP Fiber Power</b></a> software.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="q5dxwNqHL5rEwrDjV9K3fg==">shownbanner = "RP Fiber Power 3";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Company News</h2>
+<p>Suppliers having an <a href="./bg_entries.html?banner=company_news">ad package</a> in the <a href="./buyersguide.html?banner=company_news">RP Photonics Buyer&#39;s Guide</a> can publish their <a href="./company_news.html?banner=company_news">company news</a>. For example, they may announce mergers and acquisitions, new product lines, or new cooperrations with distributors.</p>
+<p>Currently we have news from the following companies:</p>
+<ul>
+<li><a href="./bg/profiles/laser_quantum
+.html">Laser Quantum
+</a>: High power in a compact platform at key wavelengths
+</li>
+</ul>
+
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="q5dxwNqHL5rEwrDjV9K3fg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/spotlight_2011_02_10.html"
+    },
+    "headline": "Fiber Lasers: More Difficult to Design than Bulk Lasers",
+    "image": "https://www.rp-photonics.com/previews/spotlight_2011_02_10.png",
+    "datePublished": "2011-02-10",
+    "description": "The article discusses a number of issues which make the design and development of fiber lasers substantially more complicated and expensive than that of bulk lasers. The reasons for this are manyfold; they include the typically very high optical intensities (which cause strong saturation effects), the typical quasi-three-level peculiarities, ASE, pulse shaping mechanisms, and polarization issues.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "The Photonics Spotlight",
+      "item": "https://www.rp-photonics.com/spotlight.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "2011-02-10",
+      "item": "https://www.rp-photonics.com/spotlight_2011_02_10.html"
+    }]}
+}
+</script>
+</body>
+</html>

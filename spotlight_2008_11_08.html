@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-+Z3cIbD5Q8vZnQ/t5FgXaA=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>The Photonics Spotlight - Validating Numerical Simulation Software</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/spotlight_2008_11_08.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2008-11-08">
+<meta name="description" content="The validation of numerical simulation software, e.g. for simulating the performance of fiber amplifiers and fiber lasers, is a great challenge. The article discusses various aspects which need to be validated, and shows that very different means are required. The comparison between calculated and experimental results is only one part of the game.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="photonics, spotlight, news, publications, blog, RSS feed, encyclopedia, laser physics, technology">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Photonics Spotlight - Validating Numerical Simulation Software">
+<meta property="og:description" content="The validation of numerical simulation software, e.g. for simulating the performance of fiber amplifiers and fiber lasers, is a great challenge. The article discusses various aspects which need to be validated, and shows that very different means are required. The comparison between calculated and experimental results is only one part of the game.">
+<meta property="og:url" content="https://www.rp-photonics.com/spotlight_2008_11_08.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/spotlight_2008_11_08.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="The validation of numerical simulation software, e.g. for simulating the performance of fiber amplifiers and fiber lasers, is a great challenge. The article discusses various aspects which need to be validated, and shows that very different means are required. The comparison between calculated and experimental results is only one part of the game.">
+<meta name="twitter:title" content="The Photonics Spotlight - Validating Numerical Simulation Software">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/spotlight_2008_11_08.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="+Z3cIbD5Q8vZnQ/t5FgXaA==">
+page="spotlight_2008_11_08.html"; cat="P"; shownbanner=""; ref="http://www.rp-photonics.com/spotlight.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="+Z3cIbD5Q8vZnQ/t5FgXaA==">shownsponsors="TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight" class="selected"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="spotlight.html">The Photonics Spotlight</a> &gt; <a href="spotlight_2008_11_08.html">2008-11-08</a></p>
+<h1 class="posting">Validating Numerical Simulation Software</h1>
+<div class="posting_details">
+<p>Posted on 2008-11-08 as a part of the <a href="spotlight.html">Photonics Spotlight (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="spotlight_2008_11_08.html" class="url">https://www.rp-photonics.com/spotlight_2008_11_08.html</a></p>
+<p>Author: <a href="https://www.rp-photonics.com/paschotta.html" rel="author">Dr. Rüdiger Paschotta</a>, <a href="https://www.rp-photonics.com/">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: The validation of numerical simulation software, e.g. for simulating the performance of fiber amplifiers and fiber lasers, is a great challenge. The article discusses various aspects which need to be validated, and shows that very different means are required. The comparison between calculated and experimental results is only one part of the game.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p class="ref">Ref.: encyclopedia article on <a href="laser_modeling.html" title="the investigation of phenomena and quantitative relations in lasers, using theoretical models and computational methods">laser modeling</a>, <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifiers</a> and <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber lasers</a>; <a href="fiberpower.html"><b>RP Fiber Power</b> software</a></p>
+<p>When talking about my numerical simulation software, I have occasionally been asked: &ldquo;Have you validated it by comparing it with experimental data?&rdquo;
+This question reveals (a) the important awareness that a complex model needs to be validated in order produce reliable results and (b) perhaps a somewhat superficial understanding of validation.</p>
+<p>Simply speaking, validation means to make sure that errors are avoided.
+So the natural first question should be: What kind of errors could occur?
+It turns out that very different types of errors are possible, and these require very different measures to be avoided.</p>
+<h2 class="togglediv">Shortcomings of the Physical Model</h2>
+<div>
+<p>All numerical simulation software is based on some kind of physical model of reality.
+For example, a simulation software for <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifiers</a> and <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber lasers</a>, such as <a href="fiberpower.html"><b>RP Fiber Power</b></a>, relies on a model which contains energy levels of laser-active ions, assumptions concerning the radiative and <a href="non_radiative_transitions.html" title="transitions between energy levels of atoms or ions which are not associated with the emission of light">non-radiative transitions</a> between these energy levels, and some assumptions concerning the propagation of light, e.g. in the form of propagation <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a> of the fiber.</p>
+<p>An experienced expert in the 21st century surely knows very well how fiber modes propagate and what kind of transitions in laser-active ions can exist.
+One may, however, still overlook certain effects or underestimate their importance.
+For example, a relatively simple model of erbium (Er<sup>3+</sup>) ions in a fiber may be sufficient as long as the active fiber has a low <a href="doping_concentration.html" title="the concentration of some dopant, e.g. of laser-active ions in a laser gain medium">doping concentration</a>, but fibers with higher concentration exhibit <a href="quenching.html" title="the reduction or limitation of an excited-state population, mostly by unwanted effects">quenching</a> effects caused by <a href="energy_transfer.html" title="the phenomenon that dopant ions in laser-active media can exchange excitation energy among each other">energy transfers</a> which substantially affect the performance.
+Experience must also contain the knowledge of scientific literature, giving some guidance concerning what has been tested and which areas are unsafe.</p>
+<p>Obviously, validation in this situation is essentially not a matter of computer software, but rather of carefully comparing experimental results with theoretical expectations, or of studying the existing scientific literature.
+This job cannot be done once for ever with a certain software; it must be done each time a model is applied to a new class of active fibers, for example.
+Good software then helps to conveniently calculate the theoretical expectations, but is certainly no replacement for the expertise of some person.</p>
+</div>
+<h2 class="togglediv">Errors in Model Parameters</h2>
+<div>
+<p>The results of models can of course be wrong simply because the values of certain parameters, with which the physical system is described, have not been correctly determined.
+For example, it is not straight-forward to obtain reliable spectroscopic data of active fibers, and few experts understand this job really well.</p>
+<p>Here, we again need careful comparisons between theoretical expectations and measured data.
+Software can again help to calculate theoretical expectations, but it also takes a lot of experience to device the right tests, which are both sufficiently simple to do and reliably deliver the required information.
+One must avoid, for example, simply tweaking some fitting parameters until the results seem to match the experimental ones &ndash; there are often too many fitting parameters to produce reliable results.
+Instead, carefully devised experiments are needed which reliably target certain quantities while not being too much affected by others.</p>
+</div>
+<h2 class="togglediv">Errors in the Numerical Implementation</h2>
+<div>
+<p>Even if the physical model is correct, it may happen that the numerical code for solving the resulting equations has some defects.
+This may simply lead to wrong results &ndash; possibly only in certain cases &ndash; or to the failure of an iterative algorithm to converge to the solution.
+I actually heard from a customer of mine, nowadays using <b>RP Fiber Power</b>, that he first started with some other commercial software, but found it to be unusable, since its algorithm didn't properly converge, and then simply delivered inaccurate results instead of at least apologizing.
+(I refrain from telling which software that was, but it is a well known one.)</p>
+<p>In case of fiber laser models, it is actually not easy to solve such problems.
+The key challenge is that the &ldquo;dynamical behavior&rdquo; of the typical iterative algorithms used to solve the differential equations is very much dependent on the type of system (fiber amplifier with co- or counterpropagating pump, fiber laser) and its parameters (e.g. operation close to or far above threshold, small or large resonator losses, number of possibly lasing channels, presence of ASE, cascade lasing, etc.).
+So the algorithm may work well in some cases but not in others, which the developer has not tested.</p>
+<p>How does validation work to avoid such kinds of errors?
+Obviously, comparisons with experimental data are not the best idea, as you hardly get an exhaustive data set, the experimental data may be affected by unknown effects, etc.
+Instead, the best solution is usually to construct models for situations where some key aspects can be calculated analytically, or to check whether the solutions fulfill certain consistency conditions.
+(Actually, it is often not too difficult to check the validity of a solution, compared with finding it.)
+And the crucial point is to do many such checks in a wide range of different situations.</p>
+</div>
+<h2 class="togglediv">Conclusions</h2>
+<div>
+<p>The above discussion clearly shows that the validation of numerical simulations &ndash; not just software, but also the physical model used and its parameters &ndash; is a complex task.
+We can draw a number of conclusions:</p>
+<ul>
+<li>Comparisons with experimental data are of vital importance, but in this part the software is more a tool for the tests than the object to be tested.</li>
+<li>The software itself also needs to be tested, and this is usually better done with analytical means.</li>
+<li>Only the software itself and the basic model can be validated by the software developer.
+For concrete applications, particularly in non-standard areas, a lot of vigilance is still needed to avoid errors.</li>
+<li>For such reasons, having suitable simulation software is only part of the game.
+Therefore, it is always advisable to first find out whether the best solution e.g. for some company is to buy a software license in order to do the simulations themselves, or to have an external expert with special modeling skills (and software, of course) to deliver consultancy.
+At least, a software license should normally be accompanied by competent support &ndash; not only concerning handling of the software, but the modeling challenge themselves.</li>
+</ul>
+</div>
+<hr>
+<p style="font-size:90%; margin-bottom:10px;">This article is a posting of the <a href="spotlight.html">Photonics Spotlight</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page and cite it, because its location is permanent.
+See also the <a href="encyclopedia.html">RP Photonics Encyclopedia</a>.</p>
+<p>Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="https://www.rp-photonics.com/spotlight.rss">RSS feed</a>.</p>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="spotlight_2008_11_08.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/spotlight_2008_11_08.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2008_11_08.html&text=The+Photonics+Spotlight+-+Validating+Numerical+Simulation+Software" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2008_11_08.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2008_11_08.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2008_11_08.html"&gt;<br>Article on The Photonics Spotlight - Validating Numerical Simulation Software&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2008_11_08.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/spotlight_2008_11_08.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Paschotta</a>, RP Photonics Consulting GmbH. All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./marketing_contact.html">contact</a>, <a href="./privacy.html">data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2 style="font-size:20px;">Debugging Is Now Fun!</h2>
+<p>The software products which are supporting our <a href="./software_script_language.html?banner=Debugger">script language</a> (e.g. <a href="./fiberpower.html?banner=Debugger">RP Fiber Power</a> and <a href="./coating.html?banner=Debugger">RP Coating</a>) have now got a <a href="./software_news_2017_05_31.html?banner=Debugger">powerful debugger</a>!</p>
+<a href="./software_news_2017_05_31.html?banner=Debugger"><img src="./img/expression_debugger_small.png" alt="debugger" style="margin:10px 0;"></a>
+<p>It works even within expressions, not only after each command!</p>
+<p>The <a href="./software_news.html?banner=Debugger">RP Photonics Software News</a> keep you informed.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="+Z3cIbD5Q8vZnQ/t5FgXaA==">shownbanner = "Debugger";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Free Tutorial: Modeling of Fiber Amplifiers and Lasers</h2>
+<p>We have published a new <a href="./tutorial_modeling.html?banner=modeling_tutorial">tutorial</a> which discusses the modeling of fiber amplifiers and lasers.
+It addresses many questions:</p>
+<ul>
+<li>What is a <a href="./tutorial_modeling1.html?banner=modeling_tutorial">model</a>?</li>
+<li>Should one use <a href="./tutorial_modeling3.html?banner=modeling_tutorial">power propagation or field propagation</a>?</li>
+<li>How to simulate the behavior of <a href="./tutorial_modeling4.html?banner=modeling_tutorial">laser-active ions</a>?</li>
+<li>How to calculate <a href="./tutorial_modeling5.html?banner=modeling_tutorial">steady-state solutions</a>?</li>
+<li>How to simulate <a href="./tutorial_modeling6.html?banner=modeling_tutorial">dynamical behavior</a> and <a href="./tutorial_modeling7.html?banner=modeling_tutorial">ultrashort pulse propagation</a>?</li>
+<li>What aspects are important for the <a href="./tutorial_modeling8.html?banner=modeling_tutorial">decision</a> whether to develop own modeling software or use commercial software?</li>
+</ul>
+<p><a href="./tutorial_modeling.html?banner=modeling_tutorial">Read the tutorial!</a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="+Z3cIbD5Q8vZnQ/t5FgXaA==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/spotlight_2008_11_08.html"
+    },
+    "headline": "Validating Numerical Simulation Software",
+    "image": "https://www.rp-photonics.com/previews/spotlight_2008_11_08.png",
+    "datePublished": "2008-11-08",
+    "description": "The validation of numerical simulation software, e.g. for simulating the performance of fiber amplifiers and fiber lasers, is a great challenge. The article discusses various aspects which need to be validated, and shows that very different means are required. The comparison between calculated and experimental results is only one part of the game.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "The Photonics Spotlight",
+      "item": "https://www.rp-photonics.com/spotlight.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "2008-11-08",
+      "item": "https://www.rp-photonics.com/spotlight_2008_11_08.html"
+    }]}
+}
+</script>
+</body>
+</html>

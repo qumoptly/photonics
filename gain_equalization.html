@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-dnFnSUOTYvUWf1af6sydBQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - gain equalization, gain flattening</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/gain_equalization.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-07-10">
+<meta name="description" content="Gain equalization is a technique for making the gain spectrum of an optical amplifier device flatter over a certain optical frequency range. This is used for telecom amplifiers, for example.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="gain equalization, gain flattening">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gain Equalization">
+<meta property="og:description" content="Gain equalization is a technique for making the gain spectrum of an optical amplifier device flatter over a certain optical frequency range. This is used for telecom amplifiers, for example.">
+<meta property="og:url" content="https://www.rp-photonics.com/gain_equalization.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/gain_equalization.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Gain equalization is a technique for making the gain spectrum of an optical amplifier device flatter over a certain optical frequency range. This is used for telecom amplifiers, for example.">
+<meta name="twitter:title" content="Gain Equalization">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/gain_equalization.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="dnFnSUOTYvUWf1af6sydBQ==">
+page="gain_equalization.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> <a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="dnFnSUOTYvUWf1af6sydBQ==">shownsponsors="EKSMA OPTICS,RPMC Lasers"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_g.html">letter G</a> &gt; <a href="gain_equalization.html">gain equalization</a></p>
+<h1>Gain Equalization</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_gain_equalization_filters.html?s=vbox">2 suppliers for gain equalization filters</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_gain_equalization_filters.html?s=vbox">List of suppliers for<br>gain equalization filters</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="advicebox">
+<p>Ask <a href="index.html">RP Photonics</a> for advice on what options you have to flatten the gain of an amplifier.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a technique for making the gain spectrum of an optical amplifier device flatter over a certain optical frequency range</p>
+<p>Alternative term: gain flattening</p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#optical_amplifiers" title="other articles on optical amplifiers">optical amplifiers</a></p>
+<p><a href="encyclopedia_cite.html?article=gain%20equalization">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>The optical <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> e.g. from a <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifier</a> has some dependence on the wavelength, which can be disturbing.
+For example, in <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a> with <a href="wavelength_division_multiplexing.html" title="a multiplexing technique working in the wavelength domain">wavelength division multiplexing</a>, the wavelength dependence of the gain can unbalance the powers in the transmitted channels.
+Therefore, it is common to apply methods for <em>gain equalization</em>, also called <em>gain flattening</em>.
+There are various technological options:</p>
+<ul>
+<li>For a given kind of <a href="active_fibers.html" title="optical fibers containing laser-active dopants in the fiber core">active fiber</a>, the shape of the gain spectrum can be optimized by adjusting the average inversion level of the laser-active ions.
+This can be done e.g. by varying the pump power or the length of the active fiber.</li>
+<li>The material composition of the <a href="fiber_core.html" title="the region in an optical fiber which guides light">fiber core</a> can be optimized.
+For example, <a href="silica_fibers.html" title="optical fibers based on fused silica or related materials">silica fibers</a> can be optimized with various codopants, and <a href="fluoride_fibers.html" title="optical fibers based on fluoride glasses">fluoride fibers</a> can offer a fairly flat gain spectrum.</li>
+<li>Amplifier fibers of different glass compositions can be combined in an <a href="amplifier_chains.html" title="amplifiers consisting of several stages">amplifier chain</a> to obtain a wideband <em>hybrid amplifier</em>.
+Such a device may also contain a <a href="raman_amplifiers.html" title="optical amplifiers based on Raman gain">Raman amplifier</a>.</li>
+<li>Another approach is a split-band amplifier, where a wavelength-dependent <a href="beam_splitters.html" title="devices for splitting a laser beam into two or more beams">splitter</a> distributes the signal content over two or more different fiber amplifiers, and another wavelength-dependent fiber coupler serves to recombine the spectral components.</li>
+<li><a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">Optical filters</a> (<em>gain flattening filters</em>) can be used, which have higher losses in wavelength regions where the gain is higher.
+Such filters are often based on <a href="fiber_bragg_gratings.html" title="reflective structures in the core of an optical fiber with a periodic or aperiodic perturbation of the effective refractive index">fiber Bragg gratings</a> (long-period gratings, slanted gratings or chirped gratings), although various other types of filters have been demonstrated.</li>
+</ul>
+<p>The optimization of a multi-stage amplifier with flattening filters is a complex task, since it is not obvious, e.g., which combination of amplifiers and filters gives the best results in terms of <a href="noise_figure.html" title="a measure of the excess noise added in an amplifier">noise figure</a> and power efficiency.
+A typical solution for a two-stage amplifier based on doped <a href="silica_fibers.html" title="optical fibers based on fused silica or related materials">silica fibers</a> would include an optical filter between the two stages.</p>
+<p>The gain spectrum of a <a href="raman_amplifiers.html" title="optical amplifiers based on Raman gain">Raman amplifier</a> can be flattened by using multiple pump beams [7] with well-balanced pump power levels.</p>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_gain_equalization_filters.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 2 suppliers for gain equalization filters.</p>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="gain_equalization.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">K. Inoue <i>et al.</i>, &ldquo;Tunable gain-equalization using a Mach&ndash;Zehnder optical filter in multistage amplifiers&rdquo;, IEEE Photon. Technol. Lett. 3, 718 (1991), <a href="https://doi.org/10.1109/68.84463">doi:10.1109/68.84463</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">S. F. Su <i>et al.</i>, &ldquo;Gain equalization in multiwavelength lightwave systems using acousto-optic tunable filters&rdquo;, IEEE Photon. Technol. Lett. 4, 269 (1992), <a href="https://doi.org/10.1109/68.122389">doi:10.1109/68.122389</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">R. Kashyap <i>et al.</i>, &ldquo;Wavelength flattened saturated erbium amplifier using multiple side-tap Bragg gratings&rdquo;, Electron. Lett. 29 (11), 1025 (1993), <a href="https://doi.org/10.1049/el:19930685">doi:10.1049/el:19930685</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">B. Clesca <i>et al.</i>, &ldquo;1.5&nbsp;&mu;m fluoride-based fiber amplifiers for wideband multichannel transport networks&rdquo;, Opt. Fiber Technol. 1, 135 (1995), <a href="https://doi.org/10.1006/ofte.1995.1004">doi:10.1006/ofte.1995.1004</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">A. M. Vengsarkar <i>et al.</i>, &ldquo;Long-period fiber-grating-based gain equalizers&rdquo;, Opt. Lett. 21 (5), 336 (1996), <a href="https://doi.org/10.1364/OL.21.000336">doi:10.1364/OL.21.000336</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">N. Park <i>et al.</i>, &ldquo;High-power Er&ndash;Yb-doped fiber amplifier with multichannel gain flatness within 0.2&nbsp;dB over 14&nbsp;nm&rdquo;, IEEE Photon. Technol. Lett. 8, 1148 (1996), <a href="https://doi.org/10.1109/68.531818">doi:10.1109/68.531818</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">Y. Emori <i>et al.</i>, &ldquo;100&nbsp;nm bandwidth flat-gain Raman amplifiers pumped and gain-equalized by 12-wavelength-channel WDM laser diode unit&rdquo;, Electron. Lett. 35, 1355 (1999), <a href="https://doi.org/10.1109/OFC.1999.766052">doi:10.1109/OFC.1999.766052</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">M. Harurnoto <i>et al.</i>, &ldquo;Gain-flattening filter using long-period fiber gratings&rdquo;, J. Lightwave Technol. 20 (6), 1027 (2002), <a href="https://doi.org/10.1109/JLT.2002.1018814">doi:10.1109/JLT.2002.1018814</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">Ik-Bu Sohn <i>et al.</i>, &ldquo;Gain flattened and improved EDFA using microbending long-period fibre gratings&rdquo;, Electron. Lett. 38 (22), 1324 (2002), <a href="https://doi.org/10.1049/el:20020915">doi:10.1049/el:20020915</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="gain.html" title="a measure of the strength of optical amplification">gain</a>, <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifiers</a>, <a href="tunable_optical_filters.html" title="optical filters with tunable filter parameters, e.g. concerning center wavelength of pass band">tunable optical filters</a>, <a href="wavelength_division_multiplexing.html" title="a multiplexing technique working in the wavelength domain">wavelength division multiplexing</a><br>and other articles in the category <a href="categories.html#optical_amplifiers" title="other articles on optical amplifiers">optical amplifiers</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/gain_equalization.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fgain_equalization.html&text=RP+Photonics+Encyclopedia+-+gain+equalization%2C+gain+flattening" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fgain_equalization.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fgain_equalization.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/gain_equalization.html"&gt;<br>Article on Gain Equalization&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/gain_equalization.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/gain_equalization.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/gain_equalization.html<br>article on 'Gain Equalization' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="http://www.technicasa.com/" data-supplier="Technica Optical Components" data-location="banner" rel="nofollow" class="bg externallink"><img src="./bg/banners/technica_optical_components.jpg" alt="Technica Optical Components"></a>
+</div>
+</aside>
+<script type="text/javascript" nonce="dnFnSUOTYvUWf1af6sydBQ==">shownbanner = "Technica Optical Components";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Transparent Laser</h2>
+<p>The dream of each laser developer, and not only of each laser scientist: have a <b>transparent laser</b>, where you can <b>look into any components</b> and see e.g.</p>
+<ul>
+<li>optical intensities</li>
+<li>excitation densities of laser-active ions</li>
+</ul>
+<p>&hellip; and this at any location and time, with arbitrary resolution!</p>
+<p>If you had this, finally you could</p>
+<ul>
+<li>fully understand what goes on in your laser,</li>
+<li>quickly identify and fix any problems, and</li>
+<li><span style="font-weight:bold; color:#B20B28;">make faster progress <br> while saving a lot of money.</span></li>
+</ul>
+<p>Absolutely marvelous, but only a dream?!?</p>
+<p>Good news: such transparent lasers can be made!
+See our presentation:</p>
+<a href="./transparent_laser.html?banner=transparent_laser"><img src="./img/transparent_laser.png" width="234" height="162" alt="presentation"></a>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="dnFnSUOTYvUWf1af6sydBQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/gain_equalization.html"
+    },
+    "headline": "Gain Equalization",
+    "image": "https://www.rp-photonics.com/previews/gain_equalization.png",
+    "datePublished": "2005-05-07",
+    "dateModified": "2020-07-10",
+    "description": "Gain equalization is a technique for making the gain spectrum of an optical amplifier device flatter over a certain optical frequency range. This is used for telecom amplifiers, for example.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter G",
+      "item": "https://www.rp-photonics.com/encyclopedia_g.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "gain equalization",
+      "item": "https://www.rp-photonics.com/gain_equalization.html"
+    }]}
+}
+</script>
+</body>
+</html>

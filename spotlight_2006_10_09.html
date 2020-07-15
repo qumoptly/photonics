@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-D9b7hsl2yhp1ceDLzKqDWw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>The Photonics Spotlight - Correct Specifications for Laser Noise - Valuable but Hard to Obtain</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/spotlight_2006_10_09.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2006-10-09">
+<meta name="description" content="The article shows that there are plenty of pitfalls in the process of making specifications for laser noise. These are related to mathematical difficulties, subtleties of electronic spectrum analyzers, and problems of optical measurement setups. It is actually not easy to avoid all possible problems at the same time, and therefore hard to obtain reliable data. The involvement of an external consultant with a special expertise on noise issues can be extremely valuable both for laser manufacturers and users of laser equipment.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="photonics, spotlight, news, publications, blog, RSS feed, encyclopedia, laser physics, technology">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Photonics Spotlight - Correct Specifications for Laser Noise - Valuable but Hard to Obtain">
+<meta property="og:description" content="The article shows that there are plenty of pitfalls in the process of making specifications for laser noise. These are related to mathematical difficulties, subtleties of electronic spectrum analyzers, and problems of optical measurement setups. It is actually not easy to avoid all possible problems at the same time, and therefore hard to obtain reliable data. The involvement of an external consultant with a special expertise on noise issues can be extremely valuable both for laser manufacturers and users of laser equipment.">
+<meta property="og:url" content="https://www.rp-photonics.com/spotlight_2006_10_09.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/spotlight_2006_10_09.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="The article shows that there are plenty of pitfalls in the process of making specifications for laser noise. These are related to mathematical difficulties, subtleties of electronic spectrum analyzers, and problems of optical measurement setups. It is actually not easy to avoid all possible problems at the same time, and therefore hard to obtain reliable data. The involvement of an external consultant with a special expertise on noise issues can be extremely valuable both for laser manufacturers and users of laser equipment.">
+<meta name="twitter:title" content="The Photonics Spotlight - Correct Specifications for Laser Noise - Valuable but Hard to Obtain">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/spotlight_2006_10_09.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="D9b7hsl2yhp1ceDLzKqDWw==">
+page="spotlight_2006_10_09.html"; cat="P"; shownbanner=""; ref="http://www.rp-photonics.com/spotlight.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="D9b7hsl2yhp1ceDLzKqDWw==">shownsponsors="TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight" class="selected"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="spotlight.html">The Photonics Spotlight</a> &gt; <a href="spotlight_2006_10_09.html">2006-10-09</a></p>
+<h1 class="posting">Correct Specifications for Laser Noise - Valuable but Hard to Obtain</h1>
+<div class="posting_details">
+<p>Posted on 2006-10-09 as a part of the <a href="spotlight.html">Photonics Spotlight (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="spotlight_2006_10_09.html" class="url">https://www.rp-photonics.com/spotlight_2006_10_09.html</a></p>
+<p>Author: <a href="https://www.rp-photonics.com/paschotta.html" rel="author">Dr. Rüdiger Paschotta</a>, <a href="https://www.rp-photonics.com/">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: The article shows that there are plenty of pitfalls in the process of making specifications for laser noise. These are related to mathematical difficulties, subtleties of electronic spectrum analyzers, and problems of optical measurement setups. It is actually not easy to avoid all possible problems at the same time, and therefore hard to obtain reliable data. The involvement of an external consultant with a special expertise on noise issues can be extremely valuable both for laser manufacturers and users of laser equipment.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p class="ref">Ref.: encyclopedia articles on <a href="laser_noise.html" title="fluctuations of various parameters of laser light, such as the optical power and phase">laser noise</a>, <a href="noise_specifications.html" title="specifications for the noise properties of lasers, for example">noise specifications</a>, <a href="relative_intensity_noise.html" title="noise of the optical intensity (or actually power), normalized to its average value">relative intensity noise</a>, <a href="phase_noise.html" title="noise of the optical phase of a beam or of an electric signal">phase noise</a>, etc.</p>
+<p><a href="laser_noise.html" title="fluctuations of various parameters of laser light, such as the optical power and phase">Laser noise</a> is a very important issue for many <a href="laser_applications.html" title="applications involving laser devices">laser applications</a>, and a low noise level of a laser product can be an important selling point.
+However, <a href="noise_specifications.html" title="specifications for the noise properties of lasers, for example">noise specifications</a> are very often wrong.
+While wrong numbers, caused e.g. by various common errors in the interpretation of results from electronic spectrum analyzers, can only be detected by compared with correct measurements or by checking the measurement setup in detail, the type of frequently given noise specifications already reveals to the expert that certain issues have not been understood.</p>
+<p>The probably most common example is that of <a href="intensity_noise.html" title="noise of the optical intensity or power of a laser beam">intensity noise</a> specified as something like &ldquo;&plusmn;1&#37;&rdquo;.
+First of all, it is then not clear what the apparent limits mean: will the intensity never deviate from the average value by more than 1&#37;? Or only rarely? How rarely?
+Second, the measurement <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a> and time are not indicated.
+Obviously, a faster detector will see stronger fluctuations than one which averages the detected laser power over a longer time interval.
+Also, the longer the measurement time, the more will slow drifts of the laser power affect the result.
+Therefore, a specification of the mentioned type will reveal more about the competence of the source than about the laser product.</p>
+<p><a href="linewidth.html" title="width of the spectrum of a light beam or an absorption feature">Linewidth</a> values are also prone to many errors.
+A particularly crude (but not rare) pitfall is the measurement with a <a href="self_heterodyne_linewidth_measurement.html" title="a technique for laser linewidth measurements, based on a beat note between the beam and a delayed version of itself">self-heterodyne setup</a> where the delay is significantly too short.
+One may then totally underestimate the linewidth.
+Unfortunately, it is not entirely easy to determine what the required delay length is.
+There is a simple and thus commonly used rule that the delay length should be at least several times the <a href="coherence_length.html" title="a measure of temporal coherence, expressed as the propagation distance over which the coherence significantly decays">coherence length</a>, and the latter is simply related to the measured linewidth.
+However, this rule is based on the assumption of white <a href="frequency_noise.html" title="noise of the instantaneous frequency of an oscillating signal">frequency noise</a>, while the noise spectrum of many real lasers (particularly of <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber lasers</a>) often substantially deviates from that assumption in such a way that the application of the mentioned simple rule can lead to quite wrong results.</p>
+<p>Another mine field is the use of electronic spectrum analyzers for noise measurements.
+Modern spectrum analyzers are very sophisticated devices, strongly processing the recorded signals and displaying results e.g. in units of watts per hertz.
+While it is relatively easy to convert them e.g. to numbers for the <a href="relative_intensity_noise.html" title="noise of the optical intensity (or actually power), normalized to its average value">relative intensity noise</a> of a laser, significant errors can occur when certain corrections are not applied, or when inappropriate device settings are used.
+Just one example is that the effective noise bandwidth of a filter is typically not the same as the displayed measurement bandwidth, but there is a number of other pitfalls.
+Most of them can be understood only with a decent knowledge of the inner workings of spectrum analyzers, and of certain mathematical details in addition.
+To avoid some misunderstanding: the use of electronic spectrum analyzers for noise measurements can be very reasonable, but it can lead to reliable results only when the task is carried out by a specially trained person &ndash; and there are few of those at work in industry as well as in scientific research.</p>
+<p>For such reasons, it may not be exaggerated to assume that the majority of laser noise specifications on product data sheets are incorrect at least in one respect, but are not recognized as such by many because of a widespread lack of know-how.
+What consequences should be taken?
+Laser manufacturers should make sure that at least some part of their technical staff is carefully trained to well understand the physics and electronics in the context of noise.
+If this is achieved, they can win and preserve the trust of those users who care.
+Also, they then have a chance to further improve the noise performance of their products.
+The perspective of laser users is different: they can only be advised not to trust any noise specifications without having checked that these have been made by sufficiently competent personnel.
+This is particularly true in cases where the application is limited by noise issues.</p>
+<p>Both manufacturers and users may wonder how to acquire the necessary know-how when it is not in house already &ndash; or even how to check whether the available know-how is sufficiently reliable and complete.
+This situation is a typical example for such cases where the involvement of an external technical consultant (in that case with a special expertise on noise issues) can be extremely valuable.
+For example, a custom-tailored <a href="training.html">staff training course</a> can fix many problems within a short time.</p>
+<hr>
+<p style="font-size:90%; margin-bottom:10px;">This article is a posting of the <a href="spotlight.html">Photonics Spotlight</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page and cite it, because its location is permanent.
+See also the <a href="encyclopedia.html">RP Photonics Encyclopedia</a>.</p>
+<p>Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="https://www.rp-photonics.com/spotlight.rss">RSS feed</a>.</p>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="spotlight_2006_10_09.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/spotlight_2006_10_09.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2006_10_09.html&text=The+Photonics+Spotlight+-+Correct+Specifications+for+Laser+Noise+-+Valuable+but+Hard+to+Obtain" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2006_10_09.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2006_10_09.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2006_10_09.html"&gt;<br>Article on The Photonics Spotlight - Correct Specifications for Laser Noise - Valuable but Hard to Obtain&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2006_10_09.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/spotlight_2006_10_09.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Paschotta</a>, RP Photonics Consulting GmbH. All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./marketing_contact.html">contact</a>, <a href="./privacy.html">data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="./fiberpower_self_focusing.html?banner=RP_Fiber_Power_4"><img src="./img/fiberpower_self_focusing4b.png" alt="self-focusing in a fiber" style="margin-bottom:8px"></a>
+<p>Intensity distribution in a fiber at megawatt power levels. The Kerr nonlinearity destabilizes the initially launched LP<sub>11</sub> mode.</p>
+<p>This diagram has been made with the <a href="./fiberpower.html?banner=RP_Fiber_Power_4"><b>RP Fiber Power</b></a> software.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="D9b7hsl2yhp1ceDLzKqDWw==">shownbanner = "RP Fiber Power 4";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Fighting Fraud in Science</h2>
+<p>We occasionally read about scientific fraud &ndash; things like fabricated measurement results &ndash; which is utterly unfair and also undermines the trust of the public in science and its results.</p>
+<p>How to fight that problem?</p>
+<ul>
+<li>Do we need to tell young scientists more clearly that fraud is evil?</li>
+<li>Do supervisors have to stop trusting the results of their coworkers?</li>
+<li>Does the pressure to produce results inevitably favor fraud?</li>
+<li>Where exactly lies the responsibility, if something goes wrong?</li>
+</ul>
+<p>Our <a href="./spotlight_2009_10_19.html?banner=science_fraud">Photonics Spotlight article on science fraud</a> analyzes that carefully.
+It suggests that <b>the risk of fraud is close to zero where supervisors do a responsible job</b>.
+Relations to a more widespread problem &ndash; <b>corrupt authorship practices</b> &ndash; are also identified.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="D9b7hsl2yhp1ceDLzKqDWw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/spotlight_2006_10_09.html"
+    },
+    "headline": "Correct Specifications for Laser Noise - Valuable but Hard to Obtain",
+    "image": "https://www.rp-photonics.com/previews/spotlight_2006_10_09.png",
+    "datePublished": "2006-10-09",
+    "description": "The article shows that there are plenty of pitfalls in the process of making specifications for laser noise. These are related to mathematical difficulties, subtleties of electronic spectrum analyzers, and problems of optical measurement setups. It is actually not easy to avoid all possible problems at the same time, and therefore hard to obtain reliable data. The involvement of an external consultant with a special expertise on noise issues can be extremely valuable both for laser manufacturers and users of laser equipment.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "The Photonics Spotlight",
+      "item": "https://www.rp-photonics.com/spotlight.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "2006-10-09",
+      "item": "https://www.rp-photonics.com/spotlight_2006_10_09.html"
+    }]}
+}
+</script>
+</body>
+</html>

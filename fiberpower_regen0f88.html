@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-fxoOL0IHnF/OzRCho5AL6g=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>The software RP Fiber Power: regenerative amplifier, numerical simulation of pulse build-up</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/fiberpower_regen.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-05-22">
+<meta name="description" content="A regenerative amplifier is simulated with the software RP Fiber Power. Nonlinear and dispersive effects can be investigated.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="RP Fiber Power, regenerative amplifier, simulation, software">
+<script type="text/javascript" src="./jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" nonce="fxoOL0IHnF/OzRCho5AL6g==">
+page="fiberpower_regen.html?banner=RP_Fiber_Power_3"; cat="S"; shownbanner=""; ref="http://www.rp-photonics.com/bg/profiles/teraxion.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td class="selected"><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="fiberpower_regen_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software_start" href="software.html">Introduction</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<p>Products:</p>
+<a id="Overview" href="software_overview.html">Overview</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html" class="sel">RP Fiber Power</a>
+<a href="fiberpower_features.html" class="sub">Features</a>
+<a href="fiberpower_speed.html" class="sub">Speed</a>
+<a href="fiberpower_model.html" class="sub">Model</a>
+<a href="fiberpower_data.html" class="sub">Data</a>
+<a href="fiberpower_interface.html" class="sub">Interface</a>
+<a href="fiberpower_case_studies.html" class="sub sel">Demos</a>
+<a href="fiberpower_versions.html" class="sub">Versions</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<p>Various aspects:</p>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<p>Take action:</p>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main"><main>
+<div class="softwarelogo">
+<p class="fig" style="margin-top:12px"><img src="img/fiberpower_logo.png" width="75" height="75" alt="RP Fiber Power logo"></p>
+</div>
+<p class="breadcrumbs"><a href="software.html">Software</a> &gt; <a href="fiberpower.html">RP Fiber Power</a> &gt; <a href="fiberpower_case_studies.html">Demo</a> &gt; <a href="fiberpower_regen.html">Regenerative amplifier</a></p>
+<h1>RP Fiber Power &ndash; Simulation and Design Software <br> for Fiber Optics, Amplifiers and Fiber Lasers</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower.html">Overview</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_features.html">Features</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_speed.html">Speed</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_model.html">Model</a></td>
+</tr><tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_data.html">Data</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_interface.html">Interface</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="fiberpower_case_studies.html">Demos</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_versions.html">Versions</a></td>
+</tr>
+</table>
+<h2>Example Case: Regenerative Amplifier</h2>
+<h3>Description of the Model</h3>
+<p>Here, we numerically simulate the amplification of ultrashort pulses in a regenerative amplifier.
+In such a device, a pulse circulates many times in a resonator containing an amplifier, until it is ejected when the pulse energy has reached a high value.</p>
+<p>Such devices are very limited in performance when made with a fiber, because the nonlinear effects are very strong.
+Therefore, it is assumed that a bulk piece of doped glass is used, where the length is only 3&nbsp;mm and the signal beam radius of 150&nbsp;&mu;m is relatively large.
+As such a bulk device is normally <a href="end_pumping.html" title="a technique of optically pumping a laser medium in a direction along the laser beam">end-pumped</a>, the model of <b>RP Fiber Power</b> is absolutely suitable, even though it is no fiber device.</p>
+<h3>Results</h3>
+<p>Figure&nbsp;1 shows how the pulse parameters evolve in the regenerative amplifier.
+In the beginning, the pulse energy is low, and the nonlinearity remains negligible, but there is some temporal pulse broadening resulting from the chromatic dispersion.
+Once the pulse energy becomes high, self-phase modulation broadens the spectrum, and the pulse duration rises faster.</p>
+<figure>
+<img src="img/fiberpower_regen1.png" alt="pulse evolution in regenerative amplifier">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Evolution of duration, bandwidth and energy of the pulses in the regenerative amplifier.
+</figcaption>
+</figure>
+<p>Figure&nbsp;2 shows the final pulse (after 60 round trips) in the time domain.
+It is approximately a <a href="parabolic_pulses.html" title="pulses with a parabolic intensity profile">parabolic pulse</a>, resulting from the interplay of (normal) chromatic dispersion and Kerr nonlinearity in the amplifying fiber.
+One also recognizes that the instantaneous frequency rises approximately linearly.</p>
+<figure>
+<img src="img/fiberpower_regen2.png" alt="final pulse from the regenerative amplifier">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Temporal profile of the amplified pulse.
+</figcaption>
+</figure>
+<p>In the anomalous dispersion regime, the amplifier would not work well: the peak power would rise enormously, and consequently the nonlinearity would blow up the optical spectrum too much.
+This would result in strongly distorted pulses.</p>
+<p>Figure&nbsp;3 shows the spectrum of the final pulse.
+It exhibits some wiggles as a result of strong self-phase modulation, but the spectral phase is approximately parabolic, promising easy <a href="pulse_compression.html" title="linear or nonlinear techniques for reducing the durations of optical pulses">pulse compression</a> after the amplifier (see below).</p>
+<figure>
+<img src="img/fiberpower_regen3.png" alt="final pulse from the regenerative amplifier">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Spectral profile of the final pulse.
+</figcaption>
+</figure>
+<p>Figure&nbsp;4 shows how the output pulses could be temporally compressed with a dispersive <a href="pulse_compression.html" title="linear or nonlinear techniques for reducing the durations of optical pulses">pulse compressor</a> with second-order dispersion only.
+In text form, the results for optimized dispersion up to 4<sup>th</sup> order are also shown.</p>
+<figure>
+<img src="img/fiberpower_regen4.png" alt="compression of pulses from a regenerative amplifier">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Peak power and duration of the output pulse after a dispersive com&shy;pressor with variable dispersion.
+</figcaption>
+</figure>
+<p>Figure&nbsp;5 shows how the pulse parameters evolve in repetitive operation.
+The amplifier is continuously pumped, and pulse amplification is done with a repetition rate of 4&nbsp;kHz.
+(The first pulse amplification is started after pumping for a longer time.)
+As the time between two amplification cycles is not sufficient to fully replenish the energy stored in the gain medium, the pulse parameters vary.
+For the chosen parameters, they do <em>not</em> approach a state steady, but oscillate in the long run between two substantially different values.
+One would normally not operate an amplifier in that regime.</p>
+<figure>
+<img src="img/fiberpower_regen5.png" alt="pulses from a regenerative amplifier">
+<figcaption><span class="start">Figure&nbsp;5:</span> 
+Evolution of pulse parameters in repetitive operation of the regenera&shy;tive amplifier.
+</figcaption>
+</figure>
+<p>In Figure&nbsp;6, we vary the number of resonator round-trips per amplification cycle.
+The repetition rate is kept fixed at 4&nbsp;kHz.
+If the number of round-trips is low, e.g. 50, the pulse energy is low, because there is simply not enough gain to fully amplify the pulses.
+Above about 74 round-trips, we get into a regime where the pulse energy oscillates between two values &ndash; a so-called bifurcation.
+For some parameter sets, one may obtain further bifurcations and even a chaotic regime; that depends on parameters like the repetition rate, the number of round-trips for amplification, the initial pulse energy, the pump power, etc.
+In our case, however, a complete pulse break-up due to nonlinearities from 83 cycles on supersedes such effects.</p>
+<figure>
+<img src="img/fiberpower_regen6.png" alt="pulses from a regenerative amplifier">
+<figcaption><span class="start">Figure&nbsp;6:</span> 
+Pulse energy versus the number of resonator round-trips per amplification cycle.
+</figcaption>
+</figure>
+<p>(<a href="fiberpower_case_studies.html">back to the list of example cases</a>)</p>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</main></div>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="fxoOL0IHnF/OzRCho5AL6g==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Software",
+      "item": "https://www.rp-photonics.com/software.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "RP Fiber Power",
+      "item": "https://www.rp-photonics.com/fiberpower.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Demo",
+      "item": "https://www.rp-photonics.com/fiberpower_case_studies.html"
+    },{
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Regenerative amplifier",
+      "item": "https://www.rp-photonics.com/fiberpower_regen.html"
+    }]}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-zsRscl2yRD9L6A32tuo1JQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>The Photonics Spotlight - Why Are Large Mode Areas Problematic?</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/spotlight_2019_11_19.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2019-11-19">
+<meta name="description" content="It is explained why both large mode areas fibers and bulk laser resonators with large mode areas tend to be substantially less robust than others. The fundamental reason behind that is related to the reduced effect of diffraction. That also has implications for the power scaling of lasers.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="photonics, spotlight, news, publications, blog, RSS feed, encyclopedia, laser physics, technology">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Photonics Spotlight - Why Are Large Mode Areas Problematic?">
+<meta property="og:description" content="It is explained why both large mode areas fibers and bulk laser resonators with large mode areas tend to be substantially less robust than others. The fundamental reason behind that is related to the reduced effect of diffraction. That also has implications for the power scaling of lasers.">
+<meta property="og:url" content="https://www.rp-photonics.com/spotlight_2019_11_19.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/spotlight_2019_11_19.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="It is explained why both large mode areas fibers and bulk laser resonators with large mode areas tend to be substantially less robust than others. The fundamental reason behind that is related to the reduced effect of diffraction. That also has implications for the power scaling of lasers.">
+<meta name="twitter:title" content="The Photonics Spotlight - Why Are Large Mode Areas Problematic?">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/spotlight_2019_11_19.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="zsRscl2yRD9L6A32tuo1JQ==">
+page="spotlight_2019_11_19.html"; cat="P"; shownbanner=""; ref="http://www.rp-photonics.com/encyclopedia.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="zsRscl2yRD9L6A32tuo1JQ==">shownsponsors="EKSMA OPTICS"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight" class="selected"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="spotlight.html">The Photonics Spotlight</a> &gt; <a href="spotlight_2019_11_19.html">2019-11-19</a></p>
+<h1 class="posting">Why Are Large Mode Areas Problematic?</h1>
+<div class="posting_details">
+<p>Posted on 2019-11-19 as a part of the <a href="spotlight.html">Photonics Spotlight (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="spotlight_2019_11_19.html" class="url">https://www.rp-photonics.com/spotlight_2019_11_19.html</a></p>
+<p>Author: <a href="https://www.rp-photonics.com/paschotta.html" rel="author">Dr. Rüdiger Paschotta</a>, <a href="https://www.rp-photonics.com/">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: It is explained why both large mode areas fibers and bulk laser resonators with large mode areas tend to be substantially less robust than others. The fundamental reason behind that is related to the reduced effect of diffraction. That also has implications for the power scaling of lasers.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p>There are certain typical cases where we need to use <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a> with a relatively large mode area:</p>
+<ul>
+<li>In <a href="fiber_optics.html" title="optics based on optical fibers">fiber optics</a>, we often need to avoid excessive <a href="optical_intensity.html" title="optical power per unit area">optical intensities</a> in order to prevent damage or disturbing <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinear</a> effects.</li>
+<li>In <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonators</a>, we need large mode areas in order to maintain a high <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a> in <a href="high_power_lasers.html" title="lasers emitting very high optical powers">high-power lasers</a>, where the beam diameter needs to be relatively large.</li>
+</ul>
+<p>Although the details of the physical effects determining the mode sizes in fibers and <a href="bulk_lasers.html" title="lasers based on bulk crystals as gain media">bulk laser</a> resonators are quite different, a common experience is that devices with large mode areas tend to be less robust than others:</p>
+<ul>
+<li><a href="large_mode_area_fibers.html" title="optical fibers with relatively large mode areas and a single transverse mode or only a few modes">Large mode area fibers</a> exhibit substantial <a href="bend_losses.html" title="propagation losses in an optical fiber (or other waveguide) caused by bending">bend losses</a> even for quite moderate bending.
+There may be even effects of micro-bends which can be difficult to suppress.</li>
+<li>Large mode area laser resonators are quite sensitive to influences like misalignment of <a href="laser_mirrors.html" title="high-quality mirrors used in laser resonators and other optical setups">laser mirrors</a>, <a href="thermal_lensing.html" title="a lensing effect induced by temperature gradients">thermal lensing</a> and any <a href="optical_aberrations.html" title="degradations of optical images caused in imaging instruments">optical aberrations</a>.</li>
+</ul>
+<p>There has been a lot of work aiming at resolving such kind of trade-offs, but only with quite limited success.
+This is because the sensitivity of large modes of waveguides or resonators is high due to a relatively simple fundamental reason, which I explain in the following:</p>
+<ul>
+<li>A fiber (or waveguide) mode involves a balance between two counteracting effects: <a href="diffraction.html" title="wave phenomena which occur when light waves hit some structure with variable transmission or phase changes">diffraction</a> tends to enlarge the beam cross-section, while the <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> profile provides a focusing effect.
+Similarly, in a bulk laser resonator we have diffraction combined with focusing effects in isolated optical elements, such as curved laser mirrors, and to some extent thermal lensing.</li>
+<li>If the mode area is increased, diffraction inevitably gets weaker.
+That means that the applied focusing effects also need to be made correspondingly weaker &ndash; for example, by using a refractive index profile with low index contrast in a fiber, or by using only weekly curved laser mirrors.</li>
+<li>Now we see that large modes are based on the <b>balance of two quite <em>weak</em> counteracting effects</b>.
+That implies that any additional effects can easily become substantial &ndash; for example, bending of a fiber, misalignment of laser mirrors or any optical aberrations.
+In contrast, the guided mode of a standard <a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode fiber</a> experiences strongly fraction and refractive index confinement, so that any other effects like bending cannot have much impact on the mode.</li>
+</ul>
+<p>For those fundamental reasons, there has been only moderate success in terms of increased mode areas in recent years.
+One can make single-mode fibers with mode areas of a few thousand micrometers squared, but not much more, since the explained problems would become excessive.
+Similarly, mode areas of laser resonators cannot be arbitrarily extended.</p>
+<p>Well, it does help to increase the resonator length, because that strengthens the effect of diffraction, but there are obviously practical limits to that.
+You may have noticed that high-power lasers, particularly those with high beam quality, require relatively long resonators.
+Here, it would be wrong to believe that the long length is behind the substantial alignment sensitivity; instead, things would get even worse when trying to make the resonator short (as needed e.g. for obtaining short pulse durations with <a href="q_switching.html" title="a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q switching</a>).</p>
+<h2 class="togglediv">Large Modes &ldquo;See&rdquo; More of Phase Profiles</h2>
+<div>
+<p>There is actually another aspect to consider related to the sensitivity of large modes.
+For example, a focusing effect with a certain <a href="focal_length.html" title="a measure of how strongly an optical system focuses or defocuses light">focal length</a> can be described with a quadratic transverse phase change profile.
+Clearly, such a phase change will be more relevant to a large mode, simply because it &ldquo;sees&rdquo; more of the phase variation.
+Similarly, misalignment of a laser mirror can be described with a phase change which varies linearly e.g. with the <span class="eqn_il"><i>x</i></span> coordinate; the phase variation across a large beam is obviously larger than for a tightly focused beam.</p>
+</div>
+<h2 class="togglediv">Power Scaling is Limited by Resonator Properties</h2>
+<div>
+<p>Based on these considerations, one can see that there is a fundamental limit to the <a href="power_scaling_of_lasers.html" title="a procedure for substantially increasing the output power of lasers">power scalability</a> of both <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber lasers</a> and <a href="bulk_lasers.html" title="lasers based on bulk crystals as gain media">bulk lasers</a>, as long as we require large modes for high beam quality.
+Although <a href="thin_disk_lasers.html" title="solid-state bulk lasers having a very thin disk of laser-active material as the gain medium">thin-disk lasers</a>, for example, with impressive performance, with many kilowatts of output power combined with excellent beam quality, the limiting effects of laser resonators are already felt.
+So it is not only a matter of developing even better thin-disk laser heads; the fundamental limits of resonators remain, and there is unfortunately little which we can do about that.
+For even higher powers with high beam quality, one may then have to go for <a href="beam_combining.html" title="a class of techniques for power scaling of laser sources by combining the outputs of multiple devices">beam combining</a> with multiple lasers.</p>
+</div>
+<hr>
+<p style="font-size:90%; margin-bottom:10px;">This article is a posting of the <a href="spotlight.html">Photonics Spotlight</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page and cite it, because its location is permanent.
+See also the <a href="encyclopedia.html">RP Photonics Encyclopedia</a>.</p>
+<p>Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="https://www.rp-photonics.com/spotlight.rss">RSS feed</a>.</p>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="spotlight_2019_11_19.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/spotlight_2019_11_19.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2019_11_19.html&text=The+Photonics+Spotlight+-+Why+Are+Large+Mode+Areas+Problematic%3F" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2019_11_19.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2019_11_19.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2019_11_19.html"&gt;<br>Article on The Photonics Spotlight - Why Are Large Mode Areas Problematic?&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2019_11_19.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/spotlight_2019_11_19.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Paschotta</a>, RP Photonics Consulting GmbH. All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./marketing_contact.html">contact</a>, <a href="./privacy.html">data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Numerical Pulse Propagation</h2>
+<p><a href="./propulse.html?banner=RP_ProPulse">RP ProPulse</a> can simulate pulse propagation in many devices:</p>
+<ul>
+<li>in the resonators of <a href="./propulse_demo_aml.html?banner=RP_ProPulse">actively</a> or <a href="./propulse_demo_pml.html?banner=RP_ProPulse">passively mode-locked lasers</a></li>
+<li>in synchronously pumped OPOs</li>
+<li>in optical fibers, e.g. for <a href="./propulse_demo_compression.html?banner=RP_ProPulse">pulse compression</a> or <a href="./propulse_demo_solitonshift.html?banner=RP_ProPulse">soliton studies</a></li>
+</ul>
+<p style="text-align:center;"><a href="./propulse.html?banner=RP_ProPulse"><img src="./img/rp_propulse_smaller.png" alt="RP ProPulse"></a></p>
+<p>Further features:</p>
+<ul>
+<li><a href="./propulse_interface.html?banner=RP_ProPulse">interactive pulse display</a></li>
+<li>great flexibility due to <a href="./software_script_language.html?banner=RP_ProPulse">scripting</a></li>
+<li>comprehensive documentation</li>
+<li>competent <a href="./software_support.html?banner=RP_ProPulse">technical support</a></li>
+</ul>
+<a href="./propulse.html?banner=RP_ProPulse"><img src="./img/propulse_window.png" alt="pulse display window"></a>
+<p>Use <a href="./propulse.html?banner=RP_ProPulse"><b>RP ProPulse</b></a> to acquire a full understanding of your devices!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="zsRscl2yRD9L6A32tuo1JQ==">shownbanner = "RP ProPulse";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Sponsors of the Encyclopedia</h2>
+<p>We are grateful to the <a href="./encyclopedia_sponsoring.html?banner=sponsoring">sponsors</a> of our encyclopedia:</p>
+<div style="margin-top:10px; text-align:center;"><a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/nkt_photonics.html"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo"></a></div>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="zsRscl2yRD9L6A32tuo1JQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/spotlight_2019_11_19.html"
+    },
+    "headline": "Why Are Large Mode Areas Problematic?",
+    "image": "https://www.rp-photonics.com/previews/spotlight_2019_11_19.png",
+    "datePublished": "2019-11-19",
+    "description": "It is explained why both large mode areas fibers and bulk laser resonators with large mode areas tend to be substantially less robust than others. The fundamental reason behind that is related to the reduced effect of diffraction. That also has implications for the power scaling of lasers.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "The Photonics Spotlight",
+      "item": "https://www.rp-photonics.com/spotlight.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "2019-11-19",
+      "item": "https://www.rp-photonics.com/spotlight_2019_11_19.html"
+    }]}
+}
+</script>
+</body>
+</html>

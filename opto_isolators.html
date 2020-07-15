@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-USoJrxGEOTQtr3/Z1i5YzQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - opto-isolators, solid-state relay, isolation voltage, current transfer ratio</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/opto_isolators.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Opto-isolators, also called optocouplers or photocouplers, are optoelectronic components which can be used to transmit analog or digital electrical signals between two electrical circuits while providing electrical isolation.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="opto-isolators, solid-state relay, isolation voltage, current transfer ratio">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Opto-isolators">
+<meta property="og:description" content="Opto-isolators, also called optocouplers or photocouplers, are optoelectronic components which can be used to transmit analog or digital electrical signals between two electrical circuits while providing electrical isolation.">
+<meta property="og:url" content="https://www.rp-photonics.com/opto_isolators.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/opto_isolators.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Opto-isolators, also called optocouplers or photocouplers, are optoelectronic components which can be used to transmit analog or digital electrical signals between two electrical circuits while providing electrical isolation.">
+<meta name="twitter:title" content="Opto-isolators">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/opto_isolators.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="USoJrxGEOTQtr3/Z1i5YzQ==">
+page="opto_isolators.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="USoJrxGEOTQtr3/Z1i5YzQ==">shownsponsors="TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_o.html">letter O</a> &gt; <a href="opto_isolators.html">opto-isolators</a></p>
+<h1>Opto-isolators</h1>
+<header style="margin-right:0;">
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: optoelectronic devices for signal transmission with electrical isolation between two electrical circuits</p>
+<p>Alternative terms: optocouplers, photocouplers, optical isolators</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Optokoppler, Opto-Isolatoren</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a></p>
+<p><a href="encyclopedia_cite.html?article=opto-isolators">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<figure class="right" style="width:172px;">
+<img src="img/opto-isolator.png" alt="opto-isolator">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+A common opto-isolator contains an LED and a bipolar phototransistor.
+</figcaption>
+</figure>
+<p>Opto-isolators, also called optocouplers or photocouplers, are <a href="optoelectronics.html" title="the technology of electronic devices that interact with light">optoelectronic</a> components which can be used to transmit analog or digital electrical signals between two electrical circuits while providing electrical isolation.
+An opto-isolator is normally provided in a compact package, e.g. of dual in-line type, as otherwise also used for small electronic components such as operational amplifiers.</p>
+<p>Similar functions are often obtained with transformers, which however cannot transmit DC signals and are typically substantially larger and more heavy than opto-isolators.</p>
+<p>Even though the term <em>optical isolators</em> is sometimes used, such devices must not be confused with optical isolators like <a href="faraday_isolators.html" title="optical isolators based on the Faraday effect">Faraday isolators</a>, which allow light transmission in one direction only.</p>
+<h2 class="togglediv">Operation Principle and Variants</h2>
+<div>
+<p>The operation principle of an opto-isolator is to convert an electrical signal to an optical signal, transmit that light signal and to convert it back into an electrical signal.
+Of course, one chooses an emitter which well matches the <a href="spectral_response_of_a_photodetector.html" title="the range of optical wavelengths for which a photodetector is sensitive">spectral response</a> of the receiver.
+Typically, one uses an infrared <a href="light_emitting_diodes.html" title="semiconductor diodes that emit light via electroluminescence">light-emitting diode</a> (LED, usually GaAs-based) and a silicon <a href="phototransistors.html" title="a type of semiconductor-based photodetector with internal current amplification for higher responsivity">phototransistor</a>.
+Those are mounted in a distance of a few millimeters, for example, within an opaque package.</p>
+<p>There are also isolators with other kinds of receivers, for example <a href="photoconductive_detectors.html" title="photodetectors which exhibit a reduction in electrical resistance caused by incoming light">photoresistors</a> (which are largely outdated) or <a href="p_i_n_photodiodes.html" title="photodiodes with a p&ndash;i&ndash;n semiconductor structure">p&ndash;i&ndash;n photodiodes</a>, or with Darlington phototransistors for a particularly high current transfer your ratio (see below).
+Early devices used an <a href="incandescent_lamps.html" title="light sources which produce thermal radiation from an electrically heated filament">incandescent lamp</a> as transmitter.</p>
+<p>There are even devices containing a triac; the output then remains switched on even when the input signal disappears, until the output current is interrupted in other ways.</p>
+<aside class="callout blue">There are opto-isolators with integrated driver circuits for transmitter and receiver.</aside>
+<p>Simple isolators contain only the LED and a phototransistor, for example (see Figure&nbsp;1), and no additional electronics.
+Others contain a complete receiver circuit, which requires some constant operation voltage and supplies an output voltage signal.
+Similarly, some devices contain a driver circuit which receives an input voltage signal.</p>
+<p>A special form is the <em>solid-state relay</em>, which is explicitly used for switching a load, somewhat similar to a conventional relay based on a magnetically actuated mechanical switch; the receiver may contain one or two MOSFETs (a special kind of transistors).</p>
+<p>Of course, the electrical integration must be done according to the type and specifications of the particular isolator used.
+There are substantial differences between different isolators.
+For example, devices with <a href="photoconductive_detectors.html" title="photodetectors which exhibit a reduction in electrical resistance caused by incoming light">photoresistors</a> can be used with arbitrary polarity, while those with photodiodes or phototransistors can not.</p>
+<p>There are also <em>bidirectional opto-isolators</em>.
+In principle, one may realize such a device based on two LEDs, where each one reacts to light of the other one.
+However, much better performance is achieved by using one opto-isolator for each direction, which may be integrated into a common package.</p>
+<aside class="callout blue">The type of optical coupling depends on the required isolation voltage.</aside>
+<p>The optical coupling between transmitter and receiver can be done in different ways.
+For example, one may just mount the transmitter close to the receiver to avoid substantial losses of light.
+For improved isolation, one can insert some dielectric material between them.
+One may also use a reflecting silicone dome or a kind of multimode <a href="waveguides.html" title="spatially inhomogeneous transparent structures for guiding light">waveguide</a>.
+Particularly for high isolation voltages, one may prefer to use a relatively long waveguide, perhaps even a long <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">optical fiber</a>.</p>
+</div>
+<h2 class="togglediv">Device Parameters</h2>
+<div>
+<p>Essential parameters of an opto-isolator are:</p>
+<aside class="callout blue">Typically, the maximum photocurrent is limited by the drive current. Very different values of the current transfer ratio are possible.</aside>
+<ul>
+<li>One requires a certain <em>input current</em> to the LED.
+This is not a fixed value, however: it depends on how much <a href="photocurrent.html" title="an electric current which is induced by incident light in a photodetector">photocurrent</a> is required on the receiver side, particularly for the common devices based on an LED and a phototransistor: the maximum photocurrent is proportional to the optical power, which itself is proportional to the LED drive current.
+Therefore, apart from a <em>maximum allowed input current</em> manufacturers specify a <em>current transfer ratio</em>, which is the ratio of photocurrent to the drive current.
+The current transfer ratio depends on the efficiency of the emitter, the efficiency of the light transfer to the receiver, and on the <a href="responsivity.html" title="photocurrent per unit optical power incident on a photodetector">responsivity</a> of the receiver.
+Opto-isolators differ very much in that respect; while some have values well below 1&#37;, others (with a phototransistor and efficient light coupling) can have ratios above 5 (= 500&#37;).</li>
+<li>Such a device has a certain specified <em>isolation voltage</em>, i.e., a maximum allowed voltage between transmitter and receiver, which is often a couple of kilovolts.
+For operation with higher voltages, an electrical breakdown may occur, which would typically destroy the device.</li>
+<li>The operation <a href="bandwidth.html" title="the width of some frequency or wavelength range"><em>bandwidth</em></a> can easily be in the megahertz region, sometimes even above 1&nbsp;GHz.
+The fastest response is obtained with <a href="p_i_n_photodiodes.html" title="photodiodes with a p&ndash;i&ndash;n semiconductor structure">p&ndash;i&ndash;n photodiodes</a>.
+Phototransistors are typically slower than photodiodes.</li>
+<li>Typically, the relation between photocurrent and input drive current is fairly <em>linear</em> over a substantial range.
+(To exploit that linearity, one may need a driver circuit which provides an output current proportional to its input voltage.)
+However, some devices are meant to be for digital signals, where linearity is no relevant aspect.</li>
+</ul>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="opto_isolators.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="light_emitting_diodes.html" title="semiconductor diodes that emit light via electroluminescence">light-emitting diodes</a>, <a href="phototransistors.html" title="a type of semiconductor-based photodetector with internal current amplification for higher responsivity">phototransistors</a>, <a href="power_over_fiber.html" title="delivery of power for electronic devices via light in an optical fiber">power over fiber</a><br>and other articles in the category <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/opto_isolators.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fopto_isolators.html&text=RP+Photonics+Encyclopedia+-+opto-isolators%2C+solid-state+relay%2C+isolation+voltage%2C+current+transfer+ratio" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fopto_isolators.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fopto_isolators.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/opto_isolators.html"&gt;<br>Article on Opto-isolators&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/opto_isolators.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/opto_isolators.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/opto_isolators.html<br>article on 'Opto-isolators' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Business Disputes</h2>
+<p>Occasionally, serious disputes arise, e.g. when a company purchases a laser from some supplier. Conflicting views may occur concerning questions as:</p>
+<ul>
+<li>Is the <a href="./beam_quality.html?banner=arbitration">beam quality</a> consistent with the somewhat vague specifications?</li>
+<li>Is it normal that the laser pulses exhibit substantial <a href="./timing_jitter.html?banner=arbitration">timing jitter</a>?</li>
+<li>Should it be considered as acceptable that the laser stays within specifications only if its alignment is optimized quite often by the user?</li>
+</ul>
+<h3>Mediation</h3>
+<p>Going to court is usually the last thing you want to do &ndash; but how else to resolve a conflict?</p>
+<p>Mediation is a much more attractive approach. Only, you need to find a mediator</p>
+<ul>
+<li>who fully understands the technical matters, and</li>
+<li>who can be trusted to be impartial and fair.</li>
+</ul>
+<p><a href="./paschotta.html?banner=arbitration">Dr. Paschotta</a> from RP Photonics offers such services. Your chance is to reach a fair resolution with far less time and money than at court.</p>
+<p>See also our <a href="./spotlight_2014_01_17.html?banner=arbitration">Spotlight article</a> on this matter.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="USoJrxGEOTQtr3/Z1i5YzQ==">shownbanner = "arbitration";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Free Tutorial: Modeling of Fiber Amplifiers and Lasers</h2>
+<p>We have published a new <a href="./tutorial_modeling.html?banner=modeling_tutorial">tutorial</a> which discusses the modeling of fiber amplifiers and lasers.
+It addresses many questions:</p>
+<ul>
+<li>What is a <a href="./tutorial_modeling1.html?banner=modeling_tutorial">model</a>?</li>
+<li>Should one use <a href="./tutorial_modeling3.html?banner=modeling_tutorial">power propagation or field propagation</a>?</li>
+<li>How to simulate the behavior of <a href="./tutorial_modeling4.html?banner=modeling_tutorial">laser-active ions</a>?</li>
+<li>How to calculate <a href="./tutorial_modeling5.html?banner=modeling_tutorial">steady-state solutions</a>?</li>
+<li>How to simulate <a href="./tutorial_modeling6.html?banner=modeling_tutorial">dynamical behavior</a> and <a href="./tutorial_modeling7.html?banner=modeling_tutorial">ultrashort pulse propagation</a>?</li>
+<li>What aspects are important for the <a href="./tutorial_modeling8.html?banner=modeling_tutorial">decision</a> whether to develop own modeling software or use commercial software?</li>
+</ul>
+<p><a href="./tutorial_modeling.html?banner=modeling_tutorial">Read the tutorial!</a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="USoJrxGEOTQtr3/Z1i5YzQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/opto_isolators.html"
+    },
+    "headline": "Opto-isolators",
+    "image": "https://www.rp-photonics.com/previews/opto_isolators.png",
+    "datePublished": "2019-05-31",
+    "dateModified": "2020-03-14",
+    "description": "Opto-isolators, also called optocouplers or photocouplers, are optoelectronic components which can be used to transmit analog or digital electrical signals between two electrical circuits while providing electrical isolation.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter O",
+      "item": "https://www.rp-photonics.com/encyclopedia_o.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "opto-isolators",
+      "item": "https://www.rp-photonics.com/opto_isolators.html"
+    }]}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-saxwm1ZZK5k+4s7neBgeHQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>The Photonics Spotlight - Rate Equations - An Example for Stiff Sets of Differential Equations</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/spotlight_2008_10_20.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2008-10-20">
+<meta name="description" content="Rate equations for level populations in rare earth ions are often of a kind which is called a stiff set of differential equations. The article discusses this in some detail and draws a number of conclusions, which are relevant e.g. for the modeling of fiber amplifiers and fiber lasers.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="photonics, spotlight, news, publications, blog, RSS feed, encyclopedia, laser physics, technology">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Photonics Spotlight - Rate Equations - An Example for Stiff Sets of Differential Equations">
+<meta property="og:description" content="Rate equations for level populations in rare earth ions are often of a kind which is called a stiff set of differential equations. The article discusses this in some detail and draws a number of conclusions, which are relevant e.g. for the modeling of fiber amplifiers and fiber lasers.">
+<meta property="og:url" content="https://www.rp-photonics.com/spotlight_2008_10_20.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/spotlight_2008_10_20.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Rate equations for level populations in rare earth ions are often of a kind which is called a stiff set of differential equations. The article discusses this in some detail and draws a number of conclusions, which are relevant e.g. for the modeling of fiber amplifiers and fiber lasers.">
+<meta name="twitter:title" content="The Photonics Spotlight - Rate Equations - An Example for Stiff Sets of Differential Equations">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/spotlight_2008_10_20.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="saxwm1ZZK5k+4s7neBgeHQ==">
+page="spotlight_2008_10_20.html"; cat="P"; shownbanner=""; ref="http://www.rp-photonics.com/spotlight.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="saxwm1ZZK5k+4s7neBgeHQ==">shownsponsors="eagleyard Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight" class="selected"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="spotlight.html">The Photonics Spotlight</a> &gt; <a href="spotlight_2008_10_20.html">2008-10-20</a></p>
+<h1 class="posting">Rate Equations &ndash; An Example for Stiff Sets of Differential Equations</h1>
+<div class="posting_details">
+<p>Posted on 2008-10-20 as a part of the <a href="spotlight.html">Photonics Spotlight (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="spotlight_2008_10_20.html" class="url">https://www.rp-photonics.com/spotlight_2008_10_20.html</a></p>
+<p>Author: <a href="https://www.rp-photonics.com/paschotta.html" rel="author">Dr. Rüdiger Paschotta</a>, <a href="https://www.rp-photonics.com/">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: Rate equations for level populations in rare earth ions are often of a kind which is called a stiff set of differential equations. The article discusses this in some detail and draws a number of conclusions, which are relevant e.g. for the modeling of fiber amplifiers and fiber lasers.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p class="ref">Ref.: encyclopedia articles on <a href="rate_equation_modeling.html" title="a method of modeling the dynamics of laser gain media">rate equation modeling</a></p>
+<figure class="right" style="width:222px;">
+<img src="img/erbium_transitions.png" alt="erbium energy levels and transitions">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Level system of Er<sup>3+</sup> ions.
+</figcaption>
+</figure>
+<p>The temporal evolution of the populations of electronic levels in some laser <a href="gain_media.html" title="media for laser amplification">gain medium</a> (containing e.g. <a href="rare_earth_doped_gain_media.html" title="laser gain media which are doped with rare earth ions">rare earth ions</a>) can be calculated with <a href="rate_equation_modeling.html" title="a method of modeling the dynamics of laser gain media">rate equations</a>.
+These are systems of ordinary differential equations, with coupling terms resulting from processes like <a href="spontaneous_emission.html" title="a quantum effect, causing the spontaneous decay of excited states of atoms or ions">spontaneous emission</a>, <a href="non_radiative_transitions.html" title="transitions between energy levels of atoms or ions which are not associated with the emission of light">non-radiative transitions</a>, <a href="stimulated_emission.html" title="a quantum effect, where photon emission is triggered by other photons">stimulated emission</a> and <a href="energy_transfer.html" title="the phenomenon that dopant ions in laser-active media can exchange excitation energy among each other">energy transfers</a>.
+In principle, it is simple to numerically calculate the temporal evolution even for relatively complicated rate equation systems.
+This can also be used for approximately calculating the steady-state population values for given optical intensities e.g. of a pump wave and a signal wave.</p>
+<p>However, there is a frequently encountered problem: in many situations of interest, the rate equations represent a so-called &ldquo;stiff&rdquo; set of differential equations.
+This happens when the transitions between different levels are caused by physical processes which operate on very different time scales.
+For example, consider the level system of erbium (as used in <a href="erbium_doped_fiber_amplifiers.html" title="fiber amplifiers based on erbium-doped optical fibers">erbium-doped fiber amplifiers</a>), which is shown in Figure&nbsp;1.
+As explained in the encyclopedia article on <a href="rate_equation_modeling.html" title="a method of modeling the dynamics of laser gain media">rate equation modeling</a>, the rate equations for a situation with some given pump and signal intensities read as follows:</p>
+<div class="eqn"><img src="eqn/erbium_rates.gif" width="405" height="149" alt="transition rates in erbium ions"></div>
+<p>The simulated temporal evolution for some set of parameters is shown in Figure&nbsp;2.</p>
+<figure>
+<img src="img/stiff_rate_equations.png" alt="temporal evolution of erbium populations">
+</figure>
+<p>It is an essential detail that the coefficient <span class="eqn_il"><i>A</i><sub>32</sub></span>, describing <a href="non_radiative_transitions.html" title="transitions between energy levels of atoms or ions which are not associated with the emission of light">non-radiative</a> <a href="multi_phonon_transitions.html" title="transitions between electronic levels of atoms or ions in solid media, involving the emission of multiple phonons">multi-phonon transitions</a> from the pump level to the upper laser level, is usually much larger than the other coefficients, including the terms with the pumping rates.
+For that reason, ions pumped into level 3 will very quickly be transferred into level 2, so that the population of level 3 itself remains very small.</p>
+<p>The curves shown look very smooth, so that one may expect it to be very easy and efficient to integrate the rate equations numerically with a step size of say 50&thinsp;&mu;s.
+If you try that, however, you will find that numerical results are absolutely wrong, wildly oscillating with quickly increasing amplitude.
+Good results are obtained only once you reduce the temporal step size to the order of <span class="eqn_il">1/<i>A</i><sub>32</sub></span>, which is 1&thinsp;&mu;s in this example.
+With the Euler method, where one step simply means to add the temporal derivatives times the temporal step size to the current populations, the instability starts for step sizes just above 2&thinsp;&mu;s.
+With the more refined Runge&ndash;Kutta algorithm, you can go only slightly further to a step size of about 3.7&thinsp;&mu;s.
+Of course, that behavior would be even far worse if <span class="eqn_il"><i>A</i><sub>32</sub></span> were substantially larger.</p>
+<p>The observed behavior can be understood by first considering a simple exponential decay (with a single time constant).
+It is easy to see that the Euler method will deliver oscillating results when the temporal step size is larger than the time constant of the system, and it will even be unstable when the step size is at least twice the time constant.
+Figure&nbsp;2 illustrates this: the lowest curve is for a step size of half the time constant (resulting in moderate errors), and the higher curves are for integer multiples of half the time constant.</p>
+<figure>
+<img src="img/euler_propagation.png" alt="Euler propagation">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Behavior of the Euler method, applied to a simple exponential decay with different numerical step sizes.
+The correct solution is always shown as a thin blue curve.
+When the numerical step size is larger than twice the time constant (which is the case for the highest curve), the propagation becomes totally unstable, with exponentially increasing errors.
+</figcaption>
+</figure>
+<p>Now this problem doesn't go away if the system is more complex and has some slower processes in addition.
+Even when the exact value of the fast time constant of the system has nearly no effect on the longer-term evolution of the system, the corresponding process makes the numerical solution unstable when the step size is too large.</p>
+<p>Examining the concrete rate equation system (see above) can also be instructive.
+When we start with all erbium ions being in the ground state (level 1), a first Euler step will pump some population from level 1 to 3.
+The calculated population of level 3 is then too high, as the decay from level 3 to 2 is not yet considered.
+In the next step, there will be a strong transfer from level 3 to 2, and if the step size is larger than twice the corresponding time constant, the population of level 3 will &ldquo;overshoot&rdquo; and get substantially negative (which is physically unreasonable, of course).
+In the third step, we obtain a transfer in the opposite direction, making the deviation from the correct solution even larger.</p>
+<p>We can learn several things:</p>
+<ul>
+<li>Examining the problem in the context of a well understood physical system, we can obtain a very good understanding of the numerical problem.
+We clearly see then that a more advanced propagation algorithm, such as the Runge&ndash;Kutta or the Bulirsch&ndash;Stoer method, does not solve the problem.</li>
+<li>In many situations, we can remove the problem by adiabatically eliminating some variables.
+In our example, we could approximate the fast transition from level 3 to 2 as being infinitely fast, thus assuming that the pumping from level 1 directly leads into level 2.</li>
+<li>If we cannot use that approximation, we see that it is no good idea to calculate the steady-state populations simply by simulating the temporal evolution.
+If we need an efficient calculation of the steady state, this is better done as multidimensional root finding (setting the temporal derivatives to zero).
+The multidimensional Newton&ndash;Raphson method is probably most suitable.
+Note that the derivatives with respect to population values, as needed there, can be quite easily computed for the typical kinds of rate equations.</li>
+</ul>
+<p>I actually got inspired to write about this by my work on the substantially extended version 2 of the software <a href="fiberpower.html"><b>RP Fiber Power</b></a>, which calculates the optical powers in <a href="fiber_amplifiers.html" title="optical amplifiers with doped fibers as gain media">fiber amplifiers</a> and <a href="fiber_lasers.html" title="lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber lasers</a>.
+While the previous version could be used only for simple laser-active ions with only a single metastable level, the new version allows the user to define complicated level systems process by process, including <a href="energy_transfer.html" title="the phenomenon that dopant ions in laser-active media can exchange excitation energy among each other">energy transfers</a> even between different types of ions (such as Er<sup>3+</sup> and Yb<sup>3+</sup>).
+This software (which is basically finished and currently undergoes intensive testing) must efficiently calculate the steady-state populations for arbitrary cases, including those where the rate equations are extremely stiff, and also possibly nonlinear.
+Therefore, I had to implement the multidimensional Newton&ndash;Raphson method, as mentioned above.</p>
+<hr>
+<p style="font-size:90%; margin-bottom:10px;">This article is a posting of the <a href="spotlight.html">Photonics Spotlight</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page and cite it, because its location is permanent.
+See also the <a href="encyclopedia.html">RP Photonics Encyclopedia</a>.</p>
+<p>Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="https://www.rp-photonics.com/spotlight.rss">RSS feed</a>.</p>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="spotlight_2008_10_20.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/spotlight_2008_10_20.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2008_10_20.html&text=The+Photonics+Spotlight+-+Rate+Equations+-+An+Example+for+Stiff+Sets+of+Differential+Equations" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2008_10_20.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fspotlight_2008_10_20.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2008_10_20.html"&gt;<br>Article on The Photonics Spotlight - Rate Equations - An Example for Stiff Sets of Differential Equations&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/spotlight_2008_10_20.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/spotlight_2008_10_20.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Paschotta</a>, RP Photonics Consulting GmbH. All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./marketing_contact.html">contact</a>, <a href="./privacy.html">data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Your Lab is Closed due to the Corona Virus Crisis?</h2>
+<p>Time to think how to best utilize your time!</p>
+<p>Here is a suggestion: <br> <b>Consider to start with physical modeling!</b></p>
+<ul>
+<li>Build models for your existing or planned lasers and amplifiers, resonators, etc.</li>
+<li>Utilize such models in order to <b>improve your qualitative and quantitative understanding</b>, solve problems, optimize device performance and <b>develop new ideas</b>.</li>
+<li>Power up your home office instead of wasting your time!</li>
+<li>When getting back to the lab, restart with fresh plans and full power.</li>
+</ul>
+<img src="./img/rp_photonics.png" alt="RP Photonics" style="margin-top:20px; width:225px;">
+<p>offers powerful <a href="./software.html?banner=lab_closed">simulation &amp; design software</a>, e.g. for <a href="./fiberpower.html?banner=lab_closed">active and passive fiber devices</a>, <a href="./resonator.html?banner=lab_closed">laser resonators</a> and <a href="./coating.html?banner=lab_closed">thin-film coatings</a>!</p>
+<p>Getting helpful <a href="./software_support.html?banner=lab_closed">support</a> from RP also benefits your projects.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="saxwm1ZZK5k+4s7neBgeHQ==">shownbanner = "lab closed";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Tutorial on Fiber Optics</h2>
+<p>See our <a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial">comprehensive fiber optics tutorial</a>:</p>
+<ul>
+<li>guiding light in single-mode and multimode fibers</li>
+<li>fiber ends and joints, propagation and coupling losses</li>
+<li>couplers and splitters</li>
+<li>polarization issues, chromatic dispersion, nonlinearities, pulse propagation</li>
+<li>fiber accessories and tools</li>
+</ul>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/fiber_core_small.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/mode_solver.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/pm_fibers_small.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./passive_fiber_optics.html?banner=fiber_optics_tutorial"><img src="./img/fiberpower_self_focusing4_small.png" alt="&nbsp;"></a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="saxwm1ZZK5k+4s7neBgeHQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/spotlight_2008_10_20.html"
+    },
+    "headline": "Rate Equations - An Example for Stiff Sets of Differential Equations",
+    "image": "https://www.rp-photonics.com/previews/spotlight_2008_10_20.png",
+    "datePublished": "2008-10-20",
+    "description": "Rate equations for level populations in rare earth ions are often of a kind which is called a stiff set of differential equations. The article discusses this in some detail and draws a number of conclusions, which are relevant e.g. for the modeling of fiber amplifiers and fiber lasers.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "The Photonics Spotlight",
+      "item": "https://www.rp-photonics.com/spotlight.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "2008-10-20",
+      "item": "https://www.rp-photonics.com/spotlight_2008_10_20.html"
+    }]}
+}
+</script>
+</body>
+</html>

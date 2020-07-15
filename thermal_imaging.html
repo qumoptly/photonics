@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-eSAiy/MFgf59GyI38GPu+A=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - thermal imaging, infrared cameras, principles of remote temperature measurements, compensation, emissivity, atmospheric absorption, inspection of buildings, machinery, fire detection, medical applications</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/thermal_imaging.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Thermal imaging (infrared thermography) means imaging based on thermal radiation, using infrared cameras. One can perform spatially resolved remote temperature measurements.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="thermal imaging, infrared cameras, principles of remote temperature measurements, compensation, emissivity, atmospheric absorption, inspection of buildings, machinery, fire detection">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Thermal Imaging">
+<meta property="og:description" content="Thermal imaging (infrared thermography) means imaging based on thermal radiation, using infrared cameras. One can perform spatially resolved remote temperature measurements.">
+<meta property="og:url" content="https://www.rp-photonics.com/thermal_imaging.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/thermal_imaging.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Thermal imaging (infrared thermography) means imaging based on thermal radiation, using infrared cameras. One can perform spatially resolved remote temperature measurements.">
+<meta name="twitter:title" content="Thermal Imaging">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/thermal_imaging.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="eSAiy/MFgf59GyI38GPu+A==">
+page="thermal_imaging.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="eSAiy/MFgf59GyI38GPu+A==">shownsponsors="eagleyard Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_t.html">letter T</a> &gt; <a href="thermal_imaging.html">thermal imaging</a></p>
+<h1>Thermal Imaging</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_thermal_imaging_cameras.html?s=vbox">13 suppliers for thermal imaging cameras</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_thermal_imaging_cameras.html?s=vbox">List of suppliers for<br>thermal imaging cameras</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: imaging based on thermal radiation</p>
+<p>Alternative term: infrared thermography</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Thermographie</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a>, <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<p><a href="encyclopedia_cite.html?article=thermal%20imaging">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Thermal imaging, also called <em>infrared thermography</em>, essentially means <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a> based on <a href="thermal_radiation.html" title="electromagnetic radiation which results from thermal emission">thermal radiation</a>.
+In some cases, one tries to obtain accurate temperature maps, i.e., to measure the temperatures of object surfaces.
+In other cases, qualitative information is sufficient &ndash; for example, for recognizing hot spots on some objects without measuring their temperatures.</p>
+<p>Typically, thermal imaging is applied to objects with temperatures not deviating too far from room temperature &ndash; for example, between &minus;50&thinsp;&deg;C and +100&thinsp;&deg;C.
+The thermal radiation emitted by such objects is mostly in the mid- to far-<a href="infrared_light.html" title="invisible light with wavelengths roughly between 750&thinsp;&thinsp;nm and 1&thinsp;&thinsp;mm">infrared</a> spectral region; near-infrared emission, for example, would be too weak to be detected.
+Another important aspect is the <a href="transmissivity.html" title="the ratio of transmitted optical power to the incident optical power at a surface">transmissivity</a> of air; imaging and particularly accurate temperature measurements are possible only with radiation which is largely transmitted by the atmosphere.
+Thermal imaging is therefore mostly done in the spectral regions between about 3&nbsp;&mu;m and 5&nbsp;&mu;m and between 8&nbsp;&mu;m and 12&nbsp;&mu;m, where the transmission of air is quite high, at least over moderate distances.
+At other <a href="wavelength.html" title="the spatial period of a plane wave">wavelengths</a> (outside those infrared atmospheric windows), there is strong <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorption</a> caused by water vapor and CO<sub>2</sub>, for example.
+When using such light, one would essentially see only the temperature distribution of air in front of the camera, but not the objects behind.</p>
+<h2 class="togglediv">Infrared Cameras</h2>
+<div>
+<p>There are various types of <a href="infrared_cameras.html" title="cameras which work with infrared light">infrared cameras</a> which can work with infrared light in the mentioned spectral regions of high atmospheric transmission.
+There is less choice of detectors for the long-wave infrared region around 10&nbsp;&mu;m, but that region is preferable for lower temperatures.
+As far as infrared <a href="photodetectors.html" title="devices used for the detection of light">photodetectors</a> are used in the <a href="image_sensors.html" title="optoelectronic sensors which can be used for imaging">image sensor</a>, they usually have to be cooled for operation at substantially reduced temperatures, e.g. 200&nbsp;K or sometimes even far lower.
+However, there are also <a href="thermal_detectors.html" title="light detectors which are based on measuring light-induced temperature rises">thermal detectors</a>, e.g. based on microbolometers, which can be operated around room temperature, although with lower sensitivity.</p>
+<p>For more details, see the article on <a href="infrared_cameras.html" title="cameras which work with infrared light">infrared cameras</a>.</p>
+<p>Such cameras typically have an <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical filter</a> which transmits only radiation in the wavelength region of interest.
+Note, however, that such a filter will not only absorb unwanted radiation, but also emit substantial thermal radiation itself, unless it is also cooled.</p>
+<p>Note that <a href="night_vision_devices.html" title="instruments which allow viewing or imaging under conditions of very low light levels">night vision devices</a> are usually not suitable for thermography, although they do have some sensitivity for near-infrared light.
+In that spectral region, there is negligible thermal radiation.</p>
+</div>
+<h2 class="togglediv">Infrared Images</h2>
+<div>
+<p>Images taken with infrared radiation can be displayed with a grayscale, where the appearance gets brighter at locations with more intense radiation.
+Alternatively, one often uses false colors.
+One often also displays a color scale, which allows one to associate colors with temperatures.
+See Figure&nbsp;1 for an example.</p>
+<p>The resolution of infrared images is often fairly low, because infrared sensors cannot be made with as many pixels as those of <a href="photo_cameras.html" title="optical instruments for taking photographic images">photo cameras</a>, for example.
+Simple thermal cameras may provide a resolution of only 120 &times; 160 pixels, for example.
+Sometimes, one simultaneously records images with a conventional image sensor for visible light, showing much more detail, and both images can be compared.</p>
+</div>
+<h2 class="togglediv">Principles of Remote Temperature Measurements</h2>
+<div>
+<p>In many cases, it is desirable not only to detect temperature differences qualitatively, but to accurately measure object temperatures.
+Compared with other temperature measurement methods, it is often advantageous that thermal imaging provides remote measurements (i.e., not requiring any contact with the objects) which can also be fairly quick.</p>
+<h3 class="togglediv">Measurements on Black Bodies</h3>
+<div>
+<p>We first consider the simplest possible situation, where thermal radiation from a black body is analyzed.
+This is a body with an <a href="emissivity.html" title="a measure for how strongly an object emits and absorbs thermal radiation">emissivity</a> of 1, which also necessarily exhibits complete <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorption</a> of incoming radiation and his zero <a href="transmissivity.html" title="the ratio of transmitted optical power to the incident optical power at a surface">transmissivity</a>, i.e., it is completely opaque.
+Its radiosity (&rarr;&nbsp;<a href="radiometry.html" title="the science and technology of measuring properties of electromagnetic radiation, including light">radiometry</a>) is determined by Stefan&ndash;Boltzmann law:</p>
+<div class="eqn"><img src="eqn/j_e_bb.gif" width="69" height="26" alt="Stefan-Boltzmann law"></div>
+<p>with the Stefan&ndash;Boltzmann constant <span class="eqn_il"><span class="greek">&sigma;</span></span> &approx; 5.6704 &middot; 10<sup>&minus;8</sup> W m<sup>&minus;2</sup> K<sup>&minus;4</sup> and the absolute temperature <span class="eqn_il"><i>T</i></span>.
+In practice, one will utilize only a part of the complete emission spectrum, i.e., obtain a correspondingly weaker detected signal.</p>
+<p>We also assume to have complete transmissivity of the atmosphere, eliminating any influences of that on the temperature measurement.</p>
+<aside class="callout green">Doesn't the object distance matter for the strength of the infrared signal?</aside>
+<p>Interestingly, the <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a> received by a single detector element of the camera does (for a fixed setting of the <a href="objectives.html" title="optical elements for collecting light from inspected objects, or for sending light to objects">objective</a>) <em>not</em> depend on the distance to the observed object.
+What counts is just the spectral <a href="radiance.html" title="the optical power per unit area and solid angle">radiance</a> of the thermal radiation.
+This is essentially because a larger observation distance, for example, is compensated by the correspondingly larger object area from which radiation for a certain camera pixel is collected.
+As a consequence, it is not necessary to use the object distance in the temperature calculation.</p>
+<p>However, a complication is that an infrared camera sensor will generally not simply provide some <a href="photocurrent.html" title="an electric current which is induced by incident light in a photodetector">photocurrent</a> which is proportional to the arriving radiance.
+For example, a microbolometer pixel exhibits an electrical resistance which depends on its temperature, and the difference of that temperature and the temperature of the substrate of the image sensor is what needs to be related to the incoming radiance.
+One will generally need to establish a relation between the sensor reading and the incoming radiance, and that relation may be somewhat different for the different pixels.
+Also, one will typically want to keep the substrate temperature constant, for example using a thermoelectric cooler.</p>
+</div>
+<h3 class="togglediv">Measurements on Objects with Reduced Emissivity</h3>
+<div>
+<p>In practice, one usually has to deal with objects which have an <a href="emissivity.html" title="a measure for how strongly an object emits and absorbs thermal radiation">emissivity</a> smaller than 1.
+That has two different effects:</p>
+<ul>
+<li>The radiance of the thermal emission is multiplied with the emissivity, i.e., it becomes weaker.</li>
+<li>In addition, the absorption of incoming radiation becomes non-zero.
+Still assuming that we deal with completely opaque objects, there will be some degree of specular or diffuse <a href="reflectivity.html" title="the ratio of reflected optical power to the incident optical power at a surface">reflectivity</a> for radiation coming from the environment &ndash; typically, the thermal radiation emitted by other objects.</li>
+</ul>
+<p>Such effects need to be compensated for making temperature measurements.
+The lower the emissivity of the imaged objects, the more difficult is generally that compensation.
+Fortunately, however, many building materials, for example, have a rather high emissivity around 0.9, which is very helpful for the energetic examination of buildings (see below).
+Difficulties arise for metallic part, as are often found in industrial settings.</p>
+<aside class="callout green">How to find out the emissivities of the imaged objects?</aside>
+<p>A first challenge is to find out the emissivity of the imaged objects.
+For many materials, the emissivity in the wavelength region of interest is known and can be read from published tables.
+In other cases, it is unknown, and they are then essentially two different ways of dealing with that:</p>
+<ul>
+<li>One can measure the emissivity by comparison of their thermal emission with other materials at the same temperature, for example.</li>
+<li>One can cover parts of them with absorbing tapes, paints and the like, having a high and well-known emissivity and acquiring the same temperature by thermal conduction.
+The temperature measurements are then done on those specially prepared spots.</li>
+</ul>
+<aside class="callout green">How much ambient infrared radiation is around?</aside>
+<p>The second challenge is to estimate the intensity of ambient radiation, which is reflected on imaged objects and therefore partially gets into the thermal imaging camera.
+Frequently, there is essentially only thermal radiation around in the wavelength region of interest (i.e., no infrared <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">lasers</a>, for example), and the corresponding temperature is reasonably well known &ndash; for example, it is often close to the temperature of air in a closed room, which can be measured with an ordinary thermometer (possibly with a temperature sensor which is integrated into the camera).
+One can then easily calculate the level of ambient infrared radiation and use that for the calculation of object temperatures.
+That can be difficult for outdoor measurements, however; for example, one may have substantially different levels of thermal radiation from the ground and from the sky.</p>
+<p>The mentioned compensations are often supported by software in thermal imaging devices.
+Alternatively, they may be applied on a computer to which the raw images are transferred.
+That may be more convenient, because one can then more easily adjust settings, e.g. the assumed emissivity values and ambient temperatures.</p>
+</div>
+<h3 class="togglediv">Measurements with Absorbing Atmosphere</h3>
+<div>
+<aside class="callout blue">The compensation of atmospheric absorption is generally difficult, but can often be avoided.</aside>
+<p>Further complications come into play when the atmosphere is not completely transmissive for the thermal radiation.
+One then has some reduction of the thermal radiation getting from the objects to the camera, but at the same time an additional thermal radiation generated in the atmosphere.
+Those effects could in principle be compensated in the temperature calculation, but that may not be very practical &ndash; one reason being that the degree of atmospheric absorption may vary substantially within the relevant wavelength region.
+Besides, different objects in a scene may have different distances to the camera.
+Therefore, one will usually try to work under conditions where atmospheric absorption can be neglected; this means limited objects distances and the use of appropriate spectral regions.</p>
+</div>
+</div>
+<h2 class="togglediv">Applications of Thermography</h2>
+<div>
+<h3 class="togglediv">Inspection of Buildings</h3>
+<div>
+<p>Thermography is often used for the inspection of buildings, mostly concerning their energetic qualities or deficiencies.
+Frequently, qualitative measurements can already be quite useful, for example for identifying locations with unexpected leaks for heat.</p>
+<p>One approach is to take images from outside the building in the cold weather conditions.
+Locations with increased surface temperatures then indicate spots with increased heat losses (see Figure&nbsp;1).
+Note, however, that absolute temperature measurements can be difficult, e.g. because of influences of ambient thermal radiation which can only be roughly estimated.
+Besides, it is difficult to quantify heat losses based on surface temperatures.</p>
+<figure>
+<img src="img/haustuer.jpg" alt="Infrared image of a door">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Infrared image of a door in winter, exhibiting increased surface temperatures compared with the surrounding insulated wall.
+</figcaption>
+</figure>
+<p>Some precautions should be taken to avoid errors.
+For example, it is preferable to avoid the influence of the sun by taking the images in the early morning; otherwise, one may misinterpret enhanced surface temperature caused by sunlight as heat losses.
+Also, the surfaces should be dry, avoiding cooling effects by evaporation.
+Further, all rooms should have been normally heated for at least several hours.</p>
+<p>One can also take images inside the building to locate parts which are substantially below room temperature.
+Those locations also indicate leaks for heat, which also imply a risk that moisture condensates and forms the basis for fungi, with possibly adverse health effects.
+One may also locate poorly insulated pipes and previously overlooked electricity consumers.</p>
+</div>
+<h3 class="togglediv">Inspection of Machinery</h3>
+<div>
+<p>Thermographic images of machinery during operation often reveals problems which cause elevated temperatures.
+For example, faulty electrical contacts may substantially heat up, and the same holds for moving parts experiencing increased friction.</p>
+<p>One may also use thermal imaging for locating other defects of a wide range of parts.
+One sometimes uses <em>active thermography</em>, where some artificial heat source is applied.
+For example, one may apply an intense heat pulse by short-term irradiation with intense lamps and then monitor the evolution of temperatures with an infrared camera.
+That temperature evolution is often significantly modified e.g. by hidden cracks or other sub-surface features.</p>
+</div>
+<h3 class="togglediv">Fire Detection and Fire Fighting</h3>
+<div>
+<p>Infrared imaging can be used to quickly and reliably identify fires based on their intense infrared radiation.
+Compared with using visible light, the use of infrared light is very favorable, because it is much less likely to produce false alarms, and because the infrared radiation can even penetrate thick smoke.</p>
+<p>Thermal imaging cameras are also very useful for firefighters.
+They can adequately assess details of fires and also locate persons even through thick smoke.</p>
+</div>
+<h3 class="togglediv">Medical and Veterinary Applications</h3>
+<div>
+<p>Measurements of skin temperatures can reveal various conditions.
+For example, thermal imaging cameras are used at airports to identify persons with fever, revealed by elevated skin temperatures.
+That is particularly of interest at times where the spread of dangerous infections must be limited.
+However, demographic measurements can also be used for doctors and veterinaries.
+For example, increased temperatures may indicate inflammations.</p>
+</div>
+<h3 class="togglediv">Military Applications</h3>
+<div>
+<p>Thermal imaging is also important for various military applications.
+For example, one can easily locate persons and vehicles in a colder environment based on their thermal radiation.
+Anti-aircraft rockets are often guided with an infrared camera.</p>
+</div>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_thermal_imaging_cameras.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 13 suppliers for thermal imaging cameras.</p>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="thermal_imaging.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="thermal_radiation.html" title="electromagnetic radiation which results from thermal emission">thermal radiation</a>, <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a>, <a href="infrared_cameras.html" title="cameras which work with infrared light">infrared cameras</a><br>and other articles in the categories <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a>, <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/thermal_imaging.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fthermal_imaging.html&text=RP+Photonics+Encyclopedia+-+thermal+imaging%2C+infrared+cameras%2C+principles+of+remote+temperature+measurements%2C+compensation%2C+emissivity%2C+atmospheric+absorption%2C+inspection+of+buildings%2C+machinery%2C+fire+detection%2C+medical+applications" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fthermal_imaging.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fthermal_imaging.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/thermal_imaging.html"&gt;<br>Article on Thermal Imaging&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/thermal_imaging.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/thermal_imaging.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/thermal_imaging.html<br>article on 'Thermal Imaging' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Corona Virus Crisis</h2>
+<p>It is interesting and instructive to realize certain analogies between the spread of an epidemic and elementary processes in lasers. In particular, one can <b>learn about the power of expnential growth</b> and the <b>threshold behavior</b>.</p>
+<p style="font-size:130%; margin:20px 0;">Read the article: <br> "<a href="./spotlight_2020_03_16.html?banner=Corona">Laser Physics Helps to Understand the Corona Virus Crisis</a>"!</p>
+<p>Comments are welcome &ndash; see the input form below the article.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="eSAiy/MFgf59GyI38GPu+A==">shownbanner = "Corona";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Sponsors of the Encyclopedia</h2>
+<p>We are grateful to the <a href="./encyclopedia_sponsoring.html?banner=sponsoring">sponsors</a> of our encyclopedia:</p>
+<div style="margin-top:10px; text-align:center;"><a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/rpmc_lasers.html"><img src="./bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/nkt_photonics.html"><img src="./bg/logos/nkt_photonics.png" alt="NKT Photonics" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo"></a></div><div style="margin-top:10px; text-align:center;"><a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a></div>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="eSAiy/MFgf59GyI38GPu+A==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/thermal_imaging.html"
+    },
+    "headline": "Thermal Imaging",
+    "image": "https://www.rp-photonics.com/previews/thermal_imaging.png",
+    "datePublished": "2019-06-16",
+    "dateModified": "2020-03-14",
+    "description": "Thermal imaging (infrared thermography) means imaging based on thermal radiation, using infrared cameras. One can perform spatially resolved remote temperature measurements.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter T",
+      "item": "https://www.rp-photonics.com/encyclopedia_t.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "thermal imaging",
+      "item": "https://www.rp-photonics.com/thermal_imaging.html"
+    }]}
+}
+</script>
+</body>
+</html>

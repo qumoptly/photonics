@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-phQYdKm+i6/+ltGvTREb8Q=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - mode locking, active, passive, modelocking, ultrashort pulses, pulse generation, instabilities</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/mode_locking.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-07-11">
+<meta name="description" content="Mode locking denotes a group of techniques for generating ultrashort pulses with lasers. Various active and passive mode locking techniques are discussed.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="mode locking, active, passive, modelocking, ultrashort pulses, pulse generation, instabilities">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mode Locking">
+<meta property="og:description" content="Mode locking denotes a group of techniques for generating ultrashort pulses with lasers. Various active and passive mode locking techniques are discussed.">
+<meta property="og:url" content="https://www.rp-photonics.com/mode_locking.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/mode_locking.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Mode locking denotes a group of techniques for generating ultrashort pulses with lasers. Various active and passive mode locking techniques are discussed.">
+<meta name="twitter:title" content="Mode Locking">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/mode_locking.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="phQYdKm+i6/+ltGvTREb8Q==">
+page="mode_locking.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="phQYdKm+i6/+ltGvTREb8Q==">shownsponsors="EKSMA OPTICS,TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_m.html">letter M</a> &gt; <a href="mode_locking.html">mode locking</a></p>
+<h1>Mode Locking</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="advicebox">
+<p>Ask <a href="index.html">RP Photonics</a> for advice on any aspect of mode locking, e.g. on different mode-locking techniques, types or designs of mode-locked lasers, etc. <a href="paschotta.html">Dr. Paschotta</a> is a leading expert concerning mode-locked lasers. Also, RP Photonics has powerful <a href="software.html">numerical software</a> for <a href="services_manu.html">designing and optimizing</a> mode-locked lasers.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a group of techniques for generating ultrashort pulses in lasers</p>
+<p>More general term: <a href="pulses.html" title="flashes of light">pulse</a> generation</p>
+<p>More specific terms: <a href="active_mode_locking.html" title="a technique of mode locking, based on active modulation of the intracavity losses or the round-trip phase change">active mode locking</a>, <a href="passive_mode_locking.html" title="a technique of mode locking, based on a saturable absorber inside the laser resonator">passive mode locking</a>, <a href="fundamental_mode_locking.html" title="mode locking with a single pulse circulating in the laser resonator">fundamental mode locking</a>, <a href="harmonic_mode_locking.html" title="mode locking of a laser where multiple pulses are circulating in the laser resonator with equal temporal spacing">harmonic mode locking</a>, <a href="self_starting_mode_locking.html" title="mode locking which is quickly achieved after turning on a laser, without external intervention">self-starting mode locking</a>, <a href="additive_pulse_mode_locking.html" title="a technique for mode locking a laser, using a nonlinear interaction in an external resonator">additive-pulse mode locking</a>, <a href="kerr_lens_mode_locking.html" title="a technique for mode locking a laser, exploiting nonlinear self-focusing">Kerr lens mode locking</a>, hard/soft aperture mode locking, <a href="soliton_mode_locking.html" title="a mechanism for laser mode locking based on soliton pulses">soliton mode locking</a>, nonlinear mirror mode locking, regenerative mode locking</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Modenkoppeln</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<p><a href="encyclopedia_cite.html?article=mode%20locking">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Mode locking [1] (sometimes written as <em>modelocking</em>) is a method (or actually a group of methods) to obtain <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a> from <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">lasers</a>, which are then called <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking"><em>mode-locked lasers</em></a>.
+Here, the <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a> contains some kind of <a href="mode_locking_devices.html" title="devices for achieving mode locking of a laser">mode locking device</a> (mode locker) &ndash; either an active element (an <a href="optical_modulators.html" title="devices allowing one to manipulate properties of light beams, such as the optical power or phase">optical modulator</a>) or a nonlinear passive element (a <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorber</a>), which causes the formation of an <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulse</a> circulating in the laser resonator.
+In the steady state, the various effects influencing the circulating pulse are in a balance so that the pulse parameters are unchanged after each completed round trip, or often even nearly constant throughout each round trip.
+Each time the pulse hits the <a href="output_couplers.html" title="partially transparent laser mirrors, used for extracting output beams from laser resonators">output coupler</a> mirror, a usable pulse is emitted, so that a regular pulse train leaves the laser (Figure&nbsp;1).
+Assuming a single circulating pulse, the pulse repetition period corresponds to the resonator round-trip time (typically several nanoseconds), whereas the <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a> is much lower: typically between 30&nbsp;fs and 30&nbsp;ps, in extreme cases down to &asymp;&thinsp;5&nbsp;fs.
+For that reason, the <a href="peak_power.html" title="maximum optical power of a pulse">peak power</a> of a mode-locked laser can be orders of magnitude higher than the average power.</p>
+<p>This article focuses more on the <i>methods</i> of mode locking and on some fundamental aspects, whereas the article on <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked lasers</a> contains more details on different kinds of mode-locked lasers.</p>
+<figure>
+<img src="img/ml_laser.gif" alt="principle of mode-locked laser">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Generation of a pulse train in a passively mode-locked laser.
+The gain medium compensates for losses, and the saturable absorber mirror (SA) enforces pulse generation.
+Each time the circulating pulse hits the output coupler mirror (OC), a pulse is emitted in the output.
+</figcaption>
+</figure>
+<h2 class="togglediv">Active and Passive Mode Locking</h2>
+<div>
+<p><a href="active_mode_locking.html" title="a technique of mode locking, based on active modulation of the intracavity losses or the round-trip phase change">Active mode locking</a> involves the periodic modulation of the resonator losses or of the round-trip phase change, achieved e.g. with an <a href="acousto_optic_modulators.html" title="optical modulators based on the acousto-optic effect">acousto-optic</a> or <a href="electro_optic_modulators.html" title="optical modulators based on the electro-optic effect">electro-optic modulator</a>, a Mach&ndash;Zehnder integrated-optic modulator, or a semiconductor <a href="electroabsorption_modulators.html" title="optical modulators based on the Franz&ndash;Keldysh effect">electroabsorption modulator</a>.
+If the modulation is synchronized with the resonator round trips, this can lead to the generation of ultrashort pulses, usually with <a href="picosecond_lasers.html" title="lasers emitting pulses with picosecond durations">picosecond</a> <a href="pulse_duration.html" title="the duration of an optical pulse">pulse durations</a>.
+In most but not all cases, the pulse duration achieved is governed by a balance of pulse shortening through the modulator and pulse broadening via other effects, such as the limited <a href="gain_bandwidth.html" title="the width of the optical frequency range in which significant gain is available from an amplifier">gain bandwidth</a>.</p>
+<figure>
+<img src="img/actively_ml_laser.png" alt="actively mode-locked laser">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Schematic setup of an actively mode-locked laser.
+</figcaption>
+</figure>
+<p><a href="passive_mode_locking.html" title="a technique of mode locking, based on a saturable absorber inside the laser resonator">Passive mode locking</a> (with a <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorber</a>) allows the generation of much shorter (<a href="femtosecond_lasers.html" title="lasers emitting light pulses with durations between a few femtoseconds and hundreds of femtoseconds">femtosecond</a>) pulses, basically because a saturable absorber, driven by already short pulses, can modulate the resonator losses much faster than an electronic modulator: the shorter the pulse becomes, the faster the loss modulation, provided that the absorber has a sufficiently short recovery time.
+The pulse duration can be even well below the recovery time of the absorber.
+In some cases, reliable <a href="self_starting_mode_locking.html" title="mode locking which is quickly achieved after turning on a laser, without external intervention">self-starting mode locking</a> is not achieved.</p>
+<figure>
+<img src="img/passively_ml_laser.png" alt="mode-locked laser">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Schematic setup of a passively mode-locked laser.
+</figcaption>
+</figure>
+<p>More details can be found in the articles on <a href="active_mode_locking.html" title="a technique of mode locking, based on active modulation of the intracavity losses or the round-trip phase change">active mode locking</a> and <a href="passive_mode_locking.html" title="a technique of mode locking, based on a saturable absorber inside the laser resonator">passive mode locking</a>.</p>
+<p>In some lasers (particularly in <a href="mode_locked_diode_lasers.html" title="diode lasers which are actively, passively or hybrid mode-locked for generating ultrashort pulses">mode-locked diode lasers</a>), active and passive mode locking are simultaneously applied.
+Such <em>hybrid mode-locked lasers</em> combine some key advantages, such as an externally controlled pulse repetition rate and fairly short pulses.</p>
+</div>
+<h2 class="togglediv">Continuous Versus Synchronous Pumping</h2>
+<div>
+<p>Most mode-locked lasers are continuously pumped, often with a <a href="laser_diodes.html" title="semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diode</a>.
+The pump source then continuously supplies energy to the <a href="gain_media.html" title="media for laser amplification">gain medium</a>, while the circulating pulse extracts energy in regular time intervals.
+In most cases, the pulse spacing is very short compared with the <a href="upper_state_lifetime.html" title="the lifetime of the population of the upper laser level">upper-state lifetime</a>, so that the gain medium can easily store the energy during such times.
+<a href="gain_saturation.html" title="the phenomenon that the gain of an amplifier is reduced for high input signal powers">Gain saturation</a> will then be the same as for continuous laser emission with the same average power.</p>
+<p>Even some gain media with a fairly short upper-state lifetime, e.g. in <a href="dye_lasers.html" title="lasers based on liquid or solid dyes as gain media">dye lasers</a> or some <a href="semiconductor_lasers.html" title="lasers based on semiconductor gain media">semiconductor lasers</a> (e.g. <a href="vertical_external_cavity_surface_emitting_lasers.html" title="surface-emitting semiconductor lasers with an external laser resonator">VECSELs</a>), continuous pumping is possible, provided that the pulse repetition rate is not too low.
+If this condition can not be fulfilled, so that gain saturation by a single pulse becomes strong (which can make the pulse formation unstable), <a href="synchronous_pumping.html" title="pumping of a laser or an optical parametric oscillator with short light pulses in synchronism with the emitted pulses">synchronous pumping</a> can be a solution.
+This, however, requires another mode-locked laser as the pump source.</p>
+</div>
+<h2 class="togglediv">High and Low Pulse Repetition Rates</h2>
+<div>
+<p>High <a href="pulse_repetition_rate.html" title="the number of pulses emitted per second e.g. by a mode-locked or Q-switched laser">repetition rate</a> pulse trains are sometimes obtained with <a href="harmonic_mode_locking.html" title="mode locking of a laser where multiple pulses are circulating in the laser resonator with equal temporal spacing"><em>harmonic mode locking</em></a>, where multiple pulses are circulating in the laser resonator with a constant temporal spacing.
+This allows the generation of multi-gigahertz pulse trains even with <a href="mode_locked_fiber_lasers.html" title="ultrafast fiber lasers which are actively or passively mode-locked for generating ultrashort pulses">fiber lasers</a>, which typically have fundamental round-trip frequencies of only some tens of megahertz.</p>
+<p>For high pulse repetition rates with <a href="fundamental_mode_locking.html" title="mode locking with a single pulse circulating in the laser resonator"><em>fundamental mode locking</em></a>, i.e., without harmonic mode locking, very short laser resonators are required.
+If <a href="q_switching_instabilities.html" title="instabilities of passively mode-locked lasers where the pulse energy is unstable">Q-switching instabilities</a> are avoided with a proper design, such lasers can be very simple, stable and compact.</p>
+<p>Due to the high pulse repetition rate, the <a href="pulse_energy.html" title="energy of an optical pulse">pulse energies</a> obtained from mode-locked lasers are fairly limited &ndash; normally nanojoules or picojoules.
+Higher <a href="pulse_energy.html" title="energy of an optical pulse">pulse energies</a> combined with lower repetition rates can be obtained with <a href="cavity_dumping.html" title="a method for extracting intense short or ultrashort pulses from a laser, using an optical switch in the laser resonator">cavity-dumped mode-locked lasers</a> and with <a href="regenerative_amplifiers.html" title="optical amplifiers with a resonator in which a light pulse can do multiple round trips before being coupled out">regenerative amplifiers</a>.</p>
+</div>
+<h2 class="togglediv">The Optical Spectrum: Frequency Combs</h2>
+<div>
+<p>The <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a> of a pulse train, as generated in a mode-locked laser, is not smooth (as for a single pulse), but rather consists of discrete lines with an exactly constant spacing which equals the <a href="pulse_repetition_rate.html" title="the number of pulses emitted per second e.g. by a mode-locked or Q-switched laser">pulse repetition rate</a> (&rarr;&nbsp;<a href="frequency_combs.html" title="optical spectra consisting of equidistant lines"><em>frequency combs</em></a>).
+This is true although the resonance frequencies of the <a href="resonator_modes.html" title="modes of an optical or microwave resonator">resonator modes</a> are usually not exactly equidistant due to the effect of <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>, e.g. in the <a href="gain_media.html" title="media for laser amplification">gain medium</a>: the mode-locking mechanism forces the laser to emit frequencies which can to some extent deviate from the frequencies of the resonator modes.
+These frequency deviations may not be arbitrarily high, and therefore the generation of broadband spectra is usually possible only if the resonator <a href="dispersion.html" title="the dependence of the phase velocity in a medium on the optical frequency or the propagation mode">dispersion</a> is sufficiently small, so that the resonator mode frequencies are approximately equidistant.
+In the time domain, this condition can be understood via the temporal broadening of pulses caused by dispersion, which must be compensated by the mode-locking mechanism.
+Note, however, that optical <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a> often also play an important role, so that considering the &ldquo;cold cavity modes&rdquo; misses an important part of the physical mechanisms.</p>
+</div>
+<h2 class="togglediv">Origin of the Term &ldquo;Mode Locking&rdquo;</h2>
+<div>
+<p>The term <em>mode locking</em> originates from a description in the frequency domain: a short pulse is formed in the <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a> when a fixed phase relationship is achieved between its longitudinal <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a>, or more precisely, between the lines in the spectrum of the laser output.
+However, the basic mechanisms leading to mode locking can usually be much more easily understood in the time domain.
+Also, the concept of <a href="resonator_modes.html" title="modes of an optical or microwave resonator">resonator modes</a> becomes questionable under the influence of strong optical <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a>.
+Strictly, it is not even advisable to use the term <em>modes</em> for the lines in the spectrum of a mode-locked laser, even though these lines are related to the resonator modes.</p>
+<p>It is instructive to consider the synthesis of a periodic pulse train by superposition of sinusoidal oscillations (Figure&nbsp;4) with equally spaced frequencies, corresponding to different axial <a href="resonator_modes.html" title="modes of an optical or microwave resonator">resonator modes</a> in a mode-locked laser.
+The larger the number of frequency components involved, the shorter can be the <a href="pulse_duration.html" title="the duration of an optical pulse">duration</a> of the generated pulses.</p>
+<figure>
+<img src="img/pulse_train_synthesis2.png" alt="synthesis of pulse train">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Synthesis of a periodic pulse train (red curve) by adding seven oscillations with slightly different frequencies (blue curves).
+The vertical lines indicate points in time where all the oscillations add up in phase.
+</figcaption>
+</figure>
+<p>An important aspect is that there must be a fixed phase relationship between these modes.
+This is illustrated in Figure&nbsp;5: the blue curve shows a pulse train with a fixed phase relationship, so that at regular temporal positions (e.g. at <span class="eqn_il"><i>t</i>&thinsp;=&thinsp;0</span>) the electric fields of all frequency components add up to a maximum of the total field strength.
+The red curve shows the electric field for the same strength of all frequency components, but with random relative phases.</p>
+<figure>
+<img src="img/mode_locking.png" alt="phase-locked and unlocked multimode operation">
+<figcaption><span class="start">Figure&nbsp;5:</span> 
+Temporal evolution of the intracavity field in a laser, once with a fixed phase relationship between the modes (mode-locked state), once with random phases.
+</figcaption>
+</figure>
+<p>Due to <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>, the axial modes of a laser resonator would normally not have exactly equidistant mode frequencies, and therefore the mentioned phase relationship should normally be lost within a short time.
+However, that phase relationship can be enforced by a strong enough mode-locking mechanism provided that the dephasing tendencies are not too strong.
+The frequencies of the lines in the optical spectrum are then exactly equidistant (disregarding noise), thus slightly deviating from the mode frequencies.</p>
+</div>
+<h2 class="togglediv">Instabilities and Noise of Mode-locked Lasers</h2>
+<div>
+<p>The various mechanisms for mode locking can exhibit various kinds of instabilities.
+For example, a laser may generate <a href="double_pulses.html" title="two closely spaced optical pulses">bunches of pulses</a> (instead of single pulses), pulses with unstable energy (&rarr;&nbsp;<a href="q_switching_instabilities.html" title="instabilities of passively mode-locked lasers where the pulse energy is unstable"><em>Q-switching instabilities</em></a>), pulses which fall apart after some time and are later replaced with new pulses, or pulses which are accompanied by a noise background.
+Different kinds of <a href="pulse_propagation_modeling.html" title="working with physical models describing the propagation of ultrashort pulses e.g. in lasers or optical fibers">modeling</a> can be very helpful in tracking down such problems and to find appropriate remedies.</p>
+<p>Even without particular instabilities, the output of a mode-locked laser contains various kinds of <a href="laser_noise.html" title="fluctuations of various parameters of laser light, such as the optical power and phase">noise</a>; the <a href="timing_jitter.html" title="fluctuations of the temporal positions of pulses">timing jitter</a> (random fluctuations of the pulse positions) is often of special interest.
+Other types of noise include <a href="phase_noise.html" title="noise of the optical phase of a beam or of an electric signal">phase noise</a>, <a href="intensity_noise.html" title="noise of the optical intensity or power of a laser beam">intensity noise</a>, and fluctuations of other parameters such as the <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a>, <a href="chirp.html" title="time dependence of the instantaneous frequency of an optical pulse">chirp</a>, and optical center frequency.
+The phase noise results in a finite <a href="linewidth.html" title="width of the spectrum of a light beam or an absorption feature">width of the lines</a> in the generated <a href="frequency_combs.html" title="optical spectra consisting of equidistant lines">frequency comb</a>.
+There are interesting relations between different types of noise in mode-locked lasers [16].</p>
+<p>Note that the article on <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked lasers</a> contains some more details on different kinds of mode-locked lasers, and more details concerning mode-locking techniques can be found in the articles on <a href="active_mode_locking.html" title="a technique of mode locking, based on active modulation of the intracavity losses or the round-trip phase change">active</a> and <a href="passive_mode_locking.html" title="a technique of mode locking, based on a saturable absorber inside the laser resonator">passive mode locking</a>.</p>
+</div>
+<h2 class="togglediv">Mode Locking Devices</h2>
+<div>
+<p>Optimum mode-locked performance depends on a well worked-out laser design, including the choice of a suitable mode locking device, be it some kind of modulator or a <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorber</a>.
+The article on <a href="mode_locking_devices.html" title="devices for achieving mode locking of a laser">mode locking devices</a> gives more details.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="mode_locking.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">W. E. Lamb Jr., &ldquo;Theory of an optical laser&rdquo;, Phys. Rev. 134 (6A), A1429 (1964), <a href="https://doi.org/10.1103/PhysRev.134.A1429">doi:10.1103/PhysRev.134.A1429</a> (proposed the technique of mode locking)</td></tr>
+<tr><td class="refno">[2]</td><td class="refs">L. E. Hargrove, R. L. Fork, and M. A. Pollack, &ldquo;Locking of He&ndash;Ne laser modes induced by synchronous intracavity modulation&rdquo;, Appl. Phys. Lett. 5, 4 (1964), <a href="https://doi.org/10.1063/1.1754025">doi:10.1063/1.1754025</a> (first report of active mode locking)</td></tr>
+<tr><td class="refno">[3]</td><td class="refs">M. DiDomenico, &ldquo;Small-signal analysis of internal (coupling type) modulation of lasers&rdquo;, J. Appl. Phys. 35 (10), 2870 (1964), <a href="https://doi.org/10.1063/1.1713121">doi:10.1063/1.1713121</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">D. J. Kuizenga and A. E. Siegman, &ldquo;FM and AM mode locking of the homogeneous laser &ndash; Part I: theory&rdquo;, IEEE J. Quantum Electron. 6 (11), 694 (1970), <a href="https://doi.org/10.1109/JQE.1970.1076343">doi:10.1109/JQE.1970.1076343</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">E. P. Ippen, C. V. Shank, and A. Dienes, &ldquo;Passive mode locking of the cw dye laser&rdquo;, Appl. Phys. Lett. 21, 348 (1972), <a href="https://doi.org/10.1063/1.1654406">doi:10.1063/1.1654406</a> (first continuous-wave mode locking with a saturable absorber)</td></tr>
+<tr><td class="refno">[6]</td><td class="refs">B. K. Garside and T. K. Lim, &ldquo;Laser mode locking using saturable absorbers&rdquo;, JAP 44 (5), 2335 (1973), <a href="https://doi.org/10.1063/1.1662561">doi:10.1063/1.1662561</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">G. H. C. New, &ldquo;Pulse evolution in mode-locked quasi-continuous lasers&rdquo;, IEEE J. Quantum Electron. 10 (2), 115 (1974), <a href="https://doi.org/10.1109/JQE.1974.1145781">doi:10.1109/JQE.1974.1145781</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">L. F. Mollenauer and R. H. Stolen, &ldquo;Soliton laser&rdquo;, Opt. Lett. 9 (1), 13 (1984), <a href="https://doi.org/10.1364/OL.9.000013">doi:10.1364/OL.9.000013</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">J. G. Fujimoto, A. M. Weiner, and E. P. Ippen, &ldquo;Generation and measurement of optical pulses as short as 16&nbsp;fs&rdquo;, Appl. Phys. Lett. 44, 832 (1984), <a href="https://doi.org/10.1063/1.94957">doi:10.1063/1.94957</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">R. L. Fork <i>et al.</i>, &ldquo;Compression of optical pulses to six femtoseconds by using cubic phase compensation&rdquo;, Opt. Lett. 12 (7), 483 (1987), <a href="https://doi.org/10.1364/OL.12.000483">doi:10.1364/OL.12.000483</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">H. A. Haus, &ldquo;Mode-locking of lasers&rdquo;, J. Sel. Top. Quantum Electron. 6 (6), 1173 (2000), <a href="https://doi.org/10.1109/2944.902165">doi:10.1109/2944.902165</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">R. Paschotta, &ldquo;Passive mode locking with slow saturable absorbers&rdquo;, Appl. Phys. B 73 (7), 653 (2001), <a href="https://doi.org/10.1007/s003400100726">doi:10.1007/s003400100726</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">R. Paschotta <i>et al.</i>, &ldquo;Soliton-like pulse shaping mechanism in passively mode-locked surface-emitting semiconductor lasers&rdquo;, Appl. Phys. B 75, 445 (2002), <a href="https://doi.org/10.1007/s00340-002-1014-5">doi:10.1007/s00340-002-1014-5</a></td></tr>
+<tr><td class="refno">[14]</td><td class="refs">R. Paschotta, &ldquo;Noise of mode-locked lasers. Part I: numerical model&rdquo;, <a href="http://link.springer.com/article/10.1007%2Fs00340-004-1547-x">Appl. Phys. B 79, 153 (2004)</a>; R. Paschotta, &ldquo;Noise of mode-locked lasers. Part II: timing jitter and other fluctuations&rdquo;, Appl. Phys. B 79, 163 (2004), <a href="https://doi.org/10.1007/s00340-004-1548-9">doi:10.1007/s00340-004-1548-9</a></td></tr>
+<tr><td class="refno">[15]</td><td class="refs">N. Usechak and G. Agrawal, &ldquo;Semi-analytic technique for analyzing mode-locked lasers&rdquo;, Opt. Express 13 (6), 2075 (2005), <a href="https://doi.org/10.1364/OPEX.13.002075">doi:10.1364/OPEX.13.002075</a></td></tr>
+<tr><td class="refno">[16]</td><td class="refs">R. Paschotta <i>et al.</i>, &ldquo;Optical phase noise and carrier&ndash;envelope offset noise of mode-locked lasers&rdquo;, Appl. Phys. B 82 (2), 265 (2006), <a href="https://doi.org/10.1007/s00340-005-2041-9">doi:10.1007/s00340-005-2041-9</a></td></tr>
+<tr><td class="refno">[17]</td><td class="refs">R. Paschotta and U. Keller, &ldquo;Passively mode-locked solid-state lasers&rdquo;, in <i>Solid-State Lasers and Applications</i> (ed. A. Sennaroglu), CRC Press, Boca Raton, FL (2007), Chapter 7, pp. 259&ndash;318</td></tr>
+<tr><td class="refno">[18]</td><td class="refs">R. Paschotta, <a href="http://spie.org/x648.xml?product_id=800629"><i>Field Guide to Laser Pulse Generation</i></a>, SPIE Press, Bellingham, WA (2007)</td></tr>
+<tr><td class="refno">[19]</td><td class="refs">R. Paschotta, <a href="propulse_demo_aml.html">case study on active mode locking</a></td></tr>
+<tr><td class="refno">[20]</td><td class="refs">R. Paschotta, <a href="propulse_demo_pml.html">case study on passive mode locking</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="active_mode_locking.html" title="a technique of mode locking, based on active modulation of the intracavity losses or the round-trip phase change">active mode locking</a>, <a href="passive_mode_locking.html" title="a technique of mode locking, based on a saturable absorber inside the laser resonator">passive mode locking</a>, <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked lasers</a>, <a href="mode_locking_devices.html" title="devices for achieving mode locking of a laser">mode locking devices</a>, <a href="soliton_mode_locking.html" title="a mechanism for laser mode locking based on soliton pulses">soliton mode locking</a>, <a href="harmonic_mode_locking.html" title="mode locking of a laser where multiple pulses are circulating in the laser resonator with equal temporal spacing">harmonic mode locking</a>, <a href="cavity_dumping.html" title="a method for extracting intense short or ultrashort pulses from a laser, using an optical switch in the laser resonator">cavity dumping</a>, <a href="ultrafast_lasers.html" title="lasers emitting ultrashort pulses">ultrafast lasers</a>, <a href="regenerative_amplifiers.html" title="optical amplifiers with a resonator in which a light pulse can do multiple round trips before being coupled out">regenerative amplifiers</a>, <a href="pulses.html" title="flashes of light">pulses</a>, <a href="pulse_generation.html" title="the generation of light pulses (flashes)">pulse generation</a>, <a href="carrier_envelope_offset.html" title="the offset between the optical phase and the maximum of the wave envelope of an optical pulse">carrier&ndash;envelope offset</a>, <a href="frequency_combs.html" title="optical spectra consisting of equidistant lines">frequency combs</a>, <a href="timing_jitter.html" title="fluctuations of the temporal positions of pulses">timing jitter</a>, <a href="modes_of_laser_operation.html" title="a mode of operation such as continuous-wave operation, Q-switched or mode-locked operation">modes of laser operation</a>, <a href="spotlight_2007_10_11.html">The Photonics Spotlight 2007-10-11</a><br>and other articles in the categories <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<hr style="margin-top:16px; margin-bottom:12px;">
+<a href="paschotta.html"><img src="img/paschotta3_small.jpg" alt="Dr. R. Paschotta" style="float:left; margin:0px 16px 20px 18px;" width="80" height="97"></a>
+<div style="margin-bottom:12px;">
+<p style="font-size:90%; line-height:20px; padding-right:20px;">This encyclopedia is authored by <a href="paschotta.html" class="redlink">Dr. Rüdiger Paschotta</a>, the founder and executive of <a href="index.html" class="redlink">RP Photonics Consulting GmbH</a>.
+How about a <a href="training.html" class="redlink">tailored training course</a> from this distinguished expert at your location?
+<a href="contact.html" class="redlink">Contact</a> RP Photonics to find out how his <a href="./services.html" class="redlink">technical consulting services</a> (e.g. product designs, problem solving, independent evaluations, training) and <a href="software.html" class="redlink">software</a> could become very valuable for your business!</p>
+</div>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/mode_locking.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fmode_locking.html&text=RP+Photonics+Encyclopedia+-+mode+locking%2C+active%2C+passive%2C+modelocking%2C+ultrashort+pulses%2C+pulse+generation%2C+instabilities" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fmode_locking.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fmode_locking.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/mode_locking.html"&gt;<br>Article on Mode Locking&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/mode_locking.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/mode_locking.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/mode_locking.html<br>article on 'Mode Locking' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Your Lab is Closed due to the Corona Virus Crisis?</h2>
+<p>Time to think how to best utilize your time!</p>
+<p>Here is a suggestion: <br> <b>Consider to start with physical modeling!</b></p>
+<ul>
+<li>Build models for your existing or planned lasers and amplifiers, resonators, etc.</li>
+<li>Utilize such models in order to <b>improve your qualitative and quantitative understanding</b>, solve problems, optimize device performance and <b>develop new ideas</b>.</li>
+<li>Power up your home office instead of wasting your time!</li>
+<li>When getting back to the lab, restart with fresh plans and full power.</li>
+</ul>
+<img src="./img/rp_photonics.png" alt="RP Photonics" style="margin-top:20px; width:225px;">
+<p>offers powerful <a href="./software.html?banner=lab_closed">simulation &amp; design software</a>, e.g. for <a href="./fiberpower.html?banner=lab_closed">active and passive fiber devices</a>, <a href="./resonator.html?banner=lab_closed">laser resonators</a> and <a href="./coating.html?banner=lab_closed">thin-film coatings</a>!</p>
+<p>Getting helpful <a href="./software_support.html?banner=lab_closed">support</a> from RP also benefits your projects.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="phQYdKm+i6/+ltGvTREb8Q==">shownbanner = "lab closed";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2 style="font-size:20px;">Stand up for Science!</h2>
+<p style="font-size:14px;">It is acceptable that some don't know much about photons, biological evolution or global warming.</p>
+<p style="font-size:16px; font-weight:bold; color:#B20B28;">But we don't want bigot ignorants to make political decisions and educate our children!</p>
+<p style="font-size:14px;">For example, <b>global warming</b> is not a matter of political opinion, but a fact. Ruthless profiteers are leading astray millions of uneducated people, seducing them to take utterly irresponsible positions. <span style="font-weight:bold; color:#B20B28;">But we cannot risk catastrophic climate changes!</span> Science tells us it is high time to act. Read, for example, the <a href="https://www.ipcc.ch/report/sixth-assessment-report-cycle/">IPCC Synthesis Report</a>.</p>
+<p style="font-size:14px; font-weight:bold;">Stand up for science (perhaps by joining a <a href="https://www.marchforscience.com/">March for Science</a>) &ndash; it's our future!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="phQYdKm+i6/+ltGvTREb8Q==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/mode_locking.html"
+    },
+    "headline": "Mode Locking",
+    "image": "https://www.rp-photonics.com/previews/mode_locking.png",
+    "datePublished": "2005-06-15",
+    "dateModified": "2020-07-11",
+    "description": "Mode locking denotes a group of techniques for generating ultrashort pulses with lasers. Various active and passive mode locking techniques are discussed.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter M",
+      "item": "https://www.rp-photonics.com/encyclopedia_m.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "mode locking",
+      "item": "https://www.rp-photonics.com/mode_locking.html"
+    }]}
+}
+</script>
+</body>
+</html>

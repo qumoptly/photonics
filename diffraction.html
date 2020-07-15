@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-aCtTyGA4g1OMvvmoHUFCiw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - diffraction, Fraunhofer, Fresnel, diffractive optics, interference, diffraction-limited performance</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/diffraction.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Various kinds of diffraction effects can be observed e.g. when light beams hit apertures or other kinds of structures leading to spatially dependent intensity or phase variations.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="diffraction, Fraunhofer, Fresnel, diffractive optics, interference, diffraction-limited performance">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Diffraction">
+<meta property="og:description" content="Various kinds of diffraction effects can be observed e.g. when light beams hit apertures or other kinds of structures leading to spatially dependent intensity or phase variations.">
+<meta property="og:url" content="https://www.rp-photonics.com/diffraction.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/diffraction.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Various kinds of diffraction effects can be observed e.g. when light beams hit apertures or other kinds of structures leading to spatially dependent intensity or phase variations.">
+<meta name="twitter:title" content="Diffraction">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/diffraction.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="aCtTyGA4g1OMvvmoHUFCiw==">
+page="diffraction.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="aCtTyGA4g1OMvvmoHUFCiw==">shownsponsors="TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_d.html">letter D</a> &gt; <a href="diffraction.html">diffraction</a></p>
+<h1>Diffraction</h1>
+<header style="margin-right:0;">
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: wave phenomena which occur when light waves hit some structure with variable transmission or phase changes</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Beugung</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a></p>
+<p><a href="encyclopedia_cite.html?article=diffraction">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Diffraction is a general term for phenomena which can occur when <a href="light.html" title="electromagnetic radiation in the visible spectral range, or sometimes in an extended spectral region">light</a> <a href="wave_optics.html" title="the description of optical phenomena based on wave models">waves</a> (or other waves) encounters certain structures.
+Some typical examples for diffraction effects are discussed in the following sections.</p>
+<p>Although in everyday life one rarely encounters substantial diffraction effects with light, such effects are very common in optics and laser technology.
+In fact, the operation principles of various optical devices are essentially based on diffraction (&rarr;&nbsp;<a href="diffractive_optics.html" title="optical elements with operation principles based on diffraction of light"><em>diffractive optics</em></a>).
+Diffraction also plays a crucial role in many other devices, such as <a href="optical_resonators.html" title="arrangements of optical components which allow a beam of light to circulate">optical resonators</a> and <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>.</p>
+<h2 class="togglediv">Diffraction at a Single Slit</h2>
+<div>
+<p>A common situation is that a narrow <a href="optical_slits.html" title="narrow openings through which light can be transmitted">optical slit</a> is uniformly illuminated with spatially coherent radiation from a <a href="monochromatic_light.html" title="light with a single optical frequency">monochromatic</a> laser.
+Behind the slit, one can observe a diffraction pattern (see Figure&nbsp;1) with the following features:</p>
+<ul>
+<li>For each wavelength, there is a main maximum in the middle, and they are much weaker side maxima at larger angles.</li>
+<li>For longer wavelengths, the central peak is broader, and the side peaks appear at larger angles.</li>
+</ul>
+<figure>
+<img src="img/diffraction_at_single_slit.png" alt="diffraction at single slit">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Far-field intensity profiles for diffraction at a single 1&nbsp;&mu;m wide optical slit, with wavelengths from 400&nbsp;nm to 750&nbsp;nm in steps of 50&nbsp;nm.
+</figcaption>
+</figure>
+<p>For a given wavelength, the first minimum of the intensity occurs where the phase difference of contributions from the two edges of the slit reaches <span class="eqn_il">2<span class="greek">&pi;</span></span>.
+The intensity profiles can be described with sinc<sup>2</sup> functions.</p>
+</div>
+<h2 class="togglediv">Diffraction at a Double Slit</h2>
+<div>
+<p>In his famous double-slit experiment of 1803, Thomas Young used two closely spaced narrow <a href="optical_slits.html" title="narrow openings through which light can be transmitted">optical slits</a>.
+As he had no laser, he had to achieve spatially coherent illumination of the two slits by using a third narrow slit before them.</p>
+<p>Figure&nbsp;2 shows a calculated intensity profile for one particular wavelength.
+The first installation arises from the interference of field contributions from the two different slits.
+The intensity profile is further slowly modulated with a function determined by the finite width of each slit.</p>
+<figure>
+<img src="img/diffraction_at_double_slit1.png" alt="diffraction at double slit">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Intensity profile for diffraction of light at 450&nbsp;nm at a double slit with 5&nbsp;&mu;m slit spacing and 1&nbsp;&mu;m slit width.
+</figcaption>
+</figure>
+<p>Figure&nbsp;3 shows with a color scale the interference patterns for different wavelengths.
+The patterns for longer wavelength involve correspondingly larger diffraction angles.</p>
+<figure>
+<img src="img/diffraction_at_double_slit2.png" alt="diffraction at double slit">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Diffraction patterns at the same slit for all colors.
+</figcaption>
+</figure>
+</div>
+<h2 class="togglediv">Diffraction at Circular Apertures</h2>
+<div>
+<p>If a light beam (for example a <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a>) encounters some <a href="optical_apertures.html" title="structures which limit the propagation of light">aperture</a> which transmits the light in some regions and blocks it otherwise, the immediate effect on the transmitted light is only the corresponding truncation of the intensity profile.
+Only after some distance behind the aperture, characteristic diffraction effects can be observed.</p>
+<p>Figure&nbsp;4 shows a simulated example, where an originally <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beam</a> has been truncated at a centered circular hard aperture.
+During the further propagation in air, the intensity profile develops a complicated structure due to diffraction.
+For a soft aperture (Figure&nbsp;5), causing a smooth intensity drop at the edge, the diffraction pattern is smoother.</p>
+<figure>
+<img src="img/diffraction_at_aperture1.png" alt="diffraction at aperture">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Intensity profiles of a light beam directly behind a hard circular aperture (blue curve) and at some distances behind the aperture in steps of 25&nbsp;mm. The simulation has been done with the software <a href="fiberpower.html">RP Fiber Power</a>.
+</figcaption>
+</figure>
+<figure>
+<img src="img/diffraction_at_aperture2.png" alt="diffraction at aperture">
+<figcaption><span class="start">Figure&nbsp;5:</span> 
+Same as Figure&nbsp;4, except that a soft aperture is used.
+</figcaption>
+</figure>
+<p>Such diffraction effects can be well understood and calculated based on <a href="fourier_optics.html" title="the description of light propagation based on transverse spatial Fourier transforms">Fourier optics</a>.
+The hard aperture introduces high optical frequencies, corresponding to rapid spatial changes of intensity.</p>
+<p>Such effects can also occur, for example, when trying to force a <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a> into single transverse mode operation (for optimum <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a>) by inserting a hard aperture into the <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a>.
+Although such an aperture can provide substantially higher round-trip losses for higher-order resonator <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a>, compared with those for the fundamental mode, it also introduces diffraction effects.
+Therefore, the method often does not work that well.</p>
+<p>The angular resolution of many optical instruments such as <a href="telescopes.html" title="optical instruments for viewing distant objects, or sometimes more generally afocal systems">telescopes</a> is also limited due to diffraction e.g. at the input <a href="optical_apertures.html" title="structures which limit the propagation of light">aperture</a>.
+That resolution limit can be estimated to be roughly the <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a> divided by the aperture diameter.</p>
+<p>Apertures are not always circular.
+Figures&nbsp;6 and 7 show an example case, where a laser beam is truncated with a blade.</p>
+<figure>
+<img src="img/diffraction_at_blade1.png" alt="diffraction at a blade">
+<figcaption><span class="start">Figure&nbsp;6:</span> 
+Intensity profile of a laser beam, which has been truncated with a blade, shown in a distance of 10&nbsp;mm after the blade.
+</figcaption>
+</figure>
+<figure>
+<img src="img/diffraction_at_blade2.png" alt="diffraction at a blade">
+<figcaption><span class="start">Figure&nbsp;7:</span> 
+Same as Figure&nbsp;6, but after a distance of 100&nbsp;mm.
+</figcaption>
+</figure>
+<p>Most <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">lasers</a> and <a href="laser_optics.html" title="optical elements and systems used with lasers - either in lasers or for transmitting and manipulating laser light">laser optics</a> are designed such that there are only negligibly weak diffraction effects due to hard apertures.
+This implies that all <a href="laser_mirrors.html" title="high-quality mirrors used in laser resonators and other optical setups">laser mirrors</a>, for example, must be so large that essentially the whole beam profile can be reflected.</p>
+<p>Note that the diffraction effects are intrinsically dependent on the optical <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>.
+For <a href="polychromatic_light.html" title="light with multiple optical frequencies">polychromatic</a> beams, the resulting spatial patterns can substantially differ between different wavelength components.
+Therefore, it is possible that one observes colors for a white input beam, for example.
+The classical case is that of a <a href="diffraction_gratings.html" title="optical components containing a periodic structure which diffracts light">diffraction grating</a>, which is discussed further below.</p>
+</div>
+<h2 class="togglediv">Divergence of Laser Beams</h2>
+<div>
+<p>Even without any aperture, a <a href="laser_beams.html" title="light beams propagating dominantly in one direction">laser beam</a> always exhibits some amount of diffraction according to its transverse spatial limitation.
+For <a href="gaussian_beams.html" title="light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beams</a>, the shape of the intensity profile is preserved, i.e., it stays Gaussian; only the <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a> gradually increases.
+This property of preserved intensity profile shapes also applies for other kinds of free-space <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a>, e.g. to <a href="hermite_gaussian_modes.html" title="propagation modes or resonator modes which are described with Hermite&ndash;Gaussian functions">Hermite&ndash;Gaussian modes</a>.
+In general, however, diffraction leads to changes of the shape of the intensity profile, as can be seen e.g. in Figure&nbsp;1.</p>
+<p>Laser beams are often <a href="diffraction_limited_beams.html" title="beams with a minimum possible beam divergence for a given waist radius">diffraction-limited</a>, i.e., their expansion during propagation is not stronger than caused by diffraction alone.</p>
+<p>Strong diffraction effects occur for light with long wavelengths.
+For example, <a href="sum_and_difference_frequency_generation.html" title="nonlinear processes generating beams with the sum or difference of the frequencies of the input beams">difference frequency generation</a> of long-wavelength beams can be severely limited in performance by diffraction of the generated beam, which limits the interaction length or enforce weaker beam focusing.</p>
+</div>
+<h2 class="togglediv">Diffraction and Resonator or Waveguide Modes</h2>
+<div>
+<p>Diffraction effects also play a crucial role for the formation of certain kinds of <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a>.
+For example, there are modes of optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>, for which (by definition) the intensity profile remains constant during propagation.
+Such modes are formed by two counteracting effects:</p>
+<ul>
+<li>Diffraction alone would tend to widen a beam, as discussed above.</li>
+<li class="ta_left"><a href="waveguides.html" title="spatially inhomogeneous transparent structures for guiding light">Waveguide</a> effects from a <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> profile of the fiber provide a kind of focusing.</li>
+</ul>
+<p>For the fiber modes, these two effects exactly balance each other.
+Similarly, <a href="resonator_modes.html" title="modes of an optical or microwave resonator">resonator modes</a> exhibit a balance of diffraction and focusing effects, only that the latter are usually lumped rather than distributed in the resonator.</p>
+<p>Good stability of such modes is achieved when the two counteracting effects are relatively strong, so that any additional effects (e.g. imperfections of a fiber structure, bending of a fiber or misalignment of a resonator element) have comparatively weak effects.
+Poor stability arises in situations where both effects are weak &ndash; for example, in a <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a> where the <a href="rayleigh_length.html" title="the distance from a beam waist where the mode radius increased by a factor square root of 2">Rayleigh length</a> of the beam is much larger than the resonator length.
+Such situations can arise e.g. when developing <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched lasers</a> with large <a href="mode_radius.html" title="a measure of the transverse extent of a laser mode or laser beam">mode radii</a> and short laser resonators.</p>
+</div>
+<h2 class="togglediv">Diffraction at Periodic and Non-periodic Structures</h2>
+<div>
+<figure class="right" style="width:180px;">
+<img src="img/grating.png" alt="beams at a diffraction grating">
+<figcaption><span class="start">Figure&nbsp;8:</span> 
+Output beams of all possible diffraction orders at a diffraction grating.
+</figcaption>
+</figure>
+<p>Diffraction effects can also occur when a light beam encounters a structure which causes spatially periodic changes of the <a href="optical_intensity.html" title="optical power per unit area">optical intensity</a> (via a variable <a href="absorbance.html" title="the logarithm with base 10 of the inverse transmittance">absorbance</a>) or of the <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">optical phase</a> (e.g. via a variable <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> or a height profile).
+Such structures are called <a href="diffraction_gratings.html" title="optical components containing a periodic structure which diffracts light">diffraction gratings</a>, and the phenomenon is called <em>Bragg diffraction</em>.
+If a grating exhibits a large number of oscillations within the beam profile, there can be multiple diffracted output beams (see Figure&nbsp;8), each of which has a similar spatial shape as the input beam.
+The beam direction of the output beams (except that of the zero-order beam) are dependent on the optical wavelength.
+That effect is exploited e.g. in grating <a href="spectrometers.html" title="devices for separating spectral components">spectrometers</a>.</p>
+<p>Diffraction can also be caused by refractive index modulations in some volume of a medium.
+For example, there are <a href="volume_bragg_gratings.html" title="Bragg gratings written into some bulk material">volume Bragg gratings</a> which can be used as wavelength-dependent reflectors.
+Also, Bragg diffraction is possible based on sound waves in a medium; this is exploited in <a href="acousto_optic_modulators.html" title="optical modulators based on the acousto-optic effect">acousto-optic modulators</a>.</p>
+<p>Diffraction effects can also occur in reflection.
+In fact, most diffraction gratings are reflective elements.</p>
+<p>Of course, diffraction effects also occur at non-periodic structures.
+For example, the phenomenon of <a href="laser_speckle.html" title="light patterns resulting from the reflection of coherent light at rough surfaces">laser speckle</a> occurs when a laser beam is scattered on a rough surface, which in effect causes a complicated phase modulation pattern on the beam.
+Very noticeable speckle effects can be observed with <a href="monochromatic_light.html" title="light with a single optical frequency">quasi-monochromatic</a> light as obtained from lasers.
+This is not the case for broadband (<a href="coherence.html" title="a fixed phase relationship between the electric field values at different locations or at different times">temporally incoherent</a>) light, because the obtained patterns have a strong wavelength dependence, such that the averaging of intensities over some wavelength range effectively washes out such patterns.</p>
+</div>
+<h2 class="togglediv">Diffractive Optics</h2>
+<div>
+<p>There are various other kinds of optical elements which exploit diffraction effects.
+For example, there are diffractive <a href="beam_splitters.html" title="devices for splitting a laser beam into two or more beams">beam splitters</a> with multiple outputs, and similar devices are used for <a href="coherent_beam_combining.html" title="a class of methods for beam combining, requiring mutual coherence of the combined beams">coherent beam combining</a>.
+For more details, see the article on <a href="diffractive_optics.html" title="optical elements with operation principles based on diffraction of light">diffractive optics</a>.</p>
+</div>
+<h2 class="togglediv">Diffraction and Interference</h2>
+<div>
+<p>Diffraction effects can be explained based on the <a href="interference.html" title="a range of phenomena associated with the superposition of waves">interference</a> of different contributions of a field profile to the resulting fields at distant locations (<em>Huygens&ndash;Fresnel principle</em>).
+There is actually no clear boundary between diffraction and interference.
+For example, the transmission of light through a narrow slit (aperture) is usually described in terms of diffraction, while phenomena behind a double slit are called interference phenomena.
+However, the basic principle of interference can be applied to both cases.</p>
+</div>
+<h2 class="togglediv">Different Regimes of Diffraction</h2>
+<div>
+<p>Different regimes of diffraction are distinguished, which can be treated with different mathematical methods.
+<em>Fraunhofer diffraction</em> is relevant when considering the <a href="near_field_and_far_field.html" title="the optical field either close to a source or object or far from it">far field</a>, i.e., diffraction patterns far away from the refracting structure; this regime is characterized by values of the <a href="fresnel_number.html" title="a parameter determining the regime of diffraction effects">Fresnel number</a> well below 1.
+On the other hand, the concept of <em>Fresnel diffraction</em> with large Fresnel numbers can be applied to cases where the <a href="near_field_and_far_field.html" title="the optical field either close to a source or object or far from it">near field</a> is relevant.</p>
+</div>
+<h2 class="togglediv">Diffraction-limited Performance of Optical Instruments</h2>
+<div>
+<p>The performance of various kinds of optical instruments such as <a href="microscopes.html" title="instruments for seeing very small objects">microscopes</a> is essentially limited by diffraction effects.
+Essentially, the limited transverse size of the entrance aperture or of internal elements cause diffraction effects which set a minimum spot size of the so-called point spread function.
+Therefore, optical microscopes (including <a href="laser_microscopy.html" title="a technique for generating microscopic images by scanning objects with a laser">laser microscopes</a>) are usually limited in resolution to the order of half the optical <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>.
+There are few exceptions to that limitation, for example near field microscopes (using an optical tip of sub-wavelength size for scanning objects) or certain kinds of <a href="fluorescence_microscopy.html" title="a technique for acquiring microscopic images using fluorescence which is excited in the sample">fluorescence microscopy</a> (STED).</p>
+<p>Similar performance limitations apply to optical <a href="telescopes.html" title="optical instruments for viewing distant objects, or sometimes more generally afocal systems">telescopes</a>.
+Limiting diffraction effects (for optimum angular resolution) requires the use of large optical apertures.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="diffraction.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="diffraction_gratings.html" title="optical components containing a periodic structure which diffracts light">diffraction gratings</a>, <a href="diffraction_limited_beams.html" title="beams with a minimum possible beam divergence for a given waist radius">diffraction-limited beams</a>, <a href="resonator_modes.html" title="modes of an optical or microwave resonator">resonator modes</a>, <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a>, <a href="laser_speckle.html" title="light patterns resulting from the reflection of coherent light at rough surfaces">laser speckle</a>, <a href="fourier_optics.html" title="the description of light propagation based on transverse spatial Fourier transforms">Fourier optics</a>, <a href="near_field_and_far_field.html" title="the optical field either close to a source or object or far from it">near field and far field</a><br>and other articles in the category <a href="categories.html#general_optics" title="other articles on general optics">general optics</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/diffraction.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fdiffraction.html&text=RP+Photonics+Encyclopedia+-+diffraction%2C+Fraunhofer%2C+Fresnel%2C+diffractive+optics%2C+interference%2C+diffraction-limited+performance" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fdiffraction.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fdiffraction.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/diffraction.html"&gt;<br>Article on Diffraction&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/diffraction.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/diffraction.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/diffraction.html<br>article on 'Diffraction' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Short-term Software Licenses Available</h2>
+<p>Do you need simulation software (such as our <a href="./fiberpower.html?banner=rented_software">RP Fiber Power</a>) only during a <b>short-term project</b>?</p>
+<p>Or do you want to <b>test such software very thoroughly</b> before fully committing to it?</p>
+<p>RP Photonics is now offering a solution: <a href="./software_licenses.html?banner=rented_software">software licenses</a> which are valid for a <b>limited time</b>.</p>
+<p>Our conditions are very fair:</p>
+<ul>
+<li>Pay only 5% of the amount for a permanent license for one month.</li>
+<li>When switching over to a permanent license directly thereafter, get the already paid money fully deducted!</li>
+<li>If you decide for that only later on, still get two thirds deducted.</li>
+</ul>
+<p>We are confident that you will like our software and finally decide for permanent licenses.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="aCtTyGA4g1OMvvmoHUFCiw==">shownbanner = "rented software";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2 style="font-size:20px;">Stand up for Science!</h2>
+<p style="font-size:14px;">It is acceptable that some don't know much about photons, biological evolution or global warming.</p>
+<p style="font-size:16px; font-weight:bold; color:#B20B28;">But we don't want bigot ignorants to make political decisions and educate our children!</p>
+<p style="font-size:14px;">For example, <b>global warming</b> is not a matter of political opinion, but a fact. Ruthless profiteers are leading astray millions of uneducated people, seducing them to take utterly irresponsible positions. <span style="font-weight:bold; color:#B20B28;">But we cannot risk catastrophic climate changes!</span> Science tells us it is high time to act. Read, for example, the <a href="https://www.ipcc.ch/report/sixth-assessment-report-cycle/">IPCC Synthesis Report</a>.</p>
+<p style="font-size:14px; font-weight:bold;">Stand up for science (perhaps by joining a <a href="https://www.marchforscience.com/">March for Science</a>) &ndash; it's our future!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="aCtTyGA4g1OMvvmoHUFCiw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/diffraction.html"
+    },
+    "headline": "Diffraction",
+    "image": "https://www.rp-photonics.com/previews/diffraction.png",
+    "datePublished": "2019-03-23",
+    "dateModified": "2020-03-14",
+    "description": "Various kinds of diffraction effects can be observed e.g. when light beams hit apertures or other kinds of structures leading to spatially dependent intensity or phase variations.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter D",
+      "item": "https://www.rp-photonics.com/encyclopedia_d.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "diffraction",
+      "item": "https://www.rp-photonics.com/diffraction.html"
+    }]}
+}
+</script>
+</body>
+</html>

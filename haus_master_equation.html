@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-bbnLXo4nP4Nug+Pe9XhGOA=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - Haus Master equation, mode-locked lasers, ultrashort pulses, Landau-Ginzberg</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/haus_master_equation.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-07-10">
+<meta name="description" content="The Haus Master equation is an analytical equation describing the evolution of ultrashort pulses in a laser resonator. It can be used for the modeling of mode-locked lasers.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="Haus Master equation, mode-locked lasers, ultrashort pulses, Landau-Ginzberg">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Haus Master Equation">
+<meta property="og:description" content="The Haus Master equation is an analytical equation describing the evolution of ultrashort pulses in a laser resonator. It can be used for the modeling of mode-locked lasers.">
+<meta property="og:url" content="https://www.rp-photonics.com/haus_master_equation.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/haus_master_equation.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="The Haus Master equation is an analytical equation describing the evolution of ultrashort pulses in a laser resonator. It can be used for the modeling of mode-locked lasers.">
+<meta name="twitter:title" content="Haus Master Equation">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/haus_master_equation.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="bbnLXo4nP4Nug+Pe9XhGOA==">
+page="haus_master_equation.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> <a href="./sponsors/elen.html"><img src="./bg/logos/elen.png" alt="El.En." class="supplierlogo sponsor"></a> <a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="bbnLXo4nP4Nug+Pe9XhGOA==">shownsponsors="eagleyard Photonics,EKSMA OPTICS,El.En.,Knight Optical"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_h.html">letter H</a> &gt; <a href="haus_master_equation.html">Haus Master equation</a></p>
+<h1>Haus Master Equation</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="boxadvertisement">
+<h2>Simulating Pulse Propagation</h2>
+<p>Equations similar to the Haus master equation can be used for the numerical simulation of the propagation of ultrashort pulses.
+For example, the software <a href="fiberpower.html"><b>RP Fiber Power</b></a> is based on that approach.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: an analytical equation describing the evolution of ultrashort pulses in a laser resonator</p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<p><a href="encyclopedia_cite.html?article=Haus%20Master%20equation">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>The Master equation as introduced by Hermann A. Haus [1] is the central piece of a <a href="pulse_propagation_modeling.html" title="working with physical models describing the propagation of ultrashort pulses e.g. in lasers or optical fibers">physical model</a> which can be used to describe the <a href="pulses.html" title="flashes of light">pulse</a> evolution in the <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">resonator</a> of a <a href="mode_locked_lasers.html" title="lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked laser</a>.
+The basic ideas underlying the model are the following:</p>
+<ul>
+<li>The pulse circulating in the laser resonator is described in the time domain with a complex amplitude <span class="eqn_il"><i>A</i>(<i>t</i>)</span>.
+Note that this function describes a single pulse, not a pulse train, and applies to a certain position within the resonator (e.g. just before the <a href="output_couplers.html" title="partially transparent laser mirrors, used for extracting output beams from laser resonators">output coupler</a>).
+The amplitudes are usually normalized so that the squared modulus of <span class="eqn_il"><i>A</i>(<i>t</i>)</span> is either the <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a> or the <a href="optical_intensity.html" title="optical power per unit area">optical intensity</a> in the <a href="gain_media.html" title="media for laser amplification">gain medium</a>.</li>
+<li>The changes <span class="eqn_il"><span class="greek">&Delta;</span><i>A</i>(<i>t</i>)</span> of this function within a single resonator round trip are then calculated.
+Such changes can be caused by laser <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> (with a finite <a href="gain_bandwidth.html" title="the width of the optical frequency range in which significant gain is available from an amplifier">gain bandwidth</a>), optical losses (with a time dependence introduced by an <a href="optical_modulators.html" title="devices allowing one to manipulate properties of light beams, such as the optical power or phase">optical modulator</a> for <a href="active_mode_locking.html" title="a technique of mode locking, based on active modulation of the intracavity losses or the round-trip phase change">active mode locking</a> or a <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorber</a> for <a href="passive_mode_locking.html" title="a technique of mode locking, based on a saturable absorber inside the laser resonator">passive mode locking</a>), <a href="chromatic_dispersion.html" title="the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> and optical <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a> (e.g. the <a href="kerr_effect.html" title="a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization">Kerr effect</a>).
+Of course, it depends on the considered situation which of these effects are relevant.
+Note that the overall time delay corresponding to the resonator round-trip time is <em>not</em> considered, so that the pulse typically remains centered near <span class="eqn_il"><i>t</i>&thinsp;=&thinsp;0</span>.</li>
+<li>In a first step, amplitudes <span class="eqn_il"><i>A</i><sub><i>j</i></sub>(<i>t</i>)</span> may be considered, where <span class="eqn_il"><i>j</i></span> indicates the number of resonator round trips.
+The index <span class="eqn_il"><i>j</i></span> is then replaced with a second time variable <span class="eqn_il"><i>T</i>&thinsp;=&thinsp;<i>j&thinsp;T</i><sub>rt</sub></span>, where <span class="eqn_il"><i>T</i><sub>rt</sub></span> is the resonator round-trip time.
+This leads to a function <span class="eqn_il"><i>A</i>(<i>T</i>,<i>t</i>)</span>.</li>
+<li>Finally, <span class="eqn_il"><i>T</i></span> is considered as a continuous variable, the evolution of which is described with a differential equation.
+If the combined changes of the amplitude per round trip are <span class="eqn_il"><span class="greek">&Delta;</span><i>A</i></span>, the resulting Master equation is of the form</li>
+</ul>
+<div class="eqn"><img src="eqn/hme_da.gif" width="126" height="41" alt="form of Haus Master equation"></div>
+<p>As an example, consider the case of an actively mode-locked laser with intracavity <a href="dispersion.html" title="the dependence of the phase velocity in a medium on the optical frequency or the propagation mode">dispersion</a> and a <a href="kerr_effect.html" title="a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization">Kerr nonlinearity</a>.
+In that case, the Haus Master equation reads</p>
+<div class="eqn"><img src="eqn/hme_aml.gif" width="421" height="50" alt="form of Haus Master equation"></div>
+<p>where the terms on the right-hand side describe (in that order) the constant part of the laser gain, the frequency dependence of the gain and the second-order dispersion, the resonator losses, the time-dependent modulator loss (approximated for small time arguments), and the Kerr nonlinearity.
+This is a generalized Landau&ndash;Ginzberg equation.
+The Master equation can be seen as a generalization of the <em>nonlinear Schrödinger equation</em>, as is often used for the study of <a href="solitons.html" title="pulses with a certain balance of nonlinear and dispersive effects">soliton pulse</a> phenomena.</p>
+<h2 class="togglediv">Approximations</h2>
+<div>
+<p>It is important to recognize which kind of approximations are usually required:</p>
+<ul>
+<li>The changes of the pulse profile per resonator round trip must be small.
+This condition is well satisfied for many but not all mode-locked lasers.
+In particular, it is problematic for lasers generating few-cycle pulses (e.g. <a href="titanium_sapphire_lasers.html" title="lasers based on a Ti:sapphire gain medium">titanium&ndash;sapphire lasers</a>), where the pulse parameters usually undergo large changes within a single resonator round trip, and the order of optical components matters.</li>
+<li>The considered terms should usually not be too complicated, as otherwise it may not be possible to find analytical solutions (see below).
+For example, it is common to omit terms for higher-order dispersion (which would introduce third or higher order temporal derivatives), to neglect <a href="raman_scattering.html" title="a nonlinear scattering process involving optical phonons">Raman scattering</a>, to assume weak saturation of <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">absorbers</a>, etc.</li>
+</ul>
+</div>
+<h2 class="togglediv">Applications</h2>
+<div>
+<p>In not too complicated situations, analytical solutions of the Haus Master equation are known for the steady state (as reached after many resonator round trips).
+For example, this is the case for the actively mode-locked laser without dispersion and nonlinearities.
+The result is that the pulse shape is Gaussian, and the calculated <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a> exactly agrees with that of the earlier <a href="kuizenga_siegman_theory.html" title="a theory predicting the durations of pulses from actively mode-locked lasers">Kuizenga&ndash;Siegman theory</a>.
+There are also higher-order solutions described with Hermite&ndash;Gaussian functions, but these experience lower net gains per resonator round trip, and are thus not observed.</p>
+<p>In more difficult cases, approximated results can be obtained by using a simple ansatz for the function <span class="eqn_il"><i>A</i>(<i>t</i>)</span>, e.g. corresponding to <a href="sech2_shaped_pulses.html" title="pulses with a temporal intensity profile which has the shape of a sech<sup>2</sup> function">sech<sup>2</sup>-shaped pulses</a> (possibly with a <a href="chirp.html" title="time dependence of the instantaneous frequency of an optical pulse">chirp</a>).
+This leads to equations which allow one e.g. to calculate pulse duration, chirp, and spectral <a href="bandwidth.html" title="the width of some frequency or wavelength range">bandwidth</a> as functions of the laser parameters.</p>
+<p>In still more complicated cases, analytical solutions usually require approximations, the validity conditions of which are often not well satisfied in realistic situations.
+In particular, the time-dependent loss caused by a slow <a href="saturable_absorbers.html" title="light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorber</a> is difficult to treat, as it depends on the optical intensity at earlier times and thus introduces an integral on the right-hand side of the Haus Master equation.
+Another issue is the stability of solutions; there are cases where the theoretical solution is dynamically unstable and can thus never be observed in practice.
+For these reasons, numerical algorithms are often used to calculate the steady-state pulse profile.
+However, this approach removes the ability to obtain analytical equations as results, which can be more helpful in recognizing relations between parameters.
+There is then usually no more advantage over using straightforward pulse propagation models, which are less dependent on various approximations (see above), and thus able to describe reliably a wider range of phenomena.
+Also, such models are not more complex to implement and validate.</p>
+<p>Another use of the Master equation is to derive dynamic equations (coupled differential equations) for a limited number of pulse parameters, such as <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a>, <a href="pulse_duration.html" title="the duration of an optical pulse">duration</a>, <a href="chirp.html" title="time dependence of the instantaneous frequency of an optical pulse">chirp</a>, and temporal position, using the moment method [4].
+The emphasis is then not necessarily on the steady state, but on the evolution of pulse parameters, which can be used, e.g., to investigate <a href="laser_noise.html" title="fluctuations of various parameters of laser light, such as the optical power and phase">noise</a> properties.</p>
+<p>In conclusion, the Haus Master equation can be considered as a useful tool mainly for the study of simple situations, where analytical solutions can be obtained, and as the basis of some dynamic models, whereas simple pulse propagation models (treating different effects on the pulses sequentially) are usually more appropriate for more complex situations, particularly for passively mode-locked lasers.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="haus_master_equation.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">H. A. Haus <i>et al.</i>, &ldquo;Structures for additive pulse mode locking&rdquo;, J. Opt. Soc. Am. B 8 (10), 2068 (1991), <a href="https://doi.org/10.1364/JOSAB.8.002068">doi:10.1364/JOSAB.8.002068</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">A. M. Dunlop <i>et al.</i>, &ldquo;Pulse shapes and stability in Kerr and active mode-Locking (KAML)&rdquo;, Opt. Express 2 (5), 204 (1998), <a href="https://doi.org/10.1364/OE.2.000204">doi:10.1364/OE.2.000204</a> (extended equations, including the transverse spatial dimensions)</td></tr>
+<tr><td class="refno">[3]</td><td class="refs">H. A. Haus, &ldquo;Mode-locking of lasers&rdquo;, J. Sel. Top. Quantum Electron. 6 (6), 1173 (2000), <a href="https://doi.org/10.1109/2944.902165">doi:10.1109/2944.902165</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">N. G. Usechak and G. P. Agrawal, &ldquo;Rate-equation approach for frequency-modulation mode locking using the moment method&rdquo;, J. Opt. Soc. Am. B 22 (12), 2570 (2005), <a href="https://doi.org/10.1364/JOSAB.22.002570">doi:10.1364/JOSAB.22.002570</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="pulse_propagation_modeling.html" title="working with physical models describing the propagation of ultrashort pulses e.g. in lasers or optical fibers">pulse propagation modeling</a>, <a href="mode_locking.html" title="a group of techniques for generating ultrashort pulses in lasers">mode locking</a>, <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a>, <a href="kuizenga_siegman_theory.html" title="a theory predicting the durations of pulses from actively mode-locked lasers">Kuizenga&ndash;Siegman theory</a><br>and other articles in the categories <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/haus_master_equation.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fhaus_master_equation.html&text=RP+Photonics+Encyclopedia+-+Haus+Master+equation%2C+mode-locked+lasers%2C+ultrashort+pulses%2C+Landau-Ginzberg" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fhaus_master_equation.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fhaus_master_equation.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/haus_master_equation.html"&gt;<br>Article on Haus Master Equation&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/haus_master_equation.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/haus_master_equation.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/haus_master_equation.html<br>article on 'Haus Master Equation' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2 style="font-size:20px;">Debugging Is Now Fun!</h2>
+<p>The software products which are supporting our <a href="./software_script_language.html?banner=Debugger">script language</a> (e.g. <a href="./fiberpower.html?banner=Debugger">RP Fiber Power</a> and <a href="./coating.html?banner=Debugger">RP Coating</a>) have now got a <a href="./software_news_2017_05_31.html?banner=Debugger">powerful debugger</a>!</p>
+<a href="./software_news_2017_05_31.html?banner=Debugger"><img src="./img/expression_debugger_small.png" alt="debugger" style="margin:10px 0;"></a>
+<p>It works even within expressions, not only after each command!</p>
+<p>The <a href="./software_news.html?banner=Debugger">RP Photonics Software News</a> keep you informed.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="bbnLXo4nP4Nug+Pe9XhGOA==">shownbanner = "Debugger";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>A Quiz Question</h2>
+<p style="margin-top:15px">taken from the <a href="./quiz.html?banner=quiz">Photonics Quiz</a>:</p><form action="/quiz.html" method="get" style="margin-bottom:12px;">
+<p><input name="n" value="8" type="hidden"></p>
+<p style="text-align:left;">Which factors help to minimize the pulse duration from a Q-switched laser?</p>
+<p style="margin-left:50px; text-indent:-50px; text-align:left;"><input type="checkbox" name="answer_a" value="y"> (a) a short <a href="./upper_state_lifetime.html?banner=quiz">upper-state lifetime</a></p>
+<p style="margin-left:50px; text-indent:-50px; text-align:left;"><input type="checkbox" name="answer_b" value="y"> (b) a high product of upper-state lifetime and emission <a href="./transition_cross_sections.html?banner=quiz">cross section</a></p>
+<p style="margin-left:50px; text-indent:-50px; text-align:left;"><input type="checkbox" name="answer_c" value="y"> (c) a high pump intensity and duration</p>
+<p style="margin-left:50px; text-indent:-50px; text-align:left;"><input type="checkbox" name="answer_d" value="y"> (d) a short laser resonator</p>
+<p style="margin-top:15px;"><input type="submit" value="Get your answer checked" style="padding:3px 10px; font-size:14px;"></p>
+</form>
+<p>After selecting your answer(s) and pressing this button, find the explanations on the left side.</p>
+
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="bbnLXo4nP4Nug+Pe9XhGOA==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/haus_master_equation.html"
+    },
+    "headline": "Haus Master Equation",
+    "image": "https://www.rp-photonics.com/previews/haus_master_equation.png",
+    "datePublished": "2006-02-22",
+    "dateModified": "2020-07-10",
+    "description": "The Haus Master equation is an analytical equation describing the evolution of ultrashort pulses in a laser resonator. It can be used for the modeling of mode-locked lasers.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter H",
+      "item": "https://www.rp-photonics.com/encyclopedia_h.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Haus Master equation",
+      "item": "https://www.rp-photonics.com/haus_master_equation.html"
+    }]}
+}
+</script>
+</body>
+</html>

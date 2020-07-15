@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-Z50qmdm8yOaMTFWY+j/j1g=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - mode hopping, mode hops, tuning, noise</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/mode_hopping.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Mode hopping is the phenomenon that a laser exhibits sudden jumps of optical frequency, which are associated with transitions between different modes of its resonator.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="mode hopping, mode hops, tuning, noise">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mode Hopping">
+<meta property="og:description" content="Mode hopping is the phenomenon that a laser exhibits sudden jumps of optical frequency, which are associated with transitions between different modes of its resonator.">
+<meta property="og:url" content="https://www.rp-photonics.com/mode_hopping.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/mode_hopping.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Mode hopping is the phenomenon that a laser exhibits sudden jumps of optical frequency, which are associated with transitions between different modes of its resonator.">
+<meta name="twitter:title" content="Mode Hopping">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/mode_hopping.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="Z50qmdm8yOaMTFWY+j/j1g==">
+page="mode_hopping.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> <a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="Z50qmdm8yOaMTFWY+j/j1g==">shownsponsors="EKSMA OPTICS,Knight Optical"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_m.html">letter M</a> &gt; <a href="mode_hopping.html">mode hopping</a></p>
+<h1>Mode Hopping</h1>
+<header style="margin-right:0;">
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: the phenomenon that a laser exhibits sudden jumps of optical frequency, which are associated with transitions between different modes of its resonator</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Modensprünge</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#optical_resonators" title="other articles on optical resonators">optical resonators</a>, <a href="categories.html#lasers" title="other articles on lasers">lasers</a></p>
+<p><a href="encyclopedia_cite.html?article=mode%20hopping">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Mode hopping is a phenomenon which is mostly discussed in the context of <a href="single_frequency_lasers.html" title="lasers emitting radiation in a single resonator mode">single-frequency lasers</a>.
+Under some external influence, such a laser may operate on a single <a href="resonator_modes.html" title="modes of an optical or microwave resonator">resonator mode</a> for some time, but then suddenly switch to some other mode.
+This means that this other mode suddenly takes over all the <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a>; for a short while, there may be power in both modes.</p>
+<p>In multimode operation of a <a href="lasers.html" title="devices generating visible or invisible light, based on stimulated emission of light">laser</a>, there may also be transitions between different sets of modes.
+However, simultaneous oscillation on many modes is then most common, and instead of complete mode hops there are often more continuous transitions, with the optical power being gradually redistributed.
+The dynamics can be further influenced by <a href="nonlinearities.html" title="optical phenomena involving a nonlinear response to a driving light field">nonlinear effects</a> such as <a href="spatial_hole_burning.html" title="a distortion of the gain shape in a laser medium (or the loss spectrum in a saturable absorber medium), caused by saturation effects of a standing wave">spatial hole burning</a>.</p>
+<p>Mode hops can also involve <a href="higher_order_modes.html" title="transverse modes of a resonator or waveguide, excluding the fundamental (axial) modes">higher-order modes</a>, or modes with different polarization in lasers with polarization-independent gain.</p>
+<h2 class="togglediv">Causes of Mode Hops</h2>
+<div>
+<p>Mode hops are often provoked by external influences.
+For example, a drift of the temperature of the <a href="gain_media.html" title="media for laser amplification">gain medium</a> will shift the wavelength of maximum <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> while not shifting the frequencies of the resonator modes to the same extent.
+(This can happen e.g. in <a href="laser_diodes.html" title="semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diodes</a>, where temperature changes usually affect the gain maximum more than the cavity resonances.)
+The previously lasing mode may then no longer be the mode with highest gain, so that the power of a competing mode with higher gain can quickly rise.</p>
+<p>Essentially the same phenomenon can occur for length drifts of the <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a>, which shift the resonator mode frequencies without also shifting the gain maximum.</p>
+<p>Both origins of mode hops often result from attempts to <a href="wavelength_tuning.html" title="the manipulation of the output wavelength of an optical device such as a laser or an optical parametric oscillator">tune the wavelength</a> of a laser.
+The external influences can of course also be just random noise, e.g. mirror vibrations, temperature fluctuations or changes of pump power, or external optical feedback.</p>
+</div>
+<h2 class="togglediv">Consequences of Mode Hops</h2>
+<div>
+<p>Mode hops can obviously be disturbing, because they can make it difficult e.g. to obtain continuous <a href="wavelength_tuning.html" title="the manipulation of the output wavelength of an optical device such as a laser or an optical parametric oscillator">wavelength tuning</a>.
+Depending on various details of a laser setup, the wavelength may make significant jumps with only small changes in between these jumps, or it can vary like a sawtooth curve.</p>
+<p>Mode hops also generate <a href="laser_noise.html" title="fluctuations of various parameters of laser light, such as the optical power and phase">laser noise</a>, e.g. in the form of <a href="intensity_noise.html" title="noise of the optical intensity or power of a laser beam">intensity noise</a> and noise of other parameters, particularly if the mode hops occur frequently.</p>
+</div>
+<h2 class="togglediv">Avoiding Mode Hopping</h2>
+<div>
+<p>It is generally easier to avoid mode hopping when the <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonator</a> has a large <a href="free_spectral_range.html" title="frequency spacing of the axial modes of an optical resonator">free spectral range</a>, i.e. a large frequency spacing of its fundamental modes.
+Some <a href="tunable_lasers.html" title="lasers the output wavelengths of which can be tuned">tunable lasers</a> are just equipped with a correspondingly short laser resonator, and the tuning range is limited by a value close to the free spectral range, which may e.g. be a few gigahertz for a compact <a href="nonplanar_ring_oscillators.html" title="a type of monolithic single-frequency lasers, based on a nonplanar ring resonator">nonplanar ring oscillator</a> (NPRO or MISER).</p>
+<p>A continuous (mode hop free) tuning range much wider than the free spectral range is possible by coordinated tuning of the resonator mode frequencies and the gain maximum, or with an additional intracavity <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">optical filter</a>.</p>
+<p>Random mode hops may be suppressed by minimizing external noise influences (e.g. by temperature <a href="stabilization_of_lasers.html" title="measures applied to lasers in order to improve their stability in terms of output power, optical frequency, or other quantities">stabilization</a>) and also by using a resonator with large free spectral range (see above).</p>
+<p>It is also possible to employ various kinds of nonlinearities which favor the already lasing mode over competing modes.
+An example is <a href="spatial_hole_burning.html" title="a distortion of the gain shape in a laser medium (or the loss spectrum in a saturable absorber medium), caused by saturation effects of a standing wave">spatial hole burning</a> in an unpumped region of a <a href="four_level_and_three_level_gain_media.html" title="laser gain media without/with reabsorption from the lower laser level">quasi-three-level gain medium</a> [3].
+A similar effect can be achieved with <a href="intracavity_frequency_doubling.html" title="frequency doubling with a nonlinear crystal within the laser resonator">intracavity frequency doubling</a> [2].</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="mode_hopping.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">G. A. Ball and W. W. Morey, &ldquo;Continuously tunable single-mode erbium fiber laser&rdquo;, Opt. Lett. 17 (6), 420 (1992), <a href="https://doi.org/10.1364/OL.17.000420">doi:10.1364/OL.17.000420</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">K. I. Martin <i>et al.</i>, &ldquo;Self-suppression of axial mode hopping by intracavity second-harmonic generation&rdquo;, Opt. Lett. 22 (6), 375 (1997), <a href="https://doi.org/10.1364/OL.22.000375">doi:10.1364/OL.22.000375</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">R. Paschotta <i>et al.</i>, &ldquo;Single-frequency ytterbium-doped fiber laser stabilized by spatial hole burning&rdquo;, Opt. Lett. 22 (1), 40 (1997), <a href="https://doi.org/10.1364/OL.22.000040">doi:10.1364/OL.22.000040</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">C. Petridis <i>et al.</i>, &ldquo;Mode-hop-free tuning over 80&nbsp;GHz of an extended cavity diode laser without antireflection coating&rdquo;, Rev. Sci. Instrum. 72 (10), 3812 (2001), <a href="https://doi.org/10.1063/1.1405783">doi:10.1063/1.1405783</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="resonator_modes.html" title="modes of an optical or microwave resonator">resonator modes</a>, <a href="single_frequency_lasers.html" title="lasers emitting radiation in a single resonator mode">single-frequency lasers</a>, <a href="wavelength_tuning.html" title="the manipulation of the output wavelength of an optical device such as a laser or an optical parametric oscillator">wavelength tuning</a>, <a href="laser_resonators.html" title="optical resonators serving as basic building blocks of lasers">laser resonators</a>, <a href="laser_noise.html" title="fluctuations of various parameters of laser light, such as the optical power and phase">laser noise</a><br>and other articles in the categories <a href="categories.html#optical_resonators" title="other articles on optical resonators">optical resonators</a>, <a href="categories.html#lasers" title="other articles on lasers">lasers</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/mode_hopping.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fmode_hopping.html&text=RP+Photonics+Encyclopedia+-+mode+hopping%2C+mode+hops%2C+tuning%2C+noise" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fmode_hopping.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fmode_hopping.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/mode_hopping.html"&gt;<br>Article on Mode Hopping&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/mode_hopping.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/mode_hopping.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/mode_hopping.html<br>article on 'Mode Hopping' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Traffic on this Website</h2>
+<p>This website is enormously popular. The page views of the <span style="color:#B20B28; font-weight:bold;">encyclopedia</span> and the <span style="color:#4820DD; font-weight:bold;">buyer's guide</span> in the last 12 months:</p>
+<table class="traffictable">
+<tr><th>Month&nbsp;&nbsp;</th><th colspan="2">Page views</th></tr>
+<tr><td>2019-07</td><td style="width:30px; text-align:right;">207,953&nbsp;</td><td><div style="width:74px; background-color:#B20B28; float:left;"></div><div style="width:9px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2019-08</td><td style="width:30px; text-align:right;">199,700&nbsp;</td><td><div style="width:71px; background-color:#B20B28; float:left;"></div><div style="width:8px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2019-09</td><td style="width:30px; text-align:right;">232,582&nbsp;</td><td><div style="width:84px; background-color:#B20B28; float:left;"></div><div style="width:9px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2019-10</td><td style="width:30px; text-align:right;">269,144&nbsp;</td><td><div style="width:97px; background-color:#B20B28; float:left;"></div><div style="width:10px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2019-11</td><td style="width:30px; text-align:right;">282,278&nbsp;</td><td><div style="width:104px; background-color:#B20B28; float:left;"></div><div style="width:9px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2019-12</td><td style="width:30px; text-align:right;">237,826&nbsp;</td><td><div style="width:86px; background-color:#B20B28; float:left;"></div><div style="width:9px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2020-01</td><td style="width:30px; text-align:right;">222,178&nbsp;</td><td><div style="width:79px; background-color:#B20B28; float:left;"></div><div style="width:10px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2020-02</td><td style="width:30px; text-align:right;">225,389&nbsp;</td><td><div style="width:80px; background-color:#B20B28; float:left;"></div><div style="width:10px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2020-03</td><td style="width:30px; text-align:right;">222,647&nbsp;</td><td><div style="width:80px; background-color:#B20B28; float:left;"></div><div style="width:9px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2020-04</td><td style="width:30px; text-align:right;">239,946&nbsp;</td><td><div style="width:87px; background-color:#B20B28; float:left;"></div><div style="width:9px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2020-05</td><td style="width:30px; text-align:right;">236,587&nbsp;</td><td><div style="width:85px; background-color:#B20B28; float:left;"></div><div style="width:10px; background-color:#4820DD; float:left;"></div></td></tr>
+<tr><td>2020-06</td><td style="width:30px; text-align:right;">219,899&nbsp;</td><td><div style="width:78px; background-color:#B20B28; float:left;"></div><div style="width:10px; background-color:#4820DD; float:left;"></div></td></tr>
+</table>
+<p>Total: <b>2,796,129 page views</b> within 12 months.</p>
+<p>See also our <a href="./website_statistics.html?banner=web_traffic">detailed published data</a>. They are no surprise in the light of the <a href="./website_search_engines.html?banner=web_traffic">extraordinary Google ranking</a>.</p>
+<p>Obviously, it would be a good idea to <a href="./marketing.html?banner=web_traffic">advertise your photonics products</a> on this site &ndash; with <a href="./bg_entries.html?banner=web_traffic">enhanced entries in the buyer's guide</a> and with <a href="./marketing_banners.html?banner=web_traffic">banners</a> at this place here.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="Z50qmdm8yOaMTFWY+j/j1g==">shownbanner = "web traffic";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Photonics Newsletters &ndash; <br>get high quality information, not the usual advertisements!</h2>
+<ul>
+<li>The <a href="./spotlight.html?banner=newsletters">Photonics Spotlight</a> presents high-quality information on technical and scientific aspects of photonics.</li>
+<li>The <a href="./software_news.html?banner=newsletters">RP Photonics Software News</a> present news and useful hints on software &ndash; for example, about how to use our software products, new features, updates and upgrades, and on algorithms.</li>
+</ul>
+<p style="text-align:center; margin:8px 8px;"><img src="./img/mail.png" alt="e-mail"></p>
+<h3>We won't flood you with e-mails!</h3>
+<p>Our newsletters appear only about once per month, and they carry valuable information.
+You will not regret to <a href="./newsletters.html?banner=newsletters">register</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="Z50qmdm8yOaMTFWY+j/j1g==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/mode_hopping.html"
+    },
+    "headline": "Mode Hopping",
+    "image": "https://www.rp-photonics.com/previews/mode_hopping.png",
+    "datePublished": "2007-02-19",
+    "dateModified": "2020-03-14",
+    "description": "Mode hopping is the phenomenon that a laser exhibits sudden jumps of optical frequency, which are associated with transitions between different modes of its resonator.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter M",
+      "item": "https://www.rp-photonics.com/encyclopedia_m.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "mode hopping",
+      "item": "https://www.rp-photonics.com/mode_hopping.html"
+    }]}
+}
+</script>
+</body>
+</html>

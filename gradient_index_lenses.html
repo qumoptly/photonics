@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-uVhxqsNmeaAncgv7+/E45g=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - gradient-index lenses, operation principle, dioptric power, fabrication methods, applications</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/gradient_index_lenses.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-07-09">
+<meta name="description" content="Gradient-index lenses are lenses not requiring curved surfaces, because instead they employ a radially varying refractive index. They provide compact and possibly cheap solutions for many applications.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="gradient-index lenses, operation principle, dioptric power, applications">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gradient-index Lenses">
+<meta property="og:description" content="Gradient-index lenses are lenses not requiring curved surfaces, because instead they employ a radially varying refractive index. They provide compact and possibly cheap solutions for many applications.">
+<meta property="og:url" content="https://www.rp-photonics.com/gradient_index_lenses.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/gradient_index_lenses.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Gradient-index lenses are lenses not requiring curved surfaces, because instead they employ a radially varying refractive index. They provide compact and possibly cheap solutions for many applications.">
+<meta name="twitter:title" content="Gradient-index Lenses">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/gradient_index_lenses.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="uVhxqsNmeaAncgv7+/E45g==">
+page="gradient_index_lenses.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/encyclopedia.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="uVhxqsNmeaAncgv7+/E45g==">shownsponsors="DataRay"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_gradient_index_lenses.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_g.html">letter G</a> &gt; <a href="gradient_index_lenses.html">gradient-index lenses</a></p>
+<h1>Gradient-index Lenses</h1>
+<header style="margin-right:0;">
+<p>Acronym: GRIN lens</p>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: lenses which utilize a radial variation of refractive index</p>
+<p>More general term: <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lenses</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Gradientenindexlinsen</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a></p>
+<p><a href="encyclopedia_cite.html?article=gradient-index%20lenses">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>The essential function of a <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lens</a> is to produce a radially varying delay of the <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">optical phase</a> of a beam; the resulting <a href="wavefronts.html" title="surfaces connecting points with the same phase of a wave">wavefront</a> curvature can make a beam converging or diverging after the lens.
+In ordinary lenses, the radially varying phase delay is produced by varying the thickness of the lens material.
+An alternative operation principle is that of a <em>gradient index lens</em> (<em>GRIN lens</em>), where the thickness is usually constant, while the <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> varies in the radial direction.
+It is also possible (but not common) to combine both operation principles, i.e., to make GRIN lenses with curved surfaces.</p>
+<p>Typical GRIN lenses have a cylindrical rod shape, although a wide range of other shapes is possible.</p>
+<p>As an example, Figure&nbsp;1 shows the propagation of rays (according to <a href="geometrical_optics.html" title="a concept of optics which is based on the propagation of light rays, ignoring wave properties of light">geometrical optics</a>) which get deflected in a GRIN lens and may exactly meet in a <a href="focal_points_and_focal_planes.html" title="points to which parallel input rays are concentrated by an optical system, and the planes going through those points">focal point</a> if the lens is optimized.</p>
+<figure>
+<img src="img/grin_lens_rays.png" alt="ray path at GRIN lens">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Ray paths in and after a <a href="gradient_index_lenses.html" title="lenses which utilize a radial variation of refractive index">gradient-index lens</a>. Within the lens (the gray area), the rays are curved.
+</figcaption>
+</figure>
+<p>Figure&nbsp;2 shows how the <a href="beam_radius.html" title="a measure of the transverse extension of a light beam">beam radius</a>, calculated with <a href="wave_optics.html" title="the description of optical phenomena based on wave models">wave optics</a>, evolves.</p>
+<figure>
+<img src="img/grin_lens_w.png" alt="GRIN lens">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Evolution of beam radius for an originally collimated Gaussian beam going through a GRIN lens. Refocusing action is not concentrated to the surfaces, but is distributed in the material.
+</figcaption>
+</figure>
+<h2 class="togglediv">Calculation of Dioptric Power</h2>
+<div>
+<p>At least in cases where the <a href="paraxial_approximation.html" title="a frequently used approximation, essentially assuming small angular deviations of the propagation directions from some beam axis">paraxial approximation</a> is valid, it is simple to calculate the <a href="dioptric_power.html" title="the inverse of the focal length">dioptric power</a> and <a href="focal_length.html" title="a measure of how strongly an optical system focuses or defocuses light">focal length</a> of a not too long gradient-index lens from its refractive index profile.
+The calculation is based on the fact that the radially varying <a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">phase</a> delay caused by a lens with focal length <span class="eqn_il"><i>f</i></span> is given by the following equation:</p>
+<div class="eqn"><img src="eqn/dphi_lens.gif" width="109" height="44" alt="radial phase change at lens"></div>
+<p>One simply needs to equate the second-order coefficients of the index profile to obtain the focal length and its inverse, the dioptric power.</p>
+</div>
+<h2 class="togglediv">Fabrication of Gradient-index Lenses</h2>
+<div>
+<p>There is a range of quite different <a href="optical_fabrication.html" title="the fabrication of optical components like lenses, prisms and mirrors">optical fabrication</a> methods for GRIN lenses; some examples:</p>
+<ul>
+<li>Ion exchange methods: If a <a href="optical_glasses.html" title="glasses of high quality, made for optical applications">glass</a> material is immersed into a liquid, some ions of the glass may be exchanged with other ions in the liquid, such that the refractive index is modified.
+Applying such a technique to the mantle of a cylindrical glass part can lead to the required refractive index profile.</li>
+<li>Partial polymerization: A polymer material may be exposed to radially varying doses of <a href="ultraviolet_light.html" title="invisible light with wavelengths shorter than &asymp;&thinsp;400&thinsp;&thinsp;nm">ultraviolet light</a> which causes polymerization.</li>
+<li>Direct laser writing: The refractive index of various transparent media can also be changed with point-by-point laser writing, where the exposure dose is varied in the radial direction.</li>
+<li>Chemical vapor deposition: Glass materials can be deposited from a chemical vapor, where the chemical composition is varied during the process such that the required index gradient is obtained.</li>
+<li>Neutron irradiation can be used to generate spatially varying refractive index modifications in certain boron-rich glasses.</li>
+</ul>
+</div>
+<h2 class="togglediv">Applications of GRIN Lenses</h2>
+<div>
+<p>GRIN lenses can be used for a wide range of applications &ndash; for example:</p>
+<ul>
+<li><a href="fiber_collimators.html" title="devices for collimating the light coming from a fiber, or for launching collimated light into the fiber">fiber collimators</a>, where a GRIN lens may be fused to a fiber end</li>
+<li>fiber-to-fiber coupling</li>
+<li>mode field adapters</li>
+<li>focusing applications, e.g. optical data storage</li>
+<li>monolithic <a href="solid_state_lasers.html" title="lasers based on solid-state gain media (usually ion-doped crystals or glasses)">solid-state lasers</a></li>
+<li>ophthalmology, e.g. for contact lenses with high dioptric power</li>
+</ul>
+<p>Typical advantages of GRIN lenses are that they can be very small and that their flat surfaces allow simple mounting together with other optical components.
+In some cases, flat surfaces are cemented together in order to obtain a rugged monolithic setup.</p>
+<p>If the used fabrication method allows for precise control of the radial index variation, the performance of a GRIN lens may be high, with only weak <a href="spherical_aberrations.html" title="optical aberrations resulting from spherical optical surfaces">spherical aberrations</a> similar to those of <a href="aspheric_optics.html" title="optical elements with non-spherical surfaces">aspheric</a> lenses.</p>
+<p>Besides, some fabrication techniques allow for cheap mass production.</p>
+</div>
+<h2 class="togglediv">Other Devices with an Index Gradient</h2>
+<div>
+<p>A radial gradient of the refractive index also often occurs in a <a href="laser_crystals.html" title="transparent crystals with laser-active dopants, used as laser gain media">laser crystal</a> or other laser <a href="gain_media.html" title="media for laser amplification">gain medium</a> as a result of thermal effects.
+This phenomenon is called <a href="thermal_lensing.html" title="a lensing effect induced by temperature gradients">thermal lensing</a>.</p>
+<p>There are <a href="graded_index_fibers.html" title="optical fibers with a continuously varying refractive index in the radial dimension">graded-index fibers</a>, which in contrast to <a href="step_index_fibers.html" title="optical fibers with a step-index refractive index profile">step-index fibers</a> have a smooth variation of refractive index in the radial direction.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div class="comment">
+<p class="comment_details">2020-07-09</p>
+<p>Where is the principal plane of a GRIN lens located?</p>
+<p style="font-weight:bold">Answer from the <a href="paschotta.html" style="font-weight:bold">author</a>:</p>
+<p>The <a href="principal_points_and_principal_planes.html" title="planes from which rays appear to be deflected in an optical system according to paraxial optics, and the intersections of those planes with the optical axis">principal plane</a> is usually in the middle, if the index profile has no <span class="eqn_il"><i>z</i></span> dependence.
+Otherwise, you can have two different principal planes, to be calculated from the design details.</p>
+</div>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="gradient_index_lenses.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lenses</a>, <a href="microlenses.html" title="optical lenses of particularly small diameter, e.g. below 1 mm">microlenses</a>, <a href="focal_length.html" title="a measure of how strongly an optical system focuses or defocuses light">focal length</a>, <a href="thermal_lensing.html" title="a lensing effect induced by temperature gradients">thermal lensing</a>, <a href="graded_index_fibers.html" title="optical fibers with a continuously varying refractive index in the radial dimension">graded-index fibers</a><br>and other articles in the category <a href="categories.html#general_optics" title="other articles on general optics">general optics</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/gradient_index_lenses.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fgradient_index_lenses.html&text=RP+Photonics+Encyclopedia+-+gradient-index+lenses%2C+operation+principle%2C+dioptric+power%2C+fabrication+methods%2C+applications" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fgradient_index_lenses.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fgradient_index_lenses.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/gradient_index_lenses.html"&gt;<br>Article on Gradient-index Lenses&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/gradient_index_lenses.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/gradient_index_lenses.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/gradient_index_lenses.html<br>article on 'Gradient-index Lenses' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Recent Articles of the Photonics Spotlight:</h2>
+<ul><li>2020-07-08: <a href="spotlight_2020_07_08.html">Time to Start Digital Marketing with RP Photonics &ndash; with a Discount</a></li>
+<li>2020-05-11: <a href="spotlight_2020_05_11.html">Digital and Interactive Methods of Supporting the Photonics Industry</a></li>
+<li>2020-04-01: <a href="spotlight_2020_04_01.html">Photonics Marketing in Times of the Coronavirus Crisis</a></li>
+<li>2020-03-16: <a href="spotlight_2020_03_16.html">Laser Physics Helps to Understand the Corona Virus Crisis</a></li>
+<li>2020-01-20: <a href="spotlight_2020_01_20.html">News on the RP Photonics Website</a></li>
+<li>2019-11-19: <a href="spotlight_2019_11_19.html">Why Are Large Mode Areas Problematic?</a></li>
+<li>2019-08-26: <a href="spotlight_2019_08_26.html">Can Monochromatic Light be Unpolarized?</a></li>
+<li>2019-03-01: <a href="spotlight_2019_03_01.html">New Articles in the RP Photonics Encyclopedia</a></li>
+</ul>
+<p>You can receive such articles by subscribing to our <a href="./newsletters.html?banner=Recent_Spotlight_Articles">Newsletters</a>!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="uVhxqsNmeaAncgv7+/E45g==">shownbanner = "Recent Spotlight Articles";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2 style="font-size:150%">Tutorial on<br>Fiber Amplifiers</h2>
+<p>See our <a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial">comprehensive tutorial on fiber amplifiers</a>:</p>
+<ul>
+<li>laser-active dopants, gain and pump absorption</li>
+<li>double-clad fibers, pulse amplification</li>
+<li>ASE, noise issues, multi-stage amplifiers</li>
+</ul>
+<p style="margin-left:10px;"><a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial"><img src="./img/fiber_amplifier_small.png" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial"><img src="./img/dcf_designs_part.png" style="width:100%" alt="&nbsp;"></a></p>
+<p style="margin-left:10px;"><a href="./tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial"><img src="./img/yb_gain_small.png" alt="&nbsp;"></a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="uVhxqsNmeaAncgv7+/E45g==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/gradient_index_lenses.html"
+    },
+    "headline": "Gradient-index Lenses",
+    "image": "https://www.rp-photonics.com/previews/gradient_index_lenses.png",
+    "datePublished": "2019-02-23",
+    "dateModified": "2020-07-09",
+    "description": "Gradient-index lenses are lenses not requiring curved surfaces, because instead they employ a radially varying refractive index. They provide compact and possibly cheap solutions for many applications.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter G",
+      "item": "https://www.rp-photonics.com/encyclopedia_g.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "gradient-index lenses",
+      "item": "https://www.rp-photonics.com/gradient_index_lenses.html"
+    }]}
+}
+</script>
+</body>
+</html>

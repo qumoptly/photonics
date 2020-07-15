@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-tidPSgnirdWDl4xC7qaTXQ=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - depth of field, circle of confusion, defocus, minimum and maximum distance</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/depth_of_field.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="The depth of field often imaging instrument is the distance between the nearest and furthest objects that can be imaged with reasonably sharp focus for a given focus setting. It depends on focal length, aperture size and a sharpness criterion.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="depth of field, circle of confusion, defocus">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Depth of Field">
+<meta property="og:description" content="The depth of field often imaging instrument is the distance between the nearest and furthest objects that can be imaged with reasonably sharp focus for a given focus setting. It depends on focal length, aperture size and a sharpness criterion.">
+<meta property="og:url" content="https://www.rp-photonics.com/depth_of_field.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/depth_of_field.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="The depth of field often imaging instrument is the distance between the nearest and furthest objects that can be imaged with reasonably sharp focus for a given focus setting. It depends on focal length, aperture size and a sharpness criterion.">
+<meta name="twitter:title" content="Depth of Field">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/depth_of_field.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="tidPSgnirdWDl4xC7qaTXQ==">
+page="depth_of_field.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/toptica_photonics.html"><img src="./bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="tidPSgnirdWDl4xC7qaTXQ==">shownsponsors="TOPTICA Photonics"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_d.html">letter D</a> &gt; <a href="depth_of_field.html">depth of field</a></p>
+<h1>Depth of Field</h1>
+<header style="margin-right:0;">
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: the distance between the nearest and furthest objects that can be imaged with reasonably sharp focus for a given focus setting</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Schärfentiefe, Tiefenschärfe</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a></p>
+<p><a href="encyclopedia_cite.html?article=depth%20of%20field">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Most <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a> instruments can provide sharp images only in a limited range of observation distances.
+Perfect imaging to a certain <a href="image_planes.html" title="planes which are conjugate to an object plane, so that objects are imaged there">image plane</a> (e.g., the location of an <a href="image_sensors.html" title="optoelectronic sensors which can be used for imaging">image sensor</a> in a <a href="photo_cameras.html" title="optical instruments for taking photographic images">photo camera</a>) is only possible for an object plane which is <a href="conjugate_planes.html" title="pairs of planes where an optical system images one into the other and vice versa">conjugate</a> to the image plane.
+Image of objects before or after that conjugate object plane will be more or less blurred.
+(An exception is the rarely used <em>camera obscura</em>.)</p>
+<p>The width of the range of observation distances is called the <em>depth of field</em>.
+It must not be confused with the <a href="depth_of_focus.html" title="the half width of the range of longitudinal positions in which a reasonable focus for a film or image sensor is achieved">depth of focus</a>, which is the corresponding quantity on the image side.</p>
+<h2 class="togglediv">Criteria for Reasonable Focus</h2>
+<div>
+<p>For a quantitative definition of the depth of field, one requires a criterion for what level of defocus is acceptable.
+Different criteria may be sensible, depending on the situation:</p>
+<ul>
+<li>One may define the limits as the points where the imaging quality, measured for example with a point spread function, become significantly worse than in the focus.
+Such a criterion, however, may not be sensible if the imaging quality in the focus is much better than required or usable.
+For example, for an <a href="image_sensors.html" title="optoelectronic sensors which can be used for imaging">image sensor</a> of a digital camera it would not matter if the circle of confusion rises from one tends to one third of the pixel spacing.</li>
+<li>Therefore, one may alternatively define a certain diameter of the circle of confusion as the limit, irrespective of how small that circle can be for optimal focusing.</li>
+</ul>
+</div>
+<h2 class="togglediv">Calculation of the Field of Depth</h2>
+<div>
+<p>Here we use the second kind of defocus criterion as explained above, with a maximum diameter <span class="eqn_il"><i>C</i></span> of the circle of confusion, as calculated from purely <a href="geometrical_optics.html" title="a concept of optics which is based on the propagation of light rays, ignoring wave properties of light">geometrical optics</a>.
+One then obtains the following equations for the nearest and furthest observation distance, when the focus is set to the distance <span class="eqn_il"><i>d</i><sub>f</sub></span>:</p>
+<div class="eqn"><img src="eqn/d_near.gif" width="142" height="69" alt="nearest distance"></div>
+<div class="eqn"><img src="eqn/d_far.gif" width="356" height="69" alt="furthest distance"></div>
+<p>where <span class="eqn_il"><i>D</i></span> is the diameter of the <a href="aperture_stops.html" title="apertures which limit the angular range of received input light of imaging systems">aperture stop</a>.
+It is assumed that we have a thin <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lens</a>, where the <a href="entrance_and_exit_pupil.html" title="the apparent apertures of an optical system, seen from the object or image side">entrance and exit pupil</a> coincide with the lens.
+The depth of field is the difference between maximum and minimum distance.</p>
+<p>Note that the above equations hold only for small angles; that condition is usually reasonably well fulfilled in <a href="photo_cameras.html" title="optical instruments for taking photographic images">photography</a>, for example, but not for <a href="microscopes.html" title="instruments for seeing very small objects">microscopes</a>.</p>
+<form id="depth_of_field" class="calculatorform">
+<h2>Depth of Field Calculation</h2>
+<table>
+<tr>
+<td>Focal length:</td><td></td><td></td>
+<td><input name="f" value="" class="cf_depth_of_field"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Aperture diameter:</td><td></td><td></td>
+<td><input name="D" value="" class="cf_depth_of_field"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Max. confusion diameter:</td><td></td><td></td>
+<td><input name="C" value="" class="cf_depth_of_field"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Focused distance:</td><td></td><td></td>
+<td><input name="d_f" value="" class="cf_depth_of_field"></td>
+<td></td><td></td>
+</tr>
+<tr>
+<td>Hyperfocal distance:</td><td></td><td></td>
+<td><input name="d_H" value="" class="cf_depth_of_field"></td>
+<td><span class="calcbutton" id="calc_d_H">calc</span></td><td></td>
+</tr>
+<tr>
+<td>Min. distance:</td><td></td><td></td>
+<td><input name="d_min" value="" class="cf_depth_of_field"></td>
+<td><span class="calcbutton" id="calc_d_min">calc</span></td><td></td>
+</tr>
+<tr>
+<td>Max. distance:</td><td></td><td></td>
+<td><input name="d_max" value="" class="cf_depth_of_field"></td>
+<td><span class="calcbutton" id="calc_d_max">calc</span></td><td></td>
+</tr>
+<tr>
+<td>Depth of field:</td><td></td><td></td>
+<td><input name="DOF" value="" class="cf_depth_of_field"></td>
+<td><span class="calcbutton" id="calc_DOF">calc</span></td><td></td>
+</tr>
+</table>
+<p class="comment">Enter input values with units, where appropriate. After you have modified some values, click a "calc" button to recalculate the field left of it.</p>
+<noscript>
+<p style="color:red">Attention: The buttons do not work, as Javascript is turned off in your browser!</p>
+</noscript>
+</form>
+<script type="text/javascript" src="calcform.js"></script>
+<script type="text/javascript" nonce="tidPSgnirdWDl4xC7qaTXQ==">
+funits = new Array();
+funits["f"] = "m";
+funits["D"] = "m";
+funits["C"] = "m";
+funits["d_f"] = "m";
+funits["d_H"] = "m";
+function calc_d_H() {
+  $("input[name=d_H]").val("???");
+  GetFieldValues("d_H","depth_of_field");
+  d_H = f + f * D / C;
+  $("input[name=d_H]").val(format_u(d_H, "m"));
+ }
+funits["d_min"] = "m";
+function calc_d_min() {
+  $("input[name=d_min]").val("???");
+  GetFieldValues("d_min","depth_of_field");
+  d_min = (d_f <= f ? 0 : d_f / (1 + ((d_f - f) * C) / (f * D)));
+  $("input[name=d_min]").val(format_u(d_min, "m"));
+ }
+funits["d_max"] = "m";
+function calc_d_max() {
+  $("input[name=d_max]").val("???");
+  GetFieldValues("d_max","depth_of_field");
+  d_max = (((d_f - f) * C) / (f * D) < 1 ? d_f / (1 - ((d_f - f) * C) / (f * D)) : Number.POSITIVE_INFINITY);
+  $("input[name=d_max]").val(format_u(d_max, "m"));
+ }
+funits["DOF"] = "m";
+function calc_DOF() {
+  $("input[name=DOF]").val("???");
+  GetFieldValues("DOF","depth_of_field");
+  DOF = (((d_f - f) * C) / (f * D) < 1 ? d_f / (1 - ((d_f - f) * C) / (f * D)) - (d_f <= f ? 0 : d_f / (1 + ((d_f - f) * C) / (f * D))) : Number.POSITIVE_INFINITY);
+  $("input[name=DOF]").val(format_u(DOF, "m"));
+ }
+$("input[name=f]").val("50 mm");
+$("input[name=D]").val("10 mm");
+$("input[name=C]").val("0.1 mm");
+$("input[name=d_f]").val("2 m");
+calc_d_H();
+calc_d_min();
+calc_d_max();
+calc_DOF();
+$(document).ready(function() {
+  $("span#calc_d_H").click(function() { calc_d_H() })
+  $("span#calc_d_min").click(function() { calc_d_min() })
+  $("span#calc_d_max").click(function() { calc_d_max() })
+  $("span#calc_DOF").click(function() { calc_DOF() })
+});
+</script>
+<p>When focusing to short distances, the depth of field will be relatively small.
+When focusing to larger distances, it increases, and one eventually reaches the <a href="hyperfocal_distance.html" title="the smallest focusing distance of an imaging instruments for which objects at infinity appear with reasonably sharp focus">hyperfocal distance</a> where the maximum distance becomes infinity.
+That is the situation where the depth of focus is the largest possible.</p>
+<p>As is well known in photography, the depth of field can be increased by reducing the diameter of the <a href="aperture_stops.html" title="apertures which limit the angular range of received input light of imaging systems">aperture stop</a>, which at the same time decreases the image brightness (or requires a correspondingly longer exposure time).</p>
+<p>The presented equations hold only within the validity of <a href="geometrical_optics.html" title="a concept of optics which is based on the propagation of light rays, ignoring wave properties of light">geometrical optics</a>, which is however usually given in the context of photography.</p>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="depth_of_field.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a>, <a href="imaging_with_a_lens.html" title="creation of an optical image using a single lens">imaging with a lens</a>, <a href="hyperfocal_distance.html" title="the smallest focusing distance of an imaging instruments for which objects at infinity appear with reasonably sharp focus">hyperfocal distance</a>, <a href="depth_of_focus.html" title="the half width of the range of longitudinal positions in which a reasonable focus for a film or image sensor is achieved">depth of focus</a><br>and other articles in the categories <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/depth_of_field.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fdepth_of_field.html&text=RP+Photonics+Encyclopedia+-+depth+of+field%2C+circle+of+confusion%2C+defocus%2C+minimum+and+maximum+distance" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fdepth_of_field.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fdepth_of_field.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/depth_of_field.html"&gt;<br>Article on Depth of Field&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/depth_of_field.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/depth_of_field.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/depth_of_field.html<br>article on 'Depth of Field' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Recent Articles of the RP Photonics Software News:</h2>
+<ul><li>2020-05-25: <a href="software_news_2020_05_25.html">The Numerical Power Package for RP Fiber Power</a></li>
+<li>2020-03-02: <a href="software_news_2020_03_02.html">Creating Multimode Beams in Numerical Beam Propagation</a></li>
+<li>2019-09-10: <a href="software_news_2019_09_10.html">Improvements Concerning Graphics Windows</a></li>
+<li>2018-12-03: <a href="software_news_2018_12_03.html">Using Monitors With High Screen Resolution</a></li>
+<li>2018-09-12: <a href="software_news_2018_09_12.html">Propagating Optical Fields in Fibers Based on Modes or with Numerical Beam Propagation</a></li>
+<li>2018-08-02: <a href="software_news_2018_08_02.html">Data Grids for Numerical Beam Propagation</a></li>
+<li>2018-07-02: <a href="software_news_2018_07_02.html">Namespaces: An Elegant Approach for Avoiding Name Conflicts</a></li>
+<li>2018-05-22: <a href="software_news_2018_05_22.html">Numerical Representation of Ultrashort Pulses</a></li>
+</ul>
+<p>You can receive such articles by subscribing to our <a href="./newsletters.html?banner=Recent_Software_News_Articles">Newsletters</a>!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="tidPSgnirdWDl4xC7qaTXQ==">shownbanner = "Recent Software News Articles";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>The Transparent Laser</h2>
+<p>The dream of each laser developer, and not only of each laser scientist: have a <b>transparent laser</b>, where you can <b>look into any components</b> and see e.g.</p>
+<ul>
+<li>optical intensities</li>
+<li>excitation densities of laser-active ions</li>
+</ul>
+<p>&hellip; and this at any location and time, with arbitrary resolution!</p>
+<p>If you had this, finally you could</p>
+<ul>
+<li>fully understand what goes on in your laser,</li>
+<li>quickly identify and fix any problems, and</li>
+<li><span style="font-weight:bold; color:#B20B28;">make faster progress <br> while saving a lot of money.</span></li>
+</ul>
+<p>Absolutely marvelous, but only a dream?!?</p>
+<p>Good news: such transparent lasers can be made!
+See our presentation:</p>
+<a href="./transparent_laser.html?banner=transparent_laser"><img src="./img/transparent_laser.png" width="234" height="162" alt="presentation"></a>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="tidPSgnirdWDl4xC7qaTXQ==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/depth_of_field.html"
+    },
+    "headline": "Depth of Field",
+    "image": "https://www.rp-photonics.com/previews/depth_of_field.png",
+    "datePublished": "2019-05-11",
+    "dateModified": "2020-03-14",
+    "description": "The depth of field often imaging instrument is the distance between the nearest and furthest objects that can be imaged with reasonably sharp focus for a given focus setting. It depends on focal length, aperture size and a sharpness criterion.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter D",
+      "item": "https://www.rp-photonics.com/encyclopedia_d.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "depth of field",
+      "item": "https://www.rp-photonics.com/depth_of_field.html"
+    }]}
+}
+</script>
+</body>
+</html>

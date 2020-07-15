@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-vb95rJIJSmyXaz4lPCTe4A=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>Das Numerical Power Package</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/fiberpower_speed_d.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-06-08">
+<meta name="description" content="Die Rechengeschwindigkeit der Software RP Fiber Power kann massiv erhöht werden durch Hinzufügen des sogenannen Numerical Power Package.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="Modellierung, Software, Laser, Rechengeschwindigkeit, CPU, Intel, SSE3, SSE4, AVX, AVX2, and AVX-512">
+<script type="text/javascript" src="./jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" nonce="vb95rJIJSmyXaz4lPCTe4A==">
+page="fiberpower_speed_d.html"; cat="S"; shownbanner=""; ref="http://www.rp-photonics.com/fiberpower_d.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="./encyclopedia_de.html">Encyclopedia</a></td>
+<td><a href="./buyersguide_d.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting_d.html">Dienste und Modellierung</a></td></tr>
+<tr><td><a href="./consulting_d.html">Beratung</a></td>
+<td class="selected"><a href="./software_d.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Software</span> <span id="slogan">&hellip; leistungsfähige Tools für Ihre Forschung &amp; Entwicklung!</span></p>
+<div id="other_language"><a href="fiberpower_speed.html">English</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software_start" href="software_d.html">Einleitung</a>
+<a id="Modellierung" href="software_modeling_d.html">Modellierung</a>
+<a id="software_news" href="software_news_d.html">Software News</a>
+<p>Produkte:</p>
+<a id="Software" href="software_overview_d.html">Überblick</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator_d.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower_d.html" class="sel">RP Fiber Power</a>
+<a href="fiberpower_features_d.html" class="sub">Features</a>
+<a href="fiberpower_speed_d.html" class="sub sel">Geschwindigkeit</a>
+<a href="fiberpower_model_d.html" class="sub">Modell</a>
+<a href="fiberpower_data_d.html" class="sub">Faser-Daten</a>
+<a href="fiberpower_interface_d.html" class="sub">Benutzung</a>
+<a href="fiberpower_case_studies_d.html" class="sub">Demos</a>
+<a href="fiberpower_versions_d.html" class="sub">Versionen</a>
+<a id="rp_resonator" href="resonator_d.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse_d.html">RP ProPulse</a>
+<a id="rp_coating" href="coating_d.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch_d.html">RP Q-switch</a>
+<p>Diverse Aspekte:</p>
+<a id="script_language" href="software_script_language_d.html">Scriptsprache</a>
+<a id="debugger" href="software_debugger_d.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms_d.html">Formulare</a>
+<a id="licenses" href="software_licenses_d.html">Lizenzen</a>
+<a id="documentation" href="software_docu_d.html">Dokumentation</a>
+<a id="support" href="software_support_d.html">Support</a>
+<a id="distributors" href="software_distributors_d.html">Distributoren</a>
+<p>Aktion:</p>
+<a id="contact" href="software_contact_d.html">*Angebot anfordern*</a>
+</div>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="software.html">Software</a> &gt; <a href="fiberpower.html">RP Fiber Power</a> &gt; <a href="fiberpower_speed_d.html">Speed</a></p>
+<h1>RP Fiber Power &ndash; Simulations- und Designsoftware <br> für Faseroptik, Faserverstärker und Faserlaser</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_d.html">Überblick</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_features_d.html">Features</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="fiberpower_speed_d.html">Geschwindigkeit</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_model_d.html">Modell</a></td>
+</tr><tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_data_d.html">Faser-Daten</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_interface_d.html">Benutzung</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_case_studies_d.html">Demos</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_versions_d.html">Versionen</a></td>
+</tr>
+</table>
+<aside class="callout blue">In der Regel ist Rechenzeit überhaupt kein Problem.</aside>
+<p>RP Fiber Power wurde umfassend und sorgfältig optimiert für hohe Effizienz der Berechnungen und damit für eine schnelle Ausführung der Simulationen.
+Für die meisten Nutzer ist die Geschwindigkeit der Standardversion vollkommen ausreichend.
+Die meisten der gelieferten Demo-Skripte können auf einem normalen PC in höchstens ein paar Sekunden ausgeführt werden.
+Bei den meisten praktischen Anwendungen ist die Rechenzeit überhaupt nicht problematisch, selbst wenn kein besonders schneller Computer verwendet wird.</p>
+<h3 class="togglediv">Fälle mit längeren Rechenzeiten</h3>
+<div>
+<p>Es gibt Situationen, in denen komplizierte Simulationen einiges an Rechenzeit benötigen &ndash; vor allem in den folgenden Zusammenhängen:</p>
+<ul>
+<li>Die Propagation ultrakurzer Pulse kann aufwendig zu simulieren sein, z.&thinsp;B. wenn man einen Puls viele Male durch eine Faser propagieren muss oder wenn starke nichtlineare Wechselwirkungen und eine große Bandbreite (gerade bei langen Pulsen) die Anforderungen erhöhen.</li>
+<li>Numerische Strahlpropagation kann auch aufwendig sein, z.&thinsp;B. in langen Fasern, besonders wenn ein numerisches Gitter mit großer Auflösung benötigt wird.</li>
+</ul>
+<aside class="callout red">NEU: das <b>Numerical Power Package</b> für dramatisch höhere Geschwindigkeit &ndash; auch ohne Änderungen an Ihren Skripten!</aside>
+<p>Ein kleiner Prozentsatz der Nutzer von RP Fiber Power hat Anwendungen, bei denen eine wesentlich höhere Geschwindigkeit sehr wünschenswert ist.
+Dafür bieten wir seit Mai 2020 (mit moderaten zusätzlichen Kosten) das sogenannte &ldquo;<b>Numerical Power Package</b>&rdquo; als Zusatz zu RP Fiber Power an, das die folgenden Vorteile bietet:</p>
+<ul>
+<li>Sie erhalten in den oben genannten Fällen eine massiv erhöhte Geschwindigkeit &ndash; oft mehr als einen Faktor 5, manchmal sogar mehr als einen Faktor 10, vor allem mit einem modernen Prozessor.</li>
+<li>Ähnliches gilt für bestimmte numerische Funktionen, die in der <a href="software_script_language_d.html">Skriptsprache</a> genutzt werden können &ndash; hauptsächlich betreffend Felder und Matrizen.</li>
+<li>Sie erhalten ein paar mehr spezielle Funktionen, die Sie in Ihren Skripten nutzen können &ndash; für Zwecke wie die Multiplikation oder Inversion von Matrizen.</li>
+<li>Die Bessel-J-Funktion wird mit höherer Genauigkeit geliefert.
+Eine weitere Verbesserung ist, dass Bessel-Funktionen dann auch mit komplexen Argumenten berechnet werden können, außerdem auch mit nicht ganzzahliger Ordnung.</li>
+<li>Dazu bekommen Sie noch die Hankel-Funktionen erster und zweiter Art sowie die zugeordneten Legendrepolynome.</li>
+</ul>
+<p>Wenn weitere Features dieses Pakets entwickelt werden, erhalten Bestandskunden diese dann über kostenlose Updates.</p>
+</div>
+<h2 class="togglediv">Wie funktioniert das Numerical Power Package?</h2>
+<div>
+<aside class="callout blue">Bestimmte selten genutzte Prozessorbefehle bieten eine ernorme Effizienz für numerische Flißbandarbeit.</aside>
+<p>RP Fiber Power (in jeder Version seit 05/2020) nutzt nun eine numerische Bibliothek, die normalerweise keinen speziellen DLLs benötigt, solche aber im Zusammenhang mit dem Numerical Power Package nutzen kann.
+Diese DLLs enthalten Code, der spezielle Prozessor-Befehle (namentlich der Typen SSE3, SSE4, AVX, AVX2 und AVX-512) nutzen kann, die für effiziente numerische &ldquo;Massenproduktion&rdquo; entwickelt wurden.
+Beispielsweise kann ein einziger Prozessorbefehl eine bestimmte mathematische Operation nicht nur auf einen Zahlenwert oder ein paar Werte anwenden, sondern auf große Felder von Zahlenwerten.</p>
+<p>Die größten Geschwindigkeitsgewinne resultieren einfach aus einer Erhöhung der Recheneffizienz &ndash; bei Verwendung nur eines CPU-Kerns.
+Manche Funktionen nutzen aber auch Multi-Threading, d.&thinsp;h. die gleichzeitige Nutzung mehrerer Kerne.</p>
+<p>Für viele Funktionen verwendet die Software automatisch einen von mehreren Codes, abhängig von den erkannten Funktionen des Prozessors.</p>
+<p>Obwohl die genannten Arten von CPU-Befehlen von den meisten Prozessoren (sogar von gewöhnlichen Büro-PCs) schon seit Jahren unterstützt werden, werden sie nur von wenigen Softwarepaketen ausgenutzt, da der Programmcode dafür erheblich angepasst werden muss.</p>
+</div>
+<h2 class="togglediv">Was brauchen Sie für das Numerical Power Package?</h2>
+<div>
+<ul>
+<li><b>Hardware:</b> Ihr Computer muss einen geeigneten Prozessor haben, der zumindest die SSE3-Instruktionen ausführen kann.
+Dies sollte für praktisch jeden PC gelten, der in den letzten Jahren verkauft wurde &ndash; nicht nur für speziell leistungsfähige Computer.
+Wir haben beispielsweise massive Verbesserung der Geschwindigkeit erzielt mit einem PC, der in 2013 gekauft wurde und einen Prozessor Intel Core-i7 hat.
+Wir erwarten ähnliche Verbesserungen für Computer mit AMD-Prozessoren, konnten dies allerdings bislang noch nicht testen.
+Im Zweifelsfall können Sie ein Testprogramm erhalten, mit dem Sie prüfen können, wie groß der Gewinn an Geschwindigkeit auf Ihrem Computer in typischen Situationen ist.</li>
+<li><b>Softwarelizenz:</b> Sie benötigen eine Lizenz für RP Fiber Power, die das Numerical Power Package einschließt (oder einen Upgrade, wenn Sie bereits eine Lizenz haben).
+Das Paket ist nicht nur für die neueste Version (V7) verfügbar; falls Sie eine ältere Version haben und das Upgrade auf die neueste Version für Sie nicht interessant ist, können Sie trotzdem das genannte Paket dafür erhalten.
+Allerdings sollten Sie zumindest die V5 haben, da sonst Berechnungen mit numerischer Strahlpropagation nicht möglich sind.</li>
+<li><b>Installation:</b> Installieren Sie zunächst die geeignete Version von RP Fiber Power auf Ihrem Computer.
+Danach müssen Sie noch das Numerical Power Package selbst installieren, das Sie als separates Installationsprogramm (mit deutlich größerem Umfang) erhalten.
+Letzteres installiert die nötigen DLLs.</li>
+</ul>
+<p>Die meisten Software-Updates werden keine Aktualisierung der DLLs benötigen.
+Sollte dies doch einmal nötig sein, werden Sie das entsprechende Update für das Numerical Power Package von RP Photonics kostenlos dazu bekommen.</p>
+<p>Um die massiv erhöhte Geschwindigkeit zu nutzen, brauchen Sie keine Änderungen an ihren Skripten.
+Lediglich möchten Sie vielleicht die zusätzlich gebotenen Funktionen noch nutzen.</p>
+</div>
+<h2 class="togglediv">Bemerkungen zur Computer-Hardware</h2>
+<div>
+<p>Für eine hohe Geschwindigkeit hilft natürlich auch ein schneller Computer.
+Der wichtigste Aspekt ist dabei die sogenannte <b>single-thred performance</b>, d.&thinsp;h. die Geschwindigkeit, mit der ein einzelner Thread ausgeführt werden kann.
+Dies hängt ab von Faktoren wie der Taktgeschwindigkeit (ggf. erhöht mit Hyperthreading); ein großer Prozessor-Cache ist ebenfalls oft sehr günstig.</p>
+<p>Wenn Sie einen neuen Computer für maximale Geschwindigkeit kaufen, achten Sie vor allem auf eine CPU, die die AVX-512 extensions unterstützt, da diese mit dem Numerical Power Package eine weitere erhebliche Beschleunigung bringen.
+Jedoch bekommt man auch schon mit einem Intel Core-i7, der AVX-512 noch nicht unterstützt, eine große Verbesserung.
+Wir haben erste Anzeichen dafür gesehen, dass AMD-Prozessoren weniger gut ausgenutzt werden als Intel-CPUs &ndash; was zu einer niedrigeren Geschwindigkeit mit oder ohne Numerical Power Package führt.</p>
+<p>Eine größere <b>Anzahl von CPU-Kernen</b> zu haben, hilft mit der Standardversion nur sehr begrenzt, hilft aber deutlich zumindest in einigen Fällen, wenn Sie das Numerical Power Package haben.
+Hauptsächlich jedoch helfen mehrere Kerne dadurch, dass Sie gleichzeitig andere Software mit immer noch guter Geschwindigkeit ausführen können.</p>
+<p>Hilfreich ist es außerdem, einen genügend großen <b>Hauptspeicher</b> zu haben.
+Die meisten Simulationen brauchen nicht besonders viel Speicher, aber es gibt Ausnahmen &ndash; vor allem Fälle mit numerischer Strahlpropagation, bei denen ein großes numerisches Gitter benötigt wird.
+Obwohl z.&thinsp;B. 8&nbsp;GB Hauptspeicher normalerweise völlig ausreichen sollten, ist es in manchen Fällen günstig, noch deutlich mehr zu haben &ndash; wobei die Kosten hierfür marginal sind.</p>
+<p>Praktisch alle modernen Prozessoren können im 64-bit-Modus laufen, aber nur unter einer 64-bit-Windows-Version.
+Wir liefern 32-bit-Versionen für Kunden, die immer noch eine 32-bit-Windows-Version verwenden, aber diese können nur ca. 3&nbsp;GB Hauptspeicher verwenden (selbst wenn wesentlich mehr Speicher installiert ist), und sie sind auch typischerweise ca. 20&thinsp;&#37; langsamer.</p>
+</div>
+<h2 class="togglediv">Optimierte Ansätze für die Modellierung</h2>
+<div>
+<p>Häufig kann man bei Simulationen enorm an Geschwindigkeit gewinnen, indem man den richtigen Ansatz für die Modellierung wählt.
+Beispielsweise sollte man eine Art von Modell wählen, die zwar alle relevanten physikalischen Effekte beinhaltet, aber keine unnötigen dazu.
+Auch sollte man immer im Blick behalten, welche Fragen die Modellierung am Ende beantworten soll.</p>
+<p>Als Nutzer von RP Fiber Power steht Ihnen kompetenter <a href="software_support_d.html">Support</a> zur Verfügung &ndash; auch betreffend solche Fragen.
+Am besten besprechen Sie solche Aspekte im Zweifelsfall gleich zu Anfang eines Projekts mit Dr. Paschotta.</p>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">Kontakt und Impressum</a>, <a href="privacy_d.html">Datenschutzerklärung</a>
+</footer>
+</main></div>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="vb95rJIJSmyXaz4lPCTe4A==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Software",
+      "item": "https://www.rp-photonics.com/software.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "RP Fiber Power",
+      "item": "https://www.rp-photonics.com/fiberpower.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Speed",
+      "item": "https://www.rp-photonics.com/fiberpower_speed_d.html"
+    }]}
+}
+</script>
+</body>
+</html>

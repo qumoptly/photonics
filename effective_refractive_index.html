@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-jB3PvGQrul0opi/KTPa5Bw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - effective refractive index, modal index, waveguide, propagation constant, mode overlap</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/effective_refractive_index.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-07-09">
+<meta name="description" content="The effective refractive index is a number quantifying the phase delay per unit length in a waveguide, relative to the phase delay in vacuum.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="effective refractive index, modal index, waveguide, propagation constant, mode overlap">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Effective Refractive Index">
+<meta property="og:description" content="The effective refractive index is a number quantifying the phase delay per unit length in a waveguide, relative to the phase delay in vacuum.">
+<meta property="og:url" content="https://www.rp-photonics.com/effective_refractive_index.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/effective_refractive_index.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="The effective refractive index is a number quantifying the phase delay per unit length in a waveguide, relative to the phase delay in vacuum.">
+<meta name="twitter:title" content="Effective Refractive Index">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/effective_refractive_index.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="jB3PvGQrul0opi/KTPa5Bw==">
+page="effective_refractive_index.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="jB3PvGQrul0opi/KTPa5Bw==">shownsponsors="EKSMA OPTICS"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_e.html">letter E</a> &gt; <a href="effective_refractive_index.html">effective refractive index</a></p>
+<h1>Effective Refractive Index</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="boxadvertisement">
+<h2>Calculating Effective Refractive Indices</h2>
+<p>The software <a href="fiberpower.html"><b>RP Fiber Power</b></a> has a mode solver which calculates effective refractive indices among various other mode properties.
+For simple cases, the free software <a href="rp_fiber_calculator.html"><b>RP Fiber Calculator</b></a> is sufficient.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a number quantifying the phase delay per unit length in a waveguide, relative to the phase delay in vacuum</p>
+<p>More general term: <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">effektiver Brechungsindex</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#fiber_optics_and_waveguides" title="other articles on fiber optics and waveguides">fiber optics and waveguides</a></p>
+<p>Formula symbol: <span class="eqn_il"><i>n</i><sub>eff</sub></span></p>
+<p>Units: (dimensionless)</p>
+<p><a href="encyclopedia_cite.html?article=effective%20refractive%20index">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>For <a href="plane_waves.html" title="waves with plane wavefronts">plane waves</a> in homogeneous transparent media, the <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> <span class="eqn_il"><i>n</i></span> can be used to quantify the increase in the <a href="wavenumber.html" title="the phase delay per unit length, or that quantity divided by 2&pi;">wavenumber</a> (<a href="optical_phase.html" title="the phase of the electric field of an optical wave, usually considered in the time domain">phase</a> change per unit length) caused by the medium: the wavenumber is <span class="eqn_il"><i>n</i></span> times higher than it would be in vacuum.
+The <em>effective refractive index</em> <span class="eqn_il"><i>n</i><sub>eff</sub></span> has the analogous meaning for light propagation in a <a href="waveguides.html" title="spatially inhomogeneous transparent structures for guiding light">waveguide</a> with restricted transverse extension: the <span class="eqn_il"><span class="greek">&beta;</span></span> value (<a href="propagation_constant.html" title="a mode- and frequency-dependent quantity describing the propagation of light in a medium or waveguide">phase constant</a>) of the waveguide (for some wavelength) is the effective index times the vacuum <a href="wavenumber.html" title="the phase delay per unit length, or that quantity divided by 2&pi;">wavenumber</a>:</p>
+<div class="eqn"><img src="eqn/modal_index.gif" width="78" height="41" alt="propagation constant and effective refractive index"></div>
+<p>The mode-dependent and frequency-dependent <span class="eqn_il"><span class="greek">&beta;</span></span> values can be calculated with a mode solver software and depend on the refractive index profile of the waveguide.</p>
+<p>Note that the effective refractive index depends not only on the wavelength but also (for multimode waveguides) on the <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">mode</a> in which the light propagates.
+For this reason, it is also called <em>modal index</em>.
+Obviously, the effective index is not just a material property, but depends on the whole waveguide design.
+Its value can be obtained with numerical mode calculations, for example.
+It can vary substantially near a <a href="cut_off_wavelength.html" title="a wavelength above which a guided mode of a waveguide ceases to exist">mode cut-off</a>.</p>
+<p>The effective index may be a complex quantity.
+In that case, the imaginary part describes <a href="gain.html" title="a measure of the strength of optical amplification">gain</a> or loss &ndash; see the article on <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> for more details.</p>
+<p>The effective refractive index contains information on the <a href="phase_velocity.html" title="the velocity with which phase fronts propagate in a medium">phase velocity</a> of light, but not on the <a href="group_velocity.html" title="the velocity with which the envelope of a weak narrow-band optical pulse propagates in a medium">group velocity</a>; for the latter, one can similarly define an <em>effective group index</em> in analogy to the <a href="group_index.html" title="the ratio of the vacuum velocity of light to the group velocity in a medium">group index</a> for plane waves in a homogeneous medium.</p>
+<p>A common but wrong belief is that the effective refractive index is a kind of weighted average of the refractive index of <a href="fiber_core.html" title="the region in an optical fiber which guides light">core</a> and <a href="fiber_cladding.html" title="the area(s) around the core of an optical fiber">cladding</a> of the waveguide, with the weight factors determined by the fractions of the <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a> propagating in the <a href="fiber_core.html" title="the region in an optical fiber which guides light">core</a> and cladding.
+This impression may result from the common observation that <a href="higher_order_modes.html" title="transverse modes of a resonator or waveguide, excluding the fundamental (axial) modes">higher-order modes</a>, e.g. of a <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fiber</a>, have a lower effective index and also a lower mode overlap with the core.
+However, consider e.g. a <a href="step_index_fibers.html" title="optical fibers with a step-index refractive index profile">step-index</a> multimode waveguide with a high <a href="numerical_aperture.html" title="sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a> and large core diameter.
+Here, all modes overlap to nearly 100&#37; with the core (i.e. the mode overlaps are very similar), whereas the effective indices differ substantially.</p>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div class="comment">
+<p class="comment_details">2020-05-01</p>
+<p>Does this mean, that when simulation software gives the effective refractive index, the gain or loss can be calculated?
+If so, what formula should be used?</p>
+<p style="font-weight:bold">Answer from the <a href="paschotta.html" style="font-weight:bold">author</a>:</p>
+<p>Only if the complex refractive index is computed.
+Its imaginary part times <span class="eqn_il">4<span class="greek">&pi;</span>&thinsp;/&thinsp;<span class="greek">&lambda;</span></span> gives you the exponential intensity absorption or gain coefficient &ndash; with signs depending on conventions.</p>
+</div>
+<div class="comment">
+<p class="comment_details">2020-06-02</p>
+<p>If I want to calculate the effective refractive index in the process of coupling light into a microring to form an optical frequency comb, do I need to take into account the different effective refractive indices in the waveguide and the microring?</p>
+<p style="font-weight:bold">Answer from the <a href="paschotta.html" style="font-weight:bold">author</a>:</p>
+<p>Each device (waveguide and microring) will have its own effective refractive index &ndash; more precisely, one such value for each guided mode, if it is not single-mode.</p>
+</div>
+<div class="comment">
+<p class="comment_details">2020-06-03</p>
+<p>Can we use RP Fiber Power to directly calculate the effective refractive index in microrings?</p>
+<p style="font-weight:bold">Answer from the <a href="paschotta.html" style="font-weight:bold">author</a>:</p>
+<p>Unfortunately, this might work only with limited accuracy if you have a large refractive index contrast.
+There might also be a problem with the limitation that the mode solver cannot take into account the strong curvature.</p>
+</div>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="effective_refractive_index.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="propagation_constant.html" title="a mode- and frequency-dependent quantity describing the propagation of light in a medium or waveguide">propagation constant</a>, <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a>, <a href="group_index.html" title="the ratio of the vacuum velocity of light to the group velocity in a medium">group index</a>, <a href="waveguides.html" title="spatially inhomogeneous transparent structures for guiding light">waveguides</a>, <a href="spotlight_2007_10_07.html">The Photonics Spotlight 2007-10-07</a><br>and other articles in the category <a href="categories.html#fiber_optics_and_waveguides" title="other articles on fiber optics and waveguides">fiber optics and waveguides</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/effective_refractive_index.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Feffective_refractive_index.html&text=RP+Photonics+Encyclopedia+-+effective+refractive+index%2C+modal+index%2C+waveguide%2C+propagation+constant%2C+mode+overlap" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Feffective_refractive_index.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Feffective_refractive_index.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/effective_refractive_index.html"&gt;<br>Article on Effective Refractive Index&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/effective_refractive_index.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/effective_refractive_index.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/effective_refractive_index.html<br>article on 'Effective Refractive Index' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Learn About Photonics Marketing!</h2>
+<p>We have published a number of comprehensive articles where we explain how a wide range of tools for the marketing of photonics, optics and laser product works.</p>
+<p>Start reading here:</p>
+<p><a href="./marketing_overview.html?banner=marketing_articles" style="font-size:20px; font-weight:bold;">Marketing of Photonics and Laser Technology Products &ndash; an Overview</a></p>
+<p>You will learn not only about the tools which we offer ourselves &ndash; the <a href="./buyersguide.html?banner=marketing_articles">RP Photonics Buyer's Guide</a>, <a href="./marketing_promotions.html?banner=marketing_articles">special promotions</a> and <a href="./marketing_banners.html?banner=marketing_articles">banners</a> &ndash; but also about many others.</p>
+<p>See also our <a href="./marketing_glossary.html?banner=marketing_articles">glossary of photonics marketing</a>.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="jB3PvGQrul0opi/KTPa5Bw==">shownbanner = "marketing articles";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Interesting Articles</h2>
+<p>We offer a huge selection of interesting articles on laser technology and photonics. Some examples:</p>
+<ul>
+<li><a href="./spotlight_2018_09_28.html?banner=articles">Resonator modes in microchip lasers</a></li>
+<li><a href="./spotlight_2018_08_22.html?banner=articles">What is different for quasi-three-level lasers?</a></li>
+<li><a href="./spotlight_2018_06_08.html?banner=articles">Understanding intensity noise</a></li>
+<li><a href="./spotlight_2018_05_11.html?banner=articles">Gain saturation in solid-state lasers</a></li>
+<li><a href="./spotlight_2018_04_06.html?banner=articles">The essential roles of phonons in solid-state lasers</a></li>
+<li><a href="./spotlight_2018_01_08.html?banner=articles">Self-starting of passively mode-locked lasers</a></li>
+<li><a href="./spotlight_2017_12_04.html?banner=articles">Energy levels of solid-state gain media</a></li>
+<li><a href="./software_news_2018_08_02.html?banner=articles">Data grids for numerical beam propagation</a></li>
+<li><a href="./software_news_2018_05_22.html?banner=articles">Numerical representation of ultrashort pulses</a></li>
+</ul>
+<p>These articles belong to our newsletters, which appear about once per month.
+You will not regret to <a href="./newsletters.html?banner=articles">register</a>!</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="jB3PvGQrul0opi/KTPa5Bw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/effective_refractive_index.html"
+    },
+    "headline": "Effective Refractive Index",
+    "image": "https://www.rp-photonics.com/previews/effective_refractive_index.png",
+    "datePublished": "2006-01-28",
+    "dateModified": "2020-07-09",
+    "description": "The effective refractive index is a number quantifying the phase delay per unit length in a waveguide, relative to the phase delay in vacuum.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter E",
+      "item": "https://www.rp-photonics.com/encyclopedia_e.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "effective refractive index",
+      "item": "https://www.rp-photonics.com/effective_refractive_index.html"
+    }]}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-jLnL/9r9oCXnNUR7UjBhlw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - VCSEL arrays, wafer level production, output power and beam quality, efficiency, effective cooling, pulsed operation, linewidth, temperature coefficient, external cavity, coherence, applications</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/vcsel_arrays.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-07-11">
+<meta name="description" content="Many VCSEL laser emitters can be combined on a single semiconductor chip to produce high optical powers, for example for pumping solid-state lasers, thermal processing or illumination.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="VCSEL arrays, wafer level production, output power and beam quality, efficiency, effective cooling, pulsed operation, linewidth, temperature coefficient, coherence, applications">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VCSEL Arrays">
+<meta property="og:description" content="Many VCSEL laser emitters can be combined on a single semiconductor chip to produce high optical powers, for example for pumping solid-state lasers, thermal processing or illumination.">
+<meta property="og:url" content="https://www.rp-photonics.com/vcsel_arrays.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/vcsel_arrays.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Many VCSEL laser emitters can be combined on a single semiconductor chip to produce high optical powers, for example for pumping solid-state lasers, thermal processing or illumination.">
+<meta name="twitter:title" content="VCSEL Arrays">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/vcsel_arrays.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="jLnL/9r9oCXnNUR7UjBhlw==">
+page="vcsel_arrays.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="jLnL/9r9oCXnNUR7UjBhlw==">shownsponsors="Knight Optical"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./bg/buy_vcsel_arrays.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_v.html">letter V</a> &gt; <a href="vcsel_arrays.html">VCSEL arrays</a></p>
+<h1>VCSEL Arrays</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_vcsel_arrays.html?s=vbox">9 suppliers for VCSEL arrays</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_vcsel_arrays.html?s=vbox">List of suppliers for<br>VCSEL arrays</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: arrays containing many VCSEL laser emitters</p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#lasers" title="other articles on lasers">lasers</a></p>
+<p><a href="encyclopedia_cite.html?article=VCSEL%20arrays">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>A VCSEL is a <a href="vertical_cavity_surface_emitting_lasers.html" title="a monolithic kind of semiconductor lasers with beam emission perpendicular to the wafer surface">vertical cavity surface-emitting laser</a> &ndash; a kind of <a href="laser_diodes.html" title="semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diode</a> which emits in a direction perpendicular to the wafer surface &ndash; in contrast to the more common <a href="edge_emitting_semiconductor_lasers.html" title="semiconductor lasers emitting light along the plane of the wafer">edge-emitting semiconductor lasers</a>.
+Such a laser can produce only quite moderate powers in the milliwatt region.
+However, it is possible to fabricate two-dimensional arrays containing many such VCSELs on a common semiconductor chip and to utilize the combined emission of those.
+One can then obtain several watts, dozens or even hundreds of watts, depending on the number of used emitters.
+Therefore, a 2-D VCSEL array containing many thousand emitters can compete with <a href="diode_bars.html" title="a type of semiconductor laser containing a one-dimensional array of broad-area emitters">diode bars</a> and (combining multiple arrays) even with <a href="diode_stacks.html" title="arrangements of multiple diode bars, delivering very high output power">diode stacks</a> based on edge-emitting semiconductor lasers.</p>
+<aside class="callout blue">VCSEL technology is naturally suited for wafer level production.</aside>
+<p>Compared with the fabrication of single emitters, the production process (typically with MOCVD and photolithography) is fairly similar.
+There are only few additional fabrication steps related to the electrical connections.
+The outer shape of the produced arrays is often rectangular, but other shapes (e.g. triangular ones) are equally possible.
+The emitters may be arranged in a square or hexagonal pattern, for example.</p>
+<p>Typically, a single emitter has a diameter between 5&nbsp;&mu;m and 20&nbsp;&mu;m for an output power between a few milliwatts and some tens of milliwatts.
+The spacing (pitch) of emitters is sometimes as close as possible concerning fabrication, but in other cases significantly larger e.g. for limiting the density of heat generation.
+For example, one may use a 40-&mu;m pitch for emitters with an active diameter of 8&nbsp;&mu;m.
+Such a chip with an area of e.g. 5&nbsp;mm<sup>2</sup> may produce an output power of the order of 10&nbsp;W.</p>
+<p>Note that edge emitters are suitable for one-dimensional arrays (= diode bars), but hardly for two-dimensional arrays, while VCSELs can be quite naturally made as 2D arrays with wafer level fabrication.
+Therefore, they have a substantial potential for low cost manufacturing.</p>
+<h2 class="togglediv">Assemblies with Multiple VCSEL Arrays</h2>
+<div>
+<p>For some applications, dozens of such VCSEL arrays are mounted side by side on a water-cooled holder which provides both the electrical connections and the cooling.
+Typically, the arrays are electrically connected in series in order to limit the required electrical current.
+Such a device with a total emitting area of several square centimeters may emit powers of hundreds of kilowatts, and larger devices can even generate multiple kilowatts.
+The <a href="optical_intensity.html" title="optical power per unit area">optical intensity</a> at some distance from the emitters can be fairly uniform over a large area.</p>
+</div>
+<h2 class="togglediv">Output Power and Beam Quality; Importance of Effective Cooling</h2>
+<div>
+<p>The total output <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">power</a> of a VCSEL area is simply the sum of the output powers of all the emitters.
+However, the emission per VCSEL may have to be somewhat reduced if the limits of the cooling system are reached, as the combined dissipated power of many VCSELs and the thermal power density can be substantial (often hundreds of watts per cm<sup>2</sup>).
+The cooling can be made easier by increasing the spacing between the emitters &ndash; which however reduces the beam quality, as explained in the following.</p>
+<p>The <a href="beam_quality.html" title="a measure for how well a laser beam can be focused">beam quality</a> of a single VCSEL can be very high &ndash; close to <a href="diffraction_limited_beams.html" title="beams with a minimum possible beam divergence for a given waist radius">diffraction-limited</a>.
+When optimizing such devices for high output power, the beam quality may no longer be perfect.
+More importantly, however, when combining multiple VCSELs one effectively obtains a laser source with an accordingly increased emitting area; that area is substantially more than the number of emitters times the area of a single emitter, since some spacing between the emitters is required.
+At the same time, the <a href="beam_divergence.html" title="a measure for how fast a laser beam expands far from its focus">beam divergence</a> remains that of a single emitter, if the emission is uncoordinated (<a href="coherence.html" title="a fixed phase relationship between the electric field values at different locations or at different times">incoherent</a>), as usual.
+As a consequence, the <a href="beam_parameter_product.html" title="product of the beam radius in a focus and the far-field beam divergence">beam parameter product</a> and <a href="m2_factor.html" title="a parameter for quantifying the beam quality of laser beams"><i>M</i><sup>2</sup> factor</a>, which are indicators for the beam quality, are substantially increased.</p>
+<p>Thus, the output power can in principle be scaled up (&ldquo;<a href="power_scaling_of_lasers.html" title="a procedure for substantially increasing the output power of lasers">power scaling</a>&rdquo;) simply by increasing the number of emitters, but at the same time the beam quality is reduced.
+Therefore, one should not regard that method as being <em>true</em> power scaling; the <a href="radiance.html" title="the optical power per unit area and solid angle">radiance</a> (brightness) is not increased and typically stays at the order of 50&nbsp;kW&thinsp;/&thinsp;(cm<sup>2</sup> sr).</p>
+<p>For optimizing the beam quality and radiance, one can use different approaches:</p>
+<ul>
+<li>One may maximize the emission of each single emitter, so that a small number of emitters is required, and the total emitting area is reduced accordingly.
+Some reduction in beam quality of a single emitter is relevant only as far as the beam divergence is increased.</li>
+<li>One will try to maximize the power conversion efficiency of each emitter, thus reducing the amount of generated heat.</li>
+<li>One can try to minimize the spacing of the emitters.
+That approach is essentially limited by how effective the cooling is, at least for <a href="continuous_wave_operation.html" title="operation mode of a laser with continuous light emission">continuous-wave operation</a>.
+Methods for improving that aspect are explained in the following section.</li>
+<li>One can try to obtain a coherent emission by use of optical feedback, which is also explained further below.</li>
+</ul>
+</div>
+<h2 class="togglediv">Methods for Effective Cooling</h2>
+<div>
+<h3 class="togglediv">Effective Coolers</h3>
+<div>
+<p>Heat can be efficiently conducted away from a surface by using a material with particularly high thermal conductivity.
+In particular, one often uses synthetic diamond heater spreaders.
+As those are transparent, they can sometimes even be attached to the light-emitting surface.</p>
+<p>A heat spreader can be combined with a microchannel cooler.</p>
+</div>
+<h3 class="togglediv">Thinned Substrates</h3>
+<div>
+<p>In the traditional type of design, where the emission is directed away from the epitaxial side and cooling usually must be done on the backside, the thermal impedance of the substrate is a problem.
+That can be reduced by using a substrate as thin as possible, or by thinning it after the epitaxial process.</p>
+</div>
+<h3 class="togglediv">Bottom-emitting VCSELs</h3>
+<div>
+<p>At least for longer operation wavelengths, it is also possible to fabricate VCSELs which do not emit vertically away from the chip, but in the opposite direction, i.e., from the epitaxial side into the substrate.
+The output beam is then obtained on the bottom side, which is polished and obtains an anti-reflection coating for minimizing power losses.
+The top side can then be used for effective cooling, with a minimum thermal resistance between the heat source and the cooling medium.</p>
+<p>A disadvantage, however, is the loss of optical power by light <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorption</a> in the semiconductor substrate, which needs to be doped (often n-doped) in order to carry the electrical pump current.
+Therefore, one will also need to reduce the substrate thickness as far as possible, e.g. to 150&nbsp;&mu;m.</p>
+</div>
+</div>
+<h2 class="togglediv">Efficiency of VCSEL Arrays</h2>
+<div>
+<p>The power conversion efficiency of VCSEL arrays is often of the order of 50&#37;, which is roughly comparable with that of many edge-emitting high-power laser diodes.
+However, some of those reach efficiencies of well over 70&#37; [1], while VECSEL arrays are currently limited to around 63&#37; at 976&nbsp;nm [5].</p>
+<p>Operation at higher temperatures (e.g. 50&thinsp;&deg;C at the case) is also possible, but with somewhat lower efficiency.</p>
+<p>The efficiency is also often lower if operation with a particularly high beam quality is enforced.</p>
+</div>
+<h2 class="togglediv">Pulsed Operation</h2>
+<div>
+<p>Quite high <a href="peak_power.html" title="maximum optical power of a pulse">peak powers</a> are possible in pulsed operation with nanosecond to microsecond pulse durations.
+Even in pulsed operation, the device reliability can be high: catastrophic optical damage (COD) can usually not occur due to the moderate <a href="optical_intensity.html" title="optical power per unit area">optical intensities</a> &ndash; they are normally far lower than those in edge-emitting lasers, where the achievable peak power is limited by COD to a value not that much higher than the continuous-wave output power.</p>
+<p>Pulsed operation is particularly useful for pumping <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched</a> <a href="solid_state_lasers.html" title="lasers based on solid-state gain media (usually ion-doped crystals or glasses)">solid-state lasers</a> with low <a href="pulse_repetition_rate.html" title="the number of pulses emitted per second e.g. by a mode-locked or Q-switched laser">pulse repetition rates</a>.
+Here, the pumping duration will typically be a few hundred microseconds.
+However, one can also consider the use with much shorter pulse durations (e.g. a few nanoseconds) for <a href="time_of_flight_measurements.html" title="distance measurements based on measuring the time of flight of a light pulse">time-of-flight measurements</a>, where a high peak power is often of vital importance.</p>
+</div>
+<h2 class="togglediv">Emission Linewidth and Temperature Coefficient</h2>
+<div>
+<p>The emission <a href="linewidth.html" title="width of the spectrum of a light beam or an absorption feature">linewidth</a> of a single VCSEL can be very small &ndash; far below 1&nbsp;nm.
+In principle, the linewidth of a whole VCSEL array can be similarly small, provided that all emitters work at quite precisely the same wavelength.
+That requires a high uniformity achieved in the production process and in addition a sufficiently homogeneous temperature distribution.</p>
+<p>The emission wavelength of a VCSEL typically has a several times lower temperature dependence than that of an edge-emitting laser diode &ndash; normally around 0.065&nbsp;nm/K for GaAs-based devices.
+This is  because the emission wavelength is essentially determined by a cavity resonance and not by the gain maximum, and cavity resonances have several times smaller temperature coefficients.
+They are influenced only by the temperature dependence of the <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a> and not by carrier densities involving Fermi distributions.</p>
+<p>Note that the emission wavelength may drift during pulse generation, where waste heat is accumulated in a relatively small volume and needs some time to be removed.</p>
+</div>
+<h2 class="togglediv">Beam Collimation with Microlens Arrays</h2>
+<div>
+<figure class="right" style="width:166px;">
+<img src="img/collimating_lens_array.png" alt="collimating lens array">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Collimation of the output of a VCSEL array.
+</figcaption>
+</figure>
+<p>Some applications require the reduction of beam divergence by the use of a <a href="microlens_arrays.html" title="one- or two-dimensional arrays of microlenses, used e.g. in Shack-Hartmann wavefront sensors">microlens array</a>, where each emitter obtains its own lens (See Figure&nbsp;1).
+That can facilitate the further processing of the beam, for example the focusing to a small spot with an additional large <a href="lenses.html" title="transparent optical devices affecting the wavefront curvature of light">lens</a>.</p>
+<p>One may either use a separately fabricated lens array, which needs to be precisely aligned to the VCSEL array, or fabricate microlenses directly on the semiconductor chip.</p>
+</div>
+<h2 class="togglediv">Coherent Emission with External Resonator</h2>
+<div>
+<p>Normally, the different VCSELs are emitting in an independent and thus uncoordinated manner, i.e., without mutual <a href="coherence.html" title="a fixed phase relationship between the electric field values at different locations or at different times">coherence</a>.
+Even when considering only rather short averaging times, one can then simply add up the intensity distribution of the different emitters, ignoring any <a href="interference.html" title="a range of phenomena associated with the superposition of waves">interference</a> effects.
+As a result, the beam parameter product is large, since the emitting area is increased by combining many emitters, while the divergence angle remains unchanged.</p>
+<p>This can be profoundly changed if the emission of all the VCSELs can be made mutually coherent based on optical feedback.
+For that, one will usually employ the combination of two measures:</p>
+<ul>
+<li>One uses a common <a href="output_couplers.html" title="partially transparent laser mirrors, used for extracting output beams from laser resonators">output coupler</a> mirror, which may be placed a few millimeters away from the emitting surface.
+It can be flat or curved, depending on the amount of <a href="thermal_lensing.html" title="a lensing effect induced by temperature gradients">thermal lensing</a> and the priorities of beam quality vs. power conversion efficiency.</li>
+<li>The top mirror reflectivity of the VCSELs is substantially reduced, so that lasing is possible only with the optical feedback from the external mirror.</li>
+</ul>
+<p>Ideally, one also uses adapted VCSEL designs with minimized current crowding and <a href="spatial_hole_burning.html" title="a distortion of the gain shape in a laser medium (or the loss spectrum in a saturable absorber medium), caused by saturation effects of a standing wave">spatial hole burning</a> effects, which are more easily forced to operate with low divergence.
+With such external-cavity VCSELs (EC-VECSELs), one can obtain emission with a substantially reduced <a href="beam_divergence.html" title="a measure for how fast a laser beam expands far from its focus">beam divergence</a>, which e.g. enables one to <a href="fiber_launch_systems.html" title="optical systems for launching light into optical fibers">launch the light</a> into a <a href="multimode_fibers.html" title="fibers supporting more than one guided mode per polarization direction">multimode fiber</a>.
+In some cases, the <a href="m2_factor.html" title="a parameter for quantifying the beam quality of laser beams"><i>M</i><sup>2</sup> factor</a> is even close to 1, approximating a TEM<sub>00</sub> profile.
+However, the power conversion efficiency is often significantly compromised &ndash; particularly when optimizing a device for highest beam quality
+Nevertheless, the achieved radiance can be orders of magnitude higher (hundreds of MW&thinsp;/&thinsp;(cm<sup>2</sup> sr)) than in cases where uncoordinated emission takes place.</p>
+<p>At the same time, the emission linewidth may be reduced, since the different emitters are tentatively pulled towards common emission frequencies.</p>
+<p>Another option which comes from the external resonator is that of <a href="intracavity_frequency_doubling.html" title="frequency doubling with a nonlinear crystal within the laser resonator">intracavity frequency doubling</a>, with which one can achieve much improved <a href="frequency_doubling.html" title="the phenomenon that an input wave in a nonlinear material can generate a wave with twice the optical frequency">frequency doubling</a> efficiencies.</p>
+</div>
+<h2 class="togglediv">Applications for VCSEL Arrays</h2>
+<div>
+<p>VCSEL arrays are suitable for pumping <a href="solid_state_lasers.html" title="lasers based on solid-state gain media (usually ion-doped crystals or glasses)">solid-state lasers</a>.
+Due to their relatively low beam divergence, they may sometimes be used even without any pump optics, which of course substantially simplifies the laser setup.
+In other cases, one may use a fiber-coupled laser with simple pump optics.
+Further, the low temperature dependence of the emission wavelength may make a temperature stabilization system obsolete.
+Even pulsed pumping is easily possible, e.g. for <a href="q_switched_lasers.html" title="lasers which emit optical pulses, relying on the method of Q switching">Q-switched lasers</a>, where pump pulse durations will typically be a few hundred microseconds.</p>
+<p>A wider range of solid-state lasers, also including for example <a href="titanium_sapphire_lasers.html" title="lasers based on a Ti:sapphire gain medium">titanium&ndash;sapphire lasers</a>, can be pumped when utilizing <a href="intracavity_frequency_doubling.html" title="frequency doubling with a nonlinear crystal within the laser resonator">intracavity frequency doubling</a>.</p>
+<p>Arrays which do not reach a particularly high radiance, but only a high output power, can be applied for thermal material processing &ndash; for example, for the forming of thermoplastic parts, for the production of carbon fiber parts, for offset printing, for sintering processes, and the local heat treatment of steel parts.
+For such applications, one does not need to strongly focus the generated infrared radiation.
+One can often profit from the flat and smooth intensity profile, achieved without an additional <a href="beam_homogenizers.html" title="devices for producing beam profiles with homogeneous intensity distribution">beam homogenizer</a>.
+In some cases, one may activate the VCSEL arrays only in certain spatial zones for obtaining modified illumination patterns.</p>
+<p>VCSELs may be used for illumination e.g. in inspection systems, where again the limited beam quality is usually not relevant, but only the homogeneous illumination.
+The option to quickly modulate the illumination intensity, possibly even use pulsed illumination, can be very helpful in some situations.</p>
+<p>Arrays with a small number of emitters, which can often be independently addressed, are used for <a href="optical_fiber_communications.html" title="the technology of transmitting information through optical fibers">optical fiber communications</a>.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_vcsel_arrays.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 9 suppliers for VCSEL arrays.</p>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="vcsel_arrays.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">M. Kanskar <i>et al.</i>, &ldquo;73&#37; CW power conversion efficiency at 50&nbsp;W from 970&nbsp;nm diode laser bars&rdquo;, Electron. Lett. 41 (5), 245 (2005), <a href="https://doi.org/10.1049/el:20058260">doi:10.1049/el:20058260</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">S. Riyopoulos, &ldquo;Effects of nonlinear frequency pulling on the cavity phasing and the collective mode structure in phase-locked VCSEL arrays&rdquo;, J. Opt. Soc. Am. B 23 (2), 250 (2006), <a href="https://doi.org/10.1364/JOSAB.23.000250">doi:10.1364/JOSAB.23.000250</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">S.-F. Seurin et al, &ldquo;High-power high-efficiency 2D VCSEL arrays&rdquo;, Proc. SPIE Vol. 6980, 690808 (2008), <a href="https://doi.org/10.1117/12.774126">doi:10.1117/12.774126</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">Z. Wang <i>et al.</i>, &ldquo;High power and good beam quality of two-dimensional VCSEL array with integrated GaAs microlens array&rdquo;, Opt. Express 18 (23), 23900 (2010), <a href="https://doi.org/10.1364/OE.18.023900">doi:10.1364/OE.18.023900</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">D. Zhou <i>et al.</i>, &ldquo;Progress on vertical-cavity surface-emitting laser arrays for infrared illumination applications&rdquo;, Proc. SPIE Vol. 9001, 90010E (2014), <a href="https://doi.org/10.1117/12.2040429">doi:10.1117/12.2040429</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">D. Zhou <i>et al.</i>, &ldquo;Progress on high-power, high-brightness VCSELs and applications&rdquo;, Proc. SPIE 9381, 93810B (2015), <a href="https://doi.org/10.1117/12.2080145">doi:10.1117/12.2080145</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">F. E. Doany <i>et al.</i>, &ldquo;Terabit/sec VCSEL-based 48-channel optical module based on holey CMOS transceiver IC&rdquo;, J. Lightwave Technol. 31 (4), 672 (2013), <a href="https://doi.org/10.1109/JLT.2012.2217938">doi:10.1109/JLT.2012.2217938</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">B. Redding <i>et al.</i>, &ldquo;Full-field interferometric confocal microscopy using a VCSEL array&rdquo;, Opt. Lett. 39 (15), 4446 (2014), <a href="https://doi.org/10.1364/OL.39.004446">doi:10.1364/OL.39.004446</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">A. Malacarne <i>et al.</i>, &ldquo;Optical transmitter based on a 1.3-&mu;m VCSEL and a SiGe driver chip for short-reach applications and beyond&rdquo;, J. Lightwave Technol. 36 (9), 1527 (2018), <a href="https://doi.org/10.1109/JLT.2017.2782882">doi:10.1109/JLT.2017.2782882</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="vertical_cavity_surface_emitting_lasers.html" title="a monolithic kind of semiconductor lasers with beam emission perpendicular to the wafer surface">vertical cavity surface-emitting lasers</a><br>and other articles in the category <a href="categories.html#lasers" title="other articles on lasers">lasers</a></p>
+<hr style="margin-top:16px; margin-bottom:12px;">
+<a href="paschotta.html"><img src="img/paschotta3_small.jpg" alt="Dr. R. Paschotta" style="float:left; margin:0px 16px 20px 18px;" width="80" height="97"></a>
+<div style="margin-bottom:12px;">
+<p style="font-size:90%; line-height:20px; padding-right:20px;">This encyclopedia is authored by <a href="paschotta.html" class="redlink">Dr. Rüdiger Paschotta</a>, the founder and executive of <a href="index.html" class="redlink">RP Photonics Consulting GmbH</a>.
+How about a <a href="training.html" class="redlink">tailored training course</a> from this distinguished expert at your location?
+<a href="contact.html" class="redlink">Contact</a> RP Photonics to find out how his <a href="./services.html" class="redlink">technical consulting services</a> (e.g. product designs, problem solving, independent evaluations, training) and <a href="software.html" class="redlink">software</a> could become very valuable for your business!</p>
+</div>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/vcsel_arrays.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fvcsel_arrays.html&text=RP+Photonics+Encyclopedia+-+VCSEL+arrays%2C+wafer+level+production%2C+output+power+and+beam+quality%2C+efficiency%2C+effective+cooling%2C+pulsed+operation%2C+linewidth%2C+temperature+coefficient%2C+external+cavity%2C+coherence%2C+applications" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fvcsel_arrays.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fvcsel_arrays.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/vcsel_arrays.html"&gt;<br>Article on VCSEL Arrays&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/vcsel_arrays.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/vcsel_arrays.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/vcsel_arrays.html<br>article on 'VCSEL Arrays' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Numerical Pulse Propagation</h2>
+<p><a href="./propulse.html?banner=RP_ProPulse">RP ProPulse</a> can simulate pulse propagation in many devices:</p>
+<ul>
+<li>in the resonators of <a href="./propulse_demo_aml.html?banner=RP_ProPulse">actively</a> or <a href="./propulse_demo_pml.html?banner=RP_ProPulse">passively mode-locked lasers</a></li>
+<li>in synchronously pumped OPOs</li>
+<li>in optical fibers, e.g. for <a href="./propulse_demo_compression.html?banner=RP_ProPulse">pulse compression</a> or <a href="./propulse_demo_solitonshift.html?banner=RP_ProPulse">soliton studies</a></li>
+</ul>
+<p style="text-align:center;"><a href="./propulse.html?banner=RP_ProPulse"><img src="./img/rp_propulse_smaller.png" alt="RP ProPulse"></a></p>
+<p>Further features:</p>
+<ul>
+<li><a href="./propulse_interface.html?banner=RP_ProPulse">interactive pulse display</a></li>
+<li>great flexibility due to <a href="./software_script_language.html?banner=RP_ProPulse">scripting</a></li>
+<li>comprehensive documentation</li>
+<li>competent <a href="./software_support.html?banner=RP_ProPulse">technical support</a></li>
+</ul>
+<a href="./propulse.html?banner=RP_ProPulse"><img src="./img/propulse_window.png" alt="pulse display window"></a>
+<p>Use <a href="./propulse.html?banner=RP_ProPulse"><b>RP ProPulse</b></a> to acquire a full understanding of your devices!</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="jLnL/9r9oCXnNUR7UjBhlw==">shownbanner = "RP ProPulse";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>More to Read</h2>
+ <p>Here are some randomly selected encyclopedia articles &ndash; just to make you curious:</p>
+  <ul>
+<li><a href="./polarization_of_light.html">polarization of light</a></li><li><a href="./retroreflectors.html">retroreflectors</a></li><li><a href="./sisyphus_cooling.html">Sisyphus cooling</a></li><li><a href="./gradient_index_lenses.html">gradient-index lenses</a></li><li><a href="./raman_gain.html">Raman gain</a></li><li><a href="./quantum_wells.html">quantum wells</a></li><li><a href="./velocity_of_light.html">velocity of light</a></li><li><a href="./fluence.html">fluence</a></li><li><a href="./spectral_phase_interferometry.html">spectral phase interferometry</a></li><li><a href="./forbidden_transitions.html">forbidden transitions</a></li><li><a href="./optical_parametric_amplifiers.html">optical parametric amplifiers</a></li><li><a href="./optical_coherence_tomography.html">optical coherence tomography</a></li><li><a href="./colorimetry.html">colorimetry</a></li><li><a href="./spatial_hole_burning.html">spatial hole burning</a></li><li><a href="./fiber_cables.html">fiber cables</a></li></ul>
+
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="jLnL/9r9oCXnNUR7UjBhlw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/vcsel_arrays.html"
+    },
+    "headline": "VCSEL Arrays",
+    "image": "https://www.rp-photonics.com/previews/vcsel_arrays.png",
+    "datePublished": "2019-05-23",
+    "dateModified": "2020-07-11",
+    "description": "Many VCSEL laser emitters can be combined on a single semiconductor chip to produce high optical powers, for example for pumping solid-state lasers, thermal processing or illumination.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter V",
+      "item": "https://www.rp-photonics.com/encyclopedia_v.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "VCSEL arrays",
+      "item": "https://www.rp-photonics.com/vcsel_arrays.html"
+    }]}
+}
+</script>
+</body>
+</html>

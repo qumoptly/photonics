@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-64raM1taqNvcsTLgLQBLIg=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - image sensors, photodiode arrays, linear sensor, sequential readout, intensified CCD, CMOS, charge injection, color imaging, infrared, bolometer</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/image_sensors.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Image sensors are used in photo and video cameras, for thermal imaging and in document scanners. Particularly common are CCD and CMOS sensors for visible, near-infrared and ultraviolet light, but there are also infrared imaging sensors.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="image sensors, photodiode arrays, sequential readout, intensified CCD, CMOS, charge injection, color imaging, infrared, bolometer">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Image Sensors">
+<meta property="og:description" content="Image sensors are used in photo and video cameras, for thermal imaging and in document scanners. Particularly common are CCD and CMOS sensors for visible, near-infrared and ultraviolet light, but there are also infrared imaging sensors.">
+<meta property="og:url" content="https://www.rp-photonics.com/image_sensors.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/image_sensors.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Image sensors are used in photo and video cameras, for thermal imaging and in document scanners. Particularly common are CCD and CMOS sensors for visible, near-infrared and ultraviolet light, but there are also infrared imaging sensors.">
+<meta name="twitter:title" content="Image Sensors">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/image_sensors.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="64raM1taqNvcsTLgLQBLIg==">
+page="image_sensors.html?banner=imaging"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/optoelectronics.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/dataray.html"><img src="./bg/logos/dataray.png" alt="DataRay" class="supplierlogo sponsor"></a> <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo sponsor"></a> <a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="64raM1taqNvcsTLgLQBLIg==">shownsponsors="DataRay,eagleyard Photonics,Knight Optical,Optikexpertisen"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_i.html">letter I</a> &gt; <a href="image_sensors.html">image sensors</a></p>
+<h1>Image Sensors</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_image_sensors.html?s=vbox">17 suppliers for image sensors</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.sukhamburg.de/products/linescancamera.html" data-supplier="Schäfter + Kirchhoff" data-location="product-enc" data-keyword="image sensors" rel="nofollow" class="bg externallink"><img src="./bg/logos/schaefter_kirchhoff.png" alt="Schäfter + Kirchhoff" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_image_sensors.html?s=vbox">List of suppliers for<br>image sensors</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: optoelectronic sensors which can be used for imaging</p>
+<p>Alternative terms: imaging sensor, imager</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Bildsensoren</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#optoelectronics" title="other articles on optoelectronics">optoelectronics</a>, <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a></p>
+<p><a href="encyclopedia_cite.html?article=image%20sensors">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Image sensors are <a href="optoelectronics.html" title="the technology of electronic devices that interact with light">optoelectronic</a> sensors which can measure light intensities in a spatially resolved manner for <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a> applications.
+They are used in various kinds of <a href="cameras.html" title="optical instruments for recording still or moving images">cameras</a> and for scanners, for example</p>
+<ul>
+<li>in digital <a href="photo_cameras.html" title="optical instruments for taking photographic images">photo cameras</a>,</li>
+<li>in video cameras (for television, consumer devices, surveillance, industry, etc.),</li>
+<li>for <a href="thermal_imaging.html" title="imaging based on thermal radiation">thermal imaging</a> (thermography), and</li>
+<li>for various kinds of scanners such as document scanners.</li>
+</ul>
+<p>Some image sensors generate only one-dimensional images, but by combining multiple such images with consistent transverse spacings, one can assemble two-dimensional images.
+For example, that is often done in document scanners.
+Other sensors directly produce two-dimensional images.</p>
+<p>Image sensors are also called <a href="focal_plane_arrays.html" title="arrays of light detectors placed in the focal plane of an imaging system">focal plane arrays</a> (FPAs), indicating that they are detector areas which are placed in the <a href="focal_points_and_focal_planes.html" title="points to which parallel input rays are concentrated by an optical system, and the planes going through those points">focal plane</a> of an imaging system.</p>
+<h2 class="togglediv">Linear Image Sensors</h2>
+<div>
+<h3 class="togglediv">Photodiode Arrays</h3>
+<div>
+<p>If only a relatively small number of pixels is required, a <a href="photodiode_arrays.html" title="typically linear arrays of photodiodes, provided as compact devices">photodiode array</a> can be used.
+It contains one <a href="photodiodes.html" title="semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiode</a> per pixel, and all those diodes can be addressed with separate wires.
+Usually, one has a <em>line sensor</em>, with all pixels arranged in one row.</p>
+<aside class="callout blue">For diode arrays are not a practical technologies for sensors with thousands of detector pixels.</aside>
+<p>This simple approach, however, is no more practical for line sensors with thousands of pixels, because the number of wire connections would be impractical.
+Even if suitable connectors could be made, it would be inconvenient for further processing of the data e.g. with a microprocessor.</p>
+<p>Photodiode arrays are available with different kinds of photodiodes to be used for specific spectral regions.
+For example, there are silicon arrays for use with visible or near-infrared radiation, whereas with indium gallium arsenide devices one gets further into the <a href="infrared_light.html" title="invisible light with wavelengths roughly between 750&thinsp;&thinsp;nm and 1&thinsp;&thinsp;mm">infrared</a>.</p>
+</div>
+<h3 class="togglediv">Line Sensors with Sequential Readout</h3>
+<div>
+<aside class="callout blue">Serial readout is an essential concept for image sensors with many pixels.</aside>
+<p>For line sensors (as used in line scan cameras) with larger numbers of pixels, some fundamental operation principles need to be changed.
+Instead of a parallel readout of signals for all the pixels, one needs to use some method for realizing a <em>serial readout</em>: signal intensities related to different pixels are transmitted subsequently, i.e., at slightly different times.</p>
+<aside class="callout blue">Working with electric charges instead of currents or voltages is more convenient.</aside>
+<p>It would not be most practical to realize such a technique for <a href="photocurrent.html" title="an electric current which is induced by incident light in a photodetector">photocurrents</a> &ndash; providing an output current which at some time corresponds to the photocurrent of a particular photodiode.
+The same holds for concepts based on electric voltages.
+Instead, the common method is to work with electric <em>charges</em> instead of currents; such charges are accumulated within a certain <em>exposure time</em> (which may of course be adjusted to the measurement conditions).</p>
+<aside class="callout blue">During exposure, a capacitor collects electric charge in proportion to the received amount of light.</aside>
+<p>Electronic image sensors are usually realized in the form of optoelectronic semiconductor chips, where the required structures for all pixels are fabricated in parallel.
+The used structures for the light-sensitive elements can differ substantially between different sensors, but usually they are based on the fundamental principle of having some kind of <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a> which charges a capacitor during exposure.
+Before an exposure begins, the capacitor is charged to reach some fixed bias voltage.
+After the exposure, the capacitor will have acquired some amount of charge (or change of charge), which reflects the total amount of light received during the exposure.</p>
+<p>Eventually, the charge needs to be converted into a voltage signal.
+Different approaches are used in image sensors for that conversion; the CMOS and CCD sensor concepts are described in the following sections.
+They are all based on silicon technology, providing light sensitivity through the whole visible range and somewhat into the <a href="infrared_light.html" title="invisible light with wavelengths roughly between 750&thinsp;&thinsp;nm and 1&thinsp;&thinsp;mm">infrared</a>.</p>
+</div>
+<h3 class="togglediv">Linear CMOS Sensors</h3>
+<div>
+<p>CMOS means <em>complementary metal&ndash;oxide&ndash;semiconductor</em> &ndash; a technology developed for making integrated electronic circuits such as microprocessors.
+Essentially the same technology is applied for CMOS image sensors.
+The photodetector can either be a <a href="photodiodes.html" title="semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiode</a> or a photo gate.</p>
+<p>In the early days of CMOS sensors, <em>passive pixel sensors</em> (PPS) were used, where each photodetector only had a single MOS transistor, with which one can let the charge flow via a bus wire to a charge amplifier (only one for the whole sensor), e.g. a highly linear capacitive transimpedance amplifier.
+This concept could be realized with relatively simple chip designs with a good <em>fill factor</em>, i.e., the light-sensitive device covered much of the area per pixel.</p>
+<aside class="callout blue">Usually, several transistors are used for each pixel.</aside>
+<p>In a modern CMOS sensor with active pixels (APS = <em>active pixel sensor</em>), there is one charge amplifier associated with each photodetector, so that a substantially better <a href="signal_to_noise_ratio.html" title="the ratio of signal power to noise power in a detector">signal-to-noise ratio</a> and higher speed is achieved, but with less precise linearity.
+Additional transistors can be used for functions like realizing exposure control with a global shutter, noise suppression etc.
+These electronics deliver a voltage value reflecting the received charge, which can be directed to a bus wire with one of the transistors.
+Even the analog-to-digital conversion may be done on the pixel level, resulting in a <em>digital pixel sensor</em> with five or more transistors per photodetector and no loss of signal quality in further processing.</p>
+<aside class="callout blue">Random access to pixels can be useful for some applications.</aside>
+<p>Although in practice one usually reads data for all the pixels sequentially, a CMOS sensor would also allow one to address the pixels in arbitrary order, similar to the addressing of bytes in a random access memory (RAM).
+For example, one may in certain situations read out only some range of pixels, or use only every second pixel for quickly acquiring some limited amount of information.</p>
+<p>A major advantage of the CMOS sensor technology is that it can be easily integrated with additional analog or digital circuits on a CMOS chip.</p>
+</div>
+<h3 class="togglediv">Linear CCD Sensors</h3>
+<div>
+<p>CCD sensors are based on the principle of <em>charge-coupled devices</em>, which were originally developed for purely electronic applications, but have been found to be most useful for imaging.
+While the light-sensitive part can be of the same kind as in a CMOS sensor, the readout method is completely different.
+We first consider the simpler situation of a linear CCD sensor array and treat two-dimensional CCD sensors in a later section.</p>
+<aside class="callout blue">A shift register is used to transmit image data sequentially.</aside>
+<p>A common type of implementation involves a <em>transfer gate</em>, which is another array structure placed parallel to the MOS sensor pixels; it is itself made light-insensitive by some shielding and acts as an analog <em>shift register</em>.
+After exposure, one first shifts the charges of the photodetectors into the transfer gate.
+Thereafter, one then sequentially reads out the signals from there based on the principle of the shift register.
+In each step, one transfers the charge from each cell of the shift register to the neighborhood one &ndash; except for the last one, where the signal is read out with a charge amplifier (normally on a separate analog chip), producing a voltage signal.
+In a first step after exposure, the output will reflect the amount of light received by one of the detectors; in further shifting cycles, one subsequently obtains the signals for all the other detectors.
+During the shifting procedure, the photodetectors may do the exposure for the next image frame.</p>
+<p>The time-dependent voltage signal is then converted to a digital signal in an analog-to-digital converter on the same chip.
+Note that one requires only a single charge amplifier and analog-to-digital converter, which not only saves chip space, but also eliminates the problem of performance deviations between different pixels and reduces the frequency of pixel defects.
+The photodetectors themselves, having fairly simple structures, are more easily fabricated with homogeneous properties, compared with more complex multi-transistor CMOS designs.</p>
+<p>The shift register for the charges is easy to implement with some arrangement of electrodes.
+Typically, it has three cells per detector pixel.
+Directly after transfer of the charges into the transfer gate, only every third cell contains a charge, held in a potential well created with a corresponding electrode.
+The potential wells can now be shifted by changing all the electrode voltages, such that each charge flows into the neighbored cell, while avoiding any mixing of charges.
+There are other detailed realizations of the shift register principle, but the basic principle is always as explained above.</p>
+<p>It is also possible to combine the functions of photodetection and shift register, but then one requires an external shutter for prohibiting further illumination during the shifting operation &ndash; except perhaps if the shifting can be done much faster than the image exposure.</p>
+<p>Usually, CCD sensor chips are complemented with additional chips for providing the required clock signal, A/D conversion, further signal processing, etc.</p>
+<p>The importance of CCD sensor technology is underline by the Nobel Prize in Physics 2009, which in half was given to Williard S. Boyle and George E. Smith for their invention of the principle of charge-coupled devices.</p>
+</div>
+</div>
+<h2 class="togglediv">Two-dimensional CMOS and CCD Image Sensors</h2>
+<div>
+<p>For two-dimensional image sensors, which can easily have many thousands or even tens of millions of pixels, it would obviously not be practical to use one wire per detector pixel; the method of sequential readout, as explained above for linear detector arrays, is needed, just in a somewhat adapted form.</p>
+<h3 class="togglediv">CMOS</h3>
+<div>
+<p>Two-dimensional CMOS image sensors allow one to randomly address each pixel via its row and column number.
+(The number of rows or columns is often too large for addressing them with the same number of external wire connections; one needs to use a binary address code transmitted over few wires as the input of some row or column demultiplexer.)
+In active pixel sensors, an analog voltage signal of the address pixel is sent to the bus without significant loss of signal quality.
+Digital pixel sensors transmit digital data instead, eliminating any loss of signal quality.</p>
+<p>The exposure periods for the image rows are often staggered in case of CMOS sensors; one has a <em>rolling</em> or <em>scrolling shutter</em>.
+However, it is also possible to realize a <em>global shutter</em>, which is better for use with moving objects, although it can reduce the available exposure time, e.g. in video cameras.</p>
+</div>
+<h3 class="togglediv">CCD</h3>
+<div>
+<p>For CCD sensors, one can use an additional shift register for multiplexing the signals from different image columns.
+For each image row, one uses the vertical shift registers to feed the horizontal shift register with one point for each column and then shifts those values to produce the output signal.
+Each further vertical shift provides data for another row.
+The order in which that image data for the pixels are obtained is therefore hard-wired and cannot be changed.</p>
+<p>There are actually different architectures of CCD sensors, e.g. <em>interline transfer sensors</em>, <em>frame transfer sensors</em>, <em>full frame sensors</em> and others, where the details of the multiplexing technique differ.</p>
+</div>
+<h3 class="togglediv">Comparison of CMOS and CCD</h3>
+<div>
+<p>Due to the substantial technological developments in the areas of both CMOS and CCD sensor chips, their relative merits have changed with time and can depend substantially on what detailed devices are chosen.
+For example, while CMOS sensors were originally known to be less sensitive and offering lower image quality, there are now CMOS sensors which offer quite good image quality and quite similar fill factors and sensitivity.
+Some general differences can nevertheless be recognized:</p>
+<ul>
+<li>CMOS sensors can be more easily integrated with additional microelectronics on the same chip, providing functionality like <a href="dark_current.html" title="a current from a photodetector which occurs even in the absence of a light input">dark current</a> compensation and other signal processing.
+For example, there are devices with a logarithmic response for covering very large dynamic ranges (sometimes >60&nbsp;dB).
+Even single-chip digital camera sensors are possible; this allows the realization of extremely compact cameras.</li>
+<li>CMOS cameras are generally cheaper to fabricate, particularly because less additional electronics are required.</li>
+<li>CMOS technology requires only a single operation voltage (e.g. 2.5&nbsp;V, 3.3&nbsp;V or 5&nbsp;V, while CCD chips normally require higher voltages and also significantly higher electrical power (although some lower-voltage devices have also been developed).</li>
+<li>CMOS chips offer substantially faster readout.</li>
+<li>The <em>fixed pattern noise</em> of CMOS sensors, resulting from deviations between the electronic parts for different pixels, is still tentatively higher than for CCDs.
+Also, pixel defects are more frequent.</li>
+</ul>
+</div>
+<h3 class="togglediv">Charge Injection Devices</h3>
+<div>
+<p>A variant of CCD sensors are <em>charge injection devices</em> (CID).
+They are fabricated with the same MOS technology and also use capacitors which are discharged through illumination.
+The difference to CCD sensors is essentially the read-out method: the charges for the different pixels are directly read out through a bus signal, rather than sequentially coupling them to neighbored pixels.
+This substantially reduces cross-talk between pixels, e.g. <em>blooming</em> effects at high light intensity levels.
+Also, this approach enables random access to the pixels, i.e., it does not enforce sequential readout.
+Otherwise, the performance figures are similar.</p>
+<p>CIDs are not as widely used as CCDs, but can be a favorable option for special applications, often with specially adapted designs.
+For example, there are devices with rather large pixel charge capacities, optimized for detection with a wide dynamic range and possibly offering quantum-limited noise.
+Also, there are image sensors with improved radiation tolerance.</p>
+</div>
+</div>
+<h2 class="togglediv">Color Imaging</h2>
+<div>
+<p>Monochrome cameras can simply use a single photodetector per pixel.
+For color images, several more sophisticated techniques have been developed:</p>
+<ul>
+<li>One can use <a href="dichroic_mirrors.html" title="mirrors with significantly different reflection or transmission properties at two different wavelengths">dichroic</a> <a href="beam_splitters.html" title="devices for splitting a laser beam into two or more beams">beam splitters</a> for directing the red, green and blue components of light to three separate detector chips.
+Such three-CCD cameras provide color images at the full resolution and good color separation, also with optimum quantum efficiency, but at a substantial cost and with a less compact setup.
+That principle is used for some industrial cameras and professional video cameras, but usually not for consumer <a href="photo_cameras.html" title="optical instruments for taking photographic images">photo cameras</a>.</li>
+<li>One could use three different photodetectors, equipped with different <a href="optical_filters.html" title="devices with a wavelength-dependent transmission or reflectance">color filters</a>, for each pixel on a single chip.
+The substantial increase of the number of detectors is problematic, however; because the detector size cannot be arbitrarily reduced, or the chip size increased, one may get a reduced total number of pixels of the image sensor.</li>
+<li>A better resolution is possible with a special pattern of color filters, e.g. in the form of the common <em>Bayer filter</em> (name after its inventor Bryce Bayer), containing red, blue and twice as many green parts.
+The actual color for each pixel is then obtained with an interpolation procedure with a <em>demosaicing algorithm</em>.
+One obtains one pixel per photodetector, but of course with some significant loss of resolution and color fidelity compared with a three-CCD device.
+This technique is used in most <a href="photo_cameras.html" title="optical instruments for taking photographic images">photo cameras</a> and video cameras, also in scanners.</li>
+</ul>
+</div>
+<h2 class="togglediv">Intensified Sensors</h2>
+<div>
+<p>There are image sensors which are combined with an <a href="image_intensifiers_and_image_converters.html" title="instruments which can intensify images acquired under faint light conditions, or convert images to other wavelengths">image intensifier</a> based on a <a href="microchannel_plates.html" title="electron amplifiers with many spatial channels">microchannel plate</a> detector (a kind of <a href="photomultipliers.html" title="photodetection devices based on the photoelectric effect and charge multiplication by secondary emission of electrons">photomultiplier</a>) in front of the CCD or CMOS chip.
+This allows the operation of such <em>intensified sensors</em> (e.g. ICCD = intensified CCD) under very low light level conditions.
+However, the <a href="quantum_efficiency.html" title="percentage of input photons which contribute to a desired effect">quantum efficiency</a> will normally be lower, and the image noise is increased compared with operation of an ordinary sensor at higher light levels.</p>
+</div>
+<h2 class="togglediv">Photon Counting Sensors</h2>
+<div>
+<p>For imaging of extremely low light levels, one may also use single-photon <a href="avalanche_photodiodes.html" title="photodiodes with internal signal amplification through an avalanche process">avalanche photodiodes</a>, used in Geiger mode.
+They can now be made even in large silicon-based CMOS detector arrays.
+For example, they are suitable for single-photon 3D imaging via <a href="time_of_flight_measurements.html" title="distance measurements based on measuring the time of flight of a light pulse">time-of flight measurements</a>.</p>
+</div>
+<h2 class="togglediv">Sensors for Other Spectral Regions</h2>
+<div>
+<p>Although the technology of CCD and CMOS sensor chips has been driven to a very high level within several decades, it is essentially limited to silicon.
+Therefore, they are light-sensitive only for <a href="wavelength.html" title="the spatial period of a plane wave">wavelengths</a> roughly below 1&nbsp;&mu;m.
+Most devices are used with visible light, some also for the near <a href="infrared_light.html" title="invisible light with wavelengths roughly between 750&thinsp;&thinsp;nm and 1&thinsp;&thinsp;mm">infrared</a> or for the <a href="ultraviolet_light.html" title="invisible light with wavelengths shorter than &asymp;&thinsp;400&thinsp;&thinsp;nm">ultraviolet</a> region.</p>
+<p>For <em>infrared imaging</em> at longer wavelengths, one requires different technologies:</p>
+<ul>
+<li>There are modified kinds of CMOS detectors, where the photodetection is done based on indium gallium arsenide (InGaAs), while the electronic processing is done with traditional silicon-based CMOS technology.
+Unfortunately, the integration of different semiconductor technologies is difficult, resulting in high cost and a performance which is much reduced e.g. in terms of spatial resolution.</li>
+<li>For still longer wavelengths, there are sensors based on micro-bolometers, which register slight heating of tiny parts caused by <a href="absorption.html" title="a process where light energy is converted to another form of energy">absorption</a> of radiation.
+Such sensors are used for <a href="thermal_imaging.html" title="imaging based on thermal radiation">thermal imaging</a> cameras.
+They are quite limited in resolution, sensitivity and speed, and are fairly expensive.</li>
+</ul>
+</div>
+<h2 class="togglediv">Important Parameters of Image Sensors and Their Optimization</h2>
+<div>
+<h3 class="togglediv">Light Sensitivity, Fill Factor and Quantum Efficiency</h3>
+<div>
+<p>It is often desirable to achieve sufficient signal strength with a limited amount of light in order to limit the necessary exposure time.
+Therefore, one tries to obtain a high <a href="quantum_efficiency.html" title="percentage of input photons which contribute to a desired effect">quantum efficiency</a> of the detection.</p>
+<p>The light-sensitive parts of CMOS or CCD chips may have a quite high <a href="quantum_efficiency.html" title="percentage of input photons which contribute to a desired effect">quantum efficiency</a>, often around 80 or even 90&#37; over the visible spectral range.
+However, some of the light is often lost because the light-sensitive parts do not cover the full pixel area.
+That problem of a limited <em>fill factor</em> can be reduced either by minimizing the size of light-insensitive parts or by properly directing the incident light to the sensitive regions, e.g. using <a href="microlens_arrays.html" title="one- or two-dimensional arrays of microlenses, used e.g. in Shack-Hartmann wavefront sensors">microlens arrays</a>.
+The latter approach, however, can have detrimental side effects, such as an increased directionality of the sensitivity (the relevance of which depends on the used optical camera design) and smear effects due to optical cross-talk between different pixels.
+Certain wedge structures have been developed which are better in that respect.</p>
+<p>Another approach is <em>back side illumination</em> through a substrate of reduced thickness.
+That principle has been applied successfully both to CCD and CMOS sensors.</p>
+<p>CMOS sensors are no more necessarily worse in terms of sensitivity than CCD sensors, despite a tentatively larger amount of chip area used for non-light-sensitive parts.</p>
+<p>Note that the term <em>sensitivity</em> is often erroneously used instead of <a href="responsivity.html" title="photocurrent per unit optical power incident on a photodetector">responsivity</a>.
+The sensitivity also depends on image noise, which can have different origins:</p>
+<ul>
+<li><a href="shot_noise.html" title="quantum-limited intensity noise">Shot noise</a> related to photon statistics can play a role in sensitive applications.
+If a detector collects a certain number of carriers within the measurement time on average, there will be an uncertainty (standard deviation) which is the square root of that number.</li>
+<li>Thermal noise may not only cause a <a href="dark_current.html" title="a current from a photodetector which occurs even in the absence of a light input">dark current</a> (for operation with some bias voltage), but also affects the charge measurement: when the capacitor is discharged at the beginning of the measurement period, it will not be perfectly discharged, but rather hold some thermal energy, which causes thermal noise in the measurement result &ndash; unless the initial voltage is measured as well and subtracted from the result (which is sometimes done).</li>
+<li>The charge amplifier may add some further noise, which is partially also thermal noise.</li>
+<li>There can be systematic deviations between different pixels due to microscopic parameter variation; such <em>fixed pattern noise</em> may be eliminated after each measurement with software.</li>
+</ul>
+<p>For highest sensitivities, e.g. in astronomy, image sensors often have to be cooled in order to reduce thermal noise.
+With proper optimization of the whole system, photon noise limited performance can be achieved.</p>
+</div>
+<h3 class="togglediv">Sensor Formats</h3>
+<div>
+<p>Image sensors are available with a wide range of formats.
+Sensors for miniature cameras as used in smart phones are only a few millimeters wide, while an SLR <a href="photo_cameras.html" title="optical instruments for taking photographic images">photo camera</a> typical has a sensor with a width of the order of 30&nbsp;mm.
+Frequently, the sensors are significantly smaller than the <em>full format size</em> of 36&nbsp;mm &times; 24&nbsp;mm (where the <em>crop factor</em> indicates the reduction in diagonal size), but there are also full-size sensors and even sensors in substantially larger sizes.</p>
+<p>The ratio of width to height is often 4:3 or 16:9 corresponding to frequently used image formats.
+However, other formats like 1:1 and 2:1 are also available for special purpose cameras.</p>
+</div>
+<h3 class="togglediv">Spatial Resolution and Pixel Pitch</h3>
+<div>
+<p>The resolution of an image sensor is simply specified by the number of pixels in the horizontal and vertical direction &ndash; for example, 1024 &times; 768 or 1600 &times; 1200.</p>
+<p>The pixel spacing (pixel pitch) in CMOS or CCD sensors is typically somewhere between 2&nbsp;&mu;m and 30&nbsp;&mu;m.
+For example, if a consumer-type <a href="photo_cameras.html" title="optical instruments for taking photographic images">photo camera</a> contains an image sensor with 3000 &times; 2000 pixels, which is 24&nbsp;mm wide, the pixel spacing is 24&nbsp;mm / 3000 = 8&nbsp;&mu;m.
+(The height and the width of the pixels should normally be identical.)
+The pixel size can be somewhat smaller than the pixel pitch; not the whole chip area is active area.</p>
+<p>Obviously, the pixel spacing should be small enough to exploit the full resolution potential of the optical part, while on the other hand it does not make sense to make it significantly finer, since that would not only increase the fabrication cost but also unnecessarily increase the amount of data to be handled and possibly also reduce the fill factor and thus the efficiency.</p>
+</div>
+<h3 class="togglediv">Dynamic Range, Linearity, Overflow Effects</h3>
+<div>
+<p>Image sensors which have an integrated analog-to-digital converter (e.g. CMOS sensors), have a limitation of the dynamic range according to the number of bits.
+For example, a 14-bit sensor can deliver 2<sup>1</sup>4 = 16,384 different intensity values, corresponding to a dynamic range of 42&nbsp;dB.
+The actual dynamic range may be smaller, if the lowest bits are meaningless.
+For sensor chips with analog output (CCD), the dynamic range is limited by noise.</p>
+<p>Depending on the details of the electronics, CCD or CMOS chips can be highly linear within a certain range of light intensities, or exhibit substantial nonlinearities.
+The type and quality of the used charge amplifier can be important for that aspect.</p>
+<p>For excessive illumination beyond the <em>full well capacity</em> of a pixel, there can be <em>blooming</em> effects by overflow of carriers to neighbored pixels.</p>
+</div>
+<h3 class="togglediv">Cross-talk</h3>
+<div>
+<p>Cross-talk means that light hitting one pixel also produces some response on our pixels.
+This may happen in the form of optical cross-talk, e.g. by <a href="scattering.html" title="processes where light is sent in other directions, usually but not always in random directions">scattering</a> of light at microlenses.
+Also, cross-talk can occur in the electronics, particularly at high light levels.</p>
+</div>
+<h3 class="togglediv">Pixel Defects</h3>
+<div>
+<p>Particularly for CMOS sensors, but also for CCD sensors it can happen that certain pixels are defect, e.g. always delivering maximum signal even with no incident light, or always zero signal.
+That may not always be immediately notice, but even consumer cameras should of course not exhibit a substantial number of dead pixels.</p>
+</div>
+<h3 class="togglediv">Readout Time and Frame Rate</h3>
+<div>
+<p>The time for readout of a complete image frame can be substantial, particularly for a high-resolution CCD sensor with many millions of pixels.
+That limits the possible frame rate of a video camera, for example.
+Therefore, the <em>multi-tap technique</em> has been developed for CCD sensors, where different parts of the image are transmitted in parallel through two, four or even more outputs.
+However, this can lead to problems because one then requires multiple charge amplifiers and A/D converters, which may somewhat deviate in performance parameters, producing image artifacts.</p>
+<p>CMOS sensors are generally faster, and there are versions for several thousands images per second.</p>
+</div>
+<h3 class="togglediv">Compatibility with Objectives</h3>
+<div>
+<p>For a <a href="photo_cameras.html" title="optical instruments for taking photographic images">photo camera</a>, for example, it is important that the used image sensor fits well to the used <a href="photographic_objectives.html" title="objective lenses used for photography">photographic objective</a>.
+For example, objectives are optimized for a certain image sensor format.
+Also, the incidence angle of light on the sensor can depend on the objective, and some sensors (e.g. with <a href="microlenses.html" title="optical lenses of particularly small diameter, e.g. below 1 mm">microlenses</a>) may not work well with larger incidence angles; they should be used in conjunction with <a href="telecentric_lenses.html" title="lenses or objectives having the entrance or exit pupil at infinity">telecentric lenses</a>.</p>
+</div>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_image_sensors.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 17 suppliers for image sensors. Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.sukhamburg.de/" data-supplier="Schäfter + Kirchhoff" data-location="product-enc" data-keyword="image sensors" rel="nofollow" class="bg externallink" title="Visit the website of Schäfter + Kirchhoff"><img src="./bg/logos/schaefter_kirchhoff.png" alt="Schäfter + Kirchhoff" class="supplierlogo"></a><a href="http://www.sukhamburg.de/products/linescancamera.html" data-supplier="Schäfter + Kirchhoff" data-location="product-enc" data-keyword="image sensors" rel="nofollow" class="bg externallink" title="Visit the website of Schäfter + Kirchhoff"><img src="./bg/products/schaefter_kirchhoff/image_sensors.jpg" alt="image sensors" class="product"></a><h3><a href="./bg/profiles/schaefter_kirchhoff.html" title="See the profile of Schäfter + Kirchhoff">Schäfter + Kirchhoff</a></h3><p>We offer line scan cameras with <a href="http://www.sukhamburg.de/products/linescancamera/linescancamera/interface/usb3.html" data-supplier="Schäfter + Kirchhoff" data-location="product-enc" data-keyword="image sensors" rel="nofollow" class="externallink bg">USB 3.0</a>, <a href="http://www.sukhamburg.de/products/linescancamera/linescancamera/interface/gige.html" data-supplier="Schäfter + Kirchhoff" data-location="product-enc" data-keyword="image sensors" rel="nofollow" class="externallink bg">GiGE</a> or <a href="http://www.sukhamburg.de/products/linescancamera/linescancamera/interface/gigevision.html" data-supplier="Schäfter + Kirchhoff" data-location="product-enc" data-keyword="image sensors" rel="nofollow" class="externallink bg">GiGE Vision</a> interface. We also offer complete scanner systems like the <a href="http://www.sukhamburg.de/products/linescancamera/scannersystems/ci.html" data-supplier="Schäfter + Kirchhoff" data-location="product-enc" data-keyword="image sensors" rel="nofollow" class="externallink bg">corrosion inspector</a> (measurement and evaluation of corrosion phenomena on coated test plates) or <a href="http://www.sukhamburg.de/products/linescancamera/scannersystems/robotguidedci.html" data-supplier="Schäfter + Kirchhoff" data-location="product-enc" data-keyword="image sensors" rel="nofollow" class="externallink bg">robot-guided line scan cameras</a>.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="image_sensors.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><p class="seealso">See also: <a href="cameras.html" title="optical instruments for recording still or moving images">cameras</a>, <a href="photo_cameras.html" title="optical instruments for taking photographic images">photo cameras</a>, <a href="imaging.html" title="mapping objects points to image points; applications involving such methods">imaging</a>, <a href="photodiode_arrays.html" title="typically linear arrays of photodiodes, provided as compact devices">photodiode arrays</a>, <a href="focal_plane_arrays.html" title="arrays of light detectors placed in the focal plane of an imaging system">focal plane arrays</a><br>and other articles in the categories <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a>, <a href="categories.html#optoelectronics" title="other articles on optoelectronics">optoelectronics</a>, <a href="categories.html#vision_displays_and_imaging" title="other articles on vision, displays and imaging">vision, displays and imaging</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/image_sensors.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fimage_sensors.html&text=RP+Photonics+Encyclopedia+-+image+sensors%2C+photodiode+arrays%2C+linear+sensor%2C+sequential+readout%2C+intensified+CCD%2C+CMOS%2C+charge+injection%2C+color+imaging%2C+infrared%2C+bolometer" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fimage_sensors.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fimage_sensors.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/image_sensors.html"&gt;<br>Article on Image Sensors&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/image_sensors.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/image_sensors.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/image_sensors.html<br>article on 'Image Sensors' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Articles on Imaging</h2>
+<p>A lot of new articles in the area of optical imaging have recently been added to the encyclopedia. For example:</p>
+<ul>
+<li><a href="./afocal_optical_systems.html?banner=imaging">afocal optical systems</a></li>
+<li><a href="./conjugate_planes.html?banner=imaging">conjugate planes</a></li>
+<li><a href="./diaphragms.html?banner=imaging">diaphragms</a></li>
+<li><a href="./entrance_and_exit_pupil.html?banner=imaging">entrance and exit pupil</a></li>
+<li><a href="./f_number.html?banner=imaging">f-number</a></li>
+<li><a href="./field_lenses.html?banner=imaging">field lenses</a></li>
+<li><a href="./field_of_view.html?banner=imaging">field of view</a></li>
+<li><a href="./field_stops.html?banner=imaging">field stops</a></li>
+<li><a href="./holography.html?banner=imaging">holography</a></li>
+<li><a href="./image_planes.html?banner=imaging">image planes</a></li>
+<li><a href="./image_sensors.html?banner=imaging">image sensors</a></li>
+<li><a href="./imaging_with_a_lens.html?banner=imaging">imaging with a lens</a></li>
+<li><a href="./infrared_cameras.html?banner=imaging">infrared cameras</a></li>
+<li><a href="./loupes.html?banner=imaging">loupes</a></li>
+<li><a href="./magnification.html?banner=imaging">magnification</a></li>
+<li><a href="./magnifying_glasses.html?banner=imaging">magnifying glasses</a></li>
+<li><a href="./microscope_objectives.html?banner=imaging">microscope objectives</a></li>
+<li><a href="./microscopes.html?banner=imaging">microscopes</a></li>
+<li><a href="./ocular_lenses.html?banner=imaging">ocular lenses</a></li>
+<li><a href="./optical_aberrations.html?banner=imaging">optical aberrations</a></li>
+<li><a href="./photo_cameras.html?banner=imaging">photo cameras</a></li>
+<li><a href="./photographic_objectives.html?banner=imaging">photographic objectives</a></li>
+<li><a href="./spherical_aberrations.html?banner=imaging">spherical aberrations</a></li>
+<li><a href="./vignetting.html?banner=imaging">vignetting</a></li>
+</ul>
+</div>
+</aside>
+<script type="text/javascript" nonce="64raM1taqNvcsTLgLQBLIg==">shownbanner = "imaging";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Numerical Modeling</h2>
+<p>Developing devices or systems in photonics requires a <b>comprehensive quantitative understanding</b> &ndash; otherwise, it becomes inefficient, waisting time and money.</p>
+<p><a href="./laser_modeling.html?banner=numerical_modeling">Numerical modeling</a> is often the most efficient way towards results:</p>
+<ul>
+<li>understand <em>quantitatively</em> what is going on</li>
+<li>check the influence of design changes or possible detrimental effects</li>
+<li>understand strange experimental observations</li>
+<li>find optimized designs more reliably and faster</li>
+</ul>
+<p style="text-align:center; margin:10px 0;"><a href="./laser_modeling.html?banner=numerical_modeling"><img src="./img/modeling.png" width="234" height="91" alt="laser modeling"></a></p>
+<h3>How to Get Your Modeling Done?</h3>
+<p>We offer both <a href="./consulting.html?banner=numerical_modeling">technical consultancy</a> and powerful <a href="./software.html?banner=numerical_modeling">simulation software</a>.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="64raM1taqNvcsTLgLQBLIg==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/image_sensors.html"
+    },
+    "headline": "Image Sensors",
+    "image": "https://www.rp-photonics.com/previews/image_sensors.png",
+    "datePublished": "2019-04-14",
+    "dateModified": "2020-03-14",
+    "description": "Image sensors are used in photo and video cameras, for thermal imaging and in document scanners. Particularly common are CCD and CMOS sensors for visible, near-infrared and ultraviolet light, but there are also infrared imaging sensors.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter I",
+      "item": "https://www.rp-photonics.com/encyclopedia_i.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "image sensors",
+      "item": "https://www.rp-photonics.com/image_sensors.html"
+    }]}
+}
+</script>
+</body>
+</html>

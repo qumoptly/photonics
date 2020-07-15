@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-LMMVM0oD6ECvDVcrds/cSA=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - frequency-resolved optical gating, FROG, pulse characterization</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/frequency_resolved_optical_gating.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Frequency-resolved optical gating is a technique for the complete characterization of ultrashort optical pulses.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="frequency-resolved optical gating, FROG, pulse characterization">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Frequency-resolved Optical Gating">
+<meta property="og:description" content="Frequency-resolved optical gating is a technique for the complete characterization of ultrashort optical pulses.">
+<meta property="og:url" content="https://www.rp-photonics.com/frequency_resolved_optical_gating.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/frequency_resolved_optical_gating.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Frequency-resolved optical gating is a technique for the complete characterization of ultrashort optical pulses.">
+<meta name="twitter:title" content="Frequency-resolved Optical Gating">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/frequency_resolved_optical_gating.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="LMMVM0oD6ECvDVcrds/cSA==">
+page="frequency_resolved_optical_gating.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eagleyard_photonics.html"><img src="./bg/logos/eagleyard_photonics.png" alt="eagleyard Photonics" class="supplierlogo sponsor"></a> <a href="./sponsors/optikexpertisen.html"><img src="./bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="LMMVM0oD6ECvDVcrds/cSA==">shownsponsors="eagleyard Photonics,Optikexpertisen"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_f.html">letter F</a> &gt; <a href="frequency_resolved_optical_gating.html">frequency-resolved optical gating</a></p>
+<h1>Frequency-resolved Optical Gating</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<h2 class="bg_bgheading"><a href="bg/buy_frequency_resolved_optical_gating_devices.html?s=vbox">11 suppliers for frequency-resolved optical gating devices</a></h2>
+<p>are found in the <a href="./buyersguide.html">RP Photonics Buyer's Guide</a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.ape-berlin.de/en/frog-frequency-resolved-optical-gating/" data-supplier="APE" data-location="product-enc" data-keyword="frequency-resolved optical gating devices" rel="nofollow" class="bg externallink"><img src="./bg/logos/ape.png" alt="APE" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="http://www.swampoptics.com/pulse-measurement.html" data-supplier="Swamp Optics" data-location="product-enc" data-keyword="frequency-resolved optical gating devices" rel="nofollow" class="bg externallink"><img src="./bg/logos/swamp_optics.png" alt="Swamp Optics" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of this encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_frequency_resolved_optical_gating_devices.html?s=vbox">List of suppliers for<br>frequency-resolved optical gating devices</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="advicebox">
+<p>Ask <a href="index.html">RP Photonics</a> for advice on choosing the most suitable technique for pulse characterization, and finding the most suitable hardware.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p>Acronym: FROG</p>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a technique for the complete characterization of ultrashort optical pulses</p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<p><a href="encyclopedia_cite.html?article=frequency-resolved%20optical%20gating">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>Frequency-resolved optical gating [1,&thinsp;3] is a technique for the &ldquo;complete&rdquo; <a href="pulse_characterization.html" title="the measurement of various properties of an optical pulse">characterization</a> of <a href="ultrashort_pulses.html" title="optical pulses with durations of picoseconds or less">ultrashort pulses</a>, i.e. for measuring not only <a href="pulses.html" title="flashes of light">pulse</a> parameters such as the <a href="pulse_energy.html" title="energy of an optical pulse">pulse energy</a> or <a href="pulse_duration.html" title="the duration of an optical pulse">pulse duration</a>, but also the full time-dependent electric field or (equivalently) the <a href="optical_spectrum.html" title="the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a> including the frequency-dependent <a href="spectral_phase.html" title="the phase of the electric field in the frequency domain">spectral phase</a>.
+(The <a href="carrier_envelope_offset.html" title="the offset between the optical phase and the maximum of the wave envelope of an optical pulse">carrier&ndash;envelope offset</a> and the arrival time of pulses can not be measured.)
+This technique has been pioneered by <a href="https://www.physics.gatech.edu/user/rick-trebino" rel="nofollow">Rick Trebino's research group</a> at the Georgia Institute of Technology.</p>
+<figure class="right" style="width:308px;">
+<img src="img/frog.png" alt="setup for frequency-resolved optical gating (FROG)">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Setup for frequency-resolved optical gating in the form of SHG FROG. The spectrum of the nonlinear mixing product of the two beams is measured as a function of the relative time delay.
+</figcaption>
+</figure>
+<p>A typical setup for a FROG measurement (Figure&nbsp;1) is similar to that of an intensity <a href="autocorrelators.html" title="devices for measuring the intensity or field autocorrelation function of light, mostly used for determining the duration of ultrashort pulses">autocorrelator</a>, except that the <a href="photodetectors.html" title="devices used for the detection of light">photodetector</a> is replaced with a <a href="spectrographs.html" title="instruments for spectrally analyzing light">spectrograph</a>.
+A FROG measurement involves recording some tens or hundreds of spectra for different settings of the arrival time difference of the two pulses.
+These data can be illustrated in the form of a so-called <em>FROG trace</em> (see Figure&nbsp;2), which is a kind of <a href="spectrograms.html" title="a type of diagrams which visualize optical or other signals">spectrogram</a> and displays with a color scale the intensity as a function of time delay and <a href="optical_frequency.html" title="the oscillation frequency of the electric field of light">optical frequency</a> (or <a href="wavelength.html" title="the spatial period of a plane wave">wavelength</a>).</p>
+<p>A sophisticated iterative phase retrieval algorithm, implemented as a computer program, can then be used for reconstructing the pulse shape from the FROG trace.
+As the recorded data are substantially redundant, the FROG retrieval algorithm can not only deliver the pulse shape, but also carry out a consistency check.
+It may thus be noticed when errors occur, e.g. due to wrong calibration of the spectrometer.
+On a typical PC, the procedure may take a few minutes with a non-optimized algorithm, and optimized algorithms have been developed which make it possible to do the calculations in less than 0.1&nbsp;s, at least for simply shaped pulses.</p>
+<figure>
+<img src="img/frog_trace.png" alt="FROG trace">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+SHG FROG trace for a higher-order <a href="solitons.html" title="pulses with a certain balance of nonlinear and dispersive effects">soliton</a> pulse after some propagation length in the optical <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fiber</a>.
+The color scale (near the right axis) is applied to the logarithm of the FROG intensity.
+The simulation was done with the software <a href="propulse.html">RP ProPulse</a>.
+</figcaption>
+</figure>
+<p>The term &ldquo;frequency-resolved optical gating&rdquo; originates from the idea that a short gate pulse can be used to obtain a sample from a longer pulse by nonlinear mixing (gating) in a <a href="nonlinear_crystal_materials.html" title="crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal material</a>.
+As an additional gate pulse, shorter than the pulse to be investigated, is usually not available, FROG actually uses the pulse itself for gating.
+This makes the method much simpler to apply, but at the same time conceptually and computationally more sophisticated.</p>
+<h2 class="togglediv">Variants of Frequency-resolved Optical Gating</h2>
+<div>
+<p>There are different versions of FROG, which rely on different nonlinear gating mechanisms, generate different kinds of FROG traces (thus requiring different phase retrieval algorithms), and have different strengths and weaknesses:</p>
+<ul>
+<li><em>Polarization-gated FROG</em> (PG FROG) is the conceptually simplest FROG variant.
+Here, the gate pulse, polarized under 45&deg; relative to the probe pulse, rotates the polarization of the latter when overlapping it in a <span class="eqn_il"><span class="greek">&chi;</span><sup>(3)</sup></span> medium (e.g. fused silica), and thus leads to transmission of the probe through a <a href="polarizers.html" title="optical filters where the light transmission depends strongly on the direction of polarization">polarizer</a>.
+As always with FROG, the transmitted probe signal is analyzed with a <a href="spectrometers.html" title="devices for separating spectral components">spectrometer</a>.
+Advantages of PG FROG are easy alignment, the absence of ambiguities in the retrieval, and the generation of fairly intuitive FROG traces.
+A problem is that a polarizer with very high extinction ratio is required.</li>
+<li>In <em>self-diffraction FROG</em> (SD FROG), two beams overlapping in a <span class="eqn_il"><span class="greek">&chi;</span><sup>(3)</sup></span> medium generate a nonlinear refractive index grating, which <a href="diffraction.html" title="wave phenomena which occur when light waves hit some structure with variable transmission or phase changes">diffracts</a> both beams into new beams, one of which is used for detection.
+As no polarizers are required, SD FROG can be applied in various spectral regions, e.g. in the deep <a href="ultraviolet_light.html" title="invisible light with wavelengths shorter than &asymp;&thinsp;400&thinsp;&thinsp;nm">UV region</a>.
+However, relatively high pulse energies are required.</li>
+<li><em>Transient-grating FROG</em> (TG FROG) also uses a nonlinear refractive index grating, but uses a third pulse with variable delay as the probe which is diffracted at the grating generated by the other two beams.
+For various reasons, it allows for a much higher detection sensitivity than SD FROG.</li>
+<li><em>Second-harmonic FROG</em> (SHG FROG) is the most popular FROG variant.
+It is based on a <span class="eqn_il"><span class="greek">&chi;</span><sup>(2)</sup></span> <a href="nonlinear_crystal_materials.html" title="crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal</a> and can thus reach a much higher sensitivity than is possible with all <span class="eqn_il"><span class="greek">&chi;</span><sup>(3)</sup></span> versions of FROG.
+<a href="phase_matching.html" title="a group of techniques for achieving efficient nonlinear interactions in a medium">Phase-matching</a> issues have to be carefully treated to avoid distortions for short pulses.
+There is an ambiguity concerning the direction of time, which can be removed e.g. by performing an additional measurement with some glass piece in the beam path.</li>
+<li><em>Interferometric FROG</em> (IFROG) [12] uses a collinear geometry, avoiding a loss of temporal resolution via geometric effects (finite beam angles) in the characterization of few-cycle pulses.</li>
+<li><em>Cross-correlation FROG</em> (XFROG) [7] uses an additional reference pulse, which does not need to be spectrally overlapping with the pulse under investigation.
+The recorded signal is obtained by <a href="sum_and_difference_frequency_generation.html" title="nonlinear processes generating beams with the sum or difference of the frequencies of the input beams">sum or difference frequency generation</a> of the two pulses.
+This method can be very sensitive, and can be applied in different spectral regions.</li>
+</ul>
+<p>Beyond these traditional FROG measurement methods, refined versions of FROG have been developed, which can be applied even to very short pulses (with angle dithering of the crystal to remove strong effects of <a href="group_velocity_mismatch.html" title="the phenomenon that pulses become temporally separated in a medium due to different group velocities, or (quantitatively) the difference of inverse group velocities">group velocity mismatch</a> in the nonlinear crystal) or to fairly long pulses (where a high spectrometer resolution is required).
+A particularly compact setup is achieved with the GRENOUILLE geometry [9], which has no moving parts and even allows the measurement of additional features such as spatial chirps.
+A <a href="waveguides.html" title="spatially inhomogeneous transparent structures for guiding light">waveguide</a> as the nonlinear component allows detection at ultralow power levels, and polarization scrambling makes possible polarization-independent measurements, which facilitate e.g. the delivery of pulses via <a href="fibers.html" title="a kind of long and thin optical waveguides which can be bent to some degree">fibers</a> [13].</p>
+<p>A possible alternative to frequency-resolved optical gating is <em>spectral phase interferometry for direct electric-field reconstruction</em> (SPIDER), as explained in the article on <a href="spectral_phase_interferometry.html" title="a class of interferometric methods for pulse characterization, where interference in the frequency domain is exploited">spectral phase interferometry</a>.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_frequency_resolved_optical_gating_devices.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 11 suppliers for frequency-resolved optical gating devices. Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.ape-berlin.de/" data-supplier="APE" data-location="product-enc" data-keyword="frequency-resolved optical gating devices" rel="nofollow" class="bg externallink" title="Visit the website of APE"><img src="./bg/logos/ape.png" alt="APE" class="supplierlogo"></a><a href="http://www.ape-berlin.de/en/frog-frequency-resolved-optical-gating/" data-supplier="APE" data-location="product-enc" data-keyword="frequency-resolved optical gating devices" rel="nofollow" class="bg externallink" title="Visit the website of APE"><img src="./bg/products/ape/frequency_resolved_optical_gating.png" alt="frequency-resolved optical gating devices" class="product"></a><h3><a href="./bg/profiles/ape.html" title="See the profile of APE">APE</a></h3><p>Second Harmonic Generation FROG is the most popular spectrometer-less Frequency-Resolved Optical Gating method. Most of the pulseCheck autocorrelators by APE optionally integrate FROG and give access to complete pulse characterization. The addition of a special nonlinear crystal module and dedicated software opens the door to complete spectral and temporal pulse characterization. The <a href="http://www.ape-berlin.de/en/frog-frequency-resolved-optical-gating/" data-supplier="APE" data-location="product-enc" data-keyword="frequency-resolved optical gating devices" rel="nofollow" class="externallink bg">FROG Option</a> enables the pulseCheck to measure the spectral and temporal bandwidth and phase with just a few adjustments to the autocorrelator.</p><p>The FROG Option consists of FROG crystal(s), a plane FROG mirror and FROG measurement and retrieval software.</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.swampoptics.com/" data-supplier="Swamp Optics" data-location="product-enc" data-keyword="frequency-resolved optical gating devices" rel="nofollow" class="bg externallink" title="Visit the website of Swamp Optics"><img src="./bg/logos/swamp_optics.png" alt="Swamp Optics" class="supplierlogo"></a><a href="http://www.swampoptics.com/pulse-measurement.html" data-supplier="Swamp Optics" data-location="product-enc" data-keyword="frequency-resolved optical gating devices" rel="nofollow" class="bg externallink" title="Visit the website of Swamp Optics"><img src="./bg/products/swamp_optics/frequency_resolved_optical_gating.jpg" alt="frequency-resolved optical gating devices" class="product"></a><h3><a href="./bg/profiles/swamp_optics.html" title="See the profile of Swamp Optics">Swamp Optics</a></h3><p><a href="http://www.swampoptics.com/pulse-measurement.html" data-supplier="Swamp Optics" data-location="product-enc" data-keyword="frequency-resolved optical gating devices" rel="nofollow" class="externallink bg">Frequency-Resolved Optical Gating (FROG)</a> is the gold standard of laser pulse measurement. It yields the complete intensity and phase vs. time for an arbitrary pulse. GRENOUILLE is a simple, elegant version of FROG.</p><p>Swamp Optics sells commonly used configurations from stock. It also provides customs solutions for more exotic wavelength and pulse durations.</p></aside>
+</div>
+</div>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="frequency_resolved_optical_gating.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">D. J. Kane and R. Trebino, &ldquo;Characterization of arbitrary femtosecond pulses using frequency-resolved optical gating&rdquo;, IEEE J. Quantum Electron. 29 (2), 571 (1993), <a href="https://doi.org/10.1109/3.199311">doi:10.1109/3.199311</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">D. J. Kane and R. Trebino, &ldquo;Single-shot measurement of the intensity and phase of an arbitrary ultrashort pulse by using frequency-resolved optical gating&rdquo;, Opt. Lett. 18 (10), 823 (1993), <a href="https://doi.org/10.1364/OL.18.000823">doi:10.1364/OL.18.000823</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">FROG tutorial of Rick Trebino's group at the Georgia Institute of Technology, <a href="http://www.frog.gatech.edu/tutorial.html " class="url">http://www.frog.gatech.edu/tutorial.html </a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">K. W. DeLong <i>et al.</i>, &ldquo;Frequency-resolved optical gating using second-harmonic generation&rdquo;, J. Opt. Soc. Am. B 11 (11), 2206 (1994), <a href="https://doi.org/10.1364/JOSAB.11.002206">doi:10.1364/JOSAB.11.002206</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">R. Trebino <i>et al.</i>, &ldquo;Measuring ultrashort laser pulses in the time&ndash;frequency domain using frequency-resolved optical gating&rdquo;, Rev. Sci. Instrum. 68, 3277 (1997), <a href="https://doi.org/10.1063/1.1148286">doi:10.1063/1.1148286</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">A. Baltu&scaron;ka <i>et al.</i>, &ldquo;Amplitude and phase characterization of 4.5-fs pulses by frequency-resolved optical gating&rdquo;, Opt. Lett. 23 (18), 1474 (1998), <a href="https://doi.org/10.1364/OL.23.001474">doi:10.1364/OL.23.001474</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">S. Linden <i>et al.</i>, &ldquo;Amplitude and phase characterization of weak blue ultrashort pulses by downconversion&rdquo;, Opt. Lett. 24 (8), 569 (1999), <a href="https://doi.org/10.1364/OL.24.000569">doi:10.1364/OL.24.000569</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">L. Gallmann <i>et al.</i>, &ldquo;Collinear type II second-harmonic-generation frequency-resolved optical gating for the characterization of sub-10-fs optical pulses&rdquo;, Opt. Lett. 25 (4), 269 (2000), <a href="https://doi.org/10.1364/OL.25.000269">doi:10.1364/OL.25.000269</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">P. O'Shea <i>et al.</i>, &ldquo;Highly simplified device for ultrashort-pulse measurement&rdquo;, Opt. Lett. 26 (12), 932 (2001), <a href="https://doi.org/10.1364/OL.26.000932">doi:10.1364/OL.26.000932</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">J. Zhang <i>et al.</i>, &ldquo;Measurement of the intensity and phase of attojoule femtosecond light pulses using Optical-Parametric-Amplification Cross-Correlation Frequency-Resolved Optical Gating&rdquo;, Opt. Express 11 (6), 601 (2003), <a href="https://doi.org/10.1364/OE.11.000601">doi:10.1364/OE.11.000601</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">S. Akturk <i>et al.</i>, &ldquo;Extremely simple device for measuring 20-fs pulses&rdquo;, Opt. Lett. 29 (9), 1025 (2004), <a href="https://doi.org/10.1364/OL.29.001025">doi:10.1364/OL.29.001025</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">G. Stibenz and G. Steinmeyer, &ldquo;Interferometric frequency-resolved optical gating&rdquo;, Opt. Express 13 (7), 2617 (2005), <a href="https://doi.org/10.1364/OPEX.13.002617">doi:10.1364/OPEX.13.002617</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">H. Miao <i>et al.</i>, &ldquo;Polarization-insensitive ultralow-power second-harmonic generation frequency-resolved optical gating&rdquo;, Opt. Lett. 32 (7), 874 (2007), <a href="https://doi.org/10.1364/OL.32.000874">doi:10.1364/OL.32.000874</a></td></tr>
+<tr><td class="refno">[14]</td><td class="refs">X. Liu <i>et al.</i>, &ldquo;Numerical simulations of ultrasimple ultrashort laser-pulse measurement&rdquo;, Opt. Express 15 (8), 4585 (2007), <a href="https://doi.org/10.1364/OE.15.004585">doi:10.1364/OE.15.004585</a></td></tr>
+<tr><td class="refno">[15]</td><td class="refs">D. Lee <i>et al.</i>, &ldquo;Experimentally simple, extremely broadband transient-grating frequency-resolved-optical gating arrangement&rdquo;, Opt. Express 15 (2), 760 (2007), <a href="https://doi.org/10.1364/OE.15.000760">doi:10.1364/OE.15.000760</a></td></tr>
+<tr><td class="refno">[16]</td><td class="refs">J. Gagnon <i>et al.</i>, &ldquo;The accurate FROG characterization of attosecond pulses from streaking measurements&rdquo;, Appl. Phys. B 92, 25 (2008), <a href="https://doi.org/10.1007/s00340-008-3063-x">doi:10.1007/s00340-008-3063-x</a></td></tr>
+<tr><td class="refno">[17]</td><td class="refs">R. Trebino, <i>Frequency-Resolved Optical Gating: the Measurement of Ultrashort Laser Pulses</i>, Kluwer, Boston (2002)</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="pulses.html" title="flashes of light">pulses</a>, <a href="pulse_characterization.html" title="the measurement of various properties of an optical pulse">pulse characterization</a>, <a href="autocorrelators.html" title="devices for measuring the intensity or field autocorrelation function of light, mostly used for determining the duration of ultrashort pulses">autocorrelators</a>, <a href="spectral_phase_interferometry.html" title="a class of interferometric methods for pulse characterization, where interference in the frequency domain is exploited">spectral phase interferometry</a><br>and other articles in the categories <a href="categories.html#light_detection_and_characterization" title="other articles on light detection and characterization">light detection and characterization</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/frequency_resolved_optical_gating.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Ffrequency_resolved_optical_gating.html&text=RP+Photonics+Encyclopedia+-+frequency-resolved+optical+gating%2C+FROG%2C+pulse+characterization" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Ffrequency_resolved_optical_gating.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Ffrequency_resolved_optical_gating.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/frequency_resolved_optical_gating.html"&gt;<br>Article on Frequency-resolved Optical Gating&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/frequency_resolved_optical_gating.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/frequency_resolved_optical_gating.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/frequency_resolved_optical_gating.html<br>article on 'Frequency-resolved Optical Gating' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="https://www.shanghai-optics.com/" data-supplier="Shanghai Optics" data-location="banner" rel="nofollow" class="bg externallink"><img src="./bg/banners/shanghai_optics.jpg" alt="Shanghai Optics"></a>
+</div>
+</aside>
+<script type="text/javascript" nonce="LMMVM0oD6ECvDVcrds/cSA==">shownbanner = "Shanghai Optics";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Fighting Fraud in Science</h2>
+<p>We occasionally read about scientific fraud &ndash; things like fabricated measurement results &ndash; which is utterly unfair and also undermines the trust of the public in science and its results.</p>
+<p>How to fight that problem?</p>
+<ul>
+<li>Do we need to tell young scientists more clearly that fraud is evil?</li>
+<li>Do supervisors have to stop trusting the results of their coworkers?</li>
+<li>Does the pressure to produce results inevitably favor fraud?</li>
+<li>Where exactly lies the responsibility, if something goes wrong?</li>
+</ul>
+<p>Our <a href="./spotlight_2009_10_19.html?banner=science_fraud">Photonics Spotlight article on science fraud</a> analyzes that carefully.
+It suggests that <b>the risk of fraud is close to zero where supervisors do a responsible job</b>.
+Relations to a more widespread problem &ndash; <b>corrupt authorship practices</b> &ndash; are also identified.</p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="LMMVM0oD6ECvDVcrds/cSA==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/frequency_resolved_optical_gating.html"
+    },
+    "headline": "Frequency-resolved Optical Gating",
+    "image": "https://www.rp-photonics.com/previews/frequency_resolved_optical_gating.png",
+    "datePublished": "2005-06-26",
+    "dateModified": "2020-03-14",
+    "description": "Frequency-resolved optical gating is a technique for the complete characterization of ultrashort optical pulses.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter F",
+      "item": "https://www.rp-photonics.com/encyclopedia_f.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "frequency-resolved optical gating",
+      "item": "https://www.rp-photonics.com/frequency_resolved_optical_gating.html"
+    }]}
+}
+</script>
+</body>
+</html>

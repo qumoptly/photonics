@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self' 'nonce-874UgY3CKtDn8lO7Mxv0qw=='; style-src 'self' 'unsafe-inline'; form-action 'self'; base-uri 'self'; frame-src 'self';">
+<title>RP Photonics Encyclopedia - leaky modes, tunneling modes, propagation loss</title>
+<link rel="stylesheet" type="text/css" href="./styles.css">
+<link rel="stylesheet" type="text/css" href="./styles_enc.css">
+<link rel="stylesheet" type="text/css" href="./jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.rp-photonics.com/leaky_modes.html">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="https://www.rp-photonics.com/spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="https://www.rp-photonics.com/software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="https://www.rp-photonics.com/new_articles.rss">
+<meta name="date" content="2020-03-14">
+<meta name="description" content="Leaky modes are a concept for quasi-bound waveguide modes with propagation losses due to leakage into the cladding. They occur in certain optical fibers, for example.">
+<meta name="copyright" content="2020 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="keywords" content="leaky modes, tunneling modes, propagation loss">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Leaky Modes">
+<meta property="og:description" content="Leaky modes are a concept for quasi-bound waveguide modes with propagation losses due to leakage into the cladding. They occur in certain optical fibers, for example.">
+<meta property="og:url" content="https://www.rp-photonics.com/leaky_modes.html">
+<meta property="og:image" content="https://www.rp-photonics.com/previews/leaky_modes.png">
+<meta property="og:image:type" content="image/png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Leaky modes are a concept for quasi-bound waveguide modes with propagation losses due to leakage into the cladding. They occur in certain optical fibers, for example.">
+<meta name="twitter:title" content="Leaky Modes">
+<meta name="twitter:image" content="https://www.rp-photonics.com/previews/leaky_modes.png">
+<script type="text/javascript" src="./jquery-ui-1.12.1.custom/jquery-stuff.min.js"></script>
+<script type="text/javascript" src="./general.js"></script>
+<script type="text/javascript" src="./articles.js"></script>
+<script type="text/javascript" nonce="874UgY3CKtDn8lO7Mxv0qw==">
+page="leaky_modes.html"; cat="E"; shownbanner=""; ref="http://www.rp-photonics.com/glossary.html"; shownsponsors = "";
+ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("./log.php",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,shownsponsors:shownsponsors,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="./encyclopedia.html">Encyclopedia</a></td>
+<td><a href="./buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="./consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="./consulting.html">Consulting</a></td>
+<td><a href="./software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<img src="./img/rp_photonics.png" alt="RP Photonics logo" id="rplogo">
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="./buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="./img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<div id="sponsorsbox">
+<a href="./encyclopedia_sponsoring.html">Sponsoring</a> this encyclopedia: <a href="./sponsors/eksma_optics.html"><img src="./bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo sponsor"></a> <a href="./sponsors/knight_optical.html"><img src="./bg/logos/knight_optical.png" alt="Knight Optical" class="supplierlogo sponsor"></a> &nbsp;&nbsp;&nbsp; and <a href="./encyclopedia_sponsoring.html">others</a>
+<script type="text/javascript" nonce="874UgY3CKtDn8lO7Mxv0qw==">shownsponsors="EKSMA OPTICS,Knight Optical"</script>
+</div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="./encyclopedia.html" title="The start page of the encyclopedia.">Home</a></td>
+<td id="sponsoring"><a href="./encyclopedia_sponsoring.html" title="Companies and institutions can sponsor this open-access encyclopedia.">Sponsors</a></td>
+<td id="quiz"><a href="./quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="./buyersguide.html" title="This encyclopedia is linked with a buyer's guide.">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="./encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="./categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="./glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="./marketing.html" title="Promote your products using the RP Photonics Buyer's Guide!">Advertising</a></td>
+</tr>
+</table>
+<table id="encnavtable2"><tr>
+<td id="spotlight"><a href="./spotlight.html" title="Learn from this photonics blog, which can also receive as a newsletter.">Photonics Spotlight</a></td>
+<td id="tutorials"><a href="./encyclopedia_tutorials.html" title="In-depth tutorials on topics in fiber optics.">Tutorials</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:16px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:15px; display:none;">Note: this box searches only for keywords in the titles of encyclopedia articles. For full-text searches on the whole website, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:13px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<p class="breadcrumbs"><a href="encyclopedia.html">Encyclopedia</a> &gt; <a href="encyclopedia_l.html">letter L</a> &gt; <a href="leaky_modes.html">leaky modes</a></p>
+<h1>Leaky Modes</h1>
+<header style="margin-right:0;">
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a concept for quasi-bound waveguide modes with propagation losses due to leakage into the cladding</p>
+<p>Alternative term: tunneling modes</p>
+<p>More general terms: <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a></p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Tunnelmoden</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#fiber_optics_and_waveguides" title="other articles on fiber optics and waveguides">fiber optics and waveguides</a></p>
+<p><a href="encyclopedia_cite.html?article=leaky%20modes">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+<p>Author: <a href="paschotta.html" rel="author">Dr. Rüdiger Paschotta</a></p>
+</header>
+<p>In principle, the light injected into a <a href="waveguides.html" title="spatially inhomogeneous transparent structures for guiding light">waveguide</a> can be fully decomposed into a set of <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a>, which are all either <em>guided modes</em> (<em>bound modes</em>) or <em>radiation modes</em> (<em>unbound modes</em>, <a href="cladding_modes.html" title="modes in optical fibers (or other waveguides) which are not restricted to the region around the core"><em>cladding modes</em></a>).
+This approach, however, often does not capture the physics in a satisfactory way, and may also not be mathematically convenient, as a continuum of cladding modes has to be considered.
+The concept of <em>leaky modes</em> (also called <em>tunneling modes</em>) may then be useful.</p>
+<p>This is illustrated in an example case.
+First, consider a simple <a href="step_index_fibers.html" title="optical fibers with a step-index refractive index profile">step-index fiber</a>, having a <a href="fiber_core.html" title="the region in an optical fiber which guides light">fiber core</a> with a somewhat increased <a href="refractive_index.html" title="a measure of the reduction in the velocity of light in a medium">refractive index</a>, surrounded by a <a href="fiber_cladding.html" title="the area(s) around the core of an optical fiber">cladding</a> with a lower refractive index.
+Figure&nbsp;1 shows the index profile and the radial functions of the three guided modes, apart from the <a href="effective_refractive_index.html" title="a number quantifying the phase delay per unit length in a waveguide, relative to the phase delay in vacuum">effective refractive indices</a> of these modes.
+(The effective index of the LP<sub>21</sub> mode is close to the cladding index, which indicates that this mode is close to its <a href="cut_off_wavelength.html" title="a wavelength above which a guided mode of a waveguide ceases to exist">mode cut-off</a>.)</p>
+<figure>
+<img src="img/leaky_modes.png" alt="leaky modes">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Refractive index profile of a step-index fiber (bottom), the effective refractive indices of the three guided modes (thin horizontal lines), and the amplitude profiles of the guided modes.
+Also shown as the gray dotted line is a modification to the index profile which would turn the higher-order modes into leaky modes.
+</figcaption>
+</figure>
+<p>Now consider what changes when the refractive index is somewhat increased for radial positions above 20&nbsp;&mu;m, as illustrated by the dashed line in the figure:</p>
+<ul>
+<li>The fundamental mode (LP<sub>01</sub>) would hardly be affected at all; essentially, its intensity would decay more slowly where the index becomes higher, but as the intensity in that region has been low already, this is a minor change.</li>
+<li>However, the higher-order modes (LP<sub>11</sub> and LP<sub>21</sub>) would be strongly affected.
+It is not only that their amplitude distributions have not decayed as much where the region with the raised refractive index starts: also, the modified refractive index in the outer region is now larger than their original effective mode indices.
+Therefore, their amplitude distributions should actually grow rather than decay in the cladding.
+In effect, these modes do no longer exist as guided modes.</li>
+</ul>
+<p>By simply regarding the fiber as a <a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode fiber</a>, an important physical aspect of the waveguide properties is not recognized.
+If an amplitude distribution is injected into the fiber which resembles the shape of the original LP<sub>11</sub> mode, for example, that light will propagate over some distance in a similar fashion as that LP<sub>11</sub> mode of the original fiber, since only a tiny fraction of its <a href="optical_power.html" title="the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a> probes the region with raised refractive index.
+One can imagine that this part of the intensity distribution will be shed away from the fiber core and eventually lost (if it is not reflected anywhere).
+Therefore, we essentially have the behavior of a guided mode, except that it continuously loses some tiny fraction of its power due to radiation into the <a href="fiber_cladding.html" title="the area(s) around the core of an optical fiber">fiber cladding</a>.
+Exactly this aspect is behind the concept of leaky modes: one considers the LP<sub>11</sub> and LP<sub>21</sub> modes to still exist for the fiber with modified index profile, but now as <em>leaky modes</em> and no longer as true guided modes.
+In the considered example, the LP<sub>21</sub> mode would have substantially higher <a href="propagation_losses.html" title="losses of optical energy during propagation of light">propagation losses</a> than the LP<sub>11</sub> mode.</p>
+<p>Unfortunately, the concept of leaky modes involves a number of mathematical subtleties, the understanding of which requires a detailed and careful study.
+For example, the leaky modes are <em>not</em> part of a complete orthogonal system of modes.
+Nevertheless, the concept can be quite useful both for qualitatively understanding the characteristics of certain <a href="waveguides.html" title="spatially inhomogeneous transparent structures for guiding light">waveguides</a> and for doing certain simulations of light propagation in a fiber.
+As an example for the first aspect, consider a <a href="large_mode_area_fibers.html" title="optical fibers with relatively large mode areas and a single transverse mode or only a few modes">large mode area fiber</a>.
+A very large <a href="effective_mode_area.html" title="a quantitative measure of the area which a waveguide or fiber mode effectively covers in the transverse dimensions">effective mode area</a> can be achieved more easily by using a refractive index contrast which is somewhat too large for true <a href="single_mode_fibers.html" title="optical fibers supporting only a single guided mode per polarization direction">single-mode</a> characteristics.
+However, one can modify the fiber design such that the higher-order modes become leaky modes.
+(Various methods exists, including some applied in <a href="photonic_crystal_fibers.html" title="specialty optical fibers with a built-in microstructure, in most cases consisting of small air holes in glass">photonic crystal fibers</a>.)
+One has to keep in mind that these higher-order modes can still carry substantial optical powers over some distance.
+This would be overlooked if the true guided mode only would be considered.
+It is also possible to use fibers with leaky modes only (and no true guided modes at all), where however the lowest-order mode has very small propagation losses.</p>
+<h2 class="questions togglediv">Questions and Comments from Users</h2>
+<div>
+<div style="font-size:90%;">
+<p>Here you can submit <a href="./questions.html">questions and comments</a>. As far as they get accepted by the author, they will appear above this paragraph together with the author&rsquo;s answer. The <a href="paschotta.html">author</a> will decide on acceptance based on certain <a href="questions.html">criteria</a>. Essentially, the issue must be of sufficiently broad interest.</p>
+<p style="font-size:90%;">Please do not enter personal data here; we would otherwise delete it soon. (See also our <a href="privacy.html">privacy declaration</a>.) If you wish to receive personal feedback or <a href="consulting.html">consultancy</a> from the author, please contact him e.g. via <a href="contact.html">e-mail</a>.</p>
+</div>
+<form name="enter_questions" action="submit_questions.html" method="post" title="Input of question or comment">
+<p style="margin-bottom:3px;">Your question or comment:</p>
+<p><textarea name="question" rows="5" style="width:98%;"></textarea></p>
+<p style="margin-bottom:3px;">Spam check:</p>
+<p><input type="text" name="spamprotection" size="5"> &nbsp; (Please enter the sum of thirteen and three in the form of digits!)<input type="hidden" name="page" value="leaky_modes.html"></p>
+<div style="margin-top:0.5em;"><input type="submit" name="form_submitted" value="Submit" style="font-size:100%;"></div>
+</form>
+<p style="margin-top:10px; font-size:90%;">By submitting the information, you give your consent to the potential publication of your inputs on our website according to our <a href="questions.html">rules</a>. (If you later retract your consent, we will delete those inputs.) As your inputs are first reviewed by the author, they may be published with some delay.</p>
+</div><h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">A. K. Ghatak, &ldquo;Leaky modes in optical waveguides&rdquo;, Opt. Quantum Electron. 17 (5), 311 (1985), <a href="https://doi.org/10.1007/BF00620394">doi:10.1007/BF00620394</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">J. Hu and C. R. Menyuk, &ldquo;Understanding leaky modes: slab waveguide revisited&rdquo;, Adv. Opt. Photon. 1, 58 (2009), <a href="https://doi.org/10.1364/AOP.1.000058">doi:10.1364/AOP.1.000058</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">A. W. Snyder and J. D. Love, <i>Optical Waveguide Theory</i>, Chapman and Hall, London (1983)</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="modes.html" title="self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a>, <a href="waveguides.html" title="spatially inhomogeneous transparent structures for guiding light">waveguides</a><br>and other articles in the category <a href="categories.html#fiber_optics_and_waveguides" title="other articles on fiber optics and waveguides">fiber optics and waveguides</a></p>
+<table class="preview_social"><tr>
+<td style="width:60%;"><img src="previews/leaky_modes.png" alt="preview" class="article_preview"></td><td>
+<div id="socialbox_article">
+<p>If you like this page, please share the link with your friends and colleagues, e.g. via social media:</p>
+<a href="https://twitter.com/intent/tweet?lang=en&url=https%3A%2F%2Fwww.rp-photonics.com%2Fleaky_modes.html&text=RP+Photonics+Encyclopedia+-+leaky+modes%2C+tunneling+modes%2C+propagation+loss" class="socialbutton twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+<a href="https://www.facebook.com/sharer/sharer.php?display=popup&u=https%3A%2F%2Fwww.rp-photonics.com%2Fleaky_modes.html" class="socialbutton facebook"><img src="./img/facebook.png" alt="Facebook"></a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.rp-photonics.com%2Fleaky_modes.html" class="socialbutton linkedin"><img src="./img/linkedin.png" alt="LinkedIn"></a>
+<p style="font-size:85%">These sharing buttons are implemented in a <a href="./social_media.html">privacy-friendly</a> way!</p></div>
+</td></tr>
+</table>
+<footer id="linkcode">
+<h2 class="linkcode togglediv">Code for Links on Other Websites</h2>
+<div>
+<p style="margin-bottom:8px">If you want to place a link to this article in some other resource (e.g. your website, social media, a discussion forum, Wikipedia), you can get the required code here.</p>
+<p>HTML link on this article:</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/leaky_modes.html"&gt;<br>Article on Leaky Modes&lt;/a&gt;<br>in the &lt;a href="https://www.rp-photonics.com/encyclopedia.html"&gt;<br>RP Photonics Encyclopedia&lt;/a&gt;</code></pre>
+<p>With preview image (see the box just above):</p>
+<pre style="margin-top:5px"><code>&lt;a href="https://www.rp-photonics.com/leaky_modes.html"&gt;<br>&lt;img src="https://www.rp-photonics.com/previews/leaky_modes.png"<br> alt="article" style="width:400px"&gt;&lt;/a&gt;</code></pre>
+<p>For <a href="https://en.wikipedia.org/">Wikipedia</a>, e.g. in the section "==External links==":</p>
+<pre style="margin-top:5px"><code>* [https://www.rp-photonics.com/leaky_modes.html<br>article on 'Leaky Modes' in the RP Photonics Encyclopedia]</code></pre>
+</div>
+</footer>
+</main></div>
+<footer id="copyright_bottom">
+<span class="copyright">&copy; RP Photonics Consulting GmbH &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="./contact.html">Contact and legal info</a>, <a href="./privacy.html">declaration of data privacy</a></span>
+</footer>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="./coating_demo_gti.html?banner=RP_Coating_6"><img src="./img/coating_demo_gti7b.png" alt="Bragg mirror" style="margin-bottom:8px"></a>
+<p>A femtosecond pulse hits a Gires--Tournois interferometer (GTI).</p>
+<p>This diagram has been made with the <a href="./coating.html?banner=RP_Coating_6"><b>RP Coating</b></a> software.</p>
+</div>
+</aside>
+<script type="text/javascript" nonce="874UgY3CKtDn8lO7Mxv0qw==">shownbanner = "RP Coating 6";</script>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Free Tutorial: Modeling of Fiber Amplifiers and Lasers</h2>
+<p>We have published a new <a href="./tutorial_modeling.html?banner=modeling_tutorial">tutorial</a> which discusses the modeling of fiber amplifiers and lasers.
+It addresses many questions:</p>
+<ul>
+<li>What is a <a href="./tutorial_modeling1.html?banner=modeling_tutorial">model</a>?</li>
+<li>Should one use <a href="./tutorial_modeling3.html?banner=modeling_tutorial">power propagation or field propagation</a>?</li>
+<li>How to simulate the behavior of <a href="./tutorial_modeling4.html?banner=modeling_tutorial">laser-active ions</a>?</li>
+<li>How to calculate <a href="./tutorial_modeling5.html?banner=modeling_tutorial">steady-state solutions</a>?</li>
+<li>How to simulate <a href="./tutorial_modeling6.html?banner=modeling_tutorial">dynamical behavior</a> and <a href="./tutorial_modeling7.html?banner=modeling_tutorial">ultrashort pulse propagation</a>?</li>
+<li>What aspects are important for the <a href="./tutorial_modeling8.html?banner=modeling_tutorial">decision</a> whether to develop own modeling software or use commercial software?</li>
+</ul>
+<p><a href="./tutorial_modeling.html?banner=modeling_tutorial">Read the tutorial!</a></p>
+</div>
+</aside>
+<!--googleon: index-->
+<script type="application/ld+json" nonce="874UgY3CKtDn8lO7Mxv0qw==">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "publisher": {
+    "@type": "Organization",
+    "name": "RP Photonics",
+    "url": "https://www.rp-photonics.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+  },
+  "mainEntity": {
+    "@type": "Article",
+    "mainEntityOfPage": {
+       "@type": "WebPage",
+       "@id": "https://www.rp-photonics.com/leaky_modes.html"
+    },
+    "headline": "Leaky Modes",
+    "image": "https://www.rp-photonics.com/previews/leaky_modes.png",
+    "datePublished": "2011-04-25",
+    "dateModified": "2020-03-14",
+    "description": "Leaky modes are a concept for quasi-bound waveguide modes with propagation losses due to leakage into the cladding. They occur in certain optical fibers, for example.",
+    "author": {
+      "@type": "Person",
+      "name": "Dr. Rüdiger Paschotta",
+      "url": "https://www.rp-photonics.com/paschotta.html",
+      "image": "https://www.rp-photonics.com/img/paschotta5.jpg"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RP Photonics",
+      "url": "https://www.rp-photonics.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.rp-photonics.com/img/rp_photonics.png"
+      }
+    }
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Encyclopedia",
+      "item": "https://www.rp-photonics.com/encyclopedia.html"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "letter L",
+      "item": "https://www.rp-photonics.com/encyclopedia_l.html"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "leaky modes",
+      "item": "https://www.rp-photonics.com/leaky_modes.html"
+    }]}
+}
+</script>
+</body>
+</html>
